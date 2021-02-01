@@ -3,6 +3,7 @@
     <div id="map"></div>
   </div>
 </template>
+
 <script>
 import { Scene, PointLayer } from "@antv/l7";
 import { GaodeMap } from "@antv/l7-maps";
@@ -15,9 +16,9 @@ export default {
       id: "map",
       map: new GaodeMap({
         pitch: 0,
-        style: "light",
-        center: [121.435159, 31.256971],
-        zoom: 14.89,
+        style: "fresh",
+        center: [114.187431,22.336562],
+        zoom: 11,
         minZoom: 10,
       }),
     });

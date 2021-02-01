@@ -1,11 +1,12 @@
-
+// link with Index, demoMap Vue file//
 const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Index.vue') },
-      { path: 'demoMap', component: () => import('pages/demoMap.vue') }
+      { path: 'demoMap', component: () => import('pages/demoMap.vue') },
+      { path: 'drillDown', component: () => import('pages/drillDown.vue') },
     ]
   },
 
@@ -18,3 +19,5 @@ const routes = [
 ]
 
 export default routes
+
+
