@@ -40,7 +40,7 @@ export default {
 
   data() {
     return {
-      leftDrawerOpen: false,
+      leftDrawerOpen: true,
     };
   },
 };
