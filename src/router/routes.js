@@ -2,11 +2,12 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/NewLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') },
+      { path: 'home', component: () => import('pages/Index.vue') },
       { path: 'demoMap', component: () => import('pages/demoMap.vue') },
       { path: 'drillDown', component: () => import('pages/drillDown.vue') },
+      { path: 'interactiveHabitat', component: () => import('pages/interactiveHabitat.vue') },
     ]
   },
 

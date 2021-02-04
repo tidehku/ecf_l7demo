@@ -1,7 +1,7 @@
 <template>
   <div class="q-ma-md">
-    <div class="q-bar">
-      <q-bar dark class="bg-darkgray text-white">
+    <!-- <div class="q-bar">
+      <q-bar dark class="bg-darkgray text-white q-my-md shadow-2">
         <q-btn dense flat round icon="lens" size="8.5px" color="red" />
         <q-btn dense flat round icon="lens" size="8.5px" color="yellow" />
         <q-btn dense flat round icon="lens" size="8.5px" color="green" />
@@ -9,30 +9,35 @@
           Welcome To My Website
         </div>
       </q-bar>
-    </div>
+    </div> -->
 
-    <div class="q-pa-sm">
-      <div class="logo">
-        <q-card-section>
-          <q-img
-            src="https://www.swims.hku.hk/wp-content/themes/swims/images/logo.png"
-            alt="SWIMs logo"
-            width="200px"
-            align="top"
-          />
-        </q-card-section>
-      </div>
+    <!-- <h3
+      id="title"
+      class="text-Black text-no-wrap"
+      style="font-family: 'Roboto', bold">
+      Hello Welcome to My Website
+    </h3> -->
+
+    <div class="q-ma-sm">
+      <q-card-section>
+        <q-img
+          src="https://www.swims.hku.hk/wp-content/themes/swims/images/logo.png"
+          alt="SWIMs logo"
+          width="240px"
+          align="top"
+        />
+      </q-card-section>
 
       <div class="mapImg">
         <q-img
           src="~assets/map_new_sites.png"
           alt="Uh Oh! Image not found!"
-          width="500px"
+          width="600px"
           align="top"
         />
       </div>
 
-      <div class="tabs">
+      <!-- <div class="q-gutter-md">
         <q-btn
           align="left"
           class="btn-fixed-width"
@@ -47,12 +52,12 @@
           label="Drill Down Map"
           to="drillDown"
         />
-      </div>
+      </div> -->
     </div>
 
     <!-- <br /><br /> -->
     <div class="q-pa-md bg-grey-10 text-white">
-      <div class="q-gutter-sm">
+      <div class="q-gutter-md">
         <p>Please select the identity that best fits you:</p>
         <q-radio
           dark
@@ -88,7 +93,11 @@ export default {
   data() {
     return {
       Identity: "Student",
+      tab: "interactiveHabitat",
     };
   },
 };
 </script>
+
+<style lang="sass" scoped>
+</style>
