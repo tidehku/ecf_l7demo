@@ -28,13 +28,45 @@
         />
       </q-card-section>
 
-      <div class="mapImg">
+      <!-- <div class="mapImg">
         <q-img
           src="~assets/map_new_sites.png"
           alt="Uh Oh! Image not found!"
           width="600px"
           align="top"
         />
+      </div> -->
+
+      <div class="q-pa-md">
+        <q-carousel
+          animated
+          v-model="slide"
+          navigation
+          infinite
+          :autoplay="autoplay"
+          arrows
+          transition-prev="slide-right"
+          transition-next="slide-left"
+          @mouseenter="autoplay = true"
+          @mouseleave="autoplay = true"
+        >
+          <q-carousel-slide
+            :name="1"
+            img-src="https://cdn.quasar.dev/img/mountains.jpg"
+          />
+          <q-carousel-slide
+            :name="2"
+            img-src="https://cdn.quasar.dev/img/parallax1.jpg"
+          />
+          <q-carousel-slide
+            :name="3"
+            img-src="https://cdn.quasar.dev/img/parallax2.jpg"
+          />
+          <q-carousel-slide
+            :name="4"
+            img-src="https://cdn.quasar.dev/img/quasar.jpg"
+          />
+        </q-carousel>
       </div>
 
       <!-- <div class="q-gutter-md">
@@ -56,7 +88,7 @@
     </div>
 
     <!-- <br /><br /> -->
-    <div class="q-pa-md bg-grey-10 text-white">
+    <!-- <div class="q-pa-md bg-grey-10 text-white">
       <div class="q-gutter-md">
         <p>Please select the identity that best fits you:</p>
         <q-radio
@@ -77,8 +109,9 @@
     </div>
     <div class="q-px-sm">
       Your selection is: <strong>{{ "Identity" }}</strong>
-    </div>
+    </div> -->
   </div>
+
   <!-- <q-btn color="primary" style="width: 200px">
       <div class="ellipsis">Interactive Habitat</div></q-btn
     >
@@ -94,6 +127,8 @@ export default {
     return {
       Identity: "Student",
       tab: "interactiveHabitat",
+      slide: 1,
+      autoplay: true
     };
   },
 };

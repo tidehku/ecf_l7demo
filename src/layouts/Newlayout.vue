@@ -23,7 +23,7 @@
       </q-toolbar>
 
       <!-- <div class="q-mx-md"> -->
-      <div class="q-gutter-y-md" style="max-width: 1000px">
+      <div class="q-gutter-y-md" style="max-width: 900px">
         <q-tabs
           aligh="left"
           v-model="tab"
@@ -43,7 +43,7 @@
             to="interactiveHabitat"
             class="text-orange"
             name="interactiveHabitat"
-            icon="map"
+            icon="travel_explore"
             label="Interactive Habitat"
           ></q-route-tab>
           <q-route-tab
@@ -61,10 +61,38 @@
             label="Drill Down Map"
           ></q-route-tab>
         </q-tabs>
+
+        <q-btn-dropdown color="black" glossy label="Please Select your identity">
+          <q-list>
+            <q-item clickable v-close-popup @click="onItemClick">
+              <q-item-section>
+                <q-item-label>High School Student</q-item-label>
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-close-popup @click="onItemClick">
+              <q-item-section>
+                <q-item-label>University/College Student</q-item-label>
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-close-popup @click="onItemClick">
+              <q-item-section>
+                <q-item-label>Scientist/Researcher</q-item-label>
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </q-btn-dropdown>
       </div>
     </q-header>
 
-    <q-drawer show-if-above v-model="right" side="right" elevated>
+    <q-drawer
+      show-if-above
+      v-model="right"
+      side="right"
+      content-class="doc -right-drawer"
+      elevated
+    >
       <!-- drawer content -->
     </q-drawer>
 
@@ -81,6 +109,11 @@ export default {
       right: false,
       tab: "interactiveHabitat",
     };
+  },
+  methods: {
+    onItemClick() {
+      // console.log('Clicked on an Item')
+    },
   },
 };
 </script>
