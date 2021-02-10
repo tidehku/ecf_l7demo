@@ -10,9 +10,9 @@
     <!-- <l-marker v-for="site in siteMarkers" :key="site.name" :lat-lng="site.location">
       <l-popup :content="site.name" />
     </l-marker>-->
-    <l-marker :lat-lng="[22.464, 114.216]">
+    <!-- <l-marker :lat-lng="[22.464, 114.216]">
       <l-popup :content="content"></l-popup>
-    </l-marker>
+    </l-marker> -->
     <l-marker :lat-lng="[22.352, 114.15]" draggable @add="openPopup">
       <l-popup
         :content="`Drag me around`"
@@ -79,23 +79,23 @@ export default {
     //   { name: "Capedaguilar", location: [22.206, 114.26] },
     //   { name: "Demo", location: [22.352, 114.15] },
     // ],
-    content: '<iframe width="200" height="500" src="./myPopup.html"></iframe>',
+    //     content: '<iframe width="200" height="500" src="./myPopup.html"></iframe>',
     template:
       '<form id="popup-form">\
-  <label for="input-speed">Input number:</label>\
-  <input id="input-speed" class="popup-input" type="number" />\
-  <table class="popup-table">\
-    <tr class="popup-table-row">\
-      <th class="popup-table-header">Arc numer:</th>\
-      <td id="value-arc" class="popup-table-data">random number</td>\
-    </tr>\
-    <tr class="popup-table-row">\
-      <th class="popup-table-header">Current speed:</th>\
-      <td id="value-speed" class="popup-table-data">89198374198bdkjav</td>\
-    </tr>\
-  </table>\
-  <button id="button-submit" type="button">Sample button</button>\
-</form>',
+      <label for="input-speed">Input number:</label>\
+      <input id="input-speed" class="popup-input" type="number" />\
+      <table class="popup-table">\
+        <tr class="popup-table-row">\
+          <th class="popup-table-header">Arc numer:</th>\
+          <td id="value-arc" class="popup-table-data">random number</td>\
+        </tr>\
+        <tr class="popup-table-row">\
+          <th class="popup-table-header">Current speed:</th>\
+          <td id="value-speed" class="popup-table-data">89198374198bdkjav</td>\
+        </tr>\
+      </table>\
+      <button id="button-submit" type="button">Sample button</button>\
+    </form>',
     url:
       "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
     attribution:
