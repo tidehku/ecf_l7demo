@@ -16,6 +16,7 @@
 </template>
 
 <script>
+// import "leaflet/dist/leaflet.css";
 import { LMap, LTileLayer, LMarker, LPopup } from "vue2-leaflet";
 
 export default {

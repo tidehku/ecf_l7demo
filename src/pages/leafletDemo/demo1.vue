@@ -37,15 +37,15 @@
 </template>
  
 <script>
-import * as L from "leaflet";
-import "leaflet/dist/leaflet.css";
+// import * as L from "leaflet";
+// import "leaflet/dist/leaflet.css";
 
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
-  iconUrl: require("leaflet/dist/images/marker-icon.png"),
-  shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
-});
+// delete L.Icon.Default.prototype._getIconUrl;
+// L.Icon.Default.mergeOptions({
+//   iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
+//   iconUrl: require("leaflet/dist/images/marker-icon.png"),
+//   shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
+// });
 
 import VueLeafletMinimap from "vue-leaflet-minimap";
 import "leaflet-minimap/dist/Control.MiniMap.min.css";
