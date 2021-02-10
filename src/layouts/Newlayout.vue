@@ -14,8 +14,8 @@
         <q-tabs align="left">
           <q-route-tab to="/page1" text-color="yellow" label="Log in" />
           <q-route-tab to="/page2" label="About us" />
-          <q-route-tab to="/page3" label="Setting" />
-          <q-route-tab to="/page4" label="Help" />
+          <q-route-tab to="/l/demo1" label="LeafletDemo" />
+          <q-route-tab to="/l/demo2" label="UserCenter" />
         </q-tabs>
         <q-separator dark vertical inset></q-separator>
 
