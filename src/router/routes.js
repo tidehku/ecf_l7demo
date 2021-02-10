@@ -7,7 +7,7 @@ const routes = [
       { path: 'home', component: () => import('pages/Index.vue') },
       { path: 'demoMap', component: () => import('pages/demoMap.vue') },
       { path: 'drillDown', component: () => import('pages/drillDown.vue') },
-      { path: 'interactiveHabitat', component: () => import('pages/interactiveHabitat.vue') },
+      { path: 'interactiveHabitat', component: () => import('pages/sample.vue') },
     ]
   },
 
