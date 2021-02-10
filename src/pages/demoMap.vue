@@ -7,9 +7,12 @@
 <script>
 import { Scene, PointLayer } from "@antv/l7";
 import { GaodeMap } from "@antv/l7-maps";
+// import Regions from 'regions.json' 
 export default {
   data() {
-    return {};
+    return {
+      userinform:''
+    };
   },
   mounted() {
     const scene = new Scene({
