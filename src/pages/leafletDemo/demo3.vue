@@ -2,13 +2,15 @@
   <div class="map">
     <l-map :zoom="zoom" :center="center" style="height: 600px; width: 100%">
       <l-tile-layer :url="url" :attribution="attribution" />
-      <l-geo-json :geojson="geojson" />
+      <l-geo-json :geojson="geojson">
+      :color="geojson.color"/>
+      </l-geo-json>
     </l-map>
   </div>
 </template>
 
 <script>
-// import "leaflet/dist/leaflet.css";
+import "leaflet/dist/leaflet.css";
 import { LMap, LTileLayer, LMarker, LGeoJson } from "vue2-leaflet";
 
 export default {

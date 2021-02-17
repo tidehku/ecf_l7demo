@@ -1,11 +1,27 @@
 <template>
+<div class="q-pa-xs">
+ 
+      <div class="col-4">
+        <q-card class="my-card">
+          </q-card><q-card-section>
+        Child1
+      </q-card-section>
+    </q-card>
+    </div>
+  
+  
+  <div class="col-6">
+    .col-6 (wider)
+  </div>
   <div class="map">
+   
     <l-map :zoom="zoom" :center="center" style="height: 600px; width: 100%">
       <l-tile-layer :url="url" :attribution="attribution" />
       <l-geo-json :geojson="geojson"
       :color="geojson.color"/>
       </l-geo-json>
     </l-map>
+  </div>
   </div>
 </template>
 
@@ -25,9 +41,6 @@ export default {
       attribution:
         "Source &copy; Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community",
       geojson: require("../../regions.json"),
-      geojson: {
-        color: "#e4ce7f",
-      },
     };
   },
 };
