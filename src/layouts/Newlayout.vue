@@ -1,10 +1,10 @@
 <template>
-  <q-layout view="hHh lpr fff">
+  <q-layout view="hHh lpr fFf">
     <q-header elevated>
-      <q-toolbar class="bg-white glossy text-dark" style="height:70px">
-        <q-avatar size="70px">
+      <q-toolbar class="bg-white glossy text-dark" style="height:80px">
+        <q-avatar size="65px">
           <img
-            src="~assets/SWIMSlogo_circle.png"
+            src="~assets/SWIMSlogo2.png"
           />
         </q-avatar>
         <q-toolbar-title class="text-h5 text-bold" >
@@ -25,6 +25,20 @@
     <q-page-container>
       <router-view/>
     </q-page-container>
+
+     <q-footer elevated>
+      <q-toolbar class="bg-white glossy text-dark" style="height:40px">
+        <q-toolbar-title id="footer">
+          Copyright ©
+          {{ new Date().getFullYear() }} —
+          <a href="https://www.tidehku.com/" target="_blank">
+            <strong>Tropical IntertiDal Ecology Group</strong>
+          </a>
+          , The Swire Institute of Marine Science, The University of Hong Kong
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-footer>
+
   </q-layout>
 </template>
 
@@ -43,3 +57,13 @@ export default {
   },
 };
 </script>
+
+<style lang="sass">
+.q-toolbar__title
+  color: dark
+  font: normal
+
+#footer.q-toolbar__title
+  text-align: center
+  font-size: 15px
+</style>

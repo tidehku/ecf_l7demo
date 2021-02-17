@@ -1,27 +1,33 @@
 <template>
-<div class="q-pa-xs">
- 
+  <div class="q-pa-xs">
+    
+    <div class="flex flex-left column">
       <div class="col-4">
         <q-card class="my-card">
-          </q-card><q-card-section>
-        Child1
-      </q-card-section>
-    </q-card>
+          <q-card-section>Child1</q-card-section>
+        </q-card>
+      </div>
     </div>
-  
-  
-  <div class="col-6">
-    .col-6 (wider)
-  </div>
-  <div class="map">
-   
-    <l-map :zoom="zoom" :center="center" style="height: 600px; width: 100%">
-      <l-tile-layer :url="url" :attribution="attribution" />
-      <l-geo-json :geojson="geojson"
-      :color="geojson.color"/>
-      </l-geo-json>
-    </l-map>
-  </div>
+
+    <div class="col-6">
+      <!-- <div class="map">
+        <l-map
+          :zoom="zoom"
+          :center="center"
+          style="height: 600px; width: 100%"
+        >
+          <l-tile-layer
+            :url="url"
+            :attribution="attribution"
+          />
+          <l-geo-json
+            :geojson="geojson"
+            :color="geojson.color"
+          />
+          </l-geo-json>
+        </l-map>
+      </div> -->
+    </div>
   </div>
 </template>
 
