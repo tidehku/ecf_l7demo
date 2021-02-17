@@ -5,10 +5,10 @@ const routes = [
     component: () => import('layouts/NewLayout.vue'),
     children: [
       { path: 'home', component: () => import('pages/Index.vue') },
-      { path: 'demoMap', component: () => import('pages/demoMap.vue') },
-      { path: 'drillDown', component: () => import('pages/drillDown.vue') },
-      { path: 'interactiveHabitat', component: () => import('pages/leafletDemo/demo3.vue') },
-      { path: 'interactiveHabitat', component: () => import('pages/sample.vue') },
+      // { path: 'demoMap', component: () => import('pages/demoMap.vue') },
+      // { path: 'drillDown', component: () => import('pages/drillDown.vue') },
+      { path: 'interactiveHabitat', component: () => import('pages/interactiveHabitat.vue') },
+
     ]
   },
   {
