@@ -13,8 +13,8 @@
 
         <q-tabs align="left" v-model="tab" dense>
           <q-route-tab to="/home" name="home" class="text-blue" icon="home" label="Homepage" />
-          <q-route-tab to="/interactiveHabitat" name="interactiveHabitat" class="text-orange" icon="map" label="Interactive Habitat" />
-          <q-route-tab to="/l/demo2" name="speciesSearchEngine" class="text-red" icon="travel_explore" label="Species Search Engine" />
+          <q-route-tab to="/interactiveHabitat" name="interactiveHabitat" class="text-red-8" icon="map" label="Interactive Habitat" />
+          <q-route-tab to="/l/demo2" name="speciesSearchEngine" class="text-indigo-9" icon="travel_explore" label="Species Search Engine" />
         </q-tabs>
      
         <!-- <q-separator dark vertical inset></q-separator> -->
