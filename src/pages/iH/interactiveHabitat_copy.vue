@@ -82,7 +82,7 @@
               <l-geo-json
                 :geojson="geojson"
                 :color="geojson.color"
-                :options="mapOptions"
+                :options="geoJSONOptions"
               />
               </l-geo-json>
             </l-map>
@@ -123,9 +123,32 @@ export default {
       mapOptions: {
         zoomSnap: 0.25,
       },
-      geojson: require("../../../regions.json"),
+      geojson: require("../../../NW.json"),
+      popupName: 11,
+      geoJSONOptions: {
+        style: function style(feature) {
+          return {
+            weight: 2,
+            opacity: 0.5,
+            color: "red",
+            fillOpacity: 0.5,
+          };
+        },
+      },
     };
   },
 };
 </script>
 
+ // popupName: 11,
+      // mapOptions: {
+      //   style: function style(feature) {
+      //     return {
+      //       weight: 2,
+      //       opacity: 0.5,
+      //       color: "white",
+      //       fillOpacity: 0.5
+      //     };
+      //   },   
+      // }
+      // function getColor()

@@ -13,7 +13,7 @@ const routes = [
     component: () => import('layouts/NewLayout.vue'),
     children: [
       //six zones separately
-      { path: '/interactiveHabitat/copy', component: () => import('pages/iH/interactiveHabitat_copy.vue') },
+      // { path: '/interactiveHabitat/copy', component: () => import('pages/iH/interactiveHabitat_copy.vue') },
       { path: '/interactiveHabitat/NW', component: () => import('pages/iH/interactiveHabitat_NW.vue') },
       { path: '/interactiveHabitat/SW', component: () => import('pages/iH/interactiveHabitat_NW.vue') },
       { path: '/interactiveHabitat/SO', component: () => import('pages/iH/interactiveHabitat_NW.vue') },

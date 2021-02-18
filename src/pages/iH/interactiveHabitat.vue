@@ -122,7 +122,7 @@ export default {
       mapOptions: {
         zoomSnap: 0.25,
       },
-      geojson: require("../../../regions.json"),
+      geojson: require("../../MapData/regions.json"),
     };
   },
 };

@@ -108,6 +108,7 @@
               <l-geo-json
                 :geojson="geojson"
                 :color="geojson.color"
+                :options="geoJSONOptions"
               />
               </l-geo-json>
             </l-map>
@@ -129,26 +130,35 @@ export default {
   components: { LMap, LTileLayer, LGeoJson, LMarker },
   data() {
     return {
-      zoom: 10.25,
-      maxZoom: 15,
-      minZoom: 10.25,
-      center: L.latLng(22.340890230379372, 114.17214768915284),
-      bounds: L.latLngBounds([
-        [22.557533808609336, 113.73082231707503],
-        [22.139381865658696, 114.62448168220955],
-      ]),
-      maxBounds: L.latLngBounds([
-        [22.557533808609336, 113.73082231707503],
-        [22.139381865658696, 114.62448168220955],
-      ]),
+      zoom: 10.8,
+      center: L.latLng(22.340890230379372, 113.97214768915284),
+      // bounds: L.latLngBounds([
+      //   [22.457533808609336, 113.93082231707503],
+      //   [22.239381865658696, 114.02448168220955],
+      // ]),
+      // // maxBounds: L.latLngBounds([
+      // //   [22.557533808609336, 113.73082231707503],
+      // //   [22.139381865658696, 114.62448168220955],
+      // // ]),
       url:
         "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
       attribution:
         "Source &copy; Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community",
       mapOptions: {
-        zoomSnap: 0.25,
+        zoomSnap: 0.2,
       },
-      geojson: require("../../../regions.json"),
+      geojson: require("../../../NW.json"),
+      popupName: 11,
+      geoJSONOptions: {
+        style: function style(feature) {
+          return {
+            weight: 4,
+            opacity: 0.5,
+            color: "red",
+            fillOpacity: 0.2,
+          };
+        },
+      },
     };
   },
 };
