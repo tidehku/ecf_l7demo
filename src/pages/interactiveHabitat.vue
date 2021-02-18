@@ -1,8 +1,6 @@
 <template>
   <div class="q-pa-xs">
-
     <div class="flex flex-center column">
-
       <div
         id="parent"
         class="full-width row inline wrap justify-start items-start content-start"
@@ -18,41 +16,46 @@
             bordered
             class="bg-blue-grey-13 my-card"
           >
-            <q-card-section>
-              <div justify-center>
-                <q-img
-                  src="~/assets/SWIMSlogo2.png"
-                  alt="SWIMs logo"
-                  width="200px"
-                />
-              </div>
+            <div class="q-pa-md row justify-center">
+              <q-img
+                src="~/assets/SWIMSlogo2.png"
+                alt="SWIMs logo"
+                style="width: 200px; height:100%; align: center"
+              />
+            </div>
 
-              <div class="text-h5 text-bold text-center">
-                Interactive Habitat Map<br>around HK Rocky Shore<br>by ECF 2019-2023</div>
-              <div class="text-subtitle2">introduction</div>
-            </q-card-section>
-
-            <q-separator
+            <div class="bg-blue-10 text-h5 text-bold text-center text-white">
+              WElCOME PAGE
+            </div>
+            <div class="text-h5 text-bold text-center text-white">
+              Interactive Habitat Map<br>Around Hong Kong Rocky Shore<br>by ECF 2019-2023
+            </div>
+            <!-- <q-separator
               dark
               inset
-            />
+            /> -->
+            <div class="q-ma-lg">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quis tempore praesentium illum? Molestiae ipsa repellendus ipsam! Quaerat placeat eveniet, quo tempora dolorum, maxime eos odit, voluptate aspernatur assumenda ipsa.</p>
+            </div>
 
-            <q-btn
-              no-caps
-              color="blue-9 glossy"
-              size="20px"
-              push
-            >
-              <div class="row items-center no-wrap">
-                <q-icon
-                  center
-                  name="search"
-                />
-                <div class="text-center no-caps">
-                  Please Select Any Zone<br>for Localized Data
+            <div class="row justify-center">
+              <q-btn
+                no-caps
+                color="blue-10"
+                size="20px"
+                push
+              >
+                <div class="row items-center no-wrap">
+                  <q-icon
+                    center
+                    name="zoom_in"
+                  />
+                  <div class="text-center no-caps">
+                    Please Select Any Zone<br>for Localized Data
+                  </div>
                 </div>
-              </div>
-            </q-btn>
+              </q-btn>
+            </div>
 
             <q-card-section>
               {{ lorem }}
@@ -61,13 +64,14 @@
         </div>
 
         <div
-          class="col-8      bg-grey-6"
+          class="col-8 bg-grey-6"
           style="overflow: auto;"
         >
           <div class="map">
             <l-map
               :zoom="zoom"
               :center="center"
+              :options="mapOptions"
               style="height: 600px; width: 100%"
             >
               <l-tile-layer
@@ -101,8 +105,11 @@ export default {
   components: { LMap, LTileLayer, LGeoJson, LMarker },
   data: function () {
     return {
+      mapOptions: {
+        zoomSnap: 0.5,
+      },
       center: [22.352, 114.15],
-      zoom: 11,
+      zoom: 10.5,
       url:
         "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
       attribution:

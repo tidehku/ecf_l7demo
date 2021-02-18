@@ -1,5 +1,5 @@
 <template>
-  <div class="q-ma-md">
+  <div class="q-py-xs">
     <!-- <div class="q-bar">
       <q-bar dark class="bg-darkgray text-white q-my-md shadow-2">
         <q-btn dense flat round icon="lens" size="8.5px" color="red" />
@@ -11,14 +11,7 @@
       </q-bar>
     </div> -->
 
-    <!-- <h3
-      id="title"
-      class="text-Black text-no-wrap"
-      style="font-family: 'Roboto', bold">
-      Hello Welcome to My Website
-    </h3> -->
-
-    <div class="q-ma-sm">
+    <!-- <div class="q-ma-sm">
       <q-card-section>
         <q-img
           src="https://www.swims.hku.hk/wp-content/themes/swims/images/logo.png"
@@ -26,9 +19,9 @@
           width="240px"
           align="top"
         />
-      </q-card-section>
+      </q-card-section> -->
 
-      <!-- <div class="mapImg">
+    <!-- <div class="mapImg">
         <q-img
           src="~assets/map_new_sites.png"
           alt="Uh Oh! Image not found!"
@@ -37,39 +30,49 @@
         />
       </div> -->
 
-      <div class="q-pa-md">
-        <q-carousel
-          animated
-          v-model="slide"
-          navigation
-          infinite
-          :autoplay="autoplay"
-          arrows
-          transition-prev="slide-right"
-          transition-next="slide-left"
-          @mouseenter="autoplay = true"
-          @mouseleave="autoplay = true"
-        >
-          <q-carousel-slide
-            :name="1"
-            img-src="https://cdn.quasar.dev/img/mountains.jpg"
-          />
-          <q-carousel-slide
-            :name="2"
-            img-src="https://cdn.quasar.dev/img/parallax1.jpg"
-          />
-          <q-carousel-slide
-            :name="3"
-            img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-          />
-          <q-carousel-slide
-            :name="4"
-            img-src="https://cdn.quasar.dev/img/quasar.jpg"
-          />
-        </q-carousel>
-      </div>
+    <div class="q-py-xs">
+      <q-carousel
+        animated
+        v-model="slide"
+        navigation
+        infinite
+        :autoplay="autoplay"
+        arrows
+        transition-prev="slide-right"
+        transition-next="slide-left"
+        @mouseenter="autoplay = true"
+        @mouseleave="autoplay = true"
+      >
+        <q-carousel-slide
+          :name="1"
+          img-src="https://cdn.quasar.dev/img/mountains.jpg"
+        />
+        <q-carousel-slide
+          :name="2"
+          img-src="https://cdn.quasar.dev/img/parallax1.jpg"
+        />
+        <q-carousel-slide
+          :name="3"
+          img-src="https://cdn.quasar.dev/img/parallax2.jpg"
+        />
+        <q-carousel-slide
+          :name="4"
+          img-src="https://cdn.quasar.dev/img/quasar.jpg"
+        />
+      </q-carousel>
+    </div>
 
-      <!-- <div class="q-gutter-md">
+    <div class="q-py-md row justify-center">
+      <h3
+      id="title"
+      class="text-Black text-no-wrap"
+      style="font-family: 'Roboto', bold"
+    >
+      <b>Welcome to ECF Rocky Shore GIS Website Storyboard</b>
+    </h3>
+    </div>
+
+    <!-- <div class="q-gutter-md">
         <q-btn
           align="left"
           class="btn-fixed-width"
@@ -85,10 +88,10 @@
           to="drillDown"
         />
       </div> -->
-    </div>
+  </div>
 
-    <!-- <br /><br /> -->
-    <!-- <div class="q-pa-md bg-grey-10 text-white">
+  <!-- <br /><br /> -->
+  <!-- <div class="q-pa-md bg-grey-10 text-white">
       <div class="q-gutter-md">
         <p>Please select the identity that best fits you:</p>
         <q-radio
@@ -128,7 +131,7 @@ export default {
       Identity: "Student",
       tab: "interactiveHabitat",
       slide: 1,
-      autoplay: true
+      autoplay: true,
     };
   },
 };
