@@ -148,17 +148,17 @@ export default {
         zoomSnap: 0.2,
       },
       geojson: require("../../../NW.json"),
-      popupName: 11,
-      geoJSONOptions: {
-        style: function style(feature) {
-          return {
-            weight: 4,
-            opacity: 0.5,
-            color: "red",
-            fillOpacity: 0.2,
-          };
-        },
-      },
+      // popupName: 11,
+      // geoJSONOptions: {
+      //   style: function style(feature) {
+      //     return {
+      //       weight: 4,
+      //       opacity: 0.5,
+      //       color: "red",
+      //       fillOpacity: 0.2,
+      //     };
+      //   },
+      // },
     };
   },
 };
