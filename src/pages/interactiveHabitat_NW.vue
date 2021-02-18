@@ -1,9 +1,6 @@
 <template>
   <div class="q-pa-xs">
-    <div
-      class="flex flex-center column"
-      style="height: 500px"
-    >
+    <div class="flex flex-center column">
       <div
         id="parent"
         class="full-width row inline wrap justify-start items-start content-start"
@@ -19,28 +16,52 @@
             bordered
             class="bg-blue-grey-13 my-card"
           >
-            <div class="q-pa-md row justify-center">
-              <q-img
-                src="~/assets/SWIMSlogo2.png"
-                alt="SWIMs logo"
-                style="width: 100px; height:100%; align: center"
-              />
-            </div>
 
-            <div class="bg-blue-10 text-h6 text-bold text-center text-white">
-              WElCOME PAGE
-            </div>
-            <div class="text-h6 text-bold text-center text-white">
-              Interactive Habitat Map<br>Around Hong Kong Rocky Shore<br>by ECF 2019-2023
-            </div>
             <!-- <q-separator
               dark
               inset
             /> -->
-            <div class="q-ma-lg text-small">
+            <div class="q-ma-sm">
+              <h4><b>NorthWestern Sites</b></h4>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quis tempore praesentium illum? Molestiae ipsa repellendus ipsam! Quaerat placeat eveniet, quo tempora dolorum, maxime eos odit, voluptate aspernatur assumenda ipsa.</p>
             </div>
 
+            <div class="q-pa-md">
+
+              <q-markup-table
+                :separator="vertical"
+                
+                bordered
+              >
+                <tbody class="bg-white">
+                  <tr>
+                    <td class="text-left">Nutrient Levels</td>
+                    <td class="text-right">...</td>
+
+                  </tr>
+                  <tr>
+                    <td class="text-left">Average Wave Fetch</td>
+                    <td class="text-right">...</td>
+
+                  </tr>
+                  <tr>
+                    <td class="text-left">Average Temperature</td>
+                    <td class="text-right">...</td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">Number of Species of fauna</td>
+                    <td class="text-right">...</td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">Number of Species of flora</td>
+                    <td class="text-right">...</td>
+
+                  </tr>
+                </tbody>
+
+              </q-markup-table>
+
+            </div>
             <div class="row justify-center">
               <q-btn
                 no-caps
@@ -51,10 +72,10 @@
                 <div class="row items-center no-wrap">
                   <q-icon
                     center
-                    name="zoom_in"
+                    name="backup_table"
                   />
                   <div class="text-center no-caps">
-                    Please Select Any Zone<br>for Localized Data
+                    Go to Dashboard
                   </div>
                 </div>
               </q-btn>
@@ -72,12 +93,10 @@
         >
           <div class="map">
             <l-map
-              style="height: 600px; width: 100%"
               :zoom="zoom"
               :center="center"
               :options="mapOptions"
-              :bounds="bounds"
-              :max-bounds="maxBounds"
+              style="height: 600px; width: 100%"
             >
               <l-tile-layer
                 :url="url"
@@ -92,8 +111,11 @@
           </div>
         </div>
       </div>
+
     </div>
+
     <div class="col-6">
+
     </div>
   </div>
 </template>
@@ -105,28 +127,19 @@ import { LMap, LTileLayer, LMarker, LGeoJson } from "vue2-leaflet";
 export default {
   name: "MapGeoJSON",
   components: { LMap, LTileLayer, LGeoJson, LMarker },
-  data() {
+  data: function () {
     return {
+      mapOptions: {
+        zoomSnap: 0.5,
+      },
+      center: [22.332, 114.160],
       zoom: 10.5,
-      center: [22.332, 114.16],
-      // bounds: L.latLngBounds([
-      //   [22.557533808609336, 113.73082231707503],
-      //   [22.099381865658696, 114.62448168220955],
-      // ]),
-      maxBounds: L.latLngBounds([
-        [22.557533808609336, 113.73082231707503],
-        [22.099381865658696, 114.62448168220955],
-      ]),
       url:
         "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
       attribution:
         "Source &copy; Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community",
-      mapOptions: {
-        zoomSnap: 0.5,
-      },
       geojson: require("../../regions.json"),
     };
   },
 };
 </script>
-
