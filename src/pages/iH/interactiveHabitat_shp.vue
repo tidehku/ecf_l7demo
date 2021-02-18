@@ -79,12 +79,15 @@
                 :url="url"
                 :attribution="attribution"
               />
-              <l-geo-json
+              <!-- <l-geo-json
                 :geojson="geojson"
                 :color="geojson.color"
-                :options="mapOptions"
               />
-              </l-geo-json>
+              </l-geo-json> -->
+              <l-polygon
+                :polygon="polygon"
+                :color="polygon.color"
+              ></l-polygon>
             </l-map>
           </div>
         </div>
@@ -97,11 +100,11 @@
 
 <script>
 import "leaflet/dist/leaflet.css";
-import { LMap, LTileLayer, LMarker, LGeoJson } from "vue2-leaflet";
+import { LMap, LTileLayer, LMarker, LPolygon } from "vue2-leaflet";
 
 export default {
   name: "MapGeoJSON",
-  components: { LMap, LTileLayer, LGeoJson, LMarker },
+  components: { LMap, LTileLayer, Lpolygon, LMarker },
   data() {
     return {
       zoom: 10.25,
@@ -123,7 +126,8 @@ export default {
       mapOptions: {
         zoomSnap: 0.25,
       },
-      geojson: require("../../../regions.json"),
+      // geojson: require("../../../regions.json"),
+      // polygon: require("../../../polygon.zip"),
     };
   },
 };
