@@ -123,6 +123,7 @@ export default {
         zoomSnap: 0.25,
       },
       geojson: require("../../../regions.json"),
+      // polygon: require("../../../polygon.shp")
     };
   },
 };
