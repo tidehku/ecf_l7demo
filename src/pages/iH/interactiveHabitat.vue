@@ -126,9 +126,7 @@ export default {
             var popup = L.popup()
               .setLatLng(e.latlng)
               .setContent(
-                '<h1 style="color: grey; margin-bottom: 0;">' +
-                  feature.properties.name +
-                  "</h1>"
+                '<p style="color: grey;">' + feature.properties.name + "</p>"
               )
               .openOn(this.$refs.myMapRef.mapObject);
           });
