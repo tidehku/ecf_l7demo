@@ -4,44 +4,31 @@
       <div
         id="parent"
         class="full-width row inline wrap justify-start items-start content-start"
-        style="overflow: hidden;"
+        style="overflow: hidden"
       >
-        <div
-          id="sidebar"
-          class="col-4 bg-grey-6"
-          style="overflow: auto;"
-        >
-          <q-card
-            dark
-            bordered
-            class="bg-blue-grey-13 my-card"
-          >
-
-            <q-separator
-              dark
-              inset
-            />
+        <div id="sidebar" class="col-4 bg-grey-6" style="overflow: auto">
+          <q-card dark bordered class="bg-blue-grey-13 my-card">
+            <q-separator dark inset />
             <div class="q-mx-sm">
               <h4><b>NorthWestern Sites</b></h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quis tempore praesentium illum? Molestiae ipsa repellendus ipsam! Quaerat placeat eveniet, quo tempora dolorum, maxime eos odit, voluptate aspernatur assumenda ipsa.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                quis tempore praesentium illum? Molestiae ipsa repellendus
+                ipsam! Quaerat placeat eveniet, quo tempora dolorum, maxime eos
+                odit, voluptate aspernatur assumenda ipsa.
+              </p>
             </div>
 
             <div class="q-pa-sm">
-
-              <q-markup-table
-                :separator="vertical"
-                bordered
-              >
+              <q-markup-table :separator="vertical" bordered>
                 <tbody class="bg-white">
                   <tr>
                     <td class="text-left">Nutrient Levels</td>
                     <td class="text-right">...</td>
-
                   </tr>
                   <tr>
                     <td class="text-left">Average Wave Fetch</td>
                     <td class="text-right">...</td>
-
                   </tr>
                   <tr>
                     <td class="text-left">Average Temperature</td>
@@ -54,28 +41,15 @@
                   <tr>
                     <td class="text-left">Number of Species of flora</td>
                     <td class="text-right">...</td>
-
                   </tr>
                 </tbody>
-
               </q-markup-table>
-
             </div>
             <div class="row justify-center">
-              <q-btn
-                no-caps
-                color="blue-10"
-                size="20px"
-                push
-              >
+              <q-btn no-caps color="blue-10" size="20px" push>
                 <div class="row items-center no-wrap">
-                  <q-icon
-                    center
-                    name="backup_table"
-                  />
-                  <div class="text-center no-caps">
-                    Go to Dashboard
-                  </div>
+                  <q-icon center name="backup_table" />
+                  <div class="text-center no-caps">Go to Dashboard</div>
                 </div>
               </q-btn>
             </div>
@@ -86,10 +60,7 @@
           </q-card>
         </div>
 
-        <div
-          class="col-8 bg-grey-6"
-          style="overflow: auto"
-        >
+        <div class="col-8 bg-grey-6" style="overflow: auto">
           <div class="map">
             <l-map
               style="height: 480px; width: 100%"
@@ -101,23 +72,18 @@
               :max-zoom="maxZoom"
               :min-zoom="minZoom"
             >
-              <l-tile-layer
-                :url="url"
-                :attribution="attribution"
-              />
+              <l-tile-layer :url="url" :attribution="attribution" />
               <l-geo-json
                 :geojson="geojson"
                 :color="geojson.color"
                 :options="geoJSONOptions"
               />
-              </l-geo-json>
             </l-map>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-6">
-    </div>
+    <div class="col-6"></div>
   </div>
 </template>
 

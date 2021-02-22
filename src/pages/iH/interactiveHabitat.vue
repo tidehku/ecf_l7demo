@@ -69,7 +69,8 @@
               ref="myMapRef"
             >
               <l-tile-layer :url="url" :attribution="attribution" />
-              <l-geo-json :geojson="geojson" :options="geoJSONOptions" />
+              <l-geo-json :geojson="geojson" :options="geoJSONOptions">
+              </l-geo-json>
             </l-map>
           </div>
         </div>
@@ -118,20 +119,24 @@ export default {
             fillOpacity: 0.3,
           };
         },
-        onEachFeature: function onEachFeature(feature, layer) {
+        onEachFeature: (feature, layer) => {
           layer.on("mouseover", (e) => {
-            // console.log(feature.properties.Name);
-            
-            /* cannot open the popup */
-            // //open popup
-            // var popup = L.popup()
-            //   .setLatLng(e.latlng)
-            //   .setContent(
-            //     '<h1 style="color: grey; margin-bottom: 0;">' +
-            //       feature.properties.Name +
-            //       "</h1>"
-            //   )
-            //   .openOn(self.$refs.myMapRef.mapObject);
+            // console.log(feature.properties.name);
+
+            var popup = L.popup()
+              .setLatLng(e.latlng)
+              .setContent(
+                '<h1 style="color: grey; margin-bottom: 0;">' +
+                  feature.properties.name +
+                  "</h1>"
+              )
+              .openOn(this.$refs.myMapRef.mapObject);
+          });
+
+          /* click on the geojson feature to navigate */
+          layer.on("click", (e) => {
+            // console.log(feature.properties.name);
+            this.$router.push(`interactiveHabitat/${feature.properties.name}`);
           });
         },
       },
