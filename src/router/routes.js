@@ -15,11 +15,11 @@ const routes = [
       //six zones separately
       // { path: '/interactiveHabitat/copy', component: () => import('pages/iH/interactiveHabitat_copy.vue') },
       { path: '/interactiveHabitat/NW', component: () => import('pages/iH/interactiveHabitat_NW.vue') },
-      { path: '/interactiveHabitat/SW', component: () => import('pages/iH/interactiveHabitat_NW.vue') },
-      { path: '/interactiveHabitat/SO', component: () => import('pages/iH/interactiveHabitat_NW.vue') },
-      { path: '/interactiveHabitat/EA', component: () => import('pages/iH/interactiveHabitat_NW.vue') },
-      { path: '/interactiveHabitat/TL', component: () => import('pages/iH/interactiveHabitat_NW.vue') },
-      { path: '/interactiveHabitat/NE', component: () => import('pages/iH/interactiveHabitat_NW.vue') },
+      { path: '/interactiveHabitat/SW', component: () => import('pages/iH/interactiveHabitat_SW.vue') },
+      { path: '/interactiveHabitat/SO', component: () => import('pages/iH/interactiveHabitat_SO.vue') },
+      { path: '/interactiveHabitat/EA', component: () => import('pages/iH/interactiveHabitat_EA.vue') },
+      { path: '/interactiveHabitat/TL', component: () => import('pages/iH/interactiveHabitat_TL.vue') },
+      { path: '/interactiveHabitat/NE', component: () => import('pages/iH/interactiveHabitat_NE.vue') },
     ]
   },
   {
