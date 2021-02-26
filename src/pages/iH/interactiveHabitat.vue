@@ -91,8 +91,12 @@
                 :options="geoJSONOptions"
               >
               </l-geo-json>
-              <l-marker :lat-lng="samplingLocation"></l-marker>
+              
+              <l-geo-json
+                :geojson="SitesLocation"
+              >
               </l-geo-json>
+
             </l-map>
           </div>
         </div>
@@ -104,11 +108,11 @@
 
 <script>
 import "leaflet/dist/leaflet.css";
-import { LMap, LTileLayer, LGeoJson } from "vue2-leaflet";
+import { LMap, LTileLayer, LMarker, LGeoJson } from "vue2-leaflet";
 
 export default {
   name: "MapGeoJSON",
-  components: { LMap, LTileLayer, LGeoJson },
+  components: { LMap, LTileLayer, LMarker, LGeoJson },
   data() {
     return {
       zoom: 10.25,
@@ -131,6 +135,7 @@ export default {
       mapOptions: {
         zoomSnap: 0.25,
       },
+      SitesLocation: require("../../MapData/SitesLocation.json"),
       geojson: require("../../MapData/regions.json"),
       geoJSONOptions: {
         style: function style(feature) {
