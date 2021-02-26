@@ -10,7 +10,7 @@
           <q-card dark bordered class="bg-blue-grey-13 my-card">
             <q-separator dark inset />
             <div class="q-mx-sm">
-              <h4><b>NorthWestern Sites</b></h4>
+              <h4><b>Eastern Sites</b></h4>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
                 quis tempore praesentium illum? Molestiae ipsa repellendus
@@ -96,8 +96,8 @@ export default {
   components: { LMap, LTileLayer, LGeoJson, LMarker },
   data() {
     return {
-      zoom: 10.8,
-      center: L.latLng(22.340890230379372, 113.97214768915284),
+      zoom: 10.6,
+      center: L.latLng(22.3200, 114.3883),
       // bounds: L.latLngBounds([
       //   [22.457533808609336, 113.93082231707503],
       //   [22.239381865658696, 114.02448168220955],

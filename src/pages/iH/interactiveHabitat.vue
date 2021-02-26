@@ -6,8 +6,16 @@
         class="full-width row inline wrap justify-start items-start content-start"
         style="overflow: hidden"
       >
-        <div id="sidebar" class="col-4 bg-grey-6" style="overflow: auto">
-          <q-card dark bordered class="q-py-md bg-blue-grey-13 my-card">
+        <div
+          id="sidebar"
+          class="col-4 bg-grey-6"
+          style="overflow: auto"
+        >
+          <q-card
+            dark
+            bordered
+            class="q-py-md bg-blue-grey-13 my-card"
+          >
             <div class="q-pa-md row justify-center">
               <q-img
                 src="~/assets/SWIMSlogo2.png"
@@ -45,7 +53,10 @@
                 style="width: 280px"
               >
                 <div class="row items-center no-wrap">
-                  <q-icon center name="zoom_in" />
+                  <q-icon
+                    center
+                    name="zoom_in"
+                  />
                   <div class="text-center no-caps">
                     Please Select Any Zone<br />for Localized Data
                   </div>
@@ -55,7 +66,10 @@
           </q-card>
         </div>
 
-        <div class="col-8 bg-grey-6" style="overflow: auto">
+        <div
+          class="col-8 bg-grey-6"
+          style="overflow: auto"
+        >
           <div class="map">
             <l-map
               style="height: 480px; width: 100%"
@@ -68,8 +82,16 @@
               :min-zoom="minZoom"
               ref="myMapRef"
             >
-              <l-tile-layer :url="url" :attribution="attribution" />
-              <l-geo-json :geojson="geojson" :options="geoJSONOptions">
+              <l-tile-layer
+                :url="url"
+                :attribution="attribution"
+              />
+              <l-geo-json
+                :geojson="geojson"
+                :options="geoJSONOptions"
+              >
+              </l-geo-json>
+              <l-marker :lat-lng="samplingLocation"></l-marker>
               </l-geo-json>
             </l-map>
           </div>
@@ -105,11 +127,11 @@ export default {
         "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
       attribution:
         "Source &copy; Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community",
+
       mapOptions: {
         zoomSnap: 0.25,
       },
       geojson: require("../../MapData/regions.json"),
-
       geoJSONOptions: {
         style: function style(feature) {
           return {
