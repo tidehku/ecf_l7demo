@@ -1,7 +1,7 @@
 <template>
   <div class="row q-pa-sm">
-    <div id="sidebar" class="col-4" style="overflow: auto">
-      <q-card dark bordered class="q-py-md bg-blue-grey-13 my-card">
+    <div class="col-4">
+      <q-card dark bordered class="q-pa-md bg-blue-grey-13 my-card">
         <div class="q-pa-md row justify-center">
           <q-img
             src="~/assets/SWIMSlogo2.png"
@@ -17,10 +17,7 @@
           Interactive Habitat Map<br />Around Hong Kong Rocky Shore<br />by ECF
           2019-2023
         </div>
-        <!-- <q-separator
-              dark
-              inset
-            /> -->
+
         <div class="q-ma-sm">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
@@ -43,32 +40,29 @@
       </q-card>
     </div>
 
-    <div class="col-8 bg-grey-6" style="overflow: auto">
-      <div class="map">
-        <l-map
-          style="height: 480px; width: 100%"
-          :zoom="zoom"
-          :center="center"
-          :options="mapOptions"
-          :bounds="bounds"
-          :max-bounds="maxBounds"
-          :max-zoom="maxZoom"
-          :min-zoom="minZoom"
-          ref="myMapRef"
-        >
-          <l-tile-layer :url="url" :attribution="attribution" />
-          <l-geo-json :geojson="geojson" :options="geoJSONOptions">
-          </l-geo-json>
+    <div class="col-8">
+      <l-map
+        style="height: 100%"
+        :zoom="zoom"
+        :center="center"
+        :options="mapOptions"
+        :bounds="bounds"
+        :max-bounds="maxBounds"
+        :max-zoom="maxZoom"
+        :min-zoom="minZoom"
+        ref="myMapRef"
+      >
+        <l-tile-layer :url="url" :attribution="attribution" />
+        <l-geo-json :geojson="geojson" :options="geoJSONOptions"> </l-geo-json>
 
-          <l-geo-json :geojson="SitesLocation"> </l-geo-json>
-        </l-map>
-      </div>
+        <l-geo-json :geojson="SitesLocation"> </l-geo-json>
+      </l-map>
     </div>
   </div>
 </template>
 
 <script>
-import "leaflet/dist/leaflet.css";
+// import "leaflet/dist/leaflet.css";
 import { LMap, LTileLayer, LMarker, LGeoJson } from "vue2-leaflet";
 
 export default {
