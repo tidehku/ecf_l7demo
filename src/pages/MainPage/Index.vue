@@ -1,5 +1,5 @@
 <template>
-  <div class="q-py-xs">
+  <div class="row justify-center q-gutter-xs q-ma-sm">
     <!-- <div class="q-bar">
       <q-bar dark class="bg-darkgray text-white q-my-md shadow-2">
         <q-btn dense flat round icon="lens" size="8.5px" color="red" />
@@ -30,7 +30,7 @@
         />
       </div> -->
 
-    <div class="q-py-xs">
+    <div class="col-10 justify-center">
       <q-carousel
         animated
         v-model="slide"
@@ -62,14 +62,10 @@
       </q-carousel>
     </div>
 
-    <div class="q-py-md row justify-center">
-      <h3
-      id="title"
-      class="text-Black text-no-wrap"
-      style="font-family: 'Roboto', bold"
-    >
-      <b>Welcome to ECF Rocky Shore GIS Website Storyboard</b>
-    </h3>
+    <div class="row justify-center">
+      <h3 class="text-no-wrap" style="font-family: 'Roboto'">
+        <b>Welcome to ECF Rocky Shore GIS Website Storyboard</b>
+      </h3>
     </div>
 
     <!-- <div class="q-gutter-md">
@@ -113,7 +109,6 @@
     <div class="q-px-sm">
       Your selection is: <strong>{{ "Identity" }}</strong>
     </div> -->
-  </div>
 
   <!-- <q-btn color="primary" style="width: 200px">
       <div class="ellipsis">Interactive Habitat</div></q-btn

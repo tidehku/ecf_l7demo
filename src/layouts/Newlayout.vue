@@ -1,33 +1,46 @@
 <template>
   <q-layout view="hHh lpr fFf">
     <q-header elevated>
-      <q-toolbar class="bg-white glossy text-dark" style="height:80px">
+      <q-toolbar class="bg-grey-1 text-dark" style="height: 80px">
         <q-avatar size="65px">
-          <img
-            src="~assets/SWIMSlogo2.png"
-          />
+          <img src="~assets/SWIMSlogo2.png" />
         </q-avatar>
-        <q-toolbar-title class="text-h5 text-bold" >
+        <q-toolbar-title class="text-h5 text-bold">
           ECF Hong Kong Rocky Shore GIS Website Storyboard 2019-2023
         </q-toolbar-title>
 
         <q-tabs align="left" v-model="tab" dense>
-          <q-route-tab to="/home" name="home" class="text-blue" icon="home" label="Homepage" />
-          <q-route-tab to="/interactiveHabitat" name="interactiveHabitat" class="text-red-8" icon="map" label="Interactive Habitat" />
-          <q-route-tab to="/l/demo2" name="speciesSearchEngine" class="text-indigo-9" icon="travel_explore" label="Species Search Engine" />
+          <q-route-tab
+            to="/"
+            name="home"
+            class="text-blue"
+            icon="home"
+            label="Homepage"
+          />
+          <q-route-tab
+            to="/interactiveHabitat"
+            name="interactiveHabitat"
+            class="text-red-8"
+            icon="map"
+            label="Interactive Habitat"
+          />
+          <q-route-tab
+            to="/l/demo2"
+            name="speciesSearchEngine"
+            class="text-indigo-9"
+            icon="travel_explore"
+            label="Species Search Engine"
+          />
         </q-tabs>
-     
-        <!-- <q-separator dark vertical inset></q-separator> -->
-        <!-- <q-btn dense flat round icon="menu" @click="right = !right" /> -->
       </q-toolbar>
     </q-header>
 
     <q-page-container>
-      <router-view/>
+      <router-view />
     </q-page-container>
 
-     <q-footer elevated>
-      <q-toolbar class="bg-white glossy text-dark" style="height:40px">
+    <q-footer elevated>
+      <q-toolbar class="bg-white text-dark" style="height: 40px">
         <q-toolbar-title id="footer">
           Copyright ©
           {{ new Date().getFullYear() }} —
@@ -38,7 +51,6 @@
         </q-toolbar-title>
       </q-toolbar>
     </q-footer>
-
   </q-layout>
 </template>
 
@@ -46,14 +58,8 @@
 export default {
   data() {
     return {
-      right: false,
       tab: "Home",
     };
-  },
-  methods: {
-    onItemClick() {
-      // console.log('Clicked on an Item')
-    },
   },
 };
 </script>
