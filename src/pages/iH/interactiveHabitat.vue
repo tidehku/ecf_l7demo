@@ -58,7 +58,7 @@
                     name="zoom_in"
                   />
                   <div class="text-center no-caps">
-                    Please Select Any Zone<br />for Localized Data
+                    Please Select Any Zone <br/>for Localized Data
                   </div>
                 </div>
               </q-btn>
@@ -87,14 +87,12 @@
                 :attribution="attribution"
               />
               <l-geo-json
-                :geojson="geojson"
+                :geojson="regions"
                 :options="geoJSONOptions"
               >
               </l-geo-json>
-              
-              <l-geo-json
-                :geojson="SitesLocation"
-              >
+
+              <l-geo-json :geojson="SitesLocation">
               </l-geo-json>
 
             </l-map>
@@ -135,8 +133,8 @@ export default {
       mapOptions: {
         zoomSnap: 0.25,
       },
-      SitesLocation: require("../../MapData/SitesLocation.json"),
-      geojson: require("../../MapData/regions.json"),
+      SitesLocation: require("../../MapData/SamplingPoints.json"),
+      regions: require("../../MapData/regions.json"),
       geoJSONOptions: {
         style: function style(feature) {
           return {
