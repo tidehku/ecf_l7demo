@@ -114,6 +114,7 @@ export default {
         zoomSnap: 0.2,
       },
       geojson: require("../../../EA.json"),
+      
       // popupName: 11,
       // geoJSONOptions: {
       //   style: function style(feature) {

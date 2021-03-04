@@ -74,10 +74,12 @@
             >
               <l-tile-layer :url="url" :attribution="attribution" />
               <l-geo-json
-                :geojson="geojson"
-                :color="geojson.color"
+                :geojson="region"
+                
                 :options="geoJSONOptions"
               />
+
+               <l-geo-json :geojson="NWSitesLocation"> </l-geo-json>
             </l-map>
           </div>
         </div>
@@ -113,7 +115,17 @@ export default {
       mapOptions: {
         zoomSnap: 0.2,
       },
-      geojson: require("../../../NW.json"),
+      region: require("../../../NW.json"),
+      geoJSONOptions: {
+        style: function style(feature) {
+          return {
+            // weight: feature.properties.stroke_width,
+            opacity: 0.6,
+            color: feature.properties.fill /* refer to json data */,
+            fillOpacity: 0.3,
+          };
+        },
+      },
       // popupName: 11,
       // geoJSONOptions: {
       //   style: function style(feature) {

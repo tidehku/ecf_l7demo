@@ -53,7 +53,7 @@
         ref="myMapRef"
       >
         <l-tile-layer :url="url" :attribution="attribution" />
-        <l-geo-json :geojson="geojson" :options="geoJSONOptions"> </l-geo-json>
+        <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
 
         <l-geo-json :geojson="SitesLocation"> </l-geo-json>
       </l-map>
@@ -73,14 +73,14 @@ export default {
       zoom: 10.25,
       maxZoom: 15,
       minZoom: 10.25,
-      center: L.latLng(22.340890230379372, 114.17214768915284),
+      center: L.latLng(22.3908, 114.1721),
       bounds: L.latLngBounds([
         [22.557533808609336, 113.73082231707503],
-        [22.139381865658696, 114.62448168220955],
+        [22.239381865658696, 114.62448168220955],
       ]),
       maxBounds: L.latLngBounds([
         [22.557533808609336, 113.73082231707503],
-        [22.139381865658696, 114.62448168220955],
+        [22.239381865658696, 114.62448168220955],
       ]),
       url:
         "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
