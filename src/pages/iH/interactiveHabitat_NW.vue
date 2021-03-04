@@ -75,7 +75,6 @@
               <l-tile-layer :url="url" :attribution="attribution" />
               <l-geo-json
                 :geojson="region"
-                
                 :options="geoJSONOptions"
               />
 

@@ -6,6 +6,7 @@ const routes = [
     children: [
       { path: '', component: () => import('pages/MainPage/Index.vue') },
       { path: 'interactiveHabitat', component: () => import('pages/iH/interactiveHabitat.vue') },
+      { path: '/demo', component: () => import('pages/demoDashboard.vue') },
     ]
   },
   {
@@ -25,6 +26,7 @@ const routes = [
   {
     path: '/l', component: () => import('layouts/NewLayout.vue'),
     children: [
+      
       { path: '/l/demo1', component: () => import('pages/leafletDemo/demo1.vue') },
       { path: '/l/demo2', component: () => import('pages/leafletDemo/demo2.vue') },
       { path: '/l/demo3', component: () => import('pages/leafletDemo/demo3.vue') },
