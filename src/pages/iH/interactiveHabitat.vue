@@ -27,26 +27,6 @@
           </p>
         </div>
 
-<<<<<<< HEAD
-            <div class="row justify-center">
-              <q-btn
-                no-caps
-                color="blue-10"
-                size="15px"
-                push
-                style="width: 280px"
-              >
-                <div class="row items-center no-wrap">
-                  <q-icon
-                    center
-                    name="zoom_in"
-                  />
-                  <div class="text-center no-caps">
-                    Please Select Any Zone <br/>for Localized Data
-                  </div>
-                </div>
-              </q-btn>
-=======
         <div class="row justify-center">
           <q-btn no-caps color="blue-10" size="15px" push style="width: 280px">
             <div class="row items-center no-wrap">
@@ -54,43 +34,12 @@
               <div class="text-center no-caps">
                 Please Select Any Zone<br />for Localized Data
               </div>
->>>>>>> 06dfe176285bbc8a88f183e2e976b96fe43aaa82
             </div>
           </q-btn>
         </div>
       </q-card>
     </div>
 
-<<<<<<< HEAD
-        <div
-          class="col-8 bg-grey-6"
-          style="overflow: auto"
-        >
-          <div class="map">
-            <l-map
-              style="height: 480px; width: 100%"
-              :zoom="zoom"
-              :center="center"
-              :options="mapOptions"
-              :bounds="bounds"
-              :max-bounds="maxBounds"
-              :max-zoom="maxZoom"
-              :min-zoom="minZoom"
-              ref="myMapRef"
-            >
-              <l-tile-layer
-                :url="url"
-                :attribution="attribution"
-              />
-              <l-geo-json
-                :geojson="regions"
-                :options="geoJSONOptions"
-              >
-              </l-geo-json>
-
-              <l-geo-json :geojson="SitesLocation">
-              </l-geo-json>
-=======
     <div class="col-8">
       <l-map
         style="height: 100%"
@@ -105,7 +54,6 @@
       >
         <l-tile-layer :url="url" :attribution="attribution" />
         <l-geo-json :geojson="geojson" :options="geoJSONOptions"> </l-geo-json>
->>>>>>> 06dfe176285bbc8a88f183e2e976b96fe43aaa82
 
         <l-geo-json :geojson="SitesLocation"> </l-geo-json>
       </l-map>
