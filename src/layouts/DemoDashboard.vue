@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row q-px-xs  justify-center">
+    <div class="row q-px-xs justify-center">
       <q-card class="col-3">
         <div class="text-h5 text-bold row justify-center">Temperature</div>
         <q-separator />
@@ -9,40 +9,25 @@
       </q-card>
 
       <q-card class="col-6 q-pa-xs">
-
         <div class="q-col-gutter-xs row">
-          <q-card-section
-            vertical
-            class="col-6"
-          >
+          <q-card-section vertical class="col-6">
             <div class="text-h5 text-bold row justify-center">Site Name</div>
 
             <q-card-section>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              quis tempore praesentium illum? Molestiae ipsa repellendus
-              ipsam! Quaerat placeat eveniet, quo tempora dolorum, maxime eos
-              odit, voluptate aspernatur assumenda ipsa.
-              <q-img
-                :ratio="16/9"
-                src="~assets/placeholder2.jpg"
-              />
+              quis tempore praesentium illum? Molestiae ipsa repellendus ipsam!
+              Quaerat placeat eveniet, quo tempora dolorum, maxime eos odit,
+              voluptate aspernatur assumenda ipsa.
+              <q-img :ratio="16 / 9" src="~assets/placeholder2.jpg" />
             </q-card-section>
-
           </q-card-section>
 
           <q-card-section class="col-6">
-            <l-map
-              :zoom="zoom"
-              :center="center"
-            >
-              <l-tile-layer
-                :url="url"
-                :attribution="attribution"
-              />
+            <l-map :zoom="zoom" :center="center">
+              <l-tile-layer :url="url" :attribution="attribution" />
               <l-marker :lat-lng="[22.39235, 113.916341]"></l-marker>
             </l-map>
           </q-card-section>
-
         </div>
       </q-card>
       <q-card class="col-3">
@@ -81,7 +66,6 @@
       </q-card>
     </div>
   </div>
-
 </template>
 
 <script>

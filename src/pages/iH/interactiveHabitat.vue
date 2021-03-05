@@ -52,22 +52,23 @@
         :min-zoom="minZoom"
         ref="myMapRef"
       >
-        <l-tile-layer :url="url" :attribution="attribution" />
+        <LTileLayer />
         <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
-
-        <!-- <l-geo-json :geojson="SitesLocation"> </l-geo-json> -->
       </l-map>
     </div>
   </div>
 </template>
 
 <script>
-// import "leaflet/dist/leaflet.css";
-import { LMap, LTileLayer, LMarker, LGeoJson } from "vue2-leaflet";
+import { LMap, LGeoJson } from "vue2-leaflet";
 
 export default {
   name: "MapGeoJSON",
-  components: { LMap, LTileLayer, LMarker, LGeoJson },
+  components: {
+    LMap,
+    LGeoJson,
+    LTileLayer: () => import("components/tileLayer"),
+  },
   data() {
     return {
       zoom: 10.25,
@@ -82,11 +83,6 @@ export default {
         [22.557533808609336, 113.73082231707503],
         [22.239381865658696, 114.62448168220955],
       ]),
-      url:
-        "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-      attribution:
-        "Source &copy; Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community",
-
       mapOptions: {
         zoomSnap: 0.25,
       },

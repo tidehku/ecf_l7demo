@@ -1,18 +1,8 @@
 <template>
   <div class="row q-pa-sm">
-    <div
-      id="sidebar"
-      class="col-4 bg-grey-6"
-    >
-      <q-card
-        dark
-        bordered
-        class="bg-blue-grey-13 my-card"
-      >
-        <q-separator
-          dark
-          inset
-        />
+    <div id="sidebar" class="col-4 bg-grey-6">
+      <q-card dark bordered class="bg-blue-grey-13 my-card">
+        <q-separator dark inset />
         <div class="q-mx-sm">
           <h4><b>NorthEstern Sites</b></h4>
           <p>
@@ -24,10 +14,7 @@
         </div>
 
         <div class="q-pa-sm">
-          <q-markup-table
-            :separator="vertical"
-            bordered
-          >
+          <q-markup-table separator="vertical" bordered>
             <tbody class="bg-white">
               <tr>
                 <td class="text-left">Nutrient Levels</td>
@@ -53,24 +40,19 @@
           </q-markup-table>
         </div>
         <div class="row justify-center">
-          <q-btn
-            no-caps
-            color="blue-10"
-            size="20px"
-            push
-          >
+          <q-btn no-caps color="blue-10" size="20px" push>
             <div class="row items-center no-wrap">
-              <q-icon
-                center
-                name="backup_table"
-              />
+              <q-icon center name="backup_table" />
               <div class="text-center no-caps">Go to Dashboard</div>
             </div>
           </q-btn>
         </div>
 
         <q-card-section>
-          {{ lorem }}
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi amet
+          praesentium pariatur expedita quo maxime sunt. Delectus iste et, omnis
+          perspiciatis sunt dolore in, earum eligendi modi officia vitae
+          accusamus.
         </q-card-section>
       </q-card>
     </div>
@@ -81,19 +63,11 @@
         :zoom="zoom"
         :center="center"
         :options="mapOptions"
-        :bounds="bounds"
-        :max-bounds="maxBounds"
-        :max-zoom="maxZoom"
-        :min-zoom="minZoom"
+        :max-zoom="zoom"
+        :min-zoom="zoom"
       >
-        <l-tile-layer
-          :url="url"
-          :attribution="attribution"
-        />
-        <l-geo-json
-          :geojson="region"
-          :options="geoJSONOptions"
-        ></l-geo-json>
+        <LTileLayer />
+        <l-geo-json :geojson="region" :options="geoJSONOptions"></l-geo-json>
 
         <l-geo-json :geojson="SitesLocation"> </l-geo-json>
       </l-map>
@@ -102,28 +76,19 @@
 </template>
 
 <script>
-import "leaflet/dist/leaflet.css";
-import { LMap, LTileLayer, LMarker, LGeoJson } from "vue2-leaflet";
+import { LMap, LGeoJson } from "vue2-leaflet";
 
 export default {
   name: "NE",
-  components: { LMap, LTileLayer, LGeoJson, LMarker },
+  components: {
+    LMap,
+    LGeoJson,
+    LTileLayer: () => import("components/tileLayer"),
+  },
   data() {
     return {
       zoom: 11.6,
       center: L.latLng(22.5303, 114.3388),
-      // bounds: L.latLngBounds([
-      //   [22.457533808609336, 113.93082231707503],
-      //   [22.239381865658696, 114.02448168220955],
-      // ]),
-      // // maxBounds: L.latLngBounds([
-      // //   [22.557533808609336, 113.73082231707503],
-      // //   [22.139381865658696, 114.62448168220955],
-      // // ]),
-      url:
-        "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-      attribution:
-        "Source &copy; Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community",
       mapOptions: {
         zoomSnap: 0.2,
       },
@@ -138,17 +103,6 @@ export default {
           };
         },
       },
-      // popupName: 11,
-      // geoJSONOptions: {
-      //   style: function style(feature) {
-      //     return {
-      //       weight: 4,
-      //       opacity: 0.5,
-      //       color: "red",
-      //       fillOpacity: 0.2,
-      //     };
-      //   },
-      // },
     };
   },
 };
