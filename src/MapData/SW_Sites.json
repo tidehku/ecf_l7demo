@@ -1,0 +1,133 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "SW",
+        "Site": "Tai Long Wan",
+        "Number of transect (s)": 1,
+        "Transect length (m)": 17,
+        "Lowest transect Reading 1": 1.106,
+        "Lowest transect Reading 2": 0.991,
+        "Highest transect  Reading 1": 3.892,
+        "Highest transect Reading 2": 3.665,
+        "Lowest transect (m + C.D.)": "Not levelled due to wave",
+        "Highest transect (m + C.D.)": "Not levelled due to wave",
+        "Height between transects (m)": 0.57,
+        "Lowest transection determination": "~ 25 cm below coralline algae",
+        "Safety": 2,
+        "Accessibility": 2,
+        "Geomorphology": 5,
+        "Proness to sand inundation": 1,
+        "Human disturbance": 1,
+        "Vessel traffic": 1,
+        "Feasibility (max=12)": 6,
+        "": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.881521,
+          22.217226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "SW",
+        "Site": "Pui O",
+        "Number of transect (s)": 1,
+        "Transect length (m)": 18,
+        "Lowest transect Reading 1": 0.983,
+        "Lowest transect Reading 2": 1,
+        "Highest transect  Reading 1": 2.452,
+        "Highest transect Reading 2": 2.536,
+        "Lowest transect (m + C.D.)": 1.15,
+        "Highest transect (m + C.D.)": 2.72,
+        "Height between transects (m)": 0.31,
+        "Lowest transection determination": "HKO water level measurement",
+        "Safety": 5,
+        "Accessibility": 3,
+        "Geomorphology": 5,
+        "Proness to sand inundation": 4,
+        "Human disturbance": 3,
+        "Vessel traffic": 1,
+        "Feasibility (max=12)": 5,
+        "": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.980862,
+          22.234889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "SW",
+        "Site": "Shui Tseng",
+        "Number of transect (s)": 1,
+        "Transect length (m)": 14,
+        "Lowest transect Reading 1": 1.025,
+        "Lowest transect Reading 2": 0.995,
+        "Highest transect  Reading 1": 2.895,
+        "Highest transect Reading 2": 2.804,
+        "Lowest transect (m + C.D.)": "Not levelled due to wave",
+        "Highest transect (m + C.D.)": "Not levelled due to wave",
+        "Height between transects (m)": 0.4,
+        "Lowest transection determination": "~ 25 cm below coralline algae",
+        "Safety": 3,
+        "Accessibility": 3,
+        "Geomorphology": 5,
+        "Proness to sand inundation": 1,
+        "Human disturbance": 1,
+        "Vessel traffic": 1,
+        "Feasibility (max=12)": 8,
+        "": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.006664,
+          22.250167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "SW",
+        "Site": "Peng Chau",
+        "Number of transect (s)": 2,
+        "Transect length (m)": 17,
+        "Lowest transect Reading 1": 1.063,
+        "Lowest transect Reading 2": 1.145,
+        "Highest transect  Reading 1": 3.277,
+        "Highest transect Reading 2": 3.259,
+        "Lowest transect (m + C.D.)": 1.15,
+        "Highest transect (m + C.D.)": 2.14,
+        "Height between transects (m)": 0.43,
+        "Lowest transection determination": "HKO water level measurement (Waglan Island)",
+        "Safety": 5,
+        "Accessibility": 3,
+        "Geomorphology": 5,
+        "Proness to sand inundation": 1,
+        "Human disturbance": 2,
+        "Vessel traffic": 2,
+        "Feasibility (max=12)": 8,
+        "": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.046964,
+          22.283164
+        ]
+      }
+    }
+  ]
+}

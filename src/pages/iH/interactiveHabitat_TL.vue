@@ -73,11 +73,12 @@
               :min-zoom="minZoom"
             >
               <l-tile-layer :url="url" :attribution="attribution" />
-              <l-geo-json
-                :geojson="geojson"
-                :color="geojson.color"
+               <l-geo-json
+                :geojson="region"
                 :options="geoJSONOptions"
-              />
+              ></l-geo-json>
+
+               <l-geo-json :geojson="SitesLocation"> </l-geo-json>
             </l-map>
           </div>
         </div>
@@ -113,7 +114,17 @@ export default {
       mapOptions: {
         zoomSnap: 0.2,
       },
-      geojson: require("../../../TL.json"),
+      SitesLocation: require("../../MapData/TL_Sites.json"),
+      region: require("../../../TL.json"),
+      geoJSONOptions: {
+        style: function style(feature) {
+          return {
+            opacity: 0.6,
+            color: feature.properties.fill /* refer to json data */,
+            fillOpacity: 0.3,
+          };
+        },
+      },
       // popupName: 11,
       // geoJSONOptions: {
       //   style: function style(feature) {

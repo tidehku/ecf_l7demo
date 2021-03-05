@@ -1,0 +1,133 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "S",
+        "Site": "Tai Tam",
+        "Number of transect (s)": 1,
+        "Transect length (m)": 15,
+        "Lowest transect Reading 1": 1.084,
+        "Lowest transect Reading 2": 1.069,
+        "Highest transect  Reading 1": 2.734,
+        "Highest transect Reading 2": 2.675,
+        "Lowest transect (m + C.D.)": 1.15,
+        "Highest transect (m + C.D.)": 2.8,
+        "Height between transects (m)": 0.33,
+        "Lowest transection determination": "HKO water level measurement (Waglan Island)",
+        "Safety": 5,
+        "Accessibility": 5,
+        "Geomorphology": 5,
+        "Proness to sand inundation": 1,
+        "Human disturbance": 1,
+        "Vessel traffic": 2,
+        "Feasibility (max=12)": 11,
+        "": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.228768,
+          22.23747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "S",
+        "Site": "Middle Bay",
+        "Number of transect (s)": 1,
+        "Transect length (m)": 17,
+        "Lowest transect Reading 1": 1.11,
+        "Lowest transect Reading 2": 0.975,
+        "Highest transect  Reading 1": 2.372,
+        "Highest transect Reading 2": 2.205,
+        "Lowest transect (m + C.D.)": 1.15,
+        "Highest transect (m + C.D.)": 2.46,
+        "Height between transects (m)": 0.26,
+        "Lowest transection determination": "~ 25 cm below coralline algae",
+        "Safety": 4,
+        "Accessibility": 5,
+        "Geomorphology": 5,
+        "Proness to sand inundation": 1,
+        "Human disturbance": 1,
+        "Vessel traffic": 1,
+        "Feasibility (max=12)": 11,
+        "": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.196719,
+          22.229341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "S",
+        "Site": "Wah Fu",
+        "Number of transect (s)": 1,
+        "Transect length (m)": 14,
+        "Lowest transect Reading 1": 1.005,
+        "Lowest transect Reading 2": 0.978,
+        "Highest transect  Reading 1": 2.966,
+        "Highest transect Reading 2": 2.872,
+        "Lowest transect (m + C.D.)": "Not levelled due to wave",
+        "Highest transect (m + C.D.)": "Not levelled due to wave",
+        "Height between transects (m)": 0.38,
+        "Lowest transection determination": "~ 25 cm below coralline algae",
+        "Safety": 3,
+        "Accessibility": 5,
+        "Geomorphology": 5,
+        "Proness to sand inundation": 1,
+        "Human disturbance": 1,
+        "Vessel traffic": 3,
+        "Feasibility (max=12)": 8,
+        "": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.132032,
+          22.252755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "S",
+        "Site": "Shek O",
+        "Number of transect (s)": 1,
+        "Transect length (m)": 14,
+        "Lowest transect Reading 1": 0.934,
+        "Lowest transect Reading 2": 0.962,
+        "Highest transect  Reading 1": 2.899,
+        "Highest transect Reading 2": 2.927,
+        "Lowest transect (m + C.D.)": "Not levelled due to wave",
+        "Highest transect (m + C.D.)": "Not levelled due to wave",
+        "Height between transects (m)": 0.4,
+        "Lowest transection determination": "~ 25 cm below coralline algae",
+        "Safety": 2,
+        "Accessibility": 5,
+        "Geomorphology": 5,
+        "Proness to sand inundation": 1,
+        "Human disturbance": 2,
+        "Vessel traffic": 1,
+        "Feasibility (max=12)": 8,
+        "": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.256312,
+          22.228654
+        ]
+      }
+    }
+  ]
+}

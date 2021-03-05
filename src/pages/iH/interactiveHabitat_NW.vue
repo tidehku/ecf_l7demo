@@ -6,9 +6,20 @@
         class="full-width row inline wrap justify-start items-start content-start"
         style="overflow: hidden"
       >
-        <div id="sidebar" class="col-4 bg-grey-6" style="overflow: auto">
-          <q-card dark bordered class="bg-blue-grey-13 my-card">
-            <q-separator dark inset />
+        <div
+          id="sidebar"
+          class="col-4 bg-grey-6"
+          style="overflow: auto"
+        >
+          <q-card
+            dark
+            bordered
+            class="bg-blue-grey-13 my-card"
+          >
+            <q-separator
+              dark
+              inset
+            />
             <div class="q-mx-sm">
               <h4><b>NorthWestern Sites</b></h4>
               <p>
@@ -20,7 +31,10 @@
             </div>
 
             <div class="q-pa-sm">
-              <q-markup-table :separator="vertical" bordered>
+              <q-markup-table
+                :separator="vertical"
+                bordered
+              >
                 <tbody class="bg-white">
                   <tr>
                     <td class="text-left">Nutrient Levels</td>
@@ -46,9 +60,17 @@
               </q-markup-table>
             </div>
             <div class="row justify-center">
-              <q-btn no-caps color="blue-10" size="20px" push>
+              <q-btn
+                no-caps
+                color="blue-10"
+                size="20px"
+                push
+              >
                 <div class="row items-center no-wrap">
-                  <q-icon center name="backup_table" />
+                  <q-icon
+                    center
+                    name="backup_table"
+                  />
                   <div class="text-center no-caps">Go to Dashboard</div>
                 </div>
               </q-btn>
@@ -60,7 +82,10 @@
           </q-card>
         </div>
 
-        <div class="col-8 bg-grey-6" style="overflow: auto">
+        <div
+          class="col-8 bg-grey-6"
+          style="overflow: auto"
+        >
           <div class="map">
             <l-map
               style="height: 480px; width: 100%"
@@ -72,13 +97,16 @@
               :max-zoom="maxZoom"
               :min-zoom="minZoom"
             >
-              <l-tile-layer :url="url" :attribution="attribution" />
+              <l-tile-layer
+                :url="url"
+                :attribution="attribution"
+              />
               <l-geo-json
                 :geojson="region"
                 :options="geoJSONOptions"
-              />
+              ></l-geo-json>
 
-               <l-geo-json :geojson="NWSitesLocation"> </l-geo-json>
+              <l-geo-json :geojson="SitesLocation"> </l-geo-json>
             </l-map>
           </div>
         </div>
@@ -114,11 +142,11 @@ export default {
       mapOptions: {
         zoomSnap: 0.2,
       },
+      SitesLocation: require("../../MapData/NW_Sites.json"),
       region: require("../../../NW.json"),
       geoJSONOptions: {
         style: function style(feature) {
           return {
-            // weight: feature.properties.stroke_width,
             opacity: 0.6,
             color: feature.properties.fill /* refer to json data */,
             fillOpacity: 0.3,

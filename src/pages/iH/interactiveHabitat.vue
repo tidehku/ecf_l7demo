@@ -55,7 +55,7 @@
         <l-tile-layer :url="url" :attribution="attribution" />
         <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
 
-        <l-geo-json :geojson="SitesLocation"> </l-geo-json>
+        <!-- <l-geo-json :geojson="SitesLocation"> </l-geo-json> -->
       </l-map>
     </div>
   </div>

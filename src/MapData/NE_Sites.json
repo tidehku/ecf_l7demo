@@ -1,0 +1,133 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "NE",
+        "Site": "Yung Shue Au",
+        "Number of transect (s)": 1,
+        "Transect length (m)": 14,
+        "Lowest transect Reading 1": 1.243,
+        "Lowest transect Reading 2": 1.185,
+        "Highest transect  Reading 1": 3.115,
+        "Highest transect Reading 2": 3.258,
+        "Lowest transect (m + C.D.)": 1.15,
+        "Highest transect (m + C.D.)": 3.1,
+        "Height between transects (m)": 0.39,
+        "Lowest transection determination": "GNSS (HK tide station far away)",
+        "Safety": 4,
+        "Accessibility": 1,
+        "Geomorphology": 3,
+        "Proness to sand inundation": 1,
+        "Human disturbance": 1,
+        "Vessel traffic": 1,
+        "Feasibility (max=12)": 5,
+        "": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.247157,
+          22.549436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "NE",
+        "Site": "Double Island",
+        "Number of transect (s)": 1,
+        "Transect length (m)": 15,
+        "Lowest transect Reading 1": 1.154,
+        "Lowest transect Reading 2": 1.114,
+        "Highest transect  Reading 1": 3.041,
+        "Highest transect Reading 2": 3.055,
+        "Lowest transect (m + C.D.)": "Not levelled due to wave",
+        "Highest transect (m + C.D.)": "Not levelled due to wave",
+        "Height between transects (m)": 0.4,
+        "Lowest transection determination": "~ 25 cm below coralline algae",
+        "Safety": 3,
+        "Accessibility": 1,
+        "Geomorphology": 5,
+        "Proness to sand inundation": 1,
+        "Human disturbance": 1,
+        "Vessel traffic": 1,
+        "Feasibility (max=12)": 6,
+        "": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.319541,
+          22.518246
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "NE",
+        "Site": "Hung Shek Mun",
+        "Number of transect (s)": 2,
+        "Transect length (m)": 14,
+        "Lowest transect Reading 1": 1.134,
+        "Lowest transect Reading 2": 1.094,
+        "Highest transect  Reading 1": 2.716,
+        "Highest transect Reading 2": 2.728,
+        "Lowest transect (m + C.D.)": 1.15,
+        "Highest transect (m + C.D.)": 2.78,
+        "Height between transects (m)": 0.33,
+        "Lowest transection determination": "HKO water level measurement",
+        "Safety": 5,
+        "Accessibility": 1,
+        "Geomorphology": 5,
+        "Proness to sand inundation": 1,
+        "Human disturbance": 1,
+        "Vessel traffic": 1,
+        "Feasibility (max=12)": 8,
+        "": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.301425,
+          22.501269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "NE",
+        "Site": "Kat O",
+        "Number of transect (s)": 1,
+        "Transect length (m)": 14,
+        "Lowest transect Reading 1": 1.281,
+        "Lowest transect Reading 2": 1.325,
+        "Highest transect  Reading 1": 3.52,
+        "Highest transect Reading 2": 3.258,
+        "Lowest transect (m + C.D.)": 1.15,
+        "Highest transect (m + C.D.)": 2.3,
+        "Height between transects (m)": 0.46,
+        "Lowest transection determination": "GNSS (HK tide station far away)",
+        "Safety": 4,
+        "Accessibility": 1,
+        "Geomorphology": 5,
+        "Proness to sand inundation": 1,
+        "Human disturbance": 1,
+        "Vessel traffic": 1,
+        "Feasibility (max=12)": 7,
+        "": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.297222,
+          22.551031
+        ]
+      }
+    }
+  ]
+}
