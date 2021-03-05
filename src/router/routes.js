@@ -3,15 +3,17 @@ const routes = [
   {
     path: "/",
     component: () => import("layouts/NewLayout.vue"),
-    path: "/demo",
-    component: () => import("layouts/demoDashboard.vue"),
     children: [
       { path: "", component: () => import("pages/MainPage/Index.vue") },
       {
         path: "interactiveHabitat",
         component: () => import("pages/iH/interactiveHabitat.vue")
-      },      
+      },
     ]
+  },
+  {
+    path: "/demo",
+    component: () => import("layouts/DemoDashboard.vue"),
   },
   {
     path: "/interactiveHabitat",
