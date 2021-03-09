@@ -23,7 +23,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
             quis tempore praesentium illum? Molestiae ipsa repellendus ipsam!
             Quaerat placeat eveniet, quo tempora dolorum, maxime eos odit,
-            voluptate aspernatur assumenda ipsa.
+            voluptate aspernatur ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
 
@@ -36,7 +36,7 @@
               </div>
             </div>
           </q-btn>
-        </div>
+        </div><br><br>
       </q-card>
     </div>
 

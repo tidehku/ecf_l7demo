@@ -6,7 +6,7 @@
           <img src="~assets/SWIMSlogo2.png" />
         </q-avatar>
         <q-toolbar-title class="text-h5 text-bold">
-          ECF Hong Kong Rocky Shore GIS Website Storyboard 2019-2023
+          ECF HK Rocky Shore GIS Website Storyboard 2019-2023
         </q-toolbar-title>
 
         <q-tabs align="left" v-model="tab" dense>
