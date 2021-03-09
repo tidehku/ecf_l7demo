@@ -1,8 +1,18 @@
 <template>
-  <div class="row q-pa-sm">
-    <div id="sidebar" class="col-4 bg-grey-6">
-      <q-card dark bordered class="bg-blue-grey-13 my-card">
-        <q-separator dark inset />
+  <div class="row q-px-sm">
+    <div
+      id="sidebar"
+      class="col-4 bg-grey-6"
+    >
+      <q-card
+        dark
+        bordered
+        class="bg-blue-grey-13 my-card"
+      >
+        <q-separator
+          dark
+          inset
+        />
         <div class="q-mx-sm">
           <h4><b>Eastern Sites</b></h4>
           <p>
@@ -14,7 +24,11 @@
         </div>
 
         <div class="q-pa-sm">
-          <q-markup-table separator="vertical" bordered>
+          <q-markup-table
+            separator="cell"
+            dense
+            bordered
+          >
             <tbody class="bg-white">
               <tr>
                 <td class="text-left">Nutrient Levels</td>
@@ -39,23 +53,30 @@
             </tbody>
           </q-markup-table>
         </div>
-        <div class="row justify-center">
-          <q-btn no-caps color="blue-10" size="20px" push>
-            <div class="row items-center no-wrap">
-              <q-icon center name="backup_table" />
+        <div class="q-pa-sm row justify-center">
+          <q-btn
+            class="full-width"
+            no-caps
+            color="blue-10"
+            size="20px"
+            push
+          >
+            <div
+              dense
+              class="row items-center no-wrap"
+            >
+              <q-icon
+                center
+                name="backup_table"
+              />
               <div class="text-center no-caps">Go to Dashboard</div>
             </div>
           </q-btn>
         </div>
-
-        <q-card-section>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-          culpa labore similique officia expedita fugit quidem at neque in eum
-          vero illo voluptatibus aut libero nesciunt cum, beatae inventore rem!
-        </q-card-section>
       </q-card>
     </div>
 
+    
     <div class="col-8">
       <l-map
         style="height: 100%"
@@ -66,7 +87,10 @@
         :min-zoom="zoom"
       >
         <LTileLayer />
-        <l-geo-json :geojson="region" :options="geoJSONOptions"></l-geo-json>
+        <l-geo-json
+          :geojson="region"
+          :options="geoJSONOptions"
+        ></l-geo-json>
 
         <l-geo-json :geojson="SitesLocation"> </l-geo-json>
       </l-map>
