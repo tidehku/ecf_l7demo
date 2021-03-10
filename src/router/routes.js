@@ -9,11 +9,15 @@ const routes = [
         path: "interactiveHabitat",
         component: () => import("pages/iH/interactiveHabitat.vue")
       },
+      {
+        path: "speciesSearchEngine",
+        component: () => import("pages/MainPage/SpeciesSearchEngine.vue")
+      }
     ]
   },
   {
     path: "/demo",
-    component: () => import("layouts/DemoDashboard.vue"),
+    component: () => import("layouts/DemoDashboard.vue")
   },
   {
     path: "/interactiveHabitat",
@@ -46,6 +50,10 @@ const routes = [
         component: () => import("pages/iH/interactiveHabitat_NE.vue")
       }
     ]
+  },
+  {
+    path: "/SpeciesSearchEngine",
+    component: () => import("pages/MainPage/SpeciesSearchEngine.vue")
   },
   {
     path: "/l",

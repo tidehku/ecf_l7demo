@@ -1,41 +1,77 @@
 <template>
   <div class="row q-pa-sm">
     <div class="col-4">
-      <q-card dark bordered class="q-pa-md bg-blue-grey-13 my-card">
-        <div class="q-pa-md row justify-center">
-          <q-img
-            src="~/assets/SWIMSlogo2.png"
-            alt="SWIMs logo"
-            style="width: 120px; height: 100%; align: center"
-          />
+      <q-card
+        dark
+        bordered
+        class="q-pa-md bg-blue-grey-13 my-card"
+        height=900px
+      >
+        <br>
+        <div class="bg-blue-10 text-h5 text-bold text-center text-white">
+          Species Search Engine
         </div>
-
-        <div class="bg-blue-10 text-h6 text-bold text-center text-white">
-          WElCOME PAGE
-        </div>
-        <div class="text-h6 text-bold text-center text-white">
-          Interactive Habitat Map<br />Around Hong Kong Rocky Shore<br />by ECF
-          2019-2023
-        </div>
-
-        <div class="q-ma-sm">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-            quis tempore praesentium illum? Molestiae ipsa repellendus ipsam!
-            Quaerat placeat eveniet, quo tempora dolorum, maxime eos odit,
-            voluptate aspernatur ipsa.
-          </p>
-        </div>
+        <q-card-section>
+          <div class="text-h6 text-bold text-left text-white">
+            Family:
+            <!-- Genus:
+            Species: -->
+          </div>
+          <q-input
+            dark
+            outlined
+            dense
+            v-model="text"
+            :readonly="readonly"
+            :disable="disable"
+          >
+          </q-input>
+          <div class="text-h6 text-bold text-left text-white">
+            Genus:
+          </div>
+          <q-input
+            dark
+            outlined
+            dense
+            v-model="text"
+            :readonly="readonly"
+            :disable="disable"
+          >
+          </q-input>
+          <div class="text-h6 text-bold text-left text-white">
+            Species:
+          </div>
+          <q-input
+            dark
+            outlined
+            dense
+            v-model="text"
+            :readonly="readonly"
+            :disable="disable"
+          >
+          </q-input>
+        </q-card-section>
+         <br><br>
 
         <div class="row justify-center">
-          <q-btn no-caps color="blue-10" size="15px" push style="width: 280px">
+          <q-btn
+            no-caps
+            color="blue-10"
+            size="15px"
+            push
+            style="width: 150px"
+          >
             <div class="row items-center no-wrap">
-              <q-icon center name="zoom_in" />
+              <q-icon
+                center
+                name="search"
+              />
               <div class="text-center no-caps">
-                Please Select Any Zone<br />for Localized Data
+                Search
               </div>
             </div>
           </q-btn>
+
         </div><br><br><br>
       </q-card>
     </div>
@@ -53,7 +89,10 @@
         ref="myMapRef"
       >
         <LTileLayer />
-        <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
+        <l-geo-json
+          :geojson="regions"
+          :options="geoJSONOptions"
+        > </l-geo-json>
       </l-map>
     </div>
   </div>
@@ -74,15 +113,15 @@ export default {
       zoom: 10.25,
       maxZoom: 15,
       minZoom: 10.25,
-      center: L.latLng(22.3908, 114.1721),
-      bounds: L.latLngBounds([
-        [22.557533808609336, 113.73082231707503],
-        [22.239381865658696, 114.62448168220955],
-      ]),
-      maxBounds: L.latLngBounds([
-        [22.557533808609336, 113.73082231707503],
-        [22.239381865658696, 114.62448168220955],
-      ]),
+      center: L.latLng(22.3508, 114.1721),
+      // bounds: L.latLngBounds([
+      //   [22.557533808609336, 113.73082231707503],
+      //   [22.239381865658696, 114.62448168220955],
+      // ]),
+      // maxBounds: L.latLngBounds([
+      //   [22.557533808609336, 113.73082231707503],
+      //   [22.239381865658696, 114.62448168220955],
+      // ]),
       mapOptions: {
         zoomSnap: 0.25,
       },

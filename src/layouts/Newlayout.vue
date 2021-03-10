@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpr fff">
+  <q-layout view="hHh lpr fFf">
     <q-header elevated>
       <q-toolbar class="bg-grey-1 text-dark" style="height: 80px">
         <q-avatar size="65px">
@@ -25,7 +25,7 @@
             label="Interactive Habitat"
           />
           <q-route-tab
-            to="/l/demo2"
+            to="/SpeciesSearchEngine"
             name="speciesSearchEngine"
             class="text-indigo-9"
             icon="travel_explore"

@@ -68,6 +68,12 @@
       </h3>
     </div>
 
+    <!-- <div class="row">
+      <p justify-left >
+         {{ lorem }}
+      </p>
+    </div> -->
+
     <!-- <div class="q-gutter-md">
         <q-btn
           align="left"
@@ -123,6 +129,7 @@ export default {
   name: "PageIndex",
   data() {
     return {
+      lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       Identity: "Student",
       tab: "interactiveHabitat",
       slide: 1,
