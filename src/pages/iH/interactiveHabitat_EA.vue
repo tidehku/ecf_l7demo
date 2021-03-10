@@ -13,13 +13,14 @@
         <div class="q-mx-sm row">
           </q-card-section>
           <h4><b>Eastern Sites</b></h4>
-          <q-card-actions align="right">
-            <q-btn
+          <q-card-actions align="center">
+            <q-btn 
               no-caps
               v-go-back=" '/interactiveHabitat' "
               size="20px"
               color="blue-10"
               label="Go Back"
+              icon="keyboard_return"
             ></q-btn>
           </q-card-actions>
           <!-- <q-btn
@@ -74,6 +75,7 @@
             no-caps
             color="blue-10"
             size="20px"
+            to="/demo"
             push
           >
             <div

@@ -9,12 +9,28 @@
         bordered
         class="bg-blue-grey-13 my-card"
       >
-        <q-separator
-          dark
-          inset
-        />
-        <div class="q-mx-sm">
+
+        <div class="q-mx-sm row">
+          </q-card-section>
           <h4><b>North Eastern Sites</b></h4>
+          <q-card-actions align="center">
+            <q-btn 
+              no-caps
+              v-go-back=" '/interactiveHabitat' "
+              size="20px"
+              color="blue-10"
+              label=""
+              icon="keyboard_return"
+            ></q-btn>
+          </q-card-actions>
+          <!-- <q-btn
+            no-caps
+            color="blue-10"
+            size="20px"
+            to="/list"
+            label="Go Back"
+          /> -->
+          </q-card-section>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
             quis tempore praesentium illum? Molestiae ipsa repellendus ipsam!
@@ -59,6 +75,7 @@
             no-caps
             color="blue-10"
             size="20px"
+            to="/demo"
             push
           >
             <div
@@ -69,12 +86,13 @@
                 center
                 name="backup_table"
               />
-              <div class="text-center no-caps">Go to Dashboard</div>
+              Go to Dashboard
             </div>
           </q-btn>
         </div>
       </q-card>
     </div>
+
 
     <div class="col-8">
       <l-map
