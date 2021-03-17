@@ -1,50 +1,28 @@
 <template>
   <div class="row q-px-sm">
-    <div
-      id="sidebar"
-      class="col-4 bg-grey-6"
-    >
-      <q-card
-        dark
-        bordered
-        class="bg-blue-grey-13 my-card"
-      >
+    <div id="sidebar" class="col-4 bg-grey-6">
+      <q-card dark bordered class="bg-blue-grey-13 my-card">
+        <q-card-section class="q-ma-sm row">
+          <div class="text-h4">Eastern Sites</div>
 
-        <div class="q-mx-sm row">
-          </q-card-section>
-          <h4><b>Eastern Sites</b></h4>
-          <q-card-actions align="center">
-            <q-btn 
-              no-caps
-              v-go-back=" '/interactiveHabitat' "
-              size="20px"
-              color="blue-10"
-              label="Go Back"
-              icon="keyboard_return"
-            ></q-btn>
-          </q-card-actions>
-          <!-- <q-btn
+          <q-btn
             no-caps
+            v-go-back="'/interactiveHabitat'"
             color="blue-10"
-            size="20px"
-            to="/list"
             label="Go Back"
-          /> -->
-          </q-card-section>
+            icon="keyboard_return"
+          ></q-btn>
+
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
             quis tempore praesentium illum? Molestiae ipsa repellendus ipsam!
             Quaerat placeat eveniet, quo tempora dolorum, maxime eos odit,
             voluptate aspernatur assumenda ipsa.
           </p>
-        </div>
+        </q-card-section>
 
-        <div class="q-pa-sm">
-          <q-markup-table
-            separator="cell"
-            dense
-            bordered
-          >
+        <q-card-section>
+          <q-markup-table separator="cell" dense bordered>
             <tbody class="bg-white">
               <tr>
                 <td class="text-left">Nutrient Levels</td>
@@ -68,28 +46,23 @@
               </tr>
             </tbody>
           </q-markup-table>
-        </div>
-        <div class="q-pa-sm row justify-center">
-          <q-btn
-            class="full-width"
-            no-caps
-            color="blue-10"
-            size="20px"
-            to="/demo"
-            push
-          >
-            <div
-              dense
-              class="row items-center no-wrap"
+
+          <div class="q-pa-sm row justify-center">
+            <q-btn
+              class="full-width"
+              no-caps
+              color="blue-10"
+              size="20px"
+              to="/demo"
+              push
             >
-              <q-icon
-                center
-                name="backup_table"
-              />
-              Go to Dashboard
-            </div>
-          </q-btn>
-        </div>
+              <div dense class="row items-center no-wrap">
+                <q-icon center name="backup_table" />
+                Go to Dashboard
+              </div>
+            </q-btn>
+          </div>
+        </q-card-section>
       </q-card>
     </div>
 
@@ -103,10 +76,7 @@
         :min-zoom="zoom"
       >
         <LTileLayer />
-        <l-geo-json
-          :geojson="region"
-          :options="geoJSONOptions"
-        ></l-geo-json>
+        <l-geo-json :geojson="region" :options="geoJSONOptions"></l-geo-json>
 
         <l-geo-json :geojson="SitesLocation"> </l-geo-json>
       </l-map>
