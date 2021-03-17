@@ -65,7 +65,7 @@
         ref="myMapRef"
       >
         <LTileLayer />
-        
+        <l-geo-json :geojson="points"> </l-geo-json>
         <l-control-scale
           position="topright"
           :metric="true"
@@ -164,7 +164,7 @@ export default {
       mapOptions: {
         zoomSnap: 0.25,
       },
-      SitesLocation: require("../../MapData/SamplingPoints.json"),
+      // points: require("../../MapData/historical_data.json"),
       minimapLayer: new L.TileLayer(
         "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       ),

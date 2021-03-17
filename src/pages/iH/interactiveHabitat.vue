@@ -49,7 +49,7 @@
               </div>
             </div>
           </q-btn>
-        </div><br><br><br>
+        </div><br><br><br> 
       </q-card>
     </div>
 
@@ -88,7 +88,7 @@
 
       <!-- <template v-slot:before> -->
       <q-tabs
-        class="bg-blue-grey-13 text-white text-bold shadow-2"
+        class="bg-blue-grey-13 text-grey text-bold shadow-2"
         v-model="tab"
         align="left"
         vertical
