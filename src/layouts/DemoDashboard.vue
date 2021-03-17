@@ -74,7 +74,7 @@
     <div class="row q-pa-sm justify-center">
       <q-card class="col-12">
         <div class="text-h5 text-bold row justify-center">Nutrient Levels</div>
-        <q-separator />
+        <q-separator />                         
 
         <q-card-section horizontal>
           <div class="col-6 text-bold text-center">Chlorophyll a</div>
