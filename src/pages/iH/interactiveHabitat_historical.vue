@@ -18,8 +18,7 @@
           WElCOME PAGE
         </div>
         <div class="text-h6 text-bold text-center text-white">
-          Interactive Habitat Map<br />Around Hong Kong Rocky Shore<br />by ECF
-          2019-2023
+          Interactive Habitat Map<br />Around Hong Kong Rocky Shore<br />Historical Data
         </div>
 
         <div class="q-ma-sm">
@@ -66,10 +65,7 @@
         ref="myMapRef"
       >
         <LTileLayer />
-        <l-geo-json
-          :geojson="regions"
-          :options="geoJSONOptions"
-        > </l-geo-json>
+        
         <l-control-scale
           position="topright"
           :metric="true"
@@ -109,6 +105,7 @@
           to="/interactiveHabitat/historical"
         />
       </q-tabs>
+
       <!-- </template> -->
 
       <!-- <template v-slot:after>
@@ -168,35 +165,6 @@ export default {
         zoomSnap: 0.25,
       },
       SitesLocation: require("../../MapData/SamplingPoints.json"),
-      regions: require("../../MapData/regions.json"),
-      geoJSONOptions: {
-        style: function style(feature) {
-          return {
-            // weight: feature.properties.stroke_width,
-            opacity: 0.6,
-            color: feature.properties.fill /* refer to json data */,
-            fillOpacity: 0.3,
-          };
-        },
-        onEachFeature: (feature, layer) => {
-          layer.on("mouseover", (e) => {
-            // console.log(feature.properties.name);
-
-            var popup = L.popup()
-              .setLatLng(e.latlng)
-              .setContent(
-                '<p style="color: grey;">' + feature.properties.name + "</p>"
-              )
-              .openOn(this.$refs.myMapRef.mapObject);
-          });
-
-          /* click on the geojson feature to navigate */
-          layer.on("click", (e) => {
-            // console.log(feature.properties.name);
-            this.$router.push(`interactiveHabitat/${feature.properties.name}`);
-          });
-        },
-      },
       minimapLayer: new L.TileLayer(
         "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       ),
