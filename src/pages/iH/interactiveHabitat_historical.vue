@@ -1,11 +1,7 @@
 <template>
   <div class="row q-pa-sm">
     <div class="col-4">
-      <q-card
-        dark
-        bordered
-        class="q-pa-md bg-blue-grey-13 my-card"
-      >
+      <q-card dark bordered class="q-pa-md bg-blue-grey-13 my-card">
         <div class="q-pa-md row justify-center">
           <q-img
             src="~/assets/SWIMSlogo2.png"
@@ -18,7 +14,8 @@
           WElCOME PAGE
         </div>
         <div class="text-h6 text-bold text-center text-white">
-          Interactive Habitat Map<br />Around Hong Kong Rocky Shore<br />Historical Data
+          Interactive Habitat Map<br />Around Hong Kong Rocky Shore<br />Historical
+          Data
         </div>
 
         <div class="q-ma-sm">
@@ -31,24 +28,16 @@
         </div>
 
         <div class="row justify-center">
-          <q-btn
-            no-caps
-            color="blue-10"
-            size="15px"
-            push
-            style="width: 280px"
-          >
+          <q-btn no-caps color="blue-10" size="15px" push style="width: 280px">
             <div class="row items-center no-wrap">
-              <q-icon
-                center
-                name="zoom_in"
-              />
+              <q-icon center name="zoom_in" />
               <div class="text-center no-caps">
                 Please Select Any Zone<br />for Localized Data
               </div>
             </div>
           </q-btn>
-        </div><br><br><br>
+        </div>
+        <br /><br /><br />
       </q-card>
     </div>
 
@@ -65,23 +54,21 @@
         ref="myMapRef"
       >
         <LTileLayer />
-        
+
         <l-control-scale
           position="topright"
           :metric="true"
           :imperial="false"
         ></l-control-scale>
-        <v-locatecontrol />
+
         <vue-leaflet-minimap
           :layer="minimapLayer"
           :options="options"
         ></vue-leaflet-minimap>
-
       </l-map>
     </div>
 
     <div class="col-1">
-
       <!-- <template v-slot:before> -->
       <q-tabs
         class="bg-blue-grey-13 text-white text-bold shadow-2"
@@ -126,7 +113,6 @@
           </q-tab-panel>
         </q-tab-panels>
       </template> -->
-
     </div>
   </div>
 </template>
@@ -171,8 +157,8 @@ export default {
       options: {
         position: "bottomright",
         zoomAnimation: true,
-        width: 170,
-        height: 170,
+        width: 100,
+        height: 90,
         toggleDisplay: true,
         minimize: true,
       },
