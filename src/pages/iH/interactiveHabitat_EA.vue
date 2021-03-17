@@ -15,7 +15,7 @@
       <q-card-section>
         <q-table
           class="infoTable"
-          title="Regional Data Summary"
+          title="Regional Average Data Summary"
           :data="data"
           :columns="columns"
           separator="cell"
@@ -58,11 +58,14 @@
         <LTileLayer />
         <l-geo-json
           :geojson="region"
-          :options="geoJSONOptions"
+          :options="regionOptions"
         ></l-geo-json>
 
-        <l-geo-json :geojson="SitesLocation"
-        :siteOptions="siteOptions"> </l-geo-json>
+        <l-geo-json
+          :geojson="sitesLocation"
+          :options="siteOptions"
+        > </l-geo-json>
+
         <l-control-scale
           position="bottomleft"
           :metric="true"
@@ -70,7 +73,7 @@
         ></l-control-scale>
         <vue-leaflet-minimap
           :layer="minimapLayer"
-          :options="options"
+          :options="miniMapOptions"
         ></vue-leaflet-minimap>
       </l-map>
     </div>
@@ -122,17 +125,21 @@ export default {
       mapOptions: {
         zoomSnap: 0.2,
       },
-      SitesLocation: require("../../MapData/EA_Sites.json"),
+      sitesLocation: require("../../MapData/EA_Sites.json"),
       siteOptions: {
+        style: function style(feature) {
+          return {
+            color: red,
+          };
+        },
         onEachFeature: (feature, layer) => {
-           layer.on("click", (e) => {
-            // console.log(feature.properties.name);
-            this.$router.push(`interactiveHabitat/${feature.properties.name}`);
-          })
-        }
+          layer.on("click", (e) => {
+            this.$router.push(`demo`);
+          });
+        },
       },
       region: require("../../../EA.json"),
-      geoJSONOptions: {
+      regionOptions: {
         style: function style(feature) {
           return {
             opacity: 0.6,
@@ -140,11 +147,12 @@ export default {
             fillOpacity: 0.3,
           };
         },
+        
       },
       minimapLayer: new L.TileLayer(
         "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       ),
-      options: {
+      miniMapOptions: {
         position: "bottomright",
         zoomAnimation: true,
         width: 100,
@@ -159,15 +167,14 @@ export default {
 
 
 <style lang="sass">
-  .infoTable
+.infoTable
   /* specifying max-width so the example can
-    highlight the sticky column on any browser window */
+   highlight the sticky column on any browser window */
   .q-table__top
-    background-color: $blue-10 
-    color: #fff  
+    background-color: $blue-10
+    color: #fff
   .q-table__title
     font-weight: 500
   td:first-child
     background-color: $grey-2
-
 </style>

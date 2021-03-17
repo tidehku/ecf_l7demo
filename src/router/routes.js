@@ -16,8 +16,8 @@ const routes = [
     ]
   },
   {
-    path: "/demo",
-    component: () => import("layouts/DemoDashboard.vue")
+    path: "/interactiveHabitat/demo",
+    component: () => import("src/layouts/physicalDashboard.vue")
   },
   {
     path: "/interactiveHabitat",
