@@ -1,11 +1,7 @@
 <template>
-  <div class="row q-pa-sm constrain fullScreen">
+  <div class="row q-pa-sm">
     <div class="col-4">
-      <q-card
-        dark
-        bordered
-        class="q-pa-md bg-blue-grey-13 my-card"
-      >
+      <q-card dark bordered class="q-pa-md bg-blue-grey-13 my-card">
         <div class="q-pa-md row justify-center">
           <q-img
             src="~/assets/SWIMSlogo2.png"
@@ -32,18 +28,9 @@
         </div>
 
         <div class="row justify-center">
-          <q-btn
-            no-caps
-            color="blue-10"
-            size="15px"
-            push
-            style="width: 280px"
-          >
+          <q-btn no-caps color="blue-10" size="15px" push style="width: 280px">
             <div class="row items-center no-wrap">
-              <q-icon
-                center
-                name="zoom_in"
-              />
+              <q-icon center name="zoom_in" />
               <div class="text-center no-caps">
                 Please Select Any Zone<br />for Localized Data
               </div>
@@ -54,7 +41,7 @@
       </q-card>
     </div>
 
-    <div class="col-7">
+    <div class="col-8">
       <l-map
         style="height: 100%"
         :zoom="zoom"
@@ -67,10 +54,7 @@
         ref="myMapRef"
       >
         <LTileLayer />
-        <l-geo-json
-          :geojson="regions"
-          :options="geoJSONOptions"
-        > </l-geo-json>
+        <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
 
         <l-control-scale
           position="bottomleft"
@@ -83,52 +67,6 @@
           :options="options"
         ></vue-leaflet-minimap>
       </l-map>
-    </div>
-
-    <div class="col-1">
-      <!-- <template v-slot:before> -->
-      <q-tabs
-        class="bg-blue-grey-13 text-grey text-bold shadow-2"
-        v-model="tab"
-        align="left"
-        vertical
-        active-color="white"
-      >
-        <q-route-tab
-          text-center
-          no-caps
-          name="Current"
-          label="Current"
-          to="/interactiveHabitat"
-        />
-        <q-route-tab
-          text-center
-          no-caps
-          name="Historical"
-          label="Historical"
-          to="/interactiveHabitat/historical"
-        />
-      </q-tabs>
-      <!-- </template> -->
-
-      <!-- <template v-slot:after>
-        <q-tab-panels
-          v-model="tab"
-          animated
-          swipeable
-          vertical
-          transition-prev="jump-up"
-          transition-next="jump-up"
-        >
-          <q-tab-panel name="mails">
-            <div class="text-h4 q-mb-md">Mails</div>
-          </q-tab-panel>
-
-          <q-tab-panel name="alarms">
-            <div class="text-h4 q-mb-md">Alarms</div>
-          </q-tab-panel>
-        </q-tab-panels>
-      </template> -->
     </div>
   </div>
 </template>

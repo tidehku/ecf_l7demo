@@ -1,19 +1,16 @@
 <template>
-  <div>
-    <div class="row q-px-sm justify-center">
-      <q-card class="col-3">
+  <div class="col q-pa-xs">
+    <div class="row justify-center">
+      <q-card flat square class="col-3 ">
         <div class="text-h5 text-bold row justify-center">Temperature</div>
         <q-separator />
         <highcharts :options="chartOptions1"></highcharts>
         <highcharts :options="chartOptions2"></highcharts>
       </q-card>
 
-      <q-card class="col-6 q-pa-xs">
-        <div class="q-col-gutter-xs row">
-          <q-card-section
-            vertical
-            class="col-6"
-          >
+      <q-card flat square class="col-6">
+        <div class="row">
+          <q-card-section vertical class="col-6">
             <div class="text-h5 text-bold row justify-center">Site Name</div>
 
             <q-card-section>
@@ -22,7 +19,7 @@
               Quaerat placeat eveniet, quo tempora dolorum, maxime eos odit,
               voluptate aspernatur assumenda ipsa.
               <q-carousel
-                height= 150px
+                height="150px"
                 animated
                 v-model="slide"
                 arrows
@@ -50,31 +47,25 @@
           </q-card-section>
 
           <q-card-section class="col-6">
-            <l-map
-              :zoom="zoom"
-              :center="center"
-            >
-              <l-tile-layer
-                :url="url"
-                :attribution="attribution"
-              />
+            <l-map :zoom="zoom" :center="center">
+              <l-tile-layer :url="url" :attribution="attribution" />
               <l-marker :lat-lng="[22.39235, 113.916341]"></l-marker>
             </l-map>
           </q-card-section>
         </div>
       </q-card>
 
-      <q-card class="col-3 ">
+      <q-card flat square class="col-3">
         <div class="text-h5 text-bold row justify-center">Wave Fetch</div>
         <q-separator />
         <highcharts :options="chartOptions1"></highcharts>
         <highcharts :options="chartOptions2"></highcharts>
       </q-card>
     </div>
-    <div class="row q-pa-sm justify-center">
-      <q-card class="col-12">
+    <div class="row justify-center">
+      <q-card flat square class="col-12">
         <div class="text-h5 text-bold row justify-center">Nutrient Levels</div>
-        <q-separator />                         
+        <q-separator />
 
         <q-card-section horizontal>
           <div class="col-6 text-bold text-center">Chlorophyll a</div>

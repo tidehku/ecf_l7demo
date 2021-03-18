@@ -15,17 +15,27 @@ const routes = [
       }
     ]
   },
+  // {
+  //   path: "/interactiveHabitat/demo",
+  //   component: () => import("src/layouts/physicalDashboard.vue") //physical dashboard//
+  // },
+  // {
+  //   path: "/interactiveHabitat/demo1",
+  //   component: () => import("src/layouts/bioDashboard.vue") //biological dashboard//
+  // },
   {
-    path: "/interactiveHabitat/demo",
-    component: () => import("src/layouts/physicalDashboard.vue") //physical dashboard//
-  },
-  {
-    path: "/interactiveHabitat/demo1",
-    component: () => import("src/layouts/bioDashboard.vue") //biological dashboard//
-  },
-  {
-    path: "/interactiveHabitat/demo2",
-    component: () => import("src/layouts/drawerLayout.vue") //drawer layout//
+    path: "/drawer",
+    component: () => import("src/layouts/drawerLayout.vue"), //drawer layout//
+    children: [
+      {
+        path: "/drawer/physicalDashboard",
+        component: () => import("src/layouts/physicalDashboard.vue") //physical dashboard//
+      },
+      {
+        path: "/drawer/bioDashboard",
+        component: () => import("src/layouts/bioDashboard.vue") //biological dashboard//
+      },
+    ]
   },
   {
     path: "/interactiveHabitat",

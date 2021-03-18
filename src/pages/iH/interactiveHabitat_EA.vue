@@ -17,7 +17,7 @@
           class="infoTable"
           title="Regional Average Data Summary"
           :data="data"
-          :columns="columns"
+         
           separator="cell"
           dense
           bordered
