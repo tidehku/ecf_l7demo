@@ -12,6 +12,10 @@ const routes = [
       {
         path: "speciesSearchEngine",
         component: () => import("pages/MainPage/SpeciesSearchEngine.vue")
+      },
+      {
+        path: "pie",
+        component: () => import("pages/highChartsSample.vue")
       }
     ]
   },
