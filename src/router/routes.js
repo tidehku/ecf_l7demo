@@ -20,6 +20,10 @@ const routes = [
     component: () => import("src/layouts/physicalDashboard.vue")
   },
   {
+    path: "/interactiveHabitat/demo2",
+    component: () => import("src/layouts/bioDashboard.vue")
+  },
+  {
     path: "/interactiveHabitat",
     component: () => import("layouts/NewLayout.vue"),
     children: [
