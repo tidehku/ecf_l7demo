@@ -208,11 +208,36 @@
       </q-card>
 
       <q-card class="col-8 q-pa-xs">
+        <div class="text-h5 text-bold row justify-center">Biological Dashboard: Pie Chart and Bar Chart</div>
+        <q-separator />                         
+
+        <q-card-section horizontal>
+          <div class="col-6 text-bold text-center">Fauna Species</div>
+          <div class="col-6 text-bold text-center">Flora Species</div>
+        </q-card-section>
+        <q-card-section horizontal>
+          <q-card-section class="col-3">
+            <highcharts :options="linechart"></highcharts>
+          </q-card-section>
+          <q-card-section class="col-3">
+            <highcharts :options="linechart"></highcharts>
+          </q-card-section>
+
+          <q-separator vertical />
+          <q-card-section class="col-3">
+            <highcharts :options="linechart"></highcharts>
+          </q-card-section>
+
+          <q-card-section class="col-3">
+            <highcharts :options="linechart"></highcharts>
+          </q-card-section>
+        </q-card-section>
+
         <q-card-section horizontal class="row">
-          <q-card-section class="col-4">
+          <q-card-section class="col-6">
           <highcharts :options="barchart"></highcharts>
           </q-card-section>
-          <q-card-section class="col-4">
+          <q-card-section class="col-6">
           <highcharts :options="barchart"></highcharts>
           </q-card-section>
         </q-card-section>
@@ -233,7 +258,7 @@ export default {
       barchart: {
         chart: {
           type: "column",
-          height: (3 / 4) * 60 + "%" // 16:9 ratio
+          height: (3 / 4) * 100 + "%" // 16:9 ratio
         },
         credits: {
           enabled: false
@@ -281,7 +306,7 @@ export default {
       linechart: {
         chart: {
           type: "spline",
-          height: (1 / 2) * 100 + "%", // 16:9 ratio
+          height: (1 / 1) * 100 + "%", // 16:9 ratio
         },
         credits: {
           enabled: false,
