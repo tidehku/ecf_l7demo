@@ -1,449 +1,284 @@
 <template>
-  <q-layout view="hHh lpR fFf">
-    <q-drawer
-      v-model="right"
-      side="right"
-      show-if-above
-      :mini="miniState"
-      @mouseover="miniState = false"
-      @mouseout="miniState = true"
-      mini-to-overlay
-      :width="240"
-      :breakpoint="500"
-      bordered
-      elevated
-      content-class="bg-grey-3"
-    >
-      <q-scroll-area class="fit">
-        <q-list padding>
-          <q-item
-            clickable
-            v-ripple
-            to="/interactiveHabitat/historical"
-          >
-            <q-item-section avatar>
-              <q-icon name="book" />
-            </q-item-section>
-
-            <q-item-section>
-              Historical Records
-            </q-item-section>
-          </q-item>
-
-          <q-item
-            clickable
-            v-ripple
-            to="/interactiveHabita"
-          >
-            <q-item-section avatar>
-              <q-icon name="star" />
-            </q-item-section>
-
-            <q-item-section>
-              ECF Sampling Data
-            </q-item-section>
-          </q-item>
-
-          <q-separator />
-
-          <q-expansion-item
-            label="NorthWestern Sites"
-            header-class="bg-blue-10 text-white text-bold"
-            default-opened
-            
-          >            
-              <q-expansion-item
-                expand-separator
-                switch-toggle-side dense-toggle
-                label="Lung Kwu Tan"
-                header-class="bg-blue-grey-2 text-bold"
-              >
-                <q-list
-                  dense
-                >
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo2"
-                  >
-                    <q-item-section>
-                      Biological Dashboard
-                    </q-item-section>
-                  </q-item>
-                  <q-separator inset="item" />
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Physical Dashboard
-                    </q-item-section>
-                  </q-item>
-                </q-list>
-              </q-expansion-item>
-              <q-expansion-item
-                expand-separator
-                switch-toggle-side dense-toggle
-                label="Siu Lam"
-                header-class="bg-blue-grey-2 text-bold"
-              >
-                <q-list
-                  dense
-                >
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Biological Dashboard
-                    </q-item-section>
-                  </q-item>
-                  <q-separator inset="item" />
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Physical Dashboard
-                    </q-item-section>
-                  </q-item>
-                </q-list>
-              </q-expansion-item>
-              <q-expansion-item
-                expand-separator
-                switch-toggle-side dense-toggle
-                label="Luk Keng"
-                header-class="bg-blue-grey-2 text-bold"
-              >
-                <q-list
-                  dense
-                >
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Biological Dashboard
-                    </q-item-section>
-                  </q-item>
-                  <q-separator inset="item" />
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Physical Dashboard
-                    </q-item-section>
-                  </q-item>
-                </q-list>
-              </q-expansion-item>
-              <q-expansion-item
-                expand-separator
-                switch-toggle-side dense-toggle
-                label="Tai O"
-                header-class="bg-blue-grey-2 text-bold"
-              >
-                <q-list
-                  dense
-                >
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Biological Dashboard
-                    </q-item-section>
-                  </q-item>
-                  <q-separator inset="item" />
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Physical Dashboard
-                    </q-item-section>
-                  </q-item>
-                </q-list>
-              </q-expansion-item>
-
-          </q-expansion-item>
-          <q-expansion-item
-            label="SouthWestern Sites"
-            header-class="bg-blue-10 text-white text-bold"
-            default-opened
-            
-          >            
-              <q-expansion-item
-                expand-separator
-                switch-toggle-side dense-toggle
-                label="Lung Kwu Tan"
-                header-class="bg-blue-grey-2 text-bold"
-              >
-                <q-list
-                  dense
-                >
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo2"
-                  >
-                    <q-item-section>
-                      Biological Dashboard
-                    </q-item-section>
-                  </q-item>
-                  <q-separator inset="item" />
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Physical Dashboard
-                    </q-item-section>
-                  </q-item>
-                </q-list>
-              </q-expansion-item>
-              <q-expansion-item
-                expand-separator
-                switch-toggle-side dense-toggle
-                label="Siu Lam"
-                header-class="bg-blue-grey-2 text-bold"
-              >
-                <q-list
-                  dense
-                >
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Biological Dashboard
-                    </q-item-section>
-                  </q-item>
-                  <q-separator inset="item" />
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Physical Dashboard
-                    </q-item-section>
-                  </q-item>
-                </q-list>
-              </q-expansion-item>
-              <q-expansion-item
-                expand-separator
-                switch-toggle-side dense-toggle
-                label="Luk Keng"
-                header-class="bg-blue-grey-2 text-bold"
-              >
-                <q-list
-                  dense
-                >
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Biological Dashboard
-                    </q-item-section>
-                  </q-item>
-                  <q-separator inset="item" />
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Physical Dashboard
-                    </q-item-section>
-                  </q-item>
-                </q-list>
-              </q-expansion-item>
-              <q-expansion-item
-                expand-separator
-                switch-toggle-side dense-toggle
-                label="Tai O"
-                header-class="bg-blue-grey-2 text-bold"
-              >
-                <q-list
-                  dense
-                >
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Biological Dashboard
-                    </q-item-section>
-                  </q-item>
-                  <q-separator inset="item" />
-                  <q-item
-                    clickable
-                    v-ripple
-                    :inset-level="1"
-                    to="/interactiveHabitat/demo"
-                  >
-                    <q-item-section>
-                      Physical Dashboard
-                    </q-item-section>
-                  </q-item>
-                </q-list>
-              </q-expansion-item>
-
-          </q-expansion-item>
-
-        </q-list>
-      </q-scroll-area>
-    </q-drawer>
+  <div>
     <div class="row q-px-sm justify-center">
-      <q-card class="col-3">
-        <div class="text-h5 text-bold row justify-center">Temperature</div>
-        <q-separator />
-        <highcharts :options="chartOptions1"></highcharts>
-        <highcharts :options="chartOptions2"></highcharts>
-      </q-card>
-
-      <q-card class="col-6 q-pa-xs">
-        <div class="q-col-gutter-xs row">
-          <q-card-section
-            vertical
-            class="col-6"
+      <q-card class="col-4"
+        ><br />
+        <div class="text-h5 text-bold row justify-center">
+          List of Species Names
+        </div>
+        <div class="q-pa-sm q-gutter-sm justify-center row">
+          <q-list
+            dense
+            bordered
+            separator
+            padding
+            class="bg-blue-1 rounded-borders"
+            style="width: 180px"
           >
-            <div class="text-h5 text-bold row justify-center">Site Name</div>
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #1
+              </q-item-section>
+            </q-item>
 
-            <q-card-section>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              quis tempore praesentium illum? Molestiae ipsa repellendus ipsam!
-              Quaerat placeat eveniet, quo tempora dolorum, maxime eos odit,
-              voluptate aspernatur assumenda ipsa.
-              <q-carousel
-                height=150px
-                animated
-                v-model="slide"
-                arrows
-                infinite
-              >
-                <q-carousel-slide
-                  :name="1"
-                  img-src="https://cdn.quasar.dev/img/mountains.jpg"
-                />
-                <q-carousel-slide
-                  :name="2"
-                  img-src="https://cdn.quasar.dev/img/parallax1.jpg"
-                />
-                <q-carousel-slide
-                  :name="3"
-                  img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-                />
-                <q-carousel-slide
-                  :name="4"
-                  img-src="https://cdn.quasar.dev/img/quasar.jpg"
-                />
-              </q-carousel>
-              <!-- <q-img :ratio="16 / 9" src="~assets/placeholder2.jpg" /> -->
-            </q-card-section>
-          </q-card-section>
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #2
+              </q-item-section>
+            </q-item>
 
-          <q-card-section class="col-6">
-            <l-map
-              :zoom="zoom"
-              :center="center"
-            >
-              <l-tile-layer
-                :url="url"
-                :attribution="attribution"
-              />
-              <l-marker :lat-lng="[22.39235, 113.916341]"></l-marker>
-            </l-map>
-          </q-card-section>
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #3
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #4
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #5
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #6
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #7
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #8
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #9
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #10
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #11
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #12
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #13
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #14
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #15
+              </q-item-section>
+            </q-item>
+          </q-list>
+
+          <q-list
+            dense
+            bordered
+            separator
+            padding
+            class="bg-blue-1 rounded-borders"
+            style="width: 180px"
+          >
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #1
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #2
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #3
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #4
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #5
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #6
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #7
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #8
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #9
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #10
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #11
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #12
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #13
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #14
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section>
+                species name #15
+              </q-item-section>
+            </q-item>
+          </q-list>
         </div>
       </q-card>
 
-      <q-card class="col-3 ">
-        <div class="text-h5 text-bold row justify-center">Wave Fetch</div>
-        <q-separator />
-        <highcharts :options="chartOptions1"></highcharts>
-        <highcharts :options="chartOptions2"></highcharts>
-      </q-card>
-    </div>
-    <div class="row q-pa-sm justify-center">
-      <q-card class="col-12">
-        <div class="text-h5 text-bold row justify-center">Nutrient Levels</div>
-        <q-separator />
-
-        <q-card-section horizontal>
-          <div class="col-6 text-bold text-center">Chlorophyll a</div>
-          <div class="col-6 text-bold text-center">Organic Matter</div>
-        </q-card-section>
-        <q-card-section horizontal>
-          <q-card-section class="col-3">
-            <highcharts :options="chartOptions1"></highcharts>
+      <q-card class="col-8 q-pa-xs">
+        <q-card-section horizontal class="row">
+          <q-card-section class="col-4">
+          <highcharts :options="barchart"></highcharts>
           </q-card-section>
-          <q-card-section class="col-3">
-            <highcharts :options="chartOptions2"></highcharts>
-          </q-card-section>
-
-          <q-separator vertical />
-          <q-card-section class="col-3">
-            <highcharts :options="chartOptions1"></highcharts>
-          </q-card-section>
-
-          <q-card-section class="col-3">
-            <highcharts :options="chartOptions2"></highcharts>
+          <q-card-section class="col-4">
+          <highcharts :options="barchart"></highcharts>
           </q-card-section>
         </q-card-section>
       </q-card>
     </div>
-  </q-layout>
+  </div>
 </template>
 
 <script>
-import { LMap, LMarker, LTileLayer } from "vue2-leaflet";
 import Vue from "vue";
 import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
 
 export default {
-  components: { LMap, LMarker, LTileLayer },
+  components: {},
   data() {
     return {
-      drawer: false,
-      miniState: true,
-      slide: 1,
-      center: L.latLng(22.3908, 114.1721),
-      zoom: 10.25,
-      url:
-        "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-      attribution: "Source &copy; Esri",
-
-      chartOptions1: {
+      barchart: {
+        chart: {
+          type: "column",
+          height: (3 / 4) * 60 + "%" // 16:9 ratio
+        },
+        credits: {
+          enabled: false
+        },
+        title: {
+          text: "Abundance of Fauna Species"
+        },
+        subtitle: {
+          tect: "by ECF at which site location"
+        },
+        xAxis: {
+          type: 'category',
+          labels:{
+            rotation: -45,
+          }
+        },
+        yAxis:{
+          min: 0,
+          title: {
+            text: 'Abundance'
+          }
+        },
+        legend: {
+          enabled: false
+        },
+        series: [
+          {
+            name: 'Species Abundance',
+            showInLegend: true,
+            data: [
+              ['species1', 3],
+              ['species2', 10],
+              ['species3', 5],
+              ['species4', 15],
+              ['species5', 3],
+              ['species6', 5],
+              ['species7', 2],
+              ['species8', 16],
+              ['species9', 10],
+              ['species10', 2],
+            ],
+          }
+        ]
+      },
+      linechart: {
         chart: {
           type: "spline",
           height: (1 / 2) * 100 + "%", // 16:9 ratio
@@ -461,30 +296,9 @@ export default {
           },
         ],
       },
-      chartOptions2: {
-        chart: {
-          type: "spline",
-          height: (1 / 2) * 100 + "%", // 16:9 ratio
-        },
-        credits: {
-          enabled: false,
-        },
-        title: {
-          text: "Winter",
-        },
-        series: [
-          {
-            showInLegend: false,
-            data: [2, 3, 9, 5, 6, 4, 1, 2],
-          },
-        ],
-      },
     };
-  },
+  }
 };
 </script>
 
-<style lang="sass">
-// .site
-//   background-color: $blue-10
-</style>
+<style lang="sass"></style>
