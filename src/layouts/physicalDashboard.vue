@@ -1,23 +1,21 @@
 <template>
-  <div class="col q-pa-xs">
-    <div class="row justify-center">
-      <q-card flat square class="col-3 ">
-        <div class="text-h5 text-bold row justify-center">Temperature</div>
-        <q-separator />
+  <div class="col q-pa-xs q-gutter-xs page">
+    <div class="row justify-center q-gutter-xs no-wrap">
+      <q-card bordered class="col-3">
+        <div class="text-h5 text-bold row justify-center title">Temperature</div>
         <highcharts :options="chartOptions1"></highcharts>
         <highcharts :options="chartOptions2"></highcharts>
       </q-card>
 
-      <q-card flat square class="col-6">
+      <q-card bordered class="col-6 maincard">
         <div class="row">
           <q-card-section vertical class="col-6">
             <div class="text-h5 text-bold row justify-center">Site Name</div>
 
             <q-card-section>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              quis tempore praesentium illum? Molestiae ipsa repellendus ipsam!
-              Quaerat placeat eveniet, quo tempora dolorum, maxime eos odit,
-              voluptate aspernatur assumenda ipsa.
+              Here can be a site introduction: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+              quis tempore praesentium illum.
+              Quaerat placeat eveniet.
               <q-carousel
                 height="150px"
                 animated
@@ -55,17 +53,17 @@
         </div>
       </q-card>
 
-      <q-card flat square class="col-3">
-        <div class="text-h5 text-bold row justify-center">Wave Fetch</div>
-        <q-separator />
+      <q-card bordered class="col-3">
+        <div class="text-h5 text-bold row justify-center title">Wave Fetch</div>
+        
         <highcharts :options="chartOptions1"></highcharts>
         <highcharts :options="chartOptions2"></highcharts>
       </q-card>
     </div>
     <div class="row justify-center">
-      <q-card flat square class="col-12">
-        <div class="text-h5 text-bold row justify-center">Nutrient Levels</div>
-        <q-separator />
+      <q-card bordered class="col-12">
+        <div class="text-h5 text-bold row justify-center title">Nutrient Levels</div>
+       
 
         <q-card-section horizontal>
           <div class="col-6 text-bold text-center">Chlorophyll a</div>
@@ -104,8 +102,8 @@ export default {
   data() {
     return {
       slide: 1,
-      center: L.latLng(22.3908, 114.1721),
-      zoom: 10.25,
+      center: L.latLng(22.39235, 113.916341),
+      zoom: 10.5,
       url:
         "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
       attribution: "Source &copy; Esri",
@@ -152,4 +150,11 @@ export default {
 </script>
 
 <style lang="sass">
+.page
+  background-color: grey
+// .maincard
+//   background-color: 
+.title
+  background-color: $indigo-5
+  color: white
 </style>

@@ -217,28 +217,28 @@
         </q-card-section>
         <q-card-section horizontal>
           <q-card-section class="col-3">
-            <highcharts :options="linechart"></highcharts>
+            <highcharts :options="pieChart"></highcharts>
           </q-card-section>
           <q-card-section class="col-3">
-            <highcharts :options="linechart"></highcharts>
+            <highcharts :options="pieChart"></highcharts>
           </q-card-section>
 
           <q-separator vertical />
           <q-card-section class="col-3">
-            <highcharts :options="linechart"></highcharts>
+            <highcharts :options="pieChart"></highcharts>
           </q-card-section>
 
           <q-card-section class="col-3">
-            <highcharts :options="linechart"></highcharts>
+            <highcharts :options="pieChart"></highcharts>
           </q-card-section>
         </q-card-section>
 
         <q-card-section horizontal class="row">
           <q-card-section class="col-6">
-          <highcharts :options="barchart"></highcharts>
+          <highcharts :options="barChart"></highcharts>
           </q-card-section>
           <q-card-section class="col-6">
-          <highcharts :options="barchart"></highcharts>
+          <highcharts :options="barChart"></highcharts>
           </q-card-section>
         </q-card-section>
       </q-card>
@@ -250,77 +250,16 @@
 import Vue from "vue";
 import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
+import { PieChart } from "src/pages/PieChart";
+import { BarChart } from "src/pages/BarChart";
+
 
 export default {
   components: {},
   data() {
     return {
-      barchart: {
-        chart: {
-          type: "column",
-          height: (3 / 4) * 100 + "%" // 16:9 ratio
-        },
-        credits: {
-          enabled: false
-        },
-        title: {
-          text: "Abundance of Fauna Species"
-        },
-        subtitle: {
-          tect: "by ECF at which site location"
-        },
-        xAxis: {
-          type: 'category',
-          labels:{
-            rotation: -45,
-          }
-        },
-        yAxis:{
-          min: 0,
-          title: {
-            text: 'Abundance'
-          }
-        },
-        legend: {
-          enabled: false
-        },
-        series: [
-          {
-            name: 'Species Abundance',
-            showInLegend: true,
-            data: [
-              ['species1', 3],
-              ['species2', 10],
-              ['species3', 5],
-              ['species4', 15],
-              ['species5', 3],
-              ['species6', 5],
-              ['species7', 2],
-              ['species8', 16],
-              ['species9', 10],
-              ['species10', 2],
-            ],
-          }
-        ]
-      },
-      linechart: {
-        chart: {
-          type: "spline",
-          height: (1 / 1) * 100 + "%", // 16:9 ratio
-        },
-        credits: {
-          enabled: false,
-        },
-        title: {
-          text: "Summer",
-        },
-        series: [
-          {
-            showInLegend: false,
-            data: [10, 6, 8, 2, 8, 4, 6, 7],
-          },
-        ],
-      },
+      pieChart: PieChart,
+      barChart: BarChart,
     };
   }
 };

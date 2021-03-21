@@ -8,12 +8,12 @@
 import Vue from "vue";
 import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
-import { PieData } from "./chartData";
+import { PieChart } from "./PieChart";
 
 export default {
   data() {
     return {
-      pieOptions: PieData,
+      pieOptions: PieChart,
     };
   },
 };
