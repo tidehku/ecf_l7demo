@@ -1,21 +1,19 @@
 <template>
-  <div class="col q-pa-xs q-gutter-xs page">
-    <div class="row justify-center q-gutter-xs no-wrap">
+  <div class="col q-pa-xs  page">
+    <div class="row justify-center no-wrap">
       <q-card bordered class="col-3">
         <div class="text-h5 text-bold row justify-center title">Temperature</div>
         <highcharts :options="chartOptions1"></highcharts>
         <highcharts :options="chartOptions2"></highcharts>
       </q-card>
 
-      <q-card bordered class="col-6 maincard">
+      <q-card bordered class="maincard">
         <div class="row">
+          
           <q-card-section vertical class="col-6">
             <div class="text-h5 text-bold row justify-center">Site Name</div>
-
-            <q-card-section>
-              Here can be a site introduction: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              quis tempore praesentium illum.
-              Quaerat placeat eveniet.
+              <p>
+              Here can be a site introduction: {{lorem}}</p>
               <q-carousel
                 height="150px"
                 animated
@@ -41,11 +39,10 @@
                 />
               </q-carousel>
               <!-- <q-img :ratio="16 / 9" src="~assets/placeholder2.jpg" /> -->
-            </q-card-section>
           </q-card-section>
 
-          <q-card-section class="col-6">
-            <l-map :zoom="zoom" :center="center">
+          <q-card-section class="col-6 q-px-sm">
+            <l-map :zoom= 10.6 :center="center" :options="mapOptions">
               <l-tile-layer :url="url" :attribution="attribution" />
               <l-marker :lat-lng="[22.39235, 113.916341]"></l-marker>
             </l-map>
@@ -61,7 +58,7 @@
       </q-card>
     </div>
     <div class="row justify-center">
-      <q-card bordered class="col-12">
+      <q-card bordered class="bottomcard" >
         <div class="text-h5 text-bold row justify-center title">Nutrient Levels</div>
        
 
@@ -102,8 +99,13 @@ export default {
   data() {
     return {
       slide: 1,
+      lorem:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
       center: L.latLng(22.39235, 113.916341),
-      zoom: 10.5,
+      mapOptions: {
+        zoomControl: false,
+      },
+      
       url:
         "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
       attribution: "Source &copy; Esri",
@@ -117,6 +119,9 @@ export default {
           enabled: false,
         },
         title: {
+          text:'',
+        },
+        subtitle: {
           text: "Summer",
         },
         series: [
@@ -135,6 +140,9 @@ export default {
           enabled: false,
         },
         title: {
+          text:'',
+        },
+        subtitle: {
           text: "Winter",
         },
         series: [
@@ -151,10 +159,18 @@ export default {
 
 <style lang="sass">
 .page
-  background-color: grey
-// .maincard
-//   background-color: 
+  background-color: $grey-6
+.maincard
+  width: 49%
+.q-card
+  padding: 2px
+  margin: 4px
+
+.bottomcard
+  width: 99.5%
+ 
 .title
   background-color: $indigo-5
   color: white
+
 </style>

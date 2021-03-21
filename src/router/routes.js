@@ -28,17 +28,17 @@ const routes = [
   //   component: () => import("src/layouts/bioDashboard.vue") //biological dashboard//
   // },
   {
-    path: "/drawer",
+    path: "/interactiveHabitat/dashboard",
     component: () => import("src/layouts/drawerLayout.vue"), //drawer layout//
     children: [
       {
-        path: "/drawer/physicalDashboard",
+        path: "/interactiveHabitat/dashboard/physical",
         component: () => import("src/layouts/physicalDashboard.vue") //physical dashboard//
       },
       {
-        path: "/drawer/bioDashboard",
+        path: "/interactiveHabitat/dashboard/biological",
         component: () => import("src/layouts/bioDashboard.vue") //biological dashboard//
-      },
+      }
     ]
   },
   {

@@ -71,7 +71,7 @@
 
           <q-expansion-item
             label="NorthWestern Sites"
-            header-class="bg-blue-10 text-white text-bold"
+            header-class=" text-blue-10 text-bold"
             default-opened
           >
             <q-expansion-item
@@ -80,6 +80,7 @@
               dense-toggle
               label="Lung Kwu Tan"
               header-class="bg-blue-grey-2 text-bold"
+              dense
             >
               <q-list dense>
                 <q-item
@@ -107,6 +108,7 @@
               dense-toggle
               label="Siu Lam"
               header-class="bg-blue-grey-2 text-bold"
+              dense
             >
               <q-list dense>
                 <q-item
@@ -134,6 +136,7 @@
               dense-toggle
               label="Luk Keng"
               header-class="bg-blue-grey-2 text-bold"
+              dense
             >
               <q-list dense>
                 <q-item
@@ -161,6 +164,7 @@
               dense-toggle
               label="Tai O"
               header-class="bg-blue-grey-2 text-bold"
+              dense
             >
               <q-list dense>
                 <q-item
@@ -185,7 +189,7 @@
           </q-expansion-item>
           <q-expansion-item
             label="SouthWestern Sites"
-            header-class="bg-blue-10 text-white text-bold"
+            header-class=" text-blue-10 text-bold"
             default-opened
           >
             <q-expansion-item
@@ -194,6 +198,7 @@
               dense-toggle
               label="Lung Kwu Tan"
               header-class="bg-blue-grey-2 text-bold"
+              dense
             >
               <q-list dense>
                 <q-item
@@ -221,6 +226,7 @@
               dense-toggle
               label="Siu Lam"
               header-class="bg-blue-grey-2 text-bold"
+              dense
             >
               <q-list dense>
                 <q-item
@@ -248,6 +254,7 @@
               dense-toggle
               label="Luk Keng"
               header-class="bg-blue-grey-2 text-bold"
+              dense
             >
               <q-list dense>
                 <q-item
@@ -275,6 +282,125 @@
               dense-toggle
               label="Tai O"
               header-class="bg-blue-grey-2 text-bold"
+              dense
+            >
+              <q-list dense>
+                <q-item
+                  clickable
+                  v-ripple
+                  :inset-level="1"
+                  to="/interactiveHabitat/demo"
+                >
+                  <q-item-section> Biological Dashboard </q-item-section>
+                </q-item>
+                <q-separator inset="item" />
+                <q-item
+                  clickable
+                  v-ripple
+                  :inset-level="1"
+                  to="/interactiveHabitat/demo"
+                >
+                  <q-item-section> Physical Dashboard </q-item-section>
+                </q-item>
+              </q-list>
+            </q-expansion-item>
+          </q-expansion-item>
+          <q-expansion-item
+            label="Southern Sites"
+            header-class=" text-blue-10 text-bold"
+            default-opened
+          >
+            <q-expansion-item
+              expand-separator
+              switch-toggle-side
+              dense-toggle
+              label="Lung Kwu Tan"
+              header-class="bg-blue-grey-2 text-bold"
+              dense
+            >
+              <q-list dense>
+                <q-item
+                  clickable
+                  v-ripple
+                  :inset-level="1"
+                  to="/interactiveHabitat/demo2"
+                >
+                  <q-item-section> Biological Dashboard </q-item-section>
+                </q-item>
+                <q-separator inset="item" />
+                <q-item
+                  clickable
+                  v-ripple
+                  :inset-level="1"
+                  to="/interactiveHabitat/demo"
+                >
+                  <q-item-section> Physical Dashboard </q-item-section>
+                </q-item>
+              </q-list>
+            </q-expansion-item>
+            <q-expansion-item
+              expand-separator
+              switch-toggle-side
+              dense-toggle
+              label="Siu Lam"
+              header-class="bg-blue-grey-2 text-bold"
+              dense
+            >
+              <q-list dense>
+                <q-item
+                  clickable
+                  v-ripple
+                  :inset-level="1"
+                  to="/interactiveHabitat/demo"
+                >
+                  <q-item-section> Biological Dashboard </q-item-section>
+                </q-item>
+                <q-separator inset="item" />
+                <q-item
+                  clickable
+                  v-ripple
+                  :inset-level="1"
+                  to="/interactiveHabitat/demo"
+                >
+                  <q-item-section> Physical Dashboard </q-item-section>
+                </q-item>
+              </q-list>
+            </q-expansion-item>
+            <q-expansion-item
+              expand-separator
+              switch-toggle-side
+              dense-toggle
+              label="Luk Keng"
+              header-class="bg-blue-grey-2 text-bold"
+              dense
+            >
+              <q-list dense>
+                <q-item
+                  clickable
+                  v-ripple
+                  :inset-level="1"
+                  to="/interactiveHabitat/demo"
+                >
+                  <q-item-section> Biological Dashboard </q-item-section>
+                </q-item>
+                <q-separator inset="item" />
+                <q-item
+                  clickable
+                  v-ripple
+                  :inset-level="1"
+                  to="/interactiveHabitat/demo"
+                >
+                  <q-item-section> Physical Dashboard </q-item-section>
+                </q-item>
+              </q-list>
+            </q-expansion-item>
+            <q-expansion-item
+              expand-separator
+              switch-toggle-side
+              dense-toggle
+              label="Tai O"
+              header-class="bg-blue-grey-2 text-bold"
+              dense
             >
               <q-list dense>
                 <q-item

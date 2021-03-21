@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <div class="row q-px-sm justify-center">
-      <q-card class="col-4"
-        ><br />
-        <div class="text-h5 text-bold row justify-center">
+    <div class="row q-px-sm justify-center no-wrap page">
+      <q-card class="col-4">
+        <div class="text-h5 text-bold row justify-center title">
           List of Species Names
         </div>
         <div class="q-pa-sm q-gutter-sm justify-center row">
@@ -12,7 +10,7 @@
             bordered
             separator
             padding
-            class="bg-blue-1 rounded-borders"
+            class="bg-red-1 rounded-borders"
             style="width: 180px"
           >
             <q-item clickable v-ripple>
@@ -111,7 +109,7 @@
             bordered
             separator
             padding
-            class="bg-blue-1 rounded-borders"
+            class="bg-red-1 rounded-borders"
             style="width: 180px"
           >
             <q-item clickable v-ripple>
@@ -208,7 +206,7 @@
       </q-card>
 
       <q-card class="col-8 q-pa-xs">
-        <div class="text-h5 text-bold row justify-center">Biological Dashboard: Pie Chart and Bar Chart</div>
+        <div class="text-h5 text-bold row justify-center title">Abundance: Pie Chart and Bar Chart</div>
         <q-separator />                         
 
         <q-card-section horizontal>
@@ -243,7 +241,6 @@
         </q-card-section>
       </q-card>
     </div>
-  </div>
 </template>
 
 <script>
@@ -265,4 +262,14 @@ export default {
 };
 </script>
 
-<style lang="sass"></style>
+<style lang="sass">
+.page
+  background-color: $grey-6
+.q-card
+  width: 98%
+  padding: 3px
+  margin: 4px
+.title
+  background-color: $indigo-5
+  color: white
+</style>
