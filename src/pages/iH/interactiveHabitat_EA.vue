@@ -5,7 +5,7 @@
       dark
       bordered
     >
-      <q-card-section class="bg-blue-10">
+      <q-card-section class="bg-indigo-8">
         <div class="q-mx-sm text-h4 text-weight-bold">HK Eastern Sites</div>
       </q-card-section>
       <q-card-section class="q-mx-sm row">
@@ -31,7 +31,7 @@
 
           <q-btn
             no-caps
-            color="blue-10"
+            color="indigo-8"
             size="20px"
             v-go-back="'/interactiveHabitat'"
             push
@@ -171,10 +171,10 @@ export default {
   /* specifying max-width so the example can
    highlight the sticky column on any browser window */
   .q-table__top
-    background-color: $blue-10
+    background-color: $indigo-8
     color: #fff
   .q-table__title
     font-weight: 500
   td:first-child
-    background-color: $grey-2
+    background-color: $indigo-1
 </style>

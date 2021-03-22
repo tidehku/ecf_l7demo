@@ -31,63 +31,89 @@
     <q-drawer
       v-model="drawer"
       side="right"
-      show-if-above
       overlay
-      :width="240"
+      :width="300"
       :breakpoint="500"
-      bordered
       elevated
       content-class="bg-grey-3"
     >
-      <q-scroll-area class="fit">
-        <q-list padding>
-          <q-item
-            clickable
-            v-ripple
-            to="/interactiveHabitat/historical"
-          >
-            <q-item-section avatar>
-              <q-icon name="book" />
-            </q-item-section>
 
-            <q-item-section> Historical Records </q-item-section>
-          </q-item>
+      <q-list padding>
+        <q-item
+          clickable
+          v-ripple
+          to="/interactiveHabitat/historical"
+        >
+          <q-item-section avatar>
+            <q-icon name="book" />
+          </q-item-section>
 
-          <q-item
-            clickable
-            v-ripple
-            to="/interactiveHabitat"
-          >
-            <q-item-section avatar>
-              <q-icon name="star" />
-            </q-item-section>
+          <q-item-section> Historical Records </q-item-section>
+        </q-item>
+        <q-separator />
 
-            <q-item-section> ECF Sampling Data </q-item-section>
-          </q-item>
+        <q-item
+          clickable
+          v-ripple
+          to="/interactiveHabitat"
+        >
+          <q-item-section avatar>
+            <q-icon name="star" />
+          </q-item-section>
 
-          <q-separator />
+          <q-item-section> ECF Sampling Data </q-item-section>
+        </q-item>
+
+        <q-separator /><br>
+        <q-card
+          bordered
+          flat
+          class="q-ma-md searchbox"
+        >
+
+          <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">Quick Search Link</div>
 
           <q-select
             filled
-            v-model="model"
+            dense
+            v-model="model1"
             :options="regionOptions"
             label="Choose Region"
-            style="width:95%"
           />
 
           <q-select
             filled
-            v-model="model"
+            dense
+            v-model="model2"
             :options="siteOptions"
             label="Choose Site"
-            style="width:95%"
           />
 
-          <!-- <q-item  v-for="region in regions">{{ region }}</q-item> -->
-          </q-select> -->
+          <q-select
+            filled
+            dense
+            v-model="model3"
+            :options="dashboardOptions"
+            label="Choose Dashboard"
+          />
+          <div class="row justify-center">
+            <q-btn
+              no-caps
+              dense
+              push
+              color="black"
+              class="text-h6 q-ma-md q-px-md"
+              glossy
+              label="Search"
+            />
+          </div>
 
-        </q-list>
-      </q-scroll-area>
+        </q-card>
+
+        <!-- <q-item  v-for="region in regions">{{ region }}</q-item> -->
+
+      </q-list>
+
     </q-drawer>
 
     <q-page-container>
@@ -101,8 +127,9 @@ export default {
   data() {
     return {
       drawer: false,
-      miniState: true,
-      model: null,
+      model1: null,
+      model2: null,
+      model3: null,
       regionOptions: [
         "North Western",
         "South Western",
@@ -119,6 +146,7 @@ export default {
         "Tolo Habour",
         "North Eastern Sites",
       ],
+      dashboardOptions: ["Physical Dashboard", "Biological Dashboard"],
     };
   },
 };
@@ -127,4 +155,15 @@ export default {
 <style lang="sass">
 .q-select
   padding: 15px
+
+.searchTitle
+  padding: 15px
+
+.q-card
+  background-color: white
+
+.searchbox
+  border-width: 2px
+  border-color: black
+  // background-color: $indigo-5
 </style>

@@ -1,70 +1,101 @@
 <template>
-  <div class="col q-pa-xs  page">
+  <div class="col page">
     <div class="row justify-center no-wrap">
-      <q-card bordered class="col-3">
+      <q-card 
+        bordered
+        class="col-3 temperature"
+      >
         <div class="text-h5 text-bold row justify-center title">Temperature</div>
         <highcharts :options="chartOptions1"></highcharts>
         <highcharts :options="chartOptions2"></highcharts>
       </q-card>
 
-      <q-card bordered class="maincard">
+      <q-card
+        bordered
+        class="bg-indigo-1 maincard"
+      >
         <div class="row">
-          
-          <q-card-section vertical class="col-6">
+
+          <q-card-section
+            vertical
+            class="col-6"
+          >
             <div class="text-h5 text-bold row justify-center">Site Name</div>
-              <p>
+            <p>
               Here can be a site introduction: {{lorem}}</p>
-              <q-carousel
-                height="150px"
-                animated
-                v-model="slide"
-                arrows
-                infinite
-              >
-                <q-carousel-slide
-                  :name="1"
-                  img-src="https://cdn.quasar.dev/img/mountains.jpg"
-                />
-                <q-carousel-slide
-                  :name="2"
-                  img-src="https://cdn.quasar.dev/img/parallax1.jpg"
-                />
-                <q-carousel-slide
-                  :name="3"
-                  img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-                />
-                <q-carousel-slide
-                  :name="4"
-                  img-src="https://cdn.quasar.dev/img/quasar.jpg"
-                />
-              </q-carousel>
-              <!-- <q-img :ratio="16 / 9" src="~assets/placeholder2.jpg" /> -->
+            <q-carousel
+              height="150px"
+              animated
+              v-model="slide"
+              arrows
+              infinite
+            >
+              <q-carousel-slide
+                :name="1"
+                img-src="https://cdn.quasar.dev/img/mountains.jpg"
+              />
+              <q-carousel-slide
+                :name="2"
+                img-src="https://cdn.quasar.dev/img/parallax1.jpg"
+              />
+              <q-carousel-slide
+                :name="3"
+                img-src="https://cdn.quasar.dev/img/parallax2.jpg"
+              />
+              <q-carousel-slide
+                :name="4"
+                img-src="https://cdn.quasar.dev/img/quasar.jpg"
+              />
+            </q-carousel>
+            <!-- <q-img :ratio="16 / 9" src="~assets/placeholder2.jpg" /> -->
           </q-card-section>
 
           <q-card-section class="col-6 q-px-sm">
-            <l-map :zoom= 10.6 :center="center" :options="mapOptions">
-              <l-tile-layer :url="url" :attribution="attribution" />
+            <l-map
+              :zoom=10.6
+              :center="center"
+              :options="mapOptions"
+            >
+              <l-tile-layer
+                :url="url"
+                :attribution="attribution"
+              />
               <l-marker :lat-lng="[22.39235, 113.916341]"></l-marker>
             </l-map>
           </q-card-section>
         </div>
       </q-card>
 
-      <q-card bordered class="col-3">
+      <q-card
+        bordered
+        class="col-3 waveFetch"
+      >
         <div class="text-h5 text-bold row justify-center title">Wave Fetch</div>
-        
+
         <highcharts :options="chartOptions1"></highcharts>
         <highcharts :options="chartOptions2"></highcharts>
       </q-card>
     </div>
     <div class="row justify-center">
-      <q-card bordered class="bottomcard" >
+      <q-card
+        bordered
+        class="bottomcard"
+      >
         <div class="text-h5 text-bold row justify-center title">Nutrient Levels</div>
-       
 
         <q-card-section horizontal>
-          <div class="col-6 text-bold text-center">Chlorophyll a</div>
-          <div class="col-6 text-bold text-center">Organic Matter</div>
+          <div class="col-6 row q-pa-xs justify-center">
+            <q-badge
+              color="red-5"
+              class="text-white text-bold multi-line"
+            >Chlorophyll a</q-badge>
+          </div>
+          <div class="col-6 row q-pa-xs justify-center">
+            <q-badge
+              color="red-5"
+              class="text-white text-bold multi-line"
+            >Organic Matter</q-badge>
+          </div>
         </q-card-section>
         <q-card-section horizontal>
           <q-card-section class="col-3">
@@ -105,7 +136,7 @@ export default {
       mapOptions: {
         zoomControl: false,
       },
-      
+
       url:
         "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
       attribution: "Source &copy; Esri",
@@ -119,7 +150,7 @@ export default {
           enabled: false,
         },
         title: {
-          text:'',
+          text: "",
         },
         subtitle: {
           text: "Summer",
@@ -140,7 +171,7 @@ export default {
           enabled: false,
         },
         title: {
-          text:'',
+          text: "",
         },
         subtitle: {
           text: "Winter",
@@ -160,17 +191,32 @@ export default {
 <style lang="sass">
 .page
   background-color: $grey-6
-.maincard
-  width: 49%
+  padding: 4px
+  
 .q-card
+  width: 97%
+.temperature
+  // background-color: $indigo-1
+  padding: 2px
+  margin: 4px
+.maincard
+  padding: 2px
+  margin: 4px
+.waveFetch
   padding: 2px
   margin: 4px
 
 .bottomcard
+  padding: 2px
+  margin: 4px
   width: 99.5%
- 
+
 .title
   background-color: $indigo-5
   color: white
+
+.l-map
+  border: 2px solid
+  border-color: black
 
 </style>

@@ -1,6 +1,6 @@
 <template>
-    <div class="row q-px-sm justify-center no-wrap page">
-      <q-card class="col-4">
+    <div class="row q-pa-sm justify-center no-wrap page">
+      <q-card class="width:33% listName">
         <div class="text-h5 text-bold row justify-center title">
           List of Species Names
         </div>
@@ -205,7 +205,7 @@
         </div>
       </q-card>
 
-      <q-card class="col-8 q-pa-xs">
+      <q-card class="col-8 chartCard">
         <div class="text-h5 text-bold row justify-center title">Abundance: Pie Chart and Bar Chart</div>
         <q-separator />                         
 
@@ -265,8 +265,13 @@ export default {
 <style lang="sass">
 .page
   background-color: $grey-6
-.q-card
-  width: 98%
+  padding: 4px
+  // height: 98%
+.listName
+  width: 33%
+  padding: 3px
+  margin: 4px
+.chartCard
   padding: 3px
   margin: 4px
 .title
