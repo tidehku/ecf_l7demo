@@ -10,7 +10,7 @@ export const PieChart = {
            height: (1 / 1) * 100 + "%" // 3:4 ratio
          },
          title: {
-           text: "summer/winter"
+           text: ""
          },
          tooltip: {
            pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>"
@@ -34,33 +34,34 @@ export const PieChart = {
            {
              name: "Brands",
              colorByPoint: true,
+             colors: [
+               "#058DC7",
+               "#50B432",
+               "#ED561B",
+               "#DDDF00",
+               "#24CBE5",
+               "#64E572",
+               "#FF9655",
+               "#FFF263",
+               "#6AF9C4",
+               
+             ],
              data: [
-               {
-                 name: "Chrome",
-                 y: 61.41,
-                 sliced: true,
-                 selected: true
-               },
-               {
-                 name: "Internet Explorer",
-                 y: 11.84
-               },
-               {
-                 name: "Firefox",
-                 y: 10.85
-               },
-               {
-                 name: "Edge",
-                 y: 4.67
-               },
-               {
-                 name: "Safari",
-                 y: 4.18
-               },
-               {
-                 name: "Other",
-                 y: 7.05
-               }
+               ["species1", 3],
+               ["species2", 10],
+               ["species3", 5],
+               ["species4", 15],
+               ["species5", 3],
+               ["species6", 5],
+               ["species7", 2],
+               ["species8", 16],
+               ["species9", 10],
+               ["species10", 2],
+               ["species11", 12],
+               ["species12", 19],
+               ["species13", 6],
+               ["species14", 1],
+               ["species15", 5]
              ]
            }
          ]
