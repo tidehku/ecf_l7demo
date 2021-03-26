@@ -68,7 +68,7 @@
         <q-card
           bordered
           flat
-          class="q-pa-sm searchbox"
+          class="q-ma-sm searchbox"
         >
 
           <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">Quick Search Link</div>
@@ -88,7 +88,6 @@
             v-model="subSite"
             :options="sites"
             label="Choose Site"
-            @input="setSites"
           />
 
           <q-select
@@ -345,6 +344,12 @@ export default {
       this.sites = val.sites;
     },
   },
+  watch: {
+    subSite: function () {
+      console.log(this.subSite);
+    },
+  },
+ 
 };
 </script>
 
