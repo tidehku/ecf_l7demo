@@ -134,7 +134,7 @@ export default {
         },
         onEachFeature: (feature, layer) => {
           layer.on("click", (e) => {
-            this.$router.push(`dashboard/physical`);
+            this.$router.push(`/physicalDashboard`);
           });
         },
       },

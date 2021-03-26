@@ -27,20 +27,7 @@ const routes = [
   //   path: "/interactiveHabitat/demo1",
   //   component: () => import("src/layouts/bioDashboard.vue") //biological dashboard//
   // },
-  {
-    path: "/interactiveHabitat/dashboard",
-    component: () => import("src/layouts/drawerLayout.vue"), //drawer layout//
-    children: [
-      {
-        path: "/interactiveHabitat/dashboard/physical",
-        component: () => import("src/layouts/physicalDashboard.vue") //physical dashboard//
-      },
-      {
-        path: "/interactiveHabitat/dashboard/biological",
-        component: () => import("src/layouts/bioDashboard.vue") //biological dashboard//
-      }
-    ]
-  },
+
   {
     path: "/interactiveHabitat",
     component: () => import("layouts/NewLayout.vue"),
@@ -76,6 +63,14 @@ const routes = [
         component: () => import("pages/iH/interactiveHabitat_NE.vue")
       }
     ]
+  },
+  {
+    path: "/biologicalDashboard",
+    component: () => import("src/layouts/bioDashboard.vue") //biological dashboard//
+  },
+  {
+    path: "/physicalDashboard",
+    component: () => import("src/layouts/physicalDashboard.vue") //physical dashboard//
   },
   {
     path: "/SpeciesSearchEngine",

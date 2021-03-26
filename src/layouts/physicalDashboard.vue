@@ -1,122 +1,231 @@
 <template>
-  <div class="col page">
-    <div class="row justify-center no-wrap">
-      <q-card 
-        bordered
-        class="col-3 temperature"
+  <q-layout view="hhh lpR fFf">
+    <q-header>
+      <q-bar
+        class="bg-indigo-8 text-white glossy"
+        style="height: 40px"
       >
-        <div class="text-h5 text-bold row justify-center title">Temperature</div>
-        <highcharts :options="chartOptions1"></highcharts>
-        <highcharts :options="chartOptions2"></highcharts>
-      </q-card>
+        <q-avatar size="40px" >
+          <img src="~assets/swims.png" />
+        </q-avatar>
+        <q-bar-title class="q-px-md text-h5 text-bold">
+          ECF Hong Kong Rocky Shore | Physical Dashboard of {{xxx}} xxx Site
+        </q-bar-title>
+        <q-space />
+        <q-btn
+          no-caps
+          class="text-indigo-8 text-bold switchbutton"
+          color="white"
+          icon-right="eco"
+          label="Switch to Biological Dashboard"
+          to="/biologicalDashboard"
+        />
+        <q-btn
+          flat
+          @click="drawer = !drawer"
+          round
+          icon="menu"
+        />
+      </q-bar>
+    </q-header>
+    <q-drawer
+      v-model="drawer"
+      side="right"
+      overlay
+      :width="300"
+      :breakpoint="500"
+      elevated
+      content-class="bg-grey-3"
+    >
 
-      <q-card
-        bordered
-        class="bg-indigo-1 maincard"
-      >
-        <div class="row">
+      <q-list padding>
+        <q-item
+          clickable
+          v-ripple
+          to="/interactiveHabitat/historical"
+        >
+          <q-item-section avatar>
+            <q-icon name="book" />
+          </q-item-section>
 
-          <q-card-section
-            vertical
-            class="col-6"
+          <q-item-section> Historical Records </q-item-section>
+        </q-item>
+        <q-separator />
+
+        <q-item
+          clickable
+          v-ripple
+          to="/interactiveHabitat"
+        >
+          <q-item-section avatar>
+            <q-icon name="star" />
+          </q-item-section>
+
+          <q-item-section> ECF Sampling Data </q-item-section>
+        </q-item>
+
+        <q-separator /><br>
+        <q-card
+          bordered
+          flat
+          class="q-ma-md searchbox"
+        >
+
+          <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">Quick Search Link</div>
+
+          <q-select
+            filled
+            dense
+            v-model="model1"
+            :options="regionOptions"
+            label="Choose Region"
+          />
+
+          <q-select
+            filled
+            dense
+            v-model="model2"
+            :options="siteOptions"
+            label="Choose Site"
+          />
+
+          <q-select
+            filled
+            dense
+            v-model="model3"
+            :options="dashboardOptions"
+            label="Choose Dashboard"
+          />
+          <div class="row justify-center">
+            <q-btn
+              no-caps
+              dense
+              push
+              color="black"
+              class="text-h6 q-ma-md q-px-md"
+              glossy
+              label="Search"
+            />
+          </div>
+
+        </q-card>
+
+        <!-- <q-item  v-for="region in regions">{{ region }}</q-item> -->
+
+      </q-list>
+
+    </q-drawer>
+
+    <q-page-container class="col page">
+        <div class="row justify-center no-wrap">
+          <q-card
+            bordered
+            class="col-3 temperature"
           >
-            <div class="text-h5 text-bold row justify-center">Site Name</div>
-            <p>
-              Here can be a site introduction: {{lorem}}</p>
-            <q-carousel
-              height="150px"
-              animated
-              v-model="slide"
-              arrows
-              infinite
-            >
-              <q-carousel-slide
-                :name="1"
-                img-src="https://cdn.quasar.dev/img/mountains.jpg"
-              />
-              <q-carousel-slide
-                :name="2"
-                img-src="https://cdn.quasar.dev/img/parallax1.jpg"
-              />
-              <q-carousel-slide
-                :name="3"
-                img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-              />
-              <q-carousel-slide
-                :name="4"
-                img-src="https://cdn.quasar.dev/img/quasar.jpg"
-              />
-            </q-carousel>
-            <!-- <q-img :ratio="16 / 9" src="~assets/placeholder2.jpg" /> -->
-          </q-card-section>
+            <div class="text-h5 text-bold row justify-center title">Temperature</div>
+            <highcharts :options="chartOptions1"></highcharts>
+            <highcharts :options="chartOptions2"></highcharts>
+          </q-card>
 
-          <q-card-section class="col-6 q-px-sm">
-            <l-map
-              :zoom=10.6
-              :center="center"
-              :options="mapOptions"
-            >
-              <l-tile-layer
-                :url="url"
-                :attribution="attribution"
-              />
-              <l-marker :lat-lng="[22.39235, 113.916341]"></l-marker>
-            </l-map>
-          </q-card-section>
+          <q-card
+            bordered
+            class="bg-indigo-1 maincard"
+          >
+            <div class="row">
+
+              <q-card-section
+                vertical
+                class="col-6"
+              >
+                <div class="text-h5 text-bold row justify-center">Site Name</div>
+                <p>
+                  Here can be a site introduction: {{lorem}}</p>
+                <q-carousel
+                  height="150px"
+                  animated
+                  v-model="slide"
+                  arrows
+                  infinite
+                >
+                  <q-carousel-slide
+                    :name="1"
+                    img-src="https://cdn.quasar.dev/img/mountains.jpg"
+                  />
+                  <q-carousel-slide
+                    :name="2"
+                    img-src="https://cdn.quasar.dev/img/parallax1.jpg"
+                  />
+                  <q-carousel-slide
+                    :name="3"
+                    img-src="https://cdn.quasar.dev/img/parallax2.jpg"
+                  />
+                  <q-carousel-slide
+                    :name="4"
+                    img-src="https://cdn.quasar.dev/img/quasar.jpg"
+                  />
+                </q-carousel>
+                <!-- <q-img :ratio="16 / 9" src="~assets/placeholder2.jpg" /> -->
+              </q-card-section>
+
+              <q-card-section class="col-6 q-px-sm">
+                <l-map
+                  :zoom=10.6
+                  :center="center"
+                  :options="mapOptions"
+                  class="l-map"
+                >
+                  <l-tile-layer
+                    :url="url"
+                    :attribution="attribution"
+                  />
+                  <l-marker :lat-lng="[22.39235, 113.916341]"></l-marker>
+                </l-map>
+              </q-card-section>
+            </div>
+          </q-card>
+
+          <q-card
+            bordered
+            class="col-3 waveFetch"
+          >
+            <div class="text-h5 text-bold row justify-center title">Wave Fetch</div>
+
+            <highcharts :options="chartOptions1"></highcharts>
+            <highcharts :options="chartOptions2"></highcharts>
+          </q-card>
         </div>
-      </q-card>
+        <div class="row justify-center">
+          <q-card
+            bordered
+            class="bottomcard"
+          >
+            <div class="text-h5 text-bold row justify-center title">Nutrient Levels</div>
 
-      <q-card
-        bordered
-        class="col-3 waveFetch"
-      >
-        <div class="text-h5 text-bold row justify-center title">Wave Fetch</div>
-
-        <highcharts :options="chartOptions1"></highcharts>
-        <highcharts :options="chartOptions2"></highcharts>
-      </q-card>
-    </div>
-    <div class="row justify-center">
-      <q-card
-        bordered
-        class="bottomcard"
-      >
-        <div class="text-h5 text-bold row justify-center title">Nutrient Levels</div>
-
-        <q-card-section horizontal>
-          <div class="col-6 row q-pa-xs justify-center">
-            <q-badge
-              color="red-5"
-              class="text-white text-bold multi-line"
-            >Chlorophyll a</q-badge>
-          </div>
-          <div class="col-6 row q-pa-xs justify-center">
-            <q-badge
-              color="red-5"
-              class="text-white text-bold multi-line"
-            >Organic Matter</q-badge>
-          </div>
-        </q-card-section>
-        <q-card-section horizontal>
-          <q-card-section class="col-3">
-            <highcharts :options="chartOptions1"></highcharts>
-          </q-card-section>
-          <q-card-section class="col-3">
-            <highcharts :options="chartOptions2"></highcharts>
-          </q-card-section>
-
-          <q-separator vertical />
-          <q-card-section class="col-3">
-            <highcharts :options="chartOptions1"></highcharts>
-          </q-card-section>
-
-          <q-card-section class="col-3">
-            <highcharts :options="chartOptions2"></highcharts>
-          </q-card-section>
-        </q-card-section>
-      </q-card>
-    </div>
-  </div>
+            <q-card-section horizontal>
+              <div class="col-6 row q-pa-xs justify-center">
+                <q-badge
+                  color="red-5"
+                  class="text-white text-bold multi-line"
+                >Chlorophyll a</q-badge>
+              </div>
+              <div class="col-6 row q-pa-xs justify-center">
+                <q-badge
+                  color="red-5"
+                  class="text-white text-bold multi-line"
+                >Organic Matter</q-badge>
+              </div>
+            </q-card-section>
+            <q-card-section horizontal>
+              <highcharts class="col-3" :options="chartOptions1"></highcharts>
+              <highcharts class="col-3" :options="chartOptions2"></highcharts>
+              <q-separator vertical /> 
+              <highcharts class="col-3" :options="chartOptions1"></highcharts>
+              <highcharts class="col-3" :options="chartOptions2"></highcharts>
+            </q-card-section>
+          </q-card>
+        </div>
+    </q-page-container>
+  </q-layout>
 </template>
 
 <script>
@@ -127,8 +236,29 @@ Vue.use(HighchartsVue);
 
 export default {
   components: { LMap, LMarker, LTileLayer },
-  data() {
+  data() { 
     return {
+      drawer: false,
+      model1: null,
+      model2: null,
+      model3: null,
+      regionOptions: [
+        "North Western",
+        "South Western",
+        "Southern",
+        "Eastern",
+        "Tolo Habour",
+        "North Eastern Sites",
+      ],
+      siteOptions: [
+        "North Western",
+        "South Western",
+        "Southern",
+        "Eastern",
+        "Tolo Habour",
+        "North Eastern Sites",
+      ],
+      dashboardOptions: ["Physical Dashboard", "Biological Dashboard"],
       slide: 1,
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
@@ -189,6 +319,17 @@ export default {
 </script>
 
 <style lang="sass">
+.q-select
+  padding: 15px
+
+.q-card
+  background-color: white
+
+.searchbox
+  border-width: 2px
+  border-color: black
+  // background-color: $indigo-5
+
 .page
   background-color: $grey-6
   padding: 4px
@@ -216,7 +357,7 @@ export default {
   color: white
 
 .l-map
-  border: 2px solid
-  border-color: black
+  border: 8px solid
+  border-color: $indigo-4
 
 </style>
