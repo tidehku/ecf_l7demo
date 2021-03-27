@@ -1,7 +1,11 @@
 <template>
   <div class="row q-pa-sm">
     <div class="col-4">
-      <q-card dark bordered class="q-pa-md bg-blue-grey-13 my-card">
+      <q-card
+        dark
+        bordered
+        class="q-pa-md bg-blue-grey-13 my-card"
+      >
         <div class="q-pa-md row justify-center">
           <q-img
             src="~/assets/SWIMSlogo2.png"
@@ -28,9 +32,18 @@
         </div>
 
         <div class="row justify-center">
-          <q-btn no-caps color="blue-10" size="15px" push style="width: 280px">
+          <q-btn
+            no-caps
+            color="blue-10"
+            size="15px"
+            push
+            style="width: 280px"
+          >
             <div class="row items-center no-wrap">
-              <q-icon center name="zoom_in" />
+              <q-icon
+                center
+                name="zoom_in"
+              />
               <div class="text-center no-caps">
                 Please Select Any Zone<br />for Localized Data
               </div>
@@ -41,7 +54,7 @@
       </q-card>
     </div>
 
-    <div class="col-7">
+    <div class="col-8">
       <l-map
         style="height: 100%"
         :zoom="zoom"
@@ -54,6 +67,10 @@
         ref="myMapRef"
       >
         <LTileLayer />
+        <l-geo-json
+          :geojson="historicalPoints"
+          :options="historicalOptions"
+        > </l-geo-json>
         <l-control-scale
           position="topright"
           :metric="true"
@@ -67,9 +84,8 @@
       </l-map>
     </div>
 
-    <div class="col-1">
-      <!-- <template v-slot:before> -->
-      <q-tabs
+    <!-- <template v-slot:before> -->
+    <!-- <q-tabs class="col-1">
         class="bg-blue-grey-13 text-white text-bold shadow-2"
         v-model="tab"
         align="left"
@@ -90,11 +106,11 @@
           label="Historical"
           to="/interactiveHabitat/historical"
         />
-      </q-tabs>
+      </q-tabs> -->
 
-      <!-- </template> -->
+    <!-- </template> -->
 
-      <!-- <template v-slot:after>
+    <!-- <template v-slot:after>
         <q-tab-panels
           v-model="tab"
           animated
@@ -112,7 +128,7 @@
           </q-tab-panel>
         </q-tab-panels>
       </template> -->
-    </div>
+
   </div>
 </template>
 
@@ -149,7 +165,7 @@ export default {
       mapOptions: {
         zoomSnap: 0.25,
       },
-      // points: require("../../MapData/historical_data.json"),
+      historicalPoints: require("../../MapData/historicalData.json"),
       minimapLayer: new L.TileLayer(
         "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       ),
