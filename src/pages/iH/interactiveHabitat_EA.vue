@@ -1,23 +1,18 @@
 <template>
-  <div class="row q-px-sm fullScreen">
+  <div class="row q-pa-sm fullScreen">
     <q-card
-      class="col-4 bg-blue-grey-5"
-      dark
+      class="col-4 maincard"
       bordered
+      dark
     >
-      <q-card-section class="bg-indigo-8">
-        <div class="q-mx-sm text-h4 text-weight-bold">HK Eastern Sites</div>
-      </q-card-section>
-      <q-card-section class="q-mx-sm row">
-        <p>{{ lorem }}</p>
-      </q-card-section>
+      <div class="q-pa-md bg-indigo-10 text-h4 text-bold text-white sitename">HK Eastern Sites</div>
+      <p class="q-pa-md row">{{ lorem }}</p>
 
-      <q-card-section>
+      <div class="q-px-md">
         <q-table
           class="infoTable"
           title="Regional Average Data Summary"
           :data="data"
-         
           separator="cell"
           dense
           bordered
@@ -27,11 +22,10 @@
         >
         </q-table>
 
-        <div class="q-pa-md row justify-end">
-
+        <div class="q-py-md row justify-end">
           <q-btn
             no-caps
-            color="indigo-8"
+            color="indigo-10"
             size="20px"
             v-go-back="'/interactiveHabitat'"
             push
@@ -43,7 +37,7 @@
             Go Back
           </q-btn>
         </div>
-      </q-card-section>
+      </div>
     </q-card>
 
     <div class="col-8">
@@ -147,7 +141,6 @@ export default {
             fillOpacity: 0.3,
           };
         },
-        
       },
       minimapLayer: new L.TileLayer(
         "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -167,12 +160,16 @@ export default {
 
 
 <style lang="sass">
-.infoTable
+.maincard
+  background-color: $blue-grey-5
+  // border-width: 2px
+  // border-color: $indigo-10
+  .infoTable
   /* specifying max-width so the example can
    highlight the sticky column on any browser window */
   .q-table__top
-    background-color: $indigo-8
-    color: #fff
+    background-color: $indigo-10
+    color: white
   .q-table__title
     font-weight: 500
   td:first-child

@@ -37,11 +37,9 @@
     <q-card
       flat
       bordered
-      class="q-ma-sm"
+      class="q-ma-sm maincard"
     >
-      <q-card-section
-        class="maincard"
-        horizontal
+      <q-card-section horizontal
       >
         <div class="q-ma-md q-gutter-lg">
           <div class="text-h4 text-bold text-indigo">Hong Kong Rocky Shore</div>
@@ -73,6 +71,7 @@
         <q-card
           class="col-3 sitecard"
           v-for="item in items"
+          :key="item.message"
         >
           <q-img
             src="~/assets/rockyshore.jpg"
@@ -125,6 +124,7 @@
         <q-card
           class="col-3 membercard"
           v-for="item in 10"
+          :key="item.message"
         >
           <q-img
             src="~assets/personicon.png"

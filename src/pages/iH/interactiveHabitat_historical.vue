@@ -1,61 +1,54 @@
 <template>
   <div class="row q-pa-sm">
-    <div class="col-4">
-      <q-card
-        dark
-        bordered
-        class="q-pa-md bg-blue-grey-13 my-card"
-      >
-        <div class="q-pa-md row justify-center">
-          <q-img
-            src="~/assets/SWIMSlogo2.png"
-            alt="SWIMs logo"
-            style="width: 120px; height: 100%; align: center"
-          />
-        </div>
-
-        <div class="bg-blue-10 text-h6 text-bold text-center text-white">
-          WElCOME PAGE
-        </div>
-        <div class="text-h6 text-bold text-center text-white">
-          Interactive Habitat Map<br />Around Hong Kong Rocky Shore<br />Historical
-          Data
-        </div>
-
-        <div class="q-ma-sm">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-            quis tempore praesentium illum? Molestiae ipsa repellendus ipsam!
-            Quaerat placeat eveniet, quo tempora dolorum, maxime eos odit,
-            voluptate aspernatur ipsa.
-          </p>
-        </div>
-
-        <div class="row justify-center">
-          <q-btn
-            no-caps
-            color="blue-10"
-            size="15px"
-            push
-            style="width: 280px"
-          >
-            <div class="row items-center no-wrap">
-              <q-icon
-                center
-                name="zoom_in"
-              />
-              <div class="text-center no-caps">
-                Please Select Any Zone<br />for Localized Data
-              </div>
-            </div>
-          </q-btn>
-        </div>
-        <br /><br /><br />
+    <q-card
+      bordered
+      dark
+      class="col-4 bg-blue-grey-13 maincard"
+    >
+      <div class="q-pa-md row justify-center">
+        <q-img
+          src="~/assets/SWIMSlogo2.png"
+          alt="SWIMs logo"
+          style="width: 120px; height: 100%; align: center"
+        />
+      </div>
+      <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
+        Interactive Habitat Map <br>around Hong Kong Rocky Shore <br />by Historical Records
       </q-card>
-    </div>
 
-    <div class="col-8">
-      <l-map
+      <q-card class="q-mx-lg row justify-center">
+        <p class="q-ma-sm q-pa-sm text-black">
+          {{ lorem }} </p>
+
+        <p class="text-red-10 text-bold">
+          ( Hint: Please Click Any Zone for Localized Data ) </p>
+      </q-card>
+      <div class="q-pa-md row justify-end">
+        <q-btn
+          no-caps
+          class="q-px-md"
+          color="indigo-10"
+          dense
+          v-go-back="'/interactiveHabitat'"
+          push
+        >
+          Switch to Current Map
+        </q-btn>
+      </div>
+    </q-card>
+
+    <div class="col-8 embed-container">
+        <iframe
+          width="100%"
+          height="100%"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          title="Historical Hong Kong Rocky Shore"
+          src="//mcmaster.maps.arcgis.com/apps/Embed/index.html?webmap=fd07e00fdd714745b60401832e2a085e&extent=113.7729,22.1911,114.5214,22.5289&zoom=true&previewImage=false&scale=true&legend=true&disable_scroll=true&theme=light">
+        </iframe>
+      </div>
+      <!-- <l-map
         style="height: 100%"
         :zoom="zoom"
         :center="center"
@@ -81,53 +74,8 @@
           :layer="minimapLayer"
           :options="options"
         ></vue-leaflet-minimap>
-      </l-map>
+      </l-map> -->
     </div>
-
-    <!-- <template v-slot:before> -->
-    <!-- <q-tabs class="col-1">
-        class="bg-blue-grey-13 text-white text-bold shadow-2"
-        v-model="tab"
-        align="left"
-        vertical
-        active-color="white"
-      >
-        <q-route-tab
-          text-center
-          no-caps
-          name="Current"
-          label="Current"
-          to="/interactiveHabitat"
-        />
-        <q-route-tab
-          text-center
-          no-caps
-          name="Historical"
-          label="Historical"
-          to="/interactiveHabitat/historical"
-        />
-      </q-tabs> -->
-
-    <!-- </template> -->
-
-    <!-- <template v-slot:after>
-        <q-tab-panels
-          v-model="tab"
-          animated
-          swipeable
-          vertical
-          transition-prev="jump-up"
-          transition-next="jump-up"
-        >
-          <q-tab-panel name="mails">
-            <div class="text-h4 q-mb-md">Mails</div>
-          </q-tab-panel>
-
-          <q-tab-panel name="alarms">
-            <div class="text-h4 q-mb-md">Alarms</div>
-          </q-tab-panel>
-        </q-tab-panels>
-      </template> -->
 
   </div>
 </template>
@@ -150,6 +98,8 @@ export default {
     return {
       tab: "mails",
       // splitterModel: 20,
+      lorem:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       zoom: 10.25,
       maxZoom: 15,
       minZoom: 10.25,
@@ -165,7 +115,7 @@ export default {
       mapOptions: {
         zoomSnap: 0.25,
       },
-      historicalPoints: require("../../MapData/historicalData.json"),
+      historicalPoints: require("../../MapData/historical1.json"),
       minimapLayer: new L.TileLayer(
         "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       ),

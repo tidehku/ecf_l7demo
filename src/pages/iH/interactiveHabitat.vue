@@ -1,53 +1,41 @@
 <template>
   <div class="row q-pa-sm">
-    <div class="col-4">
-      <q-card
-        dark
-        bordered
-        class="q-pa-md bg-blue-grey-13 my-card"
-      >
-        <div class="q-pa-md row justify-center">
-          <q-img
-            src="~/assets/SWIMSlogo2.png"
-            alt="SWIMs logo"
-            style="width: 120px; height: 100%; align: center"
-          />
-        </div>
-
-        <div class="bg-indigo text-h6 text-bold text-center text-white">
-          WElCOME PAGE
-        </div>
-        <div class="text-h6 text-bold text-center text-white">
-          Interactive Habitat Map<br />Around Hong Kong Rocky Shore<br />by ECF
-          2019-2023
-        </div>
-
-        <div class="q-ma-sm">
-          <p> {{ lorem }} </p>
-        </div>
-
-        <div class="row justify-center">
-          <q-btn
-            no-caps
-            color="blue-10"
-            size="15px"
-            push
-            style="width: 280px"
-          >
-            <div class="row items-center no-wrap">
-              <q-icon
-                center
-                name="zoom_in"
-              />
-              <div class="text-center no-caps">
-                Please Select Any Zone<br />for Localized Data
-              </div>
-            </div>
-          </q-btn>
-        </div>
-        <br /><br /><br />
+    <q-card
+      bordered
+      dark
+      class="col-4 bg-blue-grey-13 maincard"
+    >
+      <div class="q-pa-md row justify-center">
+        <q-img
+          src="~/assets/SWIMSlogo2.png"
+          alt="SWIMs logo"
+          style="width: 120px; height: 100%; align: center"
+        />
+      </div>
+      <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
+        Interactive Habitat Map <br>around Hong Kong Rocky Shore <br />by ECF 2019-2023
       </q-card>
-    </div>
+
+      <q-card class="q-mx-lg row justify-center">
+        <p class="q-ma-sm q-pa-sm text-black">
+          {{ lorem }} </p>
+
+        <p class="text-red-10 text-bold">
+          ( Hint: Please Click Any Zone for Localized Data ) </p>
+      </q-card>
+      <div class="q-pa-md row justify-end">
+        <q-btn
+          no-caps
+          class="q-px-md"
+          color="indigo-10"
+          dense
+          v-go-back="'/interactiveHabitat/historical'"
+          push
+        >
+          Switch to Historical Map
+        </q-btn>
+      </div>
+    </q-card>
 
     <div class="col-8">
       <l-map
@@ -163,3 +151,6 @@ export default {
 };
 </script>
 
+<style lang="sass" scoped>
+
+</style>

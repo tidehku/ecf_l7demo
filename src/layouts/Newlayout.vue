@@ -46,6 +46,13 @@
       content-class="bg-grey-3"
     >
       <q-list padding>
+        <q-item clickable v-ripple to="/">
+          <q-item-section avatar>
+            <q-icon name="home" />
+          </q-item-section>
+
+          <q-item-section> Home Page </q-item-section>
+        </q-item>
         <q-item clickable v-ripple to="/interactiveHabitat/historical">
           <q-item-section avatar>
             <q-icon name="book" />
