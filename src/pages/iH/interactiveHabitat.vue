@@ -1,7 +1,11 @@
 <template>
   <div class="row q-pa-sm">
     <div class="col-4">
-      <q-card dark bordered class="q-pa-md bg-blue-grey-13 my-card">
+      <q-card
+        dark
+        bordered
+        class="q-pa-md bg-blue-grey-13 my-card"
+      >
         <div class="q-pa-md row justify-center">
           <q-img
             src="~/assets/SWIMSlogo2.png"
@@ -10,7 +14,7 @@
           />
         </div>
 
-        <div class="bg-blue-10 text-h6 text-bold text-center text-white">
+        <div class="bg-indigo text-h6 text-bold text-center text-white">
           WElCOME PAGE
         </div>
         <div class="text-h6 text-bold text-center text-white">
@@ -19,18 +23,22 @@
         </div>
 
         <div class="q-ma-sm">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-            quis tempore praesentium illum? Molestiae ipsa repellendus ipsam!
-            Quaerat placeat eveniet, quo tempora dolorum, maxime eos odit,
-            voluptate aspernatur ipsa.
-          </p>
+          <p> {{ lorem }} </p>
         </div>
 
         <div class="row justify-center">
-          <q-btn no-caps color="blue-10" size="15px" push style="width: 280px">
+          <q-btn
+            no-caps
+            color="blue-10"
+            size="15px"
+            push
+            style="width: 280px"
+          >
             <div class="row items-center no-wrap">
-              <q-icon center name="zoom_in" />
+              <q-icon
+                center
+                name="zoom_in"
+              />
               <div class="text-center no-caps">
                 Please Select Any Zone<br />for Localized Data
               </div>
@@ -54,7 +62,10 @@
         ref="myMapRef"
       >
         <LTileLayer />
-        <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
+        <l-geo-json
+          :geojson="regions"
+          :options="geoJSONOptions"
+        > </l-geo-json>
 
         <l-control-scale
           position="bottomleft"
@@ -87,6 +98,8 @@ export default {
   },
   data() {
     return {
+      lorem:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       tab: "mails",
       // splitterModel: 20,
       zoom: 10.25,
