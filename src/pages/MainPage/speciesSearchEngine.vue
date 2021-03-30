@@ -4,18 +4,15 @@
       <q-card
         dark
         bordered
-        class="q-pa-md bg-blue-grey-13 my-card"
+        class="bg-blue-grey-13 my-card"
         height=900px
       >
-        <br>
-        <div class="bg-blue-10 text-h5 text-bold text-center text-white">
+        <div class="q-pa-lg bg-indigo-10 text-h5 text-bold text-center text-white">
           Species Search Engine
         </div>
-        <q-card-section>
+        <q-card-section class="q-ma-md">
           <div class="text-h6 text-bold text-left text-white">
             Family:
-            <!-- Genus:
-            Species: -->
           </div>
           <q-input
             dark
@@ -51,12 +48,12 @@
           >
           </q-input>
         </q-card-section>
-         <br><br>
+        <br><br>
 
         <div class="row justify-center">
           <q-btn
             no-caps
-            color="blue-10"
+            color="indigo-10"
             size="15px"
             push
             style="width: 150px"

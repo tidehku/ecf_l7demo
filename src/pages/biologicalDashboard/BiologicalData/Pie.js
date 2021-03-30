@@ -2,7 +2,6 @@ export const pieData = {
   SBPie1: {
     chart: {
       type: "pie",
-      
       height: (1 / 1) * 100 + "%" // 3:4 ratio
     },
     credits: {
@@ -32,25 +31,52 @@ export const pieData = {
     legend: {
       enabled: true
     },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: "pointer",
+        dataLabels: {
+          enabled: false
+        },
+        showInLegend: false
+      }
+    },
     series: [
       {
         name: "Species Abundance",
         colorByPoint: true,
-        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        colors: [
+          "#058DC7",
+          "#50B432",
+          "#ED561B",
+          "#DDDF00",
+          "#24CBE5",
+          "#64E572",
+          "#FF9655",
+          "#FFF263",
+          "#6AF9C4"
+        ],
         showInLegend: false,
         data: [
-          ["High-High", 0.688542623],
-          ["Low-High", 0.123213394],
-          ["High-Mid", 0.883628328],
-          ["Low-Mid", 1.93031178],
-          ["High-Low", 1.258707662]
+          ["Echinolittorin - malaccana", 54],
+          ["Echinolittorin - radiata", 313],
+          ["Echinolittorina - vidua", 6],
+          ["Lunella - granulata", 24],
+          ["Monodonta - labio", 37],
+          ["Patelloida - ryukyuensis", 7],
+          ["Planaxis - sulcatus", 105],
+          ["Reishia - clavigera", 5],
+          ["Reishia - luteostoma", 1],
+          ["Siphonaria - japonica", 9],
+          ["Tenguella - musiva", 2],
+          ["Liolophura - japonica", 116]
         ]
       }
     ]
   },
-  SBBar2: {
+  SBPie3: {
     chart: {
-      type: "column",
+      type: "pie",
       height: (1 / 1) * 100 + "%" // 3:4 ratio
     },
     credits: {
@@ -74,72 +100,53 @@ export const pieData = {
     yAxis: {
       min: 0,
       title: {
-        text: "Pielou's evenness J"
+        text: "Shannon's Diversity index H"
       }
     },
     legend: {
       enabled: true
     },
-    series: [
-      {
-        name: "Species Abundance",
-        colorByPoint: true,
-        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
-        showInLegend: false,
-        data: [
-          ["High-High", 0.993357028],
-          ["Low-High", 0.177759353],
-          ["High-Mid", 0.549029149],
-          ["Low-Mid", 0.928283744],
-          ["High-Low", 0.572862544]
-        ]
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: "pointer",
+        dataLabels: {
+          enabled: false
+        },
+        showInLegend: false
       }
-    ]
-  },
-  SBBar3: {
-    chart: {
-      type: "column",
-      height: (1 / 1) * 100 + "%" // 3:4 ratio
-    },
-    credits: {
-      enabled: false
-    },
-    title: {
-      text: ""
-    },
-    subtitle: {
-      text: ""
-    },
-    xAxis: {
-      type: "category",
-      title: {
-        text: "Transect Height"
-      }
-      //   labels: {
-      //     rotation: 0
-      //   }
-    },
-    yAxis: {
-      min: 0,
-      title: {
-        text: "Species richness S"
-      }
-    },
-    legend: {
-      enabled: true
     },
     series: [
       {
         name: "Species Abundance",
         colorByPoint: true,
-        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        colors: [
+          "#058DC7",
+          "#50B432",
+          "#ED561B",
+          "#DDDF00",
+          "#24CBE5",
+          "#64E572",
+          "#FF9655",
+          "#FFF263",
+          "#6AF9C4"
+        ],
         showInLegend: false,
         data: [
-          ["High-High", 2],
-          ["Low-High", 2],
-          ["High-Mid", 5],
-          ["Low-Mid", 8],
-          ["High-Low", 9]
+          ["High shore biofilm", 4],
+          ["Hildenbrandia - rubra", 8],
+          ["Pseudulvella - applanata", 9],
+          ["Ulva - lactuca", 3],
+          ["Gelidium - pusillum", 4],
+          ["Amphibalanus - amphitrite", 4],
+          ["Capitulum - mitella", 5],
+          ["Tetraclita - squamosa", 1],
+          ["Diadumene - lineata", 1],
+          ["Barbatia - virescens", 5],
+          ["Brachidontes - variabilis", 1],
+          ["Isognomon - ephippium", 1],
+          ["Saccostrea - cuccullata", 1],
+          ["Xenostrobus - securis", 4]
         ]
       }
     ]

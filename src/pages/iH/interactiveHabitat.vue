@@ -4,6 +4,7 @@
       bordered
       dark
       class="col-4 bg-blue-grey-4 maincard"
+      height=900px
     >
       <div class="q-pa-md row justify-center">
         <q-img

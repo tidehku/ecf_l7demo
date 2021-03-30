@@ -4,6 +4,14 @@
       <div class="text-h5 text-bold row justify-center title">
         List of Species Names
       </div>
+      <div class="row justify-around">
+        <div class="text-h6 text-indigo-5 text-bold">Mobile species
+        </div>
+        <div class="text-h6 text-indigo-5 text-bold">Sessile species
+        </div>
+
+      </div>
+
       <div class="q-pa-sm q-gutter-sm justify-center row">
         <q-list
           dense
@@ -16,10 +24,10 @@
           <q-item
             clickable
             v-ripple
-            v-for="item in 15"
-            :key="item.message"
+            v-for="mobile in mobiles"
+            :key="mobile.message"
           >
-            <q-item-section> Species name #{{ item }}</q-item-section>
+            <q-item-section> {{ mobile }}</q-item-section>
           </q-item>
         </q-list>
 
@@ -29,15 +37,15 @@
           separator
           padding
           class="bg-red-1 rounded-borders"
-          style="width: 180px"
+          style="width: 190px"
         >
           <q-item
             clickable
             v-ripple
-            v-for="item in 15"
-            :key="item.number"
+            v-for="sessile in sessiles"
+            :key="sessile.message"
           >
-            <q-item-section> Species name #{{ item }}</q-item-section>
+            <q-item-section>{{ sessile }}</q-item-section>
           </q-item>
 
         </q-list>
@@ -45,7 +53,7 @@
     </q-card>
 
     <q-card class="col-8 chartCard">
-      <div class="text-h5 text-bold row justify-center title">Abundance: Pie Chart and Bar Chart</div>
+      <div class="text-h5 text-bold row justify-center title">Species Abundance and Diversity Indices</div>
       <q-separator />
 
       <q-card-section horizontal>
@@ -136,13 +144,43 @@ export default {
   components: {},
   data() {
     return {
+      mobiles: [
+        "Echinolittorin - malaccana",
+        "Echinolittorin - radiata",
+        "Echinolittorina - vidua",
+        "Lunella - granulata",
+        "Monodonta - labio",
+        "Patelloida - ryukyuensis",
+        "Planaxis - sulcatus",
+        "Reishia - clavigera",
+        "Reishia - luteostoma",
+        "Siphonaria - japonica",
+        "Tenguella - musiva",
+        "Liolophura - japonica",
+      ],
+      sessiles: [
+        "High shore biofilm",
+        "Hildenbrandia - rubra",
+        "Pseudulvella - applanata",
+        "Ulva - lactuca",
+        "Gelidium - pusillum",
+        "Amphibalanus - amphitrite",
+        "Capitulum - mitella",
+        "Tetraclita - squamosa",
+        "Diadumene - lineata",
+        "Barbatia - virescens",
+        "Brachidontes - variabilis",
+        "Isognomon - ephippium",
+        "Saccostrea - cuccullata",
+        "Xenostrobus - securis",
+      ],
       barChart1: barData.SBBar1,
       barChart2: barData.SBBar2,
       barChart3: barData.SBBar3,
 
       pieChart1: pieData.SBPie1,
       // pieChart2: pieData.SBPie1,
-      // pieChart3: pieData.SBPie1,
+      pieChart3: pieData.SBPie3,
       // pieChart4: pieData.SBPie1,
     };
   },

@@ -1,8 +1,12 @@
 <template>
-  <div class="row q-pa-sm fullScreen">
-    <q-card class="col-4 maincard" bordered dark>
+  <div class="row q-pa-sm">
+    <q-card
+      class="col-4 maincard"
+      bordered
+      dark
+    >
       <div class="q-pa-md bg-indigo-10 text-h4 text-bold text-white sitename">
-        North Eastern Sites
+        North Eastern Region
       </div>
       <p class="q-pa-md row">{{ lorem }}</p>
 
@@ -28,7 +32,10 @@
             v-go-back="'/interactiveHabitat'"
             push
           >
-            <q-icon center name="keyboard_arrow_left" />
+            <q-icon
+              center
+              name="keyboard_arrow_left"
+            />
             Go Back
           </q-btn>
         </div>
@@ -45,22 +52,43 @@
         :min-zoom="zoom"
       >
         <LTileLayer />
-        <l-geo-json :geojson="region" :options="geoJSONOptions"></l-geo-json>
+        <l-geo-json
+          :geojson="region"
+          :options="regionOptions"
+        ></l-geo-json>
 
-        <l-geo-json :geojson="SitesLocation"> </l-geo-json>
+        <l-geo-json
+          :geojson="sitesLocation"
+          :options="siteOptions"
+        >
+        </l-geo-json>
+
+        <l-control-scale
+          position="bottomleft"
+          :metric="true"
+          :imperial="true"
+        ></l-control-scale>
+        <vue-leaflet-minimap
+          :layer="minimapLayer"
+          :options="miniMapOptions"
+        ></vue-leaflet-minimap>
       </l-map>
     </div>
   </div>
 </template>
 
 <script>
-import { LMap, LGeoJson } from "vue2-leaflet";
+import VueLeafletMinimap from "vue-leaflet-minimap";
+import "leaflet-minimap/dist/Control.MiniMap.min.css";
+import { LMap, LGeoJson, LControlScale } from "vue2-leaflet";
 
 export default {
-  name: "NE",
+  name: "NW",
   components: {
     LMap,
     LGeoJson,
+    LControlScale,
+    VueLeafletMinimap,
     LTileLayer: () => import("components/tileLayer"),
   },
   data() {
@@ -94,9 +122,21 @@ export default {
       mapOptions: {
         zoomSnap: 0.2,
       },
-      SitesLocation: require("../../MapData/NE_Sites.json"),
+      sitesLocation: require("../../MapData/NE_Sites.json"),
+      siteOptions: {
+        style: function style(feature) {
+          return {
+            color: red,
+          };
+        },
+        onEachFeature: (feature, layer) => {
+          layer.on("click", (e) => {
+            this.$router.push(`/physicalDashboard`);
+          });
+        },
+      },
       region: require("../../../NE.json"),
-      geoJSONOptions: {
+      regionOptions: {
         style: function style(feature) {
           return {
             opacity: 0.6,
@@ -104,6 +144,17 @@ export default {
             fillOpacity: 0.3,
           };
         },
+      },
+      minimapLayer: new L.TileLayer(
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
+      ),
+      miniMapOptions: {
+        position: "bottomright",
+        zoomAnimation: true,
+        width: 100,
+        height: 100,
+        toggleDisplay: true,
+        minimize: true,
       },
     };
   },
@@ -113,9 +164,6 @@ export default {
 <style lang="sass">
 .maincard
   background-color: $blue-grey-5
-  // border-width: 2px
-  // border-color: $indigo-10
-  // .infoTable
   .q-table__top
     background-color: $indigo-10
     color: white

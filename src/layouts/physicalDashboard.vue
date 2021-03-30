@@ -37,7 +37,7 @@
       v-model="drawer"
       side="right"
       overlay
-      :width="300"
+      :width="320"
       :breakpoint="500"
       elevated
       content-class="bg-grey-3"
@@ -79,55 +79,54 @@
           <q-item-section> ECF Sampling Data </q-item-section>
         </q-item>
 
-        <q-separator /><br />
-        <q-card
-          bordered
-          flat
-          class="q-ma-sm searchbox"
-        >
-          <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">
-            Quick Search Link
-          </div>
-
-          <q-select
-            filled
-            dense
-            v-model="region"
-            :options="regionOptions"
-            label="Choose Region"
-            @input="setSites"
-          />
-
-          <q-select
-            filled
-            dense
-            v-model="subSite"
-            :options="sites"
-            label="Choose Site"
-          />
-
-          <q-select
-            filled
-            dense
-            v-model="dashboard"
-            :options="dashboardOptions"
-            label="Choose Dashboard"
-          />
-          <div class="row justify-center">
-            <q-btn
-              no-caps
-              dense
-              color="black"
-              class="text-h6 q-ma-md q-px-md"
-              glossy
-              label="Search"
-              @click="changeSite()"
-            />
-          </div>
-        </q-card>
-
-        <!-- <q-item  v-for="region in regions">{{ region }}</q-item> -->
+        <q-separator />
       </q-list>
+      <q-card
+        bordered
+        flat
+        class="q-ma-md searchbox"
+        style="width: 90%"
+      >
+        <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">
+          Quick Search Link
+        </div>
+
+        <q-select
+          filled
+          dense
+          v-model="region"
+          :options="regionOptions"
+          label="Choose Region"
+          @input="setSites"
+        />
+
+        <q-select
+          filled
+          dense
+          v-model="subSite"
+          :options="sites"
+          label="Choose Site"
+        />
+
+        <q-select
+          filled
+          dense
+          v-model="dashboard"
+          :options="dashboardOptions"
+          label="Choose Dashboard"
+        />
+        <div class="row justify-center">
+          <q-btn
+            no-caps
+            dense
+            color="black"
+            class="text-h6 q-ma-md q-px-md"
+            glossy
+            label="Search"
+            @click="changeSite()"
+          />
+        </div>
+      </q-card>
     </q-drawer>
 
     <q-page-container>

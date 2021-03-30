@@ -64,9 +64,9 @@
         <q-tabs
           v-model="tab"
           dense
-          class="text-white bg-grey-5"
-          active-color="indigo-10"
-          indicator-color="indigo-10"
+          class="text-white bg-grey-10"
+          active-color="indigo-4"
+          indicator-color="indigo-4"
           align="justify"
           narrow-indicator
         >
@@ -116,13 +116,14 @@
                   </div>
                 </q-img>
                 <q-card-section>
-                  {{ lorem }} 
+                  {{ lorem }}
                 </q-card-section>
                 <div class="q-pa-md row justify-end">
                   <q-btn
                     no-caps
                     color="indigo-5"
                     label="Learn more"
+                    to="/physicalDashboard"
                   />
                 </div>
               </q-card>

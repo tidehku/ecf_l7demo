@@ -1,8 +1,12 @@
 <template>
-  <div class="row q-pa-sm fullScreen">
-    <q-card class="col-4 maincard" bordered dark>
+  <div class="row q-pa-sm">
+    <q-card
+      class="col-4 maincard"
+      bordered
+      dark
+    >
       <div class="q-pa-md bg-indigo-10 text-h4 text-bold text-white sitename">
-        HK Eastern Sites
+        Eastern Region
       </div>
       <p class="q-pa-md row">{{ lorem }}</p>
 
@@ -28,7 +32,10 @@
             v-go-back="'/interactiveHabitat'"
             push
           >
-            <q-icon center name="keyboard_arrow_left" />
+            <q-icon
+              center
+              name="keyboard_arrow_left"
+            />
             Go Back
           </q-btn>
         </div>
@@ -45,9 +52,15 @@
         :min-zoom="zoom"
       >
         <LTileLayer />
-        <l-geo-json :geojson="region" :options="regionOptions"></l-geo-json>
+        <l-geo-json
+          :geojson="region"
+          :options="regionOptions"
+        ></l-geo-json>
 
-        <l-geo-json :geojson="sitesLocation" :options="siteOptions">
+        <l-geo-json
+          :geojson="sitesLocation"
+          :options="siteOptions"
+        >
         </l-geo-json>
 
         <l-control-scale
@@ -133,7 +146,7 @@ export default {
         },
       },
       minimapLayer: new L.TileLayer(
-        "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
       ),
       miniMapOptions: {
         position: "bottomright",
@@ -147,7 +160,6 @@ export default {
   },
 };
 </script>
-
 
 <style lang="sass">
 .maincard
