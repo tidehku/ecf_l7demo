@@ -53,48 +53,71 @@
           <q-badge
             color="red-5"
             class="text-white text-bold multi-line"
-          >Fauna Species</q-badge>
+          >Mobile Species</q-badge>
         </div>
         <div class="col-6 row q-pa-xs justify-center">
           <q-badge
             color="red-5"
             class="text-white text-bold multi-line"
-          >Flora Species</q-badge>
+          >Sessile Species</q-badge>
         </div>
       </q-card-section>
 
       <q-card-section horizontal>
         <highcharts
           class="col-3"
-          :options="pieChart"
+          :options="pieChart1"
         ></highcharts>
         <highcharts
           class="col-3"
-          :options="pieChart"
+          :options="pieChart2"
         ></highcharts>
         <q-separator vertical />
         <highcharts
           class="col-3"
-          :options="pieChart"
+          :options="pieChart3"
         ></highcharts>
         <highcharts
           class="col-3"
-          :options="pieChart"
+          :options="pieChart4"
         ></highcharts>
       </q-card-section>
+
+      <div class="row justify-around">
+        <q-badge
+          color="red-5"
+          class="text-white text-bold multi-line"
+        >Shannon's Diversity index H'</q-badge>
+
+        <q-badge
+          color="red-5"
+          class="text-white text-bold multi-line"
+        >Pielou's evenness J</q-badge>
+
+        <q-badge
+          color="red-5"
+          class="text-white text-bold multi-line"
+        >Species richness S</q-badge>
+      </div>
 
       <q-card-section
         horizontal
         class="row"
       >
+
         <highcharts
-          class="col-6"
-          :options="barChart"
+          class="col-4"
+          :options="barChart1"
         ></highcharts>
         <q-separator vertical />
         <highcharts
-          class="col-6"
-          :options="barChart"
+          class="col-4"
+          :options="barChart2"
+        ></highcharts>
+        <q-separator vertical />
+        <highcharts
+          class="col-4"
+          :options="barChart3"
         ></highcharts>
 
       </q-card-section>
@@ -106,15 +129,21 @@
 import Vue from "vue";
 import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
-import { PieChart } from "src/pages/PieChart";
-import { BarChart } from "src/pages/BarChart";
+import { pieData } from "./biologicalData/pie";
+import { barData } from "./biologicalData/bar";
 
 export default {
   components: {},
   data() {
     return {
-      pieChart: PieChart,
-      barChart: BarChart,
+      barChart1: barData.SBBar1,
+      barChart2: barData.SBBar2,
+      barChart3: barData.SBBar3,
+
+      pieChart1: pieData.SBPie1,
+      // pieChart2: pieData.SBPie1,
+      // pieChart3: pieData.SBPie1,
+      // pieChart4: pieData.SBPie1,
     };
   },
 };

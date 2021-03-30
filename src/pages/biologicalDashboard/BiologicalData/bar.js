@@ -1,8 +1,7 @@
-export const pieData = {
-  SBPie1: {
+export const barData = {
+  SBBar1: {
     chart: {
-      type: "pie",
-      
+      type: "column",
       height: (1 / 1) * 100 + "%" // 3:4 ratio
     },
     credits: {
