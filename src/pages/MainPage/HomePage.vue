@@ -39,8 +39,7 @@
       bordered
       class="q-ma-sm maincard"
     >
-      <q-card-section horizontal
-      >
+      <q-card-section horizontal>
         <div class="q-ma-md q-gutter-lg">
           <div class="text-h4 text-bold text-indigo">Hong Kong Rocky Shore</div>
           <p>{{ lorem }} {{ lorem }} {{ lorem }}</p>
@@ -60,7 +59,225 @@
       <div class="q-pa-md row text-h4 text-bold justify-center subtitle">
         ECF Rocky Shore Sampling Sites
       </div>
-      <q-option-group
+
+      <q-card>
+        <q-tabs
+          v-model="tab"
+          dense
+          class="text-white bg-grey-5"
+          active-color="indigo-10"
+          indicator-color="indigo-10"
+          align="justify"
+          narrow-indicator
+        >
+          <q-tab
+            name="Eastern"
+            label="Eastern"
+          />
+          <q-tab
+            name="North Eastern"
+            label="North Eastern"
+          />
+          <q-tab
+            name="North Western"
+            label="North Western"
+          />
+          <q-tab
+            name="Southern"
+            label="Southern"
+          />
+          <q-tab
+            name="South Western"
+            label="South Western"
+          />
+          <q-tab
+            name="Tolo Habour"
+            label="Tolo Habour"
+          />
+        </q-tabs>
+        <q-separator />
+        <q-tab-panels
+          v-model="tab"
+          animated
+        >
+          <q-tab-panel name="Eastern">
+            <div class="row justify-center q-gutter-md">
+              <q-card
+                class="col-3 sitecard"
+                v-for="EA in EAs"
+                :key="EA.message"
+              >
+                <q-img
+                  src="~/assets/rockyshore.jpg"
+                  basic
+                >
+                  <div class="absolute-bottom text-bold text-h7">
+                    Eastern - {{ EA }}
+                  </div>
+                </q-img>
+                <q-card-section>
+                  {{ lorem }} 
+                </q-card-section>
+                <div class="q-pa-md row justify-end">
+                  <q-btn
+                    no-caps
+                    color="indigo-5"
+                    label="Learn more"
+                  />
+                </div>
+              </q-card>
+            </div>
+          </q-tab-panel>
+
+          <q-tab-panel name="North Eastern">
+            <div class="row justify-center q-gutter-md">
+              <q-card
+                class="col-3 sitecard"
+                v-for="NE in NEs"
+                :key="NE.message"
+              >
+                <q-img
+                  src="~/assets/rockyshore.jpg"
+                  basic
+                >
+                  <div class="absolute-bottom text-bold text-h7">
+                    North Eastern - {{ NE }}
+                  </div>
+                </q-img>
+                <q-card-section>
+                  {{ lorem }}
+                </q-card-section>
+                <div class="q-pa-md row justify-end">
+                  <q-btn
+                    no-caps
+                    color="indigo-5"
+                    label="Learn more"
+                  />
+                </div>
+              </q-card>
+            </div>
+          </q-tab-panel>
+
+          <q-tab-panel name="North Western">
+            <div class="row justify-center q-gutter-md">
+              <q-card
+                class="col-3 sitecard"
+                v-for="NW in NWs"
+                :key="NW.message"
+              >
+                <q-img
+                  src="~/assets/rockyshore.jpg"
+                  basic
+                >
+                  <div class="absolute-bottom text-bold text-h7">
+                    North Western - {{ NW }}
+                  </div>
+                </q-img>
+                <q-card-section>
+                  {{ lorem }}
+                </q-card-section>
+                <div class="q-pa-md row justify-end">
+                  <q-btn
+                    no-caps
+                    color="indigo-5"
+                    label="Learn more"
+                  />
+                </div>
+              </q-card>
+            </div>
+          </q-tab-panel>
+
+          <q-tab-panel name="Southern">
+            <div class="row justify-center q-gutter-md">
+              <q-card
+                class="col-3 sitecard"
+                v-for="SO in SOs"
+                :key="SO.message"
+              >
+                <q-img
+                  src="~/assets/rockyshore.jpg"
+                  basic
+                >
+                  <div class="absolute-bottom text-bold text-h7">
+                    Southern - {{ SO }}
+                  </div>
+                </q-img>
+                <q-card-section>
+                  {{ lorem }}
+                </q-card-section>
+                <div class="q-pa-md row justify-end">
+                  <q-btn
+                    no-caps
+                    color="indigo-5"
+                    label="Learn more"
+                  />
+                </div>
+              </q-card>
+            </div>
+          </q-tab-panel>
+
+          <q-tab-panel name="South Western">
+            <div class="row justify-center q-gutter-md">
+              <q-card
+                class="col-3 sitecard"
+                v-for="SW in SWs"
+                :key="SW.message"
+              >
+                <q-img
+                  src="~/assets/rockyshore.jpg"
+                  basic
+                >
+                  <div class="absolute-bottom text-bold text-h7">
+                    South Western - {{ SW }}
+                  </div>
+                </q-img>
+                <q-card-section>
+                  {{ lorem }}
+                </q-card-section>
+                <div class="q-pa-md row justify-end">
+                  <q-btn
+                    no-caps
+                    color="indigo-5"
+                    label="Learn more"
+                  />
+                </div>
+              </q-card>
+            </div>
+          </q-tab-panel>
+
+          <q-tab-panel name="Tolo Habour">
+            <div class="row justify-center q-gutter-md">
+              <q-card
+                class="col-3 sitecard"
+                v-for="TL in TLs"
+                :key="TL.message"
+              >
+                <q-img
+                  src="~/assets/rockyshore.jpg"
+                  basic
+                >
+                  <div class="absolute-bottom text-bold text-h7">
+                    Tolo Habour - {{ TL }}
+                  </div>
+                </q-img>
+                <q-card-section>
+                  {{ lorem }}
+                </q-card-section>
+                <div class="q-pa-md row justify-end">
+                  <q-btn
+                    no-caps
+                    color="indigo-5"
+                    label="Learn more"
+                  />
+                </div>
+              </q-card>
+            </div>
+          </q-tab-panel>
+
+        </q-tab-panels>
+      </q-card>
+
+      <!-- <q-option-group
         class="row justify-evenly"
         v-model="group"
         :options="options"
@@ -94,7 +311,7 @@
             />
           </div>
         </q-card>
-      </div>
+      </div> -->
     </q-card>
 
     <q-card
@@ -139,19 +356,19 @@
           </div>
           <div class="row justify-end">
             <q-btn
-            color="grey"
-            flat
-            dense
-            :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-            @click="expanded = !expanded"
-          />
-         
-        <div v-show="expanded">
-          <q-card-section class="text-caption">
-            {{ lorem }}
-          </q-card-section>
-        </div>
-      
+              color="grey"
+              flat
+              dense
+              :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+              @click="expanded = !expanded"
+            />
+
+            <div v-show="expanded">
+              <q-card-section class="text-caption">
+                {{ lorem }}
+              </q-card-section>
+            </div>
+
           </div>
         </q-card>
       </div>
@@ -169,7 +386,7 @@ export default {
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       TidesMessage:
-      "Welcome to the Tropical IntertiDal Ecology (TIDE) Group at the Swire Institute of Marine Science (SWIMS), HKU! Our primary research interests are in unravelling the mechanisms underlying the behaviours and ecophysiology of intertidal organisms, but we are really interested in almost anything you find on rocky (and occasionally sandy, and extremely occasionally mangrove!) intertidal systems.  By a combination of field and laboratory methods we aim to quantify and understand species responses from individual to biogeographic scales in today’s rapidly changing environment. Using a variety of empirical and modelling approaches, we synthesize novel ideas, examine critical hypotheses, and establish mechanistic links between patterns and processes to advance our knowledge on tropical intertidal ecology.  We also get to travel to great places, work with some really cool people and eat a lot of excellent regional food!",
+        "Welcome to the Tropical IntertiDal Ecology (TIDE) Group at the Swire Institute of Marine Science (SWIMS), HKU! Our primary research interests are in unravelling the mechanisms underlying the behaviours and ecophysiology of intertidal organisms, but we are really interested in almost anything you find on rocky (and occasionally sandy, and extremely occasionally mangrove!) intertidal systems.  By a combination of field and laboratory methods we aim to quantify and understand species responses from individual to biogeographic scales in today’s rapidly changing environment. Using a variety of empirical and modelling approaches, we synthesize novel ideas, examine critical hypotheses, and establish mechanistic links between patterns and processes to advance our knowledge on tropical intertidal ecology.  We also get to travel to great places, work with some really cool people and eat a lot of excellent regional food!",
       Identity: "Student",
       tab: "interactiveHabitat",
       slide: 1,
@@ -201,34 +418,40 @@ export default {
           value: "op6",
         },
       ],
-      items: ["Pak Lap", "Kau Sai Chau", "Pak Shui Wun", "Sai Wan"],
+      tab: "Eastern",
+      EAs: ["Pak Lap", "Kau Sai Chau", "Pak Shui Wun", "Sai Wan"],
+      NEs: ["Double Island", "Hung Shek Mun", "Kat O", "Yung Shue Au"],
+      NWs: ["Luk Keng", "Lung Kwu Tan", "Siu Lam", "Tai O"],
+      SOs: ["Middle Bay", "Tai Tam", "Wah Fu", "Shek O"],
+      SWs: ["Peng Chau", "Pui O", "Shui Tseng", "Tai Long Wan"],
+      TLs: ["Lai Chi Chong", "Ma Shi Chau", "Starfish Bay", "Tseng Tau"],
       expanded: false,
-      // regions: [
-      //   {
-      //     label: "Eastern",
-      //     sites: ["Pak Lap", "Kau Sai Chau", "Pak Shui Wun", "Sai Wan"],
-      //   },
-      //   {
-      //     label: "North Eastern",
-      //     sites: ["Double Island", "Hung Shek Mun", "Kat O", "Yung Shue Au"],
-      //   },
-      //   {
-      //     label: "North Western",
-      //     sites: ["Luk Keng", "Lung Kwu Tan", "Siu Lam", "Tai O"],
-      //   },
-      //   {
-      //     label: "Southern",
-      //     sites: ["Middle Bay", "Tai Tam", "Wah Fu", "Shek O"],
-      //   },
-      //   {
-      //     label: "South Western",
-      //     sites: ["Peng Chau", "Pui O", "Shui Tseng", "Tai Long Wan"],
-      //   },
-      //   {
-      //     label: "Tolo Habour",
-      //     sites: ["Lai Chi Chong", "Ma Shi Chau", "Starfish Bay", "Tseng Tau"],
-      //   },
-      // ],
+      regions: [
+        {
+          label: "Eastern",
+          sites: ["Pak Lap", "Kau Sai Chau", "Pak Shui Wun", "Sai Wan"],
+        },
+        {
+          label: "North Eastern",
+          sites: ["Double Island", "Hung Shek Mun", "Kat O", "Yung Shue Au"],
+        },
+        {
+          label: "North Western",
+          sites: ["Luk Keng", "Lung Kwu Tan", "Siu Lam", "Tai O"],
+        },
+        {
+          label: "Southern",
+          sites: ["Middle Bay", "Tai Tam", "Wah Fu", "Shek O"],
+        },
+        {
+          label: "South Western",
+          sites: ["Peng Chau", "Pui O", "Shui Tseng", "Tai Long Wan"],
+        },
+        {
+          label: "Tolo Habour",
+          sites: ["Lai Chi Chong", "Ma Shi Chau", "Starfish Bay", "Tseng Tau"],
+        },
+      ],
     };
   },
 };

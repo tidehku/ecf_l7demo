@@ -4,7 +4,7 @@ const routes = [
     path: "/",
     component: () => import("layouts/NewLayout.vue"),
     children: [
-      { path: "", component: () => import("src/pages/MainPage/HomePage.vue") },
+      { path: "", component: () => import("src/pages/MainPage/homePage.vue") },
       {
         path: "interactiveHabitat",
         component: () => import("pages/iH/interactiveHabitat.vue")
@@ -19,15 +19,6 @@ const routes = [
       }
     ]
   },
-  // {
-  //   path: "/interactiveHabitat/demo",
-  //   component: () => import("src/layouts/physicalDashboard.vue") //physical dashboard//
-  // },
-  // {
-  //   path: "/interactiveHabitat/demo1",
-  //   component: () => import("src/layouts/bioDashboard.vue") //biological dashboard//
-  // },
-
   {
     path: "/interactiveHabitat",
     component: () => import("layouts/NewLayout.vue"),
@@ -70,7 +61,17 @@ const routes = [
   },
   {
     path: "/physicalDashboard",
-    component: () => import("src/layouts/physicalDashboard.vue") //physical dashboard//
+    component: () => import("src/layouts/physicalDashboard.vue"), //physical dashboard//
+    // children: [
+    //   {
+    //     path: "/StarfishBay",
+    //     component: () => import("pages/physicalDashboard.vue")
+    //   },
+    //   {
+    //     path: "/demo",
+    //     component: () => import("src/layouts/physicalDashboard.vue")
+    //   }
+    // ]
   },
   {
     path: "/SpeciesSearchEngine",
