@@ -3,7 +3,7 @@
     <q-card
       bordered
       dark
-      class="col-4 bg-blue-grey-13 maincard"
+      class="col-4 bg-blue-grey-4 maincard"
     >
       <div class="q-pa-md row justify-center">
         <q-img
@@ -136,7 +136,7 @@ export default {
         },
       },
       minimapLayer: new L.TileLayer(
-        "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
       ),
       options: {
         position: "bottomright",
@@ -152,5 +152,4 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-
 </style>

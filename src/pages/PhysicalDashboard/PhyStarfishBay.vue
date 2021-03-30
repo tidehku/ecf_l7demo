@@ -3,66 +3,64 @@
     <div class="row justify-center no-wrap">
       <q-card
         bordered
-        class="col-3 temperature"
+        class="temperature"
+        style="width:30%"
       >
         <div class="text-h5 text-bold row justify-center title">
           Temperature
         </div>
-        <highcharts :options="chartOptions1"></highcharts>
-        <highcharts :options="chartOptions2"></highcharts>
+        <highcharts :options="Temperature1"></highcharts>
+        <highcharts :options="Temperature2"></highcharts>
       </q-card>
 
       <q-card
         bordered
         class="bg-indigo-1 maincard"
+        style="width:45%"
       >
         <div class="row">
-          <q-card-section
-            vertical
-            class="col-6"
-          >
-            <div class="text-h5 text-bold row justify-center">Site Name</div>
-            <p>Here can be a site introduction: {{ lorem }}</p>
-            <q-carousel
-              height="150px"
-              animated
-              v-model="slide"
-              arrows
-              infinite
-            >
-              <q-carousel-slide
-                :name="1"
-                img-src="https://cdn.quasar.dev/img/mountains.jpg"
-              />
-              <q-carousel-slide
-                :name="2"
-                img-src="https://cdn.quasar.dev/img/parallax1.jpg"
-              />
-              <q-carousel-slide
-                :name="3"
-                img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-              />
-              <q-carousel-slide
-                :name="4"
-                img-src="https://cdn.quasar.dev/img/quasar.jpg"
-              />
-            </q-carousel>
-            <!-- <q-img :ratio="16 / 9" src="~assets/placeholder2.jpg" /> -->
-          </q-card-section>
+          <q-card-section class="col-4 q-px-sm q-gutter-sm">
+            <q-img
+              height="160px"
+              src="~assets/SiteImage/StarfishBay.png"
+            />
 
-          <q-card-section class="col-6 q-px-sm">
             <l-map
               :zoom="10.6"
               :center="center"
               :options="mapOptions"
               class="l-map"
+              style="height: 160px; width: 100%"
             >
               <l-tile-layer
                 :url="url"
                 :attribution="attribution"
               />
-              <l-marker :lat-lng="[22.39235, 113.916341]"></l-marker>
+              <l-marker :lat-lng="[22.436252, 114.247089]"></l-marker>
             </l-map>
+          </q-card-section>
+          <q-card-section
+            vertical
+            class="col-8"
+          >
+            <div class="text-h5 text-bold text-indigo">Tolo Habour | Starfish Bay</div>
+            <p>
+              <!-- <b>GPS:</b> 22°26'10.5"N 114°14'49.5"E <br /> -->
+              <b>Tidal range:</b> Survey area ranges from a Low of 1.28 m to a
+              high of 3.00 m above Chart Datum. <br />
+              <b>Transect length:</b> 14 m <br />
+              <b>Shore exposure:</b> Biologically defined as sheltered to
+              intermediate. <br />
+              <b>Aspect:</b> North. <br />
+              <!-- <b>Slope:</b> <br /> -->
+              <b>Rock type:</b> Predominantly igneous rock composed of
+              homogeneous and equigranular granite. <br />
+              <b>Feasibility:</b> When assessing this site’s suitability, it was
+              determined to be moderately susceptible to vessel traffic and of
+              low susceptibility to sand inundation and human disturbance. As a
+              result, the site poses a low safety risk from oncoming wave
+              action. <br />
+            </p>
           </q-card-section>
         </div>
       </q-card>
@@ -70,12 +68,10 @@
       <q-card
         bordered
         class="col-3 waveFetch"
+        style="width:25%"
       >
-        <div class="text-h5 text-bold row justify-center title">
-          Wave Fetch
-        </div>
-        <highcharts :options="chartOptions1"></highcharts>
-        <highcharts :options="chartOptions2"></highcharts>
+        <div class="text-h5 text-bold row justify-center title">Wave Fetch</div>
+        <highcharts :options="WaveFetch1"></highcharts>
       </q-card>
     </div>
     <div class="row justify-center">
@@ -104,20 +100,20 @@
         <q-card-section horizontal>
           <highcharts
             class="col-3"
-            :options="chartOptions1"
+            :options="Chla1"
           ></highcharts>
           <highcharts
             class="col-3"
-            :options="chartOptions2"
+            :options="Chla1"
           ></highcharts>
           <q-separator vertical />
           <highcharts
             class="col-3"
-            :options="chartOptions1"
+            :options="OM1"
           ></highcharts>
           <highcharts
             class="col-3"
-            :options="chartOptions2"
+            :options="OM1"
           ></highcharts>
         </q-card-section>
       </q-card>
@@ -127,68 +123,45 @@
 
 <script>
 import { LMap, LMarker, LTileLayer } from "vue2-leaflet";
+import Highcharts from "highcharts";
+import exporting from "highcharts/modules/exporting";
+exporting(Highcharts);
 import Vue from "vue";
 import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
+import { tempData } from "./physicalData/temperature";
+import { waveData } from "./physicalData/wave";
+import { omData } from "./physicalData/om";
+import { chlaData } from "./physicalData/chla";
 
 export default {
   components: { LMap, LMarker, LTileLayer },
   data() {
     return {
       slide: 1,
-      lorem:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-      center: L.latLng(22.39235, 113.916341),
+      SiteIntro: `Region: Tolo Harbour.
+      GPS: 22°26'10.5"N 114°14'49.5"E
+      Tidal range: Survey area ranges from a Low of 1.28 m to a high of 3.00 m above Chart Datum.
+      Transect length: 14 m
+      Shore exposure: Biologically defined as sheltered to intermediate. 
+      Aspect: North.
+      Slope:
+      Rock type: Predominantly igneous rock composed of homogeneous and equigranular granite (CEDD, 2006).
+      Feasibility: When assessing this site’s suitability, It was determined to be moderately susceptible to vessel traffic and of low susceptibility to sand inundation and human disturbance. As a result, the site poses a low safety risk from oncoming wave action.
+      `,
+      center: L.latLng(22.436252, 114.247089),
       mapOptions: {
         zoomControl: false,
       },
-
       url:
         "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
       attribution: "Source &copy; Esri",
 
-      chartOptions1: {
-        chart: {
-          type: "spline",
-          height: (1 / 2) * 100 + "%", // 16:9 ratio
-        },
-        credits: {
-          enabled: false,
-        },
-        title: {
-          text: "",
-        },
-        subtitle: {
-          text: "Summer",
-        },
-        series: [
-          {
-            showInLegend: false,
-            data: [10, 6, 8, 2, 8, 4, 6, 7],
-          },
-        ],
-      },
-      chartOptions2: {
-        chart: {
-          type: "spline",
-          height: (1 / 2) * 100 + "%", // 16:9 ratio
-        },
-        credits: {
-          enabled: false,
-        },
-        title: {
-          text: "",
-        },
-        subtitle: {
-          text: "Winter",
-        },
-        series: [
-          {
-            showInLegend: false,
-            data: [2, 3, 9, 5, 6, 4, 1, 2],
-          },
-        ],
-      },
+      Temperature1: tempData.SBTemperature1,
+      Temperature2: tempData.SBTemperature2,
+      WaveFetch1: waveData.SBWaveFetch1,
+      Chla1: chlaData.SBChla1,
+      OM1: omData.SBOm1,
     };
   },
 };
@@ -219,7 +192,8 @@ export default {
 .title
   background-color: $indigo-5
   color: white
-.l-map
-  border: 8px solid
-  border-color: $indigo-4
+// .l-map
+//   height: 100%
+//   border: 8px solid
+//   border-color: $indigo-4
 </style>

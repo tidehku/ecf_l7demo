@@ -1,13 +1,21 @@
 <template>
   <q-layout view="hhh lpR fFf">
     <q-header>
-      <q-bar class="bg-indigo-8 text-white glossy" style="height: 40px">
-        <q-avatar size="40px">
-          <img src="~assets/swims.png" />
-        </q-avatar>
-        <q-bar class="q-px-md text-h5 text-bold">
+      <q-bar
+        class="bg-indigo-8 text-white glossy"
+        style="height: 35px"
+      >
+        <q-btn round>
+          <q-avatar size="40px">
+            <img
+              src="~assets/swims.png"
+              @click="home()"
+            />
+          </q-avatar>
+        </q-btn>
+        <div class="q-px-md text-h4 text-bold">
           ECF Hong Kong Rocky Shore | Physical Dashboard
-        </q-bar>
+        </div>
         <q-space />
         <q-btn
           no-caps
@@ -17,7 +25,12 @@
           label="Switch to Biological Dashboard"
           to="/biologicalDashboard"
         />
-        <q-btn flat @click="drawer = !drawer" round icon="menu" />
+        <q-btn
+          flat
+          @click="drawer = !drawer"
+          round
+          icon="menu"
+        />
       </q-bar>
     </q-header>
     <q-drawer
@@ -30,14 +43,22 @@
       content-class="bg-grey-3"
     >
       <q-list padding>
-        <q-item clickable v-ripple to="/">
+        <q-item
+          clickable
+          v-ripple
+          to="/"
+        >
           <q-item-section avatar>
             <q-icon name="home" />
           </q-item-section>
           <q-item-section> Home Page </q-item-section>
         </q-item>
         <q-separator />
-        <q-item clickable v-ripple to="/interactiveHabitat/historical">
+        <q-item
+          clickable
+          v-ripple
+          to="/interactiveHabitat/historical"
+        >
           <q-item-section avatar>
             <q-icon name="book" />
           </q-item-section>
@@ -46,7 +67,11 @@
         </q-item>
         <q-separator />
 
-        <q-item clickable v-ripple to="/interactiveHabitat">
+        <q-item
+          clickable
+          v-ripple
+          to="/interactiveHabitat"
+        >
           <q-item-section avatar>
             <q-icon name="star" />
           </q-item-section>
@@ -55,10 +80,12 @@
         </q-item>
 
         <q-separator /><br />
-        <q-card bordered flat class="q-ma-sm searchbox">
-          <div
-            class="q-py-sm bg-black text-white text-h6 text-bold text-center"
-          >
+        <q-card
+          bordered
+          flat
+          class="q-ma-sm searchbox"
+        >
+          <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">
             Quick Search Link
           </div>
 
@@ -157,6 +184,9 @@ export default {
     };
   },
   methods: {
+    home() {
+      this.$router.replace("/");
+    },
     setSites(val) {
       this.sites = val.sites;
     },

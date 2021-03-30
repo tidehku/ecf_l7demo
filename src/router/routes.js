@@ -57,7 +57,17 @@ const routes = [
   },
   {
     path: "/biologicalDashboard",
-    component: () => import("src/layouts/bioDashboard.vue") //biological dashboard//
+    component: () => import("src/layouts/bioDashboard.vue"), //biological dashboard//
+    children: [
+      {
+        path: "",
+        component: () => import("pages/biologicalDashboard/biologicalDemo.vue")
+      },
+      {
+        path: "Starfish Bay",
+        component: () => import("pages/biologicalDashboard/bioStarfishBay.vue")
+      }
+    ]
   },
   {
     path: "/physicalDashboard",
@@ -65,16 +75,12 @@ const routes = [
     children: [
       {
         path: "",
-        component: () => import("pages/physicalDashboard/physicaldemo.vue")
+        component: () => import("pages/physicalDashboard/physicalDemo.vue")
       },
-      // {
-      //   path: "StarfishBay",
-      //   component: () => import("pages/physicalDashboard/PhyStarfishBay.vue")
-      // },
       {
-        path: "StarfishBayDemo",
-        component: () => import("pages/physicalDashboard/PhyStarfishBayDemo.vue")
-      },
+        path: "Starfish Bay",
+        component: () => import("pages/physicalDashboard/PhyStarfishBay.vue")
+      }
     ]
   },
   {
@@ -118,6 +124,4 @@ const routes = [
   }
 ];
 
-export default routes
-
-
+export default routes;
