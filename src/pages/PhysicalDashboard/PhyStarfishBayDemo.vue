@@ -8,8 +8,8 @@
         <div class="text-h5 text-bold row justify-center title">
           Temperature
         </div>
-        <highcharts :options="chart1"></highcharts>
-        <highcharts :options="chartOptions2"></highcharts>
+        <highcharts :options="Temperature1"></highcharts>
+        <highcharts :options="Temperature2"></highcharts>
       </q-card>
 
       <q-card
@@ -66,8 +66,7 @@
         <div class="text-h5 text-bold row justify-center title">
           Wave Fetch
         </div>
-        <highcharts :options="chartOptions1"></highcharts>
-        <highcharts :options="chartOptions2"></highcharts>
+        <highcharts :options="WaveFetch1"></highcharts>
       </q-card>
     </div>
     <div class="row justify-center">
@@ -96,20 +95,20 @@
         <q-card-section horizontal>
           <highcharts
             class="col-3"
-            :options="chartOptions1"
+            :options="Chla1"
           ></highcharts>
           <highcharts
             class="col-3"
-            :options="chartOptions2"
+            :options="Chla1"
           ></highcharts>
           <q-separator vertical />
           <highcharts
             class="col-3"
-            :options="chartOptions1"
+            :options="OM1"
           ></highcharts>
           <highcharts
             class="col-3"
-            :options="chartOptions2"
+            :options="OM1"
           ></highcharts>
         </q-card-section>
       </q-card>
@@ -188,7 +187,7 @@ export default {
           },
         ],
       },
-      chart1: {
+      Temperature1: {
         chart: {
           type: "spline",
           height: (1 / 2) * 100 + "%", // 16:9 ratio
@@ -200,7 +199,7 @@ export default {
           text: "",
         },
         subtitle: {
-          text: "Winter Mean Temperature",
+          text: "2020 Winter Mean Temperature",
         },
         yAxis: {
           title: {
@@ -212,9 +211,14 @@ export default {
             },
           },
         },
+        legend: {
+          layout: "vertical",
+          align: "right",
+          verticalAlign: "middle",
+        },
         series: [
           {
-            showInLegend: false,
+            // showInLegend: false,
             name: "HH",
             data: [
               16.68333333,
@@ -245,7 +249,8 @@ export default {
           },
           {
             name: "LM",
-            showInLegend: false,
+            color: "indigo",
+            // showInLegend: false,
             marker: {
               symbol: "diamond",
             },
@@ -273,6 +278,236 @@ export default {
               17.76666667,
               17.78333333,
               17.75,
+            ],
+          },
+        ],
+      },
+      Temperature2: {
+        chart: {
+          type: "scatter",
+          height: (1 / 2) * 100 + "%", // 16:9 ratio
+        },
+        credits: {
+          enabled: false,
+        },
+        title: {
+          text: "",
+        },
+        subtitle: {
+          text: "2020 Winter Maximum Temperature",
+        },
+        yAxis: {
+          title: {
+            text: "Temperature",
+          },
+          labels: {
+            formatter: function () {
+              return this.value + "°";
+            },
+          },
+        },
+        legend: {
+          layout: "vertical",
+          align: "right",
+          verticalAlign: "middle",
+        },
+        series: [
+          {
+            showInLegend: false,
+            name: "HH",
+            data: [
+              19.83333333,
+              19,
+              18.66666667,
+              18.66666667,
+              18.5,
+              18.33333333,
+              18.16666667,
+              18.16666667,
+              18.83333333,
+              20.66666667,
+              23,
+              24.83333333,
+              25.66666667,
+              26.33333333,
+              27.66666667,
+              25.66666667,
+              23.83333333,
+              22.66666667,
+              21,
+              20.33333333,
+              20.33333333,
+              20.33333333,
+              21.16666667,
+              21.5,
+            ],
+          },
+          {
+            name: "LM",
+            color: "indigo",
+            showInLegend: false,
+            marker: {
+              symbol: "diamond",
+            },
+            data: [
+              23.16666667,
+              22.83333333,
+              22.5,
+              22,
+              21.66666667,
+              21.5,
+              21,
+              18.5,
+              19.16666667,
+              19.83333333,
+              22.66666667,
+              23.5,
+              23.16666667,
+              24.16666667,
+              25.33333333,
+              22.16666667,
+              22.83333333,
+              23.5,
+              23.5,
+              23.5,
+              23.5,
+              23.5,
+              23.16666667,
+              23.16666667,
+            ],
+          },
+        ],
+      },
+      WaveFetch1: {
+        chart: {
+          type: "scatter",
+          height: (1 / 1) * 100 + "%", // 16:9 ratio
+        },
+        credits: {
+          enabled: false,
+        },
+        title: {
+          text: "",
+        },
+        subtitle: {
+          text: "2020 winter",
+        },
+        xAxis: {
+          title: {
+            text: "Force",
+          },
+        },
+        yAxis: {
+          title: {
+            text: "Percentile",
+          },
+        },
+        legend: {
+          layout: "vertical",
+          align: "right",
+          verticalAlign: "middle",
+        },
+        series: [
+          {
+            showInLegend: false,
+            name: "2020 winter",
+            data: [
+              [0.0033667, 0],
+              [0.1023107, 5],
+              [0.112116, 25],
+              [0.153094, 50],
+              [0.1864048, 75],
+              [0.1929679, 90],
+              [0.2431723, 95],
+              [0.2591848, 95.5],
+              [0.3711364, 97.5],
+              [0.5488238, 99],
+              [0.8391194, 99.5],
+              [1.8295005, 100],
+            ],
+          },
+        ],
+      },
+      Chla1: {
+        chart: {
+          type: "column",
+          height: (2 / 3) * 100 + "%", // 3:4 ratio
+        },
+        credits: {
+          enabled: false,
+        },
+        title: {
+          text: "",
+        },
+        subtitle: {
+          tect: "by ECF at which site location",
+        },
+        xAxis: {
+          type: "category",
+          title: {
+            text: "Chla/tidal height",
+          },
+        },
+        yAxis: {
+          title: {
+            text: "mean of chlorophyll a",
+          },
+        },
+        legend: {
+          enabled: false,
+        },
+        series: [
+          {
+            name: "chlorophyll a",
+            showInLegend: true,
+            data: [
+              ["HH", 1.71245155],
+              ["LH", 2.095226323],
+              ["HM", 9.217318676],
+              ["LM", 8.640319233],
+              ["HL", 12.3657206],
+            ],
+          },
+        ],
+      },
+      OM1: {
+        chart: {
+          type: "column",
+          height: (2 / 3) * 100 + "%", // 3:4 ratio
+        },
+        credits: {
+          enabled: false,
+        },
+        title: {
+          text: "",
+        },
+        subtitle: {
+          tect: "by ECF at which site location",
+        },
+        xAxis: {
+          type: "category",
+          title: {
+            text: "OM/tidal height",
+          },
+        },
+        yAxis: {
+          title: {
+            text: "mean of organic matter",
+          },
+        },
+        legend: {
+          enabled: false,
+        },
+        series: [
+          {
+            name: "organic matter",
+            showInLegend: true,
+            data: [
+              ["HH", 0.003627237],
+              ["LH", 0.004842155],
+              ["HM", 0.005477579],
+              ["LM", 0.005910919],
+              ["HL", 0.005528363],
             ],
           },
         ],
