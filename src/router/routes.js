@@ -62,16 +62,20 @@ const routes = [
   {
     path: "/physicalDashboard",
     component: () => import("src/layouts/physicalDashboard.vue"), //physical dashboard//
-    // children: [
-    //   {
-    //     path: "/StarfishBay",
-    //     component: () => import("pages/physicalDashboard.vue")
-    //   },
-    //   {
-    //     path: "/demo",
-    //     component: () => import("src/layouts/physicalDashboard.vue")
-    //   }
-    // ]
+    children: [
+      {
+        path: "StarfishBay",
+        component: () => import("pages/physicalDashboard/PhyStarfishBay.vue")
+      },
+      {
+        path: "StarfishBayDemo",
+        component: () => import("pages/physicalDashboard/PhyStarfishBayDemo.vue")
+      },
+      {
+        path: "demo",
+        component: () => import("pages/physicalDashboard/physicaldemo.vue")
+      }
+    ]
   },
   {
     path: "/SpeciesSearchEngine",
