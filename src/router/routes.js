@@ -64,17 +64,17 @@ const routes = [
     component: () => import("src/layouts/physicalDashboard.vue"), //physical dashboard//
     children: [
       {
-        path: "StarfishBay",
-        component: () => import("pages/physicalDashboard/PhyStarfishBay.vue")
+        path: "",
+        component: () => import("pages/physicalDashboard/physicaldemo.vue")
       },
+      // {
+      //   path: "StarfishBay",
+      //   component: () => import("pages/physicalDashboard/PhyStarfishBay.vue")
+      // },
       {
         path: "StarfishBayDemo",
         component: () => import("pages/physicalDashboard/PhyStarfishBayDemo.vue")
       },
-      {
-        path: "demo",
-        component: () => import("pages/physicalDashboard/physicaldemo.vue")
-      }
     ]
   },
   {
