@@ -4,10 +4,10 @@
       <q-card
         dark
         bordered
-        class="bg-blue-grey-13 my-card"
+        class="bg-grey-10 my-card"
         height=900px
       >
-        <div class="q-pa-lg bg-indigo-10 text-h5 text-bold text-center text-white">
+        <div class="q-pa-lg bg-teal-7 text-h5 text-bold text-center text-white">
           Species Search Engine
         </div>
         <q-card-section class="q-ma-md">
@@ -53,7 +53,7 @@
         <div class="row justify-center">
           <q-btn
             no-caps
-            color="indigo-10"
+            color="teal-7"
             size="15px"
             push
             style="width: 150px"

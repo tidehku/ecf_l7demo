@@ -17,7 +17,7 @@
           </q-avatar>
         </q-btn>
         <q-toolbar-title class="text-5 text-bold">
-          ECF HK Rocky Shore GIS Website Storyboard 2019-2023
+          ECF HK Rocky Shore GIS Storyboard 2019-2023
         </q-toolbar-title>
 
         <q-tabs
@@ -105,75 +105,75 @@
         <q-separator />
       </q-list>
       <q-card
-          bordered
-          flat
-          class="q-ma-md searchbox"
-          style="width: 90%"
-        >
-          <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">
-            Quick Search Link
-          </div>
+        bordered
+        flat
+        class="q-ma-md searchbox"
+        style="width: 90%"
+      >
+        <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">
+          Quick Search Link
+        </div>
 
-          <q-select
-            filled
-            dense
-            v-model="region"
-            :options="regionOptions"
-            label="Choose Region"
-            @input="setSites"
-          />
+        <q-select
+          filled
+          dense
+          v-model="region"
+          :options="regionOptions"
+          label="Choose Region"
+          @input="setSites"
+        />
 
-          <q-select
-            filled
-            dense
-            v-model="subSite"
-            :options="sites"
-            label="Choose Site"
-          />
+        <q-select
+          filled
+          dense
+          v-model="subSite"
+          :options="sites"
+          label="Choose Site"
+        />
 
-          <q-select
-            filled
+        <q-select
+          filled
+          dense
+          v-model="dashboard"
+          :options="dashboardOptions"
+          label="Choose Dashboard"
+        />
+        <div class="row justify-center">
+          <q-btn
+            no-caps
             dense
-            v-model="dashboard"
-            :options="dashboardOptions"
-            label="Choose Dashboard"
+            color="black"
+            class="text-h6 q-ma-md q-px-md"
+            glossy
+            label="Search"
+            @click="changeSite()"
           />
-          <div class="row justify-center">
-            <q-btn
-              no-caps
-              dense
-              color="black"
-              class="text-h6 q-ma-md q-px-md"
-              glossy
-              label="Search"
-              @click="changeSite()"
-            />
-          </div>
-        </q-card>
+        </div>
+      </q-card>
     </q-drawer>
 
-      <q-page-container>
-        <router-view />
-      </q-page-container>
+    <q-page-container>
+      <router-view />
+    </q-page-container>
 
-      <q-footer elevated>
-        <q-toolbar
-          class="bg-white text-dark"
-          style="height: 40px"
-        >
-          <q-toolbar-title id="footer">
-            Copyright ©
-            {{ new Date().getFullYear() }} —
-            <a
-              href="https://www.tidehku.com/"
-              target="_blank"
-            >
-              <strong>Tropical IntertiDal Ecology Group</strong>
-            </a>
-            , The Swire Institute of Marine Science, The University of Hong Kong
-          </q-toolbar-title>
-        </q-toolbar>
-      </q-footer>
+    <q-footer elevated>
+      <q-toolbar
+        class="bg-white text-dark"
+        style="height: 40px"
+      >
+        <q-toolbar-title id="footer">
+          Copyright ©
+          {{ new Date().getFullYear() }} —
+          <a
+            href="https://www.tidehku.com/"
+            target="_blank"
+          >
+            <strong>Tropical IntertiDal Ecology Group</strong>
+          </a>
+          , The Swire Institute of Marine Science, The University of Hong Kong
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-footer>
   </q-layout>
 </template>
 
