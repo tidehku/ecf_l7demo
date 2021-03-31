@@ -1,18 +1,9 @@
 <template>
   <q-layout view="hHh lpr fff">
     <q-header elevated>
-      <q-toolbar
-        class="bg-grey-1 text-dark"
-        style="height: 70px"
-      >
-        <q-btn
-          round
-          glossy
-        >
-          <q-avatar
-            size="65px"
-            @click="home()"
-          >
+      <q-toolbar class="bg-grey-1 text-dark" style="height: 70px">
+        <q-btn round glossy>
+          <q-avatar size="65px" @click="home()">
             <img src="~assets/SWIMSlogo2.png" />
           </q-avatar>
         </q-btn>
@@ -20,11 +11,7 @@
           ECF HK Rocky Shore GIS Storyboard 2019-2023
         </q-toolbar-title>
 
-        <q-tabs
-          align="left"
-          v-model="tab"
-          dense
-        >
+        <q-tabs align="left" v-model="tab" dense>
           <q-route-tab
             to="/"
             name="home"
@@ -48,12 +35,7 @@
           />
           <q-route-tab to="/" label="Methods" name="methods" />
         </q-tabs>
-        <q-btn
-          flat
-          @click="drawer = !drawer"
-          round
-          icon="menu"
-        />
+        <q-btn flat @click="drawer = !drawer" round icon="menu" />
       </q-toolbar>
     </q-header>
 
@@ -67,22 +49,14 @@
       content-class="bg-grey-3"
     >
       <q-list padding>
-        <q-item
-          clickable
-          v-ripple
-          to="/"
-        >
+        <q-item clickable v-ripple to="/">
           <q-item-section avatar>
             <q-icon name="home" />
           </q-item-section>
           <q-item-section> Home Page </q-item-section>
         </q-item>
         <q-separator />
-        <q-item
-          clickable
-          v-ripple
-          to="/interactiveHabitat/historical"
-        >
+        <q-item clickable v-ripple to="/interactiveHabitat/historical">
           <q-item-section avatar>
             <q-icon name="book" />
           </q-item-section>
@@ -91,11 +65,17 @@
         </q-item>
         <q-separator />
 
-        <q-item
-          clickable
-          v-ripple
-          to="/interactiveHabitat"
-        >
+        <!-- add methods nav tab on sidebar -->
+        <q-item clickable v-ripple to="/">
+          <q-item-section avatar>
+            <q-icon name="book" />
+          </q-item-section>
+
+          <q-item-section> Methods </q-item-section>
+        </q-item>
+        <q-separator />
+
+        <q-item clickable v-ripple to="/interactiveHabitat">
           <q-item-section avatar>
             <q-icon name="star" />
           </q-item-section>
@@ -105,12 +85,7 @@
 
         <q-separator />
       </q-list>
-      <q-card
-        bordered
-        flat
-        class="q-ma-md searchbox"
-        style="width: 90%"
-      >
+      <q-card bordered flat class="q-ma-md searchbox" style="width: 90%">
         <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">
           Quick Search Link
         </div>
@@ -158,17 +133,11 @@
     </q-page-container>
 
     <q-footer elevated>
-      <q-toolbar
-        class="bg-white text-dark"
-        style="height: 40px"
-      >
+      <q-toolbar class="bg-white text-dark" style="height: 40px">
         <q-toolbar-title id="footer">
           Copyright ©
           {{ new Date().getFullYear() }} —
-          <a
-            href="https://www.tidehku.com/"
-            target="_blank"
-          >
+          <a href="https://www.tidehku.com/" target="_blank">
             <strong>Tropical IntertiDal Ecology Group</strong>
           </a>
           , The Swire Institute of Marine Science, The University of Hong Kong

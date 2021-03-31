@@ -9,7 +9,7 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.9.19",
+    "@quasar/extras": "^1.10.0",
     "@types/leaflet": "^1.7.0",
     "axios": "^0.21.1",
     "core-js": "^3.9.1",
@@ -19,13 +19,13 @@
     "leaflet-measure": "^3.1.0",
     "leaflet-minimap": "^3.6.1",
     "leaflet.zoomhome": "^1.0.0",
-    "quasar": "^1.15.5",
+    "quasar": "^1.15.9",
     "vue-leaflet-minimap": "^1.0.4",
     "vue2-leaflet-geosearch": "^1.0.6",
     "vue2-leaflet-locatecontrol": "^1.0.1"
   },
   "devDependencies": {
-    "@quasar/app": "^2.2.1"
+    "@quasar/app": "^2.2.3"
   },
   "browserslist": [
     "last 10 Chrome versions",
