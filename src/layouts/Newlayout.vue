@@ -46,6 +46,7 @@
             icon="travel_explore"
             label="Species Search Engine"
           />
+          <q-route-tab to="/" label="Methods" name="methods" />
         </q-tabs>
         <q-btn
           flat
