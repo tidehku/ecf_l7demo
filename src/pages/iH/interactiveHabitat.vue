@@ -1,28 +1,29 @@
 <template>
   <div class="row q-pa-sm">
-    <q-card
-      bordered
-      dark
-      class="col-4 bg-blue-grey-4 maincard"
-      height=900px
-    >
-      <div class="q-pa-md row justify-center">
+    <q-card bordered dark class="col-4 bg-blue-grey-4 maincard" height="900px">
+      <!-- remove the SWIMS logo -->
+      <!-- <div class="q-pa-md row justify-center">
         <q-img
           src="~/assets/SWIMSlogo2.png"
           alt="SWIMs logo"
           style="width: 120px; height: 100%; align: center"
         />
-      </div>
-      <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
-        Interactive Habitat Map <br>around Hong Kong Rocky Shore <br />by ECF 2019-2023
+      </div> -->
+      <q-card
+        class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white"
+      >
+        Interactive Habitat Map <br />around Hong Kong Rocky Shore <br />by ECF
+        2019-2023
       </q-card>
 
       <q-card class="q-mx-lg row justify-center">
         <p class="q-ma-sm q-pa-sm text-black">
-          {{ lorem }} </p>
+          {{ lorem }}
+        </p>
 
         <p class="text-red-10 text-bold">
-          ( Hint: Please Click Any Zone for Localized Data ) </p>
+          ( Hint: Please Click Any Zone for Localized Data )
+        </p>
       </q-card>
       <div class="q-pa-md row justify-end">
         <q-btn
@@ -51,10 +52,7 @@
         ref="myMapRef"
       >
         <LTileLayer />
-        <l-geo-json
-          :geojson="regions"
-          :options="geoJSONOptions"
-        > </l-geo-json>
+        <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
 
         <l-control-scale
           position="bottomleft"
