@@ -3,14 +3,14 @@
     <q-header elevated>
       <q-toolbar
         class="bg-grey-1 text-dark"
-        style="height: 60px"
+        style="height: 70px"
       >
         <q-btn
           round
           glossy
         >
           <q-avatar
-            size="60px"
+            size="65px"
             @click="home()"
           >
             <img src="~assets/SWIMSlogo2.png" />
@@ -28,23 +28,23 @@
           <q-route-tab
             to="/"
             name="home"
-            class="text-indigo-9"
+            class="text-amber"
             icon="home"
-            label="Home"
+            label="Homepage"
           />
           <q-route-tab
             to="/interactiveHabitat"
             name="interactiveHabitat"
             class="text-red-8"
             icon="map"
-            label="Map"
+            label="Interactive Habitat"
           />
           <q-route-tab
             to="/SpeciesSearchEngine"
             name="speciesSearchEngine"
-            class="text-teal-7"
+            class="text-indigo-9"
             icon="travel_explore"
-            label="Search"
+            label="Species Search Engine"
           />
           <q-route-tab
             to="/"
@@ -180,7 +180,7 @@
     <q-footer elevated>
       <q-toolbar
         class="bg-white text-dark"
-        style="height: 40px"
+        style="height: 30px"
       >
         <q-toolbar-title id="footer">
           Copyright ©
@@ -269,4 +269,6 @@ export default {
 #footer.q-toolbar__title
   text-align: center
   font-size: 15px
+
+
 </style>

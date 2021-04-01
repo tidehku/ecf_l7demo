@@ -1,6 +1,11 @@
 <template>
   <div class="row q-pa-sm">
-    <q-card bordered dark class="col-4 bg-blue-grey-4 maincard" height="900px">
+    <q-card
+      bordered
+      dark
+      class="col-4 bg-blue-grey-4 q-py-xl maincard"
+      style="height:480px"
+    >
       <!-- remove the SWIMS logo -->
       <!-- <div class="q-pa-md row justify-center">
         <q-img
@@ -9,9 +14,7 @@
           style="width: 120px; height: 100%; align: center"
         />
       </div> -->
-      <q-card
-        class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white"
-      >
+      <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
         Interactive Habitat Map <br />around Hong Kong Rocky Shore <br />by ECF
         2019-2023
       </q-card>
@@ -52,7 +55,10 @@
         ref="myMapRef"
       >
         <LTileLayer />
-        <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
+        <l-geo-json
+          :geojson="regions"
+          :options="geoJSONOptions"
+        > </l-geo-json>
 
         <l-control-scale
           position="bottomleft"
@@ -92,15 +98,15 @@ export default {
       zoom: 10.25,
       maxZoom: 15,
       minZoom: 10.25,
-      center: L.latLng(22.3908, 114.1721),
-      bounds: L.latLngBounds([
-        [22.557533808609336, 113.73082231707503],
-        [22.239381865658696, 114.62448168220955],
-      ]),
-      maxBounds: L.latLngBounds([
-        [22.557533808609336, 113.73082231707503],
-        [22.239381865658696, 114.62448168220955],
-      ]),
+      center: L.latLng(22.3508, 114.2),
+      // bounds: L.latLngBounds([
+      //   [22.557533808609336, 113.73082231707503],
+      //   [22.239381865658696, 114.62448168220955],
+      // ]),
+      // maxBounds: L.latLngBounds([
+      //   [22.557533808609336, 113.73082231707503],
+      //   [22.239381865658696, 114.62448168220955],
+      // ]),
       mapOptions: {
         zoomSnap: 0.25,
       },
@@ -140,8 +146,8 @@ export default {
       options: {
         position: "bottomright",
         zoomAnimation: true,
-        width: 100,
-        height: 90,
+        width: 120,
+        height: 120,
         toggleDisplay: true,
         minimize: true,
       },

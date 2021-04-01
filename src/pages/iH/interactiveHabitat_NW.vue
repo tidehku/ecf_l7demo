@@ -1,16 +1,226 @@
 <template>
-  <div class="row q-pa-sm">
-    <q-card
-      class="col-4 maincard"
-      bordered
-      dark
-    >
-      <div class="q-pa-md bg-indigo-10 text-h4 text-bold text-white sitename">
-        North Western Region
-      </div>
-      <p class="q-pa-md row">{{ lorem }}</p>
+  <q-page class="q-pa-sm bg-grey-6">
+    <div class="row justify-center">
+      <q-card
+        class="q-pa-xs"
+        bordered
+        style="width:33%"
+      >
+        <q-toolbar class="bg-indigo-10 text-h5 text-bold text-white shadow-2 rounded-borders">
+          North Western Region
+          <q-space />
+          <q-separator
+            dark
+            vertical
+            inset
+          />
+          <q-tabs
+            v-model="tab"
+            shrink
+          >
+            <q-tab
+              name="Back"
+              label="Back"
+            >
+              <q-icon
+                center
+                name="keyboard_arrow_left"
+              />
+            </q-tab>
+          </q-tabs>
+        </q-toolbar>
 
-      <div class="q-px-md">
+        <p class="q-pa-sm row">{{ lorem }}</p>
+
+        <q-card class="q-px-xs">
+          <l-map
+            style="height: 300px"
+            :zoom="zoom"
+            :center="center"
+            :options="mapOptions"
+            :max-zoom="zoom"
+            :min-zoom="zoom"
+          >
+            <LTileLayer />
+            <l-geo-json
+              :geojson="region"
+              :options="regionOptions"
+            ></l-geo-json>
+
+            <l-geo-json
+              :geojson="sitesLocation"
+              :options="siteOptions"
+            >
+            </l-geo-json>
+
+            <l-control-scale
+              position="bottomleft"
+              :metric="true"
+              :imperial="true"
+            ></l-control-scale>
+          </l-map>
+          <!-- <div class="q-py-sm row justify-end">
+            <q-btn
+              no-caps
+              dense
+              color="indigo-10"
+              size="20px"
+              v-go-back="'/interactiveHabitat'"
+              push
+            >
+              <q-icon
+                center
+                name="keyboard_arrow_left"
+              />
+              Go Back
+            </q-btn>
+          </div> -->
+        </q-card>
+      </q-card>
+      <div style="width:66.5%">
+        <q-card
+          class="bg-indigo-1"
+          style="width:100%; height:35.7%"
+        >
+          <div class="q-px-md bg-indigo-10 text-center text-h6 text-bold text-white shadow-2 rounded-borders">
+            Regional Average Data Summary
+          </div>
+          <div class="row q-pa-sm">
+            <q-card
+              class="q-pa-sm "
+              style="width:20%"
+            >
+              <div class="q-px-sm text-h7 text-bold">Nutrient Levels </div>
+              <div class="row justify-center">
+                <div class="q-pa-md text-h2 text-bold text-red"> 123 </div>
+              </div>
+            </q-card>
+            <q-card
+              class="q-pa-sm "
+              style="width:20%"
+            >
+              <div class="q-px-sm text-h7 text-bold">Nutrient Levels </div>
+              <div class="row justify-center">
+                <div class="q-pa-md text-h2 text-bold text-red"> 123 </div>
+              </div>
+            </q-card>
+            <q-card
+              class="q-pa-sm "
+              style="width:20%"
+            >
+              <div class="q-px-sm text-h7 text-bold">Nutrient Levels </div>
+              <div class="row justify-center">
+                <div class="q-pa-md text-h2 text-bold text-red"> 123 </div>
+              </div>
+            </q-card>
+            <q-card
+              class="q-pa-sm "
+              style="width:20%"
+            >
+              <div class="q-px-sm text-h7 text-bold">Nutrient Levels </div>
+              <div class="row justify-center">
+                <div class="q-pa-md text-h2 text-bold text-red"> 123 </div>
+              </div>
+            </q-card>
+            <q-card
+              class="q-pa-sm "
+              style="width:20%"
+            >
+              <div class="q-px-sm text-h7 text-bold">Nutrient Levels </div>
+              <div class="row justify-center">
+                <div class="q-pa-md text-h2 text-bold text-red"> 123 </div>
+              </div>
+            </q-card>
+          </div>
+        </q-card>
+        <div class="row justify-around">
+          <q-card
+            class="q-pa-xs"
+            style="width:24.5%"
+          >
+            <div class="q-pa-sm bg-indigo-9 text-h5 text-bold text-white"> Site Name</div>
+            <q-img
+              src="~/assets/SiteImage/StarfishBay.png"
+              height="200px"
+              basic
+            />
+            <div class="row justify-center">
+              <q-btn
+                class="q-ma-sm"
+                style="align-items: center"
+                no-caps
+                color="indigo-5"
+                label="Learn more"
+                to="/physicalDashboard"
+              />
+            </div>
+          </q-card>
+          <q-card
+            class="q-pa-xs"
+            style="width:24.5%"
+          >
+            <div class="q-pa-sm bg-indigo-9 text-h5 text-bold text-white"> Site Name</div>
+            <q-img
+              src="~/assets/SiteImage/StarfishBay.png"
+              height="200px"
+              basic
+            />
+            <div class="row justify-center">
+              <q-btn
+                class="q-ma-sm"
+                style="align-items: center"
+                no-caps
+                color="indigo-5"
+                label="Learn more"
+                to="/physicalDashboard"
+              />
+            </div>
+          </q-card>
+          <q-card
+            class="q-pa-xs"
+            style="width:24.5%"
+          >
+            <div class="q-pa-sm bg-indigo-9 text-h5 text-bold text-white"> Site Name</div>
+            <q-img
+              src="~/assets/SiteImage/StarfishBay.png"
+              height="200px"
+              basic
+            />
+            <div class="row justify-center">
+              <q-btn
+                class="q-ma-sm"
+                style="align-items: center"
+                no-caps
+                color="indigo-5"
+                label="Learn more"
+                to="/physicalDashboard"
+              />
+            </div>
+          </q-card>
+          <q-card
+            class="q-pa-xs"
+            style="width:24.5%"
+          >
+            <div class="q-pa-sm bg-indigo-9 text-h5 text-bold text-white"> Site Name</div>
+            <q-img
+              src="~/assets/SiteImage/StarfishBay.png"
+              height="200px"
+              basic
+            />
+            <div class="row justify-center">
+              <q-btn
+                class="q-ma-sm"
+                style="align-items: center"
+                no-caps
+                color="indigo-5"
+                label="Learn more"
+                to="/physicalDashboard"
+              />
+            </div>
+          </q-card>
+
+        </div>
+        <!-- <div class="q-px-md">
         <q-table
           class="infoTable"
           title="Regional Average Data Summary"
@@ -24,7 +234,7 @@
         >
         </q-table>
 
-        <div class="q-py-md row justify-end">
+        <!-- <div class="q-py-md row justify-end">
           <q-btn
             no-caps
             color="indigo-10"
@@ -38,48 +248,15 @@
             />
             Go Back
           </q-btn>
-        </div>
+        </div> -->
+        <!-- </div> -->
       </div>
-    </q-card>
 
-    <div class="col-8">
-      <l-map
-        style="height: 100%"
-        :zoom="zoom"
-        :center="center"
-        :options="mapOptions"
-        :max-zoom="zoom"
-        :min-zoom="zoom"
-      >
-        <LTileLayer />
-        <l-geo-json
-          :geojson="region"
-          :options="regionOptions"
-        ></l-geo-json>
-
-        <l-geo-json
-          :geojson="sitesLocation"
-          :options="siteOptions"
-        >
-        </l-geo-json>
-
-        <l-control-scale
-          position="bottomleft"
-          :metric="true"
-          :imperial="true"
-        ></l-control-scale>
-        <vue-leaflet-minimap
-          :layer="minimapLayer"
-          :options="miniMapOptions"
-        ></vue-leaflet-minimap>
-      </l-map>
     </div>
-  </div>
+  </q-page>
 </template>
 
 <script>
-import VueLeafletMinimap from "vue-leaflet-minimap";
-import "leaflet-minimap/dist/Control.MiniMap.min.css";
 import { LMap, LGeoJson, LControlScale } from "vue2-leaflet";
 
 export default {
@@ -88,13 +265,12 @@ export default {
     LMap,
     LGeoJson,
     LControlScale,
-    VueLeafletMinimap,
     LTileLayer: () => import("components/tileLayer"),
   },
   data() {
     return {
       lorem:
-        "Habitat Info: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       data: [
         {
           name: "Nutrient Levels",
@@ -117,7 +293,7 @@ export default {
           data: "...",
         },
       ],
-      zoom: 10.8,
+      zoom: 10,
       center: L.latLng(22.340890230379372, 113.97214768915284),
       mapOptions: {
         zoomSnap: 0.2,
@@ -145,30 +321,21 @@ export default {
           };
         },
       },
-      minimapLayer: new L.TileLayer(
-        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
-      ),
-      miniMapOptions: {
-        position: "bottomright",
-        zoomAnimation: true,
-        width: 100,
-        height: 100,
-        toggleDisplay: true,
-        minimize: true,
-      },
     };
   },
 };
 </script>
 
 <style lang="sass">
-.maincard
-  background-color: $blue-grey-5
-  .q-table__top
-    background-color: $indigo-10
-    color: white
-  .q-table__title
-    font-weight: 500
-  td:first-child
-    background-color: $indigo-1
+.q-card
+  width: 98%
+  padding: 4px
+  margin: 2px
+.q-table__top
+  background-color: $indigo-10
+  color: white
+.q-table__title
+  font-weight: 500
+td:first-child
+  background-color: $indigo-1
 </style>
