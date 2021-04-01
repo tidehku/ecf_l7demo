@@ -135,7 +135,7 @@ export default {
           });
         },
       },
-      region: require("../../../EA.json"),
+      region: require("../../MapData/EA.json"),
       regionOptions: {
         style: function style(feature) {
           return {

@@ -135,7 +135,7 @@ export default {
           });
         },
       },
-      region: require("../../../NW.json"),
+      region: require("../../MapData/NW.json"),
       regionOptions: {
         style: function style(feature) {
           return {
