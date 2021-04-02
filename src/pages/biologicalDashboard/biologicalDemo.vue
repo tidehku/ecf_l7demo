@@ -1,6 +1,9 @@
 <template>
   <q-page class="row q-pa-sm justify-center no-wrap page">
-    <q-card class="width:33% listName">
+    <q-card
+      class="listName"
+      style="width:33%"
+    >
       <div class="text-h5 text-bold row justify-center title">
         List of Species Names
       </div>

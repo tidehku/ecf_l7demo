@@ -27,7 +27,7 @@
             v-for="mobile in mobiles"
             :key="mobile.message"
           >
-            <q-item-section> {{ mobile }}</q-item-section>
+            <q-item-section> <i>{{ mobile }} </i></q-item-section>
           </q-item>
         </q-list>
 
@@ -45,7 +45,7 @@
             v-for="sessile in sessiles"
             :key="sessile.message"
           >
-            <q-item-section>{{ sessile }}</q-item-section>
+            <q-item-section> <i>{{ sessile }} </i></q-item-section>
           </q-item>
 
         </q-list>
@@ -72,22 +72,20 @@
       </q-card-section>
 
       <q-card-section horizontal>
+        <div class="col-3 noData">
+          Summer data <br /> not available yet
+        </div>
         <highcharts
           class="col-3"
           :options="pieChart1"
         ></highcharts>
-        <highcharts
-          class="col-3"
-          :options="pieChart2"
-        ></highcharts>
         <q-separator vertical />
+        <div class="col-3 noData">
+          Summer data <br /> not available yet
+        </div>
         <highcharts
           class="col-3"
           :options="pieChart3"
-        ></highcharts>
-        <highcharts
-          class="col-3"
-          :options="pieChart4"
         ></highcharts>
       </q-card-section>
 
@@ -137,7 +135,7 @@
 import Vue from "vue";
 import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
-import { pieData } from "./biologicalData/pie";
+import { pieData } from "./biologicalData/Pie";
 import { barData } from "./biologicalData/bar";
 
 export default {
@@ -145,34 +143,34 @@ export default {
   data() {
     return {
       mobiles: [
-        "Echinolittorin - malaccana",
-        "Echinolittorin - radiata",
-        "Echinolittorina - vidua",
-        "Lunella - granulata",
-        "Monodonta - labio",
-        "Patelloida - ryukyuensis",
-        "Planaxis - sulcatus",
-        "Reishia - clavigera",
-        "Reishia - luteostoma",
-        "Siphonaria - japonica",
-        "Tenguella - musiva",
-        "Liolophura - japonica",
+        "Echinolittorin malaccana",
+        "Echinolittorin radiata",
+        "Echinolittorina vidua",
+        "Lunella granulata",
+        "Monodonta labio",
+        "Patelloida ryukyuensis",
+        "Planaxis sulcatus",
+        "Reishia clavigera",
+        "Reishia luteostoma",
+        "Siphonaria japonica",
+        "Tenguella musiva",
+        "Liolophura japonica",
       ],
       sessiles: [
         "High shore biofilm",
-        "Hildenbrandia - rubra",
-        "Pseudulvella - applanata",
-        "Ulva - lactuca",
-        "Gelidium - pusillum",
-        "Amphibalanus - amphitrite",
-        "Capitulum - mitella",
-        "Tetraclita - squamosa",
-        "Diadumene - lineata",
-        "Barbatia - virescens",
-        "Brachidontes - variabilis",
-        "Isognomon - ephippium",
-        "Saccostrea - cuccullata",
-        "Xenostrobus - securis",
+        "Hildenbrandia rubra",
+        "Pseudulvella applanata",
+        "Ulva lactuca",
+        "Gelidium pusillum",
+        "Amphibalanus amphitrite",
+        "Capitulum mitella",
+        "Tetraclita squamosa",
+        "Diadumene lineata",
+        "Barbatia virescens",
+        "Brachidontes variabilis",
+        "Isognomon ephippium",
+        "Saccostrea cuccullata",
+        "Xenostrobus securis",
       ],
       barChart1: barData.SBBar1,
       barChart2: barData.SBBar2,
@@ -202,4 +200,10 @@ export default {
 .title
   background-color: $indigo-5
   color: white
+.noData
+  margin: auto
+  text-align: center
+  font-weight: bold
+  color: $grey-8
+  font-size: 16px
 </style>

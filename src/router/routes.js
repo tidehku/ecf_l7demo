@@ -14,8 +14,9 @@ const routes = [
         component: () => import("pages/MainPage/SpeciesSearchEngine.vue")
       },
       {
-        path: "physicalDashboard/Ma Shi Chau",
-        component: () => import("pages/highChartsSample.vue")
+        path: "physicalSB",
+        component: () =>
+          import("pages/physicalDashboard/phyStarfishBayCopy.vue")
       }
     ]
   },
