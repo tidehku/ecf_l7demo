@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page class="page">
     <div class="row justify-center no-wrap">
       <q-card
         bordered
@@ -168,14 +168,16 @@ export default {
 </script>
 
 <style lang="sass">
+.page
+  background-color: $grey-6
+  padding: 4px
+  height: 100vh
+  overflow: hidden
 .q-select
   padding: 15px
 .q-card
   width: 97%
   background-color: white
-.q-page
-  background-color: $grey-6
-  padding: 4px
 .temperature
   padding: 2px
   margin: 4px

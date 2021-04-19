@@ -3,31 +3,29 @@
     <div class="row justify-center">
       <q-card
         bordered
-        class="bottomcard"
+        class="temperature"
+        style="width:30%"
       >
         <div class="text-h5 text-bold row justify-center title">
-          Temperature
+          Average Temperature
         </div>
-        <q-card-section horizontal>
-          <div class="col-3 noData">
-            Summer data <br /> not available yet
-          </div>
-          <highcharts
-            class="col-3"
-            :options="Temperature1"
-          ></highcharts>
-          <q-separator vertical />
-          <div class="col-3 noData">
-            Summer data <br /> not available yet
-          </div>
-          <highcharts
-            class="col-3"
-            :options="Temperature2"
-          ></highcharts>
-        </q-card-section>
+        <highcharts :options="Temperature1"></highcharts>
+        <highcharts :options="Temperature2"></highcharts>
+        <highcharts :options="Temperature2"></highcharts>
+      </q-card>
+      <q-card
+        bordered
+        class="temperature"
+        style="width:30%"
+      >
+        <div class="text-h5 text-bold row justify-center title">
+          Max Temperature
+        </div>
+        <highcharts :options="Temperature1"></highcharts>
+        <highcharts :options="Temperature2"></highcharts>
       </q-card>
     </div>
-    <div class="row justify-center no-wrap">
+    <!-- <div class="row justify-center no-wrap">
       <q-card
         bordered
         class="col-3 waveFetch"
@@ -37,7 +35,7 @@
         <highcharts :options="WaveFetch1"></highcharts>
         <highcharts :options="WaveFetch1"></highcharts>
       </q-card>
-    </div>
+    </div> -->
     <div class="row justify-center">
       <q-card
         bordered

@@ -466,6 +466,7 @@ export default {
 <style lang="sass" scoped>
 .page
   background-color: $grey-3
+  height: 100vh
 .maincard
   background-color: $indigo-1
   border-width: 2px

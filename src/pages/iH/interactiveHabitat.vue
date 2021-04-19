@@ -6,14 +6,6 @@
       class="col-4 bg-blue-grey-4 q-py-xl maincard"
       style="height:480px"
     >
-      <!-- remove the SWIMS logo -->
-      <!-- <div class="q-pa-md row justify-center">
-        <q-img
-          src="~/assets/SWIMSlogo2.png"
-          alt="SWIMs logo"
-          style="width: 120px; height: 100%; align: center"
-        />
-      </div> -->
       <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
         Interactive Habitat Map <br />around Hong Kong Rocky Shore <br />by ECF
         2019-2023
@@ -21,7 +13,7 @@
 
       <q-card class="q-mx-lg row justify-center">
         <p class="q-ma-sm q-pa-sm text-black">
-          {{ lorem }}
+          {{ lorem }}{{ lorem }}
         </p>
 
         <p class="text-red-10 text-bold">
@@ -93,7 +85,6 @@ export default {
     return {
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      tab: "mails",
       // splitterModel: 20,
       zoom: 10.25,
       maxZoom: 15,
@@ -110,7 +101,6 @@ export default {
       mapOptions: {
         zoomSnap: 0.25,
       },
-      SitesLocation: require("../../MapData/SamplingPoints.json"),
       regions: require("../../MapData/regions.json"),
       geoJSONOptions: {
         style: function style(feature) {
@@ -124,7 +114,13 @@ export default {
         onEachFeature: (feature, layer) => {
           layer.on("mouseover", (e) => {
             // console.log(feature.properties.name);
-
+            // var marker = new L.marker([22.34, 113.97], { opacity: 0.01 });
+            // marker.bindTooltip("My Label", {
+            //   permanent: true,
+            //   className: "my-label",
+            //   offset: [0, 0],
+            // });
+            // marker.addTo(map);
             var popup = L.popup()
               .setLatLng(e.latlng)
               .setContent(
@@ -157,4 +153,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.my-label
+  position: absolute
+  width: 1000px
+  font-size: 20px
 </style>

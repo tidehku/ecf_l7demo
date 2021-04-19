@@ -177,7 +177,7 @@
       <router-view />
     </q-page-container>
 
-    <q-footer elevated>
+    <!-- <q-footer elevated>
       <q-toolbar
         class="bg-white text-dark"
         style="height: 40px"
@@ -194,7 +194,7 @@
           , The Swire Institute of Marine Science, The University of Hong Kong
         </q-toolbar-title>
       </q-toolbar>
-    </q-footer>
+    </q-footer> -->
   </q-layout>
 </template>
 

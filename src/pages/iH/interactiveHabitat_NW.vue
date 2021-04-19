@@ -1,128 +1,138 @@
 <template>
-  <q-page class="row q-pa-sm q-gutter-xs justify-center bg-grey-6">
-    <q-card
-      bordered
-      style="width:33%"
-    >
-      <q-toolbar class="bg-indigo-10 text-h5 text-bold text-white">
-        North Western Region
-        <q-space />
-        <q-separator
-          dark
-          vertical
-          inset
-        />
-        <q-tabs
-          v-model="tab"
-          inline-label
-          shrink
-        >
-          <q-tab
-            name="Back"
-            label="Back"
-            icon="keyboard_arrow_left"
-            v-go-back="'/interactiveHabitat'"
-          >
-          </q-tab>
-        </q-tabs>
-      </q-toolbar>
-
-      <p class="q-pa-sm row">{{ lorem }}</p>
-      <q-space />
-
-      <q-card class="q-px-xs">
-        <l-map
-          style="height: 330px"
-          :zoom="zoom"
-          :center="center"
-          :options="mapOptions"
-          :max-zoom="zoom"
-          :min-zoom="zoom"
-        >
-          <LTileLayer />
-          <l-geo-json
-            :geojson="region"
-            :options="regionOptions"
-          ></l-geo-json>
-
-          <l-geo-json
-            :geojson="sitesLocation"
-            :options="siteOptions"
-          >
-          </l-geo-json>
-
-          <l-control-scale
-            position="bottomleft"
-            :metric="true"
-            :imperial="true"
-          ></l-control-scale>
-        </l-map>
-      </q-card>
-    </q-card>
-    <div style="width:66%">
+  <q-page class="row q-pa-xs justify-center bg-grey-5 page flex-fluid flex-vertical overflow-hidden">
+    <div style="width:33%">
       <q-card
-        class="bg-indigo-1"
-        style="width:99%; height:39%"
+        class="q-ma-sm bg-white"
+        bordered
       >
-        <div class="q-px-md bg-indigo-10 text-center text-h6 text-bold text-white shadow-2 rounded-borders">
+        <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
+          North Western Region
+          <q-space />
+          <q-separator
+            dark
+            vertical
+            inset
+          />
+          <q-tabs
+            v-model="tab"
+            inline-label
+            shrink
+          >
+            <q-tab
+              name="Back"
+              label="Back"
+              icon="keyboard_arrow_left"
+              v-go-back="'/interactiveHabitat'"
+            >
+            </q-tab>
+          </q-tabs>
+        </q-toolbar>
+        <p class="q-pa-sm">{{ lorem }}</p>
+        <q-card class="q-px-xs">
+          <l-map
+            style="height: 330px"
+            :zoom="zoom"
+            :center="center"
+            :options="mapOptions"
+            :max-zoom="zoom"
+            :min-zoom="zoom"
+          >
+            <LTileLayer />
+            <l-geo-json
+              :geojson="region"
+              :options="regionOptions"
+            ></l-geo-json>
+
+            <l-geo-json
+              :geojson="sitesLocation"
+              :options="siteOptions"
+            >
+            </l-geo-json>
+
+            <l-control-scale
+              position="bottomleft"
+              :metric="true"
+              :imperial="true"
+            ></l-control-scale>
+          </l-map>
+        </q-card>
+      </q-card>
+    </div>
+    <div style="width:66.3%; height:40%">
+      <q-card class="bg-indigo-1">
+        <div class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders">
           Regional Average Data Summary
         </div>
-        <div class="row q-pa-sm justify-around">
+        <div class="row q-pa-sm justify-evenly">
           <q-card
             class="q-pa-sm"
-            style="width:19%; height:40%"
+            style="width:19%"
           >
-            <div class="q-px-sm text-h7 text-bold"> Average <br /> Nutrient Level </div>
+            <div class="q-px-sm text-h7 text-bold">
+              Average <br />
+              Nutrient Level
+            </div>
             <div class="row justify-center">
-              <div class="q-pa-md text-h2 text-bold text-red"> 123 </div>
+              <div class="q-pa-md row text-h2 text-bold text-red">123</div>
             </div>
           </q-card>
           <q-card
-            class="q-pa-sm "
-            style="width:19%; height:40%"
+            class="q-pa-sm"
+            style="width:19%"
           >
-            <div class="q-px-sm text-h7 text-bold"> Average <br /> Wave Fetch </div>
+            <div class="q-px-sm text-h7 text-bold">
+              Average <br />
+              Wave Fetch
+            </div>
             <div class="row justify-center">
-              <div class="q-pa-md text-h2 text-bold text-red"> 123 </div>
+              <div class="q-pa-md row text-h2 text-bold text-orange">123</div>
             </div>
           </q-card>
           <q-card
-            class="q-pa-sm "
-            style="width:19%; height:40%"
+            class="q-pa-sm"
+            style="width:19%"
           >
-            <div class="q-px-sm text-h7 text-bold"> Average <br />Temperature </div>
+            <div class="q-px-sm text-h7 text-bold">
+              Average <br />Temperature
+            </div>
             <div class="row justify-center">
-              <div class="q-pa-md text-h2 text-bold text-red"> 123 </div>
+              <div class="q-pa-md row text-h2 text-bold text-green">123</div>
             </div>
           </q-card>
           <q-card
-            class="q-pa-sm "
-            style="width:19%; height:40%"
+            class="q-pa-sm"
+            style="width:19%"
           >
-            <div class="q-px-sm text-h7 text-bold"> Number of <br />Mobile Species </div>
+            <div class="q-px-sm text-h7 text-bold">
+              Number of <br />Mobile Species
+            </div>
             <div class="row justify-center">
-              <div class="q-pa-md text-h2 text-bold text-red"> 123 </div>
+              <div class="q-pa-md row text-h2 text-bold text-blue-6">123</div>
             </div>
           </q-card>
           <q-card
-            class="q-pa-sm "
-            style="width:19%; height:40%"
+            class="q-pa-sm"
+            style="width:19%"
           >
-            <div class="q-px-sm text-h7 text-bold"> Number of <br />Sessile Species </div>
+            <div class="q-px-sm text-h7 text-bold">
+              Number of <br />Sessile Species
+            </div>
             <div class="row justify-center">
-              <div class="q-pa-md text-h2 text-bold text-red"> 123 </div>
+              <div class="q-pa-md row text-h2 text-bold text-deep-purple">
+                123
+              </div>
             </div>
           </q-card>
         </div>
       </q-card>
       <div class="row justify-around">
         <q-card
-          class="q-pa-xs"
-          style="width:24%; height:60"
-          v-for="n in 4"
-          :key="`y.${n}`"
+          class="q-ma-md"
+          style="width:24%; height:56%"
         >
-          <div class="q-pa-sm bg-indigo-9 text-h5 text-bold text-white"> Lung Kwu Tan</div>
+          <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
+            Lung Kwu Tan
+          </div>
           <q-img
             src="~/assets/SiteImage/StarfishBay.png"
             height="200px"
@@ -133,7 +143,76 @@
               class="q-ma-sm"
               style="align-items: center"
               no-caps
-              color="indigo-5"
+              color="indigo-6"
+              label="Learn more"
+              @click="card1 = true"
+            />
+          </div>
+        </q-card>
+        <q-card
+          class="q-ma-md"
+          style="width:24%; height:56%"
+        >
+          <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
+            Siu Lam
+          </div>
+          <q-img
+            src="~/assets/SiteImage/StarfishBay.png"
+            height="200px"
+            basic
+          />
+          <div class="row justify-end">
+            <q-btn
+              class="q-ma-sm"
+              style="align-items: center"
+              no-caps
+              color="indigo-6"
+              label="Learn more"
+              @click="card1 = true"
+            />
+          </div>
+        </q-card>
+        <q-card
+          class="q-ma-md"
+          style="width:24%; height:56%"
+        >
+          <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
+            Luk Keng
+          </div>
+          <q-img
+            src="~/assets/SiteImage/StarfishBay.png"
+            height="200px"
+            basic
+          />
+          <div class="row justify-end">
+            <q-btn
+              class="q-ma-sm"
+              style="align-items: center"
+              no-caps
+              color="indigo-6"
+              label="Learn more"
+              @click="card1 = true"
+            />
+          </div>
+        </q-card>
+        <q-card
+          class="q-ma-md"
+          style="width:24%; height:56%"
+        >
+          <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
+            Tai Long Wan
+          </div>
+          <q-img
+            src="~/assets/SiteImage/StarfishBay.png"
+            height="200px"
+            basic
+          />
+          <div class="row justify-end">
+            <q-btn
+              class="q-ma-sm"
+              style="align-items: center"
+              no-caps
+              color="indigo-6"
               label="Learn more"
               @click="card1 = true"
             />
@@ -171,23 +250,27 @@
                 src="~assets/SiteImage/StarfishBay.png"
               />
               <q-card-section class="text-subtitle1">
-                <b>Site Name: </b>Starfish Bay <br />
-                <b>Region: </b>Tolo Harbour <br />
-                <b>GPS:</b> 22°26'10.5"N 114°14'49.5"E <br />
-                <b>Tidal range:</b> Survey area ranges from a Low of 1.28 m to a
-                high of 3.00 m above Chart Datum. <br />
-                <b>Transect length:</b> 14 m <br />
-                <b>Shore exposure:</b> Biologically defined as sheltered to
-                intermediate. <br />
-                <b>Aspect:</b> North. <br />
-                <b>Slope:</b> / <br />
-                <b>Rock type:</b> Predominantly igneous rock composed of
-                homogeneous and equigranular granite. (CEDD, 2006). <br />
-                <b>Feasibility:</b> When assessing this site’s suitability, it was
-                determined to be moderately susceptible to vessel traffic and of
-                low susceptibility to sand inundation and human disturbance. As a
-                result, the site poses a low safety risk from oncoming wave
-                action. <br />
+                <t>Site Name: </t> {{siteName}} <br />
+                <t>Region: </t> {{regionName}} <br />
+                <t>GPS:</t> {{GPS}} <br />
+                <t>Tidal range:</t> {{tidalRange}} <br />
+                <t>Transect length:</t> {{transectLength}} <br />
+                <t>Shore exposure:</t> {{shoreExposure}} <br />
+                <t>Aspect:</t> {{aspect}}<br />
+                <t>Slope:</t> {{slope}} <br />
+                <t>Rock type:</t> {{rockType}} <br />
+                <t>Feasibility:</t> {{feasibility}}
+                <!-- <q-table
+                  class="table"
+                  title="Starfish Bay Site Information"
+                  :data="Table_TLSB"
+                  separator="horizontal"
+                  dense
+                  hide-bottom
+                  hide-header
+                  title-class="bolded"
+                >
+                </q-table> -->
 
                 <div class="q-py-lg row justify-around">
                   <q-btn
@@ -202,14 +285,11 @@
                   />
                 </div>
               </q-card-section>
-
             </q-card-section>
-
           </q-card>
         </q-dialog>
       </div>
     </div>
-
   </q-page>
 </template>
 
@@ -229,8 +309,63 @@ export default {
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       card1: false,
+      siteName: `Starfish Bay`,
+      regionName: `Tolo Harbour`,
+      GPS: `22°26'10.5"N 114°14'49.5"E`,
+      tidalRange: `Survey area ranges from a Low of 1.28 m to a high of 3.00 m above Chart Datum.`,
+      transectLength: `14 m`,
+      shoreExposure: `Biologically defined as sheltered to intermediate.`,
+      aspect: `North`,
+      slope: `/`,
+      rockType: `Predominantly igneous rock composed of homogeneous and equigranular granite. (CEDD, 2006).`,
+      feasibility: `When assessing this site’s suitability, it was determined to be moderately susceptible to vessel traffic and of 
+      low susceptibility to sand inundation and human disturbance. As a result, the site poses a low safety risk from oncoming wave action. `,
+      // Table_TLSB: [
+      //   {
+      //     name: "Site Name",
+      //     data: "Starfish Bay",
+      //   },
+      //   {
+      //     name: "Region",
+      //     data: "Tolo Harbour",
+      //   },
+      //   {
+      //     name: "GPS",
+      //     data: `22°26'10.5"N 114°14'49.5"E`,
+      //   },
+      //   {
+      //     name: "Tidal Range",
+      //     data:
+      //       "Survey area ranges from a Low of 1.28 m to a high of 3.00 m above Chart Datum.",
+      //   },
+      //   {
+      //     name: "Transect length",
+      //     data: "14 m",
+      //   },
+      //   {
+      //     name: "Shore exposure",
+      //     data: "Biologically defined as sheltered to intermediate",
+      //   },
+      //   {
+      //     name: "Aspect",
+      //     data: "North",
+      //   },
+      //   {
+      //     name: "Slope",
+      //     data: "/",
+      //   },
+      //   {
+      //     name: "Rock type",
+      //     data: `Predominantly igneous rock composed of homogeneous and equigranular granite. (CEDD, 2006).`,
+      //   },
+      //   {
+      //     name: "Feasibility",
+      //     data:
+      //       "When assessing this site’s suitability, it was determined to be moderately susceptible to vessel traffic and of low susceptibility to sand inundation and human disturbance. As a result, the site poses a low safety risk from oncoming wave action.",
+      //   },
+      // ],
       zoom: 10,
-      center: L.latLng(22.340890230379372, 113.97214768915284),
+      center: L.latLng(22.34, 113.97214768915284),
       mapOptions: {
         zoomSnap: 0.2,
       },
@@ -263,7 +398,20 @@ export default {
 </script>
 
 <style lang="sass">
+.page
+  position: absolute
+  height: 100%
+  width: 100%
+
 .q-card
   padding: 4px
   margin: 3px
+t
+  color: $indigo-5
+  font-weight: 900
+// .table
+//   font-size: 14px
+//   td:first-child
+//     background-color: $indigo-1
+//     font-weight: bold
 </style>
