@@ -277,42 +277,76 @@
           </q-tab-panel>
         </q-tab-panels>
       </q-card>
+    </q-card>
 
-      <!-- <q-option-group
-        class="row justify-evenly"
-        v-model="group"
-        :options="options"
-        color="primary"
-        inline
-      />
-      <div class="q-py-md row justify-center q-gutter-md">
-        <q-card
-          class="col-3 sitecard"
-          v-for="item in items"
-          :key="item.message"
-        >
-          <q-img
-            src="~/assets/rockyshore.jpg"
-            basic
-          >
-            <div class="absolute-bottom text-h6">
-              Eastern - {{ item }}
-            </div>
-          </q-img>
-
-          <q-card-section>
-            {{ lorem }}
+    <q-card class="q-ma-md maincard">
+      <q-card-section class="bg-indigo-6 text-white">
+        <div class="text-h4 text-bold text-center">Important Links</div>
+      </q-card-section>
+      <q-card-section class="row justify-around">
+        <q-card class="col-3 q-pa-sm sitecard">
+          <q-card-section class="q-pa-lg">
+            <q-img src="~/assets/hkulogo.jpg">
+            </q-img>
           </q-card-section>
-
-          <div class="q-pa-md row justify-end">
+          <div class="row justify-center">
             <q-btn
               no-caps
               color="indigo-5"
-              label="Learn more"
+              label="The University of Hong Kong (HKU)"
+              type="a"
+              href="https://www.hku.hk/"
             />
           </div>
         </q-card>
-      </div> -->
+
+        <q-card class="col-3 q-pa-sm sitecard">
+          <q-card-section class="q-pa-lg">
+            <q-img src="~/assets/SWIMSlogo2.png">
+            </q-img>
+          </q-card-section>
+          <div class="row justify-center">
+            <q-btn
+              no-caps
+              color="indigo-5"
+              label="The Swire Institute of Marine Science (SWIMS)"
+              type="a"
+              href="https://www.swims.hku.hk/"
+            />
+          </div>
+        </q-card>
+        <q-card class="col-3 q-pa-sm sitecard">
+          <q-card-section>
+            <q-img src="~/assets/TIDElogo.png">
+            </q-img>
+          </q-card-section>
+          <div class="row justify-center">
+            <q-btn
+              no-caps
+              color="indigo-5"
+              label="Tropical IntertiDal Ecology (TIDE) Group"
+              type="a"
+              href="https://www.tidehku.com/"
+            />
+          </div>
+        </q-card>
+        <q-card class="col-3 q-pa-sm sitecard">
+          <q-card-section class="q-pa-lg">
+            <q-img src="~/assets/ECFlogo.jpg">
+            </q-img>
+          </q-card-section>
+          <div class="row justify-center">
+            <q-btn
+              no-caps
+              color="indigo-5"
+              label="Environment and Conservation Fund (ECF)"
+              type="a"
+              href="https://www.ecf.gov.hk/en/home/index.html"
+            />
+          </div>
+        </q-card>
+      </q-card-section>
+      </q-card-actions>
     </q-card>
 
     <q-card
@@ -381,6 +415,55 @@
         </q-card>
       </div>
     </q-card>
+
+    <q-card
+      flat
+      bordered
+      class="q-ma-sm maincard"
+    >
+      <!-- add the aviable links -->
+      <div class="q-pa-md row text-h4 text-bold justify-center subtitle">
+        Photo Gallery | Species around Hong Kong Rocky Shore
+      </div>
+      <q-card-section class="q-pa-md">
+        <q-carousel
+          arrows
+          animated
+          v-model="slide2"
+          height="450px"
+        >
+          <q-carousel-slide
+            name="first"
+            img-src="https://st4.depositphotos.com/11040300/31028/i/1600/depositphotos_310289226-stock-photo-tiny-sea-shells-lunella-coronata.jpg"
+          >
+            <div class="absolute-bottom custom-caption">
+              <div class="text-h2">Species One</div>
+              <div class="text-subtitle1">Lunella Coronata</div>
+            </div>
+          </q-carousel-slide>
+          <q-carousel-slide
+            name="second"
+            img-src="https://live.staticflickr.com/4480/37090314393_d7f0e99270_b.jpg"
+          >
+            <div class="absolute-bottom custom-caption">
+              <div class="text-h2">Species Two</div>
+              <div class="text-subtitle1">Diadumene lineata</div>
+            </div>
+          </q-carousel-slide>
+          <q-carousel-slide
+            name="third"
+            img-src="https://static.inaturalist.org/photos/16832624/large.jpg?1525025403"
+          >
+            <div class="absolute-bottom custom-caption">
+              <div class="text-h2">Species Three</div>
+              <div class="text-subtitle1">Saccostrea cuccullata</div>
+            </div>
+          </q-carousel-slide>
+        </q-carousel>
+      </q-card-section>
+
+    </q-card>
+
   </div>
 </template>
 
@@ -396,6 +479,7 @@ export default {
       Identity: "Student",
       tab: "interactiveHabitat",
       slide: 1,
+      slide2: "first",
       autoplay: false,
       group: "op1",
       options: [
@@ -477,4 +561,9 @@ export default {
 .subtitle
   background-color: $indigo-6
   color: white
+.custom-caption
+  text-align: center
+  padding: 12px
+  color: white
+  background-color: rgba(0, 0, 0, .3)
 </style>

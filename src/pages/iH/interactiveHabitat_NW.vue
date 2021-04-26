@@ -1,5 +1,5 @@
 <template>
-  <q-page class="row q-pa-xs justify-center bg-grey-5 page flex-fluid flex-vertical overflow-hidden">
+  <q-page class="row q-pa-xs justify-center bg-grey-5 page">
     <div style="width:33%">
       <q-card
         class="q-ma-sm bg-white"
@@ -398,11 +398,6 @@ export default {
 </script>
 
 <style lang="sass">
-.page
-  position: absolute
-  height: 100%
-  width: 100%
-
 .q-card
   padding: 4px
   margin: 3px

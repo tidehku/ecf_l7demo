@@ -136,6 +136,8 @@ export default {
 .q-page
   background-color: $grey-6
   padding: 4px
+  // height: 90vh
+  // overflow: hidden
 .temperature
   padding: 2px
   margin: 4px

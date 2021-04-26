@@ -25,9 +25,9 @@ export const tempData = {
       }
     },
     legend: {
-      // enabled: false,
+      enabled: true,
       layout: "proximate",
-      align: "right",
+
       verticalAlign: "middle"
     },
     series: [
