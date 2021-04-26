@@ -4,17 +4,17 @@
       bordered
       dark
       class="col-4 bg-blue-grey-4 q-py-xl maincard"
-      style="height:480px"
+      style="height: 480px"
     >
-      <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
+      <q-card
+        class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white"
+      >
         Interactive Habitat Map <br />around Hong Kong Rocky Shore <br />by ECF
         2019-2023
       </q-card>
 
       <q-card class="q-mx-lg row justify-center">
-        <p class="q-ma-sm q-pa-sm text-black">
-          {{ lorem }}{{ lorem }}
-        </p>
+        <p class="q-ma-sm q-pa-sm text-black">{{ lorem }}{{ lorem }}</p>
 
         <p class="text-red-10 text-bold">
           ( Hint: Please Click Any Zone for Localized Data )
@@ -40,17 +40,10 @@
         :zoom="zoom"
         :center="center"
         :options="mapOptions"
-        :bounds="bounds"
-        :max-bounds="maxBounds"
-        :max-zoom="maxZoom"
-        :min-zoom="minZoom"
         ref="myMapRef"
       >
         <LTileLayer />
-        <l-geo-json
-          :geojson="regions"
-          :options="geoJSONOptions"
-        > </l-geo-json>
+        <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
 
         <l-control-scale
           position="bottomleft"
@@ -85,7 +78,6 @@ export default {
     return {
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      // splitterModel: 20,
       zoom: 10.25,
       maxZoom: 15,
       minZoom: 10.25,
@@ -112,7 +104,7 @@ export default {
           };
         },
         onEachFeature: (feature, layer) => {
-          layer.on("mouseover", (e) => {
+          layer.on("mouseover", () => {
             // console.log(feature.properties.name);
             // var marker = new L.marker([22.34, 113.97], { opacity: 0.01 });
             // marker.bindTooltip("My Label", {
@@ -121,7 +113,7 @@ export default {
             //   offset: [0, 0],
             // });
             // marker.addTo(map);
-            var popup = L.popup()
+            var popup = new L.popup()
               .setLatLng(e.latlng)
               .setContent(
                 '<p style="color: grey;">' + feature.properties.name + "</p>"
@@ -130,7 +122,7 @@ export default {
           });
 
           /* click on the geojson feature to navigate */
-          layer.on("click", (e) => {
+          layer.on("click", () => {
             // console.log(feature.properties.name);
             this.$router.push(`interactiveHabitat/${feature.properties.name}`);
           });

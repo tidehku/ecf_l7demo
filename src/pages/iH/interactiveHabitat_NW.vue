@@ -1,30 +1,19 @@
 <template>
   <q-page class="row q-pa-xs justify-center bg-grey-5 page">
-    <div style="width:33%">
-      <q-card
-        class="q-ma-sm bg-white"
-        bordered
-      >
+    <div style="width: 33%">
+      <q-card class="q-ma-sm bg-white" bordered>
         <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
           North Western Region
           <q-space />
-          <q-separator
-            dark
-            vertical
-            inset
-          />
-          <q-tabs
-            v-model="tab"
-            inline-label
-            shrink
-          >
-            <q-tab
+          <q-separator dark vertical inset />
+          <q-tabs inline-label shrink>
+            <q-route-tab
               name="Back"
               label="Back"
               icon="keyboard_arrow_left"
-              v-go-back="'/interactiveHabitat'"
+              to="/interactiveHabitat"
             >
-            </q-tab>
+            </q-route-tab>
           </q-tabs>
         </q-toolbar>
         <p class="q-pa-sm">{{ lorem }}</p>
@@ -38,15 +27,9 @@
             :min-zoom="zoom"
           >
             <LTileLayer />
-            <l-geo-json
-              :geojson="region"
-              :options="regionOptions"
-            ></l-geo-json>
+            <l-geo-json :geojson="region" :options="regionOptions"></l-geo-json>
 
-            <l-geo-json
-              :geojson="sitesLocation"
-              :options="siteOptions"
-            >
+            <l-geo-json :geojson="sitesLocation" :options="siteOptions">
             </l-geo-json>
 
             <l-control-scale
@@ -58,16 +41,15 @@
         </q-card>
       </q-card>
     </div>
-    <div style="width:66.3%; height:40%">
+    <div style="width: 66.3%; height: 40%">
       <q-card class="bg-indigo-1">
-        <div class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders">
+        <div
+          class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders"
+        >
           Regional Average Data Summary
         </div>
         <div class="row q-pa-sm justify-evenly">
-          <q-card
-            class="q-pa-sm"
-            style="width:19%"
-          >
+          <q-card class="q-pa-sm" style="width: 19%">
             <div class="q-px-sm text-h7 text-bold">
               Average <br />
               Nutrient Level
@@ -76,10 +58,7 @@
               <div class="q-pa-md row text-h2 text-bold text-red">123</div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width:19%"
-          >
+          <q-card class="q-pa-sm" style="width: 19%">
             <div class="q-px-sm text-h7 text-bold">
               Average <br />
               Wave Fetch
@@ -88,10 +67,7 @@
               <div class="q-pa-md row text-h2 text-bold text-orange">123</div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width:19%"
-          >
+          <q-card class="q-pa-sm" style="width: 19%">
             <div class="q-px-sm text-h7 text-bold">
               Average <br />Temperature
             </div>
@@ -99,10 +75,7 @@
               <div class="q-pa-md row text-h2 text-bold text-green">123</div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width:19%"
-          >
+          <q-card class="q-pa-sm" style="width: 19%">
             <div class="q-px-sm text-h7 text-bold">
               Number of <br />Mobile Species
             </div>
@@ -110,10 +83,7 @@
               <div class="q-pa-md row text-h2 text-bold text-blue-6">123</div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width:19%"
-          >
+          <q-card class="q-pa-sm" style="width: 19%">
             <div class="q-px-sm text-h7 text-bold">
               Number of <br />Sessile Species
             </div>
@@ -126,10 +96,7 @@
         </div>
       </q-card>
       <div class="row justify-around">
-        <q-card
-          class="q-ma-md"
-          style="width:24%; height:56%"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 56%">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Lung Kwu Tan
           </div>
@@ -149,10 +116,7 @@
             />
           </div>
         </q-card>
-        <q-card
-          class="q-ma-md"
-          style="width:24%; height:56%"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 56%">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Siu Lam
           </div>
@@ -172,10 +136,7 @@
             />
           </div>
         </q-card>
-        <q-card
-          class="q-ma-md"
-          style="width:24%; height:56%"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 56%">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Luk Keng
           </div>
@@ -195,10 +156,7 @@
             />
           </div>
         </q-card>
-        <q-card
-          class="q-ma-md"
-          style="width:24%; height:56%"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 56%">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Tai Long Wan
           </div>
@@ -229,20 +187,12 @@
             <q-bar>
               <b>Site Introduction: Tolo Habour | Starfish Bay </b>
               <q-space />
-              <q-btn
-                dense
-                flat
-                icon="close"
-                v-close-popup
-              >
+              <q-btn dense flat icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section
-              horizontal
-              class="q-pa-md"
-            >
+            <q-card-section horizontal class="q-pa-md">
               <q-img
                 class="q-ma-md"
                 height="450px"
@@ -250,16 +200,16 @@
                 src="~assets/SiteImage/StarfishBay.png"
               />
               <q-card-section class="text-subtitle1">
-                <t>Site Name: </t> {{siteName}} <br />
-                <t>Region: </t> {{regionName}} <br />
-                <t>GPS:</t> {{GPS}} <br />
-                <t>Tidal range:</t> {{tidalRange}} <br />
-                <t>Transect length:</t> {{transectLength}} <br />
-                <t>Shore exposure:</t> {{shoreExposure}} <br />
-                <t>Aspect:</t> {{aspect}}<br />
-                <t>Slope:</t> {{slope}} <br />
-                <t>Rock type:</t> {{rockType}} <br />
-                <t>Feasibility:</t> {{feasibility}}
+                <t>Site Name: </t> {{ siteName }} <br />
+                <t>Region: </t> {{ regionName }} <br />
+                <t>GPS:</t> {{ GPS }} <br />
+                <t>Tidal range:</t> {{ tidalRange }} <br />
+                <t>Transect length:</t> {{ transectLength }} <br />
+                <t>Shore exposure:</t> {{ shoreExposure }} <br />
+                <t>Aspect:</t> {{ aspect }}<br />
+                <t>Slope:</t> {{ slope }} <br />
+                <t>Rock type:</t> {{ rockType }} <br />
+                <t>Feasibility:</t> {{ feasibility }}
                 <!-- <q-table
                   class="table"
                   title="Starfish Bay Site Information"
