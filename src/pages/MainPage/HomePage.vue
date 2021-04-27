@@ -35,28 +35,17 @@
       Welcome to ECF Rocky Shore GIS Website Storyboard
     </div>
 
-    <q-card
-      flat
-      bordered
-      class="q-ma-sm maincard"
-    >
+    <q-card flat bordered class="q-ma-sm maincard">
       <q-card-section horizontal>
         <div class="q-ma-md q-gutter-lg">
           <div class="text-h4 text-bold text-indigo">Hong Kong Rocky Shore</div>
           <p>{{ lorem }} {{ lorem }} {{ lorem }}</p>
         </div>
-        <q-img
-          class="col-5"
-          src="~/assets/rockyshore.jpg"
-        />
+        <q-img class="col-5" src="~/assets/rockyshore.jpg" />
       </q-card-section>
     </q-card>
 
-    <q-card
-      flat
-      bordered
-      class="q-ma-sm maincard"
-    >
+    <q-card flat bordered class="q-ma-sm maincard">
       <div class="q-pa-md row text-h4 text-bold justify-center subtitle">
         ECF Rocky Shore Sampling Sites
       </div>
@@ -71,36 +60,15 @@
           align="justify"
           narrow-indicator
         >
-          <q-tab
-            name="Eastern"
-            label="Eastern"
-          />
-          <q-tab
-            name="North Eastern"
-            label="North Eastern"
-          />
-          <q-tab
-            name="North Western"
-            label="North Western"
-          />
-          <q-tab
-            name="Southern"
-            label="Southern"
-          />
-          <q-tab
-            name="South Western"
-            label="South Western"
-          />
-          <q-tab
-            name="Tolo Habour"
-            label="Tolo Habour"
-          />
+          <q-tab name="Eastern" label="Eastern" />
+          <q-tab name="North Eastern" label="North Eastern" />
+          <q-tab name="North Western" label="North Western" />
+          <q-tab name="Southern" label="Southern" />
+          <q-tab name="South Western" label="South Western" />
+          <q-tab name="Tolo Habour" label="Tolo Habour" />
         </q-tabs>
         <q-separator />
-        <q-tab-panels
-          v-model="tab"
-          animated
-        >
+        <q-tab-panels v-model="tab" animated>
           <q-tab-panel name="Eastern">
             <div class="row justify-center q-gutter-md">
               <q-card
@@ -108,10 +76,7 @@
                 v-for="EA in EAs"
                 :key="EA.message"
               >
-                <q-img
-                  src="~/assets/rockyshore.jpg"
-                  basic
-                >
+                <q-img src="~/assets/rockyshore.jpg" basic>
                   <div class="absolute-bottom text-bold text-h7">
                     Eastern - {{ EA }}
                   </div>
@@ -138,10 +103,7 @@
                 v-for="NE in NEs"
                 :key="NE.message"
               >
-                <q-img
-                  src="~/assets/rockyshore.jpg"
-                  basic
-                >
+                <q-img src="~/assets/rockyshore.jpg" basic>
                   <div class="absolute-bottom text-bold text-h7">
                     North Eastern - {{ NE }}
                   </div>
@@ -150,11 +112,7 @@
                   {{ lorem }}
                 </q-card-section>
                 <div class="q-pa-md row justify-end">
-                  <q-btn
-                    no-caps
-                    color="indigo-5"
-                    label="Learn more"
-                  />
+                  <q-btn no-caps color="indigo-5" label="Learn more" />
                 </div>
               </q-card>
             </div>
@@ -167,10 +125,7 @@
                 v-for="NW in NWs"
                 :key="NW.message"
               >
-                <q-img
-                  src="~/assets/rockyshore.jpg"
-                  basic
-                >
+                <q-img src="~/assets/rockyshore.jpg" basic>
                   <div class="absolute-bottom text-bold text-h7">
                     North Western - {{ NW }}
                   </div>
@@ -179,11 +134,7 @@
                   {{ lorem }}
                 </q-card-section>
                 <div class="q-pa-md row justify-end">
-                  <q-btn
-                    no-caps
-                    color="indigo-5"
-                    label="Learn more"
-                  />
+                  <q-btn no-caps color="indigo-5" label="Learn more" />
                 </div>
               </q-card>
             </div>
@@ -196,10 +147,7 @@
                 v-for="SO in SOs"
                 :key="SO.message"
               >
-                <q-img
-                  src="~/assets/rockyshore.jpg"
-                  basic
-                >
+                <q-img src="~/assets/rockyshore.jpg" basic>
                   <div class="absolute-bottom text-bold text-h7">
                     Southern - {{ SO }}
                   </div>
@@ -208,11 +156,7 @@
                   {{ lorem }}
                 </q-card-section>
                 <div class="q-pa-md row justify-end">
-                  <q-btn
-                    no-caps
-                    color="indigo-5"
-                    label="Learn more"
-                  />
+                  <q-btn no-caps color="indigo-5" label="Learn more" />
                 </div>
               </q-card>
             </div>
@@ -225,10 +169,7 @@
                 v-for="SW in SWs"
                 :key="SW.message"
               >
-                <q-img
-                  src="~/assets/rockyshore.jpg"
-                  basic
-                >
+                <q-img src="~/assets/rockyshore.jpg" basic>
                   <div class="absolute-bottom text-bold text-h7">
                     South Western - {{ SW }}
                   </div>
@@ -237,11 +178,7 @@
                   {{ lorem }}
                 </q-card-section>
                 <div class="q-pa-md row justify-end">
-                  <q-btn
-                    no-caps
-                    color="indigo-5"
-                    label="Learn more"
-                  />
+                  <q-btn no-caps color="indigo-5" label="Learn more" />
                 </div>
               </q-card>
             </div>
@@ -254,10 +191,7 @@
                 v-for="TL in TLs"
                 :key="TL.message"
               >
-                <q-img
-                  src="~/assets/rockyshore.jpg"
-                  basic
-                >
+                <q-img src="~/assets/rockyshore.jpg" basic>
                   <div class="absolute-bottom text-bold text-h7">
                     Tolo Habour - {{ TL }}
                   </div>
@@ -266,11 +200,7 @@
                   {{ lorem }}
                 </q-card-section>
                 <div class="q-pa-md row justify-end">
-                  <q-btn
-                    no-caps
-                    color="indigo-5"
-                    label="Learn more"
-                  />
+                  <q-btn no-caps color="indigo-5" label="Learn more" />
                 </div>
               </q-card>
             </div>
@@ -294,6 +224,7 @@
               color="indigo-5"
               label="The University of Hong Kong (HKU)"
               type="a"
+              target="_blank"
               href="https://www.hku.hk/"
             />
           </div>
@@ -309,6 +240,7 @@
               color="indigo-5"
               label="The Swire Institute of Marine Science (SWIMS)"
               type="a"
+              target="_blank"
               href="https://www.swims.hku.hk/"
             />
           </div>
@@ -323,6 +255,7 @@
               color="indigo-5"
               label="Tropical IntertiDal Ecology (TIDE) Group"
               type="a"
+              target="_blank"
               href="https://www.tidehku.com/"
             />
           </div>
@@ -337,6 +270,7 @@
               color="indigo-5"
               label="Environment and Conservation Fund (ECF)"
               type="a"
+              target="_blank"
               href="https://www.ecf.gov.hk/en/home/index.html"
             />
           </div>
@@ -344,26 +278,16 @@
       </q-card-section>
     </q-card>
 
-    <q-card
-      flat
-      bordered
-      class="q-ma-sm maincard"
-    >
+    <q-card flat bordered class="q-ma-sm maincard">
       <!-- add the aviable links -->
       <div class="q-pa-md row text-h4 text-bold justify-center subtitle">
         About Us | Tropical IntertiDal Ecology (TIDE) Group
       </div>
-      <q-card-section
-        class="q-pa-md maincard"
-        horizontal
-      >
+      <q-card-section class="q-pa-md maincard" horizontal>
         <div class="q-ma-md">
           <p>{{ TidesMessage }}</p>
         </div>
-        <q-img
-          class="col-5"
-          src="~/assets/rockyshore.jpg"
-        />
+        <q-img class="col-5" src="~/assets/rockyshore.jpg" />
       </q-card-section>
 
       <!-- breakpoint of the section -->
@@ -377,10 +301,7 @@
           v-for="item in 10"
           :key="item.message"
         >
-          <q-img
-            src="~assets/personicon.png"
-            basic
-          > </q-img>
+          <q-img src="~assets/personicon.png" basic> </q-img>
           <div class="q-px-md subtitle">
             <div class="text-h5 text-bold">Name</div>
             <div class="text-caption text-indigo-2 text-italic">
@@ -410,22 +331,13 @@
       </div>
     </q-card>
 
-    <q-card
-      flat
-      bordered
-      class="q-ma-sm maincard"
-    >
+    <q-card flat bordered class="q-ma-sm maincard">
       <!-- add the aviable links -->
       <div class="q-pa-md row text-h4 text-bold justify-center subtitle">
         Photo Gallery | Species around Hong Kong Rocky Shore
       </div>
       <q-card-section class="q-pa-md">
-        <q-carousel
-          arrows
-          animated
-          v-model="slide2"
-          height="450px"
-        >
+        <q-carousel arrows animated v-model="slide2" height="450px">
           <q-carousel-slide
             name="first"
             img-src="https://live.staticflickr.com/4480/37090314393_d7f0e99270_b.jpg"
