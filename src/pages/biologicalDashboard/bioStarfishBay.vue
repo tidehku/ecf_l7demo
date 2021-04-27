@@ -5,11 +5,10 @@
         List of Species Names
       </div>
       <div class="row justify-around">
-        <div class="text-h6 text-indigo-5 text-bold">Mobile species
+        <div class="text-indigo-5 text-bold">Mobile species
         </div>
-        <div class="text-h6 text-indigo-5 text-bold">Sessile species
+        <div class="text-indigo-5 text-bold">Sessile species
         </div>
-
       </div>
 
       <div class="q-pa-sm q-gutter-sm justify-center row">
@@ -18,7 +17,7 @@
           bordered
           separator
           padding
-          class="bg-red-1 rounded-borders"
+          class="bg-indigo-1 text-caption rounded-borders"
           style="width: 180px"
         >
           <q-item
@@ -36,8 +35,8 @@
           bordered
           separator
           padding
-          class="bg-red-1 rounded-borders"
-          style="width: 190px"
+          class="bg-red-1 text-caption rounded-borders"
+          style="width: 180px"
         >
           <q-item
             clickable
@@ -54,56 +53,61 @@
 
     <q-card class="col-8 chartCard">
       <div class="text-h5 text-bold row justify-center title">Species Abundance and Diversity Indices</div>
-      <q-separator />
 
       <q-card-section horizontal>
-        <div class="col-6 row q-pa-xs justify-center">
-          <q-badge
-            color="red-5"
-            class="text-white text-bold multi-line"
-          >Mobile Species</q-badge>
-        </div>
-        <div class="col-6 row q-pa-xs justify-center">
-          <q-badge
-            color="red-5"
-            class="text-white text-bold multi-line"
-          >Sessile Species</q-badge>
+        <div class="col-12 row q-pa-xs justify-around">
+          <div class="text-indigo-5 text-bold">Mobile species
+          </div>
+          <div class="text-indigo-5 text-bold">Sessile species
+          </div>
         </div>
       </q-card-section>
 
+      <div class="row q-pa-xs justify-around">
+        <q-badge
+          color="indigo-2"
+          class="text-black text-bold multi-line"
+        >2020 winter</q-badge>
+        <q-badge
+          color="indigo-2"
+          class="text-black text-bold multi-line"
+        >2021 summer</q-badge>
+        <q-badge
+          color="indigo-2"
+          class="text-black text-bold multi-line"
+        >2020 winter</q-badge>
+        <q-badge
+          color="indigo-2"
+          class="text-black text-bold multi-line"
+        >2021 summer</q-badge>
+      </div>
+
       <q-card-section horizontal>
-        <div class="col-3 noData">
-          Summer data <br /> not available yet
-        </div>
         <highcharts
           class="col-3"
           :options="pieChart1"
         ></highcharts>
-        <q-separator vertical />
         <div class="col-3 noData">
-          Summer data <br /> not available yet
+          Summer data <br /> Not available yet
         </div>
+        <q-separator vertical />
         <highcharts
           class="col-3"
           :options="pieChart3"
         ></highcharts>
+        <div class="col-3 noData">
+          Summer data <br /> Not available yet
+        </div>
       </q-card-section>
 
+      <q-separator />
       <div class="row justify-around">
-        <q-badge
-          color="red-5"
-          class="text-white text-bold multi-line"
-        >Shannon's Diversity index H'</q-badge>
-
-        <q-badge
-          color="red-5"
-          class="text-white text-bold multi-line"
-        >Pielou's evenness J</q-badge>
-
-        <q-badge
-          color="red-5"
-          class="text-white text-bold multi-line"
-        >Species richness S</q-badge>
+        <div class="text-indigo-5 text-bold">Shannon's Diversity index H'
+        </div>
+        <div class="text-indigo-5 text-bold">Pielou's evenness J
+        </div>
+        <div class="text-indigo-5 text-bold">Species richness S
+        </div>
       </div>
 
       <q-card-section

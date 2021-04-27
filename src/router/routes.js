@@ -58,7 +58,7 @@ const routes = [
   },
   {
     path: "/biologicalDashboard",
-    component: () => import("src/layouts/bioDashboard.vue"), //biological dashboard//
+    component: () => import("src/layouts/NewLayout.vue"), //biological dashboard//
     children: [
       {
         path: "",
@@ -72,7 +72,7 @@ const routes = [
   },
   {
     path: "/physicalDashboard",
-    component: () => import("src/layouts/physicalDashboard.vue"), //physical dashboard//
+    component: () => import("src/layouts/NewLayout.vue"), //physical dashboard//
     children: [
       {
         path: "",

@@ -12,7 +12,7 @@ export const tempData = {
       text: ""
     },
     subtitle: {
-      text: "Winter Mean Temperature"
+      text: "Mean Temperature - 2020 winter"
     },
     yAxis: {
       title: {
@@ -25,9 +25,9 @@ export const tempData = {
       }
     },
     legend: {
-      enabled: true,
+      // enabled: true,
       layout: "proximate",
-
+      align: "right",
       verticalAlign: "middle"
     },
     series: [
@@ -108,7 +108,7 @@ export const tempData = {
       text: ""
     },
     subtitle: {
-      text: "Winter Maximum Temperature"
+      text: "Maximum Temperature - 2020 winter"
     },
     yAxis: {
       title: {

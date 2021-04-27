@@ -1,27 +1,45 @@
 <template>
-  <q-page class="page">
-    <div class="row justify-center no-wrap">
+  <q-page class="q-pa-sm justify-center no-wrap page">
+    <div class="row justify-center">
       <q-card
         bordered
         class="temperature"
         style="width:30%"
       >
         <div class="text-h5 text-bold row justify-center title">
-          Mean Temperature
+          Average Temperature
         </div>
         <highcharts :options="Temperature1"></highcharts>
-        <div class="q-py-xl col-3 text-center noData">
+        <div
+          class="col-3 text-center noData"
+          style="height:30%"
+        >
           2021 Summer data <br /> Not available yet
         </div>
         <div class="text-h5 text-bold row justify-center title">
           Max Temperature
         </div>
-        <highcharts :options="Temperature1"></highcharts>
-        <div class="q-py-xl col-3 text-center noData">
+        <highcharts :options="Temperature2"></highcharts>
+        <div
+          class="col-3 text-center noData"
+          style="height:30%"
+        >
           2021 Summer data <br /> Not available yet
         </div>
       </q-card>
-
+      <q-card
+        bordered
+        class="temperature"
+        style="width:30%"
+      >
+        <div class="text-h5 text-bold row justify-center title">
+          Max Temperature
+        </div>
+        <highcharts :options="Temperature1"></highcharts>
+        <highcharts :options="Temperature2"></highcharts>
+      </q-card>
+    </div>
+    <!-- <div class="row justify-center no-wrap">
       <q-card
         bordered
         class="col-3 waveFetch"
@@ -29,46 +47,9 @@
       >
         <div class="text-h5 text-bold row justify-center title">Wave Fetch</div>
         <highcharts :options="WaveFetch1"></highcharts>
-        <div class="q-py-xl col-3 text-center noData">
-          2021 Summer data <br /> Not available yet
-        </div>
+        <highcharts :options="WaveFetch1"></highcharts>
       </q-card>
-      <q-card
-        bordered
-        class="temperature"
-        style="width:45%"
-      >
-        <div class="q-gutter-sm">
-          <div class="text-h5 text-bold row justify-center title">
-            Nutrient Level
-          </div>
-          <div class="text-green-5 text-h5 text-bold row justify-center ">
-            Chlorophyll a
-          </div>
-          <div class="row">
-            <highcharts
-              class="col-6"
-              :options="Chla1"
-            ></highcharts>
-            <div class="q-py-xl col-6 text-center noData">
-              2021 Summer data <br /> Not available yet
-            </div>
-          </div>
-          <div class="text-orange-7 text-h5 text-bold row justify-center ">
-            Organic Matter
-          </div>
-          <div class="row">
-            <highcharts
-              class="col-6"
-              :options="OM1"
-            ></highcharts>
-            <div class="q-py-xl col-6 text-center noData">
-              2021 Summer data <br /> Not available yet
-            </div>
-          </div>
-        </div>
-      </q-card>
-    </div>
+    </div> -->
     <!-- <div class="row justify-center">
       <q-card
         bordered
@@ -93,19 +74,17 @@
           </div>
         </q-card-section>
         <q-card-section horizontal>
-          <highcharts
-            class="col-3"
-            :options="Chla1"
-          ></highcharts>
+          <div class="col-3 noData">
+            Summer data <br /> not available yet
+          </div>
           <highcharts
             class="col-3"
             :options="Chla1"
           ></highcharts>
           <q-separator vertical />
-          <highcharts
-            class="col-3"
-            :options="OM1"
-          ></highcharts>
+          <div class="col-3 noData">
+            Summer data <br /> not available yet
+          </div>
           <highcharts
             class="col-3"
             :options="OM1"

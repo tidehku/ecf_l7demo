@@ -202,7 +202,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .searchbox
   border-width: 2px
   border-color: black

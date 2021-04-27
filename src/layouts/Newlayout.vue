@@ -10,10 +10,10 @@
           glossy
         >
           <q-avatar
-            size="60px"
+            size="50px"
             @click="home()"
           >
-            <img src="~assets/SWIMSlogo2.png" />
+            <img src="~assets/swims.png" />
           </q-avatar>
         </q-btn>
         <q-toolbar-title class="text-5 text-bold">
@@ -70,9 +70,9 @@
       :width="320"
       :breakpoint="500"
       elevated
-      content-class="bg-grey-3"
+      content-class="bg-indigo-2"
     >
-      <q-list padding>
+      <!-- <q-list padding>
         <q-item
           clickable
           v-ripple
@@ -97,20 +97,6 @@
         </q-item>
         <q-separator />
 
-        <!-- add methods nav tab on sidebar -->
-        <q-item
-          clickable
-          v-ripple
-          to="/"
-        >
-          <q-item-section avatar>
-            <q-icon name="book" />
-          </q-item-section>
-
-          <q-item-section> Methods </q-item-section>
-        </q-item>
-        <q-separator />
-
         <q-item
           clickable
           v-ripple
@@ -124,60 +110,64 @@
         </q-item>
 
         <q-separator />
-      </q-list>
-      <q-card
-        bordered
-        flat
-        class="q-ma-md searchbox"
-        style="width: 90%"
-      >
-        <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">
-          Quick Search Link
-        </div>
+      </q-list> -->
+      <div class="q-py-xl row justify-center">
+        <q-card
+          bordered
+          flat
+          class="q-pa-sm searchbox"
+          style="width: 90%"
+        >
+          <div class="q-gutter-md">
+            <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">
+              Quick Search Link
+            </div>
 
-        <q-select
-          filled
-          dense
-          v-model="region"
-          :options="regionOptions"
-          label="Choose Region"
-          @input="setSites"
-        />
+            <q-select
+              filled
+              dense
+              v-model="region"
+              :options="regionOptions"
+              label="Choose Region"
+              @input="setSites"
+            />
 
-        <q-select
-          filled
-          dense
-          v-model="subSite"
-          :options="sites"
-          label="Choose Site"
-        />
+            <q-select
+              filled
+              dense
+              v-model="subSite"
+              :options="sites"
+              label="Choose Site"
+            />
 
-        <q-select
-          filled
-          dense
-          v-model="dashboard"
-          :options="dashboardOptions"
-          label="Choose Dashboard"
-        />
-        <div class="row justify-center">
-          <q-btn
-            no-caps
-            dense
-            color="black"
-            class="text-h6 q-ma-md q-px-md"
-            glossy
-            label="Search"
-            @click="changeSite()"
-          />
-        </div>
-      </q-card>
+            <q-select
+              filled
+              dense
+              v-model="dashboard"
+              :options="dashboardOptions"
+              label="Choose Dashboard"
+            />
+            <div class="row justify-center">
+              <q-btn
+                no-caps
+                dense
+                color="black"
+                class="text-h6 q-ma-md q-px-md"
+                glossy
+                label="Search"
+                @click="changeSite()"
+              />
+            </div>
+          </div>
+        </q-card>
+      </div>
     </q-drawer>
 
     <q-page-container>
       <router-view />
     </q-page-container>
 
-    <!-- <q-footer elevated>
+    <q-footer elevated>
       <q-toolbar
         class="bg-white text-dark"
         style="height: 40px"
@@ -194,7 +184,7 @@
           , The Swire Institute of Marine Science, The University of Hong Kong
         </q-toolbar-title>
       </q-toolbar>
-    </q-footer> -->
+    </q-footer>
   </q-layout>
 </template>
 
@@ -261,7 +251,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .q-toolbar__title
   color: dark
   font: normal
@@ -269,4 +259,8 @@ export default {
 #footer.q-toolbar__title
   text-align: center
   font-size: 15px
+
+.searchbox
+  border-width: 2px
+  border-color: black
 </style>

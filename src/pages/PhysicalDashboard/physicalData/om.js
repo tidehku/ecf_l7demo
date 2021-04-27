@@ -2,7 +2,7 @@ export const omData = {
   SBOm1: {
     chart: {
       type: "column",
-      height: (2 / 3) * 100 + "%" // 3:4 ratio
+      height: (5 / 6) * 100 + "%" // 3:4 ratio
     },
     credits: {
       enabled: false
