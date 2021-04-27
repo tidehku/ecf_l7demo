@@ -2,7 +2,7 @@
   <q-layout view="hHh lpr fFf">
     <q-header elevated>
       <q-toolbar
-        class="bg-grey-1 text-dark"
+        class="bg-grey-2 text-dark"
         style="height: 60px"
       >
         <q-btn
@@ -28,31 +28,39 @@
           <q-route-tab
             to="/"
             name="home"
-            class="text-indigo-9"
+            class="text-red"
             icon="home"
             label="Home"
           />
           <q-route-tab
+            to="/"
+            name="Methods"
+            class="text-orange-9"
+            icon="biotech"
+            label="Methods"
+          />
+          <q-route-tab
             to="/interactiveHabitat"
             name="interactiveHabitat"
-            class="text-red-8"
+            class="text-green-7"
             icon="map"
             label="Map"
           />
           <q-route-tab
             to="/SpeciesSearchEngine"
             name="speciesSearchEngine"
-            class="text-teal-7"
+            class="text-blue-8"
             icon="travel_explore"
             label="Search"
           />
           <q-route-tab
-            to="/"
-            name="Methods"
-            class="text-grey-9"
-            icon="biotech"
-            label="Methods"
+            to="/SpeciesSearchEngine"
+            name="Gallery"
+            class="text-deep-purple"
+            icon="collections"
+            label="Gallery"
           />
+
         </q-tabs>
         <q-btn
           flat
@@ -70,7 +78,7 @@
       :width="320"
       :breakpoint="500"
       elevated
-      content-class="bg-indigo-2"
+      content-class="bg-teal-3"
     >
       <!-- <q-list padding>
         <q-item
@@ -115,17 +123,18 @@
         <q-card
           bordered
           flat
-          class="q-pa-sm searchbox"
+          class="searchbox"
           style="width: 90%"
         >
-          <div class="q-gutter-md">
-            <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">
-              Quick Search Link
-            </div>
-
+          <div class="q-py-md bg-indigo text-white text-h6 text-bold text-center">
+            Dashboard Quick Navigation
+          </div>
+          <div class="q-pa-md q-gutter-md">
             <q-select
               filled
               dense
+              bg-color="indigo-1"
+              label-color="indigo"
               v-model="region"
               :options="regionOptions"
               label="Choose Region"
@@ -135,6 +144,8 @@
             <q-select
               filled
               dense
+              bg-color="indigo-1"
+              label-color="indigo"
               v-model="subSite"
               :options="sites"
               label="Choose Site"
@@ -143,6 +154,8 @@
             <q-select
               filled
               dense
+              bg-color="indigo-1"
+              label-color="indigo"
               v-model="dashboard"
               :options="dashboardOptions"
               label="Choose Dashboard"
@@ -151,7 +164,7 @@
               <q-btn
                 no-caps
                 dense
-                color="black"
+                color="indigo"
                 class="text-h6 q-ma-md q-px-md"
                 glossy
                 label="Search"
@@ -252,15 +265,15 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.q-toolbar__title
-  color: dark
-  font: normal
+// .q-toolbar__title
+//   color: dark
+//   font: normal
 
 #footer.q-toolbar__title
   text-align: center
   font-size: 15px
 
-.searchbox
-  border-width: 2px
-  border-color: black
+// .searchbox
+//   border-width: 3px
+//   border-color: $indigo
 </style>
