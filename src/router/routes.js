@@ -80,7 +80,8 @@ const routes = [
       },
       {
         path: "Starfish Bay",
-        component: () => import("pages/physicalDashboard/PhyStarfishBay.vue")
+        component: () =>
+          import("pages/physicalDashboard/phyStarfishBayCopy.vue")
       }
     ]
   },

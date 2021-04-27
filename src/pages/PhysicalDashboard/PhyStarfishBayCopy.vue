@@ -29,8 +29,14 @@
       >
         <div class="text-h5 text-bold row justify-center title">Wave Fetch</div>
         <highcharts :options="WaveFetch1"></highcharts>
-        <div class="q-py-xl col-3 text-center noData">
+        <q-card
+          class="q-py-xl text-center noData"
+          height="200px"
+        >
           2021 Summer data <br /> Not available yet
+        </q-card>
+        <div class="q-pa-md vertical-bottom bg-indigo-1">
+          <b> Notes: </b> <br /> Here can be some brief explanation on how to interprate the meaning of these key indicators and charts.
         </div>
       </q-card>
       <q-card
@@ -42,7 +48,7 @@
           <div class="text-h5 text-bold row justify-center title">
             Nutrient Level
           </div>
-          <div class="text-green-5 text-h5 text-bold row justify-center ">
+          <div class="text-secondary text-h6 text-bold row justify-center ">
             Chlorophyll a
           </div>
           <div class="row">
@@ -54,7 +60,8 @@
               2021 Summer data <br /> Not available yet
             </div>
           </div>
-          <div class="text-orange-7 text-h5 text-bold row justify-center ">
+          <q-separator />
+          <div class="text-orange-7 text-h6 text-bold row justify-center ">
             Organic Matter
           </div>
           <div class="row">

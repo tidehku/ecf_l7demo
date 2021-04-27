@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpr fff">
+  <q-layout view="hHh lpr fFf">
     <q-header elevated>
       <q-toolbar
         class="bg-grey-1 text-dark"
@@ -49,7 +49,7 @@
           <q-route-tab
             to="/"
             name="Methods"
-            class="text-black"
+            class="text-grey-9"
             icon="biotech"
             label="Methods"
           />

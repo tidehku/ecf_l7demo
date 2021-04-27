@@ -281,7 +281,7 @@
 
     <q-card class="q-ma-md maincard">
       <q-card-section class="bg-indigo-6 text-white">
-        <div class="text-h4 text-bold text-center">Important Links</div>
+        <div class="text-h4 text-bold text-center">Related Links</div>
       </q-card-section>
       <q-card-section class="row justify-around">
         <q-card class="col-3 q-pa-sm sitecard">
