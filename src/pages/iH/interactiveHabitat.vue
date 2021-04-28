@@ -6,9 +6,7 @@
       class="col-4 bg-blue-grey-4 q-py-xl maincard"
       style="height: 480px"
     >
-      <q-card
-        class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white"
-      >
+      <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
         Interactive Habitat Map <br />around Hong Kong Rocky Shore <br />by ECF
         2019-2023
       </q-card>
@@ -43,7 +41,10 @@
         ref="myMapRef"
       >
         <LTileLayer />
-        <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
+        <l-geo-json
+          :geojson="regions"
+          :options="geoJSONOptions"
+        > </l-geo-json>
 
         <l-control-scale
           position="bottomleft"
@@ -98,9 +99,9 @@ export default {
         style: function style(feature) {
           return {
             // weight: feature.properties.stroke_width,
-            opacity: 0.6,
+            opacity: 0.5,
             color: feature.properties.fill /* refer to json data */,
-            fillOpacity: 0.3,
+            fillOpacity: 0.4,
           };
         },
         onEachFeature: (feature, layer) => {

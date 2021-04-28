@@ -273,7 +273,7 @@ export default {
   text-align: center
   font-size: 15px
 
-// .searchbox
-//   border-width: 3px
-//   border-color: $indigo
+.searchbox
+  border-width: 3px
+  border-color: $indigo
 </style>
