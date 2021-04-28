@@ -2,7 +2,7 @@
 const routes = [
   {
     path: "/",
-    component: () => import("layouts/NewLayout.vue"),
+    component: () => import("src/layouts/layout.vue"),
     children: [
       { path: "", component: () => import("src/pages/MainPage/homePage.vue") },
       {
@@ -17,7 +17,7 @@ const routes = [
   },
   {
     path: "/interactiveHabitat",
-    component: () => import("layouts/NewLayout.vue"),
+    component: () => import("layouts/layout.vue"),
     children: [
       //six zones separately
       // { path: '/interactiveHabitat/copy', component: () => import('pages/iH/interactiveHabitat_copy.vue') },
@@ -53,7 +53,7 @@ const routes = [
   },
   {
     path: "/biologicalDashboard",
-    component: () => import("src/layouts/NewLayout.vue"), //biological dashboard//
+    component: () => import("src/layouts/layout.vue"), //biological dashboard//
     children: [
       {
         path: "",
@@ -67,7 +67,7 @@ const routes = [
   },
   {
     path: "/physicalDashboard",
-    component: () => import("src/layouts/NewLayout.vue"), //physical dashboard//
+    component: () => import("src/layouts/dashboard.vue"), //physical dashboard//
     children: [
       {
         path: "",
@@ -85,7 +85,7 @@ const routes = [
   },
   {
     path: "/l",
-    component: () => import("layouts/NewLayout.vue"),
+    component: () => import("layouts/layout.vue"),
     children: [
       {
         path: "/l/demo1",
@@ -103,7 +103,7 @@ const routes = [
   },
   {
     path: "/speciesSearchEngine",
-    component: () => import("layouts/NewLayout.vue"),
+    component: () => import("layouts/layout.vue"),
     children: [
       //have not been built yet
       {
