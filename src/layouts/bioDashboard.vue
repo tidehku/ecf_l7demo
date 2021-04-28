@@ -82,51 +82,51 @@
         <q-separator />
       </q-list>
       <q-card
-          bordered
-          flat
-          class="q-ma-md searchbox"
-          style="width: 90%"
-        >
-          <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">
-            Quick Search Link
-          </div>
+        bordered
+        flat
+        class="q-ma-md searchbox"
+        style="width: 90%"
+      >
+        <div class="q-py-sm bg-black text-white text-h6 text-bold text-center">
+          Quick Search Link
+        </div>
 
-          <q-select
-            filled
-            dense
-            v-model="region"
-            :options="regionOptions"
-            label="Choose Region"
-            @input="setSites"
-          />
+        <q-select
+          filled
+          dense
+          v-model="region"
+          :options="regionOptions"
+          label="Choose Region"
+          @input="setSites"
+        />
 
-          <q-select
-            filled
-            dense
-            v-model="subSite"
-            :options="sites"
-            label="Choose Site"
-          />
+        <q-select
+          filled
+          dense
+          v-model="subSite"
+          :options="sites"
+          label="Choose Site"
+        />
 
-          <q-select
-            filled
+        <q-select
+          filled
+          dense
+          v-model="dashboard"
+          :options="dashboardOptions"
+          label="Choose Dashboard"
+        />
+        <div class="row justify-center">
+          <q-btn
+            no-caps
             dense
-            v-model="dashboard"
-            :options="dashboardOptions"
-            label="Choose Dashboard"
+            color="black"
+            class="text-h6 q-ma-md q-px-md"
+            glossy
+            label="Search"
+            @click="changeSite()"
           />
-          <div class="row justify-center">
-            <q-btn
-              no-caps
-              dense
-              color="black"
-              class="text-h6 q-ma-md q-px-md"
-              glossy
-              label="Search"
-              @click="changeSite()"
-            />
-          </div>
-        </q-card>
+        </div>
+      </q-card>
     </q-drawer>
 
     <q-page-container>
@@ -202,7 +202,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .searchbox
   border-width: 2px
   border-color: black

@@ -244,14 +244,13 @@
               />
               <div class="col-6 q-px-md">
                 <q-table
-                  :columns="columns"
+                  class="siteTable"
                   :data="Table_TLSB"
                   separator="cell"
                   dense
                   hide-bottom
                   hide-header
                   :rows-per-page-options="[0]"
-                  title-class="bolded"
                 >
                 </q-table>
 
@@ -308,22 +307,6 @@ export default {
       rockType: `Igneous rock`,
       feasibility: `When assessing this site’s suitability, it was determined to be moderately susceptible to vessel traffic and of 
       low susceptibility to sand inundation and human disturbance. As a result, the site poses a low safety risk from oncoming wave action. `,
-      columns: [
-        {
-          name: "name",
-          align: "left",
-          label: "name",
-          field: "name",
-          sortable: true,
-        },
-        {
-          name: "data",
-          align: "left",
-          label: "data",
-          field: "data",
-          sortable: true,
-        },
-      ],
       Table_TLSB: [
         {
           name: "Site Name",
@@ -408,13 +391,6 @@ export default {
 t
   color: $indigo-5
   font-weight: 900
-.q-table
-  font-size: 15px
-  td:first-child
-    background-color: #f5f5dc
-    font-weight: bold
-  tr th
-    background-color: $indigo-1
 .regiontheme
   background-color: #4f958d
   color: white

@@ -2,7 +2,8 @@ export const chlaData = {
   SBChla1: {
     chart: {
       type: "column",
-      height: (5 / 6) * 100 + "%" // 3:4 ratio
+      // height: (5 / 6) * 100 + "%" // 3:4 ratio
+      height: "60%"
     },
     credits: {
       enabled: false

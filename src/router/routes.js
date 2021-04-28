@@ -12,11 +12,6 @@ const routes = [
       {
         path: "speciesSearchEngine",
         component: () => import("pages/MainPage/SpeciesSearchEngine.vue")
-      },
-      {
-        path: "physicalSB",
-        component: () =>
-          import("pages/physicalDashboard/phyStarfishBayCopy.vue")
       }
     ]
   },
@@ -80,8 +75,7 @@ const routes = [
       },
       {
         path: "Starfish Bay",
-        component: () =>
-          import("pages/physicalDashboard/phyStarfishBayCopy.vue")
+        component: () => import("pages/physicalDashboard/phyStarfishBay.vue")
       }
     ]
   },

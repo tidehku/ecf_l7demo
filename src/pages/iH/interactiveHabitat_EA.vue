@@ -161,7 +161,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .maincard
   background-color: $blue-grey-5
   .q-table__top

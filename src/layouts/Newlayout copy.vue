@@ -261,7 +261,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .q-toolbar__title
   color: dark
   font: normal
@@ -269,6 +269,4 @@ export default {
 #footer.q-toolbar__title
   text-align: center
   font-size: 15px
-
-
 </style>

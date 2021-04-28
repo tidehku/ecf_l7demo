@@ -3,7 +3,7 @@ export const tempData = {
     chart: {
       type: "line",
       // height: (1 / 2) * 100 + "%", // 16:9 ratio
-      height: "45%"
+      height: "35%"
     },
     credits: {
       enabled: false
@@ -12,7 +12,7 @@ export const tempData = {
       text: ""
     },
     subtitle: {
-      text: "Mean Temperature - 2020 winter"
+      text: ""
     },
     yAxis: {
       title: {

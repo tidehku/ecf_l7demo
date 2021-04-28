@@ -8,9 +8,8 @@
         <q-avatar size="45px">
           <img src="~assets/SWIMSlogo1.png" />
         </q-avatar>
-        <q-bar-title class="text-h5 text-bold"
-        >
-         <!-- v-if="path == '/interactiveHabitat/dashboard/biological'" -->
+        <q-bar-title class="text-h5 text-bold">
+          <!-- v-if="path == '/interactiveHabitat/dashboard/biological'" -->
           ECF Hong Kong Rocky Shore | Physical Dashboard of xxx Site
         </q-bar-title>
         <q-space />
@@ -154,7 +153,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .q-select
   padding: 15px
 

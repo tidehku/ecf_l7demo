@@ -250,7 +250,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .q-card
   width: 98%
   padding: 4px
