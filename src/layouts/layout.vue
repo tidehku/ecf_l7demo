@@ -1,19 +1,32 @@
 <template>
   <q-layout view="hhh lpr fff">
     <q-header elevated>
-      <q-toolbar class="bg-grey-2 text-dark" style="height: 60px">
+      <q-toolbar
+        class="bg-grey-2 text-dark"
+        style="height: 10vh"
+      >
         <!-- <q-btn round glossy>
           <q-avatar size="50px" @click="home()">
             <img src="~assets/swims.png" />
           </q-avatar>
         </q-btn> -->
 
-        <!-- app fullscreen -->
-        <q-btn
+        <!-- <q-btn
           color="secondary"
           @click="$q.fullscreen.toggle()"
           :icon="$q.fullscreen.isActive ? 'fullscreen_exit' : 'fullscreen'"
         >
+          <q-tooltip content-style="font-size: 20px"> Enter / Exit App Fullscreen </q-tooltip>
+        </q-btn> -->
+
+        <!-- app fullscreen -->
+        <q-btn
+          round
+          @click="$q.fullscreen.toggle()"
+        >
+          <q-avatar size="50px">
+            <img src="~assets/swims.png" />
+          </q-avatar>
           <q-tooltip content-style="font-size: 20px"> Enter / Exit App Fullscreen </q-tooltip>
         </q-btn>
 
@@ -21,7 +34,73 @@
           ECF HK Rocky Shore GIS Storyboard 2019-2023
         </q-toolbar-title>
 
-        <q-tabs align="left" v-model="tab" dense>
+        <!-- <q-tabs
+          v-model="tab"
+          indicator-color="transparent"
+          active-color="white"
+          class="bg-teal text-grey-5 shadow-2"
+        >
+          <q-tab
+            name="mails"
+            icon="mail"
+            label="Mails"
+          />
+          <q-tab
+            name="alarms"
+            icon="alarm"
+            label="Alarms"
+          />
+          <q-tab
+            name="movies"
+            icon="movie"
+            label="Movies"
+          />
+        </q-tabs> -->
+
+        <q-tabs
+          class="text-indigo"
+          active-bg-color="indigo"
+          active-color="white"
+          v-model="tab"
+          dense
+        >
+          <q-route-tab
+            to="/"
+            name="home"
+            icon="home"
+            label="Home"
+          />
+          <q-route-tab
+            to="/"
+            name="Methods"
+            icon="biotech"
+            label="Methods"
+          />
+          <q-route-tab
+            to="/interactiveHabitat"
+            name="interactiveHabitat"
+            icon="map"
+            label="Map"
+          />
+          <q-route-tab
+            to="/SpeciesSearchEngine"
+            name="speciesSearchEngine"
+            icon="travel_explore"
+            label="Search"
+          />
+          <q-route-tab
+            to="/SpeciesSearchEngine"
+            name="Gallery"
+            icon="collections"
+            label="Gallery"
+          />
+        </q-tabs>
+
+        <!-- <q-tabs
+          align="left"
+          v-model="tab"
+          dense
+        >
           <q-route-tab
             to="/"
             name="home"
@@ -57,8 +136,13 @@
             icon="collections"
             label="Gallery"
           />
-        </q-tabs>
-        <q-btn flat @click="drawer = !drawer" round icon="menu" />
+        </q-tabs> -->
+        <q-btn
+          flat
+          @click="drawer = !drawer"
+          round
+          icon="menu"
+        />
       </q-toolbar>
     </q-header>
 
@@ -111,10 +195,13 @@
         <q-separator />
       </q-list> -->
       <div class="q-py-xl row justify-center">
-        <q-card bordered flat class="searchbox" style="width: 90%">
-          <div
-            class="q-py-md bg-indigo text-white text-h6 text-bold text-center"
-          >
+        <q-card
+          bordered
+          flat
+          class="searchbox"
+          style="width: 90%"
+        >
+          <div class="q-py-md bg-indigo text-white text-h6 text-bold text-center">
             Dashboard Quick Navigation
           </div>
           <div class="q-pa-md q-gutter-md">
@@ -169,11 +256,14 @@
     </q-page-container>
 
     <q-footer elevated>
-      <q-toolbar class="bg-white text-dark" style="height: 40px">
+      <q-toolbar class="bg-white text-dark">
         <q-toolbar-title id="footer">
           Copyright ©
           {{ new Date().getFullYear() }} —
-          <a href="https://www.tidehku.com/" target="_blank">
+          <a
+            href="https://www.tidehku.com/"
+            target="_blank"
+          >
             <strong>Tropical IntertiDal Ecology Group</strong>
           </a>
           , The Swire Institute of Marine Science, The University of Hong Kong

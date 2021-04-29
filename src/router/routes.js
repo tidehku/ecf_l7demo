@@ -67,7 +67,7 @@ const routes = [
   },
   {
     path: "/physicalDashboard",
-    component: () => import("src/layouts/dashboard.vue"), //physical dashboard//
+    component: () => import("src/layouts/layout.vue"), //physical dashboard//
     children: [
       {
         path: "",

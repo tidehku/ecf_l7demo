@@ -4,7 +4,7 @@
       bordered
       dark
       class="col-4 bg-blue-grey-4 q-py-xl maincard"
-      style="height: 480px"
+      style="height: 80vh"
     >
       <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
         Interactive Habitat Map <br />around Hong Kong Rocky Shore <br />by ECF

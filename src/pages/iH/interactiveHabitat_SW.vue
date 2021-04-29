@@ -2,7 +2,8 @@
   <q-page class="q-pa-xs row justify-center bg-grey-5">
     <div style="width: 33%">
       <q-card
-        class="q-ma-sm bg-white"
+        class="maincard"
+        style="height: 80vh"
         bordered
       >
         <q-toolbar class="text-h5 text-bold regiontheme">
@@ -27,9 +28,9 @@
           </q-tabs>
         </q-toolbar>
         <p class="q-pa-sm">{{ lorem }}</p>
-        <q-card class="q-px-xs">
+        <div class="q-px-xs">
           <l-map
-            style="height: 330px"
+            style="height: 50vh"
             :zoom="zoom"
             :center="center"
             :options="mapOptions"
@@ -54,87 +55,83 @@
               :imperial="true"
             ></l-control-scale>
           </l-map>
-        </q-card>
+        </div>
       </q-card>
     </div>
-    <div style="width: 66.3%; height: 40%">
-      <q-card class="bg-grey-4">
-        <div class="q-px-md text-center text-h6 text-bold rounded-borders regiontheme">
+    <div style="width: 66.3%; height: 30vh">
+      <q-card
+        class="bg-grey-4 maincard"
+        style="height: 29vh"
+      >
+        <div class="text-center text-h6 regiontheme">
           Regional Average Data Summary
         </div>
         <div class="row q-pa-sm justify-evenly">
           <q-card
-            class="q-pa-sm"
-            style="width: 19%"
+            class="maincard"
+            style="width: 19%; height: 20vh"
           >
-            <div class="q-px-sm text-h7 text-bold">
+            <div class="q-px-sm text-bold">
               Average <br />
-              Nutrient Level
+              Temperature
             </div>
-            <div class="row justify-center">
-              <div class="q-pa-md row text-h2 text-bold text-red">123</div>
-            </div>
+            <div
+              class="text-h2 text-bold text-red center"
+              style="col-grow"
+            >123</div>
           </q-card>
           <q-card
-            class="q-pa-sm"
-            style="width: 19%"
+            class="maincard"
+            style="width: 19%; height: 20vh"
           >
-            <div class="q-px-sm text-h7 text-bold">
+            <div class="q-px-sm text-bold">
               Average <br />
               Wave Fetch
             </div>
-            <div class="row justify-center">
-              <div class="q-pa-md row text-h2 text-bold text-orange">123</div>
-            </div>
+            <div class="text-h2 text-bold text-red center">123</div>
           </q-card>
           <q-card
-            class="q-pa-sm"
-            style="width: 19%"
+            class="maincard"
+            style="width: 19%; height: 20vh"
           >
-            <div class="q-px-sm text-h7 text-bold">
-              Average <br />Temperature
+            <div class="q-px-sm text-bold">
+              Average <br />
+              Nutrient Levels
             </div>
-            <div class="row justify-center">
-              <div class="q-pa-md row text-h2 text-bold text-green">123</div>
-            </div>
+            <div class="text-h2 text-bold text-red center">123</div>
           </q-card>
           <q-card
-            class="q-pa-sm"
-            style="width: 19%"
+            class="maincard"
+            style="width: 19%; height: 20vh"
           >
-            <div class="q-px-sm text-h7 text-bold">
+            <div class="q-px-sm text-bold">
               Number of <br />Mobile Species
             </div>
-            <div class="row justify-center">
-              <div class="q-pa-md row text-h2 text-bold text-blue-6">123</div>
-            </div>
+            <div class="text-h2 text-bold text-red center">123</div>
           </q-card>
           <q-card
-            class="q-pa-sm"
-            style="width: 19%"
+            class="maincard"
+            style="width: 19%; height: 20vh"
           >
-            <div class="q-px-sm text-h7 text-bold">
+            <div class="q-px-sm text-bold">
               Number of <br />Sessile Species
             </div>
-            <div class="row justify-center">
-              <div class="q-pa-md row text-h2 text-bold text-deep-purple">
-                123
-              </div>
-            </div>
+            <div class="text-h2 text-bold text-red center">123</div>
           </q-card>
+
         </div>
       </q-card>
       <div class="row justify-around">
         <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 56%"
+          class="q-ma-md maincard"
+          style="width: 24%; height: 50vh"
         >
           <div class="q-pa-sm text-h5 text-bold regiontheme">
             Lung Kwu Tan
           </div>
           <q-img
             src="~/assets/SiteImage/StarfishBay.png"
-            height="200px"
+            height="35vh"
             basic
           />
           <div class="row justify-end">
@@ -148,15 +145,15 @@
           </div>
         </q-card>
         <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 56%"
+          class="q-ma-md maincard"
+          style="width: 24%; height: 50vh"
         >
           <div class="q-pa-sm text-h5 text-bold regiontheme">
             Siu Lam
           </div>
           <q-img
             src="~/assets/SiteImage/StarfishBay.png"
-            height="200px"
+            height="35vh"
             basic
           />
           <div class="row justify-end">
@@ -170,15 +167,15 @@
           </div>
         </q-card>
         <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 56%"
+          class="q-ma-md maincard"
+          style="width: 24%; height: 50vh"
         >
           <div class="q-pa-sm text-h5 text-bold regiontheme">
             Luk Keng
           </div>
           <q-img
             src="~/assets/SiteImage/StarfishBay.png"
-            height="200px"
+            height="35vh"
             basic
           />
           <div class="row justify-end">
@@ -192,15 +189,15 @@
           </div>
         </q-card>
         <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 56%"
+          class="q-ma-md maincard"
+          style="width: 24%; height: 50vh"
         >
           <div class="q-pa-sm text-h5 text-bold regiontheme">
             Tai Long Wan
           </div>
           <q-img
             src="~/assets/SiteImage/StarfishBay.png"
-            height="200px"
+            height="35vh"
             basic
           />
           <div class="row justify-end">
@@ -385,7 +382,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.q-card
+.maincard
   padding: 4px
   margin: 3px
 t
@@ -394,4 +391,5 @@ t
 .regiontheme
   background-color: #4f958d
   color: white
+  font-weight: bold
 </style>
