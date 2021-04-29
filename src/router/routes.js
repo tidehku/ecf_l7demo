@@ -10,8 +10,16 @@ const routes = [
         component: () => import("pages/iH/interactiveHabitat.vue")
       },
       {
+        path: "method",
+        component: () => import("pages/MainPage/method.vue")
+      },
+      {
         path: "speciesSearchEngine",
         component: () => import("pages/MainPage/SpeciesSearchEngine.vue")
+      },
+      {
+        path: "gallery",
+        component: () => import("pages/MainPage/gallery.vue")
       }
     ]
   },

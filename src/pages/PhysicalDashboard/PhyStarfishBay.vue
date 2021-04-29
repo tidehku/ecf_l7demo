@@ -1,90 +1,91 @@
 <template>
-  <q-page class="page justify-center">
-    <q-bar class="bg-black text-white">
+  <q-page class="justify-center">
+    <q-bar class="bg-white">
       <div class="text-bold row justify-center">
         Physical Dashboard of Starfish Bay, Tolo Habour Region
       </div>
+      <!-- <q-btn
+        class="bg-indigo text-white"
+        no-caps
+        label="Tolo Habour Region"
+      /> -->
       <q-space />
       <q-btn
         dense
         icon="eco"
         color="teal"
-      />
+        to="/biologicalDashboard/Starfish%20Bay"
+      >
+        <q-tooltip>
+          Switch to Biological Dashboard
+        </q-tooltip>
+      </q-btn>
       <q-btn
         dense
         icon="keyboard_backspace"
         color="indigo"
         v-go-back=" '/' "
-      />
-      <q-btn
-        dense
-        no-caps
-        color="teal"
-        class="text-bold"
-        label="Switch to Biological Dashboard"
-        to="/biologicalDashboard/Starfish%20Bay"
-      />
-      <q-btn
-        flat
-        @click="drawer = !drawer"
-        round
-        icon="menu"
-      />
+      >
+        <q-tooltip>
+          Go back
+        </q-tooltip>
+      </q-btn>
     </q-bar>
+    <div class="page">
+      <q-card bordered>
+        <div class="text-h5 text-bold row justify-center title">
+          Daily Temperature
+        </div>
+        <div class="row">
+          <div class="col-6 tab1"> winter </div>
+          <div class="col-6 tab2"> summer </div>
+        </div>
+        <div class="row">
+          <highcharts
+            class="col-6"
+            :options="Temperature1"
+          ></highcharts>
+          <q-separator vertical />
+          <div class="text-center noData">
+            2021 Summer data <br /> Not available yet
+          </div>
+        </div>
+      </q-card>
 
-    <q-card bordered>
-      <div class="text-h5 text-bold row justify-center title">
-        Daily Temperature
-      </div>
-      <div class="row">
-        <div class="col-6 tab1"> winter </div>
-        <div class="col-6 tab2"> summer </div>
-      </div>
-      <div class="row">
-        <highcharts
-          class="col-6"
-          :options="Temperature1"
-        ></highcharts>
-        <q-separator vertical />
-        <div class="text-center noData">
-          2021 Summer data <br /> Not available yet
+      <q-card bordered>
+        <div class="text-h5 text-bold row justify-center title">
+          Nutrient Level
         </div>
-      </div>
-    </q-card>
-
-    <q-card bordered>
-      <div class="text-h5 text-bold row justify-center title">
-        Nutrient Level
-      </div>
-      <div class="row no-wrap">
-        <div class="col-6 text-center text-bold text-indigo"> Chlorophyll a </div>
-        <q-separator vertical />
-        <div class="col-6 text-center text-bold text-indigo"> Organic Matter </div>
-      </div>
-      <div class="row">
-        <div class="col-3 tab1"> winter </div>
-        <div class="col-3 tab2"> summer </div>
-        <div class="col-3 tab1"> winter </div>
-        <div class="col-3 tab2"> summer </div>
-      </div>
-      <div class="row">
-        <highcharts
-          class="col-3"
-          :options="Chla1"
-        ></highcharts>
-        <div class="text-center noData">
-          2021 Summer data <br /> Not available yet
+        <div class="row no-wrap">
+          <div class="col-6 text-center text-bold text-indigo"> Chlorophyll a </div>
+          <q-separator vertical />
+          <div class="col-6 text-center text-bold text-indigo"> Organic Matter </div>
         </div>
-        <q-separator vertical />
-        <highcharts
-          class="col-3"
-          :options="Chla1"
-        ></highcharts>
-        <div class="text-center noData">
-          2021 Summer data <br /> Not available yet
+        <div class="row">
+          <div class="col-3 tab1"> winter </div>
+          <div class="col-3 tab2"> summer </div>
+          <div class="col-3 tab1"> winter </div>
+          <div class="col-3 tab2"> summer </div>
         </div>
-      </div>
-    </q-card>
+        <div class="row">
+          <highcharts
+            class="col-3"
+            :options="Chla1"
+          ></highcharts>
+          <div class="text-center noData">
+            2021 Summer data <br /> Not available yet
+          </div>
+          <q-separator vertical />
+          <highcharts
+            class="col-3"
+            :options="Chla1"
+          ></highcharts>
+          <div class="text-center noData">
+            2021 Summer data <br /> Not available yet
+          </div>
+        </div>
+      </q-card>
+    </div>
   </q-page>
 </template>
 
@@ -114,7 +115,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.q-page
+.page
   background-color: $grey-6
   padding: 4px
   // height: 90vh

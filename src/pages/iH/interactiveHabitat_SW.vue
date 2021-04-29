@@ -215,6 +215,7 @@
           transition-show="flip-down"
           persistent
           full-width
+          style="height: 80vh"
         >
           <q-card>
             <q-bar>
@@ -236,14 +237,14 @@
             >
               <q-img
                 class="col-3"
-                height="400px"
+                height="350px"
                 src="~assets/SiteImage/StarfishBay.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
                   class="siteTable"
                   :data="Table_TLSB"
-                  separator="cell"
+                  separator="horizontal"
                   dense
                   hide-bottom
                   hide-header
@@ -266,7 +267,7 @@
               </div>
               <q-img
                 class="col-3"
-                height="400px"
+                height="350px"
                 src="~assets/SiteImage/StarfishBay.png"
               />
             </q-card-section>
@@ -320,7 +321,7 @@ export default {
         {
           name: "Tidal Range",
           data:
-            "Survey area ranges from a Low of 1.28 m to a high of 3.00 m above Chart Datum.",
+            "Ranges from a Low of 1.28 m to a high of 3.00 m above Chart Datum.",
         },
         {
           name: "Transect length",
@@ -340,12 +341,7 @@ export default {
         },
         {
           name: "Rock type",
-          data: `Predominantly igneous rock composed of homogeneous and equigranular granite. (CEDD, 2006).`,
-        },
-        {
-          name: "Feasibility",
-          data:
-            "When assessing this site’s suitability, it was determined to be moderately susceptible to vessel traffic and of low susceptibility to sand inundation and human disturbance. As a result, the site poses a low safety risk from oncoming wave action.",
+          data: `Igneous rock`,
         },
       ],
       zoom: 10.4,

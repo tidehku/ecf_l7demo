@@ -5,7 +5,7 @@
         dark
         bordered
         class="bg-grey-10 my-card"
-        height=900px
+        style="height: 80vh"
       >
         <div class="q-pa-lg bg-teal-7 text-h5 text-bold text-center text-white">
           Species Search Engine

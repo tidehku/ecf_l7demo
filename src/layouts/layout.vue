@@ -71,7 +71,7 @@
             label="Home"
           />
           <q-route-tab
-            to="/"
+            to="/method"
             name="Methods"
             icon="biotech"
             label="Methods"
@@ -89,7 +89,7 @@
             label="Search"
           />
           <q-route-tab
-            to="/SpeciesSearchEngine"
+            to="/gallery"
             name="Gallery"
             icon="collections"
             label="Gallery"
