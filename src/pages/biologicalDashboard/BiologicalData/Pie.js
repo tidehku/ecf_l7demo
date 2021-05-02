@@ -46,15 +46,16 @@ export const pieData = {
         name: "Species Abundance",
         colorByPoint: true,
         colors: [
-          "#058DC7",
-          "#50B432",
-          "#ED561B",
-          "#DDDF00",
-          "#24CBE5",
-          "#64E572",
-          "#FF9655",
-          "#FFF263",
-          "#6AF9C4"
+          "#74ccf4",
+          "#6aada6",
+          "#a0c2a0",
+          "#ffdc73",
+          "#e8a969",
+          "#c6bcd5",
+          "#F1948A",
+          "#DC7633",
+          "#9B59B6",
+          "#F1C40F"
         ],
         showInLegend: false,
         data: [
@@ -66,9 +67,7 @@ export const pieData = {
           ["Patelloida - ryukyuensis", 7],
           ["Planaxis - sulcatus", 105],
           ["Reishia - clavigera", 5],
-          ["Reishia - luteostoma", 1],
           ["Siphonaria - japonica", 9],
-          ["Tenguella - musiva", 2],
           ["Liolophura - japonica", 116]
         ]
       }

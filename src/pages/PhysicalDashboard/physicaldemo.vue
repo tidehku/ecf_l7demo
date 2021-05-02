@@ -198,7 +198,7 @@ export default {
 .q-select
   padding: 15px
 .q-card
-  width: 97%
+  // width: 97%
   background-color: white
 .q-page
   background-color: $grey-6

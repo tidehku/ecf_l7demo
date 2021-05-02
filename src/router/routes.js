@@ -56,6 +56,14 @@ const routes = [
       {
         path: "/interactiveHabitat/NE",
         component: () => import("pages/iH/interactiveHabitat_NE.vue")
+      },
+      {
+        path: "/interactiveHabitat/physicalStarfishBay",
+        component: () => import("pages/physicalDashboard/phyStarfishBay.vue")
+      },
+      {
+        path: "/interactiveHabitat/biologicalStarfishBay",
+        component: () => import("pages/biologicalDashboard/bioStarfishBay.vue")
       }
     ]
   },
@@ -66,10 +74,6 @@ const routes = [
       {
         path: "",
         component: () => import("pages/biologicalDashboard/biologicalDemo.vue")
-      },
-      {
-        path: "Starfish Bay",
-        component: () => import("pages/biologicalDashboard/bioStarfishBay.vue")
       }
     ]
   },
@@ -80,10 +84,6 @@ const routes = [
       {
         path: "",
         component: () => import("pages/physicalDashboard/physicalDemo.vue")
-      },
-      {
-        path: "Starfish Bay",
-        component: () => import("pages/physicalDashboard/phyStarfishBay.vue")
       }
     ]
   },

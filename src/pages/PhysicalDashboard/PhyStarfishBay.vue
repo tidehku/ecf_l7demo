@@ -1,8 +1,11 @@
 <template>
   <q-page class="justify-center">
-    <q-bar class="bg-white">
+    <q-bar
+      elevated
+      class="bg-blue-8 text-white"
+    >
       <div class="text-bold row justify-center">
-        Physical Dashboard of Starfish Bay, Tolo Habour Region
+        Biological Dashboard of Starfish Bay, Tolo Habour Region
       </div>
       <!-- <q-btn
         class="bg-indigo text-white"
@@ -13,8 +16,9 @@
       <q-btn
         dense
         icon="eco"
-        color="teal"
-        to="/biologicalDashboard/Starfish%20Bay"
+        color="white"
+        text-color="blue-8"
+        to="/interactiveHabitat/biologicalStarfishBay"
       >
         <q-tooltip>
           Switch to Biological Dashboard
@@ -23,8 +27,8 @@
       <q-btn
         dense
         icon="keyboard_backspace"
-        color="indigo"
-        v-go-back=" '/' "
+        class="bg-white text-blue-8"
+        to="/interactiveHabitat/SW"
       >
         <q-tooltip>
           Go back
@@ -57,9 +61,9 @@
           Nutrient Level
         </div>
         <div class="row no-wrap">
-          <div class="col-6 text-center text-bold text-indigo"> Chlorophyll a </div>
+          <div class="col-6 text-center text-bold text-blue"> Chlorophyll a </div>
           <q-separator vertical />
-          <div class="col-6 text-center text-bold text-indigo"> Organic Matter </div>
+          <div class="col-6 text-center text-bold text-blue"> Organic Matter </div>
         </div>
         <div class="row">
           <div class="col-3 tab1"> winter </div>
@@ -78,7 +82,7 @@
           <q-separator vertical />
           <highcharts
             class="col-3"
-            :options="Chla1"
+            :options="OM1"
           ></highcharts>
           <div class="text-center noData">
             2021 Summer data <br /> Not available yet
@@ -126,18 +130,18 @@ export default {
   background-color: white
 .tab1
   background-color: $grey-4
-  color: $indigo
+  color: $blue
   font-size: 16px
   text-align: center
   font-weight: bold
 .tab2
-  background-color: #b0bad2
+  background-color: #85C1E9
   color: white
   font-size: 16px
   text-align: center
   font-weight: bold
 .title
-  background-color: $indigo-5
+  background-color: $blue-6
   color: white
 .noData
   margin: auto

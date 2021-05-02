@@ -27,7 +27,7 @@
           <q-avatar size="50px">
             <img src="~assets/swims.png" />
           </q-avatar>
-          <q-tooltip content-style="font-size: 20px"> Enter / Exit App Fullscreen </q-tooltip>
+          <q-tooltip content-style="font-size: 16px"> Enter / Exit App Fullscreen </q-tooltip>
         </q-btn>
 
         <q-toolbar-title class="text-5 text-bold">
@@ -150,59 +150,20 @@
       v-model="drawer"
       side="right"
       overlay
-      :width="320"
+      :width="300"
       :breakpoint="500"
       elevated
-      content-class="bg-teal-3"
+      content-class="bg-indigo-1"
     >
-      <!-- <q-list padding>
-        <q-item
-          clickable
-          v-ripple
-          to="/"
-        >
-          <q-item-section avatar>
-            <q-icon name="home" />
-          </q-item-section>
-          <q-item-section> Home Page </q-item-section>
-        </q-item>
-        <q-separator />
-        <q-item
-          clickable
-          v-ripple
-          to="/interactiveHabitat/historical"
-        >
-          <q-item-section avatar>
-            <q-icon name="book" />
-          </q-item-section>
-
-          <q-item-section> Historical Records </q-item-section>
-        </q-item>
-        <q-separator />
-
-        <q-item
-          clickable
-          v-ripple
-          to="/interactiveHabitat"
-        >
-          <q-item-section avatar>
-            <q-icon name="star" />
-          </q-item-section>
-
-          <q-item-section> ECF Sampling Data </q-item-section>
-        </q-item>
-
-        <q-separator />
-      </q-list> -->
-      <div class="q-py-xl row justify-center">
+      <div class="q-py-xl">
         <q-card
           bordered
           flat
-          class="searchbox"
+          class="searchbox fixed-center"
           style="width: 90%"
         >
           <div class="q-py-md bg-indigo text-white text-h6 text-bold text-center">
-            Dashboard Quick Navigation
+            Dashboard Navigation
           </div>
           <div class="q-pa-md q-gutter-md">
             <q-select
@@ -346,6 +307,6 @@ export default {
   font-size: 15px
 
 .searchbox
-  border-width: 3px
-  border-color: $indigo
+  // border-width: 3px
+  // border-color: $indigo
 </style>

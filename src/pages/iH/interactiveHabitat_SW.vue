@@ -76,7 +76,7 @@
               Temperature
             </div>
             <div
-              class="text-h2 text-bold text-red center"
+              class="q-py-md text-h2 text-bold text-blue-8 center"
               style="col-grow"
             >123</div>
           </q-card>
@@ -88,7 +88,7 @@
               Average <br />
               Wave Fetch
             </div>
-            <div class="text-h2 text-bold text-red center">123</div>
+            <div class="q-py-md text-h2 text-bold text-blue-8 center">123</div>
           </q-card>
           <q-card
             class="maincard"
@@ -98,7 +98,7 @@
               Average <br />
               Nutrient Levels
             </div>
-            <div class="text-h2 text-bold text-red center">123</div>
+            <div class="q-py-md text-h2 text-bold text-blue-8 center">123</div>
           </q-card>
           <q-card
             class="maincard"
@@ -107,7 +107,7 @@
             <div class="q-px-sm text-bold">
               Number of <br />Mobile Species
             </div>
-            <div class="text-h2 text-bold text-red center">123</div>
+            <div class="q-py-md text-h2 text-bold text-red center">123</div>
           </q-card>
           <q-card
             class="maincard"
@@ -116,7 +116,7 @@
             <div class="q-px-sm text-bold">
               Number of <br />Sessile Species
             </div>
-            <div class="text-h2 text-bold text-red center">123</div>
+            <div class="q-py-md text-h2 text-bold text-red center">123</div>
           </q-card>
 
         </div>
@@ -131,18 +131,14 @@
           </div>
           <q-img
             src="~/assets/SiteImage/StarfishBay.png"
-            height="35vh"
             basic
           />
-          <div class="row justify-end">
-            <q-btn
-              class="q-ma-sm regiontheme"
-              style="align-items: center"
-              no-caps
-              label="Learn more"
-              @click="card1 = true"
-            />
-          </div>
+          <q-btn
+            class="q-ma-sm absolute-bottom-right regiontheme"
+            no-caps
+            label="Learn more"
+            @click="card1 = true"
+          />
         </q-card>
         <q-card
           class="q-ma-md maincard"
@@ -153,18 +149,14 @@
           </div>
           <q-img
             src="~/assets/SiteImage/StarfishBay.png"
-            height="35vh"
             basic
           />
-          <div class="row justify-end">
-            <q-btn
-              class="q-ma-sm regiontheme"
-              style="align-items: center"
-              no-caps
-              label="Learn more"
-              @click="card1 = true"
-            />
-          </div>
+          <q-btn
+            class="q-ma-sm absolute-bottom-right regiontheme"
+            no-caps
+            label="Learn more"
+            @click="card1 = true"
+          />
         </q-card>
         <q-card
           class="q-ma-md maincard"
@@ -175,18 +167,14 @@
           </div>
           <q-img
             src="~/assets/SiteImage/StarfishBay.png"
-            height="35vh"
             basic
           />
-          <div class="row justify-end">
-            <q-btn
-              class="q-ma-sm regiontheme"
-              style="align-items: center"
-              no-caps
-              label="Learn more"
-              @click="card1 = true"
-            />
-          </div>
+          <q-btn
+            class="q-ma-sm absolute-bottom-right regiontheme"
+            no-caps
+            label="Learn more"
+            @click="card1 = true"
+          />
         </q-card>
         <q-card
           class="q-ma-md maincard"
@@ -197,18 +185,14 @@
           </div>
           <q-img
             src="~/assets/SiteImage/StarfishBay.png"
-            height="35vh"
             basic
           />
-          <div class="row justify-end">
-            <q-btn
-              class="q-ma-sm regiontheme"
-              style="align-items: center"
-              no-caps
-              label="Learn more"
-              @click="card1 = true"
-            />
-          </div>
+          <q-btn
+            class="q-ma-sm absolute-bottom-right regiontheme"
+            no-caps
+            label="Learn more"
+            @click="card1 = true"
+          />
         </q-card>
         <q-dialog
           v-model="card1"
@@ -218,7 +202,7 @@
           style="height: 80vh"
         >
           <q-card>
-            <q-bar>
+            <q-bar class="bg-indigo text-white">
               <b>Site Introduction: Tolo Habour | Starfish Bay </b>
               <q-space />
               <q-btn
@@ -252,16 +236,16 @@
                 >
                 </q-table>
 
-                <div class="q-py-lg row justify-around">
+                <div class="q-py-xl row justify-around">
                   <q-btn
-                    color="indigo-5"
+                    color="blue-6"
                     label="Go to Physical Dashboard"
-                    to="/physicalDashboard/Starfish Bay"
+                    to="/interactiveHabitat/physicalStarfishBay"
                   />
                   <q-btn
-                    color="teal"
+                    color="red-4"
                     label="Go to Biological Dashboard"
-                    to="/biologicalDashboard/Starfish Bay"
+                    to="/interactiveHabitat/biologicalStarfishBay"
                   />
                 </div>
               </div>
@@ -312,16 +296,16 @@ export default {
         },
         {
           name: "Region",
-          data: "Tolo Harbour",
+          data: "Tolo Harbour Region",
         },
         {
           name: "GPS",
-          data: `22°26'10.5"N 114°14'49.5"E`,
+          data: `22°26'10.5"N, 114°14'49.5"E`,
         },
         {
           name: "Tidal Range",
           data:
-            "Ranges from a Low of 1.28 m to a high of 3.00 m above Chart Datum.",
+            "Ranges from a Low of 1.28 m to a high of 3.00 m above Chart Datum",
         },
         {
           name: "Transect length",
