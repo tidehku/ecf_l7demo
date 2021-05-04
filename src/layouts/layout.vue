@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hhh lpr fff">
+  <q-layout view="hHh lpr fff">
     <q-header elevated>
       <q-toolbar
         class="bg-grey-2 text-dark"
@@ -31,32 +31,8 @@
         </q-btn>
 
         <q-toolbar-title class="text-5 text-bold">
-          ECF HK Rocky Shore GIS Storyboard 2019-2023
+          Hong Kong Rocky shore Interactive Search Engine (HKRISE)
         </q-toolbar-title>
-
-        <!-- <q-tabs
-          v-model="tab"
-          indicator-color="transparent"
-          active-color="white"
-          class="bg-teal text-grey-5 shadow-2"
-        >
-          <q-tab
-            name="mails"
-            icon="mail"
-            label="Mails"
-          />
-          <q-tab
-            name="alarms"
-            icon="alarm"
-            label="Alarms"
-          />
-          <q-tab
-            name="movies"
-            icon="movie"
-            label="Movies"
-          />
-        </q-tabs> -->
-
         <q-tabs
           class="text-indigo"
           active-bg-color="indigo"
@@ -95,48 +71,6 @@
             label="Gallery"
           />
         </q-tabs>
-
-        <!-- <q-tabs
-          align="left"
-          v-model="tab"
-          dense
-        >
-          <q-route-tab
-            to="/"
-            name="home"
-            class="text-red"
-            icon="home"
-            label="Home"
-          />
-          <q-route-tab
-            to="/"
-            name="Methods"
-            class="text-orange-9"
-            icon="biotech"
-            label="Methods"
-          />
-          <q-route-tab
-            to="/interactiveHabitat"
-            name="interactiveHabitat"
-            class="text-green-7"
-            icon="map"
-            label="Map"
-          />
-          <q-route-tab
-            to="/SpeciesSearchEngine"
-            name="speciesSearchEngine"
-            class="text-blue-8"
-            icon="travel_explore"
-            label="Search"
-          />
-          <q-route-tab
-            to="/SpeciesSearchEngine"
-            name="Gallery"
-            class="text-deep-purple"
-            icon="collections"
-            label="Gallery"
-          />
-        </q-tabs> -->
         <q-btn
           flat
           @click="drawer = !drawer"

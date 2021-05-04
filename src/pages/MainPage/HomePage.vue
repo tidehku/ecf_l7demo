@@ -14,45 +14,60 @@
     >
       <q-carousel-slide
         :name="1"
-        img-src="https://cdn.quasar.dev/img/mountains.jpg"
+        img-src="~/assets/images/carousel1.jpg"
       />
       <q-carousel-slide
         :name="2"
-        img-src="https://cdn.quasar.dev/img/parallax1.jpg"
+        img-src="~/assets/images/carousel2.jpg"
       />
       <q-carousel-slide
         :name="3"
-        img-src="https://cdn.quasar.dev/img/parallax2.jpg"
+        img-src="~/assets/images/carousel3.jpg"
       />
       <q-carousel-slide
         :name="4"
-        img-src="https://cdn.quasar.dev/img/quasar.jpg"
+        img-src="~/assets/images/carousel4.jpg"
+      />
+      <q-carousel-slide
+        :name="5"
+        img-src="~/assets/images/carousel5.jpg"
+      />
+      <q-carousel-slide
+        :name="6"
+        img-src="~/assets/images/carousel6.jpg"
+      />
+      <q-carousel-slide
+        :name="7"
+        img-src="~/assets/images/carousel9.jpg"
       />
     </q-carousel>
 
-    <div class="justify-center q-gutter-xs q-ma-sm">
-      <!-- img-gallery -->
+    <div class="q-pa-xl bg-indigo-2 justify-center">
+      <q-card class="q-pa-sm bg-indigo text-center text-white text-h3 text-bold">
+        Welcome To HKRISE !
+      </q-card>
+      <div class="q-pa-md text-subtitle1">
+        <h>H</h>ong <h>K</h>ong <h>R</h>ocky shore <h>I</h>nteractive <h>S</h>earch <h>E</h>ngine (<h>HKRISE</h>) {{HKRISE}}
+      </div>
+    </div>
 
-      <div class="q-my-xl row justify-center text-h3 text-bold">
-        Welcome to ECF Rocky Shore GIS Website Storyboard
+    <div class="q-pa-xl justify-center">
+      <q-card class="q-pa-sm bg-indigo text-h4 text-bold text-white">Hong Kong Rocky Shore Environment</q-card>
+      <div class="q-pa-sm text-subtitle1">
+        {{ HKRockyShore1 }} </div>
+      <div class="q-pa-sm text-subtitle1">
+        {{ HKRockyShore1 }} </div>
+
+      <div class="q-pa-sm q-gutter-md row no-wrap">
+        <div class="col-7 text-subtitle1">
+          {{ HKRockyShore3 }}
+        </div>
+        <q-img
+          style="width:40%"
+          src="~/assets/images/hkrockyshore1.jpg"
+        />
       </div>
 
-      <q-card
-        flat
-        bordered
-        class="q-ma-sm maincard"
-      >
-        <q-card-section horizontal>
-          <div class="q-ma-md q-gutter-lg">
-            <div class="text-h4 text-bold text-indigo">Hong Kong Rocky Shore</div>
-            <p>{{ lorem }} {{ lorem }} {{ lorem }}</p>
-          </div>
-          <q-img
-            class="col-5"
-            src="~/assets/rockyshore.jpg"
-          />
-        </q-card-section>
-      </q-card>
       <!-- <q-card
       flat
       bordered
@@ -287,15 +302,14 @@
       >
         <!-- add the aviable links -->
         <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
-          About Us | Tropical IntertiDal Ecology (TIDE) Group
+          Meet the TideChasers
         </div>
         <q-card-section
           class="q-pa-md maincard"
           horizontal
         >
-          <div class="q-ma-md">
-            <p>{{ TidesMessage }}</p>
-          </div>
+          <div class="q-ma-md text-subtitle1">
+            {{ TidesMessage }}</div>
           <q-img
             class="col-5"
             src="~/assets/rockyshore.jpg"
@@ -304,30 +318,6 @@
 
         <!-- breakpoint of the section -->
 
-        <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
-          Meet the Team
-        </div>
-        <div class="q-py-md row justify-center q-gutter-sm">
-          <q-card
-            class="col-3 q-py-md membercard"
-            v-for="item in 10"
-            :key="item.message"
-          >
-            <q-img
-              src="~assets/personicon.png"
-              basic
-            > </q-img>
-            <div class="q-px-md subtitle">
-              <div class="text-h5 text-bold">Name</div>
-              <div class="text-caption text-indigo-2 text-italic">
-                Title/position
-              </div>
-            </div>
-            <div class="q-px-md text-caption text-black">
-              <b>Contact:</b> email address
-            </div>
-          </q-card>
-        </div>
       </q-card>
 
       <q-card
@@ -371,7 +361,7 @@
             no-caps
             color="indigo-5"
             style="width: 16%"
-            label="The University of Hong Kong (HKU)"
+            label="Tropical IntertiDal Ecology (TIDE) Group"
             target="_blank"
             href="https://www.hku.hk/"
           />
@@ -387,7 +377,7 @@
             no-caps
             color="indigo-5"
             style="width: 16%"
-            label="Tropical IntertiDal Ecology (TIDE) Group"
+            label="Environmental and Conservation Fund (ECF)"
             type="a"
             href="https://www.tidehku.com/"
           />
@@ -395,7 +385,7 @@
             no-caps
             color="indigo-5"
             style="width: 16%"
-            label="Environment and Conservation Fund (ECF)"
+            label="Hong Kong Observatory (HKO)"
             type="a"
             href="https://www.ecf.gov.hk/en/home/index.html"
           />
@@ -460,10 +450,18 @@ export default {
   name: "PageIndex",
   data() {
     return {
+      HKRISE:
+        "is a geographic information system (GIS) representing the findings from the first systematic, quantitative territory-wide rocky shore biodiversity survey in Hong Kong. With over 80% of Hong Kong's coastline being hard, rocky outcrops (Morton et al. 1996), rocky shores in Hong Kong not only are incredibly rich in biodiversity, but are also extremely dynamic through seasons where you will see completely different landscapes during monsoonal summer and winter. In this GIS you'll get to explore the species we found on a number of rocky shores in Hong Kong, from the oceanic east to the Pearl River-influenced west coast, from shores heavily influenced by anthropogenic impact to the remote, undisturbed northeastern islands, and from ferocious wave-exposed shores to calm, sheltered bays. As you will see, each rocky shore is quite unique not only in terms of their biota, but also in their physical characteristics which drive some of the variation we observe in species abundance and distribution. We hope, through the use of this GIS, you can visualize the biodiversity and physical environment of Hong Kong's rocky shore in a vivid way, compare and contrast spatial and seasonal differences in community structure, and to search for species distribution rapidly in an user-friendly interface. We also include in this GIS information on historical species distribution (1912 - 2015) from the review by Ng et al. 2017 (database available at Tropical IntertiDal Ecology (TIDE) group) and, therefore, you can compare our current dataset with species records from the past. Let the exploration begin!",
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      HKRockyShore1:
+        "The coastline of Hong Kong is long and complex.  Whilst wave-exposed shores in Hong Kong are generally located along southern and eastern coasts due to long wave fetches opening towards the South China Sea, western coasts and shores within the Tolo Harbour are relatively sheltered as they are protected by adjacent islands or headlands.  In fact, the complex coastline and presence of numerous islands in Hong Kong waters (> 260 islands of various sizes, Williams et al. 2019) create spatially variable wave fetches and, when coupled with the highly heterogeneous geomorphology in coastal rock types (granites, sandstone, siltstone etc) and the east-west salinity/nutrient gradients created by the Pearl River discharge, a diverse set of physical environments are found along Hong Kong rocky shores.",
+      HKRockyShore2:
+        "In terms of seasonal changes, Hong Kong experiences a seasonal tropical climate with primarily a hot & wet (~ May to Oct) and a cool & dry season (~ Dec to Mar) throughout the year.  During the hot & wet season, daily maximum air temperature can reach up to 35 °C (HKO, 2021), and rock temperature on the shore can reach even higher, attaining 62 °C at the maximum.  Mass mortality of rocky shore organisms is thus often observed during this time of the year, particularly for sessile species (e.g. mussels) which cannot move around to escape the heat stress.  On the other hand, however, rainfall in Hong Kong is also more frequent and intense in this season, with over 80% of annual rainfalls occurring during May to Sep (HKO, 2021) which, when combined with the hot temperature, can impose severe physiological stress to rocky shore organisms (Firth & Williams 2009).",
+      HKRockyShore3:
+        "In the cool & dry season, although thermal stress is ameliorated, the stronger north-eastern monsoon (compared to the hot & wet season) results in stronger waves and thus higher dislodgement risk experienced by rocky shore organisms.  In this time of the year, macroalgae such as Phycocalidia spp. and Ulva spp. thrive on shores probably due to the low environmental temperature (with rock surface attaining a minimum of 4 °C), and the supply of larvae from temperate seas brought by the Taiwan Current (originates from the East China Sea).  The cool, less-saline Taiwan Current is, however, moderated by the south China branching of the Kuroshio Current, which carries warmer tropical waters and keeps Hong Kong waters relatively warm and saline even during the cool & dry season.  In the hot & wet season, due to the shift in monsoon direction, the South China Sea Warm Current (also known as the Hainan Current) prevails, bringing us warm waters and larvae of tropical species.  Overall, the dynamic seasonal changes and complex spatial variations in shore physical environments allow for a multitude of species to settle and live on Hong Kong rocky shores, which harbour a rich set of species assemblages that you can get to explore using this GIS!",
       TidesMessage:
-        "Welcome to the Tropical IntertiDal Ecology (TIDE) Group at the Swire Institute of Marine Science (SWIMS), HKU! Our primary research interests are in unravelling the mechanisms underlying the behaviours and ecophysiology of intertidal organisms, but we are really interested in almost anything you find on rocky (and occasionally sandy, and extremely occasionally mangrove!) intertidal systems.  By a combination of field and laboratory methods we aim to quantify and understand species responses from individual to biogeographic scales in today’s rapidly changing environment. Using a variety of empirical and modelling approaches, we synthesize novel ideas, examine critical hypotheses, and establish mechanistic links between patterns and processes to advance our knowledge on tropical intertidal ecology.  We also get to travel to great places, work with some really cool people and eat a lot of excellent regional food!",
+        "This territory-wide rocky shore survey is not possible without the dedication of a rather small group of enthusiastic (or crazy ...) rocky shore ecologists (call us TideChasers …): Steven Wong, Brian Leung, Jackson Lau, Valerie Hickey and Tommy Hui, all members of the Tropical IntertiDal Ecology (TIDE) group led by Prof. Gray A. Williams at the Swire Institute of Marine Science, the University of Hong Kong.  This GIS was developed by Yvonne Li and Yifei Gu, computer specialists in the TIDE group.  The team would also like to thank other members of the TIDE group for their tremendous help both on the shore and in the laboratory, and grant number 105/2019 from the Environment Conservation Fund, HKSAR, which financed the project.",
       Identity: "Student",
       tab: "interactiveHabitat",
       slide: 1,
@@ -556,4 +554,7 @@ export default {
   padding: 12px
   color: white
   background-color: rgba(0, 0, 0, .3)
+h
+  font-weight: bold
+  color: $indigo
 </style>

@@ -39,6 +39,17 @@
       <q-card bordered>
         <div class="text-h5 text-bold row justify-center title">
           Daily Temperature
+          <q-icon
+            class="absolute all-pointer-events"
+            size="32px"
+            name="info"
+            color="white"
+            style="top: 2px; right: 8px"
+          >
+            <q-tooltip>
+              Here can be some note on the interpretation/ecological significance of the data
+            </q-tooltip>
+          </q-icon>
         </div>
         <div class="row">
           <div class="col-6 tab1"> winter </div>
@@ -59,6 +70,17 @@
       <q-card bordered>
         <div class="text-h5 text-bold row justify-center title">
           Nutrient Level
+          <q-icon
+            class="absolute all-pointer-events"
+            size="32px"
+            name="info"
+            color="white"
+            style="top: 2px; right: 8px"
+          >
+            <q-tooltip>
+              Here can be some note on the interpretation/ecological significance of the data
+            </q-tooltip>
+          </q-icon>
         </div>
         <div class="row no-wrap">
           <div class="col-6 text-center text-bold text-blue"> Chlorophyll a </div>
