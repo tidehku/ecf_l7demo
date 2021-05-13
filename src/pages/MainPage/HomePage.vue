@@ -61,7 +61,7 @@
           {{ HKRockyShore1 }} </div>
         <div class="q-pa-sm text-subtitle1">
           {{ HKRockyShore2 }} </div>
-        <div class="q-pa-xl bg-grey text-white text center">
+        <div class="q-pa-md bg-grey text-white text center">
           a video to be inserted here
         </div>
         <div class="q-pa-sm text-subtitle1">
@@ -355,72 +355,9 @@ export default {
           >
             <strong>Tropical IntertiDal Ecology (TIDE) Group</strong>
           </a> led by Prof. Gray A. Williams at the Swire Institute of Marine Science, the University of Hong Kong.  This GIS was developed by Yvonne Li and Yifei Gu, computer specialists in the TIDE group.  The team would also like to thank other members of the TIDE group for their tremendous help both on the shore and in the laboratory, and grant number 105/2019 from the Environment Conservation Fund, HKSAR, which financed the project.`,
-      Identity: "Student",
       tab: "interactiveHabitat",
       slide: 1,
-      slide2: "first",
       autoplay: false,
-      group: "op1",
-      options: [
-        {
-          label: "Eastern",
-          value: "op1",
-        },
-        {
-          label: "North Eastern",
-          value: "op2",
-        },
-        {
-          label: "North Western",
-          value: "op3",
-        },
-        {
-          label: "Southern",
-          value: "op4",
-        },
-        {
-          label: "South Western",
-          value: "op5",
-        },
-        {
-          label: "Tolo Habour",
-          value: "op6",
-        },
-      ],
-      tab: "Eastern",
-      EAs: ["Pak Lap", "Kau Sai Chau", "Pak Shui Wun", "Sai Wan"],
-      NEs: ["Double Island", "Hung Shek Mun", "Kat O", "Yung Shue Au"],
-      NWs: ["Luk Keng", "Lung Kwu Tan", "Siu Lam", "Tai O"],
-      SOs: ["Middle Bay", "Tai Tam", "Wah Fu", "Shek O"],
-      SWs: ["Peng Chau", "Pui O", "Shui Tseng", "Tai Long Wan"],
-      TLs: ["Lai Chi Chong", "Ma Shi Chau", "Starfish Bay", "Tseng Tau"],
-      expanded: false,
-      regions: [
-        {
-          label: "Eastern",
-          sites: ["Pak Lap", "Kau Sai Chau", "Pak Shui Wun", "Sai Wan"],
-        },
-        {
-          label: "North Eastern",
-          sites: ["Double Island", "Hung Shek Mun", "Kat O", "Yung Shue Au"],
-        },
-        {
-          label: "North Western",
-          sites: ["Luk Keng", "Lung Kwu Tan", "Siu Lam", "Tai O"],
-        },
-        {
-          label: "Southern",
-          sites: ["Middle Bay", "Tai Tam", "Wah Fu", "Shek O"],
-        },
-        {
-          label: "South Western",
-          sites: ["Peng Chau", "Pui O", "Shui Tseng", "Tai Long Wan"],
-        },
-        {
-          label: "Tolo Habour",
-          sites: ["Lai Chi Chong", "Ma Shi Chau", "Starfish Bay", "Tseng Tau"],
-        },
-      ],
     };
   },
 };
@@ -429,7 +366,6 @@ export default {
 <style lang="sass" scoped>
 .page
   background-color: $grey-3
-  height: 100vh
 .maincard
   background-color: $indigo-1
   border-width: 2px
