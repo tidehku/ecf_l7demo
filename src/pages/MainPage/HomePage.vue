@@ -12,213 +12,166 @@
       @mouseenter="autoplay = true"
       @mouseleave="autoplay = true"
     >
-      <q-carousel-slide
-        :name="1"
-        img-src="~/assets/images/carousel1.jpg"
-      />
-      <q-carousel-slide
-        :name="2"
-        img-src="~/assets/images/carousel2.jpg"
-      />
-      <q-carousel-slide
-        :name="3"
-        img-src="~/assets/images/carousel3.jpg"
-      />
-      <q-carousel-slide
-        :name="4"
-        img-src="~/assets/images/carousel4.jpg"
-      />
-      <q-carousel-slide
-        :name="5"
-        img-src="~/assets/images/carousel5.jpg"
-      />
-      <q-carousel-slide
-        :name="6"
-        img-src="~/assets/images/carousel6.jpg"
-      />
-      <q-carousel-slide
-        :name="7"
-        img-src="~/assets/images/carousel9.jpg"
-      />
+      <q-carousel-slide :name="1" img-src="~/assets/images/carousel1.jpg" />
+      <q-carousel-slide :name="2" img-src="~/assets/images/carousel2.jpg" />
+      <q-carousel-slide :name="3" img-src="~/assets/images/carousel3.jpg" />
+      <q-carousel-slide :name="4" img-src="~/assets/images/carousel4.jpg" />
+      <q-carousel-slide :name="5" img-src="~/assets/images/carousel5.jpg" />
+      <q-carousel-slide :name="6" img-src="~/assets/images/carousel6.jpg" />
+      <q-carousel-slide :name="7" img-src="~/assets/images/carousel9.jpg" />
     </q-carousel>
 
     <div class="q-pa-xl bg-indigo-2 justify-center">
-      <q-card class="q-pa-sm bg-indigo text-center text-white text-h3 text-bold">
+      <q-card
+        class="q-pa-sm bg-indigo text-center text-white text-h3 text-bold"
+      >
         Welcome To HKRISE !
       </q-card>
-      <div
-        class="q-pa-md text-subtitle1"
-        v-html='HKRISE'
-      >
+      <div class="q-pa-md text-subtitle1" v-html="HKRISE">
         {{ HKRISE }}
       </div>
     </div>
 
     <div class="q-pa-xl justify-center">
       <div>
-        <q-card class="q-pa-sm bg-indigo text-h4 text-bold text-white text-center">Hong Kong Rocky Shore Environment</q-card>
+        <q-card
+          class="q-pa-sm bg-indigo text-h4 text-bold text-white text-center"
+          >Hong Kong Rocky Shore Environment</q-card
+        >
         <div class="q-pa-sm text-subtitle1">
-          {{ HKRockyShore1 }} </div>
-        <div class="q-pa-sm text-subtitle1">
-          {{ HKRockyShore2 }} </div>
-        <div class="q-pa-xl bg-grey text-white text center">
-          a video to be inserted here
+          {{ HKRockyShore1 }}
         </div>
         <div class="q-pa-sm text-subtitle1">
-          {{ HKRockyShore3 }} </div>
+          {{ HKRockyShore2 }}
+        </div>
+        <div class="q-pa-xl center">
+          <video-background
+            @click.native="pauseVideo()"
+            ref="videobackground"
+            src="VID_20210224_141116.mp4"
+            style="height: 70vh"
+          >
+            <div class="absolute-center">
+              <q-btn
+                @click.stop="resumeVideo()"
+                color="amber-2"
+                flat
+                icon="play_arrow"
+                rounded
+                size="xl"
+                v-show="resume"
+              />
+            </div>
+          </video-background>
+        </div>
+        <div class="q-pa-sm text-subtitle1">
+          {{ HKRockyShore3 }}
+        </div>
       </div>
     </div>
-    <q-card
-      flat
-      bordered
-      class="q-ma-sm maincard"
-    >
+    <q-card flat bordered class="q-ma-sm maincard">
       <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
         Navigation through HKRISE
       </div>
       <div class="row no-wrap q-pa-sm q-gutter-sm justify-center">
         <q-card style="width: 25%">
           <q-card-section class="bg-orange-10 text-white text-center">
-            <q-icon
-              clickable
-              name="map"
-              style="font-size: 4rem"
-            />
-            <div class="text-subtitle1 text-bold "> Interactive Habitat Map </div>
+            <q-icon clickable name="map" style="font-size: 4rem" />
+            <div class="text-subtitle1 text-bold">Interactive Habitat Map</div>
           </q-card-section>
-          </q-img>
+
           <q-card-section>
-            This interactive map shows biological and physical information of each site in this territory-wide survey. In the physical dashboard, you will see data of rock temperature, nutrient availability and wave forces. In the biological dashboard, you will see species assemblage structures, abundances and a number of ecological indices quantifying the richness and diversity of the assemblages.
+            This interactive map shows biological and physical information of
+            each site in this territory-wide survey. In the physical dashboard,
+            you will see data of rock temperature, nutrient availability and
+            wave forces. In the biological dashboard, you will see species
+            assemblage structures, abundances and a number of ecological indices
+            quantifying the richness and diversity of the assemblages.
           </q-card-section>
           <div class="q-pa-md row justify-end">
-            <q-btn
-              no-caps
-              color="orange-10"
-              label="Explore"
-            />
+            <q-btn no-caps color="orange-10" label="Explore" />
           </div>
         </q-card>
         <q-card style="width: 18%">
           <q-card-section class="bg-amber-9 text-white text-center">
-            <q-icon
-              clickable
-              name="travel_explore"
-              style="font-size: 4rem"
-            />
-            <div class="text-subtitle1 text-bold ">Species Search Engine </div>
+            <q-icon clickable name="travel_explore" style="font-size: 4rem" />
+            <div class="text-subtitle1 text-bold">Species Search Engine</div>
           </q-card-section>
-          </q-img>
+
           <q-card-section>
-            In this search engine, you will be able to explore the past (from the review by Ng et al. 2017) and current (from the current ECF territory-wide survey) rocky intertidal biodiversity in Hong Kong.
+            In this search engine, you will be able to explore the past (from
+            the review by Ng et al. 2017) and current (from the current ECF
+            territory-wide survey) rocky intertidal biodiversity in Hong Kong.
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
-            <q-btn
-              no-caps
-              color="amber-9"
-              label="Explore"
-            />
+            <q-btn no-caps color="amber-9" label="Explore" />
           </div>
         </q-card>
         <q-card style="width: 18%">
           <q-card-section class="bg-teal text-white text-center">
-            <q-icon
-              clickable
-              name="biotech"
-              style="font-size: 4rem"
-            />
-            <div class="text-subtitle1 text-bold "> Methodology </div>
+            <q-icon clickable name="biotech" style="font-size: 4rem" />
+            <div class="text-subtitle1 text-bold">Methodology</div>
           </q-card-section>
-          </q-img>
+
           <q-card-section>
-            You can see how the territory-wide rocky shore biodiversity survey was conducted here.
+            You can see how the territory-wide rocky shore biodiversity survey
+            was conducted here.
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
-            <q-btn
-              no-caps
-              color="teal"
-              label="Explore"
-            />
+            <q-btn no-caps color="teal" label="Explore" />
           </div>
         </q-card>
         <q-card style="width: 18%">
           <q-card-section class="bg-blue-8 text-white text-center">
-            <q-icon
-              clickable
-              name="collections"
-              style="font-size: 4rem"
-            />
-            <div class="text-subtitle1 text-bold"> Gallery </div>
+            <q-icon clickable name="collections" style="font-size: 4rem" />
+            <div class="text-subtitle1 text-bold">Gallery</div>
           </q-card-section>
-          </q-img>
+
           <q-card-section>
-            See how we enjoyed our fieldwork in this gallery! We have also uploaded photographs of fantastic rocky intertidal organisms and landscapes here!
+            See how we enjoyed our fieldwork in this gallery! We have also
+            uploaded photographs of fantastic rocky intertidal organisms and
+            landscapes here!
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
-            <q-btn
-              no-caps
-              color="blue-8"
-              label="Explore"
-            />
+            <q-btn no-caps color="blue-8" label="Explore" />
           </div>
         </q-card>
         <q-card style="width: 18%">
           <q-card-section class="bg-indigo text-white text-center">
-            <q-icon
-              clickable
-              name="dashboard"
-              style="font-size: 4rem"
-            />
-            <div class="text-subtitle1 text-bold "> Dashboard Navigation </div>
+            <q-icon clickable name="dashboard" style="font-size: 4rem" />
+            <div class="text-subtitle1 text-bold">Dashboard Navigation</div>
           </q-card-section>
-          </q-img>
+
           <q-card-section>
-            The quick navigation panel under the ≡ drawer allows quick access to the physical and biological dashboards of our 24 field sites.
+            The quick navigation panel under the ≡ drawer allows quick access to
+            the physical and biological dashboards of our 24 field sites.
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
-            <q-btn
-              no-caps
-              color="indigo-5"
-              label="Explore"
-            />
+            <q-btn no-caps color="indigo-5" label="Explore" />
           </div>
         </q-card>
       </div>
     </q-card>
 
-    <q-card
-      flat
-      bordered
-      class="q-ma-sm maincard"
-    >
+    <q-card flat bordered class="q-ma-sm maincard">
       <!-- add the aviable links -->
       <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
         Meet the TideChasers
       </div>
-      <q-card-section
-        class="q-pa-md maincard"
-        horizontal
-      >
-        <div
-          class="q-ma-md text-subtitle1 "
-          v-html='TidesMessage'
-        >
-          {{ TidesMessage }}</div>
-        <q-img
-          class="col-5"
-          src="~/assets/rockyshore.jpg"
-        />
+      <q-card-section class="q-pa-md maincard" horizontal>
+        <div class="q-ma-md text-subtitle1" v-html="TidesMessage">
+          {{ TidesMessage }}
+        </div>
+        <q-img class="col-5" src="~/assets/rockyshore.jpg" />
       </q-card-section>
 
       <!-- breakpoint of the section -->
-
     </q-card>
 
-    <q-card
-      bordered
-      flat
-      class="q-ma-sm bg-white maincard"
-    >
-      <div class="q-pa-sm bg-indigo-6 text-white text-h4 text-bold text-center">Related Links</div>
+    <q-card bordered flat class="q-ma-sm bg-white maincard">
+      <div class="q-pa-sm bg-indigo-6 text-white text-h4 text-bold text-center">
+        Related Links
+      </div>
       <q-card-section class="row justify-evenly">
         <div class="q-px-lg linkcard">
           <q-img src="~/assets/TIDElogo.png"> </q-img>
@@ -235,7 +188,6 @@
         <div class="q-px-lg linkcard">
           <q-img src="~/assets/hkulogo.jpg"> </q-img>
         </div>
-
       </q-card-section>
       <q-card-section class="row justify-evenly q-gutter-md">
         <q-btn
@@ -329,16 +281,19 @@
       </q-card-section>
       <div class="q-pa-md">1</div>
     </q-card> -->
-
-    </div>
   </q-page>
 </template>
 
 <script>
+import Vue from "vue";
+import VideoBackground from "vue-responsive-video-background-player";
+Vue.component("video-background", VideoBackground);
+
 export default {
   name: "PageIndex",
   data() {
     return {
+      resume: false,
       HKRISE: `
        <h>H</h>ong <h>K</h>ong <h>R</h>ocky shore <h>I</h>nteractive <h>S</h>earch <h>E</h>ngine (<h>HKRISE</h>) is a geographic information system (GIS) representing the findings from the first systematic, quantitative territory-wide rocky shore biodiversity survey in Hong Kong. With over 80% of Hong Kong's coastline being hard, rocky outcrops (Morton et al. 1996), rocky shores in Hong Kong not only are incredibly rich in biodiversity, but are also extremely dynamic through seasons where you will see completely different landscapes during monsoonal summer and winter. In this GIS you'll get to explore the species we found on a number of rocky shores in Hong Kong, from the oceanic east to the Pearl River-influenced west coast, from shores heavily influenced by anthropogenic impact to the remote, undisturbed northeastern islands, and from ferocious wave-exposed shores to calm, sheltered bays. As you will see, each rocky shore is quite unique not only in terms of their biota, but also in their physical characteristics which drive some of the variation we observe in species abundance and distribution. We hope, through the use of this GIS, you can visualize the biodiversity and physical environment of Hong Kong's rocky shore in a vivid way, compare and contrast spatial and seasonal differences in community structure, and to search for species distribution rapidly in an user-friendly interface. We also include in this GIS information on historical species distribution (1912 - 2015) from the review by Ng et al. 2017 (database available at  <a
             href="https://www.tidehku.com/"
@@ -422,6 +377,16 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    pauseVideo() {
+      this.resume = true;
+      this.$refs.videobackground.player.pause();
+    },
+    resumeVideo() {
+      this.resume = false;
+      this.$refs.videobackground.player.play();
+    },
   },
 };
 </script>
