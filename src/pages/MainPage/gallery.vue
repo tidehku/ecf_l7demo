@@ -3,14 +3,32 @@
     <div class="q-col-gutter-md row items-start">
       <div>
         <viewer>
-          <img class="image" :src="require('../../assets/ECFlogo.jpg')" />
-          <img class="image" :src="require('../../assets/hkulogo.jpg')" />
+          <img
+            class="image"
+            :src="require('../../assets/ECFlogo.jpg')"
+          />
+          <img
+            class="image"
+            :src="require('../../assets/hkulogo.jpg')"
+          />
         </viewer>
         <viewer>
-          <img class="image" :src="require('../../assets/rockyshore1.jpg')" />
-          <img class="image" :src="require('../../assets/placeholder.png')" />
-          <img class="image" :src="require('../../assets/map_new_sites.png')" />
-          <img class="image" :src="require('../../assets/ECFlogo.jpg')" />
+          <img
+            class="image"
+            :src="require('../../assets/rockyshore1.jpg')"
+          />
+          <img
+            class="image"
+            :src="require('../../assets/placeholder.png')"
+          />
+          <img
+            class="image"
+            :src="require('../../assets/map.png')"
+          />
+          <img
+            class="image"
+            :src="require('../../assets/ECFlogo.jpg')"
+          />
         </viewer>
       </div>
     </div>
