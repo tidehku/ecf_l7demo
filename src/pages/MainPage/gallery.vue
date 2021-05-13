@@ -1,27 +1,17 @@
 <template>
   <q-page class="page">
     <div class="q-col-gutter-md row items-start">
-      <div class="col-6">
-        <q-img
-          src="https://cdn.quasar.dev/img/parallax2.jpg"
-          style="width: 50%"
-          native-context-menu
-        >
-          <q-icon
-            class="absolute all-pointer-events"
-            size="32px"
-            name="info"
-            color="white"
-            style="top: 8px; left: 8px"
-          >
-            <q-tooltip>
-              Tooltip
-            </q-tooltip>
-          </q-icon>
-          <div class="absolute-bottom text-subtitle1 text-center">
-            Caption
-          </div>
-        </q-img>
+      <div>
+        <viewer>
+          <img class="image" :src="require('../../assets/ECFlogo.jpg')" />
+          <img class="image" :src="require('../../assets/hkulogo.jpg')" />
+        </viewer>
+        <viewer>
+          <img class="image" :src="require('../../assets/rockyshore1.jpg')" />
+          <img class="image" :src="require('../../assets/placeholder.png')" />
+          <img class="image" :src="require('../../assets/map_new_sites.png')" />
+          <img class="image" :src="require('../../assets/ECFlogo.jpg')" />
+        </viewer>
       </div>
     </div>
   </q-page>
@@ -31,5 +21,13 @@
 export default {};
 </script>
 
-<style>
+<style lang="sass">
+.image
+  // height: 35%
+  width: 30vh
+  // width: 30% // screen
+  max-height: 30%
+  cursor: pointer
+  margin: 7px
+  display: inline-block
 </style>

@@ -20,6 +20,7 @@ module.exports = function (/* ctx */) {
     boot: [
       'leafletEntry',
       'axios',
+      'imageViewer'
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
