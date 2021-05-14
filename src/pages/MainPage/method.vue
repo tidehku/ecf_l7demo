@@ -1,13 +1,13 @@
 <template>
   <q-page class="q-gutter-md bg-grey-3">
-    <div class="row ">
+    <div class="row">
       <div class="q-pa-xl q-gutter-md col-7">
         <div class="text-indigo title">
           Stratification of Hong Kong coastline
         </div>
         <div class="text-subtitle1"> {{ Stratification }}</div>
       </div>
-      <div class="col-5">
+      <div class="q-pa-md col-5">
         <q-img
           class="col-5"
           src="~/assets/method1.png"
