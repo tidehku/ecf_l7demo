@@ -6,7 +6,9 @@
       class="col-4 bg-blue-grey-4 q-py-xl maincard"
       style="height: 80vh"
     >
-      <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
+      <q-card
+        class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white"
+      >
         Interactive Habitat Map <br />around Hong Kong Rocky Shore <br />by ECF
         2019-2023
       </q-card>
@@ -41,10 +43,7 @@
         ref="myMapRef"
       >
         <LTileLayer />
-        <l-geo-json
-          :geojson="regions"
-          :options="geoJSONOptions"
-        > </l-geo-json>
+        <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
 
         <l-control-scale
           position="bottomleft"
@@ -73,7 +72,7 @@ export default {
     LGeoJson,
     LTileLayer: () => import("components/tileLayer"),
     LControlScale,
-    VueLeafletMinimap,
+    VueLeafletMinimap
   },
   data() {
     return {
@@ -83,16 +82,8 @@ export default {
       maxZoom: 15,
       minZoom: 10.25,
       center: L.latLng(22.3508, 114.2),
-      // bounds: L.latLngBounds([
-      //   [22.557533808609336, 113.73082231707503],
-      //   [22.239381865658696, 114.62448168220955],
-      // ]),
-      // maxBounds: L.latLngBounds([
-      //   [22.557533808609336, 113.73082231707503],
-      //   [22.239381865658696, 114.62448168220955],
-      // ]),
       mapOptions: {
-        zoomSnap: 0.25,
+        zoomSnap: 0.25
       },
       regions: require("../../MapData/regions.json"),
       geoJSONOptions: {
@@ -101,33 +92,25 @@ export default {
             // weight: feature.properties.stroke_width,
             opacity: 0.5,
             color: feature.properties.fill /* refer to json data */,
-            fillOpacity: 0.4,
+            fillOpacity: 0.4
           };
         },
         onEachFeature: (feature, layer) => {
-          layer.on("mouseover", () => {
-            // console.log(feature.properties.name);
-            // var marker = new L.marker([22.34, 113.97], { opacity: 0.01 });
-            // marker.bindTooltip("My Label", {
-            //   permanent: true,
-            //   className: "my-label",
-            //   offset: [0, 0],
-            // });
-            // marker.addTo(map);
-            var popup = new L.popup()
-              .setLatLng(e.latlng)
-              .setContent(
-                '<p style="color: grey;">' + feature.properties.name + "</p>"
-              )
-              .openOn(this.$refs.myMapRef.mapObject);
-          });
+          // /* movehover open popup */
+          // layer.on("mouseover", e => {
+          //   var popup = new L.popup()
+          //     .setLatLng(e.latlng)
+          //     .setContent(
+          //       '<p style="color: grey;">' + feature.properties.name + "</p>"
+          //     )
+          //     .openOn(this.$refs.myMapRef.mapObject);
+          // });
 
           /* click on the geojson feature to navigate */
           layer.on("click", () => {
-            // console.log(feature.properties.name);
             this.$router.push(`interactiveHabitat/${feature.properties.name}`);
           });
-        },
+        }
       },
       minimapLayer: new L.TileLayer(
         "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
@@ -138,10 +121,10 @@ export default {
         width: 120,
         height: 120,
         toggleDisplay: true,
-        minimize: true,
-      },
+        minimize: true
+      }
     };
-  },
+  }
 };
 </script>
 
