@@ -1,12 +1,21 @@
 <template>
   <q-page class="page q-pa-md">
-    <div class="row q-gutter-sm">
-      <viewer style="width:20%">
-        <div> Snail x 5</div>
+    <div class="row q-gutter-sm justify-center">
+      <viewer style="width:19.2%">
+        <div> Bivalve x 3 </div>
         <img
           class="image"
-          :src="require('../../assets/gallery/Snail - Echinolittorina radiata_1.jpg')"
+          :src="require('../../assets/gallery/Bivalve - Saccostrea cuccullata.jpg')"
         />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Bivalve - Saccostrea scyphophilla (=S. mordax) and a chiton.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Bivalve - Saccostrea sp..jpg')"
+        />
+        <div> Snail x 5</div>
         <img
           class="image"
           :src="require('../../assets/gallery/Snail - Echinolittorina radiata_2.jpg')"
@@ -17,19 +26,19 @@
         />
         <img
           class="image"
-          :src="require('../../assets/gallery/Snail - Peasiella sp.jpg')"
+          :src="require('../../assets/gallery/Snail - Peasiella sp..jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Snail - Echinolittorina radiata_1.jpg')"
         />
         <img
           class="image"
           :src="require('../../assets/gallery/Snail - Reishia clavigera.jpg')"
         />
+
       </viewer>
-      <viewer style="width:20%">
-        <div> Shrimp </div>
-        <img
-          class="image"
-          :src="require('../../assets/gallery/Shrimp - Palaemon pacificus.jpg')"
-        />
+      <viewer style="width:19.2%">
         <div> Limpet x 4 </div>
         <img
           class="image"
@@ -47,6 +56,31 @@
           class="image"
           :src="require('../../assets/gallery/Limpet - Patelloida saccharina.jpg')"
         />
+        <div> False Limpet x 2 </div>
+        <img
+          class="image"
+          :src="require('../../assets/gallery/False limpet - Siphonaria laciniosa.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/False limpet - Siphonaria laciniosa2.jpg')"
+        />
+        <div> Gastropod x 1 </div>
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Gastropod - Elysia sp.jpg')"
+        />
+        <div> Chiton x 2 </div>
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Chiton -  Liolophura japonica.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Chiton - Leptoplax doederleini.jpg')"
+        />
+      </viewer>
+      <viewer style="width:19.2%">
         <div> Sea anemone x 3 </div>
         <img
           class="image"
@@ -60,11 +94,93 @@
           class="image"
           :src="require('../../assets/gallery/Sea anemone - Spheractis cheungae 2.jpg')"
         />
-        <!-- <img
+        <div> Barnale x 5 </div>
+        <img
           class="image"
-          :src="require('../../assets/gallery/False limpet - Siphonaria laciniosa2.JPG')"
-        /> -->
+          :src="require('../../assets/gallery/Barnacle - Amphibalanus amphitrite.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Barnacle - Capitulum mitella.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Barnacle - mixed species.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Barnacle - Tetraclita japonica and limpets.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Barnacle - Tetraclita squamosa.jpg')"
+        />
+      </viewer>
+      <viewer style="width:19.2%">
 
+        <div> fish x 3 </div>
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Fish - Bathygobius meggitti 1.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Fish - Bathygobius meggitti 2.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Fish - Bathygobius meggitti 3.jpg')"
+        />
+        <div> Algae x 4 </div>
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Algae - Corallina sp..jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Algae - Ishige sp..jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Algae - Phycocalidia (=Porphyra_ higher shore) and Dermonema (lower shore).jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Algae (cyanobacteria) - Kyrtuthrix maculans.jpg')"
+        />
+      </viewer>
+      <viewer style="width:19.2%">
+        <div> Shrimp </div>
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Shrimp - Palaemon pacificus.jpg')"
+        />
+        <div> Bryozoan x 1 </div>
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Bryozoan - Watersipora sp. and Algae Colpomenia sinuosa.jpg')"
+        />
+        <div> Crab x 4 </div>
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Crab - 1.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Crab - Eriphia smithii.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Crab - Nanosesarma minutum.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Crab - Parasesarma pictum.jpg')"
+        />
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Crab.jpg')"
+        />
       </viewer>
       <!-- <viewer>
           <img
