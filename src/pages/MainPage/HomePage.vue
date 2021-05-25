@@ -89,7 +89,12 @@
             quantifying the richness and diversity of the assemblages.
           </q-card-section>
           <div class="q-pa-md row justify-end">
-            <q-btn no-caps color="orange-10" label="Explore" />
+            <q-btn
+              no-caps
+              color="orange-10"
+              label="Explore"
+              to="interactiveHabitat"
+            />
           </div>
         </q-card>
         <q-card style="width: 18%">
@@ -104,7 +109,12 @@
             territory-wide survey) rocky intertidal biodiversity in Hong Kong.
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
-            <q-btn no-caps color="amber-9" label="Explore" />
+            <q-btn
+              no-caps
+              color="amber-9"
+              label="Explore"
+              to="SpeciesSearchEngine"
+            />
           </div>
         </q-card>
         <q-card style="width: 18%">
@@ -118,7 +128,7 @@
             was conducted here.
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
-            <q-btn no-caps color="teal" label="Explore" />
+            <q-btn no-caps color="teal" label="Explore" to="method" />
           </div>
         </q-card>
         <q-card style="width: 18%">
@@ -133,7 +143,7 @@
             landscapes here!
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
-            <q-btn no-caps color="blue-8" label="Explore" />
+            <q-btn no-caps color="blue-8" label="Explore" to="gallery" />
           </div>
         </q-card>
         <q-card style="width: 18%">
@@ -147,7 +157,12 @@
             the physical and biological dashboards of our 24 field sites.
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
-            <q-btn no-caps color="indigo-5" label="Explore" />
+            <q-btn
+              no-caps
+              color="indigo-5"
+              label="Explore"
+              @click="openDrawer()"
+            />
           </div>
         </q-card>
       </div>
@@ -323,6 +338,9 @@ export default {
     resumeVideo() {
       this.resume = false;
       this.$refs.videobackground.player.play();
+    },
+    openDrawer() {
+      this.$root.$emit("openDrawer");
     }
   }
 };
