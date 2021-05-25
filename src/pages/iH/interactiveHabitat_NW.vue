@@ -26,10 +26,10 @@
             </q-route-tab>
           </q-tabs>
         </q-toolbar>
-        <p class="q-pa-sm">{{ lorem }}</p>
+        <p class="q-pa-sm">{{ Region }}</p>
         <q-card class="q-px-xs">
           <l-map
-            style="height: 330px"
+            style="height: 40vh"
             :zoom="zoom"
             :center="center"
             :options="mapOptions"
@@ -67,13 +67,19 @@
             class="q-pa-sm"
             style="width: 19%"
           >
-            <div class="q-px-sm text-h7 text-bold">
-              Average <br />
-              Nutrient Level
+            <div class="q-px-sm"> <b>Maximum Temperature <br /></b> <br /> HH: <br />
+              <h>43.38 ± 6.60 ℃</h> <br />
+
+              LM: <br />
+              <h>33.88 ± 6.50 ℃</h>
+
+              <div class="row justify-end">
+                (n = 4)
+              </div>
             </div>
-            <div class="row justify-center">
+            <!-- <div class="row justify-center">
               <div class="q-pa-md row text-h2 text-bold text-red">123</div>
-            </div>
+            </div> -->
           </q-card>
           <q-card
             class="q-pa-sm"
@@ -130,10 +136,10 @@
           style="width: 24%; height: 56%"
         >
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
-            Lung Kwu Tan
+            Tai O
           </div>
           <q-img
-            src="~/assets/SiteImage/StarfishBay.png"
+            src="~/assets/SiteImage/Tai O.png"
             height="200px"
             basic
           />
@@ -156,7 +162,7 @@
             Siu Lam
           </div>
           <q-img
-            src="~/assets/SiteImage/StarfishBay.png"
+            src="~/assets/SiteImage/Siu Lam.png"
             height="200px"
             basic
           />
@@ -179,7 +185,7 @@
             Luk Keng
           </div>
           <q-img
-            src="~/assets/SiteImage/StarfishBay.png"
+            src="~/assets/SiteImage/Luk Keng.png"
             height="200px"
             basic
           />
@@ -199,10 +205,10 @@
           style="width: 24%; height: 56%"
         >
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
-            Tai Long Wan
+            Long Kwu Tan
           </div>
           <q-img
-            src="~/assets/SiteImage/StarfishBay.png"
+            src="~/assets/SiteImage/Lung Kwu Tan.png"
             height="200px"
             basic
           />
@@ -259,17 +265,6 @@
                 <t>Slope:</t> {{ slope }} <br />
                 <t>Rock type:</t> {{ rockType }} <br />
                 <t>Feasibility:</t> {{ feasibility }}
-                <!-- <q-table
-                  class="table"
-                  title="Starfish Bay Site Information"
-                  :data="Table_TLSB"
-                  separator="horizontal"
-                  dense
-                  hide-bottom
-                  hide-header
-                  title-class="bolded"
-                >
-                </q-table> -->
 
                 <div class="q-py-lg row justify-around">
                   <q-btn
@@ -305,8 +300,8 @@ export default {
   },
   data() {
     return {
-      lorem:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      Region:
+        "The Northwestern (NW) region is heavily influenced by the outflow of the Pearl River.  The high sedimentation rate of the Pearl River, together with the rapid developments in the region (e.g. the expansion of the Hong Kong International Airport, Hong Kong-Zhuhai-Macau Bridge), have impacted water quality with increased eutrophication and suspended solids.  Used to be one of the major habitats of Chinese White Dolphin in Hong Kong, some dolphin tour boats and observation lookouts are still popular in the region(e.g. Tai O, Lung Kwu Tan).",
       card1: false,
       siteName: `Starfish Bay`,
       regionName: `Tolo Harbour`,
@@ -363,7 +358,7 @@ export default {
       //       "When assessing this site’s suitability, it was determined to be moderately susceptible to vessel traffic and of low susceptibility to sand inundation and human disturbance. As a result, the site poses a low safety risk from oncoming wave action.",
       //   },
       // ],
-      zoom: 10,
+      zoom: 9.8,
       center: L.latLng(22.34, 113.97214768915284),
       mapOptions: {
         zoomSnap: 0.2,
@@ -403,6 +398,9 @@ export default {
 t
   color: $indigo-5
   font-weight: 900
+h
+  color: #indigo
+  font-size: 17px
 // .table
 //   font-size: 14px
 //   td:first-child

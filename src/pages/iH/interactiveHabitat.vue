@@ -6,32 +6,28 @@
       class="col-4 bg-blue-grey-4 q-py-xl maincard"
       style="height: 80vh"
     >
-      <q-card
-        class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white"
-      >
-        Interactive Habitat Map <br />around Hong Kong Rocky Shore <br />by ECF
-        2019-2023
+      <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
+        HKRISE! Interactive Habitat Map (2020 - 2023)
       </q-card>
 
       <q-card class="q-mx-lg row justify-center">
-        <p class="q-ma-sm q-pa-sm text-black">{{ lorem }}{{ lorem }}</p>
+        <p class="q-ma-sm q-pa-sm text-black"> The Hong Kong coastline is stratified into sex zones according to their unique hydrographic characteristics, e.g., salinity and wave action. Four sites, involving two relatively sheltered and two relatively exposed natural rocky shores, are selected in each zone for sampling. Surveys are conducted along six tidal heights for each site, and is repeated over two seasons per year for a two-year period. </p>
 
         <p class="text-red-10 text-bold">
           ( Hint: Please Click Any Zone for Localized Data )
         </p>
       </q-card>
-      <div class="q-pa-md row justify-end">
-        <q-btn
-          no-caps
-          class="q-px-md"
-          color="indigo-10"
-          dense
-          v-go-back="'/interactiveHabitat/historical'"
-          push
-        >
-          Switch to Historical Map
-        </q-btn>
-      </div>
+      <q-icon
+        class="absolute-bottom-right"
+        size="32px"
+        name="info"
+        color="white"
+        style="top: 2px; right: 8px"
+      >
+        <q-tooltip>
+          Please select on the map which region you would like to explore (see the regional stratification and site selection here).
+        </q-tooltip>
+      </q-icon>
     </q-card>
 
     <div class="col-8">
@@ -43,7 +39,10 @@
         ref="myMapRef"
       >
         <LTileLayer />
-        <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
+        <l-geo-json
+          :geojson="regions"
+          :options="geoJSONOptions"
+        > </l-geo-json>
 
         <l-control-scale
           position="bottomleft"
@@ -72,7 +71,7 @@ export default {
     LGeoJson,
     LTileLayer: () => import("components/tileLayer"),
     LControlScale,
-    VueLeafletMinimap
+    VueLeafletMinimap,
   },
   data() {
     return {
@@ -83,7 +82,7 @@ export default {
       minZoom: 10.25,
       center: L.latLng(22.3508, 114.2),
       mapOptions: {
-        zoomSnap: 0.25
+        zoomSnap: 0.25,
       },
       regions: require("../../MapData/regions.json"),
       geoJSONOptions: {
@@ -92,7 +91,7 @@ export default {
             // weight: feature.properties.stroke_width,
             opacity: 0.5,
             color: feature.properties.fill /* refer to json data */,
-            fillOpacity: 0.4
+            fillOpacity: 0.4,
           };
         },
         onEachFeature: (feature, layer) => {
@@ -110,7 +109,7 @@ export default {
           layer.on("click", () => {
             this.$router.push(`interactiveHabitat/${feature.properties.name}`);
           });
-        }
+        },
       },
       minimapLayer: new L.TileLayer(
         "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
@@ -121,10 +120,10 @@ export default {
         width: 120,
         height: 120,
         toggleDisplay: true,
-        minimize: true
-      }
+        minimize: true,
+      },
     };
-  }
+  },
 };
 </script>
 
