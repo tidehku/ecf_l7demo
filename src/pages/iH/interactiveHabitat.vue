@@ -3,21 +3,24 @@
     <q-card
       bordered
       dark
-      class="col-4 bg-blue-grey-4 q-py-xl maincard"
-      style="height: 80vh"
+      class="col-4 bg-blue-grey-4 maincard"
     >
-      <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
+      <q-img
+        src="~/assets/mapcover.png"
+        style="height: 80vh"
+      />
+      <!-- <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
         HKRISE! Interactive Habitat Map (2020 - 2023)
-      </q-card>
+      </q-card> -->
 
-      <q-card class="q-mx-lg row justify-center">
+      <!-- <q-card class="q-mx-lg row justify-center">
         <p class="q-ma-sm q-pa-sm text-black"> The Hong Kong coastline is stratified into sex zones according to their unique hydrographic characteristics, e.g., salinity and wave action. Four sites, involving two relatively sheltered and two relatively exposed natural rocky shores, are selected in each zone for sampling. Surveys are conducted along six tidal heights for each site, and is repeated over two seasons per year for a two-year period. </p>
 
         <p class="text-red-10 text-bold">
           ( Hint: Please Click Any Zone for Localized Data )
         </p>
-      </q-card>
-      <q-icon
+      </q-card> -->
+      <!-- <q-icon
         class="absolute-bottom-right"
         size="32px"
         name="info"
@@ -27,7 +30,7 @@
         <q-tooltip>
           Please select on the map which region you would like to explore (see the regional stratification and site selection here).
         </q-tooltip>
-      </q-icon>
+      </q-icon> -->
     </q-card>
 
     <div class="col-8">

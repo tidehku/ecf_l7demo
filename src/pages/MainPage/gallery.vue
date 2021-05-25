@@ -39,6 +39,11 @@
 
       </viewer>
       <viewer style="width:19.2%">
+        <div> Gastropod x 1 </div>
+        <img
+          class="image"
+          :src="require('../../assets/gallery/Gastropod - Elysia sp.jpg')"
+        />
         <div> Limpet x 4 </div>
         <img
           class="image"
@@ -65,11 +70,7 @@
           class="image"
           :src="require('../../assets/gallery/False limpet - Siphonaria laciniosa2.jpg')"
         />
-        <div> Gastropod x 1 </div>
-        <img
-          class="image"
-          :src="require('../../assets/gallery/Gastropod - Elysia sp.jpg')"
-        />
+
         <div> Chiton x 2 </div>
         <img
           class="image"

@@ -68,7 +68,7 @@
             style="width: 19%"
           >
             <div class="q-px-sm">
-              <h>Maximum Temperature</h> /> <br /> HH: <br />
+              <b>Maximum Temperature</b> <br /> HH: <br />
               <h>43.38 ± 6.60 ℃</h> <br />
 
               LM: <br />
