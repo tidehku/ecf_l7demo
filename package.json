@@ -27,7 +27,8 @@
     "vue2-leaflet-locatecontrol": "^1.0.1"
   },
   "devDependencies": {
-    "@quasar/app": "^2.2.6"
+    "@quasar/app": "^2.2.6",
+    "@quasar/quasar-app-extension-qzoom": "^1.0.0-alpha.7"
   },
   "browserslist": [
     "last 10 Chrome versions",
