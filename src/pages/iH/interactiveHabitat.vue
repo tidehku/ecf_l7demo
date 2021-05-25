@@ -39,6 +39,14 @@
         ref="myMapRef"
       >
         <LTileLayer />
+
+        <!-- region_name marker -->
+        <l-geo-json
+          :geojson="regionMarker"
+          :options="regionMarkerOptions"
+        >
+        </l-geo-json>
+
         <l-geo-json
           :geojson="regions"
           :options="geoJSONOptions"
@@ -122,14 +130,94 @@ export default {
         toggleDisplay: true,
         minimize: true,
       },
+      regionMarker: {
+        type: "FeatureCollection",
+        features: [
+          {
+            type: "Feature",
+            properties: {
+              name: "NE",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [114.32, 22.53],
+            },
+          },
+          {
+            type: "Feature",
+            properties: {
+              name: "TL",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [114.23, 22.44],
+            },
+          },
+          {
+            type: "Feature",
+            properties: {
+              name: "SW",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [113.98, 22.23],
+            },
+          },
+          {
+            type: "Feature",
+            properties: {
+              name: "NW",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [113.92, 22.34],
+            },
+          },
+          {
+            type: "Feature",
+            properties: {
+              name: "EA",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [114.38, 22.3],
+            },
+          },
+          {
+            type: "Feature",
+            properties: {
+              name: "SO",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [114.18, 22.23],
+            },
+          },
+        ],
+      },
+      regionMarkerOptions: {
+        onEachFeature: (feature, layer) => {
+          layer.bindTooltip("<div>" + feature.properties.name + "</div>", {
+            permanent: true,
+            sticky: true,
+            direction: "center",
+          });
+        },
+      },
     };
   },
 };
 </script>
 
-<style lang="sass" scoped>
-.my-label
-  position: absolute
-  width: 1000px
-  font-size: 20px
+<style lang="sass">
+.leaflet-tooltip
+  background-color: transparent
+  border: transparent
+  box-shadow: none
+  font-weight: bold
+  font-size: 26px
+  color: white
+
+.leaflet-pane .leaflet-marker-pane
+  display: none
 </style>
