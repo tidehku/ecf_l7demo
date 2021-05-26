@@ -208,3 +208,16 @@ export default {
   }
 };
 </script>
+
+<style lang="sass">
+.leaflet-tooltip
+    background-color: transparent
+    border: transparent
+    box-shadow: none
+    font-weight: bold
+    font-size: 26px
+    color: white
+
+.leaflet-marker-pane
+    display: none
+</style>

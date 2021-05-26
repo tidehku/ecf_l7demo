@@ -1,22 +1,12 @@
 <template>
   <q-page class="row q-pa-xs justify-center bg-grey-5 page">
     <div style="width: 33%">
-      <q-card
-        class="q-ma-sm bg-white"
-        bordered
-      >
+      <q-card class="q-ma-sm bg-white" bordered>
         <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
           North Western Region
           <q-space />
-          <q-separator
-            dark
-            vertical
-            inset
-          />
-          <q-tabs
-            inline-label
-            shrink
-          >
+          <q-separator dark vertical inset />
+          <q-tabs inline-label shrink>
             <q-route-tab
               name="Back"
               label="Back"
@@ -37,15 +27,9 @@
             :min-zoom="zoom"
           >
             <LTileLayer />
-            <l-geo-json
-              :geojson="region"
-              :options="regionOptions"
-            ></l-geo-json>
+            <l-geo-json :geojson="region" :options="regionOptions"></l-geo-json>
 
-            <l-geo-json
-              :geojson="sitesLocation"
-              :options="siteOptions"
-            >
+            <l-geo-json :geojson="sitesLocation" :options="siteOptions">
             </l-geo-json>
 
             <l-control-scale
@@ -59,16 +43,16 @@
     </div>
     <div style="width: 66.3%; height: 40%">
       <q-card class="bg-indigo-1">
-        <div class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders">
+        <div
+          class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders"
+        >
           Regional Average Data Summary
         </div>
         <div class="row q-pa-sm justify-evenly">
-          <q-card
-            class="q-pa-sm"
-            style="width: 19%"
-          >
+          <q-card class="q-pa-sm" style="width: 19%">
             <div class="q-px-sm">
-              <b>Maximum Temperature</b> <br /> HH: <br />
+              <b>Maximum Temperature</b> <br />
+              HH: <br />
               <h>43.38 ± 6.60 ℃</h> <br />
 
               LM: <br />
@@ -82,10 +66,7 @@
               <div class="q-pa-md row text-h2 text-bold text-red">123</div>
             </div> -->
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width: 19%"
-          >
+          <q-card class="q-pa-sm" style="width: 19%">
             <div class="q-px-sm text-h7 text-bold">
               Average <br />
               Wave Fetch
@@ -94,10 +75,7 @@
               <div class="q-pa-md row text-h2 text-bold text-orange">123</div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width: 19%"
-          >
+          <q-card class="q-pa-sm" style="width: 19%">
             <div class="q-px-sm text-h7 text-bold">
               Average <br />Temperature
             </div>
@@ -105,10 +83,7 @@
               <div class="q-pa-md row text-h2 text-bold text-green">123</div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width: 19%"
-          >
+          <q-card class="q-pa-sm" style="width: 19%">
             <div class="q-px-sm text-h7 text-bold">
               Number of <br />Mobile Species
             </div>
@@ -116,10 +91,7 @@
               <div class="q-pa-md row text-h2 text-bold text-blue-6">123</div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width: 19%"
-          >
+          <q-card class="q-pa-sm" style="width: 19%">
             <div class="q-px-sm text-h7 text-bold">
               Number of <br />Sessile Species
             </div>
@@ -132,18 +104,11 @@
         </div>
       </q-card>
       <div class="row justify-around">
-        <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 56%"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 56%">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Tai O
           </div>
-          <q-img
-            src="~/assets/SiteImage/Tai O.png"
-            height="200px"
-            basic
-          />
+          <q-img src="~/assets/SiteImage/Tai O.png" height="200px" basic />
           <div class="row justify-end">
             <q-btn
               class="q-ma-sm"
@@ -155,18 +120,11 @@
             />
           </div>
         </q-card>
-        <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 56%"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 56%">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Siu Lam
           </div>
-          <q-img
-            src="~/assets/SiteImage/Siu Lam.png"
-            height="200px"
-            basic
-          />
+          <q-img src="~/assets/SiteImage/Siu Lam.png" height="200px" basic />
           <div class="row justify-end">
             <q-btn
               class="q-ma-sm"
@@ -178,18 +136,11 @@
             />
           </div>
         </q-card>
-        <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 56%"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 56%">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Luk Keng
           </div>
-          <q-img
-            src="~/assets/SiteImage/Luk Keng.png"
-            height="200px"
-            basic
-          />
+          <q-img src="~/assets/SiteImage/Luk Keng.png" height="200px" basic />
           <div class="row justify-end">
             <q-btn
               class="q-ma-sm"
@@ -201,10 +152,7 @@
             />
           </div>
         </q-card>
-        <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 56%"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 56%">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Long Kwu Tan
           </div>
@@ -235,20 +183,12 @@
             <q-bar>
               <b>Site Introduction: Tolo Habour | Starfish Bay </b>
               <q-space />
-              <q-btn
-                dense
-                flat
-                icon="close"
-                v-close-popup
-              >
+              <q-btn dense flat icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section
-              horizontal
-              class="q-pa-md"
-            >
+            <q-card-section horizontal class="q-pa-md">
               <q-img
                 class="q-ma-md"
                 height="450px"
@@ -297,7 +237,7 @@ export default {
     LMap,
     LGeoJson,
     LControlScale,
-    LTileLayer: () => import("components/tileLayer"),
+    LTileLayer: () => import("components/tileLayer")
   },
   data() {
     return {
@@ -362,20 +302,20 @@ export default {
       zoom: 9.8,
       center: L.latLng(22.34, 113.97214768915284),
       mapOptions: {
-        zoomSnap: 0.2,
+        zoomSnap: 0.2
       },
       sitesLocation: require("../../MapData/NW_Sites.json"),
       siteOptions: {
         style: function style(feature) {
           return {
-            color: red,
+            color: red
           };
         },
         onEachFeature: (feature, layer) => {
-          layer.on("click", (e) => {
+          layer.on("click", e => {
             this.$router.push(`/physicalDashboard`);
           });
-        },
+        }
       },
       region: require("../../MapData/NW.json"),
       regionOptions: {
@@ -383,12 +323,12 @@ export default {
           return {
             opacity: 0.6,
             color: feature.properties.fill /* refer to json data */,
-            fillOpacity: 0.3,
+            fillOpacity: 0.3
           };
-        },
-      },
+        }
+      }
     };
-  },
+  }
 };
 </script>
 
@@ -407,4 +347,7 @@ h
 //   td:first-child
 //     background-color: $indigo-1
 //     font-weight: bold
+
+// .leaflet-marker-pane
+//     display: inline !important
 </style>
