@@ -87,21 +87,6 @@ const routes = [
       }
     ]
   },
-  {
-    path: "/SpeciesSearchEngine",
-    component: () => import("pages/MainPage/SpeciesSearchEngine.vue")
-  },
-  {
-    path: "/speciesSearchEngine",
-    component: () => import("layouts/layout.vue"),
-    children: [
-      //have not been built yet
-      {
-        path: "/SpeciesSearchEngine",
-        component: () => import("pages/iH/interactiveHabitat_NW.vue")
-      }
-    ]
-  },
 
   // Page 404 Not Found: Always leave this as last one
   {
