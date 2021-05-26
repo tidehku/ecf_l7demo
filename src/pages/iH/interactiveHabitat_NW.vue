@@ -1,12 +1,22 @@
 <template>
-  <q-page class="row q-pa-xs justify-center bg-grey-5 page">
+  <q-page class="q-pa-xs row justify-center bg-grey-5">
     <div style="width: 33%">
-      <q-card class="q-ma-sm bg-white" bordered>
+      <q-card
+        class="q-ma-sm bg-white"
+        bordered
+      >
         <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
           North Western Region
           <q-space />
-          <q-separator dark vertical inset />
-          <q-tabs inline-label shrink>
+          <q-separator
+            dark
+            vertical
+            inset
+          />
+          <q-tabs
+            inline-label
+            shrink
+          >
             <q-route-tab
               name="Back"
               label="Back"
@@ -17,7 +27,7 @@
           </q-tabs>
         </q-toolbar>
         <p class="q-pa-sm">{{ Region }}</p>
-        <q-card class="q-px-xs">
+        <div class="q-pa-xs">
           <l-map
             style="height: 40vh"
             :zoom="zoom"
@@ -27,9 +37,15 @@
             :min-zoom="zoom"
           >
             <LTileLayer />
-            <l-geo-json :geojson="region" :options="regionOptions"></l-geo-json>
+            <l-geo-json
+              :geojson="region"
+              :options="regionOptions"
+            ></l-geo-json>
 
-            <l-geo-json :geojson="sitesLocation" :options="siteOptions">
+            <l-geo-json
+              :geojson="sitesLocation"
+              :options="siteOptions"
+            >
             </l-geo-json>
 
             <l-control-scale
@@ -38,77 +54,110 @@
               :imperial="true"
             ></l-control-scale>
           </l-map>
-        </q-card>
+        </div>
       </q-card>
     </div>
     <div style="width: 66.3%; height: 40%">
       <q-card class="bg-indigo-1">
-        <div
-          class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders"
-        >
+        <div class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders">
           Regional Average Data Summary
         </div>
         <div class="row q-pa-sm justify-evenly">
-          <q-card class="q-pa-sm" style="width: 19%">
+          <q-card
+            class="q-pa-sm"
+            style="width: 19%"
+          >
             <div class="q-px-sm">
-              <b>Maximum Temperature</b> <br />
+              <y>Max Temperature</y> <br /><br />
               HH: <br />
-              <h>43.38 ± 6.60 ℃</h> <br />
-
+              <h>24.72</h> <b> ± 12.25 ℃</b>
+              <div class="row justify-end">
+                (n = 4)
+              </div>
               LM: <br />
-              <h>33.88 ± 6.50 ℃</h>
-
+              <h>33.88</h> <b> ± 6.50 ℃</b>
               <div class="row justify-end">
                 (n = 4)
               </div>
             </div>
-            <!-- <div class="row justify-center">
-              <div class="q-pa-md row text-h2 text-bold text-red">123</div>
-            </div> -->
           </q-card>
-          <q-card class="q-pa-sm" style="width: 19%">
-            <div class="q-px-sm text-h7 text-bold">
-              Average <br />
-              Wave Fetch
-            </div>
-            <div class="row justify-center">
-              <div class="q-pa-md row text-h2 text-bold text-orange">123</div>
-            </div>
-          </q-card>
-          <q-card class="q-pa-sm" style="width: 19%">
-            <div class="q-px-sm text-h7 text-bold">
-              Average <br />Temperature
-            </div>
-            <div class="row justify-center">
-              <div class="q-pa-md row text-h2 text-bold text-green">123</div>
-            </div>
-          </q-card>
-          <q-card class="q-pa-sm" style="width: 19%">
-            <div class="q-px-sm text-h7 text-bold">
-              Number of <br />Mobile Species
-            </div>
-            <div class="row justify-center">
-              <div class="q-pa-md row text-h2 text-bold text-blue-6">123</div>
+          <q-card
+            class="q-pa-sm"
+            style="width: 19%"
+          >
+            <div class="q-px-sm">
+              <y>Wave Fetch</y> <br /><br />
+              <div class="items-end">
+                Max: <br />
+                <h>13.97</h> <b> km</b>
+                <div class="row justify-end">
+                  (n = 4)
+                </div>
+                Min: <br />
+                <h>2.14</h> <b> km</b>
+                <div class="row justify-end">
+                  (n = 4)
+                </div>
+              </div>
             </div>
           </q-card>
-          <q-card class="q-pa-sm" style="width: 19%">
-            <div class="q-px-sm text-h7 text-bold">
-              Number of <br />Sessile Species
+          <q-card
+            class="q-pa-sm"
+            style="width: 19%"
+          >
+            <div class="q-px-sm">
+              <y>Nutrient levels</y> <br /><br />
+              chlorophyll a: <br />
+              <h>43.38</h> <b> ± 6.60 ℃</b>
+              <div class="row justify-end">
+                (n = 4)
+              </div>
+              Organic matter: <br />
+              <h>8.40</h> <b> ± 3.96 ℃</b>
+              <div class="row justify-end">
+                (n = 4)
+              </div>
             </div>
-            <div class="row justify-center">
-              <div class="q-pa-md row text-h2 text-bold text-deep-purple">
-                123
+          </q-card>
+          <q-card
+            class="q-pa-sm"
+            style="width: 19%"
+          >
+            <div class="q-px-sm">
+              <y>Mobile Species Richness</y> <br /><br />
+              <div class="items-center">
+                Max:<h>22</h> <br /><br />
+                Min:<h>15</h>
+              </div>
+            </div>
+          </q-card>
+          <q-card
+            class="q-pa-sm"
+            style="width: 19%"
+          >
+            <div class="q-px-sm">
+              <y>Sessile Species Richness</y> <br /><br />
+              <div class="items-center">
+                Max:<h>19</h> <br /><br />
+                Min:<h>10</h>
               </div>
             </div>
           </q-card>
         </div>
       </q-card>
       <div class="row justify-around">
-        <q-card class="q-ma-md" style="width: 24%; height: 56%">
+        <q-card
+          class="q-ma-md"
+          style="width: 24%; height: 56%"
+        >
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Tai O
           </div>
-          <q-img src="~/assets/SiteImage/Tai O.png" height="200px" basic />
+          <q-img
+            src="~/assets/SiteImage/Tai O.png"
+            height="200px"
+            basic
+          />
           <div class="row justify-end">
             <q-btn
               class="q-ma-sm"
@@ -120,11 +169,18 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 56%">
+        <q-card
+          class="q-ma-md"
+          style="width: 24%; height: 56%"
+        >
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Siu Lam
           </div>
-          <q-img src="~/assets/SiteImage/Siu Lam.png" height="200px" basic />
+          <q-img
+            src="~/assets/SiteImage/Siu Lam.png"
+            height="200px"
+            basic
+          />
           <div class="row justify-end">
             <q-btn
               class="q-ma-sm"
@@ -136,11 +192,18 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 56%">
+        <q-card
+          class="q-ma-md"
+          style="width: 24%; height: 56%"
+        >
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Luk Keng
           </div>
-          <q-img src="~/assets/SiteImage/Luk Keng.png" height="200px" basic />
+          <q-img
+            src="~/assets/SiteImage/Luk Keng.png"
+            height="200px"
+            basic
+          />
           <div class="row justify-end">
             <q-btn
               class="q-ma-sm"
@@ -152,7 +215,10 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 56%">
+        <q-card
+          class="q-ma-md"
+          style="width: 24%; height: 56%"
+        >
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Long Kwu Tan
           </div>
@@ -183,12 +249,20 @@
             <q-bar>
               <b>Site Introduction: Tolo Habour | Starfish Bay </b>
               <q-space />
-              <q-btn dense flat icon="close" v-close-popup>
+              <q-btn
+                dense
+                flat
+                icon="close"
+                v-close-popup
+              >
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section horizontal class="q-pa-md">
+            <q-card-section
+              horizontal
+              class="q-pa-md"
+            >
               <q-img
                 class="q-ma-md"
                 height="450px"
@@ -237,7 +311,7 @@ export default {
     LMap,
     LGeoJson,
     LControlScale,
-    LTileLayer: () => import("components/tileLayer")
+    LTileLayer: () => import("components/tileLayer"),
   },
   data() {
     return {
@@ -302,20 +376,20 @@ export default {
       zoom: 9.8,
       center: L.latLng(22.34, 113.97214768915284),
       mapOptions: {
-        zoomSnap: 0.2
+        zoomSnap: 0.2,
       },
       sitesLocation: require("../../MapData/NW_Sites.json"),
       siteOptions: {
         style: function style(feature) {
           return {
-            color: red
+            color: red,
           };
         },
         onEachFeature: (feature, layer) => {
-          layer.on("click", e => {
+          layer.on("click", (e) => {
             this.$router.push(`/physicalDashboard`);
           });
-        }
+        },
       },
       region: require("../../MapData/NW.json"),
       regionOptions: {
@@ -323,12 +397,12 @@ export default {
           return {
             opacity: 0.6,
             color: feature.properties.fill /* refer to json data */,
-            fillOpacity: 0.3
+            fillOpacity: 0.3,
           };
-        }
-      }
+        },
+      },
     };
-  }
+  },
 };
 </script>
 
@@ -340,8 +414,13 @@ t
   color: $indigo-5
   font-weight: 900
 h
-  color: #indigo
-  font-size: 17px
+  color: $red-9
+  font-size: 26px
+
+y
+  font-size: 16spx
+  font-weight: 600
+  color: $grey-6
 // .table
 //   font-size: 14px
 //   td:first-child
