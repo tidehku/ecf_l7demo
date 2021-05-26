@@ -1,14 +1,7 @@
 <template>
   <div class="row q-pa-sm">
-    <q-card
-      bordered
-      dark
-      class="col-4 bg-blue-grey-4 maincard"
-    >
-      <q-img
-        src="~/assets/mapcover.png"
-        style="height: 80vh"
-      />
+    <q-card bordered dark class="col-4 bg-blue-grey-4 maincard">
+      <q-img src="~/assets/mapcover.png" style="height: 80vh" />
       <!-- <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
         HKRISE! Interactive Habitat Map (2020 - 2023)
       </q-card> -->
@@ -44,16 +37,10 @@
         <LTileLayer />
 
         <!-- region_name marker -->
-        <l-geo-json
-          :geojson="regionMarker"
-          :options="regionMarkerOptions"
-        >
+        <l-geo-json :geojson="regionMarker" :options="regionMarkerOptions">
         </l-geo-json>
 
-        <l-geo-json
-          :geojson="regions"
-          :options="geoJSONOptions"
-        > </l-geo-json>
+        <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
 
         <l-control-scale
           position="bottomleft"
@@ -74,6 +61,7 @@
 import VueLeafletMinimap from "vue-leaflet-minimap";
 import "leaflet-minimap/dist/Control.MiniMap.min.css";
 import { LMap, LGeoJson, LControlScale } from "vue2-leaflet";
+import "leaflet.zoomhome/dist/leaflet.zoomhome.js";
 
 export default {
   name: "MapGeoJSON",
@@ -82,7 +70,7 @@ export default {
     LGeoJson,
     LTileLayer: () => import("components/tileLayer"),
     LControlScale,
-    VueLeafletMinimap,
+    VueLeafletMinimap
   },
   data() {
     return {
@@ -94,15 +82,15 @@ export default {
       center: L.latLng(22.3508, 114.2),
       mapOptions: {
         zoomSnap: 0.25,
+        zoomControl: false
       },
       regions: require("../../MapData/regions.json"),
       geoJSONOptions: {
         style: function style(feature) {
           return {
-            // weight: feature.properties.stroke_width,
             opacity: 0.5,
-            color: feature.properties.fill /* refer to json data */,
-            fillOpacity: 0.4,
+            color: feature.properties.fill /* refer to json */,
+            fillOpacity: 0.4
           };
         },
         onEachFeature: (feature, layer) => {
@@ -120,7 +108,7 @@ export default {
           layer.on("click", () => {
             this.$router.push(`interactiveHabitat/${feature.properties.name}`);
           });
-        },
+        }
       },
       minimapLayer: new L.TileLayer(
         "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
@@ -131,7 +119,7 @@ export default {
         width: 120,
         height: 120,
         toggleDisplay: true,
-        minimize: true,
+        minimize: true
       },
       regionMarker: {
         type: "FeatureCollection",
@@ -139,88 +127,84 @@ export default {
           {
             type: "Feature",
             properties: {
-              name: "NE",
+              name: "NE"
             },
             geometry: {
               type: "Point",
-              coordinates: [114.32, 22.53],
-            },
+              coordinates: [114.32, 22.53]
+            }
           },
           {
             type: "Feature",
             properties: {
-              name: "TL",
+              name: "TL"
             },
             geometry: {
               type: "Point",
-              coordinates: [114.23, 22.44],
-            },
+              coordinates: [114.23, 22.44]
+            }
           },
           {
             type: "Feature",
             properties: {
-              name: "SW",
+              name: "SW"
             },
             geometry: {
               type: "Point",
-              coordinates: [113.98, 22.23],
-            },
+              coordinates: [113.98, 22.23]
+            }
           },
           {
             type: "Feature",
             properties: {
-              name: "NW",
+              name: "NW"
             },
             geometry: {
               type: "Point",
-              coordinates: [113.92, 22.34],
-            },
+              coordinates: [113.92, 22.34]
+            }
           },
           {
             type: "Feature",
             properties: {
-              name: "EA",
+              name: "EA"
             },
             geometry: {
               type: "Point",
-              coordinates: [114.38, 22.3],
-            },
+              coordinates: [114.38, 22.3]
+            }
           },
           {
             type: "Feature",
             properties: {
-              name: "SO",
+              name: "SO"
             },
             geometry: {
               type: "Point",
-              coordinates: [114.18, 22.23],
-            },
-          },
-        ],
+              coordinates: [114.18, 22.23]
+            }
+          }
+        ]
       },
       regionMarkerOptions: {
         onEachFeature: (feature, layer) => {
           layer.bindTooltip("<div>" + feature.properties.name + "</div>", {
             permanent: true,
             sticky: true,
-            direction: "center",
+            direction: "center"
           });
-        },
-      },
+        }
+      }
     };
   },
+  mounted() {
+    this.$nextTick(() => {
+      const map = this.$refs.myMapRef.mapObject;
+      const zoomHome = L.Control.zoomHome({
+        position: "topleft"
+      });
+      map.addControl(zoomHome);
+    });
+  }
 };
 </script>
-
-<style lang="sass">
-.leaflet-tooltip
-  background-color: transparent
-  border: transparent
-  box-shadow: none
-  font-weight: bold
-  font-size: 26px
-  color: white
-
-.leaflet-pane .leaflet-marker-pane
-  display: none
-</style>

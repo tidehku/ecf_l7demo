@@ -92,24 +92,6 @@ const routes = [
     component: () => import("pages/MainPage/SpeciesSearchEngine.vue")
   },
   {
-    path: "/l",
-    component: () => import("layouts/layout.vue"),
-    children: [
-      {
-        path: "/l/demo1",
-        component: () => import("pages/leafletDemo/demo1.vue")
-      },
-      {
-        path: "/l/demo2",
-        component: () => import("pages/leafletDemo/demo2.vue")
-      },
-      {
-        path: "/l/demo3",
-        component: () => import("pages/leafletDemo/demo3.vue")
-      }
-    ]
-  },
-  {
     path: "/speciesSearchEngine",
     component: () => import("layouts/layout.vue"),
     children: [
