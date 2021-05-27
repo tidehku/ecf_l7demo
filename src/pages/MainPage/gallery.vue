@@ -135,7 +135,7 @@
         <div> Algae x 4 </div>
         <img
           class="image"
-          :src="require('../../assets/gallery/Algae - Corallina sp..jpg')"
+          :src="require('../../assets/gallery/Algae - Corallina sp..png')"
         />
         <img
           class="image"

@@ -3,8 +3,7 @@
     <q-card style="width: 33%; height: 80vh">
       <q-img
         src="~/assets/mapcover.png"
-        height:
-        80vh
+        style="height: 80vh"
       />
       <!-- <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
         HKRISE! Interactive Habitat Map (2020 - 2023)
@@ -30,7 +29,7 @@
       </q-icon> -->
     </q-card>
 
-    <div class="col-8">
+    <q-card class="col-8">
       <l-map
         style="height: 100%"
         :zoom="zoom"
@@ -63,7 +62,7 @@
           :options="options"
         ></vue-leaflet-minimap>
       </l-map>
-    </div>
+    </q-card>
   </div>
 </template>
 
@@ -103,6 +102,17 @@ export default {
             fillOpacity: 0.4,
           };
         },
+        getLabel: function (feature) {
+          return {
+            html: feature.properties.name /* refer to geojson name*/,
+          };
+        },
+        pointToLayer: function (feature, latlng) {
+          return L.Marker(latlng, labelMarkerOptions).bindLabel(
+            feature.properties.NAME /* refer to geojson name*/,
+            { noHide: true }
+          );
+        },
         onEachFeature: (feature, layer) => {
           // /* movehover open popup */
           // layer.on("mouseover", e => {
@@ -117,6 +127,7 @@ export default {
           /* click on the geojson feature to navigate */
           layer.on("click", () => {
             this.$router.push(`interactiveHabitat/${feature.properties.name}`);
+            layer.bindLabel(feature.properties.name, { noHide: true });
           });
         },
       },
@@ -219,10 +230,10 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .leaflet-tooltip
   background-color: transparent
-  border: transparent
+  border: none
   box-shadow: none
   font-weight: bold
   font-size: 26px
