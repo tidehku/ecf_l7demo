@@ -288,17 +288,15 @@
                     no-caps
                     label="Go to Biological Dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
-                  >
-                    <q-icon name="eco" />
-                  </q-btn>
+                    icon="eco"
+                  ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
                     label="Go to Physical Dashboard"
                     to="/interactiveHabitat/physicalStarfishBay"
-                  >
-                    <q-icon name="thermostat" />
-                  </q-btn>
+                    icon="thermostat"
+                  ></q-btn>
                 </div>
               </div>
               <q-img
@@ -362,17 +360,15 @@
                     no-caps
                     label="Go to Biological Dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
-                  >
-                    <q-icon name="eco" />
-                  </q-btn>
+                    icon="eco"
+                  ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
                     label="Go to Physical Dashboard"
                     to="/interactiveHabitat/physicalStarfishBay"
-                  >
-                    <q-icon name="thermostat" />
-                  </q-btn>
+                    icon="thermostat"
+                  ></q-btn>
                 </div>
               </div>
               <q-img
@@ -436,17 +432,15 @@
                     no-caps
                     label="Go to Biological Dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
-                  >
-                    <q-icon name="eco" />
-                  </q-btn>
+                    icon="eco"
+                  ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
                     label="Go to Physical Dashboard"
                     to="/interactiveHabitat/physicalStarfishBay"
-                  >
-                    <q-icon name="thermostat" />
-                  </q-btn>
+                    icon="thermostat"
+                  ></q-btn>
                 </div>
               </div>
               <q-img
@@ -510,17 +504,15 @@
                     no-caps
                     label="Go to Biological Dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
-                  >
-                    <q-icon name="eco" />
-                  </q-btn>
+                    icon="eco"
+                  ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
                     label="Go to Physical Dashboard"
                     to="/interactiveHabitat/physicalStarfishBay"
-                  >
-                    <q-icon name="thermostat" />
-                  </q-btn>
+                    icon="thermostat"
+                  ></q-btn>
                 </div>
               </div>
               <q-img

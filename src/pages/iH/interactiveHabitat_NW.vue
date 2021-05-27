@@ -173,10 +173,10 @@
           style="width: 24%; height: 40vh"
         >
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
-            Wah Fu
+            Siu Lam
           </div>
           <q-img
-            src="~/assets/SiteImage/Wah Fu.png"
+            src="~/assets/SiteImage/Siu Lam.png"
             height="25vh"
             basic
           ></q-img>
@@ -287,17 +287,15 @@
                     no-caps
                     label="Go to Biological Dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
-                  >
-                    <q-icon name="eco" />
-                  </q-btn>
+                    icon="eco"
+                  ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
                     label="Go to Physical Dashboard"
                     to="/interactiveHabitat/physicalStarfishBay"
-                  >
-                    <q-icon name="thermostat" />
-                  </q-btn>
+                    icon="thermostat"
+                  ></q-btn>
                 </div>
               </div>
               <q-img
@@ -361,17 +359,15 @@
                     no-caps
                     label="Go to Biological Dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
-                  >
-                    <q-icon name="eco" />
-                  </q-btn>
+                    icon="eco"
+                  ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
                     label="Go to Physical Dashboard"
                     to="/interactiveHabitat/physicalStarfishBay"
-                  >
-                    <q-icon name="thermostat" />
-                  </q-btn>
+                    icon="thermostat"
+                  ></q-btn>
                 </div>
               </div>
               <q-img
@@ -435,17 +431,15 @@
                     no-caps
                     label="Go to Biological Dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
-                  >
-                    <q-icon name="eco" />
-                  </q-btn>
+                    icon="eco"
+                  ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
                     label="Go to Physical Dashboard"
                     to="/interactiveHabitat/physicalStarfishBay"
-                  >
-                    <q-icon name="thermostat" />
-                  </q-btn>
+                    icon="thermostat"
+                  ></q-btn>
                 </div>
               </div>
               <q-img
@@ -509,17 +503,15 @@
                     no-caps
                     label="Go to Biological Dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
-                  >
-                    <q-icon name="eco" />
-                  </q-btn>
+                    icon="eco"
+                  ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
                     label="Go to Physical Dashboard"
                     to="/interactiveHabitat/physicalStarfishBay"
-                  >
-                    <q-icon name="thermostat" />
-                  </q-btn>
+                    icon="thermostat"
+                  ></q-btn>
                 </div>
               </div>
               <q-img
