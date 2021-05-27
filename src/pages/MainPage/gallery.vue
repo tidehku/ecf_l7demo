@@ -180,7 +180,8 @@
         />
         <img
           class="image"
-          :src="require('../../assets/gallery/Crab.jpg')"
+          :src="require("
+          require('../../assets/gallery/Crab.jpg')")"
         />
       </viewer>
       <!-- <viewer>

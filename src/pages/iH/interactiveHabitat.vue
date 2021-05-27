@@ -39,17 +39,36 @@
       >
         <LTileLayer />
 
-        <!-- region_name marker -->
-        <l-geo-json
+        <!-- <l-geo-json
           :geojson="regionMarker"
           :options="regionMarkerOptions"
         >
-        </l-geo-json>
+        </l-geo-json> -->
 
         <l-geo-json
           :geojson="regions"
           :options="geoJSONOptions"
         > </l-geo-json>
+
+        <!-- <l-marker :lat-lng="[22.53, 114.32]">
+          <l-icon>
+            <div class="text-h5 text-bold text-white">
+              NE
+            </div>
+          </l-icon>
+        </l-marker> -->
+
+        <l-marker
+          v-for="item in regionMarker"
+          :key="item.properties.name"
+          :lat-lng="item.geometry.coordinates"
+        >
+          <l-icon>
+            <div class="text-h4 text-bold text-white">
+              {{item.properties.name}}
+            </div>
+          </l-icon>
+        </l-marker>
 
         <l-control-scale
           position="bottomleft"
@@ -69,7 +88,7 @@
 <script>
 import VueLeafletMinimap from "vue-leaflet-minimap";
 import "leaflet-minimap/dist/Control.MiniMap.min.css";
-import { LMap, LGeoJson, LControlScale } from "vue2-leaflet";
+import { LMap, LGeoJson, LMarker, LIcon, LControlScale } from "vue2-leaflet";
 import "leaflet.zoomhome/dist/leaflet.zoomhome.js";
 
 export default {
@@ -77,8 +96,10 @@ export default {
   components: {
     LMap,
     LGeoJson,
+    LMarker,
     LTileLayer: () => import("components/tileLayer"),
     LControlScale,
+    LIcon,
     VueLeafletMinimap,
   },
   data() {
@@ -102,17 +123,20 @@ export default {
             fillOpacity: 0.4,
           };
         },
+        // getLabel: function (feature) {
+        //   return {
+        //     html: feature.properties.name /* refer to geojson name*/,
+        //   };
+        // },
         getLabel: function (feature) {
-          return {
-            html: feature.properties.name /* refer to geojson name*/,
-          };
+          return feature.properties.name;
         },
-        pointToLayer: function (feature, latlng) {
-          return L.Marker(latlng, labelMarkerOptions).bindLabel(
-            feature.properties.NAME /* refer to geojson name*/,
-            { noHide: true }
-          );
-        },
+        // pointToLayer: function (feature, latlng) {
+        //   return L.Marker(latlng, labelMarkerOptions).bindLabel(
+        //     feature.properties.NAME /* refer to geojson name*/,
+        //     { noHide: true }
+        //   );
+        // },
         onEachFeature: (feature, layer) => {
           // /* movehover open popup */
           // layer.on("mouseover", e => {
@@ -127,7 +151,6 @@ export default {
           /* click on the geojson feature to navigate */
           layer.on("click", () => {
             this.$router.push(`interactiveHabitat/${feature.properties.name}`);
-            layer.bindLabel(feature.properties.name, { noHide: true });
           });
         },
       },
@@ -142,76 +165,89 @@ export default {
         toggleDisplay: true,
         minimize: true,
       },
-      regionMarker: {
-        type: "FeatureCollection",
-        features: [
-          {
-            type: "Feature",
-            properties: {
-              name: "NE",
-            },
-            geometry: {
-              type: "Point",
-              coordinates: [114.32, 22.53],
-            },
+      markers: [
+        {
+          id: "TL",
+          position: { lat: 22.44, lng: 114.23 },
+          draggable: true,
+          visible: true,
+        },
+      ],
+
+      regionMarker: [
+        {
+          type: "Feature",
+          properties: {
+            name: "NE",
           },
-          {
-            type: "Feature",
-            properties: {
-              name: "TL",
-            },
-            geometry: {
-              type: "Point",
-              coordinates: [114.23, 22.44],
-            },
+          geometry: {
+            type: "Point",
+            coordinates: [22.55, 114.32],
           },
-          {
-            type: "Feature",
-            properties: {
-              name: "SW",
-            },
-            geometry: {
-              type: "Point",
-              coordinates: [113.98, 22.23],
-            },
+        },
+        {
+          type: "Feature",
+          properties: {
+            name: "TL",
           },
-          {
-            type: "Feature",
-            properties: {
-              name: "NW",
-            },
-            geometry: {
-              type: "Point",
-              coordinates: [113.92, 22.34],
-            },
+          geometry: {
+            type: "Point",
+            coordinates: [22.46, 114.23],
           },
-          {
-            type: "Feature",
-            properties: {
-              name: "EA",
-            },
-            geometry: {
-              type: "Point",
-              coordinates: [114.38, 22.3],
-            },
+        },
+        {
+          type: "Feature",
+          properties: {
+            name: "SW",
           },
-          {
-            type: "Feature",
-            properties: {
-              name: "SO",
-            },
-            geometry: {
-              type: "Point",
-              coordinates: [114.18, 22.23],
-            },
+          geometry: {
+            type: "Point",
+            coordinates: [22.25, 113.98],
           },
-        ],
-      },
+        },
+        {
+          type: "Feature",
+          properties: {
+            name: "NW",
+          },
+          geometry: {
+            type: "Point",
+            coordinates: [22.36, 113.92],
+          },
+        },
+        {
+          type: "Feature",
+          properties: {
+            name: "EA",
+          },
+          geometry: {
+            type: "Point",
+            coordinates: [22.32, 114.38],
+          },
+        },
+        {
+          type: "Feature",
+          properties: {
+            name: "SO",
+          },
+          geometry: {
+            type: "Point",
+            coordinates: [22.25, 114.18],
+          },
+        },
+      ],
+
       regionMarkerOptions: {
         onEachFeature: (feature, layer) => {
+          // layer.bindTooltip("<div>" + feature.properties.name + "</div>", {
+          //   permanent: true,
+          //   sticky: true,
+          //   direction: "center",
+          // });
+          // layer.bindLabel(feature.properties.name, { noHide: true });
           layer.bindTooltip("<div>" + feature.properties.name + "</div>", {
             permanent: true,
-            sticky: true,
+            className: "my-label",
             direction: "center",
           });
         },
@@ -231,14 +267,20 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.leaflet-tooltip
+// .leaflet-tooltip
+//   background-color: transparent
+//   border: none
+//   box-shadow: none
+//   font-weight: bold
+//   font-size: 26px
+//   color: white
+.my-label
   background-color: transparent
   border: none
   box-shadow: none
   font-weight: bold
   font-size: 26px
   color: white
-
 .leaflet-marker-pane
   display: none
 </style>
