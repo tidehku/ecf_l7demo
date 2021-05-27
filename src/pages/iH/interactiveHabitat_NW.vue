@@ -1,74 +1,76 @@
 <template>
-  <q-page class="q-pa-xs row justify-center bg-grey-5">
-    <div style="width: 33%">
-      <q-card
-        class="q-ma-sm bg-white"
-        bordered
+  <q-page class="q-pa-xs row justify-center bg-grey-5 no-wrap">
+    <q-card
+      class="q-ma-sm"
+      style="width: 33%; height: 80vh"
+      bordered
+    >
+      <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
+        North Western Region
+        <q-space />
+        <q-separator
+          dark
+          vertical
+          inset
+        />
+        <q-tabs
+          inline-label
+          shrink
+        >
+          <q-route-tab
+            name="Back"
+            label="Back"
+            icon="keyboard_arrow_left"
+            to="/interactiveHabitat"
+          >
+          </q-route-tab>
+        </q-tabs>
+      </q-toolbar>
+      <p class="q-pa-sm">{{ Region }}</p>
+      <l-map
+        style="height:40%"
+        :zoom="zoom"
+        :center="center"
+        :options="mapOptions"
+        :max-zoom="zoom"
+        :min-zoom="zoom"
       >
-        <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
-          North Western Region
-          <q-space />
-          <q-separator
-            dark
-            vertical
-            inset
-          />
-          <q-tabs
-            inline-label
-            shrink
-          >
-            <q-route-tab
-              name="Back"
-              label="Back"
-              icon="keyboard_arrow_left"
-              to="/interactiveHabitat"
-            >
-            </q-route-tab>
-          </q-tabs>
-        </q-toolbar>
-        <p class="q-pa-sm">{{ Region }}</p>
-        <div class="q-pa-xs">
-          <l-map
-            style="height: 40vh"
-            :zoom="zoom"
-            :center="center"
-            :options="mapOptions"
-            :max-zoom="zoom"
-            :min-zoom="zoom"
-          >
-            <LTileLayer />
-            <l-geo-json
-              :geojson="region"
-              :options="regionOptions"
-            ></l-geo-json>
+        <LTileLayer />
+        <l-geo-json
+          :geojson="region"
+          :options="regionOptions"
+        ></l-geo-json>
 
-            <l-geo-json
-              :geojson="sitesLocation"
-              :options="siteOptions"
-            >
-            </l-geo-json>
+        <l-geo-json
+          :geojson="sitesLocation"
+          :options="siteOptions"
+        >
+        </l-geo-json>
 
-            <l-control-scale
-              position="bottomleft"
-              :metric="true"
-              :imperial="true"
-            ></l-control-scale>
-          </l-map>
-        </div>
-      </q-card>
-    </div>
-    <div style="width: 66.3%; height: 40%">
-      <q-card class="bg-indigo-1">
+        <l-control-scale
+          position="bottomleft"
+          :metric="true"
+          :imperial="true"
+        ></l-control-scale>
+      </l-map>
+
+    </q-card>
+
+    <div style="width: 66.3%">
+      <q-card
+        class="bg-indigo-1"
+        style="height: 40vh"
+      >
         <div class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders">
           Regional Average Data Summary
         </div>
-        <div class="row q-pa-sm justify-evenly">
+        <div class="row q-pa-xs justify-evenly">
           <q-card
             class="q-pa-sm"
-            style="width: 19%"
+            style="width: 22%; min-height: 30vh"
           >
             <div class="q-px-sm">
-              <y>Max Temperature</y> <br /><br />
+              <y>Max Temperature</y> <br />
               HH: <br />
               <h>24.72</h> <b> ± 12.25 ℃</b>
               <div class="row justify-end">
@@ -83,10 +85,10 @@
           </q-card>
           <q-card
             class="q-pa-sm"
-            style="width: 19%"
+            style="width: 16%"
           >
             <div class="q-px-sm">
-              <y>Wave Fetch</y> <br /><br />
+              <y>Wave Fetch</y> <br />
               <div class="items-end">
                 Max: <br />
                 <h>13.97</h> <b> km</b>
@@ -103,10 +105,10 @@
           </q-card>
           <q-card
             class="q-pa-sm"
-            style="width: 19%"
+            style="width: 24%"
           >
             <div class="q-px-sm">
-              <y>Nutrient levels</y> <br /><br />
+              <y>Nutrient levels</y> <br />
               chlorophyll a: <br />
               <h>43.38</h> <b> ± 6.60 ℃</b>
               <div class="row justify-end">
@@ -121,7 +123,7 @@
           </q-card>
           <q-card
             class="q-pa-sm"
-            style="width: 19%"
+            style="width: 16%"
           >
             <div class="q-px-sm">
               <y>Mobile Species Richness</y> <br /><br />
@@ -133,7 +135,7 @@
           </q-card>
           <q-card
             class="q-pa-sm"
-            style="width: 19%"
+            style="width: 16%"
           >
             <div class="q-px-sm">
               <y>Sessile Species Richness</y> <br /><br />
@@ -145,23 +147,22 @@
           </q-card>
         </div>
       </q-card>
-      <div class="row justify-around">
+      <div class="row no-wrap justify-around">
         <q-card
           class="q-ma-md"
-          style="width: 24%; height: 56%"
+          style="width: 24%; height: 40vh"
         >
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Tai O
           </div>
           <q-img
             src="~/assets/SiteImage/Tai O.png"
-            height="200px"
+            height="25vh"
             basic
           />
-          <div class="row justify-end">
+          <div class="row bg-white absolute-bottom justify-end">
             <q-btn
               class="q-ma-sm"
-              style="align-items: center"
               no-caps
               color="indigo-6"
               label="Learn more"
@@ -373,7 +374,7 @@ export default {
       //       "When assessing this site’s suitability, it was determined to be moderately susceptible to vessel traffic and of low susceptibility to sand inundation and human disturbance. As a result, the site poses a low safety risk from oncoming wave action.",
       //   },
       // ],
-      zoom: 9.8,
+      zoom: 9.6,
       center: L.latLng(22.34, 113.97214768915284),
       mapOptions: {
         zoomSnap: 0.2,
@@ -415,7 +416,7 @@ t
   font-weight: 900
 h
   color: $red-9
-  font-size: 26px
+  font-size: 24px
 
 y
   font-size: 16spx
