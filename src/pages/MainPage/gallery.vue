@@ -2,7 +2,7 @@
   <q-page class="page q-pa-md">
     <div class="row q-gutter-sm justify-center">
       <viewer style="width:19.2%">
-        <div> Bivalve x 3 </div>
+        <div class="speciesName"> Bivalve </div>
         <img
           class="image"
           :src="require('../../assets/gallery/Bivalve - Saccostrea cuccullata.jpg')"
@@ -15,7 +15,7 @@
           class="image"
           :src="require('../../assets/gallery/Bivalve - Saccostrea sp..jpg')"
         />
-        <div> Snail x 5</div>
+        <div class="speciesName"> Snail</div>
         <img
           class="image"
           :src="require('../../assets/gallery/Snail - Echinolittorina radiata_2.jpg')"
@@ -39,12 +39,12 @@
 
       </viewer>
       <viewer style="width:19.2%">
-        <div> Gastropod x 1 </div>
+        <div class="speciesName"> Gastropod </div>
         <img
           class="image"
           :src="require('../../assets/gallery/Gastropod - Elysia sp.jpg')"
         />
-        <div> Limpet x 4 </div>
+        <div class="speciesName"> Limpet </div>
         <img
           class="image"
           :src="require('../../assets/gallery/Limpet - Cellana toreuma.jpg')"
@@ -61,7 +61,7 @@
           class="image"
           :src="require('../../assets/gallery/Limpet - Patelloida saccharina.jpg')"
         />
-        <div> False Limpet x 2 </div>
+        <div class="speciesName"> False Limpet </div>
         <img
           class="image"
           :src="require('../../assets/gallery/False limpet - Siphonaria laciniosa.jpg')"
@@ -71,7 +71,7 @@
           :src="require('../../assets/gallery/False limpet - Siphonaria laciniosa2.jpg')"
         />
 
-        <div> Chiton x 2 </div>
+        <div class="speciesName"> Chiton </div>
         <img
           class="image"
           :src="require('../../assets/gallery/Chiton -  Liolophura japonica.jpg')"
@@ -82,7 +82,7 @@
         />
       </viewer>
       <viewer style="width:19.2%">
-        <div> Sea anemone x 3 </div>
+        <div class="speciesName"> Sea Anemone </div>
         <img
           class="image"
           :src="require('../../assets/gallery/Sea anemone - Anthopleura buddemeiri.jpg')"
@@ -95,7 +95,7 @@
           class="image"
           :src="require('../../assets/gallery/Sea anemone - Spheractis cheungae 2.jpg')"
         />
-        <div> Barnale x 5 </div>
+        <div class="speciesName"> Barnale </div>
         <img
           class="image"
           :src="require('../../assets/gallery/Barnacle - Amphibalanus amphitrite.jpg')"
@@ -119,7 +119,7 @@
       </viewer>
       <viewer style="width:19.2%">
 
-        <div> fish x 3 </div>
+        <div class="speciesName"> Fish </div>
         <img
           class="image"
           :src="require('../../assets/gallery/Fish - Bathygobius meggitti 1.jpg')"
@@ -132,7 +132,7 @@
           class="image"
           :src="require('../../assets/gallery/Fish - Bathygobius meggitti 3.jpg')"
         />
-        <div> Algae x 4 </div>
+        <div class="speciesName"> Algae </div>
         <img
           class="image"
           :src="require('../../assets/gallery/Algae - Corallina sp..png')"
@@ -151,17 +151,17 @@
         />
       </viewer>
       <viewer style="width:19.2%">
-        <div> Shrimp </div>
+        <div class="speciesName"> Shrimp </div>
         <img
           class="image"
           :src="require('../../assets/gallery/Shrimp - Palaemon pacificus.jpg')"
         />
-        <div> Bryozoan x 1 </div>
+        <div class="speciesName"> Bryozoan </div>
         <img
           class="image"
           :src="require('../../assets/gallery/Bryozoan - Watersipora sp. and Algae Colpomenia sinuosa.jpg')"
         />
-        <div> Crab x 4 </div>
+        <div class="speciesName"> Crab </div>
         <img
           class="image"
           :src="require('../../assets/gallery/Crab - 1.jpg')"
@@ -243,17 +243,12 @@ export default {};
   // margin: 2px
   // display: inline-block
 
-// .my-image
-//   width: 24%
-//   height: 25%
-//   max-width: 100%
-//   max-height: 100%
-//   margin: auto
-
-// .my-image
-//   width: 100%
-//   height: auto
-//   max-width: 100%
-//   max-height: 100%
-//   margin: auto
+.speciesName
+  margin-bottom: 5px
+  padding: 5px
+  font-size: 20px
+  font-weight: bold
+  text-align: center
+  color: white
+  background-color: $orange-9
 </style>
