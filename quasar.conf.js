@@ -17,7 +17,7 @@ module.exports = function(/* ctx */) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/boot-files
-    boot: ["leafletEntry", "axios", "imageViewer"],
+    boot: ["leafletEntry", "axios", "imageViewer", "firebase"],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
     css: ["app.sass"],

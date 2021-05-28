@@ -1,6 +1,9 @@
 <template>
   <q-page class="justify-center">
-    <q-bar elevated class="bg-blue-9 text-white">
+    <q-bar
+      elevated
+      class="bg-blue-9 text-white"
+    >
       <div class="text-bold row justify-center">
         Biological Dashboard of Starfish Bay, Tolo Habour Region
       </div>
@@ -54,7 +57,10 @@
           <div class="col-6 tab2">summer</div>
         </div>
         <div class="row">
-          <highcharts class="col-6" :options="Temperature1"></highcharts>
+          <highcharts
+            class="col-6"
+            :options="Temperature1"
+          ></highcharts>
           <q-separator vertical />
           <div class="text-center noData">
             2021 Summer data <br />
@@ -93,13 +99,19 @@
           <div class="col-3 tab2">summer</div>
         </div>
         <div class="row">
-          <highcharts class="col-3" :options="Chla1"></highcharts>
+          <highcharts
+            class="col-3"
+            :options="Chla1"
+          ></highcharts>
           <div class="text-center noData">
             2021 Summer data <br />
             Not available yet
           </div>
           <q-separator vertical />
-          <highcharts class="col-3" :options="OM1"></highcharts>
+          <highcharts
+            class="col-3"
+            :options="OM1"
+          ></highcharts>
           <div class="text-center noData">
             2021 Summer data <br />
             Not available yet
@@ -123,7 +135,6 @@ Vue.use(HighchartsVue);
 import { tempData } from "./physicalData/temperature";
 import { omData } from "./physicalData/om";
 import { chlaData } from "./physicalData/chla";
-// import { firebaseStore } from "boot/firebase";
 
 export default {
   components: { LMap, LMarker, LTileLayer },
@@ -132,18 +143,12 @@ export default {
       Temperature1: tempData.SBTemperature1,
       Temperature2: tempData.SBTemperature2,
       Chla1: chlaData.SBChla1,
-      OM1: omData.SBOm1
+      OM1: omData.SBOm1,
     };
+  },
+  mounted() {
+    console.log(firebaseStore)
   }
-  // mounted() {
-  //   firebaseStore
-  //     .collection("starfishBay")
-  //     .doc("2020winter")
-  //     .collection("phy")
-  //     .doc("temp")
-  //     .get()
-  //     .then(doc => console.log(doc.data()));
-  // }
 };
 </script>
 
