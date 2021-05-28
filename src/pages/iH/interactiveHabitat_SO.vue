@@ -159,7 +159,13 @@
             height="25vh"
             basic
           />
-          <div class="row bg-white absolute-bottom justify-end">
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Exposed.svg"
+            />
+            <q-space />
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -181,7 +187,13 @@
             height="25vh"
             basic
           ></q-img>
-          <div class="row bg-white absolute-bottom justify-end">
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Semi-exposed.svg"
+            />
+            <q-space />
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -203,7 +215,13 @@
             height="25vh"
             basic
           />
-          <div class="row bg-white absolute-bottom justify-end">
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Semi-exposed.svg"
+            />
+            <q-space />
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -225,7 +243,13 @@
             height="25vh"
             basic
           />
-          <div class="row bg-white absolute-bottom justify-end">
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Sheltered.svg"
+            />
+            <q-space />
             <q-btn
               class="q-ma-sm"
               no-caps
