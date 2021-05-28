@@ -8,3 +8,29 @@
     ></iframe>
   </div>
 </template>
+
+<script>
+import { QSpinnerHourglass } from "quasar";
+
+export default {
+  mounted() {
+    this.$q.loading.show({
+      spinner: QSpinnerHourglass,
+      spinnerColor: "light-blue-12",
+      spinnerSize: 100,
+      message: '<h6 class="text-orange">Initialising species search engine</h6>'
+    });
+
+    this.timer = setTimeout(() => {
+      this.$q.loading.hide();
+      this.timer = void 0;
+    }, 2700);
+  },
+  beforeDestroy() {
+    if (this.timer !== void 0) {
+      clearTimeout(this.timer);
+      this.$q.loading.hide();
+    }
+  }
+};
+</script>
