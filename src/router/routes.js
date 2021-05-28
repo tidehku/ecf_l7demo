@@ -4,7 +4,7 @@ const routes = [
     path: "/",
     component: () => import("src/layouts/layout.vue"),
     children: [
-      { path: "", component: () => import("src/pages/MainPage/homePage.vue") },
+      { path: "", component: () => import("src/pages/MainPage/HomePage.vue") },
       {
         path: "interactiveHabitat",
         component: () => import("pages/iH/interactiveHabitat.vue")
@@ -15,7 +15,7 @@ const routes = [
       },
       {
         path: "speciesSearchEngine",
-        component: () => import("pages/MainPage/SpeciesSearchEngine.vue")
+        component: () => import("pages/MainPage/speciesSearchEngine.vue")
       },
       {
         path: "gallery",
