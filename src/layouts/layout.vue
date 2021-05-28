@@ -188,11 +188,11 @@ export default {
       dashboardOptions: [
         {
           label: "Physical Dashboard",
-          value: "physicalDashboard"
+          value: "phy"
         },
         {
           label: "Biological Dashboard",
-          value: "biologicalDashboard"
+          value: "bio"
         }
       ]
     };
@@ -205,7 +205,12 @@ export default {
       this.sites = val.sites;
     },
     changeSite() {
-      this.$router.push(`/${this.dashboard.value}/${this.subSite}`);
+      this.$router.push(
+        `/interactiveHabitat/${this.dashboard.value}${this.subSite.replace(
+          /\s/g,
+          ""
+        )}`
+      );
     },
     openDrawerCallback() {
       this.drawer = !this.drawer;

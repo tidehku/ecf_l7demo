@@ -617,15 +617,7 @@ export default {
           };
         },
         onEachFeature: (feature, layer) => {
-          // layer.bindPopup("click", (e) => {
-          //   this.$router.push(`/physicalDashboard`);
-          // });
-          // var popup = new L.popup()
-          //   .setLatLng(e.latlng)
-          //   .setContent(
-          //     '<p style="color: grey;">' + feature.properties.name + "</p>"
-          //   );
-          layer.bindPopup("feature.properties.name", {
+          layer.bindPopup("feature.propedrties.name", {
             permanent: true,
             sticky: true,
             direction: "center"

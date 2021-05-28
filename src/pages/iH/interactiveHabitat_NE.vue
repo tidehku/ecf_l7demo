@@ -49,7 +49,10 @@
         <div class="row q-py-xs justify-evenly no-wrap">
           <q-card class="q-pa-sm" style="width: 22%; min-height: 32vh">
             <div class="q-px-sm">
-              <y>Max Temperature</y> <br />
+              <span class="text-bold text-indigo-4"
+                >Max Temperature</span
+              >
+              <br />
               HH: <br />
               <h>37.25</h> <b> ± 4.33 ℃</b>
               <div class="row justify-end">
@@ -436,7 +439,7 @@ import { LMap, LGeoJson, LControlScale } from "vue2-leaflet";
 import "leaflet.zoomhome/dist/leaflet.zoomhome.js";
 
 export default {
-  name: "EA",
+  name: "NE",
   components: {
     LMap,
     LGeoJson,
@@ -617,14 +620,6 @@ export default {
           };
         },
         onEachFeature: (feature, layer) => {
-          // layer.bindPopup("click", (e) => {
-          //   this.$router.push(`/physicalDashboard`);
-          // });
-          // var popup = new L.popup()
-          //   .setLatLng(e.latlng)
-          //   .setContent(
-          //     '<p style="color: grey;">' + feature.properties.name + "</p>"
-          //   );
           layer.bindPopup("feature.properties.name", {
             permanent: true,
             sticky: true,

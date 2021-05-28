@@ -57,7 +57,8 @@ const routes = [
         component: () => import("pages/physicalDashboard/phyStarfishBay.vue")
       },
       {
-        path: "/interactiveHabitat/biologicalStarfishBay",
+        // path: "/interactiveHabitat/biologicalStarfishBay",
+        path: "bioStarfishBay",
         component: () => import("pages/biologicalDashboard/bioStarfishBay.vue")
       }
     ]
