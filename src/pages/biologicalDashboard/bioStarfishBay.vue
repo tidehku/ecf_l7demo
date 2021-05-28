@@ -40,8 +40,57 @@
               Sessile species
             </div>
           </div>
-          <div class="q-pa-sm q-gutter-sm justify-center row">
-            <q-list
+          <div class="row no-wrap justify-evenly">
+            <q-scroll-area
+              :thumb-style="thumbStyle"
+              style="height: 70vh; width: 45%"
+            >
+              <q-list
+                dense
+                bordeteal
+                separator
+                padding
+                class="bg-teal-1 text-caption rounded-borders"
+                style="width: 180px"
+              >
+                <q-item
+                  clickable
+                  v-ripple
+                  v-for="mobile in mobiles"
+                  :key="mobile.message"
+                >
+                  <q-item-section>
+                    <i>{{ mobile }} </i>
+                  </q-item-section>
+                </q-item>
+              </q-list>
+            </q-scroll-area>
+            <q-scroll-area
+              :thumb-style="thumbStyle"
+              style="height: 70vh; width: 45%"
+            >
+              <q-list
+                dense
+                bordeteal
+                separator
+                padding
+                class="bg-teal-1 text-caption rounded-borders"
+                style="width: 180px"
+              >
+                <q-item
+                  clickable
+                  v-ripple
+                  v-for="mobile in mobiles"
+                  :key="mobile.message"
+                >
+                  <q-item-section>
+                    <i>{{ mobile }} </i>
+                  </q-item-section>
+                </q-item>
+              </q-list>
+            </q-scroll-area>
+          </div>
+          <!-- <q-list
               dense
               bordeteal
               separator
@@ -59,28 +108,8 @@
                   <i>{{ mobile }} </i>
                 </q-item-section>
               </q-item>
-            </q-list>
+            </q-list> -->
 
-            <q-list
-              dense
-              bordeteal
-              separator
-              padding
-              class="bg-teal-1 text-caption rounded-borders"
-              style="width: 180px"
-            >
-              <q-item
-                clickable
-                v-ripple
-                v-for="sessile in sessiles"
-                :key="sessile.message"
-              >
-                <q-item-section>
-                  <i>{{ sessile }} </i>
-                </q-item-section>
-              </q-item>
-            </q-list>
-          </div>
         </q-card>
 
         <q-card class="col-8 chartCard">
@@ -204,6 +233,13 @@ export default {
       // pieChart2: pieData.SBPie1,
       pieChart3: pieData.SBPie3,
       // pieChart4: pieData.SBPie1,
+      thumbStyle: {
+        right: "4px",
+        borderRadius: "5px",
+        backgroundColor: "#24A9A9",
+        width: "5px",
+        opacity: 0.75,
+      },
     };
   },
 };
