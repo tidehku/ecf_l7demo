@@ -10,8 +10,8 @@ export default {
     return {
       url:
         "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-      attribution: "Source &copy; Esri and the GIS User Community",
+      attribution: "Source &copy; Esri and the GIS User Community"
     };
-  },
+  }
 };
 </script>

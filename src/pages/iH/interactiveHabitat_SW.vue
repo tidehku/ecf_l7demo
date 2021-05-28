@@ -1,4 +1,5 @@
 <template>
+
   <q-page class="q-pa-xs row justify-center bg-grey-5 no-wrap">
     <q-card
       class="q-ma-sm"
@@ -100,8 +101,10 @@
                   (n = 2)
                 </div>
               </div>
+
             </div>
           </q-card>
+
           <q-card
             class="q-pa-sm"
             style="width: 24%"
@@ -118,8 +121,10 @@
               <div class="row justify-end">
                 (n = 4)
               </div>
+
             </div>
           </q-card>
+
           <q-card
             class="q-pa-sm"
             style="width: 16%"
@@ -258,6 +263,7 @@
               @click="card4 = true"
             />
           </div>
+
         </q-card>
         <q-dialog
           v-model="card1"
@@ -418,6 +424,7 @@
               <div class="text-indigo-1"> South Western Region </div>
               <div class="text-white"> >> Peng Chau Site</div>
               <q-space />
+
               <q-btn
                 dense
                 flat
@@ -425,14 +432,12 @@
                 icon="close"
                 v-close-popup
               >
+
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section
-              horizontal
-              class="q-pa-md"
-            >
+            <q-card-section horizontal class="q-pa-md">
               <q-img
                 class="col-3"
                 height="flex"
@@ -562,7 +567,7 @@ export default {
     LMap,
     LGeoJson,
     LControlScale,
-    LTileLayer: () => import("components/tileLayer"),
+    LTileLayer: () => import("components/tileLayer")
   },
   data() {
     return {
@@ -574,6 +579,7 @@ export default {
       card4: false,
       Table_SWTLM: [
         {
+
           name: "Location",
           data: "Islands District, New Territories",
         },
@@ -622,13 +628,15 @@ export default {
         {
           name: "Tidal Range",
           data: "1.0 m - 2.8 m + C.D.",
+
         },
         {
           name: "Transect length",
-          data: "14 m",
+          data: "14 m"
         },
         {
           name: "Shore exposure",
+
           data: "Intermediate",
         },
         {
@@ -638,15 +646,18 @@ export default {
         {
           name: "Aspect",
           data: "/",
+
         },
         {
           name: "Slope",
-          data: "/",
+          data: "/"
         },
         {
           name: "Rock type",
+
           data: `Igneous`,
         },
+
       ],
       Table_SWPC: [
         {
@@ -727,44 +738,42 @@ export default {
       zoom: 9.8,
       center: L.latLng(22.25, 113.98),
       mapOptions: {
+
         zoomSnap: 0.2,
         zoomControl: false,
+
       },
       sitesLocation: require("../../MapData/SW_Sites.json"),
       siteOptions: {
         style: function style(feature) {
           return {
-            color: red,
+            color: red
           };
         },
         onEachFeature: (feature, layer) => {
-          // layer.bindPopup("click", (e) => {
-          //   this.$router.push(`/physicalDashboard`);
-          // });
-          // var popup = new L.popup()
-          //   .setLatLng(e.latlng)
-          //   .setContent(
-          //     '<p style="color: grey;">' + feature.properties.name + "</p>"
-          //   );
+
           layer.bindPopup("feature.properties.name", {
             permanent: true,
             sticky: true,
             direction: "center",
+
           });
-        },
+        }
       },
       region: require("../../MapData/SW.json"),
       regionOptions: {
         style: function style(feature) {
           return {
             opacity: 0.6,
+
             color: feature.properties.fill,
             fillOpacity: 0.3,
+
           };
-        },
-      },
+        }
+      }
     };
-  },
+  }
 };
 </script>
 

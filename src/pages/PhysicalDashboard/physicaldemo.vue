@@ -1,10 +1,7 @@
 <template>
   <q-page>
     <div class="row justify-center no-wrap">
-      <q-card
-        bordered
-        class="col-3 temperature"
-      >
+      <q-card bordered class="col-3 temperature">
         <div class="text-h5 text-bold row justify-center title">
           Temperature
         </div>
@@ -12,24 +9,12 @@
         <highcharts :options="chartOptions2"></highcharts>
       </q-card>
 
-      <q-card
-        bordered
-        class="bg-indigo-1 maincard"
-      >
+      <q-card bordered class="bg-indigo-1 maincard">
         <div class="row">
-          <q-card-section
-            vertical
-            class="col-6"
-          >
+          <q-card-section vertical class="col-6">
             <div class="text-h5 text-bold row justify-center">Site Name</div>
             <p>Here can be a site introduction: {{ lorem }}</p>
-            <q-carousel
-              height="150px"
-              animated
-              v-model="slide"
-              arrows
-              infinite
-            >
+            <q-carousel height="150px" animated v-model="slide" arrows infinite>
               <q-carousel-slide
                 :name="1"
                 img-src="https://cdn.quasar.dev/img/mountains.jpg"
@@ -57,20 +42,14 @@
               :options="mapOptions"
               class="l-map"
             >
-              <l-tile-layer
-                :url="url"
-                :attribution="attribution"
-              />
+              <l-tile-layer :url="url" :attribution="attribution" />
               <l-marker :lat-lng="[22.39235, 113.916341]"></l-marker>
             </l-map>
           </q-card-section>
         </div>
       </q-card>
 
-      <q-card
-        bordered
-        class="col-3 waveFetch"
-      >
+      <q-card bordered class="col-3 waveFetch">
         <div class="text-h5 text-bold row justify-center title">
           Wave Fetch
         </div>
@@ -79,46 +58,29 @@
       </q-card>
     </div>
     <div class="row justify-center">
-      <q-card
-        bordered
-        class="bottomcard"
-      >
+      <q-card bordered class="bottomcard">
         <div class="text-h5 text-bold row justify-center title">
           Nutrient Levels
         </div>
 
         <q-card-section horizontal>
           <div class="col-6 row q-pa-xs justify-center">
-            <q-badge
-              color="red-5"
-              class="text-white text-bold multi-line"
-            >Chlorophyll a</q-badge>
+            <q-badge color="red-5" class="text-white text-bold multi-line"
+              >Chlorophyll a</q-badge
+            >
           </div>
           <div class="col-6 row q-pa-xs justify-center">
-            <q-badge
-              color="red-5"
-              class="text-white text-bold multi-line"
-            >Organic Matter</q-badge>
+            <q-badge color="red-5" class="text-white text-bold multi-line"
+              >Organic Matter</q-badge
+            >
           </div>
         </q-card-section>
         <q-card-section horizontal>
-          <highcharts
-            class="col-3"
-            :options="chartOptions1"
-          ></highcharts>
-          <highcharts
-            class="col-3"
-            :options="chartOptions2"
-          ></highcharts>
+          <highcharts class="col-3" :options="chartOptions1"></highcharts>
+          <highcharts class="col-3" :options="chartOptions2"></highcharts>
           <q-separator vertical />
-          <highcharts
-            class="col-3"
-            :options="chartOptions1"
-          ></highcharts>
-          <highcharts
-            class="col-3"
-            :options="chartOptions2"
-          ></highcharts>
+          <highcharts class="col-3" :options="chartOptions1"></highcharts>
+          <highcharts class="col-3" :options="chartOptions2"></highcharts>
         </q-card-section>
       </q-card>
     </div>
@@ -140,7 +102,7 @@ export default {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
       center: L.latLng(22.39235, 113.916341),
       mapOptions: {
-        zoomControl: false,
+        zoomControl: false
       },
 
       url:
@@ -150,47 +112,47 @@ export default {
       chartOptions1: {
         chart: {
           type: "spline",
-          height: (1 / 2) * 100 + "%", // 16:9 ratio
+          height: (1 / 2) * 100 + "%" // 16:9 ratio
         },
         credits: {
-          enabled: false,
+          enabled: false
         },
         title: {
-          text: "",
+          text: ""
         },
         subtitle: {
-          text: "Summer",
+          text: "Summer"
         },
         series: [
           {
             showInLegend: false,
-            data: [10, 6, 8, 2, 8, 4, 6, 7],
-          },
-        ],
+            data: [10, 6, 8, 2, 8, 4, 6, 7]
+          }
+        ]
       },
       chartOptions2: {
         chart: {
           type: "spline",
-          height: (1 / 2) * 100 + "%", // 16:9 ratio
+          height: (1 / 2) * 100 + "%" // 16:9 ratio
         },
         credits: {
-          enabled: false,
+          enabled: false
         },
         title: {
-          text: "",
+          text: ""
         },
         subtitle: {
-          text: "Winter",
+          text: "Winter"
         },
         series: [
           {
             showInLegend: false,
-            data: [2, 3, 9, 5, 6, 4, 1, 2],
-          },
-        ],
-      },
+            data: [2, 3, 9, 5, 6, 4, 1, 2]
+          }
+        ]
+      }
     };
-  },
+  }
 };
 </script>
 

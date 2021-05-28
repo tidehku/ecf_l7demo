@@ -28,11 +28,6 @@ const routes = [
     component: () => import("layouts/layout.vue"),
     children: [
       //six zones separately
-      // { path: '/interactiveHabitat/copy', component: () => import('pages/iH/interactiveHabitat_copy.vue') },
-      {
-        path: "/interactiveHabitat/historical",
-        component: () => import("pages/iH/interactiveHabitat_historical.vue")
-      },
       {
         path: "/interactiveHabitat/NW",
         component: () => import("pages/iH/interactiveHabitat_NW.vue")
@@ -62,7 +57,8 @@ const routes = [
         component: () => import("pages/physicalDashboard/phyStarfishBay.vue")
       },
       {
-        path: "/interactiveHabitat/biologicalStarfishBay",
+        // path: "/interactiveHabitat/biologicalStarfishBay",
+        path: "bioStarfishBay",
         component: () => import("pages/biologicalDashboard/bioStarfishBay.vue")
       }
     ]
