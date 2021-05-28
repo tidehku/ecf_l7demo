@@ -122,14 +122,20 @@
             basic
           />
           <div class="row bg-white absolute-bottom">
-            <q-icon style="font-size: 3rem" src="icons/favicon-32x32.png" />
+
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Semi-exposed.svg"
+            />
+
             <q-space />
             <q-btn
               class="q-ma-sm"
               no-caps
               color="indigo-6"
               label="Learn more"
-              @click="card1 = true"
+              @click="card2 = true"
             />
           </div>
         </q-card>
@@ -142,7 +148,13 @@
             height="25vh"
             basic
           ></q-img>
-          <div class="row bg-white absolute-bottom justify-end">
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Sheltered.svg"
+            />
+            <q-space />
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -156,8 +168,20 @@
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Tseng Tau
           </div>
-          <q-img src="~/assets/SiteImage/Tseng Tau.png" height="25vh" basic />
-          <div class="row bg-white absolute-bottom justify-end">
+
+          <q-img
+            src="~/assets/SiteImage/Tseng Tau.png"
+            height="25vh"
+            basic
+          />
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Sheltered.svg"
+            />
+            <q-space />
+
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -176,7 +200,13 @@
             height="25vh"
             basic
           />
-          <div class="row bg-white absolute-bottom justify-end">
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Sheltered.svg"
+            />
+            <q-space />
             <q-btn
               class="q-ma-sm"
               no-caps

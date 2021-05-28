@@ -116,8 +116,20 @@
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Shek O
           </div>
-          <q-img src="~/assets/SiteImage/Shek O.png" height="25vh" basic />
-          <div class="row bg-white absolute-bottom justify-end">
+
+          <q-img
+            src="~/assets/SiteImage/Shek O.png"
+            height="25vh"
+            basic
+          />
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Exposed.svg"
+            />
+            <q-space />
+
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -136,7 +148,13 @@
             height="25vh"
             basic
           ></q-img>
-          <div class="row bg-white absolute-bottom justify-end">
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Semi-exposed.svg"
+            />
+            <q-space />
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -150,8 +168,20 @@
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Middle Bay
           </div>
-          <q-img src="~/assets/SiteImage/Middle Bay.png" height="25vh" basic />
-          <div class="row bg-white absolute-bottom justify-end">
+
+          <q-img
+            src="~/assets/SiteImage/Middle Bay.png"
+            height="25vh"
+            basic
+          />
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Semi-exposed.svg"
+            />
+            <q-space />
+
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -165,8 +195,20 @@
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Tai Tam
           </div>
-          <q-img src="~/assets/SiteImage/Tai Tam.png" height="25vh" basic />
-          <div class="row bg-white absolute-bottom justify-end">
+
+          <q-img
+            src="~/assets/SiteImage/Tai Tam.png"
+            height="25vh"
+            basic
+          />
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Sheltered.svg"
+            />
+            <q-space />
+
             <q-btn
               class="q-ma-sm"
               no-caps

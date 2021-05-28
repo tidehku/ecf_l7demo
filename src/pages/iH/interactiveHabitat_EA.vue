@@ -118,7 +118,13 @@
           </div>
           <q-img src="~/assets/SiteImage/Sai Wan.png" height="25vh" basic />
           <div class="row bg-white absolute-bottom">
-            <q-icon style="font-size: 3rem" src="icons/favicon-32x32.png" />
+
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Exposed.svg"
+            />
+
             <q-space />
             <q-btn
               class="q-ma-sm"
@@ -138,7 +144,13 @@
             height="25vh"
             basic
           ></q-img>
-          <div class="row bg-white absolute-bottom justify-end">
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Semi-exposed.svg"
+            />
+            <q-space />
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -157,7 +169,13 @@
             height="25vh"
             basic
           />
-          <div class="row bg-white absolute-bottom justify-end">
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Semi-exposed.svg"
+            />
+            <q-space />
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -176,7 +194,13 @@
             height="25vh"
             basic
           />
-          <div class="row bg-white absolute-bottom justify-end">
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Sheltered.svg"
+            />
+            <q-space />
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -454,7 +478,9 @@ export default {
       Table_EASW: [
         {
           name: "Location",
-          data: "Sai Kung District,New Territories"
+
+          data: "Sai Kung District, New Territories",
+
         },
         {
           name: "GPS coordinates",

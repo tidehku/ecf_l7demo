@@ -1,163 +1,309 @@
 <template>
-  <q-page class="q-pa-xs row justify-center bg-grey-5">
-    <div style="width: 33%">
-      <q-card class="maincard" style="height: 80vh" bordered>
-        <q-toolbar class="text-h5 text-bold regiontheme">
-          South Western Region
-          <q-space />
-          <q-separator dark vertical inset />
-          <q-tabs inline-label shrink>
-            <q-tab
-              name="Back"
-              label="Back"
-              icon="keyboard_arrow_left"
-              to="/interactiveHabitat"
-            >
-            </q-tab>
-          </q-tabs>
-        </q-toolbar>
-        <p class="q-pa-sm">{{ lorem }}</p>
-        <div class="q-px-xs">
-          <l-map
-            style="height: 50vh"
-            :zoom="zoom"
-            :center="center"
-            :options="mapOptions"
-            :max-zoom="zoom"
-            :min-zoom="zoom"
+
+  <q-page class="q-pa-xs row justify-center bg-grey-5 no-wrap">
+    <q-card
+      class="q-ma-sm"
+      style="width: 33%; height:81vh"
+      bordered
+    >
+      <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
+        South Western Region
+        <q-space />
+        <q-separator
+          dark
+          vertical
+          inset
+        />
+        <q-tabs
+          inline-label
+          shrink
+        >
+          <q-route-tab
+            name="Back"
+            label="Back"
+            icon="keyboard_arrow_left"
+            to="/interactiveHabitat"
           >
-            <LTileLayer />
-            <l-geo-json :geojson="region" :options="regionOptions"></l-geo-json>
+          </q-route-tab>
+        </q-tabs>
+      </q-toolbar>
+      <div class="q-pa-sm">{{ Region }}</div>
 
-            <l-geo-json :geojson="sitesLocation" :options="siteOptions">
-            </l-geo-json>
+      <l-map
+        class="map"
+        :zoom="zoom"
+        :center="center"
+        :options="mapOptions"
+        :max-zoom="zoom"
+        :min-zoom="zoom"
+      >
+        <LTileLayer />
+        <l-geo-json
+          :geojson="region"
+          :options="regionOptions"
+        ></l-geo-json>
 
-            <l-control-scale
-              position="bottomleft"
-              :metric="true"
-              :imperial="true"
-            ></l-control-scale>
-          </l-map>
-        </div>
-      </q-card>
-    </div>
-    <div style="width: 66.3%; height: 30vh">
-      <q-card class="bg-grey-4 maincard" style="height: 29vh">
-        <div class="text-center text-h6 regiontheme">
+        <l-geo-json
+          :geojson="sitesLocation"
+          :options="siteOptions"
+        >
+        </l-geo-json>
+
+        <l-control-scale
+          position="bottomleft"
+          :metric="true"
+          :imperial="false"
+        ></l-control-scale>
+      </l-map>
+
+    </q-card>
+
+    <div style="width: 66.3%">
+      <q-card
+        class="bg-indigo-1"
+        style="height: 40vh"
+      >
+        <div class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders">
           Regional Average Data Summary
         </div>
-        <div class="row q-pa-sm justify-evenly">
-          <q-card class="maincard" style="width: 19%; height: 20vh">
-            <div class="q-px-sm text-bold">
-              Average <br />
-              Temperature
-            </div>
-            <div
-              class="q-py-md text-h2 text-bold text-blue-8 center"
-              style="col-grow"
-            >
-              123
+        <div class="row q-py-xs justify-evenly no-wrap">
+          <q-card
+            class="q-pa-sm"
+            style="width: 22%; min-height: 32vh"
+          >
+            <div class="q-px-sm">
+              <y>Max Temperature</y> <br />
+              HH: <br />
+              <h>43.48</h> <b> ± 10.05 ℃</b>
+              <div class="row justify-end">
+                (n = 4)
+              </div>
+              LM: <br />
+              <h>40.38</h> <b> ± 10.02 ℃</b>
+              <div class="row justify-end">
+                (n = 4)
+              </div>
             </div>
           </q-card>
-          <q-card class="maincard" style="width: 19%; height: 20vh">
-            <div class="q-px-sm text-bold">
-              Average <br />
-              Wave Fetch
+          <q-card
+            class="q-pa-sm"
+            style="width: 18%"
+          >
+            <div class="q-px-sm">
+              <y>Total Wave Fetch</y> <br />
+              <div class="items-end">
+                Max: <br />
+                <h>261.75</h> <b> km</b>
+                <br /><br />
+                Min: <br />
+                <h>5.39</h> <b> km</b>
+                <div class="row justify-end">
+                  (n = 2)
+                </div>
+              </div>
+
             </div>
-            <div class="q-py-md text-h2 text-bold text-blue-8 center">123</div>
           </q-card>
-          <q-card class="maincard" style="width: 19%; height: 20vh">
-            <div class="q-px-sm text-bold">
-              Average <br />
-              Nutrient Levels
+
+          <q-card
+            class="q-pa-sm"
+            style="width: 24%"
+          >
+            <div class="q-px-sm">
+              <y>Nutrient levels</y> <br />
+              chlorophyll a: <br />
+              <h>6.56</h> <b> ± 2.86 µg/ cm2</b>
+              <div class="row justify-end">
+                (n = 4)
+              </div>
+              Organic matter: <br />
+              <h>5.56</h> <b> ± 2.10 g</b>
+              <div class="row justify-end">
+                (n = 4)
+              </div>
+
             </div>
-            <div class="q-py-md text-h2 text-bold text-blue-8 center">123</div>
           </q-card>
-          <q-card class="maincard" style="width: 19%; height: 20vh">
-            <div class="q-px-sm text-bold">Number of <br />Mobile Species</div>
-            <div class="q-py-md text-h2 text-bold text-red center">123</div>
+
+          <q-card
+            class="q-pa-sm"
+            style="width: 16%"
+          >
+            <div class="q-px-sm">
+              <y>Mobile Species Richness</y> <br /><br />
+              <div class="items-center">
+                Max:<h>23</h> <br /><br />
+                Min:<h>16</h>
+              </div>
+            </div>
           </q-card>
-          <q-card class="maincard" style="width: 19%; height: 20vh">
-            <div class="q-px-sm text-bold">Number of <br />Sessile Species</div>
-            <div class="q-py-md text-h2 text-bold text-red center">123</div>
+          <q-card
+            class="q-pa-sm"
+            style="width: 16%"
+          >
+            <div class="q-px-sm">
+              <y>Sessile Species Richness</y> <br /><br />
+              <div class="items-center">
+                Max:<h>18</h> <br /><br />
+                Min:<h>10</h>
+              </div>
+            </div>
           </q-card>
         </div>
       </q-card>
-      <div class="row justify-around">
-        <q-card class="q-ma-md maincard" style="width: 24%; height: 50vh">
-          <div class="q-pa-sm text-h5 text-bold regiontheme">
-            Lung Kwu Tan
-          </div>
-          <q-img src="~/assets/SiteImage/StarfishBay.png" basic />
-          <q-btn
-            class="q-ma-sm absolute-bottom-right regiontheme"
-            no-caps
-            label="Learn more"
-            @click="card1 = true"
-          />
-        </q-card>
-        <q-card class="q-ma-md maincard" style="width: 24%; height: 50vh">
-          <div class="q-pa-sm text-h5 text-bold regiontheme">
-            Siu Lam
-          </div>
-          <q-img src="~/assets/SiteImage/StarfishBay.png" basic />
-          <q-btn
-            class="q-ma-sm absolute-bottom-right regiontheme"
-            no-caps
-            label="Learn more"
-            @click="card1 = true"
-          />
-        </q-card>
-        <q-card class="q-ma-md maincard" style="width: 24%; height: 50vh">
-          <div class="q-pa-sm text-h5 text-bold regiontheme">
-            Luk Keng
-          </div>
-          <q-img src="~/assets/SiteImage/StarfishBay.png" basic />
-          <q-btn
-            class="q-ma-sm absolute-bottom-right regiontheme"
-            no-caps
-            label="Learn more"
-            @click="card1 = true"
-          />
-        </q-card>
-        <q-card class="q-ma-md maincard" style="width: 24%; height: 50vh">
-          <div class="q-pa-sm text-h5 text-bold regiontheme">
+      <div class="row no-wrap justify-around">
+        <q-card
+          class="q-ma-md"
+          style="width: 24%; height: 40vh"
+        >
+          <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Tai Long Wan
           </div>
-          <q-img src="~/assets/SiteImage/StarfishBay.png" basic />
-          <q-btn
-            class="q-ma-sm absolute-bottom-right regiontheme"
-            no-caps
-            label="Learn more"
-            @click="card1 = true"
+          <q-img
+            src="~/assets/SiteImage/Tai Long Wan.png"
+            height="25vh"
+            basic
           />
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Exposed.svg"
+            />
+            <q-space />
+            <q-btn
+              class="q-ma-sm"
+              no-caps
+              color="indigo-6"
+              label="Learn more"
+              @click="card1 = true"
+            />
+          </div>
+        </q-card>
+        <q-card
+          class="q-ma-md"
+          style="width: 24%; height: 40vh"
+        >
+          <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
+            Shui Tseng
+          </div>
+          <q-img
+            src="~/assets/SiteImage/Shui Tseng.png"
+            height="25vh"
+            basic
+          ></q-img>
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Semi-exposed.svg"
+            />
+            <q-space />
+            <q-btn
+              class="q-ma-sm"
+              no-caps
+              color="indigo-6"
+              label="Learn more"
+              @click="card2 = true"
+            />
+          </div>
+        </q-card>
+        <q-card
+          class="q-ma-md"
+          style="width: 24%; height: 40vh"
+        >
+          <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
+            Peng Chau
+          </div>
+          <q-img
+            src="~/assets/SiteImage/Peng Chau.png"
+            height="25vh"
+            basic
+          />
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Semi-exposed.svg"
+            />
+            <q-space />
+            <q-btn
+              class="q-ma-sm"
+              no-caps
+              color="indigo-6"
+              label="Learn more"
+              @click="card3 = true"
+            />
+          </div>
+        </q-card>
+        <q-card
+          class="q-ma-md"
+          style="width: 24%; height: 40vh"
+        >
+          <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
+            Pui O
+          </div>
+          <q-img
+            src="~/assets/SiteImage/Pui O.png"
+            height="25vh"
+            basic
+          />
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Sheltered.svg"
+            />
+            <q-space />
+            <q-btn
+              class="q-ma-sm"
+              no-caps
+              color="indigo-6"
+              label="Learn more"
+              @click="card4 = true"
+            />
+          </div>
+
         </q-card>
         <q-dialog
           v-model="card1"
           transition-show="flip-down"
           persistent
           full-width
-          style="height: 80vh"
         >
           <q-card>
-            <q-bar class="bg-indigo text-white">
-              <b>Site Introduction: Tolo Habour | Starfish Bay </b>
+            <q-bar
+              style="height: 40px"
+              class="bg-indigo text-bold"
+            >
+              <div class="text-indigo-2"> Site Introduction | </div>
+              <div class="text-indigo-1"> South Western Region </div>
+              <div class="text-white"> >> Tai Long Wan Site</div>
               <q-space />
-              <q-btn dense flat icon="close" v-close-popup>
+              <q-btn
+                dense
+                flat
+                class="text-white"
+                icon="close"
+                v-close-popup
+              >
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section horizontal class="q-pa-md">
+            <q-card-section
+              horizontal
+              class="q-pa-md"
+            >
               <q-img
                 class="col-3"
-                height="350px"
-                src="~assets/SiteImage/StarfishBay.png"
+                height="flex"
+                src="~assets/SiteImage/Tai Long Wan.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
                   class="siteTable"
-                  :data="Table_TLSB"
+                  :data="Table_SWTLM"
                   separator="horizontal"
                   dense
                   hide-bottom
@@ -168,21 +314,240 @@
 
                 <div class="q-py-xl row justify-around">
                   <q-btn
-                    color="blue-6"
-                    label="Go to Physical Dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
-                  />
-                  <q-btn
-                    color="red-4"
+                    color="teal-5"
+                    no-caps
                     label="Go to Biological Dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
-                  />
+                    icon="eco"
+                  ></q-btn>
+                  <q-btn
+                    color="blue-6"
+                    no-caps
+                    label="Go to Physical Dashboard"
+                    to="/interactiveHabitat/physicalStarfishBay"
+                    icon="thermostat"
+                  ></q-btn>
                 </div>
               </div>
               <q-img
                 class="col-3"
-                height="350px"
-                src="~assets/SiteImage/StarfishBay.png"
+                height="flex"
+                src="~assets/SiteImage/Tai Long Wan.png"
+              />
+            </q-card-section>
+          </q-card>
+        </q-dialog>
+        <q-dialog
+          v-model="card2"
+          transition-show="flip-down"
+          persistent
+          full-width
+        >
+          <q-card>
+            <q-bar
+              style="height: 40px"
+              class="bg-indigo text-bold"
+            >
+              <div class="text-indigo-2"> Site Introduction | </div>
+              <div class="text-indigo-1"> South Western Region </div>
+              <div class="text-white"> >> Shui Tseng Site</div>
+              <q-space />
+              <q-btn
+                dense
+                flat
+                class="text-white"
+                icon="close"
+                v-close-popup
+              >
+                <q-tooltip>Close</q-tooltip>
+              </q-btn>
+            </q-bar>
+
+            <q-card-section
+              horizontal
+              class="q-pa-md"
+            >
+              <q-img
+                class="col-3"
+                height="flex"
+                src="~assets/SiteImage/Shui Tseng.png"
+              />
+              <div class="col-6 q-px-md">
+                <q-table
+                  class="siteTable"
+                  :data="Table_SWST"
+                  separator="horizontal"
+                  dense
+                  hide-bottom
+                  hide-header
+                  :rows-per-page-options="[0]"
+                >
+                </q-table>
+
+                <div class="q-py-xl row justify-around">
+                  <q-btn
+                    color="teal-5"
+                    no-caps
+                    label="Go to Biological Dashboard"
+                    to="/interactiveHabitat/biologicalStarfishBay"
+                    icon="eco"
+                  ></q-btn>
+                  <q-btn
+                    color="blue-6"
+                    no-caps
+                    label="Go to Physical Dashboard"
+                    to="/interactiveHabitat/physicalStarfishBay"
+                    icon="thermostat"
+                  ></q-btn>
+                </div>
+              </div>
+              <q-img
+                class="col-3"
+                height="flex"
+                src="~assets/SiteImage/Shui Tseng.png"
+              />
+            </q-card-section>
+          </q-card>
+        </q-dialog>
+        <q-dialog
+          v-model="card3"
+          transition-show="flip-down"
+          persistent
+          full-width
+        >
+          <q-card>
+            <q-bar
+              style="height: 40px"
+              class="bg-indigo text-bold"
+            >
+              <div class="text-indigo-2"> Site Introduction | </div>
+              <div class="text-indigo-1"> South Western Region </div>
+              <div class="text-white"> >> Peng Chau Site</div>
+              <q-space />
+
+              <q-btn
+                dense
+                flat
+                class="text-white"
+                icon="close"
+                v-close-popup
+              >
+
+                <q-tooltip>Close</q-tooltip>
+              </q-btn>
+            </q-bar>
+
+            <q-card-section horizontal class="q-pa-md">
+              <q-img
+                class="col-3"
+                height="flex"
+                src="~assets/SiteImage/Peng Chau.png"
+              />
+              <div class="col-6 q-px-md">
+                <q-table
+                  class="siteTable"
+                  :data="Table_SWPC"
+                  separator="horizontal"
+                  dense
+                  hide-bottom
+                  hide-header
+                  :rows-per-page-options="[0]"
+                >
+                </q-table>
+
+                <div class="q-py-xl row justify-around">
+                  <q-btn
+                    color="teal-5"
+                    no-caps
+                    label="Go to Biological Dashboard"
+                    to="/interactiveHabitat/biologicalStarfishBay"
+                    icon="eco"
+                  ></q-btn>
+                  <q-btn
+                    color="blue-6"
+                    no-caps
+                    label="Go to Physical Dashboard"
+                    to="/interactiveHabitat/physicalStarfishBay"
+                    icon="thermostat"
+                  ></q-btn>
+                </div>
+              </div>
+              <q-img
+                class="col-3"
+                height="flex"
+                src="~assets/SiteImage/Peng Chau.png"
+              />
+            </q-card-section>
+          </q-card>
+        </q-dialog>
+        <q-dialog
+          v-model="card4"
+          transition-show="flip-down"
+          persistent
+          full-width
+        >
+          <q-card>
+            <q-bar
+              style="height: 40px"
+              class="bg-indigo text-bold"
+            >
+              <div class="text-indigo-2"> Site Introduction | </div>
+              <div class="text-indigo-1"> South Western Region </div>
+              <div class="text-white"> >> Pui O Site</div>
+              <q-space />
+              <q-btn
+                dense
+                flat
+                class="text-white"
+                icon="close"
+                v-close-popup
+              >
+                <q-tooltip>Close</q-tooltip>
+              </q-btn>
+            </q-bar>
+
+            <q-card-section
+              horizontal
+              class="q-pa-md"
+            >
+              <q-img
+                class="col-3"
+                height="flex"
+                src="~assets/SiteImage/Pui O.png"
+              />
+              <div class="col-6 q-px-md">
+                <q-table
+                  class="siteTable"
+                  :data="Table_SWPO"
+                  separator="horizontal"
+                  dense
+                  hide-bottom
+                  hide-header
+                  :rows-per-page-options="[0]"
+                >
+                </q-table>
+
+                <div class="q-py-xl row justify-around">
+                  <q-btn
+                    color="teal-5"
+                    no-caps
+                    label="Go to Biological Dashboard"
+                    to="/interactiveHabitat/biologicalStarfishBay"
+                    icon="eco"
+                  ></q-btn>
+                  <q-btn
+                    color="blue-6"
+                    no-caps
+                    label="Go to Physical Dashboard"
+                    to="/interactiveHabitat/physicalStarfishBay"
+                    icon="thermostat"
+                  ></q-btn>
+                </div>
+              </div>
+              <q-img
+                class="col-3"
+                height="flex"
+                src="~assets/SiteImage/Pui O.png"
               />
             </q-card-section>
           </q-card>
@@ -194,9 +559,10 @@
 
 <script>
 import { LMap, LGeoJson, LControlScale } from "vue2-leaflet";
+import "leaflet.zoomhome/dist/leaflet.zoomhome.js";
 
 export default {
-  name: "NW",
+  name: "EA",
   components: {
     LMap,
     LGeoJson,
@@ -205,37 +571,64 @@ export default {
   },
   data() {
     return {
-      lorem:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      Region:
+        "The Southwestern (SW) region is located along the Pearl River outflow, but is partially blocked against the direct outlet by the Lantau Island.  Although the region is less urbanized (with the Lantau South Country Park occupying 56 km²), southern Lantau is a popular spot for recreational activities such as clam digging, camping and coaststeering (e.g. Pui O, Tai Long Wan), thus experiencing anthropogenic impacts particularly during the summer holiday.  Vessel traffic is also not uncommon (particularly off the shore at Peng Chau), with ships travelling back and forth through Ma Wan Channel at the northeastern tip of Lantau.",
       card1: false,
-      siteName: `Starfish Bay`,
-      regionName: `Tolo Harbour`,
-      GPS: `22°26'10.5"N 114°14'49.5"E`,
-      tidalRange: `Survey area ranges from a Low of 1.28 m to a high of 3.00 m above Chart Datum`,
-      transectLength: `14 m`,
-      shoreExposure: `Sheltered to intermediate`,
-      aspect: `North`,
-      slope: `/`,
-      rockType: `Igneous rock`,
-      feasibility: `When assessing this site’s suitability, it was determined to be moderately susceptible to vessel traffic and of 
-      low susceptibility to sand inundation and human disturbance. As a result, the site poses a low safety risk from oncoming wave action. `,
-      Table_TLSB: [
+      card2: false,
+      card3: false,
+      card4: false,
+      Table_SWTLM: [
         {
-          name: "Site Name",
-          data: "Starfish Bay"
+
+          name: "Location",
+          data: "Islands District, New Territories",
         },
         {
-          name: "Region",
-          data: "Tolo Harbour Region"
-        },
-        {
-          name: "GPS",
-          data: `22°26'10.5"N, 114°14'49.5"E`
+          name: "GPS coordinates",
+          data: `22°13'02.0"N, 113°52'53.5"E`,
         },
         {
           name: "Tidal Range",
-          data:
-            "Ranges from a Low of 1.28 m to a high of 3.00 m above Chart Datum"
+          data: "1.0 m - 3.8 m + C.D.",
+        },
+        {
+          name: "Transect length",
+          data: "17 m",
+        },
+        {
+          name: "Shore exposure",
+          data: "Exposed",
+        },
+        {
+          name: "Maximum wave Force",
+          data: "/",
+        },
+        {
+          name: "Aspect",
+          data: "/",
+        },
+        {
+          name: "Slope",
+          data: "/",
+        },
+        {
+          name: "Rock type",
+          data: `Igneous`,
+        },
+      ],
+      Table_SWST: [
+        {
+          name: "Location",
+          data: "Islands District, New Territories",
+        },
+        {
+          name: "GPS coordinates",
+          data: `22°15'00.6"N, 114°00'24.0"E`,
+        },
+        {
+          name: "Tidal Range",
+          data: "1.0 m - 2.8 m + C.D.",
+
         },
         {
           name: "Transect length",
@@ -243,11 +636,17 @@ export default {
         },
         {
           name: "Shore exposure",
-          data: "Biologically defined as sheltered to intermediate"
+
+          data: "Intermediate",
+        },
+        {
+          name: "Maximum wave Force",
+          data: "/",
         },
         {
           name: "Aspect",
-          data: "North"
+          data: "/",
+
         },
         {
           name: "Slope",
@@ -255,13 +654,94 @@ export default {
         },
         {
           name: "Rock type",
-          data: `Igneous rock`
-        }
+
+          data: `Igneous`,
+        },
+
       ],
-      zoom: 10.4,
-      center: L.latLng(22.26, 114.01),
+      Table_SWPC: [
+        {
+          name: "Location",
+          data: "Islands District, New Territories",
+        },
+        {
+          name: "GPS coordinates",
+          data: `22°16'59.4"N, 114°02'49.1"E `,
+        },
+        {
+          name: "Tidal Range",
+          data: "1.1 m - 3.3 m + C.D.",
+        },
+        {
+          name: "Transect length",
+          data: "17 m",
+        },
+        {
+          name: "Shore exposure",
+          data: "Intermediate",
+        },
+        {
+          name: "Maximum wave Force",
+          data: "1.14 N",
+        },
+        {
+          name: "Aspect",
+          data: "/",
+        },
+        {
+          name: "Slope",
+          data: "/",
+        },
+        {
+          name: "Rock type",
+          data: `Igneous`,
+        },
+      ],
+      Table_SWPO: [
+        {
+          name: "Location",
+          data: "Islands District, New Territories",
+        },
+        {
+          name: "GPS coordinates",
+          data: `22°14'05.6"N, 113°58'51.1"E `,
+        },
+        {
+          name: "Tidal Range",
+          data: "1.0 m - 2.5 m + C.D.",
+        },
+        {
+          name: "Transect length",
+          data: "18 m",
+        },
+        {
+          name: "Shore exposure",
+          data: "Sheltered",
+        },
+        {
+          name: "Maximum wave Force",
+          data: "0.89 N",
+        },
+        {
+          name: "Aspect",
+          data: "/",
+        },
+        {
+          name: "Slope",
+          data: "/",
+        },
+        {
+          name: "Rock type",
+          data: `Igneous`,
+        },
+      ],
+      zoom: 9.8,
+      center: L.latLng(22.25, 113.98),
       mapOptions: {
-        zoomSnap: 0.2
+
+        zoomSnap: 0.2,
+        zoomControl: false,
+
       },
       sitesLocation: require("../../MapData/SW_Sites.json"),
       siteOptions: {
@@ -271,8 +751,12 @@ export default {
           };
         },
         onEachFeature: (feature, layer) => {
-          layer.on("click", e => {
-            this.$router.push(`/physicalDashboard`);
+
+          layer.bindPopup("feature.properties.name", {
+            permanent: true,
+            sticky: true,
+            direction: "center",
+
           });
         }
       },
@@ -281,8 +765,10 @@ export default {
         style: function style(feature) {
           return {
             opacity: 0.6,
-            color: feature.properties.fill /* refer to json data */,
-            fillOpacity: 0.3
+
+            color: feature.properties.fill,
+            fillOpacity: 0.3,
+
           };
         }
       }
@@ -292,14 +778,20 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.maincard
+.q-card
   padding: 4px
   margin: 3px
-t
-  color: $indigo-5
-  font-weight: 900
-.regiontheme
-  background-color: #4f958d
-  color: white
-  font-weight: bold
+  display: flex
+  flex-direction: column
+
+h
+  color: $red-8
+  font-size: 24px
+
+y
+  font-weight: 600
+  color: $indigo-4
+.map
+  flex: 1
+  border: 5px solid white
 </style>

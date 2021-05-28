@@ -115,8 +115,20 @@
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Tai O
           </div>
-          <q-img src="~/assets/SiteImage/Tai O.png" height="25vh" basic />
-          <div class="row bg-white absolute-bottom justify-end">
+
+          <q-img
+            src="~/assets/SiteImage/Tai O.png"
+            height="25vh"
+            basic
+          />
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Semi-exposed.svg"
+            />
+            <q-space />
+
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -125,6 +137,7 @@
               @click="card1 = true"
             />
           </div>
+
         </q-card>
         <q-card class="q-ma-md" style="width: 24%; height: 40vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
@@ -135,7 +148,13 @@
             height="25vh"
             basic
           ></q-img>
-          <div class="row bg-white absolute-bottom justify-end">
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Semi-exposed.svg"
+            />
+            <q-space />
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -147,10 +166,22 @@
         </q-card>
         <q-card class="q-ma-md" style="width: 24%; height: 40vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
-            Middle Bay
+            Luk Keng
           </div>
-          <q-img src="~/assets/SiteImage/Middle Bay.png" height="25vh" basic />
-          <div class="row bg-white absolute-bottom justify-end">
+
+          <q-img
+            src="~/assets/SiteImage/Luk Keng.png"
+            height="25vh"
+            basic
+          />
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/sheltered.svg"
+            />
+            <q-space />
+
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -162,10 +193,22 @@
         </q-card>
         <q-card class="q-ma-md" style="width: 24%; height: 40vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
-            Tai Tam
+            Lung Kwu Tan
           </div>
-          <q-img src="~/assets/SiteImage/Tai Tam.png" height="25vh" basic />
-          <div class="row bg-white absolute-bottom justify-end">
+
+          <q-img
+            src="~/assets/SiteImage/Lung Kwu Tan.png"
+            height="25vh"
+            basic
+          />
+          <div class="row bg-white absolute-bottom">
+            <q-icon
+              class="q-pa-sm"
+              style="font-size: 2.5rem"
+              name="img:icons/Semi-exposed.svg"
+            />
+            <q-space />
+
             <q-btn
               class="q-ma-sm"
               no-caps
@@ -321,7 +364,7 @@
               <div class="col-6 q-px-md">
                 <q-table
                   class="siteTable"
-                  :data="Table_NWSL"
+                  :data="Table_NWLK"
                   separator="horizontal"
                   dense
                   hide-bottom
@@ -381,7 +424,7 @@
               <div class="col-6 q-px-md">
                 <q-table
                   class="siteTable"
-                  :data="Table_NWSL"
+                  :data="Table_NWLKT"
                   separator="horizontal"
                   dense
                   hide-bottom

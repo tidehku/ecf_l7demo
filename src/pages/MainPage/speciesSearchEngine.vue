@@ -16,9 +16,9 @@ export default {
   mounted() {
     this.$q.loading.show({
       spinner: QSpinnerHourglass,
-      spinnerColor: "light-blue-12",
-      spinnerSize: 100,
-      message: '<h6 class="text-orange">Initialising species search engine</h6>'
+      spinnerColor: "teal-3",
+      spinnerSize: 150,
+      message: '<h6 class="text-white">Initialising species search engine</h6>',
     });
 
     this.timer = setTimeout(() => {
@@ -31,6 +31,6 @@ export default {
       clearTimeout(this.timer);
       this.$q.loading.hide();
     }
-  }
+  },
 };
 </script>
