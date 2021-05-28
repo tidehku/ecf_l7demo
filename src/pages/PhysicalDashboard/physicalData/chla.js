@@ -17,7 +17,7 @@ export const chlaData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Chla/tidal height"
+        text: "Tidal height (Meter above C.D.)"
       }
     },
     yAxis: {
@@ -28,6 +28,14 @@ export const chlaData = {
     legend: {
       enabled: false
     },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
     series: [
       {
         name: "chlorophyll a",
@@ -35,11 +43,11 @@ export const chlaData = {
         colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
         showInLegend: true,
         data: [
-          ["HH", 1.71245155],
-          ["LH", 2.095226323],
-          ["HM", 9.217318676],
-          ["LM", 8.640319233],
-          ["HL", 12.3657206]
+          ["3.00", 1.71],
+          ["2.66", 2.1],
+          ["2.31", 9.22],
+          ["1.97", 8.64],
+          ["1.62", 12.37]
         ]
       }
     ]

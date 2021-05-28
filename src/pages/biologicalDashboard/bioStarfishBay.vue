@@ -1,20 +1,15 @@
 <template>
   <q-page class="justify-center">
-    <q-bar class="bg-red-9 text-white">
+    <q-bar class="bg-teal-8 text-white">
       <div class="text-bold row justify-center">
         Biological Dashboard of Starfish Bay, Tolo Habour Region
       </div>
-      <!-- <q-btn
-        class="bg-indigo text-white"
-        no-caps
-        label="Tolo Habour Region"
-      /> -->
       <q-space />
       <q-btn
         dense
-        icon="eco"
-        class="bg-white text-red"
-        to="/interactiveHabitat/physicalStarfishBay"
+        icon="thermostat"
+        class="bg-white text-teal"
+        to="/interactiveHabitat/phyStarfishBay"
       >
         <q-tooltip>
           Switch to physical Dashboard
@@ -23,7 +18,7 @@
       <q-btn
         dense
         icon="keyboard_backspace"
-        class="bg-white text-red"
+        class="bg-white text-teal"
         to="/interactiveHabitat/SW"
       >
         <q-tooltip>
@@ -38,20 +33,20 @@
             List of Species Names
           </div>
           <div class="row no-wrap">
-            <div class="col-6 text-center text-bold text-red">
+            <div class="col-6 text-center text-bold text-teal">
               Mobile species
             </div>
-            <div class="col-6 text-center text-bold text-red">
+            <div class="col-6 text-center text-bold text-teal">
               Sessile species
             </div>
           </div>
           <div class="q-pa-sm q-gutter-sm justify-center row">
             <q-list
               dense
-              bordered
+              bordeteal
               separator
               padding
-              class="bg-red-1 text-caption rounded-borders"
+              class="bg-teal-1 text-caption rounded-borders"
               style="width: 180px"
             >
               <q-item
@@ -61,17 +56,17 @@
                 :key="mobile.message"
               >
                 <q-item-section>
-                  <i>{{ mobile }} </i></q-item-section
-                >
+                  <i>{{ mobile }} </i>
+                </q-item-section>
               </q-item>
             </q-list>
 
             <q-list
               dense
-              bordered
+              bordeteal
               separator
               padding
-              class="bg-red-1 text-caption rounded-borders"
+              class="bg-teal-1 text-caption rounded-borders"
               style="width: 180px"
             >
               <q-item
@@ -81,8 +76,8 @@
                 :key="sessile.message"
               >
                 <q-item-section>
-                  <i>{{ sessile }} </i></q-item-section
-                >
+                  <i>{{ sessile }} </i>
+                </q-item-section>
               </q-item>
             </q-list>
           </div>
@@ -93,11 +88,11 @@
             Species Abundance and Diversity Indices
           </div>
           <div class="row no-wrap">
-            <div class="col-6 text-center text-bold text-red">
+            <div class="col-6 text-center text-bold text-teal">
               Mobile species
             </div>
             <q-separator vertical />
-            <div class="col-6 text-center text-bold text-red">
+            <div class="col-6 text-center text-bold text-teal">
               Sessile species
             </div>
           </div>
@@ -109,13 +104,19 @@
             <div class="col-3 tab2">summer</div>
           </div>
           <q-card-section horizontal>
-            <highcharts class="col-3" :options="pieChart1"></highcharts>
+            <highcharts
+              class="col-3"
+              :options="pieChart1"
+            ></highcharts>
             <div class="col-3 noData">
               Summer data <br />
               Not available yet
             </div>
             <q-separator vertical />
-            <highcharts class="col-3" :options="pieChart3"></highcharts>
+            <highcharts
+              class="col-3"
+              :options="pieChart3"
+            ></highcharts>
             <div class="col-3 noData">
               Summer data <br />
               Not available yet
@@ -129,12 +130,24 @@
             <div class="col-4 tab2">Species richness S</div>
           </div>
 
-          <q-card-section horizontal class="row">
-            <highcharts class="col-4" :options="barChart1"></highcharts>
+          <q-card-section
+            horizontal
+            class="row"
+          >
+            <highcharts
+              class="col-4"
+              :options="barChart1"
+            ></highcharts>
             <q-separator vertical />
-            <highcharts class="col-4" :options="barChart2"></highcharts>
+            <highcharts
+              class="col-4"
+              :options="barChart2"
+            ></highcharts>
             <q-separator vertical />
-            <highcharts class="col-4" :options="barChart3"></highcharts>
+            <highcharts
+              class="col-4"
+              :options="barChart3"
+            ></highcharts>
           </q-card-section>
         </q-card>
       </div>
@@ -146,8 +159,8 @@
 import Vue from "vue";
 import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
-import { pieData } from "./BiologicalData/Pie";
-import { barData } from "./BiologicalData/bar";
+import { pieData } from "./biologicalData/Pie";
+import { barData } from "./biologicalData/bar";
 
 export default {
   components: {},
@@ -165,7 +178,7 @@ export default {
         "Reishia luteostoma",
         "Siphonaria japonica",
         "Tenguella musiva",
-        "Liolophura japonica"
+        "Liolophura japonica",
       ],
       sessiles: [
         "High shore biofilm",
@@ -181,7 +194,7 @@ export default {
         "Brachidontes variabilis",
         "Isognomon ephippium",
         "Saccostrea cuccullata",
-        "Xenostrobus securis"
+        "Xenostrobus securis",
       ],
       barChart1: barData.SBBar1,
       barChart2: barData.SBBar2,
@@ -189,10 +202,10 @@ export default {
 
       pieChart1: pieData.SBPie1,
       // pieChart2: pieData.SBPie1,
-      pieChart3: pieData.SBPie3
+      pieChart3: pieData.SBPie3,
       // pieChart4: pieData.SBPie1,
     };
-  }
+  },
 };
 </script>
 
@@ -208,7 +221,7 @@ export default {
   padding: 3px
   margin: 4px
 .title
-  background-color: $red-6
+  background-color: $teal-6
   color: white
 .noData
   margin: auto
@@ -223,7 +236,7 @@ export default {
   text-align: center
   font-weight: bold
 .tab2
-  background-color: $red-2
+  background-color: $teal-2
   color: black
   font-size: 16px
   text-align: center

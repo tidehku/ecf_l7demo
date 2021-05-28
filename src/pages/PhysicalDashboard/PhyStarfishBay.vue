@@ -1,6 +1,9 @@
 <template>
   <q-page class="justify-center">
-    <q-bar elevated class="bg-blue-8 text-white">
+    <q-bar
+      elevated
+      class="bg-blue-9 text-white"
+    >
       <div class="text-bold row justify-center">
         Biological Dashboard of Starfish Bay, Tolo Habour Region
       </div>
@@ -15,7 +18,7 @@
         icon="eco"
         color="white"
         text-color="blue-8"
-        to="/interactiveHabitat/biologicalStarfishBay"
+        to="/interactiveHabitat/bioStarfishBay"
       >
         <q-tooltip>
           Switch to Biological Dashboard
@@ -54,7 +57,10 @@
           <div class="col-6 tab2">summer</div>
         </div>
         <div class="row">
-          <highcharts class="col-6" :options="Temperature1"></highcharts>
+          <highcharts
+            class="col-6"
+            :options="Temperature1"
+          ></highcharts>
           <q-separator vertical />
           <div class="text-center noData">
             2021 Summer data <br />
@@ -93,13 +99,19 @@
           <div class="col-3 tab2">summer</div>
         </div>
         <div class="row">
-          <highcharts class="col-3" :options="Chla1"></highcharts>
+          <highcharts
+            class="col-3"
+            :options="Chla1"
+          ></highcharts>
           <div class="text-center noData">
             2021 Summer data <br />
             Not available yet
           </div>
           <q-separator vertical />
-          <highcharts class="col-3" :options="OM1"></highcharts>
+          <highcharts
+            class="col-3"
+            :options="OM1"
+          ></highcharts>
           <div class="text-center noData">
             2021 Summer data <br />
             Not available yet
@@ -115,6 +127,8 @@ import { LMap, LMarker, LTileLayer } from "vue2-leaflet";
 import Highcharts from "highcharts";
 import exporting from "highcharts/modules/exporting";
 exporting(Highcharts);
+import More from "highcharts/highcharts-more";
+More(Highcharts);
 import Vue from "vue";
 import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
@@ -129,9 +143,9 @@ export default {
       Temperature1: tempData.SBTemperature1,
       Temperature2: tempData.SBTemperature2,
       Chla1: chlaData.SBChla1,
-      OM1: omData.SBOm1
+      OM1: omData.SBOm1,
     };
-  }
+  },
 };
 </script>
 
