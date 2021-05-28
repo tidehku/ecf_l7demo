@@ -38,8 +38,12 @@
             List of Species Names
           </div>
           <div class="row no-wrap">
-            <div class="col-6 text-center text-bold text-red"> Mobile species </div>
-            <div class="col-6 text-center text-bold text-red"> Sessile species </div>
+            <div class="col-6 text-center text-bold text-red">
+              Mobile species
+            </div>
+            <div class="col-6 text-center text-bold text-red">
+              Sessile species
+            </div>
           </div>
           <div class="q-pa-sm q-gutter-sm justify-center row">
             <q-list
@@ -56,7 +60,9 @@
                 v-for="mobile in mobiles"
                 :key="mobile.message"
               >
-                <q-item-section> <i>{{ mobile }} </i></q-item-section>
+                <q-item-section>
+                  <i>{{ mobile }} </i></q-item-section
+                >
               </q-item>
             </q-list>
 
@@ -74,77 +80,64 @@
                 v-for="sessile in sessiles"
                 :key="sessile.message"
               >
-                <q-item-section> <i>{{ sessile }} </i></q-item-section>
+                <q-item-section>
+                  <i>{{ sessile }} </i></q-item-section
+                >
               </q-item>
-
             </q-list>
           </div>
         </q-card>
 
         <q-card class="col-8 chartCard">
-          <div class="text-h5 text-bold row justify-center title">Species Abundance and Diversity Indices</div>
+          <div class="text-h5 text-bold row justify-center title">
+            Species Abundance and Diversity Indices
+          </div>
           <div class="row no-wrap">
-            <div class="col-6 text-center text-bold text-red"> Mobile species </div>
+            <div class="col-6 text-center text-bold text-red">
+              Mobile species
+            </div>
             <q-separator vertical />
-            <div class="col-6 text-center text-bold text-red"> Sessile species </div>
+            <div class="col-6 text-center text-bold text-red">
+              Sessile species
+            </div>
           </div>
 
           <div class="row">
-            <div class="col-3 tab1"> winter </div>
-            <div class="col-3 tab2"> summer </div>
-            <div class="col-3 tab1"> winter </div>
-            <div class="col-3 tab2"> summer </div>
+            <div class="col-3 tab1">winter</div>
+            <div class="col-3 tab2">summer</div>
+            <div class="col-3 tab1">winter</div>
+            <div class="col-3 tab2">summer</div>
           </div>
           <q-card-section horizontal>
-            <highcharts
-              class="col-3"
-              :options="pieChart1"
-            ></highcharts>
+            <highcharts class="col-3" :options="pieChart1"></highcharts>
             <div class="col-3 noData">
-              Summer data <br /> Not available yet
+              Summer data <br />
+              Not available yet
             </div>
             <q-separator vertical />
-            <highcharts
-              class="col-3"
-              :options="pieChart3"
-            ></highcharts>
+            <highcharts class="col-3" :options="pieChart3"></highcharts>
             <div class="col-3 noData">
-              Summer data <br /> Not available yet
+              Summer data <br />
+              Not available yet
             </div>
           </q-card-section>
 
           <q-separator />
           <div class="row">
-            <div class="col-4 tab2"> Shannon's Diversity index H' </div>
-            <div class="col-4 tab1"> Pielou's evenness J </div>
-            <div class="col-4 tab2"> Species richness S </div>
+            <div class="col-4 tab2">Shannon's Diversity index H'</div>
+            <div class="col-4 tab1">Pielou's evenness J</div>
+            <div class="col-4 tab2">Species richness S</div>
           </div>
 
-          <q-card-section
-            horizontal
-            class="row"
-          >
-
-            <highcharts
-              class="col-4"
-              :options="barChart1"
-            ></highcharts>
+          <q-card-section horizontal class="row">
+            <highcharts class="col-4" :options="barChart1"></highcharts>
             <q-separator vertical />
-            <highcharts
-              class="col-4"
-              :options="barChart2"
-            ></highcharts>
+            <highcharts class="col-4" :options="barChart2"></highcharts>
             <q-separator vertical />
-            <highcharts
-              class="col-4"
-              :options="barChart3"
-            ></highcharts>
-
+            <highcharts class="col-4" :options="barChart3"></highcharts>
           </q-card-section>
-
         </q-card>
       </div>
-      </q-card>
     </div>
   </q-page>
 </template>
@@ -153,8 +146,8 @@
 import Vue from "vue";
 import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
-import { pieData } from "./biologicalData/Pie";
-import { barData } from "./biologicalData/bar";
+import { pieData } from "./BiologicalData/Pie";
+import { barData } from "./BiologicalData/bar";
 
 export default {
   components: {},
@@ -172,7 +165,7 @@ export default {
         "Reishia luteostoma",
         "Siphonaria japonica",
         "Tenguella musiva",
-        "Liolophura japonica",
+        "Liolophura japonica"
       ],
       sessiles: [
         "High shore biofilm",
@@ -188,7 +181,7 @@ export default {
         "Brachidontes variabilis",
         "Isognomon ephippium",
         "Saccostrea cuccullata",
-        "Xenostrobus securis",
+        "Xenostrobus securis"
       ],
       barChart1: barData.SBBar1,
       barChart2: barData.SBBar2,
@@ -196,10 +189,10 @@ export default {
 
       pieChart1: pieData.SBPie1,
       // pieChart2: pieData.SBPie1,
-      pieChart3: pieData.SBPie3,
+      pieChart3: pieData.SBPie3
       // pieChart4: pieData.SBPie1,
     };
-  },
+  }
 };
 </script>
 

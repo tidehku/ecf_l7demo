@@ -1,23 +1,12 @@
 <template>
   <q-page class="q-pa-xs row justify-center bg-grey-5">
     <div style="width: 33%">
-      <q-card
-        class="maincard"
-        style="height: 80vh"
-        bordered
-      >
+      <q-card class="maincard" style="height: 80vh" bordered>
         <q-toolbar class="text-h5 text-bold regiontheme">
           South Western Region
           <q-space />
-          <q-separator
-            dark
-            vertical
-            inset
-          />
-          <q-tabs
-            inline-label
-            shrink
-          >
+          <q-separator dark vertical inset />
+          <q-tabs inline-label shrink>
             <q-tab
               name="Back"
               label="Back"
@@ -38,15 +27,9 @@
             :min-zoom="zoom"
           >
             <LTileLayer />
-            <l-geo-json
-              :geojson="region"
-              :options="regionOptions"
-            ></l-geo-json>
+            <l-geo-json :geojson="region" :options="regionOptions"></l-geo-json>
 
-            <l-geo-json
-              :geojson="sitesLocation"
-              :options="siteOptions"
-            >
+            <l-geo-json :geojson="sitesLocation" :options="siteOptions">
             </l-geo-json>
 
             <l-control-scale
@@ -59,18 +42,12 @@
       </q-card>
     </div>
     <div style="width: 66.3%; height: 30vh">
-      <q-card
-        class="bg-grey-4 maincard"
-        style="height: 29vh"
-      >
+      <q-card class="bg-grey-4 maincard" style="height: 29vh">
         <div class="text-center text-h6 regiontheme">
           Regional Average Data Summary
         </div>
         <div class="row q-pa-sm justify-evenly">
-          <q-card
-            class="maincard"
-            style="width: 19%; height: 20vh"
-          >
+          <q-card class="maincard" style="width: 19%; height: 20vh">
             <div class="q-px-sm text-bold">
               Average <br />
               Temperature
@@ -78,61 +55,40 @@
             <div
               class="q-py-md text-h2 text-bold text-blue-8 center"
               style="col-grow"
-            >123</div>
+            >
+              123
+            </div>
           </q-card>
-          <q-card
-            class="maincard"
-            style="width: 19%; height: 20vh"
-          >
+          <q-card class="maincard" style="width: 19%; height: 20vh">
             <div class="q-px-sm text-bold">
               Average <br />
               Wave Fetch
             </div>
             <div class="q-py-md text-h2 text-bold text-blue-8 center">123</div>
           </q-card>
-          <q-card
-            class="maincard"
-            style="width: 19%; height: 20vh"
-          >
+          <q-card class="maincard" style="width: 19%; height: 20vh">
             <div class="q-px-sm text-bold">
               Average <br />
               Nutrient Levels
             </div>
             <div class="q-py-md text-h2 text-bold text-blue-8 center">123</div>
           </q-card>
-          <q-card
-            class="maincard"
-            style="width: 19%; height: 20vh"
-          >
-            <div class="q-px-sm text-bold">
-              Number of <br />Mobile Species
-            </div>
+          <q-card class="maincard" style="width: 19%; height: 20vh">
+            <div class="q-px-sm text-bold">Number of <br />Mobile Species</div>
             <div class="q-py-md text-h2 text-bold text-red center">123</div>
           </q-card>
-          <q-card
-            class="maincard"
-            style="width: 19%; height: 20vh"
-          >
-            <div class="q-px-sm text-bold">
-              Number of <br />Sessile Species
-            </div>
+          <q-card class="maincard" style="width: 19%; height: 20vh">
+            <div class="q-px-sm text-bold">Number of <br />Sessile Species</div>
             <div class="q-py-md text-h2 text-bold text-red center">123</div>
           </q-card>
-
         </div>
       </q-card>
       <div class="row justify-around">
-        <q-card
-          class="q-ma-md maincard"
-          style="width: 24%; height: 50vh"
-        >
+        <q-card class="q-ma-md maincard" style="width: 24%; height: 50vh">
           <div class="q-pa-sm text-h5 text-bold regiontheme">
             Lung Kwu Tan
           </div>
-          <q-img
-            src="~/assets/SiteImage/StarfishBay.png"
-            basic
-          />
+          <q-img src="~/assets/SiteImage/StarfishBay.png" basic />
           <q-btn
             class="q-ma-sm absolute-bottom-right regiontheme"
             no-caps
@@ -140,17 +96,11 @@
             @click="card1 = true"
           />
         </q-card>
-        <q-card
-          class="q-ma-md maincard"
-          style="width: 24%; height: 50vh"
-        >
+        <q-card class="q-ma-md maincard" style="width: 24%; height: 50vh">
           <div class="q-pa-sm text-h5 text-bold regiontheme">
             Siu Lam
           </div>
-          <q-img
-            src="~/assets/SiteImage/StarfishBay.png"
-            basic
-          />
+          <q-img src="~/assets/SiteImage/StarfishBay.png" basic />
           <q-btn
             class="q-ma-sm absolute-bottom-right regiontheme"
             no-caps
@@ -158,17 +108,11 @@
             @click="card1 = true"
           />
         </q-card>
-        <q-card
-          class="q-ma-md maincard"
-          style="width: 24%; height: 50vh"
-        >
+        <q-card class="q-ma-md maincard" style="width: 24%; height: 50vh">
           <div class="q-pa-sm text-h5 text-bold regiontheme">
             Luk Keng
           </div>
-          <q-img
-            src="~/assets/SiteImage/StarfishBay.png"
-            basic
-          />
+          <q-img src="~/assets/SiteImage/StarfishBay.png" basic />
           <q-btn
             class="q-ma-sm absolute-bottom-right regiontheme"
             no-caps
@@ -176,17 +120,11 @@
             @click="card1 = true"
           />
         </q-card>
-        <q-card
-          class="q-ma-md maincard"
-          style="width: 24%; height: 50vh"
-        >
+        <q-card class="q-ma-md maincard" style="width: 24%; height: 50vh">
           <div class="q-pa-sm text-h5 text-bold regiontheme">
             Tai Long Wan
           </div>
-          <q-img
-            src="~/assets/SiteImage/StarfishBay.png"
-            basic
-          />
+          <q-img src="~/assets/SiteImage/StarfishBay.png" basic />
           <q-btn
             class="q-ma-sm absolute-bottom-right regiontheme"
             no-caps
@@ -205,20 +143,12 @@
             <q-bar class="bg-indigo text-white">
               <b>Site Introduction: Tolo Habour | Starfish Bay </b>
               <q-space />
-              <q-btn
-                dense
-                flat
-                icon="close"
-                v-close-popup
-              >
+              <q-btn dense flat icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section
-              horizontal
-              class="q-pa-md"
-            >
+            <q-card-section horizontal class="q-pa-md">
               <q-img
                 class="col-3"
                 height="350px"
@@ -271,7 +201,7 @@ export default {
     LMap,
     LGeoJson,
     LControlScale,
-    LTileLayer: () => import("components/tileLayer"),
+    LTileLayer: () => import("components/tileLayer")
   },
   data() {
     return {
@@ -292,59 +222,59 @@ export default {
       Table_TLSB: [
         {
           name: "Site Name",
-          data: "Starfish Bay",
+          data: "Starfish Bay"
         },
         {
           name: "Region",
-          data: "Tolo Harbour Region",
+          data: "Tolo Harbour Region"
         },
         {
           name: "GPS",
-          data: `22°26'10.5"N, 114°14'49.5"E`,
+          data: `22°26'10.5"N, 114°14'49.5"E`
         },
         {
           name: "Tidal Range",
           data:
-            "Ranges from a Low of 1.28 m to a high of 3.00 m above Chart Datum",
+            "Ranges from a Low of 1.28 m to a high of 3.00 m above Chart Datum"
         },
         {
           name: "Transect length",
-          data: "14 m",
+          data: "14 m"
         },
         {
           name: "Shore exposure",
-          data: "Biologically defined as sheltered to intermediate",
+          data: "Biologically defined as sheltered to intermediate"
         },
         {
           name: "Aspect",
-          data: "North",
+          data: "North"
         },
         {
           name: "Slope",
-          data: "/",
+          data: "/"
         },
         {
           name: "Rock type",
-          data: `Igneous rock`,
-        },
+          data: `Igneous rock`
+        }
       ],
       zoom: 10.4,
       center: L.latLng(22.26, 114.01),
       mapOptions: {
-        zoomSnap: 0.2,
+        zoomSnap: 0.2
       },
       sitesLocation: require("../../MapData/SW_Sites.json"),
       siteOptions: {
         style: function style(feature) {
           return {
-            color: red,
+            color: red
           };
         },
         onEachFeature: (feature, layer) => {
-          layer.on("click", (e) => {
+          layer.on("click", e => {
             this.$router.push(`/physicalDashboard`);
           });
-        },
+        }
       },
       region: require("../../MapData/SW.json"),
       regionOptions: {
@@ -352,12 +282,12 @@ export default {
           return {
             opacity: 0.6,
             color: feature.properties.fill /* refer to json data */,
-            fillOpacity: 0.3,
+            fillOpacity: 0.3
           };
-        },
-      },
+        }
+      }
     };
-  },
+  }
 };
 </script>
 

@@ -1,9 +1,6 @@
 <template>
   <q-page class="justify-center">
-    <q-bar
-      elevated
-      class="bg-blue-8 text-white"
-    >
+    <q-bar elevated class="bg-blue-8 text-white">
       <div class="text-bold row justify-center">
         Biological Dashboard of Starfish Bay, Tolo Habour Region
       </div>
@@ -47,22 +44,21 @@
             style="top: 2px; right: 8px"
           >
             <q-tooltip>
-              Here can be some note on the interpretation/ecological significance of the data
+              Here can be some note on the interpretation/ecological
+              significance of the data
             </q-tooltip>
           </q-icon>
         </div>
         <div class="row">
-          <div class="col-6 tab1"> winter </div>
-          <div class="col-6 tab2"> summer </div>
+          <div class="col-6 tab1">winter</div>
+          <div class="col-6 tab2">summer</div>
         </div>
         <div class="row">
-          <highcharts
-            class="col-6"
-            :options="Temperature1"
-          ></highcharts>
+          <highcharts class="col-6" :options="Temperature1"></highcharts>
           <q-separator vertical />
           <div class="text-center noData">
-            2021 Summer data <br /> Not available yet
+            2021 Summer data <br />
+            Not available yet
           </div>
         </div>
       </q-card>
@@ -78,36 +74,35 @@
             style="top: 2px; right: 8px"
           >
             <q-tooltip>
-              Here can be some note on the interpretation/ecological significance of the data
+              Here can be some note on the interpretation/ecological
+              significance of the data
             </q-tooltip>
           </q-icon>
         </div>
         <div class="row no-wrap">
-          <div class="col-6 text-center text-bold text-blue"> Chlorophyll a </div>
+          <div class="col-6 text-center text-bold text-blue">Chlorophyll a</div>
           <q-separator vertical />
-          <div class="col-6 text-center text-bold text-blue"> Organic Matter </div>
+          <div class="col-6 text-center text-bold text-blue">
+            Organic Matter
+          </div>
         </div>
         <div class="row">
-          <div class="col-3 tab1"> winter </div>
-          <div class="col-3 tab2"> summer </div>
-          <div class="col-3 tab1"> winter </div>
-          <div class="col-3 tab2"> summer </div>
+          <div class="col-3 tab1">winter</div>
+          <div class="col-3 tab2">summer</div>
+          <div class="col-3 tab1">winter</div>
+          <div class="col-3 tab2">summer</div>
         </div>
         <div class="row">
-          <highcharts
-            class="col-3"
-            :options="Chla1"
-          ></highcharts>
+          <highcharts class="col-3" :options="Chla1"></highcharts>
           <div class="text-center noData">
-            2021 Summer data <br /> Not available yet
+            2021 Summer data <br />
+            Not available yet
           </div>
           <q-separator vertical />
-          <highcharts
-            class="col-3"
-            :options="OM1"
-          ></highcharts>
+          <highcharts class="col-3" :options="OM1"></highcharts>
           <div class="text-center noData">
-            2021 Summer data <br /> Not available yet
+            2021 Summer data <br />
+            Not available yet
           </div>
         </div>
       </q-card>
@@ -134,9 +129,9 @@ export default {
       Temperature1: tempData.SBTemperature1,
       Temperature2: tempData.SBTemperature2,
       Chla1: chlaData.SBChla1,
-      OM1: omData.SBOm1,
+      OM1: omData.SBOm1
     };
-  },
+  }
 };
 </script>
 
