@@ -5,13 +5,8 @@
       class="bg-blue-9 text-white"
     >
       <div class="text-bold row justify-center">
-        Biological Dashboard of Starfish Bay, Tolo Habour Region
+        Physical Dashboard of Starfish Bay, Tolo Habour Region
       </div>
-      <!-- <q-btn
-        class="bg-indigo text-white"
-        no-caps
-        label="Tolo Habour Region"
-      /> -->
       <q-space />
       <q-btn
         dense

@@ -5,20 +5,15 @@
       class="bg-blue-9 text-white"
     >
       <div class="text-bold row justify-center">
-        Biological Dashboard of Starfish Bay, Tolo Habour Region
+        Physical Dashboard of Tai O, North Western Region
       </div>
-      <!-- <q-btn
-        class="bg-indigo text-white"
-        no-caps
-        label="Tolo Habour Region"
-      /> -->
       <q-space />
       <q-btn
         dense
         icon="eco"
         color="white"
         text-color="blue-8"
-        to="/interactiveHabitat/bioStarfishBay"
+        to="/interactiveHabitat/bioTaiO"
       >
         <q-tooltip>
           Switch to Biological Dashboard
@@ -123,7 +118,6 @@
 </template>
 
 <script>
-import { LMap, LMarker, LTileLayer } from "vue2-leaflet";
 import Highcharts from "highcharts";
 import exporting from "highcharts/modules/exporting";
 exporting(Highcharts);
@@ -132,23 +126,29 @@ More(Highcharts);
 import Vue from "vue";
 import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
-import { tempData } from "./physicalData/temperature";
-import { omData } from "./physicalData/om";
-import { chlaData } from "./physicalData/chla";
+import { tempData } from "../siteData/temperature";
+import { omData } from "../siteData/om";
+import { chlaData } from "../siteData/chla";
+// import { firebaseStore } from "boot/firebase";
 
 export default {
-  components: { LMap, LMarker, LTileLayer },
   data() {
     return {
-      Temperature1: tempData.SBTemperature1,
-      Temperature2: tempData.SBTemperature2,
-      Chla1: chlaData.SBChla1,
-      OM1: omData.SBOm1,
+      Temperature1: tempData.TOTemperature1,
+      Temperature2: tempData.TOTemperature2,
+      Chla1: chlaData.TOChla1,
+      OM1: omData.TOOm1,
     };
   },
-  mounted() {
-    console.log(firebaseStore)
-  }
+  // mounted() {
+  //   firebaseStore
+  //     .collection("starfishBay")
+  //     .doc("2020winter")
+  //     .collection("phy")
+  //     .doc("temp")
+  //     .get()
+  //     .then(doc => console.log(doc.data()));
+  // }
 };
 </script>
 

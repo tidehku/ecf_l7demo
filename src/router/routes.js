@@ -53,13 +53,20 @@ const routes = [
         component: () => import("pages/iH/interactiveHabitat_NE.vue")
       },
       {
-        path: "/interactiveHabitat/phyStarfishBay",
+        path: "phyStarfishBay",
         component: () => import("pages/physicalDashboard/phyStarfishBay.vue")
       },
       {
-        // path: "/interactiveHabitat/biologicalStarfishBay",
         path: "bioStarfishBay",
         component: () => import("pages/biologicalDashboard/bioStarfishBay.vue")
+      },
+      {
+        path: "phyTaiO",
+        component: () => import("pages/physicalDashboard/phyTaiO.vue")
+      },
+      {
+        path: "bioTaiO",
+        component: () => import("pages/biologicalDashboard/bioTaiO.vue")
       }
     ]
   },
