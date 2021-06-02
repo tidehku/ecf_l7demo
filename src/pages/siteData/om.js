@@ -10,9 +10,6 @@ export const omData = {
     title: {
       text: ""
     },
-    subtitle: {
-      tect: "by ECF at which site location"
-    },
     xAxis: {
       type: "category",
       title: {
@@ -40,7 +37,7 @@ export const omData = {
         name: "organic matter",
         colorByPoint: true,
         colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
-        showInLegend: true,
+        showInLegend: false,
         data: [
           ["3.00", 3.63],
           ["2.66", 4.84],

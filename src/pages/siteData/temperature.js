@@ -1,8 +1,6 @@
 export const tempData = {
   SBTemperature1: {
     chart: {
-      // type: "container",
-      // height: (1 / 2) * 100 + "%", // 16:9 ratio
       height: "35%"
     },
     credits: {
@@ -15,14 +13,22 @@ export const tempData = {
       text: ""
     },
     xAxis: {
-      type: "datetime",
+      type: "time",
+      title: {
+        text: "Time (hour)"
+      },
       accessibility: {
-        rangeDescription: "Range: Jul 1st 2009 to Jul 31st 2009."
+        rangeDescription: "Range: 0-24 h."
       }
     },
     yAxis: {
       title: {
-        text: null
+        text: "Temperature"
+      },
+      labels: {
+        formatter: function() {
+          return this.value + "°C";
+        }
       }
     },
     tooltip: {
@@ -38,7 +44,8 @@ export const tempData = {
     },
     series: [
       {
-        name: "Temperature",
+        name: "HH Temperature",
+        color: "#D67E32",
         data: [
           [0, 18.56],
           [1, 17.98],
@@ -67,13 +74,15 @@ export const tempData = {
         ],
         zIndex: 1,
         marker: {
-          fillColor: "white",
+          enabled: false,
           lineWidth: 2
+          // fillColor: "white",
           // lineColor: Highcharts.getOptions().colors[0]
         }
       },
       {
-        name: "Range",
+        name: "HH Range",
+        color: "#F8C762",
         data: [
           [0, 16.5, 20.33],
           [1, 16.83, 19.0],
@@ -99,6 +108,82 @@ export const tempData = {
           [21, 0, 20.33],
           [22, 0, 21.33],
           [23, 0, 20.17]
+        ],
+        type: "arearange",
+        lineWidth: 0,
+        linkedTo: ":previous",
+        // color: Highcharts.getOptions().colors[0],
+        fillOpacity: 0.3,
+        zIndex: 0,
+        marker: {
+          enabled: false
+        }
+      },
+      {
+        name: "LM Temperature",
+        color: "#11B678",
+        data: [
+          [0, 22.26],
+          [1, 21.74],
+          [2, 21.15],
+          [3, 20.22],
+          [4, 19.31],
+          [5, 18.43],
+          [6, 17.69],
+          [7, 17.07],
+          [8, 17.06],
+          [9, 17.63],
+          [10, 18.57],
+          [11, 20.41],
+          [12, 18.63],
+          [13, 18.98],
+          [14, 18.8],
+          [15, 18.26],
+          [16, 18.35],
+          [17, 19.31],
+          [18, 19.54],
+          [19, 19.59],
+          [20, 19.72],
+          [21, 19.76],
+          [22, 19.76],
+          [23, 19.72]
+        ],
+        zIndex: 1,
+        marker: {
+          enabled: false,
+          lineWidth: 2
+          // fillColor: "white",
+          // lineColor: Highcharts.getOptions().colors[0]
+        }
+      },
+      {
+        name: "LM Range",
+        color: "#7FDCB9",
+        data: [
+          [0, 21.5, 23.17],
+          [1, 20.5, 22.83],
+          [2, 19.33, 22.33],
+          [3, 18.17, 22],
+          [4, 16.67, 21.67],
+          [5, 15.83, 21.5],
+          [6, 15.33, 21.17],
+          [7, 14.83, 19.17],
+          [8, 14.83, 19],
+          [9, 15.17, 19.83],
+          [10, 15.5, 21.5],
+          [11, 16.33, 23.33],
+          [12, 0, 23],
+          [13, 0, 24],
+          [14, 0, 25],
+          [15, 0, 22.83],
+          [16, 0, 22],
+          [17, 0, 23.33],
+          [18, 0, 23.5],
+          [19, 0, 23.5],
+          [20, 0, 23.5],
+          [21, 0, 23.5],
+          [22, 0, 23.33],
+          [23, 0, 23.17]
         ],
         type: "arearange",
         lineWidth: 0,

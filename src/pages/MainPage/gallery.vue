@@ -252,5 +252,7 @@ export default {};
   font-weight: bold
   text-align: center
   color: white
-  background-color: $orange-9
+  background-color: $teal
+  border-radius: 8px
+  border: 5px outset $teal-3
 </style>

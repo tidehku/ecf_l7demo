@@ -2,7 +2,7 @@ export const barData = {
   SBBar1: {
     chart: {
       type: "column",
-      height: (1 / 1) * 100 + "%" // 3:4 ratio
+      height: "100%"
     },
     credits: {
       enabled: false
@@ -10,17 +10,11 @@ export const barData = {
     title: {
       text: ""
     },
-    subtitle: {
-      text: ""
-    },
     xAxis: {
       type: "category",
       title: {
-        text: "Transect Height"
+        text: "Transect Height (m)"
       }
-      //   labels: {
-      //     rotation: 0
-      //   }
     },
     yAxis: {
       min: 0,
@@ -31,6 +25,14 @@ export const barData = {
     legend: {
       enabled: true
     },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
     series: [
       {
         name: "Species Abundance",
@@ -38,11 +40,11 @@ export const barData = {
         colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
         showInLegend: false,
         data: [
-          ["High-High", 0.688542623],
-          ["Low-High", 0.123213394],
-          ["High-Mid", 0.883628328],
-          ["Low-Mid", 1.93031178],
-          ["High-Low", 1.258707662]
+          ["3.00", 0.69],
+          ["2.66", 0.12],
+          ["2.31", 0.88],
+          ["1.97", 1.93],
+          ["1.62", 1.26]
         ]
       }
     ]
@@ -50,7 +52,7 @@ export const barData = {
   SBBar2: {
     chart: {
       type: "column",
-      height: (1 / 1) * 100 + "%" // 3:4 ratio
+      height: "100%"
     },
     credits: {
       enabled: false
@@ -58,17 +60,11 @@ export const barData = {
     title: {
       text: ""
     },
-    subtitle: {
-      text: ""
-    },
     xAxis: {
       type: "category",
       title: {
-        text: "Transect Height"
+        text: "Transect Height (m)"
       }
-      //   labels: {
-      //     rotation: 0
-      //   }
     },
     yAxis: {
       min: 0,
@@ -79,6 +75,14 @@ export const barData = {
     legend: {
       enabled: true
     },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
     series: [
       {
         name: "Species Abundance",
@@ -86,11 +90,11 @@ export const barData = {
         colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
         showInLegend: false,
         data: [
-          ["High-High", 0.993357028],
-          ["Low-High", 0.177759353],
-          ["High-Mid", 0.549029149],
-          ["Low-Mid", 0.928283744],
-          ["High-Low", 0.572862544]
+          ["3.00", 0.99],
+          ["2.66", 0.18],
+          ["2.31", 0.55],
+          ["1.97", 0.93],
+          ["1.62", 0.57]
         ]
       }
     ]
@@ -98,7 +102,7 @@ export const barData = {
   SBBar3: {
     chart: {
       type: "column",
-      height: (1 / 1) * 100 + "%" // 3:4 ratio
+      height: "100%"
     },
     credits: {
       enabled: false
@@ -106,17 +110,11 @@ export const barData = {
     title: {
       text: ""
     },
-    subtitle: {
-      text: ""
-    },
     xAxis: {
       type: "category",
       title: {
-        text: "Transect Height"
+        text: "Transect Height (m)"
       }
-      //   labels: {
-      //     rotation: 0
-      //   }
     },
     yAxis: {
       min: 0,
@@ -127,6 +125,14 @@ export const barData = {
     legend: {
       enabled: true
     },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
     series: [
       {
         name: "Species Abundance",
@@ -134,11 +140,11 @@ export const barData = {
         colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
         showInLegend: false,
         data: [
-          ["High-High", 2],
-          ["Low-High", 2],
-          ["High-Mid", 5],
-          ["Low-Mid", 8],
-          ["High-Low", 9]
+          ["3.00", 2],
+          ["2.66", 2],
+          ["2.31", 5],
+          ["1.97", 8],
+          ["1.62", 9]
         ]
       }
     ]

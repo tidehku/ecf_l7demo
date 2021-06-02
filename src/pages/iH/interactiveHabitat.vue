@@ -1,7 +1,10 @@
 <template>
   <div class="row q-pa-sm q-gutter-xs no-wrap">
     <q-card style="width: 33%; height: 80vh">
-      <q-img src="~/assets/mapcover.png" style="height: 80vh" />
+      <q-img
+        src="~/assets/mapcover.png"
+        style="height: 80vh"
+      />
       <!-- <q-card class="q-mx-lg q-pa-sm bg-indigo-10 text-h6 text-bold text-center text-white">
         HKRISE! Interactive Habitat Map (2020 - 2023)
       </q-card> -->
@@ -13,17 +16,19 @@
           ( Hint: Please Click Any Zone for Localized Data )
         </p>
       </q-card> -->
-      <!-- <q-icon
-        class="absolute-bottom-right"
+      <q-icon
+        class="absolute-top-right"
         size="32px"
         name="info"
         color="white"
-        style="top: 2px; right: 8px"
+        style="top: 10px; right: 10px"
       >
         <q-tooltip>
-          Please select on the map which region you would like to explore (see the regional stratification and site selection here).
+          The coastline of Hong Kong was stratified into six regions according to <br />
+          local hydrological characteristics and general shore directions. Details <br />
+          can be found in the Methodology Tab.
         </q-tooltip>
-      </q-icon> -->
+      </q-icon>
     </q-card>
 
     <q-card class="col-8">
@@ -42,7 +47,10 @@
         >
         </l-geo-json> -->
 
-        <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
+        <l-geo-json
+          :geojson="regions"
+          :options="geoJSONOptions"
+        > </l-geo-json>
 
         <!-- <l-marker :lat-lng="[22.53, 114.32]">
           <l-icon>
@@ -94,7 +102,7 @@ export default {
     LTileLayer: () => import("components/tileLayer"),
     LControlScale,
     LIcon,
-    VueLeafletMinimap
+    VueLeafletMinimap,
   },
   data() {
     return {
@@ -106,7 +114,7 @@ export default {
       center: L.latLng(22.3508, 114.2),
       mapOptions: {
         zoomSnap: 0.25,
-        zoomControl: false
+        zoomControl: false,
       },
       regions: require("../../MapData/regions.json"),
       geoJSONOptions: {
@@ -114,7 +122,7 @@ export default {
           return {
             opacity: 0.5,
             color: feature.properties.fill /* refer to json */,
-            fillOpacity: 0.4
+            fillOpacity: 0.4,
           };
         },
         // getLabel: function (feature) {
@@ -122,7 +130,7 @@ export default {
         //     html: feature.properties.name /* refer to geojson name*/,
         //   };
         // },
-        getLabel: function(feature) {
+        getLabel: function (feature) {
           return feature.properties.name;
         },
         // pointToLayer: function (feature, latlng) {
@@ -146,7 +154,7 @@ export default {
           layer.on("click", () => {
             this.$router.push(`interactiveHabitat/${feature.properties.name}`);
           });
-        }
+        },
       },
       minimapLayer: new L.TileLayer(
         "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
@@ -157,78 +165,78 @@ export default {
         width: 120,
         height: 120,
         toggleDisplay: true,
-        minimize: true
+        minimize: true,
       },
       markers: [
         {
           id: "TL",
           position: { lat: 22.44, lng: 114.23 },
           draggable: true,
-          visible: true
-        }
+          visible: true,
+        },
       ],
 
       regionMarker: [
         {
           type: "Feature",
           properties: {
-            name: "NE"
+            name: "NE",
           },
           geometry: {
             type: "Point",
-            coordinates: [22.55, 114.32]
-          }
+            coordinates: [22.55, 114.32],
+          },
         },
         {
           type: "Feature",
           properties: {
-            name: "TL"
+            name: "TL",
           },
           geometry: {
             type: "Point",
-            coordinates: [22.46, 114.23]
-          }
+            coordinates: [22.46, 114.23],
+          },
         },
         {
           type: "Feature",
           properties: {
-            name: "SW"
+            name: "SW",
           },
           geometry: {
             type: "Point",
-            coordinates: [22.25, 113.98]
-          }
+            coordinates: [22.25, 113.98],
+          },
         },
         {
           type: "Feature",
           properties: {
-            name: "NW"
+            name: "NW",
           },
           geometry: {
             type: "Point",
-            coordinates: [22.36, 113.92]
-          }
+            coordinates: [22.36, 113.92],
+          },
         },
         {
           type: "Feature",
           properties: {
-            name: "EA"
+            name: "EA",
           },
           geometry: {
             type: "Point",
-            coordinates: [22.32, 114.38]
-          }
+            coordinates: [22.32, 114.38],
+          },
         },
         {
           type: "Feature",
           properties: {
-            name: "SO"
+            name: "SO",
           },
           geometry: {
             type: "Point",
-            coordinates: [22.25, 114.18]
-          }
-        }
+            coordinates: [22.25, 114.18],
+          },
+        },
       ],
 
       regionMarkerOptions: {
@@ -242,21 +250,21 @@ export default {
           layer.bindTooltip("<div>" + feature.properties.name + "</div>", {
             permanent: true,
             className: "my-label",
-            direction: "center"
+            direction: "center",
           });
-        }
-      }
+        },
+      },
     };
   },
   mounted() {
     this.$nextTick(() => {
       const map = this.$refs.myMapRef.mapObject;
       const zoomHome = L.Control.zoomHome({
-        position: "topleft"
+        position: "topleft",
       });
       map.addControl(zoomHome);
     });
-  }
+  },
 };
 </script>
 

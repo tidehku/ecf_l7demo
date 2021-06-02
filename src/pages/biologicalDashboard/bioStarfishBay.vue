@@ -33,10 +33,10 @@
             List of Species Names
           </div>
           <div class="row no-wrap">
-            <div class="col-6 text-center text-bold text-teal">
+            <div class="col-6 text-h6 text-center text-bold text-teal">
               Mobile species
             </div>
-            <div class="col-6 text-center text-bold text-teal">
+            <div class="col-6 text-h6 text-center text-bold text-teal">
               Sessile species
             </div>
           </div>
@@ -117,12 +117,12 @@
             Species Abundance and Diversity Indices
           </div>
           <div class="row no-wrap">
-            <div class="col-6 text-center text-bold text-teal">
-              Mobile species
+            <div class="col-6 text-h6 text-center text-bold text-teal">
+              5 most abundant Mobile species
             </div>
             <q-separator vertical />
-            <div class="col-6 text-center text-bold text-teal">
-              Sessile species
+            <div class="col-6 text-h6 text-center text-bold text-teal">
+              5 most abundant Sessile species
             </div>
           </div>
 
@@ -188,8 +188,8 @@
 import Vue from "vue";
 import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
-import { pieData } from "./biologicalData/Pie";
-import { barData } from "./biologicalData/bar";
+import { pieData } from "../siteData/pie";
+import { barData } from "../siteData/bar";
 
 export default {
   components: {},
