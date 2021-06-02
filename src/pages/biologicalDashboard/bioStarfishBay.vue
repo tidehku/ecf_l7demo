@@ -43,7 +43,7 @@
           <div class="row no-wrap justify-evenly">
             <q-scroll-area
               :thumb-style="thumbStyle"
-              style="height: 70vh; width: 45%"
+              style="height: 80vh; width: 45%"
             >
               <q-list
                 dense
@@ -67,7 +67,7 @@
             </q-scroll-area>
             <q-scroll-area
               :thumb-style="thumbStyle"
-              style="height: 70vh; width: 45%"
+              style="height: 80vh; width: 45%"
             >
               <q-list
                 dense
@@ -80,11 +80,11 @@
                 <q-item
                   clickable
                   v-ripple
-                  v-for="mobile in mobiles"
-                  :key="mobile.message"
+                  v-for="sessile in sessiles"
+                  :key="sessile.message"
                 >
                   <q-item-section>
-                    <i>{{ mobile }} </i>
+                    <i>{{ sessile }} </i>
                   </q-item-section>
                 </q-item>
               </q-list>

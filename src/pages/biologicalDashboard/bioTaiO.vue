@@ -2,14 +2,14 @@
   <q-page class="justify-center">
     <q-bar class="bg-teal-8 text-white">
       <div class="text-bold row justify-center">
-        Biological Dashboard of Starfish Bay, Tolo Habour Region
+        Biological Dashboard of Tai O, North Western Region
       </div>
       <q-space />
       <q-btn
         dense
         icon="thermostat"
         class="bg-white text-teal"
-        to="/interactiveHabitat/phyStarfishBay"
+        to="/interactiveHabitat/phyTaiO"
       >
         <q-tooltip>
           Switch to physical Dashboard
@@ -19,7 +19,7 @@
         dense
         icon="keyboard_backspace"
         class="bg-white text-teal"
-        to="/interactiveHabitat/SW"
+        to="/interactiveHabitat/NW"
       >
         <q-tooltip>
           Go back
@@ -43,7 +43,7 @@
           <div class="row no-wrap justify-evenly">
             <q-scroll-area
               :thumb-style="thumbStyle"
-              style="height: 70vh; width: 45%"
+              style="height: 80vh; width: 45%"
             >
               <q-list
                 dense
@@ -67,7 +67,7 @@
             </q-scroll-area>
             <q-scroll-area
               :thumb-style="thumbStyle"
-              style="height: 70vh; width: 45%"
+              style="height: 80vh; width: 45%"
             >
               <q-list
                 dense
@@ -80,36 +80,16 @@
                 <q-item
                   clickable
                   v-ripple
-                  v-for="mobile in mobiles"
-                  :key="mobile.message"
+                  v-for="sessile in sessiles"
+                  :key="sessile.message"
                 >
                   <q-item-section>
-                    <i>{{ mobile }} </i>
+                    <i>{{ sessile }} </i>
                   </q-item-section>
                 </q-item>
               </q-list>
             </q-scroll-area>
           </div>
-          <!-- <q-list
-              dense
-              bordeteal
-              separator
-              padding
-              class="bg-teal-1 text-caption rounded-borders"
-              style="width: 180px"
-            >
-              <q-item
-                clickable
-                v-ripple
-                v-for="mobile in mobiles"
-                :key="mobile.message"
-              >
-                <q-item-section>
-                  <i>{{ mobile }} </i>
-                </q-item-section>
-              </q-item>
-            </q-list> -->
-
         </q-card>
 
         <q-card class="col-8 chartCard">
@@ -196,43 +176,53 @@ export default {
   data() {
     return {
       mobiles: [
-        "Echinolittorin malaccana",
-        "Echinolittorin radiata",
-        "Echinolittorina vidua",
-        "Lunella granulata",
-        "Monodonta labio",
+        "Cellana	grata",
+        "Cellana	toreuma",
+        "Echinolittorina	radiata",
+        "Echinolittorina	vidua",
+        "Littoraria	sinensis",
+        "Lottia	luchuana",
+        "Nerita	yoldii",
+        "Nipponacmea fuscoviridis",
         "Patelloida ryukyuensis",
-        "Planaxis sulcatus",
+        "Patelloida saccharina",
+        "Peasiella sp.",
         "Reishia clavigera",
-        "Reishia luteostoma",
-        "Siphonaria japonica",
-        "Tenguella musiva",
-        "Liolophura japonica",
+        "Siphonaria	japonica",
+        "Siphonaria	laciniosa",
+        "Diadumene lineata",
+        "Unidentified baby snails",
+        "Unidentified baby limpets",
       ],
       sessiles: [
-        "High shore biofilm",
+        "Encrusting coralline algae",
         "Hildenbrandia rubra",
         "Pseudulvella applanata",
+        "Middle Bay brown biofilm ",
         "Ulva lactuca",
-        "Gelidium pusillum",
+        "Feldmannia mitchelliae",
+        "Centroceras sp.",
+        "Corallina sp.",
+        "Gelidium sp.",
+        "Hydroides sp.",
         "Amphibalanus amphitrite",
         "Capitulum mitella",
+        "Chthamalus malayensis",
+        "Tetraclita japonica",
         "Tetraclita squamosa",
-        "Diadumene lineata",
         "Barbatia virescens",
-        "Brachidontes variabilis",
-        "Isognomon ephippium",
+        "Perna viridis",
+        "Planostrea pestigris",
         "Saccostrea cuccullata",
-        "Xenostrobus securis",
       ],
-      barChart1: barData.SBBar1,
-      barChart2: barData.SBBar2,
-      barChart3: barData.SBBar3,
+      barChart1: barData.TOBar1,
+      barChart2: barData.TOBar2,
+      barChart3: barData.TOBar3,
 
-      pieChart1: pieData.SBPie1,
-      // pieChart2: pieData.SBPie1,
-      pieChart3: pieData.SBPie3,
-      // pieChart4: pieData.SBPie1,
+      pieChart1: pieData.TOPie1,
+      // pieChart2: pieData.TOPie1,
+      pieChart3: pieData.TOPie3,
+      // pieChart4: pieData.TOPie1,
       thumbStyle: {
         right: "4px",
         borderRadius: "5px",
