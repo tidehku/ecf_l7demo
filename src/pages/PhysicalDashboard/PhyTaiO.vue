@@ -23,7 +23,7 @@
         dense
         icon="keyboard_backspace"
         class="bg-white text-blue-8"
-        to="/interactiveHabitat/SW"
+        to="/interactiveHabitat/NW"
       >
         <q-tooltip>
           Go back

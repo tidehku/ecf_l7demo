@@ -1,7 +1,10 @@
 <template>
   <q-layout view="hHh lpr fff">
     <q-header elevated>
-      <q-toolbar class="bg-grey-2 text-dark" style="height: 10vh">
+      <q-toolbar
+        class="bg-grey-2 text-dark"
+        style="height: 10vh"
+      >
         <!-- <q-btn round glossy>
           <q-avatar size="50px" @click="home()">
             <img src="~assets/swims.png" />
@@ -17,9 +20,12 @@
         </q-btn> -->
 
         <!-- app fullscreen -->
-        <q-btn round @click="$q.fullscreen.toggle()">
+        <q-btn
+          round
+          @click="$q.fullscreen.toggle()"
+        >
           <q-avatar size="50px">
-            <img src="~assets/swims.png" />
+            <img src="~assets/hkrise.png" />
           </q-avatar>
           <q-tooltip content-style="font-size: 16px">
             Enter / Exit App Fullscreen
@@ -36,7 +42,12 @@
           v-model="tab"
           dense
         >
-          <q-route-tab to="/" name="home" icon="home" label="Home" />
+          <q-route-tab
+            to="/"
+            name="home"
+            icon="home"
+            label="Home"
+          />
           <q-route-tab
             to="/method"
             name="Methods"
@@ -62,7 +73,12 @@
             label="Gallery"
           />
         </q-tabs>
-        <q-btn flat @click="drawer = !drawer" round icon="menu" />
+        <q-btn
+          flat
+          @click="drawer = !drawer"
+          round
+          icon="menu"
+        />
       </q-toolbar>
     </q-header>
 
@@ -76,10 +92,13 @@
       content-class="bg-indigo-1"
     >
       <div class="q-py-xl">
-        <q-card bordered flat class="searchbox fixed-center" style="width: 90%">
-          <div
-            class="q-py-md bg-indigo text-white text-h6 text-bold text-center"
-          >
+        <q-card
+          bordered
+          flat
+          class="searchbox fixed-center"
+          style="width: 90%"
+        >
+          <div class="q-py-md bg-indigo text-white text-h6 text-bold text-center">
             Dashboard Navigation
           </div>
           <div class="q-pa-md q-gutter-md">
@@ -138,7 +157,10 @@
         <q-toolbar-title id="footer">
           Copyright ©
           {{ new Date().getFullYear() }} —
-          <a href="https://www.tidehku.com/" target="_blank">
+          <a
+            href="https://www.tidehku.com/"
+            target="_blank"
+          >
             <strong>Tropical IntertiDal Ecology Group</strong>
           </a>
           , The Swire Institute of Marine Science, The University of Hong Kong
@@ -162,39 +184,39 @@ export default {
       regionOptions: [
         {
           label: "Eastern",
-          sites: ["Pak Lap", "Kau Sai Chau", "Pak Shui Wun", "Sai Wan"]
+          sites: ["Pak Lap", "Kau Sai Chau", "Pak Shui Wun", "Sai Wan"],
         },
         {
           label: "North Eastern",
-          sites: ["Double Island", "Hung Shek Mun", "Kat O", "Yung Shue Au"]
+          sites: ["Double Island", "Hung Shek Mun", "Kat O", "Yung Shue Au"],
         },
         {
           label: "North Western",
-          sites: ["Luk Keng", "Lung Kwu Tan", "Siu Lam", "Tai O"]
+          sites: ["Luk Keng", "Lung Kwu Tan", "Siu Lam", "Tai O"],
         },
         {
           label: "Southern",
-          sites: ["Middle Bay", "Tai Tam", "Wah Fu", "Shek O"]
+          sites: ["Middle Bay", "Tai Tam", "Wah Fu", "Shek O"],
         },
         {
           label: "South Western",
-          sites: ["Peng Chau", "Pui O", "Shui Tseng", "Tai Long Wan"]
+          sites: ["Peng Chau", "Pui O", "Shui Tseng", "Tai Long Wan"],
         },
         {
           label: "Tolo Habour",
-          sites: ["Lai Chi Chong", "Ma Shi Chau", "Starfish Bay", "Tseng Tau"]
-        }
+          sites: ["Lai Chi Chong", "Ma Shi Chau", "Starfish Bay", "Tseng Tau"],
+        },
       ],
       dashboardOptions: [
         {
           label: "Physical Dashboard",
-          value: "phy"
+          value: "phy",
         },
         {
           label: "Biological Dashboard",
-          value: "bio"
-        }
-      ]
+          value: "bio",
+        },
+      ],
     };
   },
   methods: {
@@ -214,7 +236,7 @@ export default {
     },
     openDrawerCallback() {
       this.drawer = !this.drawer;
-    }
+    },
   },
 
   created() {
@@ -223,7 +245,7 @@ export default {
 
   beforeDestroy() {
     this.$root.$off("openDrawer", this.openDrawerCallback);
-  }
+  },
 };
 </script>
 
