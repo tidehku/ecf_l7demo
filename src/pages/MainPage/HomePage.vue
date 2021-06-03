@@ -12,51 +12,32 @@
       @mouseenter="autoplay = true"
       @mouseleave="autoplay = true"
     >
-      <q-carousel-slide
-        :name="1"
-        img-src="~/assets/images/carousel1.jpg"
-      />
-      <q-carousel-slide
-        :name="2"
-        img-src="~/assets/images/carousel2.jpg"
-      />
-      <q-carousel-slide
-        :name="3"
-        img-src="~/assets/images/carousel3.jpg"
-      />
-      <q-carousel-slide
-        :name="4"
-        img-src="~/assets/images/carousel4.jpg"
-      />
-      <q-carousel-slide
-        :name="5"
-        img-src="~/assets/images/carousel5.jpg"
-      />
-      <q-carousel-slide
-        :name="6"
-        img-src="~/assets/images/carousel6.jpg"
-      />
-      <q-carousel-slide
-        :name="7"
-        img-src="~/assets/images/carousel9.jpg"
-      />
+      <q-carousel-slide :name="1" img-src="~/assets/images/carousel1.jpg" />
+      <q-carousel-slide :name="2" img-src="~/assets/images/carousel2.jpg" />
+      <q-carousel-slide :name="3" img-src="~/assets/images/carousel3.jpg" />
+      <q-carousel-slide :name="4" img-src="~/assets/images/carousel4.jpg" />
+      <q-carousel-slide :name="5" img-src="~/assets/images/carousel5.jpg" />
+      <q-carousel-slide :name="6" img-src="~/assets/images/carousel6.jpg" />
+      <q-carousel-slide :name="7" img-src="~/assets/images/carousel9.jpg" />
     </q-carousel>
 
     <div class="q-pa-xl bg-indigo-2 justify-center">
-      <q-card class="q-pa-sm bg-indigo text-center text-white text-h3 text-bold">
+      <q-card
+        class="q-pa-sm bg-indigo text-center text-white text-h3 text-bold"
+      >
         Welcome To HKRISE !
       </q-card>
-      <div
-        class="q-pa-md text-subtitle1"
-        v-html="HKRISE"
-      >
+      <div class="q-pa-md text-subtitle1" v-html="HKRISE">
         {{ HKRISE }}
       </div>
     </div>
 
     <div class="q-pa-xl justify-center">
       <div>
-        <q-card class="q-pa-sm bg-indigo text-h4 text-bold text-white text-center">Hong Kong Rocky Shore Environment</q-card>
+        <q-card
+          class="q-pa-sm bg-indigo text-h4 text-bold text-white text-center"
+          >Hong Kong Rocky Shore Environment</q-card
+        >
         <div class="q-pa-sm text-subtitle1">
           {{ HKRockyShore1 }}
         </div>
@@ -88,22 +69,29 @@
         </div>
       </div>
     </div>
-    <q-card
-      flat
-      bordered
-      class="q-ma-sm maincard"
-    >
+    <q-card flat bordered class="q-ma-sm maincard">
       <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
         Navigation through HKRISE
       </div>
       <div class="row no-wrap q-pa-sm q-gutter-sm justify-center">
-        <q-card style="width: 25%">
+        <q-card style="width: 18%">
           <q-card-section class="bg-orange-10 text-white text-center">
-            <q-icon
-              clickable
-              name="map"
-              style="font-size: 4rem"
-            />
+            <q-icon clickable name="biotech" style="font-size: 4rem" />
+            <div class="text-subtitle1 text-bold">Methodology</div>
+          </q-card-section>
+
+          <q-card-section>
+            You can see how the territory-wide rocky shore biodiversity survey
+            was conducted here.
+          </q-card-section>
+          <div class="q-pa-md row absolute-bottom justify-end">
+            <q-btn no-caps color="orange-10" label="Explore" to="method" />
+          </div>
+        </q-card>
+
+        <q-card style="width: 25%">
+          <q-card-section class="bg-amber-8 text-white text-center">
+            <q-icon clickable name="map" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">Interactive Habitat Map</div>
           </q-card-section>
 
@@ -118,19 +106,15 @@
           <div class="q-pa-md row justify-end">
             <q-btn
               no-caps
-              color="orange-10"
+              color="amber-8"
               label="Explore"
               to="interactiveHabitat"
             />
           </div>
         </q-card>
         <q-card style="width: 18%">
-          <q-card-section class="bg-amber-9 text-white text-center">
-            <q-icon
-              clickable
-              name="travel_explore"
-              style="font-size: 4rem"
-            />
+          <q-card-section class="bg-green-6 text-white text-center">
+            <q-icon clickable name="travel_explore" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">Species Search Engine</div>
           </q-card-section>
 
@@ -142,42 +126,16 @@
           <div class="q-pa-md row absolute-bottom justify-end">
             <q-btn
               no-caps
-              color="amber-9"
+              color="green-6"
               label="Explore"
               to="SpeciesSearchEngine"
             />
           </div>
         </q-card>
-        <q-card style="width: 18%">
-          <q-card-section class="bg-teal text-white text-center">
-            <q-icon
-              clickable
-              name="biotech"
-              style="font-size: 4rem"
-            />
-            <div class="text-subtitle1 text-bold">Methodology</div>
-          </q-card-section>
 
-          <q-card-section>
-            You can see how the territory-wide rocky shore biodiversity survey
-            was conducted here.
-          </q-card-section>
-          <div class="q-pa-md row absolute-bottom justify-end">
-            <q-btn
-              no-caps
-              color="teal"
-              label="Explore"
-              to="method"
-            />
-          </div>
-        </q-card>
         <q-card style="width: 18%">
-          <q-card-section class="bg-blue-8 text-white text-center">
-            <q-icon
-              clickable
-              name="collections"
-              style="font-size: 4rem"
-            />
+          <q-card-section class="bg-cyan-7 text-white text-center">
+            <q-icon clickable name="collections" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">Gallery</div>
           </q-card-section>
 
@@ -187,21 +145,12 @@
             landscapes here!
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
-            <q-btn
-              no-caps
-              color="blue-8"
-              label="Explore"
-              to="gallery"
-            />
+            <q-btn no-caps color="cyan-7" label="Explore" to="gallery" />
           </div>
         </q-card>
         <q-card style="width: 18%">
           <q-card-section class="bg-indigo text-white text-center">
-            <q-icon
-              clickable
-              name="dashboard"
-              style="font-size: 4rem"
-            />
+            <q-icon clickable name="dashboard" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">Dashboard Navigation</div>
           </q-card-section>
 
@@ -221,39 +170,22 @@
       </div>
     </q-card>
 
-    <q-card
-      flat
-      bordered
-      class="q-ma-sm maincard"
-    >
+    <q-card flat bordered class="q-ma-sm maincard">
       <!-- add the aviable links -->
       <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
         Meet the TideChasers
       </div>
-      <q-card-section
-        class="q-pa-md maincard"
-        horizontal
-      >
-        <div
-          class="q-ma-md text-subtitle1"
-          v-html="TidesMessage"
-        >
+      <q-card-section class="q-pa-md maincard" horizontal>
+        <div class="q-ma-md text-subtitle1" v-html="TidesMessage">
           {{ TidesMessage }}
         </div>
-        <q-img
-          class="col-5"
-          src="~/assets/groupphoto.jpg"
-        />
+        <q-img class="col-5" src="~/assets/groupphoto.jpg" />
       </q-card-section>
 
       <!-- breakpoint of the section -->
     </q-card>
 
-    <q-card
-      bordered
-      flat
-      class="q-ma-sm bg-white maincard"
-    >
+    <q-card bordered flat class="q-ma-sm bg-white maincard">
       <div class="q-pa-sm bg-indigo-6 text-white text-h4 text-bold text-center">
         Related Links
       </div>
@@ -317,55 +249,6 @@
         />
       </q-card-section>
     </q-card>
-
-    <!-- <q-card
-      flat
-      bordered
-      class="q-ma-sm maincard"
-    >
-      <div class="q-pa-md row text-h4 text-bold justify-center subtitle">
-        Photo Gallery | Species around Hong Kong Rocky Shore
-      </div>
-      <q-card-section class="q-pa-md">
-        <q-carousel
-          arrows
-          animated
-          v-model="slide2"
-          height="450px"
-        >
-          <q-carousel-slide
-            name="first"
-            img-src="https://live.staticflickr.com/4480/37090314393_d7f0e99270_b.jpg"
-          >
-            <div class="absolute-bottom custom-caption">
-              <div class="text-h2">Species One</div>
-              <div class="text-subtitle1">Diadumene lineata</div>
-            </div>
-          </q-carousel-slide>
-
-          <q-carousel-slide
-            name="second"
-            img-src="https://st4.depositphotos.com/11040300/31028/i/1600/depositphotos_310289226-stock-photo-tiny-sea-shells-lunella-coronata.jpg"
-          >
-            <div class="absolute-bottom custom-caption">
-              <div class="text-h2">Species Two</div>
-              <div class="text-subtitle1">Lunella Coronata</div>
-            </div>
-          </q-carousel-slide>
-
-          <q-carousel-slide
-            name="third"
-            img-src="https://static.inaturalist.org/photos/16832624/large.jpg?1525025403"
-          >
-            <div class="absolute-bottom custom-caption">
-              <div class="text-h2">Species Three</div>
-              <div class="text-subtitle1">Saccostrea cuccullata</div>
-            </div>
-          </q-carousel-slide>
-        </q-carousel>
-      </q-card-section>
-      <div class="q-pa-md">1</div>
-    </q-card> -->
   </q-page>
 </template>
 
@@ -397,7 +280,7 @@ export default {
           </a> led by Prof. Gray A. Williams at the Swire Institute of Marine Science, the University of Hong Kong.  This GIS was developed by Yvonne Li and Yifei Gu, computer specialists in the TIDE group.  The team would also like to thank other members of the TIDE group for their tremendous help both on the shore and in the laboratory, and grant number 105/2019 from the Environment Conservation Fund, HKSAR, which financed the project.`,
       tab: "interactiveHabitat",
       slide: 1,
-      autoplay: false,
+      autoplay: false
     };
   },
   methods: {
@@ -411,8 +294,8 @@ export default {
     },
     openDrawer() {
       this.$root.$emit("openDrawer");
-    },
-  },
+    }
+  }
 };
 </script>
 
