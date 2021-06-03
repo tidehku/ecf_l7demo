@@ -191,7 +191,7 @@
             <q-icon
               class="q-pa-sm"
               style="font-size: 2.5rem"
-              name="img:icons/semi-exposed.svg"
+              name="img:icons/Semi-exposed.svg"
             />
             <q-space />
             <q-btn
