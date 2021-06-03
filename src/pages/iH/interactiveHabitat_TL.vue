@@ -1,11 +1,22 @@
 <template>
   <q-page class="q-pa-xs row justify-center bg-grey-5 no-wrap">
-    <q-card class="q-ma-sm" style="width: 33%; height:81vh" bordered>
+    <q-card
+      class="q-ma-sm"
+      style="width: 33%; height:81vh"
+      bordered
+    >
       <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
         Tolo Habour Region
         <q-space />
-        <q-separator dark vertical inset />
-        <q-tabs inline-label shrink>
+        <q-separator
+          dark
+          vertical
+          inset
+        />
+        <q-tabs
+          inline-label
+          shrink
+        >
           <q-route-tab
             name="Back"
             label="Back"
@@ -26,9 +37,15 @@
         :min-zoom="zoom"
       >
         <LTileLayer />
-        <l-geo-json :geojson="region" :options="regionOptions"></l-geo-json>
+        <l-geo-json
+          :geojson="region"
+          :options="regionOptions"
+        ></l-geo-json>
 
-        <l-geo-json :geojson="sitesLocation" :options="siteOptions">
+        <l-geo-json
+          :geojson="sitesLocation"
+          :options="siteOptions"
+        >
         </l-geo-json>
 
         <l-control-scale
@@ -40,14 +57,18 @@
     </q-card>
 
     <div style="width: 66.3%">
-      <q-card class="bg-indigo-1" style="height: 40vh">
-        <div
-          class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders"
-        >
+      <q-card
+        class="bg-indigo-1"
+        style="height: 40vh"
+      >
+        <div class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders">
           Regional Average Data Summary
         </div>
         <div class="row q-py-xs justify-evenly no-wrap">
-          <q-card class="q-pa-sm" style="width: 22%; min-height: 32vh">
+          <q-card
+            class="q-pa-sm"
+            style="width: 22%; min-height: 32vh"
+          >
             <div class="q-px-sm">
               <y>Max Temperature</y> <br />
               HH: <br />
@@ -62,7 +83,10 @@
               </div>
             </div>
           </q-card>
-          <q-card class="q-pa-sm" style="width: 18%">
+          <q-card
+            class="q-pa-sm"
+            style="width: 18%"
+          >
             <div class="q-px-sm">
               <y>Total Wave Fetch</y> <br />
               <div class="items-end">
@@ -76,7 +100,10 @@
               </div>
             </div>
           </q-card>
-          <q-card class="q-pa-sm" style="width: 24%">
+          <q-card
+            class="q-pa-sm"
+            style="width: 24%"
+          >
             <div class="q-px-sm">
               <y>Nutrient levels</y> <br />
               chlorophyll a: <br />
@@ -91,7 +118,10 @@
               </div>
             </div>
           </q-card>
-          <q-card class="q-pa-sm" style="width: 16%">
+          <q-card
+            class="q-pa-sm"
+            style="width: 16%"
+          >
             <div class="q-px-sm">
               <y>Mobile Species Richness</y> <br /><br />
               <div class="items-center">
@@ -100,7 +130,10 @@
               </div>
             </div>
           </q-card>
-          <q-card class="q-pa-sm" style="width: 16%">
+          <q-card
+            class="q-pa-sm"
+            style="width: 16%"
+          >
             <div class="q-px-sm">
               <y>Sessile Species Richness</y> <br /><br />
               <div class="items-center">
@@ -112,7 +145,10 @@
         </div>
       </q-card>
       <div class="row no-wrap justify-around">
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card
+          class="q-ma-md"
+          style="width: 24%; height: 40vh"
+        >
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Starfish Bay
           </div>
@@ -135,11 +171,14 @@
               no-caps
               color="indigo-6"
               label="Learn more"
-              @click="card2 = true"
+              @click="card1 = true"
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card
+          class="q-ma-md"
+          style="width: 24%; height: 40vh"
+        >
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Ma Shi Chau
           </div>
@@ -152,7 +191,7 @@
             <q-icon
               class="q-pa-sm"
               style="font-size: 2.5rem"
-              name="img:icons/Sheltered.svg"
+              name="img:icons/semi-exposed.svg"
             />
             <q-space />
             <q-btn
@@ -160,11 +199,14 @@
               no-caps
               color="indigo-6"
               label="Learn more"
-              @click="card2 = true"
+              @click="card1 = true"
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card
+          class="q-ma-md"
+          style="width: 24%; height: 40vh"
+        >
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Tseng Tau
           </div>
@@ -191,7 +233,10 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card
+          class="q-ma-md"
+          style="width: 24%; height: 40vh"
+        >
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Lai Chi Chong
           </div>
@@ -223,17 +268,29 @@
           full-width
         >
           <q-card>
-            <q-bar style="height: 40px" class="bg-indigo text-bold">
+            <q-bar
+              style="height: 40px"
+              class="bg-indigo text-bold"
+            >
               <div class="text-indigo-2">Site Introduction |</div>
               <div class="text-indigo-1">Tolo Habour Region</div>
               <div class="text-white">>> Starfish Bay Site</div>
               <q-space />
-              <q-btn dense flat class="text-white" icon="close" v-close-popup>
+              <q-btn
+                dense
+                flat
+                class="text-white"
+                icon="close"
+                v-close-popup
+              >
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section horizontal class="q-pa-md">
+            <q-card-section
+              horizontal
+              class="q-pa-md"
+            >
               <q-img
                 class="col-3"
                 height="flex"
@@ -256,14 +313,14 @@
                     color="teal-5"
                     no-caps
                     label="Go to Biological Dashboard"
-                    to="/interactiveHabitat/biologicalStarfishBay"
+                    to="/interactiveHabitat/bioStarfishBay"
                     icon="eco"
                   ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
                     label="Go to Physical Dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyStarfishBay"
                     icon="thermostat"
                   ></q-btn>
                 </div>
@@ -283,17 +340,29 @@
           full-width
         >
           <q-card>
-            <q-bar style="height: 40px" class="bg-indigo text-bold">
+            <q-bar
+              style="height: 40px"
+              class="bg-indigo text-bold"
+            >
               <div class="text-indigo-2">Site Introduction |</div>
               <div class="text-indigo-1">Tolo Habour Region</div>
               <div class="text-white">>> Ma Shi Chau Site</div>
               <q-space />
-              <q-btn dense flat class="text-white" icon="close" v-close-popup>
+              <q-btn
+                dense
+                flat
+                class="text-white"
+                icon="close"
+                v-close-popup
+              >
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section horizontal class="q-pa-md">
+            <q-card-section
+              horizontal
+              class="q-pa-md"
+            >
               <q-img
                 class="col-3"
                 height="flex"
@@ -343,17 +412,29 @@
           full-width
         >
           <q-card>
-            <q-bar style="height: 40px" class="bg-indigo text-bold">
+            <q-bar
+              style="height: 40px"
+              class="bg-indigo text-bold"
+            >
               <div class="text-indigo-2">Site Introduction |</div>
               <div class="text-indigo-1">Tolo Habour Region</div>
               <div class="text-white">>> Tseng Tau Site</div>
               <q-space />
-              <q-btn dense flat class="text-white" icon="close" v-close-popup>
+              <q-btn
+                dense
+                flat
+                class="text-white"
+                icon="close"
+                v-close-popup
+              >
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section horizontal class="q-pa-md">
+            <q-card-section
+              horizontal
+              class="q-pa-md"
+            >
               <q-img
                 class="col-3"
                 height="flex"
@@ -403,17 +484,29 @@
           full-width
         >
           <q-card>
-            <q-bar style="height: 40px" class="bg-indigo text-bold">
+            <q-bar
+              style="height: 40px"
+              class="bg-indigo text-bold"
+            >
               <div class="text-indigo-2">Site Introduction |</div>
               <div class="text-indigo-1">Tolo Habour Region</div>
               <div class="text-white">>> Lai Chi Chong Site</div>
               <q-space />
-              <q-btn dense flat class="text-white" icon="close" v-close-popup>
+              <q-btn
+                dense
+                flat
+                class="text-white"
+                icon="close"
+                v-close-popup
+              >
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section horizontal class="q-pa-md">
+            <q-card-section
+              horizontal
+              class="q-pa-md"
+            >
               <q-img
                 class="col-3"
                 height="flex"
@@ -471,7 +564,7 @@ export default {
     LMap,
     LGeoJson,
     LControlScale,
-    LTileLayer: () => import("components/tileLayer")
+    LTileLayer: () => import("components/tileLayer"),
   },
   data() {
     return {
@@ -484,183 +577,175 @@ export default {
       Table_TLSB: [
         {
           name: "Location",
-          data: "Sha Tin District, New Territories"
+          data: "Sha Tin District, New Territories",
         },
         {
           name: "GPS coordinates",
-          data: `22°26'10.5"N, 114°14'49.5"E `
+          data: `22°26'10.5"N, 114°14'49.5"E `,
         },
         {
           name: "Tidal Range",
-          data: "1.3 m - 3.0 m + C.D."
+          data: "1.3 m - 3.0 m + C.D.",
         },
         {
           name: "Transect length",
-          data: "14 m"
+          data: "14 m",
         },
         {
           name: "Shore exposure",
-          data: "Intermediate"
+          data: "Intermediate",
         },
         {
           name: "Maximum wave Force",
-          data: "1.09 N"
+          data: "1.09 N",
         },
         {
           name: "Aspect",
-          data: "/"
+          data: "/",
         },
         {
           name: "Slope",
-          data: "/"
+          data: "/",
         },
         {
           name: "Rock type",
-          data: "Igneous"
-        }
+          data: "Igneous",
+        },
       ],
       Table_TLMSC: [
         {
           name: "Location",
-          data: "Tai Po District, New Territories"
+          data: "Tai Po District, New Territories",
         },
         {
           name: "GPS coordinates",
-          data: `22°27'25.4"N, 114°14'04.3"E `
+          data: `22°27'25.4"N, 114°14'04.3"E `,
         },
         {
           name: "Tidal Range",
-          data: "1.1 m - 3.0 m + C.D."
+          data: "1.1 m - 3.0 m + C.D.",
         },
         {
           name: "Transect length",
-          data: "20 m"
+          data: "20 m",
         },
         {
           name: "Shore exposure",
-          data: "Sheltered"
+          data: "Sheltered",
         },
         {
           name: "Maximum wave Force",
-          data: "/"
+          data: "/",
         },
         {
           name: "Aspect",
-          data: "/"
+          data: "/",
         },
         {
           name: "Slope",
-          data: "/"
+          data: "/",
         },
         {
           name: "Rock type",
-          data: `Sedimentary`
-        }
+          data: `Sedimentary`,
+        },
       ],
       Table_TLTT: [
         {
           name: "Location",
-          data: "Tai Po District, New Territories"
+          data: "Tai Po District, New Territories",
         },
         {
           name: "GPS coordinates",
-          data: `22°26'00.7"N, 114°16'07.1"E`
+          data: `22°26'00.7"N, 114°16'07.1"E`,
         },
         {
           name: "Tidal Range",
-          data: "1.1 m - 2.6 m + C.D."
+          data: "1.1 m - 2.6 m + C.D.",
         },
         {
           name: "Transect length",
-          data: "17 m"
+          data: "17 m",
         },
         {
           name: "Shore exposure",
-          data: "Sheltered"
+          data: "Sheltered",
         },
         {
           name: "Maximum wave Force",
-          data: "1.16 N"
+          data: "1.16 N",
         },
         {
           name: "Aspect",
-          data: "/"
+          data: "/",
         },
         {
           name: "Slope",
-          data: "/"
+          data: "/",
         },
         {
           name: "Rock type",
-          data: `Sedimentary`
-        }
+          data: `Sedimentary`,
+        },
       ],
       Table_TLLCC: [
         {
           name: "Location",
-          data: "Tai Po District, New Territories"
+          data: "Tai Po District, New Territories",
         },
         {
           name: "GPS coordinates",
-          data: `22°27'23.9"N, 114°17'58.0"E`
+          data: `22°27'23.9"N, 114°17'58.0"E`,
         },
         {
           name: "Tidal Range",
-          data: "1.2 m - 2.4 m + C.D."
+          data: "1.2 m - 2.4 m + C.D.",
         },
         {
           name: "Transect length",
-          data: "19 m"
+          data: "19 m",
         },
         {
           name: "Shore exposure",
-          data: "Sheltered"
+          data: "Sheltered",
         },
         {
           name: "Maximum wave Force",
-          data: "/"
+          data: "/",
         },
         {
           name: "Aspect",
-          data: "/"
+          data: "/",
         },
         {
           name: "Slope",
-          data: "/"
+          data: "/",
         },
         {
           name: "Rock type",
-          data: `Igneous`
-        }
+          data: `Igneous`,
+        },
       ],
       zoom: 11,
       center: L.latLng(22.45, 114.25),
       mapOptions: {
         zoomSnap: 0.2,
-        zoomControl: false
+        zoomControl: false,
       },
       sitesLocation: require("../../MapData/TL_Sites.json"),
       siteOptions: {
         style: function style(feature) {
           return {
-            color: red
+            color: red,
           };
         },
         onEachFeature: (feature, layer) => {
-          // layer.bindPopup("click", (e) => {
-          //   this.$router.push(`/physicalDashboard`);
-          // });
-          // var popup = new L.popup()
-          //   .setLatLng(e.latlng)
-          //   .setContent(
-          //     '<p style="color: grey;">' + feature.properties.name + "</p>"
-          //   );
-          layer.bindPopup("feature.properties.name", {
+          layer.bindPopup(feature.properties.Site, {
             permanent: true,
             sticky: true,
-            direction: "center"
+            direction: "center",
           });
-        }
+        },
       },
       region: require("../../MapData/TL.json"),
       regionOptions: {
@@ -668,12 +753,12 @@ export default {
           return {
             opacity: 0.6,
             color: feature.properties.fill,
-            fillOpacity: 0.3
+            fillOpacity: 0.3,
           };
-        }
-      }
+        },
+      },
     };
-  }
+  },
 };
 </script>
 

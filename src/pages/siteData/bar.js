@@ -2,7 +2,7 @@ export const barData = {
   SBBar1: {
     chart: {
       type: "column",
-      height: "100%"
+      height: "90%"
     },
     credits: {
       enabled: false
@@ -52,7 +52,7 @@ export const barData = {
   SBBar2: {
     chart: {
       type: "column",
-      height: "100%"
+      height: "90%"
     },
     credits: {
       enabled: false
@@ -102,7 +102,7 @@ export const barData = {
   SBBar3: {
     chart: {
       type: "column",
-      height: "100%"
+      height: "90%"
     },
     credits: {
       enabled: false
@@ -152,7 +152,7 @@ export const barData = {
   TOBar1: {
     chart: {
       type: "column",
-      height: "100%"
+      height: "90%"
     },
     credits: {
       enabled: false
@@ -203,7 +203,7 @@ export const barData = {
   TOBar2: {
     chart: {
       type: "column",
-      height: "100%"
+      height: "90%"
     },
     credits: {
       enabled: false
@@ -254,7 +254,7 @@ export const barData = {
   TOBar3: {
     chart: {
       type: "column",
-      height: "100%"
+      height: "90%"
     },
     credits: {
       enabled: false

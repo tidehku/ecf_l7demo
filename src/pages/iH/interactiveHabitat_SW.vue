@@ -437,7 +437,10 @@
               </q-btn>
             </q-bar>
 
-            <q-card-section horizontal class="q-pa-md">
+            <q-card-section
+              horizontal
+              class="q-pa-md"
+            >
               <q-img
                 class="col-3"
                 height="flex"
@@ -567,7 +570,7 @@ export default {
     LMap,
     LGeoJson,
     LControlScale,
-    LTileLayer: () => import("components/tileLayer")
+    LTileLayer: () => import("components/tileLayer"),
   },
   data() {
     return {
@@ -579,7 +582,6 @@ export default {
       card4: false,
       Table_SWTLM: [
         {
-
           name: "Location",
           data: "Islands District, New Territories",
         },
@@ -628,11 +630,10 @@ export default {
         {
           name: "Tidal Range",
           data: "1.0 m - 2.8 m + C.D.",
-
         },
         {
           name: "Transect length",
-          data: "14 m"
+          data: "14 m",
         },
         {
           name: "Shore exposure",
@@ -646,18 +647,16 @@ export default {
         {
           name: "Aspect",
           data: "/",
-
         },
         {
           name: "Slope",
-          data: "/"
+          data: "/",
         },
         {
           name: "Rock type",
 
           data: `Igneous`,
         },
-
       ],
       Table_SWPC: [
         {
@@ -738,27 +737,23 @@ export default {
       zoom: 9.8,
       center: L.latLng(22.25, 113.98),
       mapOptions: {
-
         zoomSnap: 0.2,
         zoomControl: false,
-
       },
       sitesLocation: require("../../MapData/SW_Sites.json"),
       siteOptions: {
         style: function style(feature) {
           return {
-            color: red
+            color: red,
           };
         },
         onEachFeature: (feature, layer) => {
-
-          layer.bindPopup("feature.properties.name", {
+          layer.bindPopup(feature.properties.Site, {
             permanent: true,
             sticky: true,
             direction: "center",
-
           });
-        }
+        },
       },
       region: require("../../MapData/SW.json"),
       regionOptions: {
@@ -768,12 +763,11 @@ export default {
 
             color: feature.properties.fill,
             fillOpacity: 0.3,
-
           };
-        }
-      }
+        },
+      },
     };
-  }
+  },
 };
 </script>
 
