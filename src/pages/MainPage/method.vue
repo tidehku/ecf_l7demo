@@ -5,7 +5,7 @@
         <div class="text-indigo title">
           Stratification of Hong Kong coastline
         </div>
-        <div class="text-subtitle1">{{ Stratification }}</div>
+        <div class="text-subtitle1">{{ stratification }}</div>
       </div>
       <div class="q-pa-md col-5">
         <q-img class="col-5" src="~/assets/method1.png" />
@@ -151,10 +151,6 @@
 export default {
   data() {
     return {
-      Stratification: `To achieve a representative sample of Hong Kong rocky shore biodiversity, the coastline of Hong Kong was stratified into six regions according to local hydrological characteristics and general shore directions: the north-western region which is heavily influenced by the Pearl River discharge (NW); the south-western region (SW), the southern region (SO), both regarded as the transition between the estuarine waters to the west and the oceanic waters to the east; the eastern region which is more oceanic and exposed (EA); the north-eastern region close to the border of China which is relatively undisturbed (NE) and the Tolo Harbour area which is a sheltered, enclosed bay in the New Territories (TL).`,
-      method1: `Four sites were selected within each region, based on their exposures and sampling feasibilities, for the biodiversity survey.  Relatively exposed and sheltered sites were included in each of the six regions, in order to capture the variation in assemblage structures on shores with different wave-swept regimes.  At each site, six equidistant transects of ~ 16 m were laid from the low (defined as 0.25 m below the coralline zone, or 1.15 m above Chart Datum) to high tidal heights (defined as the Echinolittorina malaccana zone): high-high (HH), low-high (LM), high-mid (HM), low-mid (LM), high-low (HL) and low-low (LL).  Comparisons across sheltered and exposed shores are thus possible due to the tidal heights being defined operationally according to local, site-specific wave-swept regimes (based on the fact that E. malaccana follow the awash zone in the supralittoral fringe, see Lewis 1961, Gilman et al. 2006).`,
-      method2: `At each transect, ten random 25 cm × 25 cm quadrats were surveyed and photographed.  All visible mobile species were counted, and all sessile species (e.g. bivalves, some sea anemones) were scored (in percentage cover) from the photographs using the software CPCe on computers.  A ten-minute rapid active search was also conducted during each survey to sample fast-moving crustaceans (scored using presence/absence) that could be missed during the quadrat survey.  Species richness (S), Shannon’s diversity (H’) and Pielou’s J evenness indice were subsequently computed from the assemblage data of each site.  The survey was repeated in both hot & wet and cool & dry seasons over a period of two years, resulting in a total of four temporal snapshots of assemblage structures along Hong Kong rocky coastline.  These species compositions (both mobile and sessile species) and ecological indice are available for viewing in the biological dashboards of different sites.`,
-      quantifying: `In terms of the physical environment and food availability on the shore, temperature loggers were deployed at HH and LM tidal heights (n = 3 at each height) to log rock temperatures every h (± 0.5 °C, Envlogger, Electricchange, Portugal) for a period of two years.  Rock chips were also taken during the surveys (n = 4 along each tidal height) to quantify Chlorophyll a (Chl a) and organic matter concentrations via spectrophotometry and loss-on-ignition techniques.  Wave force impacting the shore at each site was quantified using a custom-built wavelogger deployed at the LM tidal height, which logs static accelerations caused on a rotor blade by the incoming wave every 10 s (Pendant G logger, HOBO Onset, USA).  Shore aspect and slope were measured using compasses and clinometers, respectively.  These physical information are available for viewing in the physical dashboards of different sites.`,
       columns: [
         {
           name: "name",
@@ -241,6 +237,19 @@ export default {
     };
   },
   computed: {
+    /* migrate text to Vuex store */
+    method1() {
+      return this.$store.state.storeText.method1;
+    },
+    method2() {
+      return this.$store.state.storeText.method2;
+    },
+    quantifying() {
+      return this.$store.state.storeText.quantifying;
+    },
+    stratification() {
+      return this.$store.state.storeText.stratification;
+    },
     reference() {
       return this.$store.state.storeText.reference;
     }

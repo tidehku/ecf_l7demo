@@ -11,6 +11,7 @@
 
 <script>
 import { QSpinnerHourglass } from "quasar";
+// import { firebaseAuth } from "boot/firebase";
 
 export default {
   mounted() {

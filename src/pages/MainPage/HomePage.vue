@@ -262,22 +262,6 @@ export default {
   data() {
     return {
       resume: false,
-      HKRISE: `
-       <h>H</h>ong <h>K</h>ong <h>R</h>ocky shore <h>I</h>nteractive <h>S</h>earch <h>E</h>ngine (<h>HKRISE</h>) is a geographic information system (GIS) representing the findings from the first systematic, quantitative territory-wide rocky shore biodiversity survey in Hong Kong. With over 80% of Hong Kong's coastline being hard, rocky outcrops (Morton et al. 1996), rocky shores in Hong Kong not only are incredibly rich in biodiversity, but are also extremely dynamic through seasons where you will see completely different landscapes during monsoonal summer and winter. In this GIS you'll get to explore the species we found on a number of rocky shores in Hong Kong, from the oceanic east to the Pearl River-influenced west coast, from shores heavily influenced by anthropogenic impact to the remote, undisturbed northeastern islands, and from ferocious wave-exposed shores to calm, sheltered bays. As you will see, each rocky shore is quite unique not only in terms of their biota, but also in their physical characteristics which drive some of the variation we observe in species abundance and distribution. We hope, through the use of this GIS, you can visualize the biodiversity and physical environment of Hong Kong's rocky shore in a vivid way, compare and contrast spatial and seasonal differences in community structure, and to search for species distribution rapidly in an user-friendly interface. We also include in this GIS information on historical species distribution (1912 - 2015) from the review by Ng et al. 2017 (database available at  <a
-            href="https://www.tidehku.com/"
-            target="_blank"
-          >
-            <strong>Tropical IntertiDal Ecology (TIDE) Group</strong>
-          </a> ) and, therefore, you can compare our current dataset with species records from the past. Let the exploration begin!`,
-      HKRockyShore1: `The coastline of Hong Kong is long and complex.  Whilst wave-exposed shores in Hong Kong are generally located along southern and eastern coasts due to long wave fetches opening towards the South China Sea, western coasts and shores within the Tolo Harbour are relatively sheltered as they are protected by adjacent islands or headlands.  In fact, the complex coastline and presence of numerous islands in Hong Kong waters (> 260 islands of various sizes, Williams et al. 2019) create spatially variable wave fetches and, when coupled with the highly heterogeneous geomorphology in coastal rock types (granites, sandstone, siltstone etc) and the east-west salinity/nutrient gradients created by the Pearl River discharge, a diverse set of physical environments are found along Hong Kong rocky shores.`,
-      HKRockyShore2: `In terms of seasonal changes, Hong Kong experiences a seasonal tropical climate with primarily a hot & wet (~ May to Oct) and a cool & dry season (~ Dec to Mar) throughout the year.  During the hot & wet season, daily maximum air temperature can reach up to 35 °C (HKO, 2021), and rock temperature on the shore can reach even higher, attaining 62 °C at the maximum.  Mass mortality of rocky shore organisms is thus often observed during this time of the year, particularly for sessile species (e.g. mussels) which cannot move around to escape the heat stress.  On the other hand, however, rainfall in Hong Kong is also more frequent and intense in this season, with over 80% of annual rainfalls occurring during May to Sep (HKO, 2021) which, when combined with the hot temperature, can impose severe physiological stress to rocky shore organisms (Firth & Williams 2009).`,
-      HKRockyShore3: `In the cool & dry season, although thermal stress is ameliorated, the stronger north-eastern monsoon (compared to the hot & wet season) results in stronger waves and thus higher dislodgement risk experienced by rocky shore organisms.  In this time of the year, macroalgae such as Phycocalidia spp. and Ulva spp. thrive on shores probably due to the low environmental temperature (with rock surface attaining a minimum of 4 °C), and the supply of larvae from temperate seas brought by the Taiwan Current (originates from the East China Sea).  The cool, less-saline Taiwan Current is, however, moderated by the south China branching of the Kuroshio Current, which carries warmer tropical waters and keeps Hong Kong waters relatively warm and saline even during the cool & dry season.  In the hot & wet season, due to the shift in monsoon direction, the South China Sea Warm Current (also known as the Hainan Current) prevails, bringing us warm waters and larvae of tropical species.  Overall, the dynamic seasonal changes and complex spatial variations in shore physical environments allow for a multitude of species to settle and live on Hong Kong rocky shores, which harbour a rich set of species assemblages that you can get to explore using this GIS!`,
-      TidesMessage: `This territory-wide rocky shore survey is not possible without the dedication of a rather small group of enthusiastic (or crazy ...) rocky shore ecologists (call us TideChasers …): Steven Wong, Brian Leung, Jackson Lau, Valerie Hickey and Tommy Hui, all members of the <a
-            href="https://www.tidehku.com/"
-            target="_blank"
-          >
-            <strong>Tropical IntertiDal Ecology (TIDE) Group</strong>
-          </a> led by Prof. Gray A. Williams at the Swire Institute of Marine Science, the University of Hong Kong.  This GIS was developed by Yvonne Li and Yifei Gu, computer specialists in the TIDE group.  The team would also like to thank other members of the TIDE group for their tremendous help both on the shore and in the laboratory, and grant number 105/2019 from the Environment Conservation Fund, HKSAR, which financed the project.`,
       tab: "interactiveHabitat",
       slide: 1,
       autoplay: false
@@ -294,6 +278,23 @@ export default {
     },
     openDrawer() {
       this.$root.$emit("openDrawer");
+    }
+  },
+  computed: {
+    HKRISE() {
+      return this.$store.state.storeText.HKRISE;
+    },
+    HKRockyShore1() {
+      return this.$store.state.storeText.HKRockyShore1;
+    },
+    HKRockyShore2() {
+      return this.$store.state.storeText.HKRockyShore2;
+    },
+    HKRockyShore3() {
+      return this.$store.state.storeText.HKRockyShore3;
+    },
+    TidesMessage() {
+      return this.$store.state.storeText.TidesMessage;
     }
   }
 };
