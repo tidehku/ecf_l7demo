@@ -39,32 +39,32 @@ const routes = [
       {
         path: "/interactiveHabitat/NW",
         component: () => import("pages/iH/interactiveHabitat_NW.vue"),
-        meta: { keepAlive: true }
+        meta: { keepAlive: false }
       },
       {
         path: "/interactiveHabitat/SW",
         component: () => import("pages/iH/interactiveHabitat_SW.vue"),
-        meta: { keepAlive: true }
+        meta: { keepAlive: false }
       },
       {
         path: "/interactiveHabitat/SO",
         component: () => import("pages/iH/interactiveHabitat_SO.vue"),
-        meta: { keepAlive: true }
+        meta: { keepAlive: false }
       },
       {
         path: "/interactiveHabitat/EA",
         component: () => import("pages/iH/interactiveHabitat_EA.vue"),
-        meta: { keepAlive: true }
+        meta: { keepAlive: false }
       },
       {
         path: "/interactiveHabitat/TL",
         component: () => import("pages/iH/interactiveHabitat_TL.vue"),
-        meta: { keepAlive: true }
+        meta: { keepAlive: false }
       },
       {
         path: "/interactiveHabitat/NE",
         component: () => import("pages/iH/interactiveHabitat_NE.vue"),
-        meta: { keepAlive: true }
+        meta: { keepAlive: false }
       },
       {
         path: "phyStarfishBay",

@@ -224,7 +224,6 @@
           class="image"
           :src="require('../../assets/gallery/Crab - Parasesarma pictum.jpg')"
         />
-        <!-- <img class="image" :src="require('../../assets/gallery/crab.jpg')" /> -->
       </viewer>
     </div>
   </q-page>

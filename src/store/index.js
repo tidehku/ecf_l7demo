@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import storeText from "./store-text";
+import storeRegionTable from "./store-region-table";
 
 // import example from './module-example'
 
@@ -18,7 +19,8 @@ Vue.use(Vuex);
 export default function(/* { ssrContext } */) {
   const Store = new Vuex.Store({
     modules: {
-      storeText
+      storeText,
+      storeRegionTable
     },
 
     // enable strict mode (adds overhead!)
