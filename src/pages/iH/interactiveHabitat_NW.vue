@@ -15,7 +15,7 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-sm">{{ Region }}</div>
+      <div class="q-pa-sm">{{ regionNW }}</div>
       <l-map
         class="map"
         :zoom="zoom"
@@ -468,8 +468,6 @@ export default {
   },
   data() {
     return {
-      Region:
-        "The Northwestern (NW) region is heavily influenced by the outflow of the Pearl River.  The high sedimentation rate of the Pearl River, together with the rapid developments in the region (e.g. the expansion of the Hong Kong International Airport, Hong Kong-Zhuhai-Macau Bridge), have impacted water quality with increased eutrophication and suspended solids.  Used to be one of the major habitats of Chinese White Dolphin in Hong Kong, some dolphin tour boats and observation lookouts are still popular in the region(e.g. Tai O, Lung Kwu Tan).",
       card1: false,
       card2: false,
       card3: false,
@@ -508,6 +506,9 @@ export default {
     };
   },
   computed: {
+    regionNW() {
+      return this.$store.state.storeText.regionNW;
+    },
     Table_NWTO() {
       return this.$store.state.storeRegionTable.Table_NWTO;
     },

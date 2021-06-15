@@ -15,7 +15,7 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-sm">{{ Region }}</div>
+      <div class="q-pa-sm">{{ regionNE }}</div>
 
       <l-map
         class="map"
@@ -471,8 +471,6 @@ export default {
   },
   data() {
     return {
-      Region:
-        "The Northeastern (NE) region receives lower wave exposure compared to the Eastern region as it is sheltered by mainland China to the North.  The region generally has good water quality and lower disturbance as it is remote, protected by Geological Park and has low population levels (only a few Hakka villages remaining).  To get to some of our sites in this region we will inevitably need to hire a boat (e.g. Double Island, Kat O) or otherwise undertake a strenuous, long-distance hike (e.g. Yung Shue Au, Hung Shek Mun).  But because of the remoteness, shores in this region support a vast number of species including even corals!",
       card1: false,
       card2: false,
       card3: false,
@@ -511,6 +509,9 @@ export default {
     };
   },
   computed: {
+    regionNE() {
+      return this.$store.state.storeText.regionNE;
+    },
     Table_NEDI() {
       return this.$store.state.storeRegionTable.Table_NEDI;
     },

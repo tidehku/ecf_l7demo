@@ -165,74 +165,6 @@ export default {
           align: "left",
           label: "Description"
         }
-      ],
-
-      bioGlossary: [
-        {
-          name: "Mobile species",
-          description: `Species that are able to move around on their own, including most gastropods (snails and limpets), crabs and fishes.`
-        },
-        {
-          name: "Sessile species",
-          description: `Species with limited or no ability to move around, such as algae, bivalves (oysters and mussels) and some sea anemones.  In some cases, an entity in sessile species might not correspond to a single species but a mix of microbial species constituting an unique functional entity, e.g. high shore biofilm, that is hard to be further separated into species level in the field.`
-        },
-        {
-          name: "Shannon’s diversity index (H’) ",
-          description: `A diversity index based on Shannon & Weaver (1949), calculated using the formula H’ = - Σ pi log pi (where i ranges from 1 to the total number of species found, and pi is the proportion of the abundance of species i in the sampling area).  A higher value of H’ indicates a more diverse assemblage at a sampling area (either by increasing the number of species or having species with more similar numbers of individuals).  In our project, H’ is calculated based on identified mobile species where count is available.`
-        },
-        {
-          name: "Species richness (S)",
-          description: `The total number of either count or mobile species found in a sampling area, where counts or presence/absence data are available (either based on region/site in this GIS).`
-        },
-        {
-          name: "Pielou’s evenness index (J)",
-          description: `An index used to indicate the evenness of species distribution in an assemblage, calculated by dividing H’ with the maximum possible value of H’.  A higher J indicates a more even assemblage at a sampling area (species are having more similar number of individuals, instead of having heavily dominant species).  In our project, J is calculated based on identified mobile species where count is available.`
-        },
-        {
-          name: "Chlorophyll a (Chl a) concentration",
-          description: `A proxy for algal/biofilm biomass on the rock surface, measured using spectrophotometry (extraction using cold methanol) and expressed in µg/cm².  A higher value indicates higher standing stock of algae/cyanobacteria on the rock surface, which could be resulted from a higher productivity in the surrounding pelagic environment, or reduced consumer pressure (less abundance of grazers on the shore, see Williams et al. 2000).`
-        },
-        {
-          name: "Organic matter (OM) concentration",
-          description: `A proxy for total biomass (including algae, cyanobacteria, bacteria etc) on the rock surface, measured using mass loss-on-ignition (in a muffle furnace at 500 °C for 4 h) and expressed in mg/cm². `
-        }
-      ],
-      phyGlossary: [
-        {
-          name: "Total wave fetch",
-          description: `The total distance of seas along 16 equiangular directions from a coastal location to surrounding land masses (up to 200 km).  Longer the wave fetch generally implies stronger wave action impacting the shore (see Burrows et al. 2008).`
-        },
-        {
-          name: "Max. wave force",
-          description: `The maximum force (measured in N) estimated using a custom-built wavelogger with an accelerometer.  The logger was deployed at the low-mid level on the shore for 48 h, recording acceleration every 10 s.  The readings were, therefore, subjected to the prevailing wind direction and speed during the recording period.`
-        },
-        {
-          name: "Rock temperature",
-          description: `Rock surface temperature (measured in °C) using rugged temperature loggers attached onto the rock surface using marine epoxy.  Temperatures were recorded every 1 h for a period of 2 years at our study sites.`
-        },
-        {
-          name: "Shore aspect",
-          description: `The direction faced by the shore, measured using a hand-held compass (expressed in ° from the north direction).`
-        },
-        {
-          name: "Shore slope",
-          description: `The inclination of the shore measured in °, ranging from 0° (a completely horizontal shore) to 90° (a completely vertical shore).`
-        },
-        {
-          name: "Rock type",
-          description: `Geological formation/composition of rocks in our sampling sites, adopting the classification based on CEDD (2006).`
-        },
-        {
-          name: "Chart Datum (C. D.)",
-          description: `Water level during the lowest astronomical tide, which has been adopted as the reference level to measure tidal height in Hong Kong since 1917 (Lands Department, 1995).`
-        },
-        {
-          name: "Wave exposure icons",
-          description: `In the regional landing page where you can select information of the four study sites within that region, there is a “wave exposure icon” next to each site.  As we deliberately selected four sites with different wave exposures within a region, the icon indicates the relative wave exposure of that site: 
-          Most exposed within the region: 
-          Intermediately exposed within the region:
-          Least exposed within the region: `
-        }
       ]
     };
   },
@@ -252,6 +184,12 @@ export default {
     },
     reference() {
       return this.$store.state.storeText.reference;
+    },
+    bioGlossary() {
+      return this.$store.state.storeText.bioGlossary;
+    },
+    phyGlossary() {
+      return this.$store.state.storeText.phyGlossary;
     }
   }
 };

@@ -15,7 +15,7 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-sm">{{ Region }}</div>
+      <div class="q-pa-sm">{{ regionTL }}</div>
 
       <l-map
         class="map"
@@ -470,8 +470,6 @@ export default {
   },
   data() {
     return {
-      Region:
-        "The Tolo (TL) region has weak water circulation due to being located in a sheltered channel with a narrow exit to the open sea.  Historically the high concentration of discharged sewage trapped within the Tolo Harbour had resulted in frequent eutrophication events, which has been alleviated in recent years by better water treatment and sewage management (though red tides and hypoxia are still not uncommon particularly during Mar - Aug).  Coastal rocks are quite soft in the region (e.g. Tseng Tau, Ma Shi Chau), as geologically sandstone/siltstone is common in the Tolo area.",
       card1: false,
       card2: false,
       card3: false,
@@ -511,6 +509,9 @@ export default {
     };
   },
   computed: {
+    regionTL() {
+      return this.$store.state.storeText.regionTL;
+    },
     Table_TLSB() {
       return this.$store.state.storeRegionTable.Table_TLSB;
     },

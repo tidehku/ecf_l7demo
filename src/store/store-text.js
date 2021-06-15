@@ -62,7 +62,92 @@ const state = {
 
     <p style="text-indent:-2em;">Williams GA, Chan BKK, Dong Y-w (2019) Rocky shores of mainland China, Taiwan and Hong Kong. In: Hawkins SJ, Bohn K, Firth LB, Williams GA (eds) <br /> Interactions in the Marine Benthos - Global Patterns and Processes. Systematics Association, Cambridge University Press</p>
    
-    `
+    `,
+  bioGlossary: [
+    {
+      name: "Mobile species",
+      description: `Species that are able to move around on their own, including most gastropods (snails and limpets), crabs and fishes.`
+    },
+    {
+      name: "Sessile species",
+      description: `Species with limited or no ability to move around, such as algae, bivalves (oysters and mussels) and some sea anemones.  In some cases, an entity in sessile species might not correspond to a single species but a mix of microbial species constituting an unique functional entity, e.g. high shore biofilm, that is hard to be further separated into species level in the field.`
+    },
+    {
+      name: "Shannon’s diversity index (H’) ",
+      description: `A diversity index based on Shannon & Weaver (1949), calculated using the formula H’ = - Σ pi log pi (where i ranges from 1 to the total number of species found, and pi is the proportion of the abundance of species i in the sampling area).  A higher value of H’ indicates a more diverse assemblage at a sampling area (either by increasing the number of species or having species with more similar numbers of individuals).  In our project, H’ is calculated based on identified mobile species where count is available.`
+    },
+    {
+      name: "Species richness (S)",
+      description: `The total number of either count or mobile species found in a sampling area, where counts or presence/absence data are available (either based on region/site in this GIS).`
+    },
+    {
+      name: "Pielou’s evenness index (J)",
+      description: `An index used to indicate the evenness of species distribution in an assemblage, calculated by dividing H’ with the maximum possible value of H’.  A higher J indicates a more even assemblage at a sampling area (species are having more similar number of individuals, instead of having heavily dominant species).  In our project, J is calculated based on identified mobile species where count is available.`
+    },
+    {
+      name: "Chlorophyll a (Chl a) concentration",
+      description: `A proxy for algal/biofilm biomass on the rock surface, measured using spectrophotometry (extraction using cold methanol) and expressed in µg/cm².  A higher value indicates higher standing stock of algae/cyanobacteria on the rock surface, which could be resulted from a higher productivity in the surrounding pelagic environment, or reduced consumer pressure (less abundance of grazers on the shore, see Williams et al. 2000).`
+    },
+    {
+      name: "Organic matter (OM) concentration",
+      description: `A proxy for total biomass (including algae, cyanobacteria, bacteria etc) on the rock surface, measured using mass loss-on-ignition (in a muffle furnace at 500 °C for 4 h) and expressed in mg/cm². `
+    }
+  ],
+  phyGlossary: [
+    {
+      name: "Total wave fetch",
+      description: `The total distance of seas along 16 equiangular directions from a coastal location to surrounding land masses (up to 200 km).  Longer the wave fetch generally implies stronger wave action impacting the shore (see Burrows et al. 2008).`
+    },
+    {
+      name: "Max. wave force",
+      description: `The maximum force (measured in N) estimated using a custom-built wavelogger with an accelerometer.  The logger was deployed at the low-mid level on the shore for 48 h, recording acceleration every 10 s.  The readings were, therefore, subjected to the prevailing wind direction and speed during the recording period.`
+    },
+    {
+      name: "Rock temperature",
+      description: `Rock surface temperature (measured in °C) using rugged temperature loggers attached onto the rock surface using marine epoxy.  Temperatures were recorded every 1 h for a period of 2 years at our study sites.`
+    },
+    {
+      name: "Shore aspect",
+      description: `The direction faced by the shore, measured using a hand-held compass (expressed in ° from the north direction).`
+    },
+    {
+      name: "Shore slope",
+      description: `The inclination of the shore measured in °, ranging from 0° (a completely horizontal shore) to 90° (a completely vertical shore).`
+    },
+    {
+      name: "Rock type",
+      description: `Geological formation/composition of rocks in our sampling sites, adopting the classification based on CEDD (2006).`
+    },
+    {
+      name: "Chart Datum (C. D.)",
+      description: `Water level during the lowest astronomical tide, which has been adopted as the reference level to measure tidal height in Hong Kong since 1917 (Lands Department, 1995).`
+    },
+    {
+      name: "Wave exposure icons",
+      description: `In the regional landing page where you can select information of the four study sites within that region, there is a “wave exposure icon” next to each site.  As we deliberately selected four sites with different wave exposures within a region, the icon indicates the relative wave exposure of that site: 
+        Most exposed within the region: 
+        Intermediately exposed within the region:
+        Least exposed within the region: `
+    }
+  ],
+  regionNW: `
+  The Northwestern (NW) region is heavily influenced by the outflow of the Pearl River.  The high sedimentation rate of the Pearl River, together with the rapid developments in the region (e.g. the expansion of the Hong Kong International Airport, Hong Kong-Zhuhai-Macau Bridge), have impacted water quality with increased eutrophication and suspended solids.  Used to be one of the major habitats of Chinese White Dolphin in Hong Kong, some dolphin tour boats and observation lookouts are still popular in the region(e.g. Tai O, Lung Kwu Tan).
+  `,
+  regionEA: `
+  The Eastern (EA) region receives strong, saline oceanic currents from the South China sea where the water is deeper and clearer.  Eastern coast, therefore, has stronger wave action and better water quality (higher concentration of dissolved oxygen and lower turbidity) compared to the western coast.  Some of our sites in the region are located inside Sai Kung Country Park (e.g. Sai Wan, Pak Lap), known to be the “backyard of Hong Kong” and is a popular nature-lovers destination.  Because of the better water quality  the region is also a common spot for diving (e.g. Pak Shui Wun) and watersport (amidst the relatively sheltered islands off Sai Kung area, e.g. Kau Sai Chau).
+  `,
+  regionNE: `
+  The Northeastern (NE) region receives lower wave exposure compared to the Eastern region as it is sheltered by mainland China to the North.  The region generally has good water quality and lower disturbance as it is remote, protected by Geological Park and has low population levels (only a few Hakka villages remaining).  To get to some of our sites in this region we will inevitably need to hire a boat (e.g. Double Island, Kat O) or otherwise undertake a strenuous, long-distance hike (e.g. Yung Shue Au, Hung Shek Mun).  But because of the remoteness, shores in this region support a vast number of species including even corals!
+  `,
+  regionSO: `
+  The Southern (SO) region belongs to the transitional zone between the Pearl River influx and oceanic currents to the eastern waters of Hong Kong.  Water quality of the region is less influenced by the Pearl River, but some of our study sites in the region (e.g. Wah Fu) are located close to the Victoria Harbour, one of the busiest shipping waters in the world.  On the eastern side, however, shores generally experience strong wave action due to the direct and long fetches opening towards the South China Sea (e.g. Shek O).  Recreational activities are not uncommon in the region, with popular beaches located just next to our sites (e.g. Middle Bay).
+  `,
+  regionSW: `
+  The Southwestern (SW) region is located along the Pearl River outflow, but is partially blocked against the direct outlet by the Lantau Island.  Although the region is less urbanized (with the Lantau South Country Park occupying 56 km²), southern Lantau is a popular spot for recreational activities such as clam digging, camping and coaststeering (e.g. Pui O, Tai Long Wan), thus experiencing anthropogenic impacts particularly during the summer holiday.  Vessel traffic is also not uncommon (particularly off the shore at Peng Chau), with ships travelling back and forth through Ma Wan Channel at the northeastern tip of Lantau.
+        `,
+  regionTL: `
+  The Tolo (TL) region has weak water circulation due to being located in a sheltered channel with a narrow exit to the open sea.  Historically the high concentration of discharged sewage trapped within the Tolo Harbour had resulted in frequent eutrophication events, which has been alleviated in recent years by better water treatment and sewage management (though red tides and hypoxia are still not uncommon particularly during Mar - Aug).  Coastal rocks are quite soft in the region (e.g. Tseng Tau, Ma Shi Chau), as geologically sandstone/siltstone is common in the Tolo area.
+        `
 };
 
 export default {

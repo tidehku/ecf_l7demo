@@ -15,7 +15,7 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-sm">{{ Region }}</div>
+      <div class="q-pa-sm">{{ regionEA }}</div>
 
       <l-map
         class="map"
@@ -468,8 +468,6 @@ export default {
   },
   data() {
     return {
-      Region:
-        "The Eastern (EA) region receives strong, saline oceanic currents from the South China sea where the water is deeper and clearer.  Eastern coast, therefore, has stronger wave action and better water quality (higher concentration of dissolved oxygen and lower turbidity) compared to the western coast.  Some of our sites in the region are located inside Sai Kung Country Park (e.g. Sai Wan, Pak Lap), known to be the “backyard of Hong Kong” and is a popular nature-lovers destination.  Because of the better water quality  the region is also a common spot for diving (e.g. Pak Shui Wun) and watersport (amidst the relatively sheltered islands off Sai Kung area, e.g. Kau Sai Chau).",
       card1: false,
       card2: false,
       card3: false,
@@ -508,6 +506,9 @@ export default {
     };
   },
   computed: {
+    regionEA() {
+      return this.$store.state.storeText.regionEA;
+    },
     Table_EASW() {
       return this.$store.state.storeRegionTable.Table_EASW;
     },

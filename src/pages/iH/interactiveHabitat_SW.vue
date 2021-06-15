@@ -15,7 +15,7 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-sm">{{ Region }}</div>
+      <div class="q-pa-sm">{{ regionSW }}</div>
 
       <l-map
         class="map"
@@ -466,8 +466,6 @@ export default {
   },
   data() {
     return {
-      Region:
-        "The Southwestern (SW) region is located along the Pearl River outflow, but is partially blocked against the direct outlet by the Lantau Island.  Although the region is less urbanized (with the Lantau South Country Park occupying 56 km²), southern Lantau is a popular spot for recreational activities such as clam digging, camping and coaststeering (e.g. Pui O, Tai Long Wan), thus experiencing anthropogenic impacts particularly during the summer holiday.  Vessel traffic is also not uncommon (particularly off the shore at Peng Chau), with ships travelling back and forth through Ma Wan Channel at the northeastern tip of Lantau.",
       card1: false,
       card2: false,
       card3: false,
@@ -507,6 +505,9 @@ export default {
     };
   },
   computed: {
+    regionSW() {
+      return this.$store.state.storeText.regionSW;
+    },
     Table_SWTLM() {
       return this.$store.state.storeRegionTable.Table_SWTLM;
     },

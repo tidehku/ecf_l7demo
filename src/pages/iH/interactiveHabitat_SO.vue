@@ -15,7 +15,7 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-sm">{{ Region }}</div>
+      <div class="q-pa-sm">{{ regionSO }}</div>
 
       <l-map
         class="map"
@@ -465,8 +465,6 @@ export default {
   },
   data() {
     return {
-      Region:
-        "The Southern (SO) region belongs to the transitional zone between the Pearl River influx and oceanic currents to the eastern waters of Hong Kong.  Water quality of the region is less influenced by the Pearl River, but some of our study sites in the region (e.g. Wah Fu) are located close to the Victoria Harbour, one of the busiest shipping waters in the world.  On the eastern side, however, shores generally experience strong wave action due to the direct and long fetches opening towards the South China Sea (e.g. Shek O).  Recreational activities are not uncommon in the region, with popular beaches located just next to our sites (e.g. Middle Bay).",
       card1: false,
       card2: false,
       card3: false,
@@ -505,6 +503,9 @@ export default {
     };
   },
   computed: {
+    regionSO() {
+      return this.$store.state.storeText.regionSO;
+    },
     Table_SOSO() {
       return this.$store.state.storeRegionTable.Table_SOSO;
     },
