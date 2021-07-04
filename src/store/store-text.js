@@ -30,17 +30,32 @@ const state = {
           Finally, we sincerely thank the Environment Conservation Fund, HKSAR, which financed the project (grant number 105/2019).          
           `,
   stratification: `
-  To achieve a representative sample of Hong Kong rocky shore biodiversity, the coastline of Hong Kong was stratified into six regions according to local hydrological characteristics and general shore directions: the north-western region which is heavily influenced by the Pearl River discharge (NW); the south-western region (SW), the southern region (SO), both regarded as the transition between the estuarine waters to the west and the oceanic waters to the east; the eastern region which is more oceanic and exposed (EA); the north-eastern region close to the border of China which is relatively undisturbed (NE) and the Tolo Harbour area which is a sheltered, enclosed bay in the New Territories (TL).
+  To achieve a representative sample of Hong Kong rocky shore biodiversity, the coastline of Hong Kong was stratified into six regions according to local hydrology and general shore directions: the north-western region which is heavily influenced by the Pearl River discharge (NW); the south-western (SW) and the southern region (SO), both regarded as the transition between the estuarine waters to the west and the oceanic waters to the east; the eastern region which is more oceanic and exposed (EA); the north-eastern region which is close to the border of China and relatively undisturbed (NE) and the Tolo Harbour area which is a sheltered, enclosed bay in the New Territories (TL).
   `,
   method1: `
-  Four sites were selected within each region, based on their exposures and sampling feasibilities, for the biodiversity survey.  Relatively exposed and sheltered sites were included in each of the six regions, in order to capture the variation in assemblage structures on shores with different wave-swept regimes.  At each site, six equidistant transects of ~ 16 m were laid from the low (defined as 0.25 m below the coralline zone, or 1.15 m above Chart Datum) to high tidal heights (defined as the Echinolittorina malaccana zone): high-high (HH), low-high (LM), high-mid (HM), low-mid (LM), high-low (HL) and low-low (LL).  Comparisons across sheltered and exposed shores are thus possible due to the tidal heights being defined operationally according to local, site-specific wave-swept regimes (based on the fact that E. malaccana follow the awash zone in the supralittoral fringe, see Lewis 1961, Gilman et al. 2006).
+  Within each region, four sites were selected based on their exposure and sampling feasibility for the biodiversity survey.  Relatively exposed and sheltered sites were included in order to capture the variation in assemblage structures on shores with different wave-swept regimes.  At each site, six equidistant transects of ~ 16 m were laid from the low (defined as 0.25 m below the coralline zone, or 1.15 m above Chart Datum) to high tidal heights (defined as the <i>Echinolittorina malaccana zone</i>): high-high (HH), low-high (LH), high-mid (HM), low-mid (LM), high-low (HL) and low-low (LL).  Comparisons across sheltered and exposed shores are thus possible due to the tidal heights being defined operationally according to local, site-specific wave-swept regimes (based on the fact that <i>E. malaccana</i> follow the awash zone in the supralittoral fringe, see Lewis 1961, Gilman et al. 2006).
   `,
   method2: `
-      At each transect, ten random 25 cm × 25 cm quadrats were surveyed and photographed.  All visible mobile species were counted, and all sessile species (e.g. bivalves, some sea anemones) were scored (in percentage cover) from the photographs using the software CPCe on computers.  A ten-minute rapid active search was also conducted during each survey to sample fast-moving crustaceans (scored using presence/absence) that could be missed during the quadrat survey.  Species richness (S), Shannon’s diversity (H’) and Pielou’s J evenness indice were subsequently computed from the assemblage data of each site.  The survey was repeated in both hot & wet and cool & dry seasons over a period of two years, resulting in a total of four temporal snapshots of assemblage structures along Hong Kong rocky coastline.  These species compositions (both mobile and sessile species) and ecological indice are available for viewing in the biological dashboards of different sites.
-      `,
+  At each transect, ten random 25 cm × 25 cm quadrats were surveyed and photographed.  All visible mobile species were counted, and all sessile species (e.g. bivalves, some sea anemones) were scored (in percentage cover) from the photographs using the software <a
+  href="https://hcas.nova.edu/tools-and-resources/cpce/index.html"
+  target="_blank"
+  >
+  <strong>CPCe</strong>
+  </a> on computers.  A ten-minute rapid active search was also conducted during each survey to sample fast-moving crustaceans (scored using presence/absence) that could be missed during the quadrat survey.  Species richness (<i>S</i>), Shannon’s diversity (<i>H’</i>) and Pielou’s <i>J</i> evenness indices were subsequently computed.  The survey was repeated in both the hot & wet and cool & dry seasons over a period of two years, resulting in a total of four temporal snapshots of assemblage structures along Hong Kong rocky coastline.  These species compositions (both mobile and sessile species) and ecological indices are available for viewing in the biological dashboards of different sites.
+  `,
   quantifying: `
-      In terms of the physical environment and food availability on the shore, temperature loggers were deployed at HH and LM tidal heights (n = 3 at each height) to log rock temperatures every h (± 0.5 °C, Envlogger, Electricchange, Portugal) for a period of two years.  Rock chips were also taken during the surveys (n = 4 along each tidal height) to quantify Chlorophyll a (Chl a) and organic matter concentrations via spectrophotometry and loss-on-ignition techniques.  Wave force impacting the shore at each site was quantified using a custom-built wavelogger deployed at the LM tidal height, which logs static accelerations caused on a rotor blade by the incoming wave every 10 s (Pendant G logger, HOBO Onset, USA).  Shore aspect and slope were measured using compasses and clinometers, respectively.  These physical information are available for viewing in the physical dashboards of different sites.
-      `,
+  In terms of the physical environment and food availability on the shore, temperature loggers were deployed at the HH and LM tidal heights (n = 3 at each height) to log rock temperatures every h (± 0.5 °C, <a
+    href="https://electricblue.eu/envloggers"
+    target="_blank"
+    >
+    <strong>Envlogger, ElectricBlue, Portugal</strong>
+    </a>) for a period of two years.  Rock chips were also taken during the surveys (n = 4 along each tidal height) to quantify Chlorophyll <i>a</i> (Chl <i>a</i>) and organic matter concentrations via spectrophotometry and loss-on-ignition techniques.  Wave force impacting the shore at each site was quantified using a custom-built wavelogger deployed at the LM tidal height, which logs static accelerations caused on a rotor blade by the incoming wave every 10 s (<a
+    href="https://www.onsetcomp.com/products/data-loggers/ua-004-64/"
+    target="_blank"
+    >
+    <strong>HOBO Pendant G logger, Onset, USA</strong>
+    </a>).  Shore aspect and slope were measured using compasses and clinometers, respectively.  These physical information are available for viewing in the physical dashboards of different sites.
+  `,
   reference: `
     
     <p style="text-indent:-2em;">Burrows MT, Harvey R, Robb L (2008) Wave exposure indices from digital coastlines and the prediction of rocky shore community structure. <br /> Mar Ecol Prog Ser 353:1-12</p>
@@ -74,27 +89,27 @@ const state = {
     },
     {
       name: "Sessile species",
-      description: `Species with limited or no ability to move around, such as algae, bivalves (oysters and mussels) and some sea anemones.  In some cases, an entity in sessile species might not correspond to a single species but a mix of microbial species constituting an unique functional entity, e.g. high shore biofilm, that is hard to be further separated into species level in the field.`
+      description: `Species with limited or no ability to move around, such as algae, bivalves (oysters and mussels) and some sea anemones.  In some cases, an entity in sessile species might not correspond to a single species but a mix of microbial species constituting an unique functional entity, e.g. high shore biofilm, that is hard to be further separated into species level in the field/from the photographes.`
     },
     {
-      name: "Shannon’s diversity index (H’) ",
-      description: `A diversity index based on Shannon & Weaver (1949), calculated using the formula H’ = - Σ pi log pi (where i ranges from 1 to the total number of species found, and pi is the proportion of the abundance of species i in the sampling area).  A higher value of H’ indicates a more diverse assemblage at a sampling area (either by increasing the number of species or having species with more similar numbers of individuals).  In our project, H’ is calculated based on identified mobile species where count is available.`
+      name: "Shannon’s diversity index (<i>H’</i>) ",
+      description: `A diversity index based on Shannon & Weaver (1949), calculated using the formula <i>H’</i> = - Σ pi log pi (where i ranges from 1 to the total number of species found, and pi is the proportion of the abundance of species i in the sampling area).  A higher value of <i>H’</i> indicates a more diverse assemblage at a sampling area (either by increasing the number of species or having species with more similar numbers of individuals).  In our project, <i>H’</i> is calculated based on identified mobile species where counts are available.`
     },
     {
-      name: "Species richness (S)",
-      description: `The total number of either count or mobile species found in a sampling area, where counts or presence/absence data are available (either based on region/site in this GIS).`
+      name: "Species richness (<i>S</>)",
+      description: `The total number of either sessile or mobile species found in a sampling area, where counts or presence/absence data are available (either based on region/site in this GIS).`
     },
     {
-      name: "Pielou’s evenness index (J)",
-      description: `An index used to indicate the evenness of species distribution in an assemblage, calculated by dividing H’ with the maximum possible value of H’.  A higher J indicates a more even assemblage at a sampling area (species are having more similar number of individuals, instead of having heavily dominant species).  In our project, J is calculated based on identified mobile species where count is available.`
+      name: "Pielou’s evenness index (<i>J</i>)",
+      description: `An index used to indicate the evenness of species distribution in an assemblage, calculated by dividing <i>H’</i> with the maximum possible value of <i>H’</i>.  A higher <i>J</i> indicates a more even assemblage at a sampling area (species are having more similar numbers of individuals, instead of having a heavily dominant species).  In our project, <i>J</i> is calculated based on identified mobile species where counts are available.`
     },
     {
-      name: "Chlorophyll a (Chl a) concentration",
+      name: "Chlorophyll <i>a</i> (Chl <i>a</i>) concentration",
       description: `A proxy for algal/biofilm biomass on the rock surface, measured using spectrophotometry (extraction using cold methanol) and expressed in µg/cm².  A higher value indicates higher standing stock of algae/cyanobacteria on the rock surface, which could be resulted from a higher productivity in the surrounding pelagic environment, or reduced consumer pressure (less abundance of grazers on the shore, see Williams et al. 2000).`
     },
     {
       name: "Organic matter (OM) concentration",
-      description: `A proxy for total biomass (including algae, cyanobacteria, bacteria etc) on the rock surface, measured using mass loss-on-ignition (in a muffle furnace at 500 °C for 4 h) and expressed in mg/cm². `
+      description: `A proxy for total biomass (including algae, cyanobacteria, bacteria etc) on the rock surface, measured using mass loss-on-ignition (in a muffle furnace at 500 °C for 4 h) and expressed in mg/cm².`
     }
   ],
   phyGlossary: [
@@ -130,7 +145,7 @@ const state = {
       name: "Wave exposure icons",
       description: `In the regional landing page where you can select information of the four study sites within that region, there is a “wave exposure icon” next to each site.  As we deliberately selected four sites with different wave exposures within a region, the icon indicates the relative wave exposure of that site: 
         Most exposed within the region: 
-        Intermediately exposed within the region:
+        Semi-exposed within the region:
         Least exposed within the region: `
     }
   ],
