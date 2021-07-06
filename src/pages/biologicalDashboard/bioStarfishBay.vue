@@ -157,20 +157,7 @@ export default {
   components: {},
   data() {
     return {
-      mobiles: [
-        "Echinolittorin malaccana",
-        "Echinolittorin radiata",
-        "Echinolittorina vidua",
-        "Lunella granulata",
-        "Monodonta labio",
-        "Patelloida ryukyuensis",
-        "Planaxis sulcatus",
-        "Reishia clavigera",
-        "Reishia luteostoma",
-        "Siphonaria japonica",
-        "Tenguella musiva",
-        "Liolophura japonica"
-      ],
+      mobiles: [],
       sessiles: [
         "High shore biofilm",
         "Hildenbrandia rubra",
@@ -201,6 +188,17 @@ export default {
         opacity: 0.75
       }
     };
+  },
+  mounted() {
+    this.$axios
+      .get(
+        "https://spreadsheets.google.com/feeds/cells/1ecbDo_pz84uGLz9GYB_2Ptkr9lktC27VoSy1PF0kSXI/od6/public/basic?alt=json"
+      )
+      .then(response => {
+        response.data.feed.entry.map(doc => {
+          this.mobiles.push(doc.content.$t);
+        });
+      });
   }
 };
 </script>
