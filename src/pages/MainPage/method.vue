@@ -37,12 +37,12 @@
           </div>
         </div>
         <div class="q-px-lg" style="width:60%">
-          <div class="text-subtitle1">
+          <div class="text-subtitle1" v-html="method1">
             {{ method1 }}
           </div>
           <br />
           <br />
-          <div class="text-subtitle1">
+          <div class="text-subtitle1" v-html="method2">
             {{ method2 }}
           </div>
         </div>
@@ -55,7 +55,9 @@
       </div>
       <div class="row justify-evenly">
         <div class="col-5">
-          <div class="q-px-lg text-subtitle1">{{ quantifying }}</div>
+          <div class="q-px-lg text-subtitle1" v-html="quantifying">
+            {{ quantifying }}
+          </div>
         </div>
         <div class="col-6">
           <q-img style="width:50%" src="~/assets/method5.png" />
@@ -92,13 +94,13 @@
       >
         <template v-slot:body-cell-name="props">
           <q-td :props="props">
-            <div>
+            <div v-html="props.value">
               {{ props.value }}
             </div>
           </q-td>
 
           <q-td :props="props">
-            <div class="description">
+            <div class="description" v-html="props.row.description">
               {{ props.row.description }}
             </div>
           </q-td>
