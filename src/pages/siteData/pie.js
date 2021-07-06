@@ -70,7 +70,7 @@ export const pieData = {
       }
     ]
   },
-  SBPie3: {
+  SBPie2: {
     chart: {
       type: "pie",
       height: (1 / 1) * 100 + "%" // 3:4 ratio

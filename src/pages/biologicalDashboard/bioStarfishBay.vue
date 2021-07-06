@@ -90,26 +90,6 @@
               </q-list>
             </q-scroll-area>
           </div>
-          <!-- <q-list
-              dense
-              bordeteal
-              separator
-              padding
-              class="bg-teal-1 text-caption rounded-borders"
-              style="width: 180px"
-            >
-              <q-item
-                clickable
-                v-ripple
-                v-for="mobile in mobiles"
-                :key="mobile.message"
-              >
-                <q-item-section>
-                  <i>{{ mobile }} </i>
-                </q-item-section>
-              </q-item>
-            </q-list> -->
-
         </q-card>
 
         <q-card class="col-8 chartCard">
@@ -133,19 +113,13 @@
             <div class="col-3 tab2">summer</div>
           </div>
           <q-card-section horizontal>
-            <highcharts
-              class="col-3"
-              :options="pieChart1"
-            ></highcharts>
+            <highcharts class="col-3" :options="pieChart1"></highcharts>
             <div class="col-3 noData">
               Summer data <br />
               Not available yet
             </div>
             <q-separator vertical />
-            <highcharts
-              class="col-3"
-              :options="pieChart3"
-            ></highcharts>
+            <highcharts class="col-3" :options="pieChart2"></highcharts>
             <div class="col-3 noData">
               Summer data <br />
               Not available yet
@@ -159,24 +133,12 @@
             <div class="col-4 tab2">Species richness S</div>
           </div>
 
-          <q-card-section
-            horizontal
-            class="row"
-          >
-            <highcharts
-              class="col-4"
-              :options="barChart1"
-            ></highcharts>
+          <q-card-section horizontal class="row">
+            <highcharts class="col-4" :options="barChart1"></highcharts>
             <q-separator vertical />
-            <highcharts
-              class="col-4"
-              :options="barChart2"
-            ></highcharts>
+            <highcharts class="col-4" :options="barChart2"></highcharts>
             <q-separator vertical />
-            <highcharts
-              class="col-4"
-              :options="barChart3"
-            ></highcharts>
+            <highcharts class="col-4" :options="barChart3"></highcharts>
           </q-card-section>
         </q-card>
       </div>
@@ -207,7 +169,7 @@ export default {
         "Reishia luteostoma",
         "Siphonaria japonica",
         "Tenguella musiva",
-        "Liolophura japonica",
+        "Liolophura japonica"
       ],
       sessiles: [
         "High shore biofilm",
@@ -223,25 +185,23 @@ export default {
         "Brachidontes variabilis",
         "Isognomon ephippium",
         "Saccostrea cuccullata",
-        "Xenostrobus securis",
+        "Xenostrobus securis"
       ],
       barChart1: barData.SBBar1,
       barChart2: barData.SBBar2,
       barChart3: barData.SBBar3,
 
       pieChart1: pieData.SBPie1,
-      // pieChart2: pieData.SBPie1,
-      pieChart3: pieData.SBPie3,
-      // pieChart4: pieData.SBPie1,
+      pieChart2: pieData.SBPie2,
       thumbStyle: {
         right: "4px",
         borderRadius: "5px",
         backgroundColor: "#24A9A9",
         width: "5px",
-        opacity: 0.75,
-      },
+        opacity: 0.75
+      }
     };
-  },
+  }
 };
 </script>
 

@@ -46,37 +46,12 @@ export const tempData = {
         name: "HH Temperature",
         color: "#D67E32",
         data: [
-          // [0, 18.56],
-          // [1, 17.98],
-          // [2, 17.43],
-          // [3, 17.07],
-          // [4, 16.78],
-          // [5, 16.52],
-          // [6, 16.26],
-          // [7, 16.0],
-          // [8, 16.44],
-          // [9, 17.35],
-          // [10, 18.43],
-          // [11, 19.83],
-          // [12, 18.11],
-          // [13, 19.74],
-          // [14, 20.52],
-          // [15, 20.78],
-          // [16, 19.89],
-          // [17, 18.02],
-          // [18, 16.85],
-          // [19, 16.11],
-          // [20, 15.85],
-          // [21, 15.78],
-          // [22, 16.11],
-          // [23, 16.44]
+          // this part moved to firebase
         ],
         zIndex: 1,
         marker: {
           enabled: false,
           lineWidth: 2
-          // fillColor: "white",
-          // lineColor: Highcharts.getOptions().colors[0]
         }
       },
       {
@@ -111,7 +86,6 @@ export const tempData = {
         type: "arearange",
         lineWidth: 0,
         linkedTo: ":previous",
-        // color: Highcharts.getOptions().colors[0],
         fillOpacity: 0.3,
         zIndex: 0,
         marker: {
@@ -151,8 +125,6 @@ export const tempData = {
         marker: {
           enabled: false,
           lineWidth: 2
-          // fillColor: "white",
-          // lineColor: Highcharts.getOptions().colors[0]
         }
       },
       {
@@ -187,7 +159,6 @@ export const tempData = {
         type: "arearange",
         lineWidth: 0,
         linkedTo: ":previous",
-        // color: Highcharts.getOptions().colors[0],
         fillOpacity: 0.3,
         zIndex: 0,
         marker: {
@@ -234,7 +205,6 @@ export const tempData = {
       valueSuffix: "°C"
     },
     legend: {
-      // enabled: true,
       layout: "proximate",
       align: "right",
       verticalAlign: "middle"
@@ -273,8 +243,6 @@ export const tempData = {
         marker: {
           enabled: false,
           lineWidth: 2
-          // fillColor: "white",
-          // lineColor: Highcharts.getOptions().colors[0]
         }
       },
       {
@@ -309,7 +277,6 @@ export const tempData = {
         type: "arearange",
         lineWidth: 0,
         linkedTo: ":previous",
-        // color: Highcharts.getOptions().colors[0],
         fillOpacity: 0.3,
         zIndex: 0,
         marker: {
@@ -349,8 +316,6 @@ export const tempData = {
         marker: {
           enabled: false,
           lineWidth: 2
-          // fillColor: "white",
-          // lineColor: Highcharts.getOptions().colors[0]
         }
       },
       {
@@ -385,7 +350,6 @@ export const tempData = {
         type: "arearange",
         lineWidth: 0,
         linkedTo: ":previous",
-        // color: Highcharts.getOptions().colors[0],
         fillOpacity: 0.3,
         zIndex: 0,
         marker: {
