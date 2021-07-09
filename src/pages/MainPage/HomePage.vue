@@ -12,13 +12,12 @@
       @mouseenter="autoplay = true"
       @mouseleave="autoplay = true"
     >
-      <q-carousel-slide :name="1" img-src="~/assets/images/carousel1.jpg" />
-      <q-carousel-slide :name="2" img-src="~/assets/images/carousel2.jpg" />
-      <q-carousel-slide :name="3" img-src="~/assets/images/carousel3.jpg" />
-      <q-carousel-slide :name="4" img-src="~/assets/images/carousel4.jpg" />
-      <q-carousel-slide :name="5" img-src="~/assets/images/carousel5.jpg" />
-      <q-carousel-slide :name="6" img-src="~/assets/images/carousel6.jpg" />
-      <q-carousel-slide :name="7" img-src="~/assets/images/carousel9.jpg" />
+      <q-carousel-slide
+        v-for="slide in slides"
+        :key="slide.id"
+        :name="slide.id"
+        :img-src="slide.src"
+      />
     </q-carousel>
 
     <div class="q-pa-xl bg-indigo-2 justify-center">
@@ -64,7 +63,7 @@
             </div>
           </video-background>
         </div>
-        <div class="q-pa-sm text-subtitle1">
+        <div class="q-pa-sm text-subtitle1" v-html="HKRockyShore3">
           {{ HKRockyShore3 }}
         </div>
       </div>
@@ -171,7 +170,6 @@
     </q-card>
 
     <q-card flat bordered class="q-ma-sm maincard">
-      <!-- add the aviable links -->
       <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
         Meet the TideChasers
       </div>
@@ -181,8 +179,6 @@
         </div>
         <q-img class="col-5" src="~/assets/groupphoto.jpg" />
       </q-card-section>
-
-      <!-- breakpoint of the section -->
     </q-card>
 
     <q-card bordered flat class="q-ma-sm bg-white maincard">
@@ -256,15 +252,16 @@
 import Vue from "vue";
 import VideoBackground from "vue-responsive-video-background-player";
 Vue.component("video-background", VideoBackground);
+import slides from "./carouselSlides";
 
 export default {
   name: "PageIndex",
   data() {
     return {
       resume: false,
-      tab: "interactiveHabitat",
       slide: 1,
-      autoplay: false
+      autoplay: true,
+      slides: slides
     };
   },
   methods: {
