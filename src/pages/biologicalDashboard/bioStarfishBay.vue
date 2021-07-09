@@ -51,7 +51,6 @@
                 separator
                 padding
                 class="bg-teal-1 text-caption rounded-borders"
-                style="width: 180px"
               >
                 <q-item
                   clickable
@@ -59,6 +58,9 @@
                   v-for="mobile in mobiles"
                   :key="mobile.message"
                 >
+                  <q-item-section avatar>
+                    <q-icon name="horizontal_rule" style="display: none" />
+                  </q-item-section>
                   <q-item-section>
                     <i>{{ mobile }} </i>
                   </q-item-section>
@@ -75,7 +77,6 @@
                 separator
                 padding
                 class="bg-teal-1 text-caption rounded-borders"
-                style="width: 180px"
               >
                 <q-item
                   clickable
@@ -83,6 +84,9 @@
                   v-for="sessile in sessiles"
                   :key="sessile.message"
                 >
+                  <q-item-section avatar>
+                    <q-icon name="horizontal_rule" style="display: none" />
+                  </q-item-section>
                   <q-item-section>
                     <i>{{ sessile }} </i>
                   </q-item-section>
@@ -177,20 +181,40 @@ export default {
   mounted() {
     this.$axios
       .get(
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?output=csv"
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=0&single=true&output=csv"
       )
       .then(response => {
-        const speciesName = csv2json(response.data);
+        const SBbio = csv2json(response.data);
 
-        speciesName.map(doc => {
-          let cacheMobile = [];
-          cacheMobile.push(doc.mobile); // store all records
-          for (let i of cacheMobile) i && this.mobiles.push(i); // copy only non-empty values then push to the data array specified for display
+        SBbio.map(doc => {
+          let cacheMobileName = [];
+          cacheMobileName.push(doc.mobile); // store all records
+          for (let i of cacheMobileName) i && this.mobiles.push(i); // copy only non-empty values then push to the data array specified for display
 
-          let cacheSessile = [];
-          cacheSessile.push(doc.sessile);
-          for (let j of cacheSessile) j && this.sessiles.push(j);
+          let cacheSessileName = [];
+          cacheSessileName.push(doc.sessile);
+          for (let j of cacheSessileName) j && this.sessiles.push(j);
         });
+      });
+
+    this.$axios
+      .get(
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=1752414671&single=true&output=csv"
+      )
+      .then(response => {
+        const pieChart = csv2json(response.data);
+
+        let cacheMobilePie = [];
+        pieChart.map(doc => {
+          cacheMobilePie.push([doc.pieMobile, parseInt(doc.pieMobileCnt)]);
+        });
+        this.pieChart1.series[0].data = cacheMobilePie;
+
+        let cacheSessilePie = [];
+        pieChart.map(doc => {
+          cacheSessilePie.push([doc.pieSessile, parseInt(doc.pieSessileCnt)]);
+        });
+        this.pieChart2.series[0].data = cacheSessilePie;
       });
   }
 };
