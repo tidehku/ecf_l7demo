@@ -152,32 +152,17 @@ import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
 import { pieData } from "../siteData/pie";
 import { barData } from "../siteData/bar";
+import csv2json from "csvjson-csv2json";
 
 export default {
   components: {},
   data() {
     return {
       mobiles: [],
-      sessiles: [
-        "High shore biofilm",
-        "Hildenbrandia rubra",
-        "Pseudulvella applanata",
-        "Ulva lactuca",
-        "Gelidium pusillum",
-        "Amphibalanus amphitrite",
-        "Capitulum mitella",
-        "Tetraclita squamosa",
-        "Diadumene lineata",
-        "Barbatia virescens",
-        "Brachidontes variabilis",
-        "Isognomon ephippium",
-        "Saccostrea cuccullata",
-        "Xenostrobus securis"
-      ],
+      sessiles: [],
       barChart1: barData.SBBar1,
       barChart2: barData.SBBar2,
       barChart3: barData.SBBar3,
-
       pieChart1: pieData.SBPie1,
       pieChart2: pieData.SBPie2,
       thumbStyle: {
@@ -192,11 +177,19 @@ export default {
   mounted() {
     this.$axios
       .get(
-        "https://spreadsheets.google.com/feeds/cells/1ecbDo_pz84uGLz9GYB_2Ptkr9lktC27VoSy1PF0kSXI/od6/public/basic?alt=json"
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?output=csv"
       )
       .then(response => {
-        response.data.feed.entry.map(doc => {
-          this.mobiles.push(doc.content.$t);
+        const speciesName = csv2json(response.data);
+
+        speciesName.map(doc => {
+          let cacheMobile = [];
+          cacheMobile.push(doc.mobile); // store all records
+          for (let i of cacheMobile) i && this.mobiles.push(i); // copy only non-empty values then push to the data array specified for display
+
+          let cacheSessile = [];
+          cacheSessile.push(doc.sessile);
+          for (let j of cacheSessile) j && this.sessiles.push(j);
         });
       });
   }
