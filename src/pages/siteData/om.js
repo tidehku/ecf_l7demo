@@ -38,13 +38,7 @@ export const omData = {
         colorByPoint: true,
         colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
         showInLegend: false,
-        data: [
-          ["3.00", 3.63],
-          ["2.66", 4.84],
-          ["2.31", 5.48],
-          ["1.97", 5.91],
-          ["1.62", 5.53]
-        ]
+        data: []
       }
     ]
   },
