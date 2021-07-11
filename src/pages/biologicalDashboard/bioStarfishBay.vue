@@ -19,7 +19,7 @@
         dense
         icon="keyboard_backspace"
         class="bg-white text-teal"
-        to="/interactiveHabitat/SW"
+        to="/interactiveHabitat/TL"
       >
         <q-tooltip>
           Go back
@@ -179,31 +179,36 @@ export default {
     };
   },
   mounted() {
-    this.$axios
-      .get(
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=0&single=true&output=csv"
-      )
-      .then(response => {
-        const SBbio = csv2json(response.data);
+    let name =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=0&single=true&output=csv";
 
+    let pie =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=1752414671&single=true&output=csv";
+
+    let bar =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=588301274&single=true&output=csv";
+
+    const requestName = this.$axios.get(name);
+
+    const requestPie = this.$axios.get(pie);
+
+    const requestBar = this.$axios.get(bar);
+
+    this.$axios.all([requestName, requestPie, requestBar]).then(
+      this.$axios.spread((...responses) => {
+        // name
+        const SBbio = csv2json(responses[0].data);
         SBbio.map(doc => {
           let cacheMobileName = [];
           cacheMobileName.push(doc.mobile); // store all records
           for (let i of cacheMobileName) i && this.mobiles.push(i); // copy only non-empty values then push to the data array specified for display
-
           let cacheSessileName = [];
           cacheSessileName.push(doc.sessile);
           for (let j of cacheSessileName) j && this.sessiles.push(j);
         });
-      });
 
-    this.$axios
-      .get(
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=1752414671&single=true&output=csv"
-      )
-      .then(response => {
-        const pieChart = csv2json(response.data);
-
+        // pie
+        const pieChart = csv2json(responses[1].data);
         let cacheMobilePie = [];
         pieChart.map(doc => {
           cacheMobilePie.push([doc.pieMobile, parseInt(doc.pieMobileCnt)]);
@@ -215,7 +220,37 @@ export default {
           cacheSessilePie.push([doc.pieSessile, parseInt(doc.pieSessileCnt)]);
         });
         this.pieChart2.series[0].data = cacheSessilePie;
-      });
+
+        // bar
+        const barChart = csv2json(responses[2].data);
+        let cacheShannon = [];
+        barChart.map(doc => {
+          cacheShannon.push([
+            [doc.commonx].toString(),
+            parseFloat([doc.shannony])
+          ]);
+        });
+        this.barChart1.series[0].data = cacheShannon;
+
+        let cachePielou = [];
+        barChart.map(doc => {
+          cachePielou.push([
+            [doc.commonx].toString(),
+            parseFloat([doc.pielouy])
+          ]);
+        });
+        this.barChart2.series[0].data = cachePielou;
+
+        let cacheRichness = [];
+        barChart.map(doc => {
+          cacheRichness.push([
+            [doc.commonx].toString(),
+            parseFloat([doc.richnessy])
+          ]);
+        });
+        this.barChart3.series[0].data = cacheRichness;
+      })
+    );
   }
 };
 </script>
