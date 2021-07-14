@@ -51,7 +51,6 @@
                 separator
                 padding
                 class="bg-teal-1 text-caption rounded-borders"
-                style="width: 180px"
               >
                 <q-item
                   clickable
@@ -59,6 +58,9 @@
                   v-for="mobile in mobiles"
                   :key="mobile.message"
                 >
+                  <q-item-section avatar>
+                    <q-icon name="horizontal_rule" style="display: none" />
+                  </q-item-section>
                   <q-item-section>
                     <i>{{ mobile }} </i>
                   </q-item-section>
@@ -75,7 +77,6 @@
                 separator
                 padding
                 class="bg-teal-1 text-caption rounded-borders"
-                style="width: 180px"
               >
                 <q-item
                   clickable
@@ -83,6 +84,9 @@
                   v-for="sessile in sessiles"
                   :key="sessile.message"
                 >
+                  <q-item-section avatar>
+                    <q-icon name="horizontal_rule" style="display: none" />
+                  </q-item-section>
                   <q-item-section>
                     <i>{{ sessile }} </i>
                   </q-item-section>
@@ -113,19 +117,13 @@
             <div class="col-3 tab2">summer</div>
           </div>
           <q-card-section horizontal>
-            <highcharts
-              class="col-3"
-              :options="pieChart1"
-            ></highcharts>
+            <highcharts class="col-3" :options="pieChart1"></highcharts>
             <div class="col-3 noData">
               Summer data <br />
               Not available yet
             </div>
             <q-separator vertical />
-            <highcharts
-              class="col-3"
-              :options="pieChart3"
-            ></highcharts>
+            <highcharts class="col-3" :options="pieChart2"></highcharts>
             <div class="col-3 noData">
               Summer data <br />
               Not available yet
@@ -139,24 +137,12 @@
             <div class="col-4 tab2">Species richness S</div>
           </div>
 
-          <q-card-section
-            horizontal
-            class="row"
-          >
-            <highcharts
-              class="col-4"
-              :options="barChart1"
-            ></highcharts>
+          <q-card-section horizontal class="row">
+            <highcharts class="col-4" :options="barChart1"></highcharts>
             <q-separator vertical />
-            <highcharts
-              class="col-4"
-              :options="barChart2"
-            ></highcharts>
+            <highcharts class="col-4" :options="barChart2"></highcharts>
             <q-separator vertical />
-            <highcharts
-              class="col-4"
-              :options="barChart3"
-            ></highcharts>
+            <highcharts class="col-4" :options="barChart3"></highcharts>
           </q-card-section>
         </q-card>
       </div>
@@ -170,68 +156,102 @@ import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
 import { pieData } from "../siteData/pie";
 import { barData } from "../siteData/bar";
+import csv2json from "csvjson-csv2json";
 
 export default {
   components: {},
   data() {
     return {
-      mobiles: [
-        "Cellana	grata",
-        "Cellana	toreuma",
-        "Echinolittorina	radiata",
-        "Echinolittorina	vidua",
-        "Littoraria	sinensis",
-        "Lottia	luchuana",
-        "Nerita	yoldii",
-        "Nipponacmea fuscoviridis",
-        "Patelloida ryukyuensis",
-        "Patelloida saccharina",
-        "Peasiella sp.",
-        "Reishia clavigera",
-        "Siphonaria	japonica",
-        "Siphonaria	laciniosa",
-        "Diadumene lineata",
-        "Unidentified baby snails",
-        "Unidentified baby limpets",
-      ],
-      sessiles: [
-        "Encrusting coralline algae",
-        "Hildenbrandia rubra",
-        "Pseudulvella applanata",
-        "Middle Bay brown biofilm ",
-        "Ulva lactuca",
-        "Feldmannia mitchelliae",
-        "Centroceras sp.",
-        "Corallina sp.",
-        "Gelidium sp.",
-        "Hydroides sp.",
-        "Amphibalanus amphitrite",
-        "Capitulum mitella",
-        "Chthamalus malayensis",
-        "Tetraclita japonica",
-        "Tetraclita squamosa",
-        "Barbatia virescens",
-        "Perna viridis",
-        "Planostrea pestigris",
-        "Saccostrea cuccullata",
-      ],
+      mobiles: [],
+      sessiles: [],
       barChart1: barData.TOBar1,
       barChart2: barData.TOBar2,
       barChart3: barData.TOBar3,
-
       pieChart1: pieData.TOPie1,
-      // pieChart2: pieData.TOPie1,
-      pieChart3: pieData.TOPie3,
-      // pieChart4: pieData.TOPie1,
+      pieChart2: pieData.TOPie2,
       thumbStyle: {
         right: "4px",
         borderRadius: "5px",
         backgroundColor: "#24A9A9",
         width: "5px",
-        opacity: 0.75,
-      },
+        opacity: 0.75
+      }
     };
   },
+  mounted() {
+    let name =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4wp5Dl-Sm-sI9DYjezihdkVgz2gVS6rakgFfn_9SdPKOYrUoHzLaEomqP19Qmy75bUcIHFLiaYjqD/pub?gid=0&single=true&output=csv";
+
+    let pie =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4wp5Dl-Sm-sI9DYjezihdkVgz2gVS6rakgFfn_9SdPKOYrUoHzLaEomqP19Qmy75bUcIHFLiaYjqD/pub?gid=1752414671&single=true&output=csv";
+
+    let bar =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4wp5Dl-Sm-sI9DYjezihdkVgz2gVS6rakgFfn_9SdPKOYrUoHzLaEomqP19Qmy75bUcIHFLiaYjqD/pub?gid=588301274&single=true&output=csv";
+
+    const requestName = this.$axios.get(name);
+
+    const requestPie = this.$axios.get(pie);
+
+    const requestBar = this.$axios.get(bar);
+
+    this.$axios.all([requestName, requestPie, requestBar]).then(
+      this.$axios.spread((...responses) => {
+        // name
+        const recordName = csv2json(responses[0].data);
+        recordName.map(doc => {
+          let cacheMobileName = [];
+          cacheMobileName.push(doc.mobile);
+          for (let i of cacheMobileName) i && this.mobiles.push(i);
+          let cacheSessileName = [];
+          cacheSessileName.push(doc.sessile);
+          for (let j of cacheSessileName) j && this.sessiles.push(j);
+        });
+
+        // pie
+        const pieChart = csv2json(responses[1].data);
+        let cacheMobilePie = [];
+        pieChart.map(doc => {
+          cacheMobilePie.push([doc.pieMobile, parseInt(doc.pieMobileCnt)]);
+        });
+        this.pieChart1.series[0].data = cacheMobilePie;
+
+        let cacheSessilePie = [];
+        pieChart.map(doc => {
+          cacheSessilePie.push([doc.pieSessile, parseInt(doc.pieSessileCnt)]);
+        });
+        this.pieChart2.series[0].data = cacheSessilePie;
+
+        // bar
+        const barChart = csv2json(responses[2].data);
+        let cacheShannon = [];
+        barChart.map(doc => {
+          cacheShannon.push([
+            [doc.commonx].toString(),
+            parseFloat([doc.shannony])
+          ]);
+        });
+        this.barChart1.series[0].data = cacheShannon;
+
+        let cachePielou = [];
+        barChart.map(doc => {
+          cachePielou.push([
+            [doc.commonx].toString(),
+            parseFloat([doc.pielouy])
+          ]);
+        });
+        this.barChart2.series[0].data = cachePielou;
+
+        let cacheRichness = [];
+        barChart.map(doc => {
+          cacheRichness.push([
+            [doc.commonx].toString(),
+            parseFloat([doc.richnessy])
+          ]);
+        });
+        this.barChart3.series[0].data = cacheRichness;
+      })
+    );
+  }
 };
 </script>
 

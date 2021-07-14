@@ -106,17 +106,11 @@ export const pieData = {
         colorByPoint: true,
         colors: ["#719DC8", "#79C6D1", "#a0c2a0", "#ffdc73", "#e8a969"],
         showInLegend: false,
-        data: [
-          ["Patelloida saccharina", 565],
-          ["Patelloida ryukyuensis", 246],
-          ["Echinolittorina radiata", 202],
-          ["Cellana toreuma", 158],
-          ["Reishia clavigera", 89]
-        ]
+        data: []
       }
     ]
   },
-  TOPie3: {
+  TOPie2: {
     chart: {
       type: "pie",
       height: (1 / 1) * 100 + "%" // 3:4 ratio
@@ -149,13 +143,7 @@ export const pieData = {
         colorByPoint: true,
         colors: ["#719DC8", "#79C6D1", "#a0c2a0", "#ffdc73", "#e8a969"],
         showInLegend: false,
-        data: [
-          ["Ulva lactuca", 38],
-          ["Gelidium sp.", 31],
-          ["Hildenbrandia rubra", 26],
-          ["Saccostrea cuccullata", 24],
-          ["Feldmannia mitchelliae", 23]
-        ]
+        data: []
       }
     ]
   }

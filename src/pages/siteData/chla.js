@@ -81,14 +81,7 @@ export const chlaData = {
         colorByPoint: true,
         colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
         showInLegend: true,
-        data: [
-          ["2.45", 4.77],
-          ["2.18", 11.8],
-          ["1.90", 15.45],
-          ["1.63", 16.59],
-          ["1.36", 43.46],
-          ["1.08", 126.85]
-        ]
+        data: []
       }
     ]
   }

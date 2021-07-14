@@ -171,14 +171,7 @@ export const barData = {
         colorByPoint: true,
         colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
         showInLegend: false,
-        data: [
-          ["2.45", 0.72],
-          ["2.18", 1.53],
-          ["1.90", 1.26],
-          ["1.63", 1.23],
-          ["1.36", 1.5],
-          ["1.08", 0.99]
-        ]
+        data: []
       }
     ]
   },
@@ -222,14 +215,7 @@ export const barData = {
         colorByPoint: true,
         colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
         showInLegend: false,
-        data: [
-          ["2.45", 0.35],
-          ["2.18", 0.67],
-          ["1.90", 0.61],
-          ["1.63", 0.63],
-          ["1.36", 0.77],
-          ["1.08", 0.9]
-        ]
+        data: []
       }
     ]
   },
@@ -273,14 +259,7 @@ export const barData = {
         colorByPoint: true,
         colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
         showInLegend: false,
-        data: [
-          ["2.45", 8],
-          ["2.18", 9],
-          ["1.90", 8],
-          ["1.63", 7],
-          ["1.36", 7],
-          ["1.08", 3]
-        ]
+        data: []
       }
     ]
   }
