@@ -125,7 +125,7 @@ export default {
     return {
       Temperature1: tempData.SBTemperature1,
       Chla1: chlaData.SBChla1,
-      OM1: omData.SBOm1
+      OM1: omData.TLSBOm1
     };
   },
   mounted() {

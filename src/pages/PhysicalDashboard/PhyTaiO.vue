@@ -10,7 +10,7 @@
         icon="eco"
         color="white"
         text-color="blue-8"
-        to="/interactiveHabitat/phyTaiO"
+        to="/interactiveHabitat/bioTaiO"
       >
         <q-tooltip>
           Switch to Biological Dashboard
@@ -124,7 +124,7 @@ export default {
     return {
       Temperature1: tempData.TOTemperature1,
       Chla1: chlaData.TOChla1,
-      OM1: omData.TOOm1
+      OM1: omData.NWTOOm1
     };
   },
   mounted() {
