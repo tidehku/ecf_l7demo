@@ -2,7 +2,7 @@
   <q-page class="justify-center">
     <q-bar elevated class="bg-blue-9 text-white">
       <div class="text-bold row justify-center">
-        Physical Dashboard of Starfish Bay, Tolo Habour Region
+        Physical Dashboard of Starfish Bay, Tolo Harbour Region
       </div>
       <q-space />
       <q-btn

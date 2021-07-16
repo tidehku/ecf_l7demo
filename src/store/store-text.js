@@ -23,10 +23,12 @@ const state = {
             target="_blank"
           >
             <strong>Tropical IntertiDal Ecology (TIDE) Group</strong>
-          </a> led by Prof. Gray A. Williams at the Swire Institute of Marine Science, the University of Hong Kong. This GIS was developed by Yvonne Li and Yifei Gu, computer specialists in the TIDE group. The team would also like to thank other members of the group for their tremendous help both on the shore and in the laboratory, and Simon Tse for his kind assistance (and lots of video recordings!) during our fieldwork.  The cool cartoons in the MAP page were drawn by Miss Kam Yan Chit, a final year UG student in our group during 2020 to 2021. Numerous volunteers helped us in the field, recording species datasheets, looking for cool species and/or getting splashed by the waves … Thanks also go to Rachel, Cecily, Hong and Alan for their assistance in ordering equipment and local transportation.
-
+          </a> led by Prof. Gray A. Williams at the Swire Institute of Marine Science, the University of Hong Kong. This GIS was developed by Yvonne Li and Yifei Gu, computer specialists in the TIDE group. The team would also like to thank other members of the group for their tremendous help both on the shore and in the laboratory, and Simon Tse for his kind assistance (and lots of video recordings!) during our fieldwork.  The cool cartoons in the <a href="./#/interactiveHabitat">MAP</a> page were drawn by Miss Kam Yan Chit, a final year UG student in our group during 2020 to 2021. Numerous volunteers helped us in the field, recording species datasheets, looking for cool species and/or getting splashed by the waves … Thanks also go to Rachel, Cecily, Hong and Alan for their assistance in ordering equipment and local transportation.
+<br />
+<br />
           We are grateful to Ir. Dr. Ryan Wong and Mr. Kuen (Department of Civil Engineering, HKU) for their help in lending the GNSS RTK system to us for accurately locating transect positions and heights.  We are also indebted to numerous taxonomists: Dr. Benny Chan (Academia Sinica, Taiwan), Mr. Kingsley Wong (National Taiwan University, Taiwan), Dr. Suzanne Williams (Natural History Museum, UK), Dr. Yuri Kantor (Russian Academy of Science, Russia) and Dr. David Reid who kindly shared their expertises and identified specimens for us.
-          
+          <br />
+          <br />
           Finally, we sincerely thank the Environment Conservation Fund, HKSAR, which financed the project (grant number 105/2019).          
           `,
   stratification: `

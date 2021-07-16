@@ -183,7 +183,7 @@ export default {
           sites: ["Peng Chau", "Pui O", "Shui Tseng", "Tai Long Wan"]
         },
         {
-          label: "Tolo Habour",
+          label: "Tolo Harbour",
           sites: ["Lai Chi Chong", "Ma Shi Chau", "Starfish Bay", "Tseng Tau"]
         }
       ],

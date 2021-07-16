@@ -2,7 +2,7 @@
   <q-page class="justify-center">
     <q-bar class="bg-teal-8 text-white">
       <div class="text-bold row justify-center">
-        Biological Dashboard of Starfish Bay, Tolo Habour Region
+        Biological Dashboard of Starfish Bay, Tolo Harbour Region
       </div>
       <q-space />
       <q-btn
