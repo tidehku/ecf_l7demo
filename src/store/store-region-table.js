@@ -10,7 +10,7 @@ const state = {
       data: `22°23'53.9"N 114°22'31.3"E`
     },
     {
-      name: "Tidal Range",
+      name: "Transect tidal range",
       data: "1.1 m - 4.1 m + C.D."
     },
     {
@@ -22,7 +22,7 @@ const state = {
       data: "Exposed"
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "4.56 N"
     },
     {
@@ -48,7 +48,7 @@ const state = {
       data: `22°15'09.9" N, 114°07'55.3" E`
     },
     {
-      name: "Tidal Range",
+      name: "Transect tidal range",
       data: "1.0 m - 2.9 m + C.D."
     },
     {
@@ -60,7 +60,7 @@ const state = {
       data: "Semi - exposed"
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "3.02 N"
     },
     {
@@ -86,7 +86,7 @@ const state = {
       data: `22°13'45.6"N, 114°11'48.2"E `
     },
     {
-      name: "Tidal Range",
+      name: "Transect tidal range",
       data: "1.0 m - 2.3 m + C.D."
     },
     {
@@ -98,7 +98,7 @@ const state = {
       data: "Intermediate"
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "1.91 N"
     },
     {
@@ -124,7 +124,7 @@ const state = {
       data: `22°14'14.9"N, 114°13'43.6"E `
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.1 m - 2.7 m + C.D."
     },
     {
@@ -136,7 +136,7 @@ const state = {
       data: "Sheltered"
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "2.00 N"
     },
     {
@@ -162,7 +162,7 @@ const state = {
       data: `22°31'05.7"N, 114°19'10.4"E`
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.1 m - 3.0 m + C.D."
     },
     {
@@ -174,7 +174,7 @@ const state = {
       data: "Intermediate"
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "2.06 N"
     },
     {
@@ -200,7 +200,7 @@ const state = {
       data: `22°33'03.7"N, 114°17'50.0"E`
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.3 m - 3.4 m + C.D."
     },
     {
@@ -212,7 +212,7 @@ const state = {
       data: "Intermediate"
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "/"
     },
     {
@@ -238,7 +238,7 @@ const state = {
       data: `22°32'58.0"N, 114°14'49.8"E`
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.2 m - 3.2 m + C.D."
     },
     {
@@ -250,7 +250,7 @@ const state = {
       data: "Intermediate"
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "/"
     },
     {
@@ -276,7 +276,7 @@ const state = {
       data: `22°30'04.6"N, 114°18'05.1"E`
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.1 m - 2.7 m + C.D."
     },
     {
@@ -288,7 +288,7 @@ const state = {
       data: "Sheltered"
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "2.46 N"
     },
     {
@@ -314,7 +314,7 @@ const state = {
       data: `22°15'25.8"N, 113°51'11.3"E`,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.1 m - 2.5 m + C.D.",
     },
     {
@@ -326,7 +326,7 @@ const state = {
       data: "Intermediate - exposed",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "1.32 N",
     },
     {
@@ -352,7 +352,7 @@ const state = {
       data: `22°21'45.3"N, 114°00'37.4"E`,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "0.8 m - 3.0 m + C.D.",
     },
     {
@@ -364,7 +364,7 @@ const state = {
       data: "Intermediate",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "1.59 N",
     },
     {
@@ -390,7 +390,7 @@ const state = {
       data: `22°20'03.8"N, 114°01'24.5"E`,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.1 m - 2.5 m + C.D.",
     },
     {
@@ -402,7 +402,7 @@ const state = {
       data: "Sheltered",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "1.46 N",
     },
     {
@@ -428,7 +428,7 @@ const state = {
       data: `22°23'32.5"N, 113°54'58.8"E `,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.0 m - 2.8 m + C.D.",
     },
     {
@@ -440,7 +440,7 @@ const state = {
       data: "Intermediate",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "2.14 N",
     },
     {
@@ -466,7 +466,7 @@ const state = {
       data: `22°13'43.2"N, 114°15'22.7"E `,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "0.9 m - 2.9 m + C.D.",
     },
     {
@@ -478,7 +478,7 @@ const state = {
       data: "Exposed",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "5.94 N",
     },
     {
@@ -504,7 +504,7 @@ const state = {
       data: `22°15'09.9" N, 114°07'55.3" E`,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.0 m - 2.9 m + C.D.",
     },
     {
@@ -516,7 +516,7 @@ const state = {
       data: "Semi - exposed",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "3.02 N",
     },
     {
@@ -542,7 +542,7 @@ const state = {
       data: `22°13'45.6"N, 114°11'48.2"E `,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.0 m - 2.3 m + C.D.",
     },
     {
@@ -554,7 +554,7 @@ const state = {
       data: "Intermediate",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "1.91 N",
     },
     {
@@ -580,7 +580,7 @@ const state = {
       data: `22°14'14.9"N, 114°13'43.6"E `,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.1 m - 2.7 m + C.D.",
     },
     {
@@ -592,7 +592,7 @@ const state = {
       data: "Sheltered",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "2.00 N",
     },
     {
@@ -618,7 +618,7 @@ const state = {
       data: `22°13'02.0"N, 113°52'53.5"E`,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.0 m - 3.8 m + C.D.",
     },
     {
@@ -630,7 +630,7 @@ const state = {
       data: "Exposed",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "/",
     },
     {
@@ -656,7 +656,7 @@ const state = {
       data: `22°15'00.6"N, 114°00'24.0"E`,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.0 m - 2.8 m + C.D.",
     },
     {
@@ -669,7 +669,7 @@ const state = {
       data: "Intermediate",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "/",
     },
     {
@@ -696,7 +696,7 @@ const state = {
       data: `22°16'59.4"N, 114°02'49.1"E `,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.1 m - 3.3 m + C.D.",
     },
     {
@@ -708,7 +708,7 @@ const state = {
       data: "Intermediate",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "1.14 N",
     },
     {
@@ -734,7 +734,7 @@ const state = {
       data: `22°14'05.6"N, 113°58'51.1"E `,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.0 m - 2.5 m + C.D.",
     },
     {
@@ -746,7 +746,7 @@ const state = {
       data: "Sheltered",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "0.89 N",
     },
     {
@@ -772,7 +772,7 @@ const state = {
       data: `22°26'10.5"N, 114°14'49.5"E `,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.3 m - 3.0 m + C.D.",
     },
     {
@@ -784,7 +784,7 @@ const state = {
       data: "Intermediate",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "1.09 N",
     },
     {
@@ -810,7 +810,7 @@ const state = {
       data: `22°27'25.4"N, 114°14'04.3"E `,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.1 m - 3.0 m + C.D.",
     },
     {
@@ -822,7 +822,7 @@ const state = {
       data: "Sheltered",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "/",
     },
     {
@@ -848,7 +848,7 @@ const state = {
       data: `22°26'00.7"N, 114°16'07.1"E`,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.1 m - 2.6 m + C.D.",
     },
     {
@@ -860,7 +860,7 @@ const state = {
       data: "Sheltered",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "1.16 N",
     },
     {
@@ -886,7 +886,7 @@ const state = {
       data: `22°27'23.9"N, 114°17'58.0"E`,
     },
     {
-      name: "Tidal Range",
+      name: "Tidal transect range",
       data: "1.2 m - 2.4 m + C.D.",
     },
     {
@@ -898,7 +898,7 @@ const state = {
       data: "Sheltered",
     },
     {
-      name: "Maximum wave Force",
+      name: "Maximum wave force",
       data: "/",
     },
     {

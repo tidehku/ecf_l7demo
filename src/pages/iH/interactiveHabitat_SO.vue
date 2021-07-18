@@ -2,7 +2,7 @@
   <q-page class="q-pa-xs row justify-center bg-grey-5 no-wrap">
     <q-card class="q-ma-sm" style="width: 33%; height:81vh" bordered>
       <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
-        Southern Region
+        Southern region
         <q-space />
         <q-separator dark vertical inset />
         <q-tabs inline-label shrink>
@@ -44,12 +44,12 @@
         <div
           class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders"
         >
-          Regional Average Data Summary
+          Regional average data summary
         </div>
         <div class="row q-py-xs justify-evenly no-wrap">
           <q-card class="q-pa-sm" style="width: 22%; min-height: 32vh">
             <div class="q-px-sm">
-              <y>Max Temperature</y> <br />
+              <y>Max. rock temperature</y> <br />
               HH: <br />
               <h>43.00</h> <b> ± 2.52 ℃</b>
               <div class="row justify-end">
@@ -64,7 +64,7 @@
           </q-card>
           <q-card class="q-pa-sm" style="width: 18%">
             <div class="q-px-sm">
-              <y>Total Wave Fetch</y> <br />
+              <y>Total wave fetch</y> <br />
               <div class="items-end">
                 Max: <br />
                 <h>400.93</h> <b> km</b> <br /><br />
@@ -79,7 +79,7 @@
           <q-card class="q-pa-sm" style="width: 24%">
             <div class="q-px-sm">
               <y>Nutrient levels</y> <br />
-              chlorophyll a: <br />
+              chlorophyll <i>a</i>: <br />
               <h>12.78</h> <b> ± 7.25 µg/ cm2</b>
               <div class="row justify-end">
                 (n = 4)
@@ -93,7 +93,7 @@
           </q-card>
           <q-card class="q-pa-sm" style="width: 16%">
             <div class="q-px-sm">
-              <y>Mobile Species Richness</y> <br /><br />
+              <y>Mobile species richness</y> <br /><br />
               <div class="items-center">
                 Max:<h>23</h> <br /><br />
                 Min:<h>19</h>
@@ -102,7 +102,7 @@
           </q-card>
           <q-card class="q-pa-sm" style="width: 16%">
             <div class="q-px-sm">
-              <y>Sessile Species Richness</y> <br /><br />
+              <y>Sessile species richness</y> <br /><br />
               <div class="items-center">
                 Max:<h>22</h> <br /><br />
                 Min:<h>17</h>
@@ -214,9 +214,9 @@
         >
           <q-card>
             <q-bar style="height: 40px" class="bg-indigo text-bold">
-              <div class="text-indigo-2">Site Introduction |</div>
-              <div class="text-indigo-1">Southern Region</div>
-              <div class="text-white">>> Shek O Site</div>
+              <div class="text-indigo-2">Site introduction |</div>
+              <div class="text-indigo-1">Southern region</div>
+              <div class="text-white">>> Shek O</div>
               <q-space />
               <q-btn dense flat class="text-white" icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
@@ -274,9 +274,9 @@
         >
           <q-card>
             <q-bar style="height: 40px" class="bg-indigo text-bold">
-              <div class="text-indigo-2">Site Introduction |</div>
-              <div class="text-indigo-1">Southern Region</div>
-              <div class="text-white">>> Wah Fu Site</div>
+              <div class="text-indigo-2">Site introduction |</div>
+              <div class="text-indigo-1">Southern region</div>
+              <div class="text-white">>> Wah Fu</div>
               <q-space />
               <q-btn dense flat class="text-white" icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
@@ -334,9 +334,9 @@
         >
           <q-card>
             <q-bar style="height: 40px" class="bg-indigo text-bold">
-              <div class="text-indigo-2">Site Introduction |</div>
-              <div class="text-indigo-1">Southern Region</div>
-              <div class="text-white">>> Middle Bay Site</div>
+              <div class="text-indigo-2">Site introduction |</div>
+              <div class="text-indigo-1">Southern region</div>
+              <div class="text-white">>> Middle Bay</div>
               <q-space />
               <q-btn dense flat class="text-white" icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
@@ -394,9 +394,9 @@
         >
           <q-card>
             <q-bar style="height: 40px" class="bg-indigo text-bold">
-              <div class="text-indigo-2">Site Introduction |</div>
-              <div class="text-indigo-1">Southern Region</div>
-              <div class="text-white">>> Tai Tam Site</div>
+              <div class="text-indigo-2">Site introduction |</div>
+              <div class="text-indigo-1">Southern region</div>
+              <div class="text-white">>> Tai Tam</div>
               <q-space />
               <q-btn dense flat class="text-white" icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>

@@ -145,10 +145,7 @@ const state = {
     },
     {
       name: "Wave exposure icons",
-      description: `In the regional landing page where you can select information of the four study sites within that region, there is a “wave exposure icon” next to each site.  As we deliberately selected four sites with different wave exposures within a region, the icon indicates the relative wave exposure of that site: 
-        Most exposed within the region: 
-        Semi-exposed within the region:
-        Least exposed within the region: `
+      description: `In the regional landing page where you can select information of the four study sites within that region, there is a “wave exposure icon” next to each site.  As we deliberately selected four sites with different wave exposures within a region, the icon indicates the relative wave exposure of that site: most exposed, semi-exposed and least exposed within the region.`
     }
   ],
   regionNW: `

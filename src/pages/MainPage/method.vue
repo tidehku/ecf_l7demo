@@ -18,7 +18,7 @@
 
     <div class="q-gutter-md bg-indigo-5 text-white">
       <div class="q-pa-md title text-center text-white">
-        Rocky shore assemblage surveys using transect and quadrat methods
+        Rocky shore assemblage surveys
       </div>
       <div class="row justify-evenly">
         <div class="justify-center" style="width:25%">
@@ -29,11 +29,11 @@
           <q-img src="~/assets/method3.png" />
 
           <div class="q-px-md bg-black text-white">
-            The ECF team surveying rocky shores in Luk Keng
+            The ECF team surveying the rocky shore in Luk Keng.
           </div>
           <q-img src="~/assets/method4.png" />
           <div class="q-px-md bg-black text-white">
-            The ECF team surveying rocky shores in Tai O
+            The ECF team surveying the rocky shore in Tai O.
           </div>
         </div>
         <div class="q-px-lg" style="width:60%">
@@ -74,15 +74,14 @@
     <div class="q-pa-md bg-indigo">
       <div class="title text-center text-white">Glossary</div>
       <div class="text-subtitle1 text-center text-white">
-        This glossary outlines the definitions of the biological and physical
-        terms/measurements adopted in this survey
+        This glossary outlines the definitions of biological and physical terms/measurements adopted in this survey.
       </div>
     </div>
 
     <div class="row justify-center">
       <q-table
         class="bioGlossary "
-        title="Biological Terms/measurements"
+        title="Biological terms/measurements"
         table-header-class="bg-teal-4 text-center text-bold text-white"
         title-class="text-bold text-teal"
         separator="horizontal"
@@ -110,7 +109,7 @@
     <div class="row justify-center">
       <q-table
         class="phyGlossary "
-        title="Physical Terms/measurements"
+        title="Physical terms/measurements"
         table-header-class="bg-blue-4 text-center text-bold text-white"
         title-class="text-bold text-blue"
         separator="horizontal"
@@ -137,7 +136,7 @@
     </div>
 
     <div class="q-pa-md bg-indigo">
-      <div class="title text-center text-white">Reference</div>
+      <div class="title text-center text-white">References</div>
     </div>
     <div class="row justify-center bg-white">
       <q-card flat v-html="reference" class="text-body1">

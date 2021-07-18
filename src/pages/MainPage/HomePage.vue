@@ -76,12 +76,11 @@
         <q-card style="width: 18%">
           <q-card-section class="bg-orange-10 text-white text-center">
             <q-icon clickable name="biotech" style="font-size: 4rem" />
-            <div class="text-subtitle1 text-bold">Methodology</div>
+            <div class="text-subtitle1 text-bold">METHODS</div>
           </q-card-section>
 
           <q-card-section>
-            You can see how the territory-wide rocky shore biodiversity survey
-            was conducted here.
+            Details of how we conducted the territory-wide survey.
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
             <q-btn no-caps color="orange-10" label="Explore" to="method" />
@@ -91,16 +90,11 @@
         <q-card style="width: 25%">
           <q-card-section class="bg-amber-8 text-white text-center">
             <q-icon clickable name="map" style="font-size: 4rem" />
-            <div class="text-subtitle1 text-bold">Interactive Habitat Map</div>
+            <div class="text-subtitle1 text-bold">MAP</div>
           </q-card-section>
 
           <q-card-section>
-            This interactive map shows biological and physical information of
-            each site in this territory-wide survey. In the physical dashboard,
-            you will see data of rock temperature, nutrient availability and
-            wave forces. In the biological dashboard, you will see species
-            assemblage structures, abundances and a number of ecological indices
-            quantifying the richness and diversity of the assemblages.
+            Biological and physical dashboards of each site, showing assemblage structure and ecological indices, rock temperature, nutrient availability and wave forces.
           </q-card-section>
           <div class="q-pa-md row justify-end">
             <q-btn
@@ -114,13 +108,11 @@
         <q-card style="width: 18%">
           <q-card-section class="bg-green-6 text-white text-center">
             <q-icon clickable name="travel_explore" style="font-size: 4rem" />
-            <div class="text-subtitle1 text-bold">Species Search Engine</div>
+            <div class="text-subtitle1 text-bold">SEARCH</div>
           </q-card-section>
 
           <q-card-section>
-            In this search engine, you will be able to explore the past (from
-            the review by Ng et al. 2017) and current (from the current ECF
-            territory-wide survey) rocky intertidal biodiversity in Hong Kong.
+            Explore distributions of the past (from the review by Ng et al. 2017) and present (from the current territory-wide survey) rocky intertidal biodiversity in Hong Kong.
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
             <q-btn
@@ -135,13 +127,11 @@
         <q-card style="width: 18%">
           <q-card-section class="bg-cyan-7 text-white text-center">
             <q-icon clickable name="collections" style="font-size: 4rem" />
-            <div class="text-subtitle1 text-bold">Gallery</div>
+            <div class="text-subtitle1 text-bold">GALLERY</div>
           </q-card-section>
 
           <q-card-section>
-            See how we enjoyed our fieldwork in this gallery! We have also
-            uploaded photographs of fantastic rocky intertidal organisms and
-            landscapes here!
+            See photographs of fantastic rocky intertidal organisms and landscapes here!
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
             <q-btn no-caps color="cyan-7" label="Explore" to="gallery" />
@@ -150,12 +140,11 @@
         <q-card style="width: 18%">
           <q-card-section class="bg-indigo text-white text-center">
             <q-icon clickable name="dashboard" style="font-size: 4rem" />
-            <div class="text-subtitle1 text-bold">Dashboard Navigation</div>
+            <div class="text-subtitle1 text-bold">QUICK NAVIGATION</div>
           </q-card-section>
 
           <q-card-section>
-            The quick navigation panel under the ≡ drawer allows quick access to
-            the physical and biological dashboards of our 24 field sites.
+            The ≡ drawer allows quick access to the biological and physical dashboards of all our sites.
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
             <q-btn
@@ -183,7 +172,7 @@
 
     <q-card bordered flat class="q-ma-sm bg-white maincard">
       <div class="q-pa-sm bg-indigo-6 text-white text-h4 text-bold text-center">
-        Related Links
+        Related links
       </div>
       <q-card-section class="row justify-evenly">
         <div class="q-px-lg linkcard">
@@ -206,7 +195,7 @@
         <q-btn
           no-caps
           class="linkbtn"
-          label="Tropical IntertiDal Ecology (TIDE) Group"
+          label="Tropical IntertiDal Ecology Group"
           type="a"
           target="_blank"
           href="https://www.tidehku.com/"
@@ -214,7 +203,7 @@
         <q-btn
           no-caps
           class="linkbtn"
-          label="The Swire Institute of Marine Science (SWIMS), HKU"
+          label="The Swire Institute of Marine Science, HKU"
           type="a"
           target="_blank"
           href="https://www.swims.hku.hk/"
@@ -222,7 +211,7 @@
         <q-btn
           no-caps
           class="linkbtn"
-          label="Environmental and Conservation Fund (ECF)"
+          label="Environment and Conservation Fund"
           type="a"
           target="_blank"
           href="https://www.ecf.gov.hk/en/home/index.html "
@@ -230,7 +219,7 @@
         <q-btn
           no-caps
           class="linkbtn"
-          label="Hong Kong Observatory (HKO)"
+          label="Hong Kong Observatory"
           type="a"
           target="_blank"
           href="https://www.hko.gov.hk/en/index.html"
@@ -238,7 +227,7 @@
         <q-btn
           no-caps
           class="linkbtn"
-          label="The School of Biological Science, University of Hong Kong"
+          label="The School of Biological Sciences, HKU"
           type="a"
           target="_blank"
           href="https://www.biosch.hku.hk/ "
