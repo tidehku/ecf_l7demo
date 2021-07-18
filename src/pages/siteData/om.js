@@ -1,5 +1,5 @@
 export const omData = {
-  SBOm1: {
+  EASWOm1: {
     chart: {
       type: "column",
       height: "60%"
@@ -38,17 +38,11 @@ export const omData = {
         colorByPoint: true,
         colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
         showInLegend: false,
-        data: [
-          ["3.00", 3.63],
-          ["2.66", 4.84],
-          ["2.31", 5.48],
-          ["1.97", 5.91],
-          ["1.62", 5.53]
-        ]
+        data: []
       }
     ]
   },
-  TOOm1: {
+  EAPLOm1: {
     chart: {
       type: "column",
       height: "60%"
@@ -87,14 +81,910 @@ export const omData = {
         colorByPoint: true,
         colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
         showInLegend: false,
-        data: [
-          ["2.45", 6.7],
-          ["2.18", 10.5],
-          ["1.90", 9.68],
-          ["1.63", 8.93],
-          ["1.36", 13.6],
-          ["1.08", 19.45]
-        ]
+        data: []
+      }
+    ]
+  },
+  EAPSWOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  EAKSCOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  NEDIOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  NEKOOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  NEYSAOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  NEHSMOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  NWTOOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  NWSLOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  NWLKOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  SOSOOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  SOWFOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  SOMBOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  SWTLMOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  SWSTOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  SWPCOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  SWPOOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  NWLKOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  TLSBOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  TLMSCOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  TLTTOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  TLLCCOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (Meter above C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "mean of organic matter"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
       }
     ]
   }

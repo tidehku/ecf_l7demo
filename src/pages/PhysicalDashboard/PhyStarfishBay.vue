@@ -2,7 +2,7 @@
   <q-page class="justify-center">
     <q-bar elevated class="bg-blue-9 text-white">
       <div class="text-bold row justify-center">
-        Physical Dashboard of Starfish Bay, Tolo Habour Region
+        Physical Dashboard of Starfish Bay, Tolo Harbour Region
       </div>
       <q-space />
       <q-btn
@@ -20,7 +20,7 @@
         dense
         icon="keyboard_backspace"
         class="bg-white text-blue-8"
-        to="/interactiveHabitat/SW"
+        to="/interactiveHabitat/TL"
       >
         <q-tooltip>
           Go back
@@ -114,185 +114,98 @@ More(Highcharts);
 import Vue from "vue";
 import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
-// import { tempData } from "../siteData/temperature";
+import { tempData } from "../siteData/temperature";
 import { omData } from "../siteData/om";
 import { chlaData } from "../siteData/chla";
-import { firebaseStore } from "boot/firebase";
+// import { firebaseStore } from "boot/firebase";
+import csv2json from "csvjson-csv2json";
 
 export default {
   data() {
     return {
-      Temperature1: {
-        chart: {
-          height: "35%"
-        },
-        credits: {
-          enabled: false
-        },
-        title: {
-          text: ""
-        },
-        subtitle: {
-          text: ""
-        },
-        xAxis: {
-          type: "time",
-          title: {
-            text: "Time (hour)"
-          },
-          accessibility: {
-            rangeDescription: "Range: 0-24 h."
-          }
-        },
-        yAxis: {
-          title: {
-            text: "Temperature"
-          },
-          labels: {
-            formatter: function() {
-              return this.value + "°C";
-            }
-          }
-        },
-        tooltip: {
-          crosshairs: true,
-          shared: true,
-          valueSuffix: "°C"
-        },
-        legend: {
-          layout: "proximate",
-          align: "right",
-          verticalAlign: "middle"
-        },
-        series: [
-          {
-            name: "HH Temperature",
-            color: "#D67E32",
-            data: [],
-            zIndex: 1,
-            marker: {
-              enabled: false,
-              lineWidth: 2
-            }
-          },
-          {
-            name: "HH Range",
-            color: "#F8C762",
-            data: [],
-            type: "arearange",
-            lineWidth: 0,
-            linkedTo: ":previous",
-            fillOpacity: 0.3,
-            zIndex: 0,
-            marker: {
-              enabled: false
-            }
-          },
-          {
-            name: "LM Temperature",
-            color: "#11B678",
-            data: [
-              [0, 22.26],
-              [1, 21.74],
-              [2, 21.15],
-              [3, 20.22],
-              [4, 19.31],
-              [5, 18.43],
-              [6, 17.69],
-              [7, 17.07],
-              [8, 17.06],
-              [9, 17.63],
-              [10, 18.57],
-              [11, 20.41],
-              [12, 18.63],
-              [13, 18.98],
-              [14, 18.8],
-              [15, 18.26],
-              [16, 18.35],
-              [17, 19.31],
-              [18, 19.54],
-              [19, 19.59],
-              [20, 19.72],
-              [21, 19.76],
-              [22, 19.76],
-              [23, 19.72]
-            ],
-            zIndex: 1,
-            marker: {
-              enabled: false,
-              lineWidth: 2
-            }
-          },
-          {
-            name: "LM Range",
-            color: "#7FDCB9",
-            data: [
-              [0, 21.5, 23.17],
-              [1, 20.5, 22.83],
-              [2, 19.33, 22.33],
-              [3, 18.17, 22],
-              [4, 16.67, 21.67],
-              [5, 15.83, 21.5],
-              [6, 15.33, 21.17],
-              [7, 14.83, 19.17],
-              [8, 14.83, 19],
-              [9, 15.17, 19.83],
-              [10, 15.5, 21.5],
-              [11, 16.33, 23.33],
-              [12, 0, 23],
-              [13, 0, 24],
-              [14, 0, 25],
-              [15, 0, 22.83],
-              [16, 0, 22],
-              [17, 0, 23.33],
-              [18, 0, 23.5],
-              [19, 0, 23.5],
-              [20, 0, 23.5],
-              [21, 0, 23.5],
-              [22, 0, 23.33],
-              [23, 0, 23.17]
-            ],
-            type: "arearange",
-            lineWidth: 0,
-            linkedTo: ":previous",
-            fillOpacity: 0.3,
-            zIndex: 0,
-            marker: {
-              enabled: false
-            }
-          }
-        ]
-      },
+      Temperature1: tempData.SBTemperature1,
       Chla1: chlaData.SBChla1,
-      OM1: omData.SBOm1
+      OM1: omData.TLSBOm1
     };
   },
   mounted() {
-    firebaseStore
-      .collection("starfishBay")
-      .doc("2020winter")
-      .collection("phy")
-      .doc("temp")
-      .get()
-      .then(doc => {
-        const dataArr = Object.entries(doc.data()); // leng 2: HH & LM
+    let temp =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTndCzwP6dsadAksOQXXoJCgPCYlxahjEFZzFKGLqi3xK20Jq9m79f_QyAz5w9jR9Ft8U1GYD3fYicy/pub?gid=0&single=true&output=csv";
 
-        const HHMean = dataArr[0][1].average; // obj
-        const HHMeanArr = Object.values(HHMean); // array
+    let bar =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTndCzwP6dsadAksOQXXoJCgPCYlxahjEFZzFKGLqi3xK20Jq9m79f_QyAz5w9jR9Ft8U1GYD3fYicy/pub?gid=971498666&single=true&output=csv";
+
+    const requestTemp = this.$axios.get(temp);
+    const requestBar = this.$axios.get(bar);
+
+    this.$axios.all([requestTemp, requestBar]).then(
+      this.$axios.spread((...responses) => {
+        const tempData = csv2json(responses[0].data);
+
         let cacheHHMean = [];
-        for (var i = 0; i < HHMeanArr.length; i++) {
-          cacheHHMean.push([i, HHMeanArr[i]]);
-        }
-        this.Temperature1.series[0].data = cacheHHMean;
-
-        const HHMaxArr = Object.values(dataArr[0][1].max);
-        const HHMinArr = Object.values(dataArr[0][1].min);
         let cacheHHRange = [];
-        for (var j = 0; j < HHMaxArr.length; j++) {
-          cacheHHRange.push([j, HHMaxArr[j], HHMinArr[j]]);
-        }
+        let cacheLMMean = [];
+        let cacheLMRange = [];
+
+        tempData.map(doc => {
+          cacheHHMean.push([parseInt(doc.time), parseFloat(doc.HHMean)]);
+          cacheHHRange.push([
+            parseInt(doc.time),
+            parseFloat(doc.HHMin),
+            parseFloat(doc.HHMax)
+          ]);
+          cacheLMMean.push([parseInt(doc.time), parseFloat(doc.LMMean)]);
+          cacheLMRange.push([
+            parseInt(doc.time),
+            parseFloat(doc.LMMin),
+            parseFloat(doc.LMMax)
+          ]);
+        });
+        this.Temperature1.series[0].data = cacheHHMean;
         this.Temperature1.series[1].data = cacheHHRange;
-      });
+        this.Temperature1.series[2].data = cacheLMMean;
+        this.Temperature1.series[3].data = cacheLMRange;
+
+        const barData = csv2json(responses[1].data);
+
+        let cacheChla = [];
+        barData.map(doc => {
+          cacheChla.push([[doc.commonx].toString(), parseFloat([doc.chla])]);
+        });
+        this.Chla1.series[0].data = cacheChla;
+
+        let cacheOM = [];
+        barData.map(doc => {
+          cacheOM.push([[doc.commonx].toString(), parseFloat([doc.om])]);
+        });
+        this.OM1.series[0].data = cacheOM;
+      })
+    );
+    // firebaseStore
+    //   .collection("starfishBay")
+    //   .doc("2020winter")
+    //   .collection("phy")
+    //   .doc("temp")
+    //   .get()
+    //   .then(doc => {
+    //     const dataArr = Object.entries(doc.data()); // leng 2: HH & LM
+
+    //     const HHMean = dataArr[0][1].average; // obj
+    //     const HHMeanArr = Object.values(HHMean); // array
+    //     let cacheHHMean = [];
+    //     for (var i = 0; i < HHMeanArr.length; i++) {
+    //       cacheHHMean.push([i, HHMeanArr[i]]);
+    //     }
+    //     this.Temperature1.series[0].data = cacheHHMean;
+
+    //     const HHMaxArr = Object.values(dataArr[0][1].max);
+    //     const HHMinArr = Object.values(dataArr[0][1].min);
+    //     let cacheHHRange = [];
+    //     for (var j = 0; j < HHMaxArr.length; j++) {
+    //       cacheHHRange.push([j, HHMaxArr[j], HHMinArr[j]]);
+    //     }
+    //     this.Temperature1.series[1].data = cacheHHRange;
+    //   });
   }
 };
 </script>

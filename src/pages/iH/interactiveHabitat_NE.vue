@@ -1,22 +1,11 @@
 <template>
   <q-page class="q-pa-xs row justify-center bg-grey-5 no-wrap">
-    <q-card
-      class="q-ma-sm"
-      style="width: 33%; height:81vh"
-      bordered
-    >
+    <q-card class="q-ma-sm" style="width: 33%; height:81vh" bordered>
       <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
-        North Eastern Region
+        Northeastern region
         <q-space />
-        <q-separator
-          dark
-          vertical
-          inset
-        />
-        <q-tabs
-          inline-label
-          shrink
-        >
+        <q-separator dark vertical inset />
+        <q-tabs inline-label shrink>
           <q-route-tab
             name="Back"
             label="Back"
@@ -26,7 +15,7 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-sm">{{ Region }}</div>
+      <div class="q-pa-sm">{{ regionNE }}</div>
 
       <l-map
         class="map"
@@ -37,15 +26,9 @@
         :min-zoom="zoom"
       >
         <LTileLayer />
-        <l-geo-json
-          :geojson="region"
-          :options="regionOptions"
-        ></l-geo-json>
+        <l-geo-json :geojson="region" :options="regionOptions"></l-geo-json>
 
-        <l-geo-json
-          :geojson="sitesLocation"
-          :options="siteOptions"
-        >
+        <l-geo-json :geojson="sitesLocation" :options="siteOptions">
         </l-geo-json>
 
         <l-control-scale
@@ -57,20 +40,16 @@
     </q-card>
 
     <div style="width: 66.3%">
-      <q-card
-        class="bg-indigo-1"
-        style="height: 40vh"
-      >
-        <div class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders">
-          Regional Average Data Summary
+      <q-card class="bg-indigo-1" style="height: 40vh">
+        <div
+          class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders"
+        >
+          Regional average data summary
         </div>
         <div class="row q-py-xs justify-evenly no-wrap">
-          <q-card
-            class="q-pa-sm"
-            style="width: 22%; min-height: 32vh"
-          >
+          <q-card class="q-pa-sm" style="width: 22%; min-height: 32vh">
             <div class="q-px-sm">
-              <span class="text-bold text-indigo-4">Max Temperature</span>
+              <span class="text-bold text-indigo-4">Max. rock emperature</span>
               <br />
               HH: <br />
               <h>37.25</h> <b> ± 4.33 ℃</b>
@@ -84,12 +63,9 @@
               </div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width: 18%"
-          >
+          <q-card class="q-pa-sm" style="width: 18%">
             <div class="q-px-sm">
-              <y>Total Wave Fetch</y> <br />
+              <y>Total wave fetch</y> <br />
               <div class="items-end">
                 Max: <br />
                 <h>49.59</h> <b> km</b> <br /><br />
@@ -101,13 +77,10 @@
               </div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width: 24%"
-          >
+          <q-card class="q-pa-sm" style="width: 24%">
             <div class="q-px-sm">
               <y>Nutrient levels</y> <br />
-              chlorophyll a: <br />
+              chlorophyll <i>a</i>: <br />
               <h>9.41</h> <b> ± 0.78 µg/ cm2</b>
               <div class="row justify-end">
                 (n = 4)
@@ -119,24 +92,18 @@
               </div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width: 16%"
-          >
+          <q-card class="q-pa-sm" style="width: 16%">
             <div class="q-px-sm">
-              <y>Mobile Species Richness</y> <br /><br />
+              <y>Mobile species richness</y> <br /><br />
               <div class="items-center">
                 Max:<h>25</h> <br /><br />
                 Min:<h>14</h>
               </div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width: 16%"
-          >
+          <q-card class="q-pa-sm" style="width: 16%">
             <div class="q-px-sm">
-              <y>Sessile Species Richness</y> <br /><br />
+              <y>Sessile species richness</y> <br /><br />
               <div class="items-center">
                 Max:<h>23</h> <br /><br />
                 Min:<h>12</h>
@@ -146,10 +113,7 @@
         </div>
       </q-card>
       <div class="row no-wrap justify-around">
-        <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 40vh"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Double Island
           </div>
@@ -159,7 +123,6 @@
             basic
           />
           <div class="row bg-white absolute-bottom">
-
             <q-icon
               class="q-pa-sm"
               style="font-size: 2.5rem"
@@ -176,19 +139,12 @@
             />
           </div>
         </q-card>
-        <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 40vh"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Kat O
           </div>
 
-          <q-img
-            src="~/assets/SiteImage/Kat O.png"
-            height="25vh"
-            basic
-          ></q-img>
+          <q-img src="~/assets/SiteImage/Kat O.png" height="25vh" basic></q-img>
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -206,10 +162,7 @@
             />
           </div>
         </q-card>
-        <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 40vh"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Yung Shue Au
           </div>
@@ -234,10 +187,7 @@
             />
           </div>
         </q-card>
-        <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 40vh"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Hung Shek Mun
           </div>
@@ -269,29 +219,17 @@
           full-width
         >
           <q-card>
-            <q-bar
-              style="height: 40px"
-              class="bg-indigo text-bold"
-            >
-              <div class="text-indigo-2">Site Introduction |</div>
-              <div class="text-indigo-1">North Eastern Region</div>
-              <div class="text-white">>> Double Island Site</div>
+            <q-bar style="height: 40px" class="bg-indigo text-bold">
+              <div class="text-indigo-2">Site introduction |</div>
+              <div class="text-indigo-1">Northeastern region</div>
+              <div class="text-white">>> Double Island</div>
               <q-space />
-              <q-btn
-                dense
-                flat
-                class="text-white"
-                icon="close"
-                v-close-popup
-              >
+              <q-btn dense flat class="text-white" icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section
-              horizontal
-              class="q-pa-md"
-            >
+            <q-card-section horizontal class="q-pa-md">
               <q-img
                 class="col-3"
                 height="flex"
@@ -341,29 +279,17 @@
           full-width
         >
           <q-card>
-            <q-bar
-              style="height: 40px"
-              class="bg-indigo text-bold"
-            >
-              <div class="text-indigo-2">Site Introduction |</div>
-              <div class="text-indigo-1">North Eastern Region</div>
-              <div class="text-white">>> Kat O Site</div>
+            <q-bar style="height: 40px" class="bg-indigo text-bold">
+              <div class="text-indigo-2">Site introduction |</div>
+              <div class="text-indigo-1">Northeastern region</div>
+              <div class="text-white">>> Kat O</div>
               <q-space />
-              <q-btn
-                dense
-                flat
-                class="text-white"
-                icon="close"
-                v-close-popup
-              >
+              <q-btn dense flat class="text-white" icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section
-              horizontal
-              class="q-pa-md"
-            >
+            <q-card-section horizontal class="q-pa-md">
               <q-img
                 class="col-3"
                 height="flex"
@@ -413,29 +339,17 @@
           full-width
         >
           <q-card>
-            <q-bar
-              style="height: 40px"
-              class="bg-indigo text-bold"
-            >
-              <div class="text-indigo-2">Site Introduction |</div>
-              <div class="text-indigo-1">North Eastern Region</div>
-              <div class="text-white">>> Yung Shue Au Site</div>
+            <q-bar style="height: 40px" class="bg-indigo text-bold">
+              <div class="text-indigo-2">Site introduction |</div>
+              <div class="text-indigo-1">Northeastern region</div>
+              <div class="text-white">>> Yung Shue Au</div>
               <q-space />
-              <q-btn
-                dense
-                flat
-                class="text-white"
-                icon="close"
-                v-close-popup
-              >
+              <q-btn dense flat class="text-white" icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section
-              horizontal
-              class="q-pa-md"
-            >
+            <q-card-section horizontal class="q-pa-md">
               <q-img
                 class="col-3"
                 height="flex"
@@ -485,29 +399,17 @@
           full-width
         >
           <q-card>
-            <q-bar
-              style="height: 40px"
-              class="bg-indigo text-bold"
-            >
-              <div class="text-indigo-2">Site Introduction |</div>
-              <div class="text-indigo-1">North Eastern Region</div>
-              <div class="text-white">>> Hung Shek Mun Site</div>
+            <q-bar style="height: 40px" class="bg-indigo text-bold">
+              <div class="text-indigo-2">Site introduction |</div>
+              <div class="text-indigo-1">Northeastern region</div>
+              <div class="text-white">>> Hung Shek Mun</div>
               <q-space />
-              <q-btn
-                dense
-                flat
-                class="text-white"
-                icon="close"
-                v-close-popup
-              >
+              <q-btn dense flat class="text-white" icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section
-              horizontal
-              class="q-pa-md"
-            >
+            <q-card-section horizontal class="q-pa-md">
               <q-img
                 class="col-3"
                 height="flex"
@@ -565,188 +467,34 @@ export default {
     LMap,
     LGeoJson,
     LControlScale,
-    LTileLayer: () => import("components/tileLayer"),
+    LTileLayer: () => import("components/tileLayer")
   },
   data() {
     return {
-      Region:
-        "The Northeastern (NE) region receives lower wave exposure compared to the Eastern region as it is sheltered by mainland China to the North.  The region generally has good water quality and lower disturbance as it is remote, protected by Geological Park and has low population levels (only a few Hakka villages remaining).  To get to some of our sites in this region we will inevitably need to hire a boat (e.g. Double Island, Kat O) or otherwise undertake a strenuous, long-distance hike (e.g. Yung Shue Au, Hung Shek Mun).  But because of the remoteness, shores in this region support a vast number of species including even corals!",
       card1: false,
       card2: false,
       card3: false,
       card4: false,
-      Table_NEDI: [
-        {
-          name: "Location",
-          data: "North district, New Territories",
-        },
-        {
-          name: "GPS coordinates",
-          data: `22°31'05.7"N, 114°19'10.4"E`,
-        },
-        {
-          name: "Tidal Range",
-          data: "1.1 m - 3.0 m + C.D.",
-        },
-        {
-          name: "Transect length",
-          data: "15 m",
-        },
-        {
-          name: "Shore exposure",
-          data: "Intermediate",
-        },
-        {
-          name: "Maximum wave Force",
-          data: "2.06 N",
-        },
-        {
-          name: "Aspect",
-          data: "/",
-        },
-        {
-          name: "Slope",
-          data: "/",
-        },
-        {
-          name: "Rock type",
-          data: `Igneous`,
-        },
-      ],
-      Table_NEKO: [
-        {
-          name: "Location",
-          data: "North district, New Territories",
-        },
-        {
-          name: "GPS coordinates",
-          data: `22°33'03.7"N, 114°17'50.0"E`,
-        },
-        {
-          name: "Tidal Range",
-          data: "1.3 m - 3.4 m + C.D.",
-        },
-        {
-          name: "Transect length",
-          data: "14 m",
-        },
-        {
-          name: "Shore exposure",
-          data: "Intermediate",
-        },
-        {
-          name: "Maximum wave Force",
-          data: "/",
-        },
-        {
-          name: "Aspect",
-          data: "/",
-        },
-        {
-          name: "Slope",
-          data: "/",
-        },
-        {
-          name: "Rock type",
-          data: `Igneous`,
-        },
-      ],
-      Table_NEYSA: [
-        {
-          name: "Location",
-          data: "North District, New Territories",
-        },
-        {
-          name: "GPS coordinates",
-          data: `22°32'58.0"N, 114°14'49.8"E`,
-        },
-        {
-          name: "Tidal Range",
-          data: "1.2 m - 3.2 m + C.D.",
-        },
-        {
-          name: "Transect length",
-          data: "14 m",
-        },
-        {
-          name: "Shore exposure",
-          data: "Intermediate",
-        },
-        {
-          name: "Maximum wave Force",
-          data: "/",
-        },
-        {
-          name: "Aspect",
-          data: "/",
-        },
-        {
-          name: "Slope",
-          data: "/",
-        },
-        {
-          name: "Rock type",
-          data: `Igneous`,
-        },
-      ],
-      Table_NEHSM: [
-        {
-          name: "Location",
-          data: "North district, New Territories",
-        },
-        {
-          name: "GPS coordinates",
-          data: `22°30'04.6"N, 114°18'05.1"E`,
-        },
-        {
-          name: "Tidal Range",
-          data: "1.1 m - 2.7 m + C.D.",
-        },
-        {
-          name: "Transect length",
-          data: "14 m",
-        },
-        {
-          name: "Shore exposure",
-          data: "Sheltered",
-        },
-        {
-          name: "Maximum wave Force",
-          data: "2.46 N",
-        },
-        {
-          name: "Aspect",
-          data: "/",
-        },
-        {
-          name: "Slope",
-          data: "/",
-        },
-        {
-          name: "Rock type",
-          data: `Sedimentary`,
-        },
-      ],
       zoom: 10.8,
       center: L.latLng(22.53, 114.32),
       mapOptions: {
         zoomSnap: 0.2,
-        zoomControl: false,
+        zoomControl: false
       },
       sitesLocation: require("../../MapData/NE_Sites.json"),
       siteOptions: {
         style: function style(feature) {
           return {
-            color: red,
+            color: red
           };
         },
         onEachFeature: (feature, layer) => {
           layer.bindPopup(feature.properties.Site, {
             permanent: true,
             sticky: true,
-            direction: "center",
+            direction: "center"
           });
-        },
+        }
       },
       region: require("../../MapData/NE.json"),
       regionOptions: {
@@ -754,12 +502,29 @@ export default {
           return {
             opacity: 0.6,
             color: feature.properties.fill,
-            fillOpacity: 0.3,
+            fillOpacity: 0.3
           };
-        },
-      },
+        }
+      }
     };
   },
+  computed: {
+    regionNE() {
+      return this.$store.state.storeText.regionNE;
+    },
+    Table_NEDI() {
+      return this.$store.state.storeRegionTable.Table_NEDI;
+    },
+    Table_NEKO() {
+      return this.$store.state.storeRegionTable.Table_NEKO;
+    },
+    Table_NEYSA() {
+      return this.$store.state.storeRegionTable.Table_NEYSA;
+    },
+    Table_NEHSM() {
+      return this.$store.state.storeRegionTable.Table_NEHSM;
+    }
+  }
 };
 </script>
 

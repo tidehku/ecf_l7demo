@@ -1,9 +1,6 @@
 <template>
   <q-page class="justify-center">
-    <q-bar
-      elevated
-      class="bg-blue-9 text-white"
-    >
+    <q-bar elevated class="bg-blue-9 text-white">
       <div class="text-bold row justify-center">
         Physical Dashboard of Tai O, North Western Region
       </div>
@@ -52,10 +49,7 @@
           <div class="col-6 tab2">summer</div>
         </div>
         <div class="row">
-          <highcharts
-            class="col-6"
-            :options="Temperature1"
-          ></highcharts>
+          <highcharts class="col-6" :options="Temperature1"></highcharts>
           <q-separator vertical />
           <div class="text-center noData">
             2021 Summer data <br />
@@ -94,19 +88,13 @@
           <div class="col-3 tab2">summer</div>
         </div>
         <div class="row">
-          <highcharts
-            class="col-3"
-            :options="Chla1"
-          ></highcharts>
+          <highcharts class="col-3" :options="Chla1"></highcharts>
           <div class="text-center noData">
             2021 Summer data <br />
             Not available yet
           </div>
           <q-separator vertical />
-          <highcharts
-            class="col-3"
-            :options="OM1"
-          ></highcharts>
+          <highcharts class="col-3" :options="OM1"></highcharts>
           <div class="text-center noData">
             2021 Summer data <br />
             Not available yet
@@ -129,26 +117,70 @@ Vue.use(HighchartsVue);
 import { tempData } from "../siteData/temperature";
 import { omData } from "../siteData/om";
 import { chlaData } from "../siteData/chla";
-// import { firebaseStore } from "boot/firebase";
+import csv2json from "csvjson-csv2json";
 
 export default {
   data() {
     return {
       Temperature1: tempData.TOTemperature1,
-      Temperature2: tempData.TOTemperature2,
       Chla1: chlaData.TOChla1,
-      OM1: omData.TOOm1,
+      OM1: omData.NWTOOm1
     };
   },
-  // mounted() {
-  //   firebaseStore
-  //     .collection("starfishBay")
-  //     .doc("2020winter")
-  //     .collection("phy")
-  //     .doc("temp")
-  //     .get()
-  //     .then(doc => console.log(doc.data()));
-  // }
+  mounted() {
+    let temp =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRw37HoxyjBZLEQZUrRX2QDTifR30A8KY6DeehltKtdEdY-PJv-ONqG4mpPN-IPWLK30sGwsc9y9inc/pub?gid=0&single=true&output=csv";
+
+    let bar =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRw37HoxyjBZLEQZUrRX2QDTifR30A8KY6DeehltKtdEdY-PJv-ONqG4mpPN-IPWLK30sGwsc9y9inc/pub?gid=971498666&single=true&output=csv";
+
+    const requestTemp = this.$axios.get(temp);
+    const requestBar = this.$axios.get(bar);
+
+    this.$axios.all([requestTemp, requestBar]).then(
+      this.$axios.spread((...responses) => {
+        const tempData = csv2json(responses[0].data);
+
+        let cacheHHMean = [];
+        let cacheHHRange = [];
+        let cacheLMMean = [];
+        let cacheLMRange = [];
+
+        tempData.map(doc => {
+          cacheHHMean.push([parseInt(doc.time), parseFloat(doc.HHMean)]);
+          cacheHHRange.push([
+            parseInt(doc.time),
+            parseFloat(doc.HHMin),
+            parseFloat(doc.HHMax)
+          ]);
+          cacheLMMean.push([parseInt(doc.time), parseFloat(doc.LMMean)]);
+          cacheLMRange.push([
+            parseInt(doc.time),
+            parseFloat(doc.LMMin),
+            parseFloat(doc.LMMax)
+          ]);
+        });
+        this.Temperature1.series[0].data = cacheHHMean;
+        this.Temperature1.series[1].data = cacheHHRange;
+        this.Temperature1.series[2].data = cacheLMMean;
+        this.Temperature1.series[3].data = cacheLMRange;
+
+        const barData = csv2json(responses[1].data);
+
+        let cacheChla = [];
+        barData.map(doc => {
+          cacheChla.push([[doc.commonx].toString(), parseFloat([doc.chla])]);
+        });
+        this.Chla1.series[0].data = cacheChla;
+
+        let cacheOM = [];
+        barData.map(doc => {
+          cacheOM.push([[doc.commonx].toString(), parseFloat([doc.om])]);
+        });
+        this.OM1.series[0].data = cacheOM;
+      })
+    );
+  }
 };
 </script>
 
@@ -156,8 +188,6 @@ export default {
 .page
   background-color: $grey-6
   padding: 4px
-  // height: 90vh
-  // overflow: hidden
 .q-card
   padding: 2px
   margin: 4px

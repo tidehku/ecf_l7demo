@@ -2,7 +2,7 @@
   <q-page class="justify-center">
     <q-bar class="bg-teal-8 text-white">
       <div class="text-bold row justify-center">
-        Biological Dashboard of Starfish Bay, Tolo Habour Region
+        Biological Dashboard of Starfish Bay, Tolo Harbour Region
       </div>
       <q-space />
       <q-btn
@@ -19,7 +19,7 @@
         dense
         icon="keyboard_backspace"
         class="bg-white text-teal"
-        to="/interactiveHabitat/SW"
+        to="/interactiveHabitat/TL"
       >
         <q-tooltip>
           Go back
@@ -51,7 +51,6 @@
                 separator
                 padding
                 class="bg-teal-1 text-caption rounded-borders"
-                style="width: 180px"
               >
                 <q-item
                   clickable
@@ -59,6 +58,9 @@
                   v-for="mobile in mobiles"
                   :key="mobile.message"
                 >
+                  <q-item-section avatar>
+                    <q-icon name="horizontal_rule" style="display: none" />
+                  </q-item-section>
                   <q-item-section>
                     <i>{{ mobile }} </i>
                   </q-item-section>
@@ -75,7 +77,6 @@
                 separator
                 padding
                 class="bg-teal-1 text-caption rounded-borders"
-                style="width: 180px"
               >
                 <q-item
                   clickable
@@ -83,6 +84,9 @@
                   v-for="sessile in sessiles"
                   :key="sessile.message"
                 >
+                  <q-item-section avatar>
+                    <q-icon name="horizontal_rule" style="display: none" />
+                  </q-item-section>
                   <q-item-section>
                     <i>{{ sessile }} </i>
                   </q-item-section>
@@ -90,26 +94,6 @@
               </q-list>
             </q-scroll-area>
           </div>
-          <!-- <q-list
-              dense
-              bordeteal
-              separator
-              padding
-              class="bg-teal-1 text-caption rounded-borders"
-              style="width: 180px"
-            >
-              <q-item
-                clickable
-                v-ripple
-                v-for="mobile in mobiles"
-                :key="mobile.message"
-              >
-                <q-item-section>
-                  <i>{{ mobile }} </i>
-                </q-item-section>
-              </q-item>
-            </q-list> -->
-
         </q-card>
 
         <q-card class="col-8 chartCard">
@@ -133,19 +117,13 @@
             <div class="col-3 tab2">summer</div>
           </div>
           <q-card-section horizontal>
-            <highcharts
-              class="col-3"
-              :options="pieChart1"
-            ></highcharts>
+            <highcharts class="col-3" :options="pieChart1"></highcharts>
             <div class="col-3 noData">
               Summer data <br />
               Not available yet
             </div>
             <q-separator vertical />
-            <highcharts
-              class="col-3"
-              :options="pieChart3"
-            ></highcharts>
+            <highcharts class="col-3" :options="pieChart2"></highcharts>
             <div class="col-3 noData">
               Summer data <br />
               Not available yet
@@ -159,24 +137,12 @@
             <div class="col-4 tab2">Species richness S</div>
           </div>
 
-          <q-card-section
-            horizontal
-            class="row"
-          >
-            <highcharts
-              class="col-4"
-              :options="barChart1"
-            ></highcharts>
+          <q-card-section horizontal class="row">
+            <highcharts class="col-4" :options="barChart1"></highcharts>
             <q-separator vertical />
-            <highcharts
-              class="col-4"
-              :options="barChart2"
-            ></highcharts>
+            <highcharts class="col-4" :options="barChart2"></highcharts>
             <q-separator vertical />
-            <highcharts
-              class="col-4"
-              :options="barChart3"
-            ></highcharts>
+            <highcharts class="col-4" :options="barChart3"></highcharts>
           </q-card-section>
         </q-card>
       </div>
@@ -190,58 +156,102 @@ import HighchartsVue from "highcharts-vue";
 Vue.use(HighchartsVue);
 import { pieData } from "../siteData/pie";
 import { barData } from "../siteData/bar";
+import csv2json from "csvjson-csv2json";
 
 export default {
   components: {},
   data() {
     return {
-      mobiles: [
-        "Echinolittorin malaccana",
-        "Echinolittorin radiata",
-        "Echinolittorina vidua",
-        "Lunella granulata",
-        "Monodonta labio",
-        "Patelloida ryukyuensis",
-        "Planaxis sulcatus",
-        "Reishia clavigera",
-        "Reishia luteostoma",
-        "Siphonaria japonica",
-        "Tenguella musiva",
-        "Liolophura japonica",
-      ],
-      sessiles: [
-        "High shore biofilm",
-        "Hildenbrandia rubra",
-        "Pseudulvella applanata",
-        "Ulva lactuca",
-        "Gelidium pusillum",
-        "Amphibalanus amphitrite",
-        "Capitulum mitella",
-        "Tetraclita squamosa",
-        "Diadumene lineata",
-        "Barbatia virescens",
-        "Brachidontes variabilis",
-        "Isognomon ephippium",
-        "Saccostrea cuccullata",
-        "Xenostrobus securis",
-      ],
+      mobiles: [],
+      sessiles: [],
       barChart1: barData.SBBar1,
       barChart2: barData.SBBar2,
       barChart3: barData.SBBar3,
-
       pieChart1: pieData.SBPie1,
-      // pieChart2: pieData.SBPie1,
-      pieChart3: pieData.SBPie3,
-      // pieChart4: pieData.SBPie1,
+      pieChart2: pieData.SBPie2,
       thumbStyle: {
         right: "4px",
         borderRadius: "5px",
         backgroundColor: "#24A9A9",
         width: "5px",
-        opacity: 0.75,
-      },
+        opacity: 0.75
+      }
     };
   },
+  mounted() {
+    let name =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=0&single=true&output=csv";
+
+    let pie =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=1752414671&single=true&output=csv";
+
+    let bar =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=588301274&single=true&output=csv";
+
+    const requestName = this.$axios.get(name);
+
+    const requestPie = this.$axios.get(pie);
+
+    const requestBar = this.$axios.get(bar);
+
+    this.$axios.all([requestName, requestPie, requestBar]).then(
+      this.$axios.spread((...responses) => {
+        // name
+        const SBbio = csv2json(responses[0].data);
+        SBbio.map(doc => {
+          let cacheMobileName = [];
+          cacheMobileName.push(doc.mobile); // store all records
+          for (let i of cacheMobileName) i && this.mobiles.push(i); // copy only non-empty values then push to the data array specified for display
+          let cacheSessileName = [];
+          cacheSessileName.push(doc.sessile);
+          for (let j of cacheSessileName) j && this.sessiles.push(j);
+        });
+
+        // pie
+        const pieChart = csv2json(responses[1].data);
+        let cacheMobilePie = [];
+        pieChart.map(doc => {
+          cacheMobilePie.push([doc.pieMobile, parseInt(doc.pieMobileCnt)]);
+        });
+        this.pieChart1.series[0].data = cacheMobilePie;
+
+        let cacheSessilePie = [];
+        pieChart.map(doc => {
+          cacheSessilePie.push([doc.pieSessile, parseInt(doc.pieSessileCnt)]);
+        });
+        this.pieChart2.series[0].data = cacheSessilePie;
+
+        // bar
+        const barChart = csv2json(responses[2].data);
+        let cacheShannon = [];
+        barChart.map(doc => {
+          cacheShannon.push([
+            [doc.commonx].toString(),
+            parseFloat([doc.shannony])
+          ]);
+        });
+        this.barChart1.series[0].data = cacheShannon;
+
+        let cachePielou = [];
+        barChart.map(doc => {
+          cachePielou.push([
+            [doc.commonx].toString(),
+            parseFloat([doc.pielouy])
+          ]);
+        });
+        this.barChart2.series[0].data = cachePielou;
+
+        let cacheRichness = [];
+        barChart.map(doc => {
+          cacheRichness.push([
+            [doc.commonx].toString(),
+            parseFloat([doc.richnessy])
+          ]);
+        });
+        this.barChart3.series[0].data = cacheRichness;
+      })
+    );
+  }
 };
 </script>
 

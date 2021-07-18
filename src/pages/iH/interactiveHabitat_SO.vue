@@ -1,22 +1,11 @@
 <template>
   <q-page class="q-pa-xs row justify-center bg-grey-5 no-wrap">
-    <q-card
-      class="q-ma-sm"
-      style="width: 33%; height:81vh"
-      bordered
-    >
+    <q-card class="q-ma-sm" style="width: 33%; height:81vh" bordered>
       <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
-        Southern Region
+        Southern region
         <q-space />
-        <q-separator
-          dark
-          vertical
-          inset
-        />
-        <q-tabs
-          inline-label
-          shrink
-        >
+        <q-separator dark vertical inset />
+        <q-tabs inline-label shrink>
           <q-route-tab
             name="Back"
             label="Back"
@@ -26,7 +15,7 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-sm">{{ Region }}</div>
+      <div class="q-pa-sm">{{ regionSO }}</div>
 
       <l-map
         class="map"
@@ -37,15 +26,9 @@
         :min-zoom="zoom"
       >
         <LTileLayer />
-        <l-geo-json
-          :geojson="region"
-          :options="regionOptions"
-        ></l-geo-json>
+        <l-geo-json :geojson="region" :options="regionOptions"></l-geo-json>
 
-        <l-geo-json
-          :geojson="sitesLocation"
-          :options="siteOptions"
-        >
+        <l-geo-json :geojson="sitesLocation" :options="siteOptions">
         </l-geo-json>
 
         <l-control-scale
@@ -57,20 +40,16 @@
     </q-card>
 
     <div style="width: 66.3%">
-      <q-card
-        class="bg-indigo-1"
-        style="height: 40vh"
-      >
-        <div class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders">
-          Regional Average Data Summary
+      <q-card class="bg-indigo-1" style="height: 40vh">
+        <div
+          class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders"
+        >
+          Regional average data summary
         </div>
         <div class="row q-py-xs justify-evenly no-wrap">
-          <q-card
-            class="q-pa-sm"
-            style="width: 22%; min-height: 32vh"
-          >
+          <q-card class="q-pa-sm" style="width: 22%; min-height: 32vh">
             <div class="q-px-sm">
-              <y>Max Temperature</y> <br />
+              <y>Max. rock temperature</y> <br />
               HH: <br />
               <h>43.00</h> <b> ± 2.52 ℃</b>
               <div class="row justify-end">
@@ -83,12 +62,9 @@
               </div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width: 18%"
-          >
+          <q-card class="q-pa-sm" style="width: 18%">
             <div class="q-px-sm">
-              <y>Total Wave Fetch</y> <br />
+              <y>Total wave fetch</y> <br />
               <div class="items-end">
                 Max: <br />
                 <h>400.93</h> <b> km</b> <br /><br />
@@ -100,13 +76,10 @@
               </div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width: 24%"
-          >
+          <q-card class="q-pa-sm" style="width: 24%">
             <div class="q-px-sm">
               <y>Nutrient levels</y> <br />
-              chlorophyll a: <br />
+              chlorophyll <i>a</i>: <br />
               <h>12.78</h> <b> ± 7.25 µg/ cm2</b>
               <div class="row justify-end">
                 (n = 4)
@@ -118,24 +91,18 @@
               </div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width: 16%"
-          >
+          <q-card class="q-pa-sm" style="width: 16%">
             <div class="q-px-sm">
-              <y>Mobile Species Richness</y> <br /><br />
+              <y>Mobile species richness</y> <br /><br />
               <div class="items-center">
                 Max:<h>23</h> <br /><br />
                 Min:<h>19</h>
               </div>
             </div>
           </q-card>
-          <q-card
-            class="q-pa-sm"
-            style="width: 16%"
-          >
+          <q-card class="q-pa-sm" style="width: 16%">
             <div class="q-px-sm">
-              <y>Sessile Species Richness</y> <br /><br />
+              <y>Sessile species richness</y> <br /><br />
               <div class="items-center">
                 Max:<h>22</h> <br /><br />
                 Min:<h>17</h>
@@ -145,19 +112,12 @@
         </div>
       </q-card>
       <div class="row no-wrap justify-around">
-        <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 40vh"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Shek O
           </div>
 
-          <q-img
-            src="~/assets/SiteImage/Shek O.png"
-            height="25vh"
-            basic
-          />
+          <q-img src="~/assets/SiteImage/Shek O.png" height="25vh" basic />
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -175,10 +135,7 @@
             />
           </div>
         </q-card>
-        <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 40vh"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Wah Fu
           </div>
@@ -203,19 +160,12 @@
             />
           </div>
         </q-card>
-        <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 40vh"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Middle Bay
           </div>
 
-          <q-img
-            src="~/assets/SiteImage/Middle Bay.png"
-            height="25vh"
-            basic
-          />
+          <q-img src="~/assets/SiteImage/Middle Bay.png" height="25vh" basic />
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -233,19 +183,12 @@
             />
           </div>
         </q-card>
-        <q-card
-          class="q-ma-md"
-          style="width: 24%; height: 40vh"
-        >
+        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Tai Tam
           </div>
 
-          <q-img
-            src="~/assets/SiteImage/Tai Tam.png"
-            height="25vh"
-            basic
-          />
+          <q-img src="~/assets/SiteImage/Tai Tam.png" height="25vh" basic />
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -270,29 +213,17 @@
           full-width
         >
           <q-card>
-            <q-bar
-              style="height: 40px"
-              class="bg-indigo text-bold"
-            >
-              <div class="text-indigo-2">Site Introduction |</div>
-              <div class="text-indigo-1">Southern Region</div>
-              <div class="text-white">>> Shek O Site</div>
+            <q-bar style="height: 40px" class="bg-indigo text-bold">
+              <div class="text-indigo-2">Site introduction |</div>
+              <div class="text-indigo-1">Southern region</div>
+              <div class="text-white">>> Shek O</div>
               <q-space />
-              <q-btn
-                dense
-                flat
-                class="text-white"
-                icon="close"
-                v-close-popup
-              >
+              <q-btn dense flat class="text-white" icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section
-              horizontal
-              class="q-pa-md"
-            >
+            <q-card-section horizontal class="q-pa-md">
               <q-img
                 class="col-3"
                 height="flex"
@@ -342,29 +273,17 @@
           full-width
         >
           <q-card>
-            <q-bar
-              style="height: 40px"
-              class="bg-indigo text-bold"
-            >
-              <div class="text-indigo-2">Site Introduction |</div>
-              <div class="text-indigo-1">Southern Region</div>
-              <div class="text-white">>> Wah Fu Site</div>
+            <q-bar style="height: 40px" class="bg-indigo text-bold">
+              <div class="text-indigo-2">Site introduction |</div>
+              <div class="text-indigo-1">Southern region</div>
+              <div class="text-white">>> Wah Fu</div>
               <q-space />
-              <q-btn
-                dense
-                flat
-                class="text-white"
-                icon="close"
-                v-close-popup
-              >
+              <q-btn dense flat class="text-white" icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section
-              horizontal
-              class="q-pa-md"
-            >
+            <q-card-section horizontal class="q-pa-md">
               <q-img
                 class="col-3"
                 height="flex"
@@ -414,29 +333,17 @@
           full-width
         >
           <q-card>
-            <q-bar
-              style="height: 40px"
-              class="bg-indigo text-bold"
-            >
-              <div class="text-indigo-2">Site Introduction |</div>
-              <div class="text-indigo-1">Southern Region</div>
-              <div class="text-white">>> Middle Bay Site</div>
+            <q-bar style="height: 40px" class="bg-indigo text-bold">
+              <div class="text-indigo-2">Site introduction |</div>
+              <div class="text-indigo-1">Southern region</div>
+              <div class="text-white">>> Middle Bay</div>
               <q-space />
-              <q-btn
-                dense
-                flat
-                class="text-white"
-                icon="close"
-                v-close-popup
-              >
+              <q-btn dense flat class="text-white" icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section
-              horizontal
-              class="q-pa-md"
-            >
+            <q-card-section horizontal class="q-pa-md">
               <q-img
                 class="col-3"
                 height="flex"
@@ -486,29 +393,17 @@
           full-width
         >
           <q-card>
-            <q-bar
-              style="height: 40px"
-              class="bg-indigo text-bold"
-            >
-              <div class="text-indigo-2">Site Introduction |</div>
-              <div class="text-indigo-1">Southern Region</div>
-              <div class="text-white">>> Tai Tam Site</div>
+            <q-bar style="height: 40px" class="bg-indigo text-bold">
+              <div class="text-indigo-2">Site introduction |</div>
+              <div class="text-indigo-1">Southern region</div>
+              <div class="text-white">>> Tai Tam</div>
               <q-space />
-              <q-btn
-                dense
-                flat
-                class="text-white"
-                icon="close"
-                v-close-popup
-              >
+              <q-btn dense flat class="text-white" icon="close" v-close-popup>
                 <q-tooltip>Close</q-tooltip>
               </q-btn>
             </q-bar>
 
-            <q-card-section
-              horizontal
-              class="q-pa-md"
-            >
+            <q-card-section horizontal class="q-pa-md">
               <q-img
                 class="col-3"
                 height="flex"
@@ -566,188 +461,34 @@ export default {
     LMap,
     LGeoJson,
     LControlScale,
-    LTileLayer: () => import("components/tileLayer"),
+    LTileLayer: () => import("components/tileLayer")
   },
   data() {
     return {
-      Region:
-        "The Southern (SO) region belongs to the transitional zone between the Pearl River influx and oceanic currents to the eastern waters of Hong Kong.  Water quality of the region is less influenced by the Pearl River, but some of our study sites in the region (e.g. Wah Fu) are located close to the Victoria Harbour, one of the busiest shipping waters in the world.  On the eastern side, however, shores generally experience strong wave action due to the direct and long fetches opening towards the South China Sea (e.g. Shek O).  Recreational activities are not uncommon in the region, with popular beaches located just next to our sites (e.g. Middle Bay).",
       card1: false,
       card2: false,
       card3: false,
       card4: false,
-      Table_SOSO: [
-        {
-          name: "Location",
-          data: "Southern District, Hong Kong Island",
-        },
-        {
-          name: "GPS coordinates",
-          data: `22°13'43.2"N, 114°15'22.7"E `,
-        },
-        {
-          name: "Tidal Range",
-          data: "0.9 m - 2.9 m + C.D.",
-        },
-        {
-          name: "Transect length",
-          data: "14 m",
-        },
-        {
-          name: "Shore exposure",
-          data: "Exposed",
-        },
-        {
-          name: "Maximum wave Force",
-          data: "5.94 N",
-        },
-        {
-          name: "Aspect",
-          data: "/",
-        },
-        {
-          name: "Slope",
-          data: "/",
-        },
-        {
-          name: "Rock type",
-          data: `Sedimentary`,
-        },
-      ],
-      Table_SOWF: [
-        {
-          name: "Location",
-          data: "Southern District, Hong Kong Island",
-        },
-        {
-          name: "GPS coordinates",
-          data: `22°15'09.9" N, 114°07'55.3" E`,
-        },
-        {
-          name: "Tidal Range",
-          data: "1.0 m - 2.9 m + C.D.",
-        },
-        {
-          name: "Transect length",
-          data: "14 m",
-        },
-        {
-          name: "Shore exposure",
-          data: "Semi - exposed",
-        },
-        {
-          name: "Maximum wave Force",
-          data: "3.02 N",
-        },
-        {
-          name: "Aspect",
-          data: "/",
-        },
-        {
-          name: "Slope",
-          data: "/",
-        },
-        {
-          name: "Rock type",
-          data: `Igneous`,
-        },
-      ],
-      Table_SOMB: [
-        {
-          name: "Location",
-          data: "Southern District, Hong Kong Island",
-        },
-        {
-          name: "GPS coordinates",
-          data: `22°13'45.6"N, 114°11'48.2"E `,
-        },
-        {
-          name: "Tidal Range",
-          data: "1.0 m - 2.3 m + C.D.",
-        },
-        {
-          name: "Transect length",
-          data: "17 m",
-        },
-        {
-          name: "Shore exposure",
-          data: "Intermediate",
-        },
-        {
-          name: "Maximum wave Force",
-          data: "1.91 N",
-        },
-        {
-          name: "Aspect",
-          data: "/",
-        },
-        {
-          name: "Slope",
-          data: "/",
-        },
-        {
-          name: "Rock type",
-          data: `Igneous`,
-        },
-      ],
-      Table_SOTT: [
-        {
-          name: "Location",
-          data: "Southern District, Hong Kong Island",
-        },
-        {
-          name: "GPS coordinates",
-          data: `22°14'14.9"N, 114°13'43.6"E `,
-        },
-        {
-          name: "Tidal Range",
-          data: "1.1 m - 2.7 m + C.D.",
-        },
-        {
-          name: "Transect length",
-          data: "15 m",
-        },
-        {
-          name: "Shore exposure",
-          data: "Sheltered",
-        },
-        {
-          name: "Maximum wave Force",
-          data: "2.00 N",
-        },
-        {
-          name: "Aspect",
-          data: "/",
-        },
-        {
-          name: "Slope",
-          data: "/",
-        },
-        {
-          name: "Rock type",
-          data: `Igneous`,
-        },
-      ],
       zoom: 9.8,
       center: L.latLng(22.23, 114.18),
       mapOptions: {
         zoomSnap: 0.2,
-        zoomControl: false,
+        zoomControl: false
       },
       sitesLocation: require("../../MapData/SO_Sites.json"),
       siteOptions: {
         style: function style(feature) {
           return {
-            color: red,
+            color: red
           };
         },
         onEachFeature: (feature, layer) => {
           layer.bindPopup(feature.properties.Site, {
             permanent: true,
             sticky: true,
-            direction: "center",
+            direction: "center"
           });
-        },
+        }
       },
       region: require("../../MapData/SO.json"),
       regionOptions: {
@@ -755,12 +496,29 @@ export default {
           return {
             opacity: 0.6,
             color: feature.properties.fill,
-            fillOpacity: 0.3,
+            fillOpacity: 0.3
           };
-        },
-      },
+        }
+      }
     };
   },
+  computed: {
+    regionSO() {
+      return this.$store.state.storeText.regionSO;
+    },
+    Table_SOSO() {
+      return this.$store.state.storeRegionTable.Table_SOSO;
+    },
+    Table_SOWF() {
+      return this.$store.state.storeRegionTable.Table_SOWF;
+    },
+    Table_SOMB() {
+      return this.$store.state.storeRegionTable.Table_SOMB;
+    },
+    Table_SOTT() {
+      return this.$store.state.storeRegionTable.Table_SOTT;
+    }
+  }
 };
 </script>
 
