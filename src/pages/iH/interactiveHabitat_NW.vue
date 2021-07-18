@@ -220,7 +220,7 @@
             <q-icon
               class="q-pa-sm"
               style="font-size: 2.5rem"
-              name="img:icons/sheltered.svg"
+              name="img:icons/Sheltered.svg"
             />
             <q-space />
 

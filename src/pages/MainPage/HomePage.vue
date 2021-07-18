@@ -104,7 +104,7 @@
               name="map"
               style="font-size: 4rem"
             />
-            <div class="text-subtitle1 text-bold">Interactive Habitat Map</div>
+            <div class="text-h5 text-bold">Map</div>
           </q-card-section>
 
           <q-card-section>
@@ -131,7 +131,7 @@
               name="travel_explore"
               style="font-size: 4rem"
             />
-            <div class="text-subtitle1 text-bold">Species Search Engine</div>
+            <div class="text-h5 text-bold">Search</div>
           </q-card-section>
 
           <q-card-section>
@@ -155,7 +155,7 @@
               name="biotech"
               style="font-size: 4rem"
             />
-            <div class="text-subtitle1 text-bold">Methodology</div>
+            <div class="text-h5 text-bold">Methods</div>
           </q-card-section>
 
           <q-card-section>
@@ -178,7 +178,7 @@
               name="collections"
               style="font-size: 4rem"
             />
-            <div class="text-subtitle1 text-bold">Gallery</div>
+            <div class="text-h5 text-bold">Gallery</div>
           </q-card-section>
 
           <q-card-section>
@@ -202,7 +202,7 @@
               name="dashboard"
               style="font-size: 4rem"
             />
-            <div class="text-subtitle1 text-bold">Dashboard Navigation</div>
+            <div class="text-h5 text-bold">Navigation</div>
           </q-card-section>
 
           <q-card-section>
@@ -258,19 +258,19 @@
         Related Links
       </div>
       <q-card-section class="row justify-evenly">
-        <div class="q-px-lg linkcard">
+        <div class="q-px-xl linkcard">
           <q-img src="~/assets/TIDElogo.png"> </q-img>
         </div>
-        <div class="q-px-lg linkcard">
+        <div class="q-px-xl linkcard">
           <q-img src="~/assets/SWIMSlogo2.png"> </q-img>
         </div>
-        <div class="q-px-lg linkcard">
+        <div class="q-px-xl linkcard">
           <q-img src="~/assets/ECFlogo.jpg"> </q-img>
         </div>
-        <div class="q-pa-lg linkcard">
+        <div class="q-px-xl linkcard">
           <q-img src="~/assets/HKOlogo.png"> </q-img>
         </div>
-        <div class="q-px-lg linkcard">
+        <div class="q-px-xl linkcard">
           <q-img src="~/assets/hkulogo.jpg"> </q-img>
         </div>
       </q-card-section>
@@ -278,7 +278,7 @@
         <q-btn
           no-caps
           class="linkbtn"
-          label="Tropical IntertiDal Ecology (TIDE) Group"
+          label="Tropical IntertiDal Ecology Group"
           type="a"
           target="_blank"
           href="https://www.tidehku.com/"
@@ -286,7 +286,7 @@
         <q-btn
           no-caps
           class="linkbtn"
-          label="The Swire Institute of Marine Science (SWIMS), HKU"
+          label="The Swire Institute of Marine Science, HKU"
           type="a"
           target="_blank"
           href="https://www.swims.hku.hk/"
@@ -294,7 +294,7 @@
         <q-btn
           no-caps
           class="linkbtn"
-          label="Environmental and Conservation Fund (ECF)"
+          label="Environmental and Conservation Fund"
           type="a"
           target="_blank"
           href="https://www.ecf.gov.hk/en/home/index.html "
@@ -302,7 +302,7 @@
         <q-btn
           no-caps
           class="linkbtn"
-          label="Hong Kong Observatory (HKO)"
+          label="Hong Kong Observatory"
           type="a"
           target="_blank"
           href="https://www.hko.gov.hk/en/index.html"
