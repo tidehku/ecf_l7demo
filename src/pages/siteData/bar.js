@@ -10,6 +10,7 @@ export const barData = {
     title: {
       text: ""
     },
+    tooltip: { valueDecimals: 2 },
     xAxis: {
       type: "category",
       title: {
@@ -29,7 +30,7 @@ export const barData = {
       series: {
         dataLabels: {
           enabled: true,
-          format: "{point.y}"
+          format: "{point.y:,.2f}"
         }
       }
     },
@@ -54,6 +55,7 @@ export const barData = {
     title: {
       text: ""
     },
+    tooltip: { valueDecimals: 2 },
     xAxis: {
       type: "category",
       title: {
@@ -73,7 +75,7 @@ export const barData = {
       series: {
         dataLabels: {
           enabled: true,
-          format: "{point.y}"
+          format: "{point.y:,.2f}"
         }
       }
     },
@@ -154,6 +156,7 @@ export const barData = {
         text: "Shannon's Diversity index H"
       }
     },
+    tooltip: { valueDecimals: 2 },
     legend: {
       enabled: true
     },
@@ -161,7 +164,7 @@ export const barData = {
       series: {
         dataLabels: {
           enabled: true,
-          format: "{point.y}"
+          format: "{point.y:,.2f}"
         }
       }
     },
@@ -186,6 +189,7 @@ export const barData = {
     title: {
       text: ""
     },
+    tooltip: { valueDecimals: 2 },
     xAxis: {
       type: "category",
       title: {
@@ -205,7 +209,7 @@ export const barData = {
       series: {
         dataLabels: {
           enabled: true,
-          format: "{point.y}"
+          format: "{point.y:,.2f}"
         }
       }
     },

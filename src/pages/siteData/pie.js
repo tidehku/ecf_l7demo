@@ -53,6 +53,9 @@ export const pieData = {
     legend: {
       enabled: true
     },
+    tooltip: {
+      valuePrefix: "0."
+    },
     plotOptions: {
       pie: {
         allowPointSelect: true,
@@ -89,6 +92,9 @@ export const pieData = {
     },
     legend: {
       enabled: true
+    },
+    tooltip: {
+      valuePrefix: "0."
     },
     plotOptions: {
       pie: {
