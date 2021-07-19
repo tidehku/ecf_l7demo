@@ -124,7 +124,7 @@ const state = {
       data: `22° 22' 46.2" N, 114° 18' 36.3" E`
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.2 m - 2.6 m + C.D."
     },
     {
@@ -162,7 +162,7 @@ const state = {
       data: `22° 31' 5.7" N, 114° 19' 10.4" E`
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.1 m - 3.0 m + C.D."
     },
     {
@@ -200,7 +200,7 @@ const state = {
       data: `22° 33' 3.7" N, 114° 17' 50.0" E`
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.3 m - 3.4 m + C.D."
     },
     {
@@ -238,7 +238,7 @@ const state = {
       data: `22° 32' 58.0" N, 114° 14' 49.8" E`
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.2 m - 3.2 m + C.D."
     },
     {
@@ -276,7 +276,7 @@ const state = {
       data: `22° 30' 4.6" N, 114° 18' 5.1" E`
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.1 m - 2.7 m + C.D."
     },
     {
@@ -314,7 +314,7 @@ const state = {
       data: `22° 15' 25.8" N, 113° 51' 11.3" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.1 m - 2.5 m + C.D.",
     },
     {
@@ -352,7 +352,7 @@ const state = {
       data: `22° 21' 45.3" N, 114° 0' 37.4" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "0.8 m - 3.0 m + C.D.",
     },
     {
@@ -390,7 +390,7 @@ const state = {
       data: `22° 20' 3.8" N, 114° 1' 24.5" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.1 m - 2.5 m + C.D.",
     },
     {
@@ -428,7 +428,7 @@ const state = {
       data: `22° 23' 32.5" N, 113° 54' 58.8" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.0 m - 2.8 m + C.D.",
     },
     {
@@ -466,7 +466,7 @@ const state = {
       data: `22° 13' 43.2" N, 114° 15' 22.7" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "0.9 m - 2.9 m + C.D.",
     },
     {
@@ -504,7 +504,7 @@ const state = {
       data: `22° 15' 9.9" N, 114° 7' 55.3" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.0 m - 2.9 m + C.D.",
     },
     {
@@ -542,7 +542,7 @@ const state = {
       data: `22° 13' 45.6" N, 114° 11' 48.2" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.0 m - 2.3 m + C.D.",
     },
     {
@@ -580,7 +580,7 @@ const state = {
       data: `22° 14' 14.9" N, 114° 13' 43.6" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.1 m - 2.7 m + C.D.",
     },
     {
@@ -618,7 +618,7 @@ const state = {
       data: `22° 13' 2.0" N, 113° 52' 53.5" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.0 m - 3.8 m + C.D.",
     },
     {
@@ -656,7 +656,7 @@ const state = {
       data: `22° 15' 0.6" N, 114° 0' 24.0" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.0 m - 2.8 m + C.D.",
     },
     {
@@ -696,7 +696,7 @@ const state = {
       data: `22° 16' 59.4" N, 114° 2' 49.1" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.1 m - 3.3 m + C.D.",
     },
     {
@@ -734,7 +734,7 @@ const state = {
       data: `22° 14' 5.6" N, 113° 58' 51.1" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.0 m - 2.5 m + C.D.",
     },
     {
@@ -772,7 +772,7 @@ const state = {
       data: `22° 26' 10.5" N, 114° 14' 49.5" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.3 m - 3.0 m + C.D.",
     },
     {
@@ -810,7 +810,7 @@ const state = {
       data: `22° 27' 25.4" N, 114° 14' 4.3" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.1 m - 3.0 m + C.D.",
     },
     {
@@ -848,7 +848,7 @@ const state = {
       data: `22° 26' 0.7" N, 114° 16' 7.1" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.1 m - 2.6 m + C.D.",
     },
     {
@@ -886,7 +886,7 @@ const state = {
       data: `22° 27' 23.9" N, 114° 17' 58.0" E`,
     },
     {
-      name: "Tidal transect range",
+      name: "Transect tidal range",
       data: "1.2 m - 2.4 m + C.D.",
     },
     {
