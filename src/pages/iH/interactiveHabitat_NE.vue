@@ -51,12 +51,12 @@
             <div class="q-px-sm">
               <span class="text-bold text-indigo-4">Max. rock emperature</span>
               <br />
-              HH: <br />
+              High shore: <br />
               <h>37.25</h> <b> ± 4.33 ℃</b>
               <div class="row justify-end">
                 (n = 4)
               </div>
-              LM: <br />
+              Mid shore: <br />
               <h>32.38</h> <b> ± 3.20 ℃</b>
               <div class="row justify-end">
                 (n = 4)

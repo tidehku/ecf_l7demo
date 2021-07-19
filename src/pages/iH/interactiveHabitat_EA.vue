@@ -50,12 +50,12 @@
           <q-card class="q-pa-sm" style="width: 22%; min-height: 32vh">
             <div class="q-px-sm">
               <y>Max. rock temperature</y> <br />
-              HH: <br />
+              High shore: <br />
               <h>39.75</h> <b> ± 2.96 ℃</b>
               <div class="row justify-end">
                 (n = 4)
               </div>
-              LM: <br />
+              Mid shore: <br />
               <h>31.67</h> <b> ± 7.15 ℃</b>
               <div class="row justify-end">
                 (n = 3)
