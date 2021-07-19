@@ -525,7 +525,7 @@ const state = {
     },
     {
       name: "Mean slope",
-      data: "46.5",
+      data: "46.5°",
     },
     {
       name: "Rock type",
@@ -709,7 +709,7 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "1.14 N (Winter); 1.7 N (Summer)",
+      data: "1.14 N (Winter); 1.70 N (Summer)",
     },
     {
       name: "Mean aspect",
@@ -903,11 +903,11 @@ const state = {
     },
     {
       name: "Mean aspect",
-      data: "18.6",
+      data: "18.6°",
     },
     {
       name: "Mean slope",
-      data: "18.5",
+      data: "18.5°",
     },
     {
       name: "Rock type",
