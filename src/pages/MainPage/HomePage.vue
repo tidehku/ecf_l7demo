@@ -213,7 +213,7 @@
         </div>
         <q-img
           class="col-5"
-          src="~/assets/groupphoto.jpg"
+          src="~/assets/groupphoto2.jpg"
         />
       </q-card-section>
     </q-card>

@@ -80,13 +80,13 @@
           <q-card class="q-pa-sm" style="width: 24%">
             <div class="q-px-sm">
               <y>Nutrient levels</y> <br />
-              chlorophyll <i>a</i>: <br />
-              <h>6.56</h> <b> ± 2.86 µg/ cm2</b>
+              Chlorophyll <i>a</i>: <br />
+              <h>6.56</h> <b> ± 2.86 µg/cm<sup>2</sup></b>
               <div class="row justify-end">
                 (n = 4)
               </div>
               Organic matter: <br />
-              <h>5.56</h> <b> ± 2.10 g</b>
+              <h>5.56</h> <b> ± 2.10 mg/cm<sup>2</sup></b>
               <div class="row justify-end">
                 (n = 4)
               </div>
@@ -245,14 +245,14 @@
                   <q-btn
                     color="teal-5"
                     no-caps
-                    label="Go to Biological Dashboard"
+                    label="Go to Biological dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
                     icon="eco"
                   ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
-                    label="Go to Physical Dashboard"
+                    label="Go to Physical dashboard"
                     to="/interactiveHabitat/physicalStarfishBay"
                     icon="thermostat"
                   ></q-btn>
@@ -305,14 +305,14 @@
                   <q-btn
                     color="teal-5"
                     no-caps
-                    label="Go to Biological Dashboard"
+                    label="Go to Biological dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
                     icon="eco"
                   ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
-                    label="Go to Physical Dashboard"
+                    label="Go to Physical dashboard"
                     to="/interactiveHabitat/physicalStarfishBay"
                     icon="thermostat"
                   ></q-btn>
@@ -366,14 +366,14 @@
                   <q-btn
                     color="teal-5"
                     no-caps
-                    label="Go to Biological Dashboard"
+                    label="Go to Biological dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
                     icon="eco"
                   ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
-                    label="Go to Physical Dashboard"
+                    label="Go to Physical dashboard"
                     to="/interactiveHabitat/physicalStarfishBay"
                     icon="thermostat"
                   ></q-btn>
@@ -426,14 +426,14 @@
                   <q-btn
                     color="teal-5"
                     no-caps
-                    label="Go to Biological Dashboard"
+                    label="Go to Biological dashboard"
                     to="/interactiveHabitat/biologicalStarfishBay"
                     icon="eco"
                   ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
-                    label="Go to Physical Dashboard"
+                    label="Go to Physical dashboard"
                     to="/interactiveHabitat/physicalStarfishBay"
                     icon="thermostat"
                   ></q-btn>

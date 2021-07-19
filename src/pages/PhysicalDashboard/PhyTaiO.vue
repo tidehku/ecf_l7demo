@@ -2,7 +2,7 @@
   <q-page class="justify-center">
     <q-bar elevated class="bg-blue-9 text-white">
       <div class="text-bold row justify-center">
-        Physical Dashboard of Tai O, North Western Region
+        Physical dashboard of Tai O, Northwestern region
       </div>
       <q-space />
       <q-btn
@@ -13,7 +13,7 @@
         to="/interactiveHabitat/bioTaiO"
       >
         <q-tooltip>
-          Switch to Biological Dashboard
+          Switch to Biological dashboard
         </q-tooltip>
       </q-btn>
       <q-btn
@@ -30,7 +30,7 @@
     <div class="page">
       <q-card bordered>
         <div class="text-h5 text-bold row justify-center title">
-          Daily Temperature
+          Hourly rock temperature throughout a day
           <q-icon
             class="absolute all-pointer-events"
             size="32px"
@@ -39,14 +39,13 @@
             style="top: 2px; right: 8px"
           >
             <q-tooltip>
-              Here can be some note on the interpretation/ecological
-              significance of the data
+              Please visit the METHODS tab to check out how these measurements were made.
             </q-tooltip>
           </q-icon>
         </div>
         <div class="row">
-          <div class="col-6 tab1">winter</div>
-          <div class="col-6 tab2">summer</div>
+          <div class="col-6 tab1">Winter</div>
+          <div class="col-6 tab2">Summer</div>
         </div>
         <div class="row">
           <highcharts class="col-6" :options="Temperature1"></highcharts>
@@ -60,7 +59,7 @@
 
       <q-card bordered>
         <div class="text-h5 text-bold row justify-center title">
-          Nutrient Level
+          Nutrient levels
           <q-icon
             class="absolute all-pointer-events"
             size="32px"
@@ -69,23 +68,22 @@
             style="top: 2px; right: 8px"
           >
             <q-tooltip>
-              Here can be some note on the interpretation/ecological
-              significance of the data
+              Please visit the METHODS tab to check out how these measurements were made.
             </q-tooltip>
           </q-icon>
         </div>
         <div class="row no-wrap">
-          <div class="col-6 text-center text-bold text-blue">Chlorophyll a</div>
+          <div class="col-6 text-center text-bold text-blue">Chlorophyll <i>a</i></div>
           <q-separator vertical />
           <div class="col-6 text-center text-bold text-blue">
-            Organic Matter
+            Organic matter
           </div>
         </div>
         <div class="row">
-          <div class="col-3 tab1">winter</div>
-          <div class="col-3 tab2">summer</div>
-          <div class="col-3 tab1">winter</div>
-          <div class="col-3 tab2">summer</div>
+          <div class="col-3 tab1">Winter</div>
+          <div class="col-3 tab2">Summer</div>
+          <div class="col-3 tab1">Winter</div>
+          <div class="col-3 tab2">Summer</div>
         </div>
         <div class="row">
           <highcharts class="col-3" :options="Chla1"></highcharts>

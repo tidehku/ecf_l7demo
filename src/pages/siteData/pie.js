@@ -28,7 +28,7 @@ export const pieData = {
     },
     series: [
       {
-        name: "Species abundance",
+        name: "Abundance",
         colorByPoint: true,
         colors: ["#719DC8", "#79C6D1", "#a0c2a0", "#ffdc73", "#e8a969"],
         showInLegend: false,
@@ -54,7 +54,7 @@ export const pieData = {
       enabled: true
     },
     tooltip: {
-      valuePrefix: "0."
+      valuePrefix: ""
     },
     plotOptions: {
       pie: {
@@ -68,7 +68,7 @@ export const pieData = {
     },
     series: [
       {
-        name: "Incidence proportion",
+        name: "Incidence",
         colorByPoint: true,
         colors: ["#719DC8", "#79C6D1", "#a0c2a0", "#ffdc73", "#e8a969"],
         showInLegend: false,
@@ -105,7 +105,7 @@ export const pieData = {
     },
     series: [
       {
-        name: "Species abundance",
+        name: "Abundance",
         colorByPoint: true,
         colors: ["#719DC8", "#79C6D1", "#a0c2a0", "#ffdc73", "#e8a969"],
         showInLegend: false,
@@ -131,7 +131,7 @@ export const pieData = {
       enabled: true
     },
     tooltip: {
-      valuePrefix: "0."
+      valuePrefix: ""
     },
     plotOptions: {
       pie: {
@@ -145,7 +145,7 @@ export const pieData = {
     },
     series: [
       {
-        name: "Incidence proportion",
+        name: "Incidence",
         colorByPoint: true,
         colors: ["#719DC8", "#79C6D1", "#a0c2a0", "#ffdc73", "#e8a969"],
         showInLegend: false,

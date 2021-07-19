@@ -15,26 +15,26 @@ export const tempData = {
     xAxis: {
       type: "time",
       title: {
-        text: "Time (hour)"
+        text: "Time of the day (hour)"
       },
       accessibility: {
-        rangeDescription: "Range: 0-24 h."
+        rangeDescription: "Range: 0-24 h"
       }
     },
     yAxis: {
       title: {
-        text: "Temperature"
+        text: "Temperature (°C)"
       },
       labels: {
         formatter: function() {
-          return this.value + "°C";
+          return this.value;
         }
       }
     },
     tooltip: {
       crosshairs: true,
       shared: true,
-      valueSuffix: "°C"
+      valueSuffix: " °C"
     },
     legend: {
       layout: "proximate",
@@ -43,7 +43,7 @@ export const tempData = {
     },
     series: [
       {
-        name: "HH Temperature",
+        name: "High shore",
         color: "#D67E32",
         data: [],
         zIndex: 1,
@@ -53,7 +53,7 @@ export const tempData = {
         }
       },
       {
-        name: "HH Range",
+        name: "High shore range",
         color: "#F8C762",
         data: [],
         type: "arearange",
@@ -66,7 +66,7 @@ export const tempData = {
         }
       },
       {
-        name: "LM Temperature",
+        name: "Mid shore",
         color: "#11B678",
         data: [],
         zIndex: 1,
@@ -76,7 +76,7 @@ export const tempData = {
         }
       },
       {
-        name: "LM Range",
+        name: "Mid shore range",
         color: "#7FDCB9",
         data: [],
         type: "arearange",
@@ -106,26 +106,26 @@ export const tempData = {
     xAxis: {
       type: "time",
       title: {
-        text: "Time (hour)"
+        text: "Time of the day (hour)"
       },
       accessibility: {
-        rangeDescription: "Range: 0-24 h."
+        rangeDescription: "Range: 0-24 h"
       }
     },
     yAxis: {
       title: {
-        text: "Temperature"
+        text: "Temperature (°C)"
       },
       labels: {
         formatter: function() {
-          return this.value + "°C";
+          return this.value;
         }
       }
     },
     tooltip: {
       crosshairs: true,
       shared: true,
-      valueSuffix: "°C"
+      valueSuffix: " °C"
     },
     legend: {
       layout: "proximate",
@@ -134,7 +134,7 @@ export const tempData = {
     },
     series: [
       {
-        name: "HH Temperature",
+        name: "High shore",
         color: "#D67E32",
         data: [],
         zIndex: 1,
@@ -144,7 +144,7 @@ export const tempData = {
         }
       },
       {
-        name: "HH Range",
+        name: "High shore range",
         color: "#F8C762",
         data: [],
         type: "arearange",
@@ -157,7 +157,7 @@ export const tempData = {
         }
       },
       {
-        name: "LM Temperature",
+        name: "Mid shore",
         color: "#11B678",
         data: [],
         zIndex: 1,
@@ -167,7 +167,7 @@ export const tempData = {
         }
       },
       {
-        name: "LM Range",
+        name: "Mid shore range",
         color: "#7FDCB9",
         data: [],
         type: "arearange",

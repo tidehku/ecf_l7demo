@@ -13,12 +13,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -56,12 +56,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -99,12 +99,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -142,12 +142,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -185,12 +185,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -228,12 +228,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -271,12 +271,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -314,12 +314,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -357,12 +357,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -400,12 +400,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -443,12 +443,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -486,12 +486,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -529,12 +529,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -572,12 +572,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -615,12 +615,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -658,12 +658,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -701,12 +701,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -744,12 +744,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -787,12 +787,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -830,12 +830,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -873,12 +873,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -916,12 +916,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {
@@ -959,12 +959,12 @@ export const omData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of organic matter"
+        text: "Mean organic matter concentration  (mg/cm2)"
       }
     },
     legend: {

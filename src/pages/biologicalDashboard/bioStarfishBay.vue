@@ -2,7 +2,7 @@
   <q-page class="justify-center">
     <q-bar class="bg-teal-8 text-white">
       <div class="text-bold row justify-center">
-        Biological Dashboard of Starfish Bay, Tolo Harbour Region
+        Biological dashboard of Starfish Bay, Tolo Harbour region
       </div>
       <q-space />
       <q-btn
@@ -12,7 +12,7 @@
         to="/interactiveHabitat/phyStarfishBay"
       >
         <q-tooltip>
-          Switch to physical Dashboard
+          Switch to Physical dashboard
         </q-tooltip>
       </q-btn>
       <q-btn
@@ -30,7 +30,7 @@
       <div class="row no-wrap">
         <q-card class="width:33% listName">
           <div class="text-h5 text-bold row justify-center title">
-            List of Species Names
+            Species list
           </div>
           <div class="row no-wrap">
             <div class="col-6 text-h6 text-center text-bold text-teal">
@@ -62,7 +62,7 @@
                     <q-icon name="horizontal_rule" style="display: none" />
                   </q-item-section>
                   <q-item-section>
-                    <i>{{ mobile }} </i>
+                    {{ mobile }}                
                   </q-item-section>
                 </q-item>
               </q-list>
@@ -88,7 +88,7 @@
                     <q-icon name="horizontal_rule" style="display: none" />
                   </q-item-section>
                   <q-item-section>
-                    <i>{{ sessile }} </i>
+                    {{ sessile }}
                   </q-item-section>
                 </q-item>
               </q-list>
@@ -98,23 +98,25 @@
 
         <q-card class="col-8 chartCard">
           <div class="text-h5 text-bold row justify-center title">
-            Species Abundance and Diversity Indices
+            Assemblage composition and ecological indices
           </div>
           <div class="row no-wrap">
             <div class="col-6 text-h6 text-center text-bold text-teal">
-              5 most abundant Mobile species
+              Five most common mobile species
+              (abundance over 50 quadrats)
             </div>
             <q-separator vertical />
             <div class="col-6 text-h6 text-center text-bold text-teal">
-              5 most abundant Sessile species
+              Five most common sessile species
+              (incidence out of 50 quadrats)
             </div>
           </div>
 
           <div class="row">
-            <div class="col-3 tab1">winter</div>
-            <div class="col-3 tab2">summer</div>
-            <div class="col-3 tab1">winter</div>
-            <div class="col-3 tab2">summer</div>
+            <div class="col-3 tab1">Winter</div>
+            <div class="col-3 tab2">Summer</div>
+            <div class="col-3 tab1">Winter</div>
+            <div class="col-3 tab2">Summer</div>
           </div>
           <q-card-section horizontal>
             <highcharts class="col-3" :options="pieChart1"></highcharts>
@@ -132,9 +134,9 @@
 
           <q-separator />
           <div class="row">
-            <div class="col-4 tab2">Shannon's Diversity index H'</div>
-            <div class="col-4 tab1">Pielou's evenness J</div>
-            <div class="col-4 tab2">Species richness S</div>
+            <div class="col-4 tab2">Shannon's diversity index <i>H'</i></div>
+            <div class="col-4 tab1">Pielou's evenness <i>J</i></div>
+            <div class="col-4 tab2">Species richness <i>S</i></div>
           </div>
 
           <q-card-section horizontal class="row">

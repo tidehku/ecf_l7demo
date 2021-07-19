@@ -15,7 +15,7 @@
           to <br />
           local hydrological characteristics and general shore directions.
           Details <br />
-          can be found in the Methodology Tab.
+          can be found in the METHODS tab.
         </q-tooltip>
       </q-icon>
     </q-card>

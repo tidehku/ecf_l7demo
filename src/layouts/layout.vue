@@ -167,11 +167,11 @@ export default {
           sites: ["Pak Lap", "Kau Sai Chau", "Pak Shui Wun", "Sai Wan"]
         },
         {
-          label: "North Eastern",
+          label: "Northeastern",
           sites: ["Double Island", "Hung Shek Mun", "Kat O", "Yung Shue Au"]
         },
         {
-          label: "North Western",
+          label: "Northwestern",
           sites: ["Luk Keng", "Lung Kwu Tan", "Siu Lam", "Tai O"]
         },
         {
@@ -179,7 +179,7 @@ export default {
           sites: ["Middle Bay", "Tai Tam", "Wah Fu", "Shek O"]
         },
         {
-          label: "South Western",
+          label: "Southwestern",
           sites: ["Peng Chau", "Pui O", "Shui Tseng", "Tai Long Wan"]
         },
         {
@@ -189,11 +189,11 @@ export default {
       ],
       dashboardOptions: [
         {
-          label: "Physical Dashboard",
+          label: "Physical dashboard",
           value: "phy"
         },
         {
-          label: "Biological Dashboard",
+          label: "Biological dashboard",
           value: "bio"
         }
       ]

@@ -13,12 +13,12 @@ export const chlaData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of chlorophyll a"
+        text: "Mean chlorophyll a concentration (µg/cm2)"
       }
     },
     legend: {
@@ -56,12 +56,12 @@ export const chlaData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Tidal height (Meter above C.D.)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       title: {
-        text: "mean of chlorophyll a"
+        text: "Mean chlorophyll a concentration (µg/cm2)"
       }
     },
     legend: {

@@ -14,13 +14,13 @@ export const barData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Transect Height (m)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       min: 0,
       title: {
-        text: "Shannon's Diversity index H"
+        text: "Shannon's diversity index H'"
       }
     },
     legend: {
@@ -59,7 +59,7 @@ export const barData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Transect Height (m)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
@@ -103,7 +103,7 @@ export const barData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Transect Height (m)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
@@ -147,13 +147,13 @@ export const barData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Transect Height (m)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
       min: 0,
       title: {
-        text: "Shannon's Diversity index H"
+        text: "Shannon's diversity index H'"
       }
     },
     tooltip: { valueDecimals: 2 },
@@ -193,7 +193,7 @@ export const barData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Transect Height (m)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
@@ -237,7 +237,7 @@ export const barData = {
     xAxis: {
       type: "category",
       title: {
-        text: "Transect Height (m)"
+        text: "Tidal height (m + C.D.)"
       }
     },
     yAxis: {
