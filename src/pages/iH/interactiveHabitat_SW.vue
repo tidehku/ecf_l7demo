@@ -106,8 +106,8 @@
             <div class="q-px-sm">
               <y>Sessile species richness</y> <br /><br />
               <div class="items-center">
-                Max:<h>18</h> <br /><br />
-                Min:<h>10</h>
+                Max: <h>18</h> <br /><br />
+                Min: <h>10</h>
               </div>
             </div>
           </q-card>
