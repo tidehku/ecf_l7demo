@@ -94,6 +94,10 @@ const state = {
       description: `Species with limited or no ability to move around, such as algae, bivalves (oysters and mussels) and some sea anemones.  In some cases, an entity in sessile species might not correspond to a single species but a mix of microbial species constituting an unique functional entity, e.g. high shore biofilm, that is hard to be further separated into species level in the field/from the photographes.`
     },
     {
+      name: "Abundance and incidence",
+      description: `Abundance refers to the count of mobile species while incidence refers to the number of occupancy by sessile species out of the total number of sampling units.  In the site biological dashboards, abundance and incidence are expressed in terms of the total count and number of occupancy out of the total number of quadrats surveyed (each quadrat = 25 cm × 25 cm).`
+    },
+    {
       name: "Shannon’s diversity index (<i>H’</i>) ",
       description: `A diversity index based on Shannon & Weaver (1949), calculated using the formula <i>H’</i> = - Σ pi log pi (where i ranges from 1 to the total number of species found, and pi is the proportion of the abundance of species i in the sampling area).  A higher value of <i>H’</i> indicates a more diverse assemblage at a sampling area (either by increasing the number of species or having species with more similar numbers of individuals).  In our project, <i>H’</i> is calculated based on identified mobile species where counts are available.`
     },
