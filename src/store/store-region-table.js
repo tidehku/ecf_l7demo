@@ -7,7 +7,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°23'53.9"N 114°22'31.3"E`
+      data: `22° 23' 53.9" N 114° 22' 31.3" E`
     },
     {
       name: "Transect tidal range",
@@ -23,37 +23,37 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "4.56 N"
+      data: "4.64 N (Winter)"
     },
     {
       name: "Aspect",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Slope",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Rock type",
-      data: `Sedimentary`
+      data: `Igneous`
     }
   ],
   Table_EAPL: [
     {
       name: "Location",
-      data: "Eastern District, Hong Kong Island"
+      data: "Sai Kung District, New Territories"
     },
     {
       name: "GPS coordinates",
-      data: `22°15'09.9" N, 114°07'55.3" E`
+      data: `22° 21' 3.3" N, 114° 21' 34" E`
     },
     {
       name: "Transect tidal range",
-      data: "1.0 m - 2.9 m + C.D."
+      data: "1.1 m - 3.4 m + C.D."
     },
     {
       name: "Transect length",
-      data: "14 m"
+      data: "15 m"
     },
     {
       name: "Shore exposure",
@@ -61,15 +61,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "3.02 N"
+      data: "Data not available yet"
     },
     {
       name: "Aspect",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Slope",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Rock type",
@@ -79,35 +79,35 @@ const state = {
   Table_EAPSW: [
     {
       name: "Location",
-      data: "Eastern District, Hong Kong Island"
+      data: "Sai Kung District, New Territories"
     },
     {
       name: "GPS coordinates",
-      data: `22°13'45.6"N, 114°11'48.2"E `
+      data: `22° 20' 23.6" N, 114° 15' 59.2" E`
     },
     {
       name: "Transect tidal range",
-      data: "1.0 m - 2.3 m + C.D."
+      data: "1.1 m - 2.7 m + C.D."
     },
     {
       name: "Transect length",
-      data: "17 m"
+      data: "16 m"
     },
     {
       name: "Shore exposure",
-      data: "Intermediate"
+      data: "Semi - exposed"
     },
     {
       name: "Maximum wave force",
-      data: "1.91 N"
+      data: "1.33 N (Winter)"
     },
     {
       name: "Aspect",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Slope",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Rock type",
@@ -117,19 +117,19 @@ const state = {
   Table_EAKSC: [
     {
       name: "Location",
-      data: "Eastern District, Hong Kong Island"
+      data: "Sai Kung District, New Territories"
     },
     {
       name: "GPS coordinates",
-      data: `22°14'14.9"N, 114°13'43.6"E `
+      data: `22° 22' 46.2" N, 114° 18' 36.3" E`
     },
     {
       name: "Tidal transect range",
-      data: "1.1 m - 2.7 m + C.D."
+      data: "1.2 m - 2.6 m + C.D."
     },
     {
       name: "Transect length",
-      data: "15 m"
+      data: "20 m"
     },
     {
       name: "Shore exposure",
@@ -137,15 +137,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "2.00 N"
+      data: "Data not available yet"
     },
     {
       name: "Aspect",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Slope",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Rock type",
@@ -159,7 +159,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°31'05.7"N, 114°19'10.4"E`
+      data: `22° 31' 5.7" N, 114° 19' 10.4" E`
     },
     {
       name: "Tidal transect range",
@@ -171,19 +171,19 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Intermediate"
+      data: "Semi - exposed"
     },
     {
       name: "Maximum wave force",
-      data: "2.06 N"
+      data: "2.06 N (Winter)"
     },
     {
       name: "Aspect",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Slope",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Rock type",
@@ -197,7 +197,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°33'03.7"N, 114°17'50.0"E`
+      data: `22° 33' 3.7" N, 114° 17' 50.0" E`
     },
     {
       name: "Tidal transect range",
@@ -209,19 +209,19 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Intermediate"
+      data: "Semi - exposed"
     },
     {
       name: "Maximum wave force",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Aspect",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Slope",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Rock type",
@@ -235,7 +235,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°32'58.0"N, 114°14'49.8"E`
+      data: `22° 32' 58.0" N, 114° 14' 49.8" E`
     },
     {
       name: "Tidal transect range",
@@ -247,19 +247,19 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Intermediate"
+      data: "Semi - exposed"
     },
     {
       name: "Maximum wave force",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Aspect",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Slope",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Rock type",
@@ -273,7 +273,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°30'04.6"N, 114°18'05.1"E`
+      data: `22° 30' 4.6" N, 114° 18' 5.1" E`
     },
     {
       name: "Tidal transect range",
@@ -289,15 +289,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "2.46 N"
+      data: "2.46 N (Winter)"
     },
     {
       name: "Aspect",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Slope",
-      data: "/"
+      data: "Data not available yet"
     },
     {
       name: "Rock type",
@@ -311,7 +311,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°15'25.8"N, 113°51'11.3"E`,
+      data: `22° 15' 25.8" N, 113° 51' 11.3" E`,
     },
     {
       name: "Tidal transect range",
@@ -323,19 +323,19 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Intermediate - exposed",
+      data: "Semi - exposed",
     },
     {
       name: "Maximum wave force",
-      data: "1.32 N",
+      data: "1.32 N (Winter); 1.88 N (Summer)",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "340.8°",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "31.1°",
     },
     {
       name: "Rock type",
@@ -349,7 +349,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°21'45.3"N, 114°00'37.4"E`,
+      data: `22° 21' 45.3" N, 114° 0' 37.4" E`,
     },
     {
       name: "Tidal transect range",
@@ -361,19 +361,19 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Intermediate",
+      data: "Semi - exposed",
     },
     {
       name: "Maximum wave force",
-      data: "1.59 N",
+      data: "1.59 N (Winter); 1.49 N (Summer)",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "238.2°",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "28.4°",
     },
     {
       name: "Rock type",
@@ -387,7 +387,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°20'03.8"N, 114°01'24.5"E`,
+      data: `22° 20' 3.8" N, 114° 1' 24.5" E`,
     },
     {
       name: "Tidal transect range",
@@ -403,15 +403,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "1.46 N",
+      data: "1.46 N (Winter)",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Rock type",
@@ -425,7 +425,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°23'32.5"N, 113°54'58.8"E `,
+      data: `22° 23' 32.5" N, 113° 54' 58.8" E`,
     },
     {
       name: "Tidal transect range",
@@ -437,19 +437,19 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Intermediate",
+      data: "Semi - exposed",
     },
     {
       name: "Maximum wave force",
-      data: "2.14 N",
+      data: "2.14 N (Winter); 2.14 N (Summer)",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "233.5°",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "26.4°",
     },
     {
       name: "Rock type",
@@ -463,7 +463,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°13'43.2"N, 114°15'22.7"E `,
+      data: `22° 13' 43.2" N, 114° 15' 22.7" E`,
     },
     {
       name: "Tidal transect range",
@@ -479,15 +479,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "5.94 N",
+      data: "5.94 N (Winter); 3.91 N (Summer)",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Rock type",
@@ -501,7 +501,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°15'09.9" N, 114°07'55.3" E`,
+      data: `22° 15' 9.9" N, 114° 7' 55.3" E`,
     },
     {
       name: "Tidal transect range",
@@ -517,15 +517,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "3.02 N",
+      data: "3.02 N (Winter); 3.61 N (Summer)",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "254.5°",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "46.5",
     },
     {
       name: "Rock type",
@@ -539,7 +539,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°13'45.6"N, 114°11'48.2"E `,
+      data: `22° 13' 45.6" N, 114° 11' 48.2" E`,
     },
     {
       name: "Tidal transect range",
@@ -551,19 +551,19 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Intermediate",
+      data: "Semi - exposed",
     },
     {
       name: "Maximum wave force",
-      data: "1.91 N",
+      data: "1.91 N (Winter); 1.62 N (Summer)",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "318.8°",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "30.7°",
     },
     {
       name: "Rock type",
@@ -577,7 +577,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°14'14.9"N, 114°13'43.6"E `,
+      data: `22° 14' 14.9" N, 114° 13' 43.6" E`,
     },
     {
       name: "Tidal transect range",
@@ -593,15 +593,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "2.00 N",
+      data: "2.00 N (Winter); 2.36 N (Summer)",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "35.3°",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "31.8°",
     },
     {
       name: "Rock type",
@@ -615,7 +615,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°13'02.0"N, 113°52'53.5"E`,
+      data: `22° 13' 2.0" N, 113° 52' 53.5" E`,
     },
     {
       name: "Tidal transect range",
@@ -631,15 +631,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Rock type",
@@ -653,7 +653,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°15'00.6"N, 114°00'24.0"E`,
+      data: `22° 15' 0.6" N, 114° 0' 24.0" E`,
     },
     {
       name: "Tidal transect range",
@@ -666,19 +666,19 @@ const state = {
     {
       name: "Shore exposure",
 
-      data: "Intermediate",
+      data: "Semi - exposed",
     },
     {
       name: "Maximum wave force",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Rock type",
@@ -693,7 +693,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°16'59.4"N, 114°02'49.1"E `,
+      data: `22° 16' 59.4" N, 114° 2' 49.1" E`,
     },
     {
       name: "Tidal transect range",
@@ -705,19 +705,19 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Intermediate",
+      data: "Semi - exposed",
     },
     {
       name: "Maximum wave force",
-      data: "1.14 N",
+      data: "1.14 N (Winter); 1.7 N (Summer)",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "137.8°",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "58.1°",
     },
     {
       name: "Rock type",
@@ -731,7 +731,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°14'05.6"N, 113°58'51.1"E `,
+      data: `22° 14' 5.6" N, 113° 58' 51.1" E`,
     },
     {
       name: "Tidal transect range",
@@ -747,15 +747,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "0.89 N",
+      data: "0.89 N (Winter)",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Rock type",
@@ -769,7 +769,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°26'10.5"N, 114°14'49.5"E `,
+      data: `22° 26' 10.5" N, 114° 14' 49.5" E`,
     },
     {
       name: "Tidal transect range",
@@ -781,19 +781,19 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Intermediate",
+      data: "Semi - exposed",
     },
     {
       name: "Maximum wave force",
-      data: "1.09 N",
+      data: "1.09 N (Winter); 1.17 N (Summer)",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "359.7°",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "35.2°",
     },
     {
       name: "Rock type",
@@ -807,7 +807,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°27'25.4"N, 114°14'04.3"E `,
+      data: `22° 27' 25.4" N, 114° 14' 4.3" E`,
     },
     {
       name: "Tidal transect range",
@@ -823,15 +823,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "111.8°",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "39.6°",
     },
     {
       name: "Rock type",
@@ -845,7 +845,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°26'00.7"N, 114°16'07.1"E`,
+      data: `22° 26' 0.7" N, 114° 16' 7.1" E`,
     },
     {
       name: "Tidal transect range",
@@ -861,15 +861,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "1.16 N",
+      data: "1.16 N (Winter); 1.48 N (Summer)",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "71.8°",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "26.8°",
     },
     {
       name: "Rock type",
@@ -883,7 +883,7 @@ const state = {
     },
     {
       name: "GPS coordinates",
-      data: `22°27'23.9"N, 114°17'58.0"E`,
+      data: `22° 27' 23.9" N, 114° 17' 58.0" E`,
     },
     {
       name: "Tidal transect range",
@@ -899,15 +899,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "/",
+      data: "Data not available yet",
     },
     {
       name: "Aspect",
-      data: "/",
+      data: "18.6",
     },
     {
       name: "Slope",
-      data: "/",
+      data: "18.5",
     },
     {
       name: "Rock type",
