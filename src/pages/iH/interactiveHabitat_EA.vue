@@ -95,8 +95,8 @@
             <div class="q-px-sm">
               <y>Mobile species richness</y> <br /><br />
               <div class="items-center">
-                Max:<h>18</h> <br /><br />
-                Min:<h>13</h>
+                Max: <h>18</h> <br /><br />
+                Min: <h>13</h>
               </div>
             </div>
           </q-card>
