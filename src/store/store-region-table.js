@@ -57,7 +57,7 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Semi - exposed"
+      data: "Semi-exposed"
     },
     {
       name: "Maximum wave force",
@@ -95,7 +95,7 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Semi - exposed"
+      data: "Semi-exposed"
     },
     {
       name: "Maximum wave force",
@@ -171,7 +171,7 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Semi - exposed"
+      data: "Semi-exposed"
     },
     {
       name: "Maximum wave force",
@@ -209,7 +209,7 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Semi - exposed"
+      data: "Semi-exposed"
     },
     {
       name: "Maximum wave force",
@@ -247,7 +247,7 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Semi - exposed"
+      data: "Semi-exposed"
     },
     {
       name: "Maximum wave force",
@@ -323,7 +323,7 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Semi - exposed",
+      data: "Semi-exposed",
     },
     {
       name: "Maximum wave force",
@@ -361,7 +361,7 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Semi - exposed",
+      data: "Semi-exposed",
     },
     {
       name: "Maximum wave force",
@@ -437,7 +437,7 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Semi - exposed",
+      data: "Semi-exposed",
     },
     {
       name: "Maximum wave force",
@@ -513,7 +513,7 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Semi - exposed",
+      data: "Semi-exposed",
     },
     {
       name: "Maximum wave force",
@@ -551,7 +551,7 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Semi - exposed",
+      data: "Semi-exposed",
     },
     {
       name: "Maximum wave force",
@@ -666,7 +666,7 @@ const state = {
     {
       name: "Shore exposure",
 
-      data: "Semi - exposed",
+      data: "Semi-exposed",
     },
     {
       name: "Maximum wave force",
@@ -705,7 +705,7 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Semi - exposed",
+      data: "Semi-exposed",
     },
     {
       name: "Maximum wave force",
@@ -781,7 +781,7 @@ const state = {
     },
     {
       name: "Shore exposure",
-      data: "Semi - exposed",
+      data: "Semi-exposed",
     },
     {
       name: "Maximum wave force",
