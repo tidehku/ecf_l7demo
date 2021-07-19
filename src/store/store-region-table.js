@@ -26,11 +26,11 @@ const state = {
       data: "4.64 N (Winter)"
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet"
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet"
     },
     {
@@ -64,11 +64,11 @@ const state = {
       data: "Data not available yet"
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet"
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet"
     },
     {
@@ -102,11 +102,11 @@ const state = {
       data: "1.33 N (Winter)"
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet"
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet"
     },
     {
@@ -140,11 +140,11 @@ const state = {
       data: "Data not available yet"
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet"
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet"
     },
     {
@@ -178,11 +178,11 @@ const state = {
       data: "2.06 N (Winter)"
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet"
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet"
     },
     {
@@ -216,11 +216,11 @@ const state = {
       data: "Data not available yet"
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet"
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet"
     },
     {
@@ -254,11 +254,11 @@ const state = {
       data: "Data not available yet"
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet"
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet"
     },
     {
@@ -292,11 +292,11 @@ const state = {
       data: "2.46 N (Winter)"
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet"
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet"
     },
     {
@@ -330,11 +330,11 @@ const state = {
       data: "1.32 N (Winter); 1.88 N (Summer)",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "340.8°",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "31.1°",
     },
     {
@@ -368,11 +368,11 @@ const state = {
       data: "1.59 N (Winter); 1.49 N (Summer)",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "238.2°",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "28.4°",
     },
     {
@@ -406,11 +406,11 @@ const state = {
       data: "1.46 N (Winter)",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet",
     },
     {
@@ -444,11 +444,11 @@ const state = {
       data: "2.14 N (Winter); 2.14 N (Summer)",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "233.5°",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "26.4°",
     },
     {
@@ -482,11 +482,11 @@ const state = {
       data: "5.94 N (Winter); 3.91 N (Summer)",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet",
     },
     {
@@ -520,11 +520,11 @@ const state = {
       data: "3.02 N (Winter); 3.61 N (Summer)",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "254.5°",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "46.5",
     },
     {
@@ -558,11 +558,11 @@ const state = {
       data: "1.91 N (Winter); 1.62 N (Summer)",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "318.8°",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "30.7°",
     },
     {
@@ -596,11 +596,11 @@ const state = {
       data: "2.00 N (Winter); 2.36 N (Summer)",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "35.3°",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "31.8°",
     },
     {
@@ -634,11 +634,11 @@ const state = {
       data: "Data not available yet",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet",
     },
     {
@@ -673,11 +673,11 @@ const state = {
       data: "Data not available yet",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet",
     },
     {
@@ -712,11 +712,11 @@ const state = {
       data: "1.14 N (Winter); 1.7 N (Summer)",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "137.8°",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "58.1°",
     },
     {
@@ -750,11 +750,11 @@ const state = {
       data: "0.89 N (Winter)",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "Data not available yet",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "Data not available yet",
     },
     {
@@ -788,11 +788,11 @@ const state = {
       data: "1.09 N (Winter); 1.17 N (Summer)",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "359.7°",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "35.2°",
     },
     {
@@ -826,11 +826,11 @@ const state = {
       data: "Data not available yet",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "111.8°",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "39.6°",
     },
     {
@@ -864,11 +864,11 @@ const state = {
       data: "1.16 N (Winter); 1.48 N (Summer)",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "71.8°",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "26.8°",
     },
     {
@@ -902,11 +902,11 @@ const state = {
       data: "Data not available yet",
     },
     {
-      name: "Aspect",
+      name: "Mean aspect",
       data: "18.6",
     },
     {
-      name: "Slope",
+      name: "Mean slope",
       data: "18.5",
     },
     {
