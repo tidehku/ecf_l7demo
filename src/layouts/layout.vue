@@ -6,14 +6,14 @@
         style="height: 10vh"
       >
         <!-- app fullscreen -->
-        <q-btn round @click="$q.fullscreen.toggle()">
+        <!-- <q-btn round @click="$q.fullscreen.toggle()">
           <q-avatar size="50px">
             <img src="~assets/hkrise.png" />
           </q-avatar>
           <q-tooltip content-style="font-size: 16px">
             Enter / Exit App Fullscreen
           </q-tooltip>
-        </q-btn>
+        </q-btn> -->
 
         <q-toolbar-title class="text-5 text-bold">
           Hong Kong Rocky shore Interactive Search Engine (HKRISE)

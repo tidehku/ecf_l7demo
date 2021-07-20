@@ -6,28 +6,23 @@ const routes = [
     children: [
       {
         path: "",
-        component: () => import("src/pages/MainPage/HomePage.vue"),
-        meta: { keepAlive: true }
+        component: () => import("src/pages/MainPage/HomePage.vue")
       },
       {
         path: "interactiveHabitat",
-        component: () => import("pages/iH/interactiveHabitat.vue"),
-        meta: { keepAlive: false }
+        component: () => import("pages/iH/interactiveHabitat.vue")
       },
       {
         path: "method",
-        component: () => import("pages/MainPage/method.vue"),
-        meta: { keepAlive: true }
+        component: () => import("pages/MainPage/method.vue")
       },
       {
         path: "speciesSearchEngine",
-        component: () => import("pages/MainPage/speciesSearchEngine.vue"),
-        meta: { keepAlive: false }
+        component: () => import("pages/MainPage/speciesSearchEngine.vue")
       },
       {
         path: "gallery",
-        component: () => import("pages/MainPage/gallery.vue"),
-        meta: { keepAlive: true }
+        component: () => import("pages/MainPage/gallery.vue")
       }
     ]
   },
@@ -38,53 +33,43 @@ const routes = [
       //six zones separately
       {
         path: "/interactiveHabitat/NW",
-        component: () => import("pages/iH/interactiveHabitat_NW.vue"),
-        meta: { keepAlive: false }
+        component: () => import("pages/iH/interactiveHabitat_NW.vue")
       },
       {
         path: "/interactiveHabitat/SW",
-        component: () => import("pages/iH/interactiveHabitat_SW.vue"),
-        meta: { keepAlive: false }
+        component: () => import("pages/iH/interactiveHabitat_SW.vue")
       },
       {
         path: "/interactiveHabitat/SO",
-        component: () => import("pages/iH/interactiveHabitat_SO.vue"),
-        meta: { keepAlive: false }
+        component: () => import("pages/iH/interactiveHabitat_SO.vue")
       },
       {
         path: "/interactiveHabitat/EA",
-        component: () => import("pages/iH/interactiveHabitat_EA.vue"),
-        meta: { keepAlive: false }
+        component: () => import("pages/iH/interactiveHabitat_EA.vue")
       },
       {
         path: "/interactiveHabitat/TL",
-        component: () => import("pages/iH/interactiveHabitat_TL.vue"),
-        meta: { keepAlive: false }
+        component: () => import("pages/iH/interactiveHabitat_TL.vue")
       },
       {
         path: "/interactiveHabitat/NE",
-        component: () => import("pages/iH/interactiveHabitat_NE.vue"),
-        meta: { keepAlive: false }
+        component: () => import("pages/iH/interactiveHabitat_NE.vue")
       },
       {
         path: "phyStarfishBay",
-        component: () => import("pages/physicalDashboard/phyStarfishBay.vue"),
-        meta: { keepAlive: true }
+        component: () => import("pages/physicalDashboard/phyStarfishBay.vue")
       },
       {
         path: "bioStarfishBay",
-        component: () => import("pages/biologicalDashboard/bioStarfishBay.vue"),
-        meta: { keepAlive: true }
+        component: () => import("pages/biologicalDashboard/bioStarfishBay.vue")
       },
       {
         path: "phyTaiO",
-        component: () => import("pages/physicalDashboard/phyTaiO.vue"),
-        meta: { keepAlive: true }
+        component: () => import("pages/physicalDashboard/phyTaiO.vue")
       },
       {
         path: "bioTaiO",
-        component: () => import("pages/biologicalDashboard/bioTaiO.vue"),
-        meta: { keepAlive: true }
+        component: () => import("pages/biologicalDashboard/bioTaiO.vue")
       }
     ]
   },
@@ -92,8 +77,7 @@ const routes = [
   // Page 404 Not Found: Always leave this as last one
   {
     path: "*",
-    component: () => import("pages/MainPage/Error404.vue"),
-    meta: { keepAlive: false }
+    component: () => import("pages/MainPage/Error404.vue")
   }
 ];
 

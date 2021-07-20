@@ -11,6 +11,7 @@
       transition-next="slide-left"
       @mouseenter="autoplay = true"
       @mouseleave="autoplay = true"
+      height="72vh"
     >
       <q-carousel-slide
         v-for="slide in slides"
@@ -21,32 +22,34 @@
     </q-carousel>
 
     <div class="q-pa-xl bg-indigo-2 justify-center">
-      <q-card class="q-pa-sm bg-indigo text-center text-white text-h3 text-bold">
+      <q-card
+        class="q-pa-sm bg-indigo text-center text-white text-h3 text-bold"
+      >
         Welcome To HKRISE !
       </q-card>
-      <div
-        class="q-pa-md text-subtitle1"
-        v-html="HKRISE"
-      >
+      <div class="q-pa-md constrain" style="font-size: 1.3rem" v-html="HKRISE">
         {{ HKRISE }}
       </div>
     </div>
 
-    <div class="q-pa-xl justify-center">
+    <div class="q-pa-xl bg-indigo-1 justify-center">
       <div>
-        <q-card class="q-pa-sm bg-indigo text-h4 text-bold text-white text-center">Hong Kong Rocky Shore Environment</q-card>
-        <div class="q-pa-sm text-subtitle1">
+        <q-card
+          class="q-pa-sm bg-indigo text-h4 text-bold text-white text-center"
+          >Hong Kong Rocky Shore Environment</q-card
+        >
+        <div class="q-pa-sm constrain" style="font-size: 1.3rem">
           {{ HKRockyShore1 }}
         </div>
-        <div class="q-pa-sm text-subtitle1">
+        <div class="q-pa-sm constrain" style="font-size: 1.3rem">
           {{ HKRockyShore2 }}
         </div>
-        <div class="q-pa-xl center">
+        <div class="q-pa-md center">
           <video-background
             @click.native="pauseVideo()"
             ref="videobackground"
             src="VID_20210224_141116.mp4"
-            style="height: 70vh"
+            style="height: 72vh; width: 90vw; border-radius: 12px;"
           >
             <div class="absolute-center">
               <q-btn
@@ -62,57 +65,43 @@
           </video-background>
         </div>
         <div
-          class="q-pa-sm text-subtitle1"
+          class="q-pa-sm constrain"
+          style="font-size: 1.3rem"
           v-html="HKRockyShore3"
         >
           {{ HKRockyShore3 }}
         </div>
       </div>
     </div>
-    <q-card
-      flat
-      bordered
-      class="q-ma-sm maincard"
-    >
+    <q-card flat bordered class="q-ma-sm maincard">
       <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
         Navigation through HKRISE
       </div>
       <div class="row no-wrap q-pa-sm q-gutter-sm justify-center">
         <q-card style="width: 18%">
           <q-card-section class="bg-orange-10 text-white text-center">
-            <q-icon
-              clickable
-              name="biotech"
-              style="font-size: 4rem"
-            />
+            <q-icon clickable name="biotech" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">METHODS</div>
           </q-card-section>
 
-          <q-card-section>
+          <q-card-section style="font-size: 1rem">
             Details of how we conducted the territory-wide survey.
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
-            <q-btn
-              no-caps
-              color="orange-10"
-              label="Explore"
-              to="method"
-            />
+            <q-btn no-caps color="orange-10" label="Explore" to="method" />
           </div>
         </q-card>
 
         <q-card style="width: 25%">
           <q-card-section class="bg-amber-8 text-white text-center">
-            <q-icon
-              clickable
-              name="map"
-              style="font-size: 4rem"
-            />
+            <q-icon clickable name="map" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">MAP</div>
           </q-card-section>
 
-          <q-card-section>
-            Biological and physical dashboards of each site, showing assemblage structure and ecological indices, rock temperature, nutrient availability and wave forces.
+          <q-card-section style="font-size: 1rem">
+            Biological and physical dashboards of each site, showing assemblage
+            structure and ecological indices, rock temperature, nutrient
+            availability and wave forces.
           </q-card-section>
           <div class="q-pa-md row justify-end">
             <q-btn
@@ -125,16 +114,14 @@
         </q-card>
         <q-card style="width: 18%">
           <q-card-section class="bg-green-6 text-white text-center">
-            <q-icon
-              clickable
-              name="travel_explore"
-              style="font-size: 4rem"
-            />
+            <q-icon clickable name="travel_explore" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">SEARCH</div>
           </q-card-section>
 
-          <q-card-section>
-            Explore distributions of the past (from the review by Ng et al. 2017) and present (from the current territory-wide survey) rocky intertidal biodiversity in Hong Kong.
+          <q-card-section style="font-size: 1rem">
+            Explore distributions of the past (from the review by Ng et al.
+            2017) and present (from the current territory-wide survey) rocky
+            intertidal biodiversity in Hong Kong.
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
             <q-btn
@@ -148,38 +135,27 @@
 
         <q-card style="width: 18%">
           <q-card-section class="bg-cyan-7 text-white text-center">
-            <q-icon
-              clickable
-              name="collections"
-              style="font-size: 4rem"
-            />
+            <q-icon clickable name="collections" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">GALLERY</div>
           </q-card-section>
 
-          <q-card-section>
-            See photographs of fantastic rocky intertidal organisms and landscapes here!
+          <q-card-section style="font-size: 1rem">
+            See photographs of fantastic rocky intertidal organisms and
+            landscapes here!
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
-            <q-btn
-              no-caps
-              color="cyan-7"
-              label="Explore"
-              to="gallery"
-            />
+            <q-btn no-caps color="cyan-7" label="Explore" to="gallery" />
           </div>
         </q-card>
         <q-card style="width: 18%">
           <q-card-section class="bg-indigo text-white text-center">
-            <q-icon
-              clickable
-              name="dashboard"
-              style="font-size: 4rem"
-            />
+            <q-icon clickable name="dashboard" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">QUICK NAVIGATION</div>
           </q-card-section>
 
-          <q-card-section>
-            The ≡ drawer allows quick access to the biological and physical dashboards of all our sites.
+          <q-card-section style="font-size: 1rem">
+            The ≡ drawer allows quick access to the biological and physical
+            dashboards of all our sites.
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
             <q-btn
@@ -193,36 +169,27 @@
       </div>
     </q-card>
 
-    <q-card
-      flat
-      bordered
-      class="q-ma-sm maincard"
-    >
+    <q-card flat bordered class="q-ma-sm maincard">
       <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
         Meet the TideChasers
       </div>
-      <q-card-section
-        class="q-pa-md maincard"
-        horizontal
-      >
+      <q-card-section class="q-pa-md maincard">
+        <q-img
+          src="~/assets/groupphoto2.jpg"
+          style="width: 100%; height: 80vh; border-radius: 12px"
+          :ratio="16 / 9"
+        />
         <div
-          class="q-ma-md text-subtitle1"
+          class="q-pa-sm constrain"
+          style="font-size: 1.3rem"
           v-html="TidesMessage"
         >
           {{ TidesMessage }}
         </div>
-        <q-img
-          class="col-5"
-          src="~/assets/groupphoto2.jpg"
-        />
       </q-card-section>
     </q-card>
 
-    <q-card
-      bordered
-      flat
-      class="q-ma-sm bg-white maincard"
-    >
+    <q-card bordered flat class="q-ma-sm bg-white maincard">
       <div class="q-pa-sm bg-indigo-6 text-white text-h4 text-bold text-center">
         Related links
       </div>
@@ -302,7 +269,7 @@ export default {
       resume: false,
       slide: 1,
       autoplay: true,
-      slides: slides,
+      slides: slides
     };
   },
   methods: {
@@ -316,7 +283,7 @@ export default {
     },
     openDrawer() {
       this.$root.$emit("openDrawer");
-    },
+    }
   },
   computed: {
     HKRISE() {
@@ -333,8 +300,8 @@ export default {
     },
     TidesMessage() {
       return this.$store.state.storeText.TidesMessage;
-    },
-  },
+    }
+  }
 };
 </script>
 

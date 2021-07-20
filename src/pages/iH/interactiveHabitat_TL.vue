@@ -159,7 +159,7 @@
               no-caps
               color="indigo-6"
               label="Learn more"
-              @click="card1 = true"
+              @click="card2 = true"
             />
           </div>
         </q-card>

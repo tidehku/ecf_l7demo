@@ -81,7 +81,7 @@ const state = {
 
     <p style="text-indent:-2em;">Shannon CE, Weaver W (1949) The mathematical theory of communication. University of Illinois Press</p>
 
-    <p style="text-indent:-2em;">Williams GA, Chan BKK, Dong Y-w (2019) Rocky shores of mainland China, Taiwan and Hong Kong. In: Hawkins SJ, Bohn K, Firth LB, Williams GA (eds) <br /> Interactions in the Marine Benthos - Global Patterns and Processes. Systematics Association, Cambridge University Press</p>
+    <p style="text-indent:-2em;">Williams GA, Chan BKK, Dong Y-w (2019) Rocky shores of mainland China, Taiwan and Hong Kong. In: Hawkins SJ, Bohn K, Firth LB, Williams GA (eds) Interactions in the Marine Benthos - Global Patterns and Processes. Systematics Association, Cambridge University Press</p>
    
     `,
   bioGlossary: [
