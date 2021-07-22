@@ -1,10 +1,10 @@
 const landingNE = {
     winter2020: {
-      highShoreTemp: 49.59,
-      highShoreTempDelta: 15.05,
+      highShoreTemp: 36.5,
+      highShoreTempDelta: 6.5,
       highShoreTempN: "4 sites",
-      lowShoreTemp: 36.5,
-      lowShoreTempDelta: 6.5,
+      lowShoreTemp: 32.3,
+      lowShoreTempDelta: 6.6,
       lowShoreTempN: "4 sites",
       chla: 9.41,
       chlaDelta: 0.78,
