@@ -64,6 +64,7 @@ import VueLeafletMinimap from "vue-leaflet-minimap";
 import "leaflet-minimap/dist/Control.MiniMap.min.css";
 import { LMap, LGeoJson, LMarker, LIcon, LControlScale } from "vue2-leaflet";
 import "leaflet.zoomhome/dist/leaflet.zoomhome.js";
+import regionMarker from "./regionMarker";
 
 export default {
   name: "MapGeoJSON",
@@ -118,78 +119,8 @@ export default {
         toggleDisplay: true,
         minimize: true
       },
-      markers: [
-        {
-          id: "TL",
-          position: { lat: 22.44, lng: 114.23 },
-          draggable: true,
-          visible: true
-        }
-      ],
 
-      regionMarker: [
-        {
-          type: "Feature",
-          properties: {
-            name: "NE"
-          },
-          geometry: {
-            type: "Point",
-            coordinates: [22.55, 114.32]
-          }
-        },
-        {
-          type: "Feature",
-          properties: {
-            name: "TL"
-          },
-          geometry: {
-            type: "Point",
-            coordinates: [22.46, 114.23]
-          }
-        },
-        {
-          type: "Feature",
-          properties: {
-            name: "SW"
-          },
-          geometry: {
-            type: "Point",
-            coordinates: [22.25, 113.98]
-          }
-        },
-        {
-          type: "Feature",
-          properties: {
-            name: "NW"
-          },
-          geometry: {
-            type: "Point",
-            coordinates: [22.36, 113.92]
-          }
-        },
-        {
-          type: "Feature",
-          properties: {
-            name: "EA"
-          },
-          geometry: {
-            type: "Point",
-            coordinates: [22.32, 114.38]
-          }
-        },
-        {
-          type: "Feature",
-          properties: {
-            name: "SO"
-          },
-          geometry: {
-            type: "Point",
-            coordinates: [22.25, 114.18]
-          }
-        }
-      ],
-
+      regionMarker: regionMarker,
       regionMarkerOptions: {
         onEachFeature: (feature, layer) => {
           layer.bindTooltip("<div>" + feature.properties.name + "</div>", {
@@ -214,7 +145,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-
 .my-label
   background-color: transparent
   border: none
@@ -222,6 +152,4 @@ export default {
   font-weight: bold
   font-size: 26px
   color: white
-.leaflet-marker-pane
-  display: none
 </style>

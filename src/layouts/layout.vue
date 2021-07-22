@@ -73,70 +73,68 @@
       v-model="drawer"
       side="right"
       overlay
-      :width="300"
+      :width="500"
       :breakpoint="500"
       elevated
       content-class="bg-indigo-1"
     >
-      <div class="q-py-xl">
-        <q-card bordered flat class="searchbox fixed-center" style="width: 90%">
-          <div
-            class="q-py-md bg-indigo text-white text-h6 text-bold text-center"
-          >
-            Dashboard Navigation
-          </div>
-          <div class="q-pa-md q-gutter-md">
-            <q-select
-              filled
-              dense
-              bg-color="indigo-1"
-              label-color="indigo"
-              v-model="region"
-              :options="regionOptions"
-              label="Choose Region"
-              @input="setSites"
-            />
+      <q-card bordered flat class="fixed-center" style="width: 90%">
+        <div class="q-py-md bg-indigo text-white text-h5 text-bold text-center">
+          Dashboard Navigation
+        </div>
+        <div class="q-pa-md q-gutter-md">
+          <q-select
+            filled
+            bg-color="indigo-1"
+            label-color="indigo"
+            v-model="region"
+            :options="regionOptions"
+            label="Choose Region"
+            @input="setSites"
+            transition-show="scale"
+            transition-hide="scale"
+            popup-content-style="font-size: 1.2rem"
+          />
 
-            <q-select
-              filled
-              dense
-              bg-color="indigo-1"
-              label-color="indigo"
-              v-model="subSite"
-              :options="sites"
-              label="Choose Site"
-            />
+          <q-select
+            filled
+            bg-color="indigo-1"
+            label-color="indigo"
+            v-model="subSite"
+            :options="sites"
+            label="Choose Site"
+            transition-show="scale"
+            transition-hide="scale"
+            popup-content-style="font-size: 1.2rem"
+          />
 
-            <q-select
-              filled
-              dense
-              bg-color="indigo-1"
-              label-color="indigo"
-              v-model="dashboard"
-              :options="dashboardOptions"
-              label="Choose Dashboard"
+          <q-select
+            filled
+            bg-color="indigo-1"
+            label-color="indigo"
+            v-model="dashboard"
+            :options="dashboardOptions"
+            label="Choose Dashboard"
+            transition-show="scale"
+            transition-hide="scale"
+            popup-content-style="font-size: 1.2rem"
+          />
+          <div class="row justify-center">
+            <q-btn
+              no-caps
+              color="indigo"
+              class="text-h6 q-ma-md q-px-md"
+              glossy
+              label="Search"
+              @click="changeSite()"
             />
-            <div class="row justify-center">
-              <q-btn
-                no-caps
-                dense
-                color="indigo"
-                class="text-h6 q-ma-md q-px-md"
-                glossy
-                label="Search"
-                @click="changeSite()"
-              />
-            </div>
           </div>
-        </q-card>
-      </div>
+        </div>
+      </q-card>
     </q-drawer>
 
     <q-page-container>
-      <keep-alive>
-        <router-view v-if="$route.meta.keepAlive"></router-view>
-      </keep-alive>
-      <router-view v-if="!$route.meta.keepAlive"></router-view>
+      <router-view></router-view>
     </q-page-container>
 
     <q-footer elevated>
@@ -155,52 +153,19 @@
 </template>
 
 <script>
+import regionOptions from "./regionOptions";
+import dashboardOptions from "./dashboardOptions";
 export default {
   data() {
     return {
       tab: "Home",
       drawer: false,
-      miniState: true,
       region: null,
       sites: null,
       subSite: "",
       dashboard: null,
-      regionOptions: [
-        {
-          label: "Eastern",
-          sites: ["Pak Lap", "Kau Sai Chau", "Pak Shui Wun", "Sai Wan"]
-        },
-        {
-          label: "Northeastern",
-          sites: ["Double Island", "Hung Shek Mun", "Kat O", "Yung Shue Au"]
-        },
-        {
-          label: "Northwestern",
-          sites: ["Luk Keng", "Lung Kwu Tan", "Siu Lam", "Tai O"]
-        },
-        {
-          label: "Southern",
-          sites: ["Middle Bay", "Tai Tam", "Wah Fu", "Shek O"]
-        },
-        {
-          label: "Southwestern",
-          sites: ["Peng Chau", "Pui O", "Shui Tseng", "Tai Long Wan"]
-        },
-        {
-          label: "Tolo Harbour",
-          sites: ["Lai Chi Chong", "Ma Shi Chau", "Starfish Bay", "Tseng Tau"]
-        }
-      ],
-      dashboardOptions: [
-        {
-          label: "Physical dashboard",
-          value: "phy"
-        },
-        {
-          label: "Biological dashboard",
-          value: "bio"
-        }
-      ]
+      regionOptions: regionOptions,
+      dashboardOptions: dashboardOptions
     };
   },
   methods: {
@@ -234,15 +199,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-// .q-toolbar__title
-//   color: dark
-//   font: normal
-
 #footer.q-toolbar__title
   text-align: center
   font-size: 15px
-
-.searchbox
-  // border-width: 3px
-  // border-color: $indigo
 </style>
