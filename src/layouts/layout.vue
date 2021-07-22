@@ -15,6 +15,10 @@
           </q-tooltip>
         </q-btn> -->
 
+        <q-avatar size="50px">
+          <img src="~assets/hkrise.png" />
+        </q-avatar>
+
         <q-toolbar-title class="text-5 text-bold">
           Hong Kong Rocky shore Interactive Search Engine (HKRISE)
         </q-toolbar-title>

@@ -5,145 +5,158 @@
         <div class="text-indigo title">
           Stratification of Hong Kong coastline
         </div>
-        <div style="font-size: 1.3rem">{{ stratification }}</div>
+        <div class="q-pt-lg" style="font-size: 1.2rem">
+          {{ stratification }}
+        </div>
       </div>
-      <div class="q-pa-sm col-6">
+      <div class="col-6">
         <q-img src="~/assets/method1.png" />
-        <div class="text-center bg-black text-white">
+        <div class="text-center bg-black text-white" style="font-size: 1rem">
           Map showing demarcation of regions and location of sampling sites
           within each region.
         </div>
       </div>
     </div>
 
-    <div class="q-gutter-sm bg-indigo-5 text-white methodConstrain">
+    <div class="q-gutter-md bg-indigo-5 text-white methodConstrain">
       <div class="q-pa-md title text-center text-white">
         Rocky shore assemblage surveys
       </div>
       <div class="row justify-around">
         <div class="justify-center" style="width:35%">
           <q-img src="~/assets/method2.png" />
-          <div class="q-px-md bg-black text-white">
+          <div class="q-px-md bg-black text-white" style="font-size: 1rem">
             Morning survey in Shek O ....
           </div>
           <q-img src="~/assets/method3.png" />
 
-          <div class="q-px-md bg-black text-white">
+          <div class="q-px-md bg-black text-white" style="font-size: 1rem">
             The ECF team surveying the rocky shore in Luk Keng.
           </div>
           <q-img src="~/assets/method4.png" />
-          <div class="q-px-md bg-black text-white">
+          <div class="q-px-md bg-black text-white" style="font-size: 1rem">
             The ECF team surveying the rocky shore in Tai O.
           </div>
         </div>
-        <div class="q-px-lg" style="width:62%">
-          <div style="font-size: 1.3rem" v-html="method1">
+        <div class="q-pa-lg" style="width:61%">
+          <div class="q-pa-lg"></div>
+          <div class="q-pa-lg" style="font-size: 1.2rem" v-html="method1">
             {{ method1 }}
           </div>
-          <br />
-          <br />
-          <div style="font-size: 1.3rem" v-html="method2">
+
+          <div class="q-pa-lg"></div>
+          <div class="q-pa-lg" style="font-size: 1.2rem" v-html="method2">
             {{ method2 }}
           </div>
         </div>
       </div>
     </div>
 
-    <div class="q-gutter-sm methodConstrain">
+    <div class="q-gutter-md methodConstrain">
       <div class="q-pa-md title text-indigo text-center">
         Quantifying habitat properties
       </div>
-      <div class="row justify-around">
-        <div class="q-px-lg" style="font-size: 1.3rem" v-html="quantifying">
+      <div class="col">
+        <div class="q-pb-lg" style="font-size: 1.2rem" v-html="quantifying">
           {{ quantifying }}
         </div>
 
-        <div>
-          <q-img style="width:43vw" src="~/assets/method5.png" />
-          <q-img style="width:43vw" src="~/assets/method6.png" />
-          <div class="text-center bg-black text-white">
-            Custom-built wavelogger (left image) and rugged temperature loggers
-            (right image) deployed on shores to record wave force and rock
-            surface temperature.
+        <div class="row justify-center">
+          <q-img
+            style="width:50%; border-radius: 4px"
+            src="~/assets/method5.png"
+          />
+          <q-img
+            style="width:50%; border-radius: 4px"
+            src="~/assets/method6.png"
+          />
+          <div>
+            <div class="bg-black text-white" style="font-size: 1rem">
+              Custom-built wavelogger (left image) and rugged temperature
+              loggers (right image) deployed on shores to record wave force and
+              rock surface temperature.
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="q-pa-md bg-indigo">
-      <div class="title text-center text-white">Glossary</div>
-      <div class="text-subtitle1 text-center text-white">
-        This glossary outlines the definitions of biological and physical
-        terms/measurements adopted in this survey.
+      <div class="q-pa-md bg-indigo">
+        <div class="title text-center text-white">Glossary</div>
+        <div
+          class="text-subtitle1 text-center text-white"
+          style="font-size: 1rem"
+        >
+          This glossary outlines the definitions of biological and physical
+          terms/measurements adopted in this survey.
+        </div>
+      </div>
+
+      <div class="row justify-center">
+        <q-table
+          class="bioGlossary"
+          title="Biological terms/measurements"
+          table-header-class="bg-teal-4 text-center text-bold text-white"
+          title-class="text-bold text-teal"
+          separator="horizontal"
+          :data="bioGlossary"
+          :columns="columns"
+          row-key="name"
+          hide-bottom
+          :rows-per-page-options="[0]"
+        >
+          <template v-slot:body-cell-name="props">
+            <q-td :props="props">
+              <div v-html="props.value">
+                {{ props.value }}
+              </div>
+            </q-td>
+
+            <q-td :props="props">
+              <div class="description" v-html="props.row.description">
+                {{ props.row.description }}
+              </div>
+            </q-td>
+          </template>
+        </q-table>
+      </div>
+      <div class="row justify-center">
+        <q-table
+          class="phyGlossary"
+          title="Physical terms/measurements"
+          table-header-class="bg-blue-4 text-center text-bold text-white"
+          title-class="text-bold text-blue"
+          separator="horizontal"
+          :data="phyGlossary"
+          :columns="columns"
+          row-key="name"
+          hide-bottom
+          :rows-per-page-options="[0]"
+        >
+          <template v-slot:body-cell-name="props">
+            <q-td :props="props">
+              <div>
+                {{ props.value }}
+              </div>
+            </q-td>
+
+            <q-td :props="props">
+              <div class="description">
+                {{ props.row.description }}
+              </div>
+            </q-td>
+          </template>
+        </q-table>
       </div>
     </div>
 
-    <div class="row justify-center">
-      <q-table
-        class="bioGlossary"
-        title="Biological terms/measurements"
-        table-header-class="bg-teal-4 text-center text-bold text-white"
-        title-class="text-bold text-teal"
-        separator="horizontal"
-        :data="bioGlossary"
-        :columns="columns"
-        row-key="name"
-        hide-bottom
-        :rows-per-page-options="[0]"
-      >
-        <template v-slot:body-cell-name="props">
-          <q-td :props="props">
-            <div v-html="props.value">
-              {{ props.value }}
-            </div>
-          </q-td>
-
-          <q-td :props="props">
-            <div class="description" v-html="props.row.description">
-              {{ props.row.description }}
-            </div>
-          </q-td>
-        </template>
-      </q-table>
-    </div>
-    <div class="row justify-center">
-      <q-table
-        class="phyGlossary"
-        title="Physical terms/measurements"
-        table-header-class="bg-blue-4 text-center text-bold text-white"
-        title-class="text-bold text-blue"
-        separator="horizontal"
-        :data="phyGlossary"
-        :columns="columns"
-        row-key="name"
-        hide-bottom
-        :rows-per-page-options="[0]"
-      >
-        <template v-slot:body-cell-name="props">
-          <q-td :props="props">
-            <div>
-              {{ props.value }}
-            </div>
-          </q-td>
-
-          <q-td :props="props">
-            <div class="description">
-              {{ props.row.description }}
-            </div>
-          </q-td>
-        </template>
-      </q-table>
-    </div>
-
-    <div class="q-pa-md bg-indigo">
-      <div class="title text-center text-white">References</div>
-    </div>
-    <div class="row justify-center ">
-      <div
-        v-html="reference"
-        style="text-align: left; width: 80vw; font-size: 1rem"
-      >
-        {{ reference }}
+    <div class="q-gutter-md methodConstrain">
+      <div class="q-pa-md bg-indigo">
+        <div class="title text-center text-white">References</div>
+      </div>
+      <div class="row justify-center">
+        <div v-html="reference" style="width: 85%; font-size: 0.9rem">
+          {{ reference }}
+        </div>
       </div>
     </div>
   </q-page>
@@ -158,14 +171,14 @@ export default {
           name: "name",
           required: true,
           label: "Terminology",
-          align: "left",
+          align: "center",
           headerStyle: "font-size: 20px",
           field: row => row.name,
           format: val => `${val}`
         },
         {
           name: "description",
-          align: "left",
+          align: "center",
           label: "Description",
           headerStyle: "font-size: 20px"
         }
@@ -214,7 +227,7 @@ export default {
   width: 25vw
   background-color: $teal-1
   font-weight: bold
-  font-size: 1.3rem
+  font-size: 1.2rem
 
 .phyGlossary
   width: 86vw
@@ -222,10 +235,10 @@ export default {
   width: 25vw
   background-color: $blue-1
   font-weight: bold
-  font-size: 1.3rem
+  font-size: 1.2rem
 
 .description
-  font-size: 1.3rem
+  font-size: 1.2rem
   white-space: normal
   margin-top: 4px
 </style>
