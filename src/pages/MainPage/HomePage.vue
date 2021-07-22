@@ -73,11 +73,12 @@
         </div>
       </div>
     </div>
-    <q-card flat bordered class="q-ma-sm maincard">
+
+    <div class="q-pa-xl bg-indigo-1 justify-center">
       <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
         Navigation through HKRISE
       </div>
-      <div class="row no-wrap q-pa-sm q-gutter-sm justify-center">
+      <div class="row no-wrap q-pa-sm q-gutter-sm justify-evenly">
         <q-card style="width: 18%">
           <q-card-section class="bg-orange-10 text-white text-center">
             <q-icon clickable name="biotech" style="font-size: 4rem" />
@@ -167,9 +168,9 @@
           </div>
         </q-card>
       </div>
-    </q-card>
+    </div>
 
-    <q-card flat bordered class="q-ma-sm maincard">
+    <div class="q-pa-xl bg-indigo-1 justify-center">
       <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
         Meet the TideChasers
       </div>
@@ -187,72 +188,76 @@
           {{ TidesMessage }}
         </div>
       </q-card-section>
-    </q-card>
+    </div>
 
-    <q-card bordered flat class="q-ma-sm bg-white maincard">
-      <div class="q-pa-sm bg-indigo-6 text-white text-h4 text-bold text-center">
-        Related links
-      </div>
-      <q-card-section class="row justify-evenly">
-        <div class="q-px-xl linkcard">
-          <q-img src="~/assets/TIDElogo.png"> </q-img>
+    <div class="q-pa-xl bg-indigo-1 justify-center">
+      <q-card bordered flat class="q-ma-sm bg-white maincard">
+        <div
+          class="q-pa-sm bg-indigo-6 text-white text-h4 text-bold text-center"
+        >
+          Related links
         </div>
-        <div class="q-px-xl linkcard">
-          <q-img src="~/assets/SWIMSlogo2.png"> </q-img>
-        </div>
-        <div class="q-px-xl linkcard">
-          <q-img src="~/assets/ECFlogo.jpg"> </q-img>
-        </div>
-        <div class="q-px-xl linkcard">
-          <q-img src="~/assets/HKOlogo.png"> </q-img>
-        </div>
-        <div class="q-px-xl linkcard">
-          <q-img src="~/assets/hkulogo.jpg"> </q-img>
-        </div>
-      </q-card-section>
-      <q-card-section class="row justify-evenly q-gutter-md">
-        <q-btn
-          no-caps
-          class="linkbtn"
-          label="Tropical IntertiDal Ecology Group"
-          type="a"
-          target="_blank"
-          href="https://www.tidehku.com/"
-        />
-        <q-btn
-          no-caps
-          class="linkbtn"
-          label="The Swire Institute of Marine Science, HKU"
-          type="a"
-          target="_blank"
-          href="https://www.swims.hku.hk/"
-        />
-        <q-btn
-          no-caps
-          class="linkbtn"
-          label="Environment and Conservation Fund"
-          type="a"
-          target="_blank"
-          href="https://www.ecf.gov.hk/en/home/index.html "
-        />
-        <q-btn
-          no-caps
-          class="linkbtn"
-          label="Hong Kong Observatory"
-          type="a"
-          target="_blank"
-          href="https://www.hko.gov.hk/en/index.html"
-        />
-        <q-btn
-          no-caps
-          class="linkbtn"
-          label="The School of Biological Sciences, HKU"
-          type="a"
-          target="_blank"
-          href="https://www.biosch.hku.hk/ "
-        />
-      </q-card-section>
-    </q-card>
+        <q-card-section class="row justify-evenly">
+          <div class="q-px-xl linkcard">
+            <q-img src="~/assets/TIDElogo.png"> </q-img>
+          </div>
+          <div class="q-px-xl linkcard">
+            <q-img src="~/assets/SWIMSlogo2.png"> </q-img>
+          </div>
+          <div class="q-px-xl linkcard">
+            <q-img src="~/assets/ECFlogo.jpg"> </q-img>
+          </div>
+          <div class="q-px-xl linkcard">
+            <q-img src="~/assets/HKOlogo.png"> </q-img>
+          </div>
+          <div class="q-px-xl linkcard">
+            <q-img src="~/assets/hkulogo.jpg"> </q-img>
+          </div>
+        </q-card-section>
+        <q-card-section class="row justify-evenly q-gutter-md">
+          <q-btn
+            no-caps
+            class="linkbtn"
+            label="Tropical IntertiDal Ecology Group"
+            type="a"
+            target="_blank"
+            href="https://www.tidehku.com/"
+          />
+          <q-btn
+            no-caps
+            class="linkbtn"
+            label="The Swire Institute of Marine Science, HKU"
+            type="a"
+            target="_blank"
+            href="https://www.swims.hku.hk/"
+          />
+          <q-btn
+            no-caps
+            class="linkbtn"
+            label="Environment and Conservation Fund"
+            type="a"
+            target="_blank"
+            href="https://www.ecf.gov.hk/en/home/index.html "
+          />
+          <q-btn
+            no-caps
+            class="linkbtn"
+            label="Hong Kong Observatory"
+            type="a"
+            target="_blank"
+            href="https://www.hko.gov.hk/en/index.html"
+          />
+          <q-btn
+            no-caps
+            class="linkbtn"
+            label="The School of Biological Sciences, HKU"
+            type="a"
+            target="_blank"
+            href="https://www.biosch.hku.hk/ "
+          />
+        </q-card-section>
+      </q-card>
+    </div>
   </q-page>
 </template>
 

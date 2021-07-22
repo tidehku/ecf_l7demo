@@ -235,14 +235,9 @@ export default {};
 
 <style lang="sass" scoped>
 .image
-  // height: 35%
   max-width: 100%
-  // width: 30vh
-  // width: 30% // screen
-  // max-height: 30%
   cursor: pointer
-  // margin: 2px
-  // display: inline-block
+  border-radius: 8px
 
 .speciesName
   margin-bottom: 5px

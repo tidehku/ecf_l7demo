@@ -1,7 +1,7 @@
 <template>
-  <div class="row q-pa-sm q-gutter-xs no-wrap">
-    <q-card style="width: 75vh; height: 105vh">
-      <q-img src="~/assets/mapcover.png" style="width: 75vh; height: 105vh" />
+  <div class="row no-wrap">
+    <q-card class="col-4">
+      <q-img src="~/assets/mapcover - Copy.png" style="height: 85vh;" />
 
       <q-icon
         class="absolute-top-right"

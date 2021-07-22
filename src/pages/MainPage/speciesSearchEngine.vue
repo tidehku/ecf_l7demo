@@ -1,14 +1,9 @@
 <template>
-  <div
-    class="iframe-wrapper"
-    style="margin: 0; padding: 0; height: 100%; overflow: hidden;"
-  >
+  <div>
     <iframe
       src="https://tidekepler-5wdtxpxin-ygswims.vercel.app"
-      width="100%"
-      height="610px"
       frameborder="1"
-      allowfullscreen
+      style="position: absolute; left: 0; right: 0; bottom: 0; top: 0px; display: block; width: 100%; height: 100vh"
     ></iframe>
   </div>
 </template>
