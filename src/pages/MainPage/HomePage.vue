@@ -23,11 +23,11 @@
 
     <div class="q-pa-xl bg-indigo-2 justify-center">
       <q-card
-        class="q-pa-sm bg-indigo text-center text-white text-h3 text-bold"
+        class="q-pa-md bg-indigo text-center text-white text-h4 text-bold"
       >
         Welcome To HKRISE !
       </q-card>
-      <div class="q-pa-md constrain" style="font-size: 1.3rem" v-html="HKRISE">
+      <div class="q-pa-lg constrain" style="font-size: 1.1rem" align="justify" v-html="HKRISE">
         {{ HKRISE }}
       </div>
     </div>
@@ -35,21 +35,21 @@
     <div class="q-pa-xl bg-indigo-1 justify-center">
       <div>
         <q-card
-          class="q-pa-sm bg-indigo text-h4 text-bold text-white text-center"
+          class="q-pa-md bg-indigo text-h4 text-bold text-white text-center"
           >Hong Kong Rocky Shore Environment</q-card
         >
-        <div class="q-pa-sm constrain" style="font-size: 1.3rem">
+        <div class="q-pa-lg constrain" style="font-size: 1.1rem" align="justify">
           {{ HKRockyShore1 }}
         </div>
-        <div class="q-pa-sm constrain" style="font-size: 1.3rem">
+        <div class="q-pa-lg constrain" style="font-size: 1.1rem" align="justify">
           {{ HKRockyShore2 }}
         </div>
-        <div class="q-pa-md center">
+        <div class="q-pa-md constrain">
           <video-background
             @click.native="pauseVideo()"
             ref="videobackground"
             src="VID_20210224_141116.mp4"
-            style="height: 72vh; width: 90vw; border-radius: 12px;"
+            style="height: 72vh; width: 60vw; border-radius: 12px;"
           >
             <div class="absolute-center">
               <q-btn
@@ -64,9 +64,11 @@
             </div>
           </video-background>
         </div>
+        
         <div
-          class="q-pa-sm constrain"
-          style="font-size: 1.3rem"
+          class="q-pa-lg constrain"
+          style="font-size: 1.1rem" 
+          align="justify"
           v-html="HKRockyShore3"
         >
           {{ HKRockyShore3 }}
@@ -75,11 +77,11 @@
     </div>
 
     <div class="q-pa-xl bg-indigo-1 justify-center">
-      <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
+      <div class="q-pa-md row text-h4 text-bold justify-center subtitle">
         Navigation through HKRISE
       </div>
       <div class="row no-wrap q-pa-sm q-gutter-sm justify-evenly">
-        <q-card style="width: 18%">
+        <q-card style="width: 20%">
           <q-card-section class="bg-orange-10 text-white text-center">
             <q-icon clickable name="biotech" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">METHODS</div>
@@ -93,7 +95,7 @@
           </div>
         </q-card>
 
-        <q-card style="width: 25%">
+        <q-card style="width: 20%">
           <q-card-section class="bg-amber-8 text-white text-center">
             <q-icon clickable name="map" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">MAP</div>
@@ -113,7 +115,7 @@
             />
           </div>
         </q-card>
-        <q-card style="width: 18%">
+        <q-card style="width: 20%">
           <q-card-section class="bg-green-6 text-white text-center">
             <q-icon clickable name="travel_explore" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">SEARCH</div>
@@ -134,7 +136,7 @@
           </div>
         </q-card>
 
-        <q-card style="width: 18%">
+        <q-card style="width: 20%">
           <q-card-section class="bg-cyan-7 text-white text-center">
             <q-icon clickable name="collections" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">GALLERY</div>
@@ -148,7 +150,7 @@
             <q-btn no-caps color="cyan-7" label="Explore" to="gallery" />
           </div>
         </q-card>
-        <q-card style="width: 18%">
+        <q-card style="width: 20%">
           <q-card-section class="bg-indigo text-white text-center">
             <q-icon clickable name="dashboard" style="font-size: 4rem" />
             <div class="text-subtitle1 text-bold">QUICK NAVIGATION</div>
@@ -171,18 +173,19 @@
     </div>
 
     <div class="q-pa-xl bg-indigo-1 justify-center">
-      <div class="q-pa-sm row text-h4 text-bold justify-center subtitle">
+      <div class="q-pa-md row text-h4 text-bold justify-center subtitle">
         Meet the TideChasers
       </div>
-      <q-card-section class="q-pa-md maincard">
+      <q-card-section class="q-pa-md constrain">
         <q-img
           src="~/assets/groupphoto2.jpg"
           style="width: 100%; height: 80vh; border-radius: 12px"
           :ratio="16 / 9"
         />
         <div
-          class="q-pa-sm constrain"
-          style="font-size: 1.3rem"
+          class="q-pa-lg constrain"
+          style="font-size: 1.1rem"
+          align="justify"
           v-html="TidesMessage"
         >
           {{ TidesMessage }}
@@ -193,7 +196,7 @@
     <div class="q-pa-xl bg-indigo-1 justify-center">
       <q-card bordered flat class="q-ma-sm bg-white maincard">
         <div
-          class="q-pa-sm bg-indigo-6 text-white text-h4 text-bold text-center"
+          class="q-pa-md bg-indigo-6 text-white text-h4 text-bold text-center"
         >
           Related links
         </div>
@@ -221,6 +224,7 @@
             label="Tropical IntertiDal Ecology Group"
             type="a"
             target="_blank"
+            style="font-size: 1.0rem"
             href="https://www.tidehku.com/"
           />
           <q-btn
@@ -229,6 +233,7 @@
             label="The Swire Institute of Marine Science, HKU"
             type="a"
             target="_blank"
+            style="font-size: 1.0rem"
             href="https://www.swims.hku.hk/"
           />
           <q-btn
@@ -237,6 +242,7 @@
             label="Environment and Conservation Fund"
             type="a"
             target="_blank"
+            style="font-size: 1.0rem"
             href="https://www.ecf.gov.hk/en/home/index.html "
           />
           <q-btn
@@ -245,6 +251,7 @@
             label="Hong Kong Observatory"
             type="a"
             target="_blank"
+            style="font-size: 1.0rem"
             href="https://www.hko.gov.hk/en/index.html"
           />
           <q-btn
@@ -253,6 +260,7 @@
             label="The School of Biological Sciences, HKU"
             type="a"
             target="_blank"
+            style="font-size: 1.0rem"
             href="https://www.biosch.hku.hk/ "
           />
         </q-card-section>

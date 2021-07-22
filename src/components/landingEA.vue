@@ -34,7 +34,7 @@
                   </div>
                   &nbsp;
                   <b class="self-center">
-                    ± {{ landingEA.winter2020.highShoreTempDelta }} ℃</b
+                    ± {{ landingEA.winter2020.highShoreTempDelta }} °C</b
                   >
                 </div>
                 <div class="row justify-end">
@@ -50,7 +50,7 @@
                   </div>
                   &nbsp;
                   <b class="self-center">
-                    ± {{ landingEA.winter2020.lowShoreTempDelta }} ℃</b
+                    ± {{ landingEA.winter2020.lowShoreTempDelta }} °C</b
                   >
                 </div>
                 <div class="row justify-end">
@@ -172,7 +172,7 @@
                   </div>
                   &nbsp;
                   <b class="self-center">
-                    ± {{ landingEA.summer2021.highShoreTempDelta }} ℃</b
+                    ± {{ landingEA.summer2021.highShoreTempDelta }} °C</b
                   >
                 </div>
                 <div class="row justify-end">
@@ -188,7 +188,7 @@
                   </div>
                   &nbsp;
                   <b class="self-center">
-                    ± {{ landingEA.summer2021.lowShoreTempDelta }} ℃</b
+                    ± {{ landingEA.summer2021.lowShoreTempDelta }} °C</b
                   >
                 </div>
                 <div class="row justify-end">
