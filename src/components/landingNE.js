@@ -1,0 +1,41 @@
+const landingNE = {
+    winter2020: {
+      highShoreTemp: 49.59,
+      highShoreTempDelta: 15.05,
+      highShoreTempN: 4,
+      lowShoreTemp: 36.5,
+      lowShoreTempDelta: 6.5,
+      lowShoreTempN: 4,
+      chla: 9.41,
+      chlaDelta: 0.78,
+      chlaN: 4,
+      om: 8.44,
+      omDelta: 1.37,
+      omN: 4,
+      mobileMax: 25,
+      mobileMin: 14,
+      sessileMax: 23,
+      sessileMin: 12
+    },
+    summer2021: {
+      highShoreTemp: 55.3,
+      highShoreTempDelta: "NA",
+      highShoreTempN: 1,
+      lowShoreTemp: 51.3,
+      lowShoreTempDelta: "NA",
+      lowShoreTempN: 1,
+      chla: "NA",
+      chlaDelta: "NA",
+      chlaN: "NA",
+      om: "NA",
+      omDelta: "NA",
+      omN: "NA",
+      mobileMax: "NA",
+      mobileMin: "NA",
+      sessileMax: "NA",
+      sessileMin: "NA"
+    }
+  };
+  
+  export default landingNE;
+  

@@ -34,35 +34,35 @@
             name="home"
             icon="home"
             label="Home"
-            style="width: 8vw"
+            style="width: 8vw; border-radius: 7px"
           />
           <q-route-tab
             to="/method"
             name="Methods"
             icon="biotech"
             label="Methods"
-            style="width: 8vw"
+            style="width: 8vw; border-radius: 7px"
           />
           <q-route-tab
             to="/interactiveHabitat"
             name="interactiveHabitat"
             icon="map"
             label="Map"
-            style="width: 8vw"
+            style="width: 8vw; border-radius: 7px"
           />
           <q-route-tab
             to="/SpeciesSearchEngine"
             name="speciesSearchEngine"
             icon="travel_explore"
             label="Search"
-            style="width: 8vw"
+            style="width: 8vw; border-radius: 7px"
           />
           <q-route-tab
             to="/gallery"
             name="Gallery"
             icon="collections"
             label="Gallery"
-            style="width: 8vw"
+            style="width: 8vw; border-radius: 7px"
           />
         </q-tabs>
         <q-btn flat @click="drawer = !drawer" round icon="menu" />

@@ -40,79 +40,7 @@
     </q-card>
 
     <div style="width: 66.3%">
-      <q-card class="bg-indigo-1" style="height: 40vh">
-        <div
-          class="q-px-md bg-indigo-6 text-center text-h6 text-bold text-white rounded-borders"
-        >
-          Regional average data summary
-        </div>
-        <div class="row q-py-xs justify-evenly no-wrap">
-          <q-card class="q-pa-sm" style="width: 22%; min-height: 32vh">
-            <div class="q-px-sm">
-              <y>Max. rock temperature</y> <br />
-              High shore: <br />
-              <h>43.48</h> <b> ± 10.05 ℃</b>
-              <div class="row justify-end">
-                (n = 4)
-              </div>
-              Mid shore: <br />
-              <h>40.38</h> <b> ± 10.02 ℃</b>
-              <div class="row justify-end">
-                (n = 4)
-              </div>
-            </div>
-          </q-card>
-          <q-card class="q-pa-sm" style="width: 18%">
-            <div class="q-px-sm">
-              <y>Total wave fetch</y> <br />
-              <div class="items-end">
-                Max: <br />
-                <h>261.75</h> <b> km</b> <br /><br />
-                Min: <br />
-                <h>5.39</h> <b> km</b>
-                <div class="row justify-end">
-                  (n = 2)
-                </div>
-              </div>
-            </div>
-          </q-card>
-
-          <q-card class="q-pa-sm" style="width: 24%">
-            <div class="q-px-sm">
-              <y>Nutrient levels</y> <br />
-              Chlorophyll <i>a</i>: <br />
-              <h>6.56</h> <b> ± 2.86 µg/cm<sup>2</sup></b>
-              <div class="row justify-end">
-                (n = 4)
-              </div>
-              Organic matter: <br />
-              <h>5.56</h> <b> ± 2.10 mg/cm<sup>2</sup></b>
-              <div class="row justify-end">
-                (n = 4)
-              </div>
-            </div>
-          </q-card>
-
-          <q-card class="q-pa-sm" style="width: 16%">
-            <div class="q-px-sm">
-              <y>Mobile species richness</y> <br /><br />
-              <div class="items-center">
-                Max: <h>23</h> <br /><br />
-                Min: <h>16</h>
-              </div>
-            </div>
-          </q-card>
-          <q-card class="q-pa-sm" style="width: 16%">
-            <div class="q-px-sm">
-              <y>Sessile species richness</y> <br /><br />
-              <div class="items-center">
-                Max: <h>18</h> <br /><br />
-                Min: <h>10</h>
-              </div>
-            </div>
-          </q-card>
-        </div>
-      </q-card>
+      <landingSW />
       <div class="row no-wrap justify-around">
         <q-card class="q-ma-md" style="width: 24%; height: 40vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
@@ -455,6 +383,7 @@
 <script>
 import { LMap, LGeoJson, LControlScale } from "vue2-leaflet";
 import "leaflet.zoomhome/dist/leaflet.zoomhome.js";
+import landingSW from "../../components/landingSW.vue";
 
 export default {
   name: "EA",
@@ -462,7 +391,8 @@ export default {
     LMap,
     LGeoJson,
     LControlScale,
-    LTileLayer: () => import("components/tileLayer")
+    LTileLayer: () => import("components/tileLayer"),
+    landingSW
   },
   data() {
     return {
