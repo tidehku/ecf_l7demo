@@ -58,11 +58,11 @@
 
         <div class="row justify-center">
           <q-img
-            style="width:30%; border-radius: 4px"
+            style="width:37%; border-radius: 4px"
             src="~/assets/method5.png"
           />
           <q-img
-            style="width:30%; border-radius: 4px"
+            style="width:37%; border-radius: 4px"
             src="~/assets/method6.png"
           />
           <div>

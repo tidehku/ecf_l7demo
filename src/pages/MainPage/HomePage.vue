@@ -27,7 +27,12 @@
       >
         Welcome To HKRISE !
       </q-card>
-      <div class="q-pa-lg constrain" style="font-size: 1.1rem" align="justify" v-html="HKRISE">
+      <div
+        class="q-pa-lg constrain"
+        style="font-size: 1.1rem"
+        align="justify"
+        v-html="HKRISE"
+      >
         {{ HKRISE }}
       </div>
     </div>
@@ -38,18 +43,26 @@
           class="q-pa-md bg-indigo text-h4 text-bold text-white text-center"
           >Hong Kong Rocky Shore Environment</q-card
         >
-        <div class="q-pa-lg constrain" style="font-size: 1.1rem" align="justify">
+        <div
+          class="q-pa-lg constrain"
+          style="font-size: 1.1rem"
+          align="justify"
+        >
           {{ HKRockyShore1 }}
         </div>
-        <div class="q-pa-lg constrain" style="font-size: 1.1rem" align="justify">
+        <div
+          class="q-pa-lg constrain"
+          style="font-size: 1.1rem"
+          align="justify"
+        >
           {{ HKRockyShore2 }}
         </div>
-        <div class="q-pa-md constrain">
+        <div class="q-pa-md">
           <video-background
             @click.native="pauseVideo()"
             ref="videobackground"
             src="VID_20210224_141116.mp4"
-            style="height: 72vh; width: 60vw; border-radius: 12px;"
+            style="height: 72vh; width: 61vw; border-radius: 12px; display: block; margin-left: auto; margin-right: auto;"
           >
             <div class="absolute-center">
               <q-btn
@@ -64,10 +77,10 @@
             </div>
           </video-background>
         </div>
-        
+
         <div
           class="q-pa-lg constrain"
-          style="font-size: 1.1rem" 
+          style="font-size: 1.1rem"
           align="justify"
           v-html="HKRockyShore3"
         >
@@ -176,7 +189,7 @@
       <div class="q-pa-md row text-h4 text-bold justify-center subtitle">
         Meet the TideChasers
       </div>
-      <q-card-section class="q-pa-md constrain">
+      <q-card-section class="q-pa-md constrainTideChasers">
         <q-img
           src="~/assets/groupphoto2.jpg"
           style="width: 100%; height: 80vh; border-radius: 12px"
@@ -331,14 +344,7 @@ export default {
   background-color: $indigo
   color: white
   font-size: 14px
-.membercard
-  width: 19%
 .subtitle
   background-color: $indigo-6
   color: white
-.custom-caption
-  text-align: center
-  padding: 12px
-  color: white
-  background-color: rgba(0, 0, 0, .3)
 </style>

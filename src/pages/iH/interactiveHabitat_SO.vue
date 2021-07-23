@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-xs row justify-center bg-grey-5 no-wrap">
+  <q-page class="q-pa-xs row justify-center no-wrap">
     <q-card class="q-ma-sm" style="width: 33%; height:81vh" bordered>
       <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
         Southern region
@@ -15,7 +15,7 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-sm">{{ regionSO }}</div>
+      <div class="q-pa-sm" style="font-size: 1.1rem">{{ regionSO }}</div>
 
       <l-map
         class="map"
