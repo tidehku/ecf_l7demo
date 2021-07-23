@@ -3,7 +3,7 @@
     <iframe
       src="https://tidekepler-5wdtxpxin-ygswims.vercel.app"
       frameborder="1"
-      style="position: absolute; left: 0; right: 0; bottom: 0; top: 0px; display: block; width: 100%; height: 100vh"
+      style="position: absolute; top: 100px; width: 100%; height: 90vh"
     ></iframe>
   </div>
 </template>
