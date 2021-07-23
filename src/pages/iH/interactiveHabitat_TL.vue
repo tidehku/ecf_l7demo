@@ -408,11 +408,12 @@ export default {
       card3: false,
       card4: false,
 
-      zoom: 11,
+      zoom: 11.4,
       center: L.latLng(22.45, 114.25),
       mapOptions: {
         zoomSnap: 0.2,
-        zoomControl: false
+        zoomControl: false,
+        dragging: false
       },
       sitesLocation: require("../../MapData/TL_Sites.json"),
       siteOptions: {
@@ -467,8 +468,4 @@ export default {
   margin: 3px
   display: flex
   flex-direction: column
-
-.map
-  flex: 1
-  border: 5px solid white
 </style>

@@ -35,11 +35,21 @@
           </div>
         </div>
         <div class="q-pa-lg" style="width:61%">
-          <div class="q-pt-xl q-pl-xs" style="font-size: 1.1rem" align="justify" v-html="method1">
+          <div
+            class="q-pt-xl q-pl-xs"
+            style="font-size: 1.1rem"
+            align="justify"
+            v-html="method1"
+          >
             {{ method1 }}
           </div>
           <div class="q-pa-lg"></div>
-          <div class="q-pt-lg q-pl-xs" style="font-size: 1.1rem" align="justify" v-html="method2">
+          <div
+            class="q-pt-lg q-pl-xs"
+            style="font-size: 1.1rem"
+            align="justify"
+            v-html="method2"
+          >
             {{ method2 }}
           </div>
         </div>
@@ -52,7 +62,12 @@
         Quantifying habitat properties
       </div>
       <div class="col">
-        <div class="q-px-xl q-pb-xl q-pt-md" style="font-size: 1.1rem" align="justify" v-html="quantifying">
+        <div
+          class="q-px-xl q-pb-xl q-pt-md"
+          style="font-size: 1.1rem"
+          align="justify"
+          v-html="quantifying"
+        >
           {{ quantifying }}
         </div>
 
@@ -150,7 +165,11 @@
         <div class="title text-center text-white">References</div>
       </div>
       <div class="row justify-center">
-        <div v-html="reference" style="width: 85%; font-size: 1.1rem" align="justify">
+        <div
+          v-html="reference"
+          style="width: 85%; font-size: 1.1rem"
+          align="justify"
+        >
           {{ reference }}
         </div>
       </div>
@@ -216,26 +235,4 @@ export default {
   font-size: 1em
   color: $indigo-10
   font-style: italic
-
-.bioGlossary
-  width: 86vw
-.bioGlossary td:first-child
-  width: 25vw
-  background-color: $teal-1
-  font-weight: bold
-  font-size: 1.1rem
-
-.phyGlossary
-  width: 86vw
-.phyGlossary td:first-child
-  width: 25vw
-  background-color: $blue-1
-  font-weight: bold
-  font-size: 1.1rem
-
-.description
-  font-size: 1.1rem
-  white-space: normal
-  margin-top: 4px
-  text-align: justify
 </style>

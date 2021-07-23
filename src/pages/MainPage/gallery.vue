@@ -238,15 +238,4 @@ export default {};
   max-width: 100%
   cursor: pointer
   border-radius: 8px
-
-.speciesName
-  margin-bottom: 5px
-  padding: 5px
-  font-size: 20px
-  font-weight: bold
-  text-align: center
-  color: white
-  background-color: $teal
-  border-radius: 8px
-  border: 5px outset $teal-3
 </style>

@@ -102,21 +102,19 @@
           </div>
           <div class="row no-wrap">
             <div class="col-6 text-h6 text-center text-bold text-teal">
-              Five most common mobile species
-              (abundance over 60 quadrats)
+              Five most common mobile species (abundance over 60 quadrats)
             </div>
             <q-separator vertical />
             <div class="col-6 text-h6 text-center text-bold text-teal">
-              Five most common sessile species
-              (incidence over 60 quadrats)
+              Five most common sessile species (incidence over 60 quadrats)
             </div>
           </div>
 
           <div class="row">
-            <div class="col-3 tab1">Winter</div>
-            <div class="col-3 tab2">Summer</div>
-            <div class="col-3 tab1">Winter</div>
-            <div class="col-3 tab2">Summer</div>
+            <div class="col-3 bioTab1">Winter</div>
+            <div class="col-3 bioTab2">Summer</div>
+            <div class="col-3 bioTab1">Winter</div>
+            <div class="col-3 bioTab2">Summer</div>
           </div>
           <q-card-section horizontal>
             <highcharts class="col-3" :options="pieChart1"></highcharts>
@@ -134,9 +132,9 @@
 
           <q-separator />
           <div class="row">
-            <div class="col-4 tab2">Shannon's diversity index <i>H'</i></div>
-            <div class="col-4 tab1">Pielou's evenness <i>J</i></div>
-            <div class="col-4 tab2">Species richness <i>S</i></div>
+            <div class="col-4 bioTab2">Shannon's diversity index <i>H'</i></div>
+            <div class="col-4 bioTab1">Pielou's evenness <i>J</i></div>
+            <div class="col-4 bioTab2">Species richness <i>S</i></div>
           </div>
 
           <q-card-section horizontal class="row">
@@ -261,32 +259,8 @@ export default {
 .page
   background-color: $grey-6
   padding: 4px
-.listName
-  width: 33%
-  padding: 3px
-  margin: 4px
-.chartCard
-  padding: 3px
-  margin: 4px
+
 .title
   background-color: $teal-6
   color: white
-.noData
-  margin: auto
-  text-align: center
-  font-weight: bold
-  color: $grey-8
-  font-size: 16px
-.tab1
-  background-color: $grey-3
-  color: black
-  font-size: 16px
-  text-align: center
-  font-weight: bold
-.tab2
-  background-color: $teal-2
-  color: black
-  font-size: 16px
-  text-align: center
-  font-weight: bold
 </style>

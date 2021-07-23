@@ -400,11 +400,12 @@ export default {
       card2: false,
       card3: false,
       card4: false,
-      zoom: 9.8,
+      zoom: 10.8,
       center: L.latLng(22.25, 113.98),
       mapOptions: {
         zoomSnap: 0.2,
-        zoomControl: false
+        zoomControl: false,
+        dragging: false
       },
       sitesLocation: require("../../MapData/SW_Sites.json"),
       siteOptions: {
@@ -460,15 +461,4 @@ export default {
   margin: 3px
   display: flex
   flex-direction: column
-
-h
-  color: $red-8
-  font-size: 24px
-
-y
-  font-weight: 600
-  color: $indigo-4
-.map
-  flex: 1
-  border: 5px solid white
 </style>
