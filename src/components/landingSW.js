@@ -29,7 +29,7 @@ const landingSW = {
     chla: 9.85,
     chlaDelta: "NA",
     chlaN: "1 site",
-    om: 0.01,
+    om: 8.33,
     omDelta: "NA",
     omN: "1 site",
     mobileMax: "NA",
