@@ -1,5 +1,5 @@
 <template>
-  <div class="row no-wrap">
+  <div class="row q-pa-sm q-gutter-xs no-wrap">
     <q-card class="col-4">
       <q-img src="~/assets/mapcover - Copy.png" style="height: 85vh;" />
 
