@@ -122,6 +122,9 @@
                     {{ landingEA.winter2020.mobileMin }}
                   </div>
                 </div>
+                <div class="row justify-end">
+                  (n = {{ landingEA.winter2020.mobileN }})
+                </div>
               </q-card-section>
             </q-card>
 
@@ -147,8 +150,11 @@
                   <span style="font-size: 1.2rem">Min: </span>
                   &nbsp;
                   <div class="landingValue q-pl-md">
-                    {{ landingEA.winter2020.mobileMin }}
+                    {{ landingEA.winter2020.sessileMin }}
                   </div>
+                </div>
+                <div class="row justify-end">
+                  (n = {{ landingEA.winter2020.sessileN }})
                 </div>
               </q-card-section>
             </q-card>
@@ -260,6 +266,9 @@
                     {{ landingEA.summer2021.mobileMin }}
                   </div>
                 </div>
+                <div class="row justify-end">
+                  (n = {{ landingEA.summer2021.mobileN }})
+                </div>
               </q-card-section>
             </q-card>
 
@@ -285,8 +294,11 @@
                   <span style="font-size: 1.2rem">Min: </span>
                   &nbsp;
                   <div class="landingValue q-pl-md">
-                    {{ landingEA.summer2021.mobileMin }}
+                    {{ landingEA.summer2021.sessileMin }}
                   </div>
+                </div>
+                <div class="row justify-end">
+                  (n = {{ landingEA.summer2021.sessileN }})
                 </div>
               </q-card-section>
             </q-card>

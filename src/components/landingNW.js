@@ -1,41 +1,44 @@
 const landingNW = {
-    winter2020: {
-      highShoreTemp: 45.0,
-      highShoreTempDelta: 1.8,
-      highShoreTempN: "4 sites",
-      lowShoreTemp: 33.0,
-      lowShoreTempDelta: 6.4,
-      lowShoreTempN: "4 sites",
-      chla: 24.72,
-      chlaDelta: 12.25,
-      chlaN: "4 sites",
-      om: 8.40,
-      omDelta: 3.96,
-      omN: "4 sites",
-      mobileMax: 22,
-      mobileMin: 15,
-      sessileMax: 19,
-      sessileMin: 10
-    },
-    summer2021: {
-      highShoreTemp: 50.7,
-      highShoreTempDelta: 4.6,
-      highShoreTempN: "3 sites",
-      lowShoreTemp: 43.8,
-      lowShoreTempDelta: "NA",
-      lowShoreTempN: "1 site",
-      chla: 19.84,
-      chlaDelta: 8.12,
-      chlaN: "3 sites",
-      om: 0.01,
-      omDelta: 0.01,
-      omN: "3 sites",
-      mobileMax: "NA",
-      mobileMin: "NA",
-      sessileMax: "NA",
-      sessileMin: "NA"
-    }
-  };
-  
-  export default landingNW;
-  
+  winter2020: {
+    highShoreTemp: 45.0,
+    highShoreTempDelta: 1.8,
+    highShoreTempN: "4 sites",
+    lowShoreTemp: 33.0,
+    lowShoreTempDelta: 6.4,
+    lowShoreTempN: "4 sites",
+    chla: 24.72,
+    chlaDelta: 12.25,
+    chlaN: "4 sites",
+    om: 8.40,
+    omDelta: 3.96,
+    omN: "4 sites",
+    mobileMax: 22,
+    mobileMin: 15,
+    mobileN: "2 sites",
+    sessileMax: 19,
+    sessileMin: 10,
+    sessileN: "2 sites"
+  },
+  summer2021: {
+    highShoreTemp: 50.7,
+    highShoreTempDelta: 4.6,
+    highShoreTempN: "3 sites",
+    lowShoreTemp: 43.8,
+    lowShoreTempDelta: "NA",
+    lowShoreTempN: "1 site",
+    chla: 19.84,
+    chlaDelta: 8.12,
+    chlaN: "3 sites",
+    om: 0.01,
+    omDelta: 0.01,
+    omN: "3 sites",
+    mobileMax: "NA",
+    mobileMin: "NA",
+    mobileN: "NA",
+    sessileMax: "NA",
+    sessileMin: "NA",
+    sessileN: "NA"
+  }
+};
+
+export default landingNW;

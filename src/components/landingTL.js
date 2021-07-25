@@ -14,8 +14,10 @@ const landingTL = {
     omN: "4 sites",
     mobileMax: 22,
     mobileMin: 17,
+    mobileN: "1 site",
     sessileMax: 15,
-    sessileMin: 13
+    sessileMin: 13,
+    sessileN: "1 site"
   },
   summer2021: {
     highShoreTemp: 51.7,
@@ -24,7 +26,7 @@ const landingTL = {
     lowShoreTemp: 45.9,
     lowShoreTempDelta: 2.6,
     lowShoreTempN: "4 sites",
-    chla: 12.40,
+    chla: 12.4,
     chlaDelta: 6.01,
     chlaN: "4 sites",
     om: 0.02,
@@ -32,8 +34,10 @@ const landingTL = {
     omN: "4 sites",
     mobileMax: "NA",
     mobileMin: "NA",
+    mobileN: "NA",
     sessileMax: "NA",
-    sessileMin: "NA"
+    sessileMin: "NA",
+    sessileN: "NA"
   }
 };
 
