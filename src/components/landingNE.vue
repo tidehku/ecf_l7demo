@@ -59,7 +59,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 26%">
+            <q-card class="q-pa-sm bg-white" style="width: 24%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Nutrient levels
@@ -97,7 +97,42 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 18%">
+            <q-card class="q-pa-sm bg-white" style="width: 16%">
+              <q-card-section>
+                <div class="landingSubtitle" style="font-size: 1.2rem">
+                  Wave fetch
+                </div>
+              </q-card-section>
+
+              <q-card-section class="q-pt-none">
+                <span style="font-size: 1.2rem">Total max: </span>
+                &nbsp;
+                <div class="row no-wrap">
+                  <div class="landingValue q-pl-md">
+                    {{ landingNE.winter2020.waveMax }}
+                  </div>
+                  &nbsp;
+                  <b class="self-center">km</b>
+                </div>
+              </q-card-section>
+
+              <q-card-section class="q-pt-none">
+                <span style="font-size: 1.2rem">Total min: </span>
+                &nbsp;
+                <div class="row no-wrap">
+                  <div class="landingValue q-pl-md">
+                    {{ landingNE.winter2020.waveMin }}
+                  </div>
+                  &nbsp;
+                  <b class="self-center">km</b>
+                </div>
+                <div class="row justify-end">
+                  (n = {{ landingNE.winter2020.waveN }})
+                </div>
+              </q-card-section>
+            </q-card>
+
+            <q-card class="q-pa-sm bg-white" style="width: 16%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Mobile species richness
@@ -128,7 +163,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 18%">
+            <q-card class="q-pa-sm bg-white" style="width: 16%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Sessile species richness
@@ -203,7 +238,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 26%">
+            <q-card class="q-pa-sm bg-white" style="width: 24%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Nutrient levels
@@ -241,7 +276,42 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 18%">
+            <q-card class="q-pa-sm bg-white" style="width: 16%">
+              <q-card-section>
+                <div class="landingSubtitle" style="font-size: 1.2rem">
+                  Wave fetch
+                </div>
+              </q-card-section>
+
+              <q-card-section class="q-pt-none">
+                <span style="font-size: 1.2rem">Total max: </span>
+                &nbsp;
+                <div class="row no-wrap">
+                  <div class="landingValue q-pl-md">
+                    {{ landingNE.summer2021.waveMax }}
+                  </div>
+                  &nbsp;
+                  <b class="self-center">km</b>
+                </div>
+              </q-card-section>
+
+              <q-card-section class="q-pt-none">
+                <span style="font-size: 1.2rem">Total min: </span>
+                &nbsp;
+                <div class="row no-wrap">
+                  <div class="landingValue q-pl-md">
+                    {{ landingNE.summer2021.waveMin }}
+                  </div>
+                  &nbsp;
+                  <b class="self-center">km</b>
+                </div>
+                <div class="row justify-end">
+                  (n = {{ landingNE.summer2021.waveN }})
+                </div>
+              </q-card-section>
+            </q-card>
+
+            <q-card class="q-pa-sm bg-white" style="width: 16%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Mobile species richness
@@ -272,7 +342,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 18%">
+            <q-card class="q-pa-sm bg-white" style="width: 16%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Sessile species richness
