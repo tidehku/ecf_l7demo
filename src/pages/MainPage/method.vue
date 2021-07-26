@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-gutter-sm bg-grey-3">
     <div class="row methodConstrain">
-      <div class="q-pa-md q-gutter-sm col-6">
+      <div class="q-pa-md q-pt-xl q-gutter-sm col-6">
         <div class="text-indigo title">
           Stratification of Hong Kong coastline
         </div>
@@ -9,7 +9,7 @@
           {{ stratification }}
         </div>
       </div>
-      <div class="col-6">
+      <div class="q-pt-xl col-6">
         <q-img src="~/assets/method1.png" />
         <div class="text-center bg-black text-white" style="font-size: 1rem">
           Map showing demarcation of regions and location of sampling sites
