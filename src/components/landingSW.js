@@ -15,11 +15,11 @@ const landingSW = {
     waveMax: 261.15,
     waveMin: 5.39,
     waveN: "4 sites",
-    mobileMax: 23,
-    mobileMin: 16,
+    mobileMax: 21,
+    mobileMin: 21,
     mobileN: "1 site",
-    sessileMax: 18,
-    sessileMin: 10,
+    sessileMax: 15,
+    sessileMin: 15,
     sessileN: "1 site"
   },
   summer2021: {

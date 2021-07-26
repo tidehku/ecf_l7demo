@@ -19,7 +19,7 @@
       <q-tab-panels v-model="panel" animated class="bg-indigo-1">
         <q-tab-panel name="winter2020">
           <div class="row no-wrap justify-evenly">
-            <q-card class="q-pa-sm bg-white">
+            <q-card class="q-pa-sm bg-white" style="width: 20%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Max. rock temperature
@@ -59,7 +59,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 24%">
+            <q-card class="q-pa-sm bg-white" style="width: 20%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Nutrient levels
@@ -97,15 +97,15 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 16%">
+            <q-card class="q-pa-sm bg-white" style="width: 20%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
-                  Wave fetch
+                  Total wave fetch
                 </div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Total max: </span>
+                <span style="font-size: 1.2rem">Max: </span>
                 &nbsp;
                 <div class="row no-wrap">
                   <div class="landingValue q-pl-md">
@@ -117,7 +117,7 @@
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Total min: </span>
+                <span style="font-size: 1.2rem">Min: </span>
                 &nbsp;
                 <div class="row no-wrap">
                   <div class="landingValue q-pl-md">
@@ -132,7 +132,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 16%">
+            <q-card class="q-pa-sm bg-white" style="width: 20%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Mobile species richness
@@ -163,7 +163,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 16%">
+            <q-card class="q-pa-sm bg-white" style="width: 20%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Sessile species richness
@@ -185,7 +185,7 @@
                   <span style="font-size: 1.2rem">Min: </span>
                   &nbsp;
                   <div class="landingValue q-pl-md">
-                    {{ landingNW.winter2020.mobileMin }}
+                    {{ landingNW.winter2020.sessileMin }}
                   </div>
                 </div>
                 <div class="row justify-end">
@@ -198,7 +198,7 @@
 
         <q-tab-panel name="summer2021">
           <div class="row no-wrap justify-evenly">
-            <q-card class="q-pa-sm bg-white">
+            <q-card class="q-pa-sm bg-white" style="width: 20%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Max. rock temperature
@@ -238,7 +238,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 24%">
+            <q-card class="q-pa-sm bg-white" style="width: 20%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Nutrient levels
@@ -276,15 +276,15 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 16%">
+            <q-card class="q-pa-sm bg-white" style="width: 20%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
-                  Wave fetch
+                  Total wave fetch
                 </div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Total max: </span>
+                <span style="font-size: 1.2rem">Max: </span>
                 &nbsp;
                 <div class="row no-wrap">
                   <div class="landingValue q-pl-md">
@@ -296,7 +296,7 @@
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Total min: </span>
+                <span style="font-size: 1.2rem">Min: </span>
                 &nbsp;
                 <div class="row no-wrap">
                   <div class="landingValue q-pl-md">
@@ -311,7 +311,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 16%">
+            <q-card class="q-pa-sm bg-white" style="width: 20%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Mobile species richness
@@ -342,7 +342,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 16%">
+            <q-card class="q-pa-sm bg-white" style="width: 20%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.2rem">
                   Sessile species richness

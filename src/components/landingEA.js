@@ -15,10 +15,10 @@ const landingEA = {
     waveMax: 402.34,
     waveMin: 4.51,
     waveN: "4 sites",
-    mobileMax: 18,
-    mobileMin: 13,
+    mobileMax: 24,
+    mobileMin: 24,
     mobileN: "1 site",
-    sessileMax: 18,
+    sessileMax: 15,
     sessileMin: 15,
     sessileN: "1 site"
   },
