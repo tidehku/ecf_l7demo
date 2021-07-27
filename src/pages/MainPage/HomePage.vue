@@ -156,8 +156,7 @@
           </q-card-section>
 
           <q-card-section style="font-size: 1rem">
-            See photographs of fantastic rocky intertidal organisms and
-            landscapes here!
+            See photographs of fantastic rocky intertidal organisms here!
           </q-card-section>
           <div class="q-pa-md row absolute-bottom justify-end">
             <q-btn no-caps color="cyan-7" label="Explore" to="gallery" />

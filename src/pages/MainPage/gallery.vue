@@ -46,13 +46,12 @@
           class="image"
           :src="require('../../assets/gallery/Snail - Reishia clavigera.jpg')"
         />
-      </viewer>
-      <viewer style="width:19.2%">
-        <div class="speciesName">Gastropod</div>
         <img
           class="image"
           :src="require('../../assets/gallery/Gastropod - Elysia sp.jpg')"
         />
+      </viewer>
+      <viewer style="width:19.2%">
         <div class="speciesName">Limpet</div>
         <img
           class="image"
@@ -74,7 +73,7 @@
             require('../../assets/gallery/Limpet - Patelloida saccharina.jpg')
           "
         />
-        <div class="speciesName">False Limpet</div>
+        <div class="speciesName">False limpet</div>
         <img
           class="image"
           :src="
@@ -103,7 +102,7 @@
         />
       </viewer>
       <viewer style="width:19.2%">
-        <div class="speciesName">Sea Anemone</div>
+        <div class="speciesName">Sea anemone</div>
         <img
           class="image"
           :src="
@@ -122,7 +121,7 @@
             require('../../assets/gallery/Sea anemone - Spheractis cheungae 2.jpg')
           "
         />
-        <div class="speciesName">Barnale</div>
+        <div class="speciesName">Barnacle</div>
         <img
           class="image"
           :src="
@@ -200,13 +199,6 @@
           class="image"
           :src="require('../../assets/gallery/Shrimp - Palaemon pacificus.jpg')"
         />
-        <div class="speciesName">Bryozoan</div>
-        <img
-          class="image"
-          :src="
-            require('../../assets/gallery/Bryozoan - Watersipora sp. and Algae Colpomenia sinuosa.jpg')
-          "
-        />
         <div class="speciesName">Crab</div>
         <img
           class="image"
@@ -223,6 +215,13 @@
         <img
           class="image"
           :src="require('../../assets/gallery/Crab - Parasesarma pictum.jpg')"
+        />
+        <div class="speciesName">Others</div>
+        <img
+          class="image"
+          :src="
+            require('../../assets/gallery/Bryozoan - Watersipora sp. and Algae Colpomenia sinuosa.jpg')
+          "
         />
       </viewer>
     </div>
