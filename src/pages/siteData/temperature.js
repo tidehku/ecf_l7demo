@@ -34,7 +34,8 @@ export const tempData = {
     tooltip: {
       crosshairs: true,
       shared: true,
-      valueSuffix: " °C"
+      valueSuffix: " °C",
+      valueDecimals: 2
     },
     legend: {
       layout: "proximate",
@@ -125,7 +126,8 @@ export const tempData = {
     tooltip: {
       crosshairs: true,
       shared: true,
-      valueSuffix: " °C"
+      valueSuffix: " °C",
+      valueDecimals: 2
     },
     legend: {
       layout: "proximate",
