@@ -20,7 +20,7 @@
     "leaflet-minimap": "^3.6.1",
     "leaflet.zoomhome": "^1.0.0",
     "quasar": "^2.0.4",
-    "v-viewer": "^1.6.3",
+    "v-viewer": "^1.6.4",
     "vue-leaflet-minimap": "^1.0.7",
     "vue-responsive-video-background-player": "^2.2.0"
   },
