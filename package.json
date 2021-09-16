@@ -21,7 +21,7 @@
     "leaflet.zoomhome": "^1.0.0",
     "quasar": "^2.0.4",
     "v-viewer": "^1.6.3",
-    "vue-leaflet-minimap": "^1.0.6",
+    "vue-leaflet-minimap": "^1.0.7",
     "vue-responsive-video-background-player": "^2.2.0"
   },
   "devDependencies": {
