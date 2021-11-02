@@ -36,6 +36,7 @@
           v-for="item in regionMarker"
           :key="item.properties.name"
           :lat-lng="item.geometry.coordinates"
+          @click="iconOnclick"
         >
           <l-icon>
             <div class="text-h4 text-bold text-white">
@@ -126,12 +127,17 @@ export default {
           layer.bindTooltip("<div>" + feature.properties.name + "</div>", {
             permanent: true,
             className: "my-label",
-            direction: "center"
+            direction: "center",
+            interactive: true
           });
         }
       }
     };
   },
+  methods: {
+    iconOnclick: () => {}
+  },
+
   mounted() {
     this.$nextTick(() => {
       const map = this.$refs.myMapRef.mapObject;
