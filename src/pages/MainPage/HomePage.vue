@@ -12,7 +12,6 @@
       @mouseenter="autoplay = true"
       @mouseleave="autoplay = true"
       height="72vh"
-      swipeable
     >
       <q-carousel-slide
         v-for="slide in slides"
@@ -60,12 +59,10 @@
         </div>
         <div class="q-pa-md">
           <video-background
-            muted
-            loop
             @click.native="pauseVideo()"
             ref="videobackground"
-            src="VID_20210224.mp4"
-            style="height: 72vh; width: 81vw; border-radius: 12px; display: block; margin-left: auto; margin-right: auto;"
+            src="VID_20210224_141116.mp4"
+            style="height: 72vh; width: 61vw; border-radius: 12px; display: block; margin-left: auto; margin-right: auto;"
           >
             <div class="absolute-center">
               <q-btn
