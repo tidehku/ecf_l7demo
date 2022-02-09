@@ -42,6 +42,49 @@ export const omData = {
       }
     ]
   },
+  EASWOm2: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (m + C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "Mean organic matter concentration  (mg/cm2)"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
   EAPLOm1: {
     chart: {
       type: "column",
@@ -344,6 +387,49 @@ export const omData = {
     ]
   },
   NWTOOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (m + C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "Mean organic matter concentration  (mg/cm2)"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  NWTOOm2: {
     chart: {
       type: "column",
       height: "60%"
@@ -817,6 +903,49 @@ export const omData = {
     ]
   },
   TLSBOm1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (m + C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "Mean organic matter concentration  (mg/cm2)"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  TLSBOm2: {
     chart: {
       type: "column",
       height: "60%"
