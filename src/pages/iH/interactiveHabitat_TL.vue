@@ -1,6 +1,6 @@
 <template>
   <q-page class="q-pa-xs row justify-center no-wrap">
-    <q-card class="q-ma-sm" style="width: 33%; height:81vh" bordered>
+    <q-card class="q-ma-sm" style="width: 33%; height:85vh" bordered>
       <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
         Tolo Harbour region
         <q-space />
@@ -40,10 +40,11 @@
     </q-card>
 
     <div style="width: 66.3%">
+      <!-- layout issues here -->
       <landingTL />
 
       <div class="row no-wrap justify-around">
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Starfish Bay
           </div>
@@ -69,7 +70,7 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Ma Shi Chau
           </div>
@@ -94,7 +95,7 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Tseng Tau
           </div>
@@ -117,7 +118,7 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Lai Chi Chong
           </div>
