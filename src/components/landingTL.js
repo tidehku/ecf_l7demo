@@ -12,15 +12,15 @@ const landingTL = {
     om: 14.43,
     omDelta: 8.41,
     omN: "4 sites",
-    waveMax: 17.98,
-    waveMin: 12.31,
+    waveMax: 56.16,
+    waveMin: 21.29,
     waveN: "4 sites",
-    mobileMax: 22,
-    mobileMin: 22,
-    mobileN: "1 site",
-    sessileMax: 10,
-    sessileMin: 10,
-    sessileN: "1 site"
+    mobileMax: 25,
+    mobileMin: 17,
+    mobileN: "4 site",
+    sessileMax: 24,
+    sessileMin: 14,
+    sessileN: "4 site"
   },
   summer2021: {
     highShoreTemp: 51.7,
