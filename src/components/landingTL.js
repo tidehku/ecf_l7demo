@@ -17,17 +17,17 @@ const landingTL = {
     waveN: "4 sites",
     mobileMax: 25,
     mobileMin: 17,
-    mobileN: "4 site",
+    mobileN: "4 sites",
     sessileMax: 24,
     sessileMin: 14,
-    sessileN: "4 site"
+    sessileN: "4 sites"
   },
   summer2021: {
-    highShoreTemp: 51.7,
-    highShoreTempDelta: 2.4,
+    highShoreTemp: 53.6,
+    highShoreTempDelta: 1.4,
     highShoreTempN: "4 sites",
-    lowShoreTemp: 45.9,
-    lowShoreTempDelta: 2.6,
+    lowShoreTemp: 50.4,
+    lowShoreTempDelta: 2.2,
     lowShoreTempN: "4 sites",
     chla: 12.4,
     chlaDelta: 6.01,
@@ -35,15 +35,15 @@ const landingTL = {
     om: 15.74,
     omDelta: 9.35,
     omN: "4 sites",
-    waveMax: 17.98,
-    waveMin: 12.31,
+    waveMax: 56.16,
+    waveMin: 21.29,
     waveN: "4 sites",
-    mobileMax: "NA",
-    mobileMin: "NA",
-    mobileN: "NA",
-    sessileMax: "NA",
-    sessileMin: "NA",
-    sessileN: "NA"
+    mobileMax: 39,
+    mobileMin: 28,
+    mobileN: "4 sites",
+    sessileMax: 42,
+    sessileMin: 18,
+    sessileN: "4 sites"
   }
 };
 
