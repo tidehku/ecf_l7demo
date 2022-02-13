@@ -23,15 +23,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "4.64 N (Winter)"
+      data: "6.70 N (Winter); 0.63 N (Summer)"
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet"
+      data: "355.2°"
     },
     {
       name: "Mean slope",
-      data: "Data not available yet"
+      data: "33.5°"
     },
     {
       name: "Rock type",
@@ -61,15 +61,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "Data not available yet"
+      data: "2.27 N (Winter); 0.93 N (Summer)"
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet"
+      data: "82.6°"
     },
     {
       name: "Mean slope",
-      data: "Data not available yet"
+      data: "47.1°"
     },
     {
       name: "Rock type",
@@ -99,15 +99,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "1.33 N (Winter)"
+      data: "1.20 N (Winter); 0.74 N (Summer)"
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet"
+      data: "22.0°"
     },
     {
       name: "Mean slope",
-      data: "Data not available yet"
+      data: "37.9°"
     },
     {
       name: "Rock type",
@@ -137,15 +137,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "Data not available yet"
+      data: "0.92 N (Summer)"
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet"
+      data: "322.5°"
     },
     {
       name: "Mean slope",
-      data: "Data not available yet"
+      data: "46.9°"
     },
     {
       name: "Rock type",
@@ -175,15 +175,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "2.06 N (Winter)"
+      data: "1.45 N (Winter); 0.66 N (Summer)"
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet"
+      data: "44.8°"
     },
     {
       name: "Mean slope",
-      data: "Data not available yet"
+      data: "53.7°"
     },
     {
       name: "Rock type",
@@ -213,15 +213,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "Data not available yet"
+      data: "0.93 N (Winter); 0.72 N (Summer)"
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet"
+      data: "333.5°"
     },
     {
       name: "Mean slope",
-      data: "Data not available yet"
+      data: "43.5°"
     },
     {
       name: "Rock type",
@@ -251,15 +251,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "Data not available yet"
+      data: "1.05 N (Winter); 0.65 N (Summer)"
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet"
+      data: "10.9°"
     },
     {
       name: "Mean slope",
-      data: "Data not available yet"
+      data: "45.6°"
     },
     {
       name: "Rock type",
@@ -289,15 +289,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "2.46 N (Winter)"
+      data: "0.32 N (Winter); 0.01 N (Summer)"
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet"
+      data: "320.0°"
     },
     {
       name: "Mean slope",
-      data: "Data not available yet"
+      data: "51.7°"
     },
     {
       name: "Rock type",
@@ -327,7 +327,7 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "1.32 N (Winter); 1.88 N (Summer)",
+      data: "0.66 N (Winter); 1.19 N (Summer)",
     },
     {
       name: "Mean aspect",
@@ -365,11 +365,11 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "1.59 N (Winter); 1.49 N (Summer)",
+      data: "0.79 N (Winter); 0.90 N (Summer)",
     },
     {
       name: "Mean aspect",
-      data: "238.2°",
+      data: "238.3°",
     },
     {
       name: "Mean slope",
@@ -403,15 +403,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "1.46 N (Winter)",
+      data: "0.68 N (Winter); 0.74 N (Summer)",
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet",
+      data: "239.3°",
     },
     {
       name: "Mean slope",
-      data: "Data not available yet",
+      data: "31.8°",
     },
     {
       name: "Rock type",
@@ -441,7 +441,7 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "2.14 N (Winter); 2.14 N (Summer)",
+      data: "0.70 N (Winter); 0.53 N (Summer)",
     },
     {
       name: "Mean aspect",
@@ -479,15 +479,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "5.94 N (Winter); 3.91 N (Summer)",
+      data: "7.18 N (Winter); 5.37 N (Summer)",
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet",
+      data: "63.3°",
     },
     {
       name: "Mean slope",
-      data: "Data not available yet",
+      data: "16.7°",
     },
     {
       name: "Rock type",
@@ -517,7 +517,7 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "3.02 N (Winter); 3.61 N (Summer)",
+      data: "1.07 N (Winter); 1.06 N (Summer)",
     },
     {
       name: "Mean aspect",
@@ -555,7 +555,7 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "1.91 N (Winter); 1.62 N (Summer)",
+      data: "1.09 N (Winter); 1.14 N (Summer)",
     },
     {
       name: "Mean aspect",
@@ -593,7 +593,7 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "2.00 N (Winter); 2.36 N (Summer)",
+      data: "0.49 N (Winter); 0.29 N (Summer)",
     },
     {
       name: "Mean aspect",
@@ -631,15 +631,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "Data not available yet",
+      data: "1.00 N (Summer)",
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet",
+      data: "147.2°",
     },
     {
       name: "Mean slope",
-      data: "Data not available yet",
+      data: "36.7°",
     },
     {
       name: "Rock type",
@@ -670,15 +670,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "Data not available yet",
+      data: "2.48 N (Winter); 0.61 N (Summer)",
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet",
+      data: "158.1°",
     },
     {
       name: "Mean slope",
-      data: "Data not available yet",
+      data: "18.7°",
     },
     {
       name: "Rock type",
@@ -709,7 +709,7 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "1.14 N (Winter); 1.70 N (Summer)",
+      data: "0.85 N (Winter); 1.35 N (Summer)",
     },
     {
       name: "Mean aspect",
@@ -747,15 +747,15 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "0.89 N (Winter)",
+      data: "0.03 N (Winter); 0.57 N (Summer)",
     },
     {
       name: "Mean aspect",
-      data: "Data not available yet",
+      data: "338.3°",
     },
     {
       name: "Mean slope",
-      data: "Data not available yet",
+      data: "52.9°",
     },
     {
       name: "Rock type",
@@ -785,7 +785,7 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "1.09 N (Winter); 1.17 N (Summer)",
+      data: "0.49 N (Winter); 1.11 N (Summer)",
     },
     {
       name: "Mean aspect",
@@ -861,7 +861,7 @@ const state = {
     },
     {
       name: "Maximum wave force",
-      data: "1.16 N (Winter); 1.48 N (Summer)",
+      data: "0.38 N (Winter); 0.48 N (Summer)",
     },
     {
       name: "Mean aspect",
@@ -873,7 +873,7 @@ const state = {
     },
     {
       name: "Rock type",
-      data: `Sedimentary`,
+      data: "Sedimentary",
     },
   ],
   Table_TLLCC: [
@@ -911,7 +911,7 @@ const state = {
     },
     {
       name: "Rock type",
-      data: `Igneous`,
+      data: "Igneous",
     },
   ],
 };
