@@ -229,13 +229,7 @@
 </template>
 
 <script>
-import gtm from "../components/gtm";
-
-export default {
-  created() {
-    gtm.logEvent("myCat", "myAction", "myLabel", 0);
-  }
-};
+export default {};
 </script>
 
 <style lang="sass" scoped>

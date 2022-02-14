@@ -286,7 +286,6 @@ import Vue from "vue";
 import VideoBackground from "vue-responsive-video-background-player";
 Vue.component("video-background", VideoBackground);
 import slides from "./carouselSlides";
-import gtm from "../components/gtm";
 
 export default {
   name: "PageIndex",
@@ -327,9 +326,6 @@ export default {
     TidesMessage() {
       return this.$store.state.storeText.TidesMessage;
     }
-  },
-  created() {
-    gtm.logEvent("myCat", "myAction", "myLabel", 0);
   }
 };
 </script>
