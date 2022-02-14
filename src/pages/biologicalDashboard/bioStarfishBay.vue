@@ -116,18 +116,12 @@
             <div class="col-3 bioTab1">Winter</div>
             <div class="col-3 bioTab2">Summer</div>
           </div>
-          <q-card-section horizontal>
+          <q-card-section class="row no-wrap" horizontal>
             <highcharts class="col-3" :options="pieChart1"></highcharts>
-            <div class="col-3 noData">
-              Summer data <br />
-              Not available yet
-            </div>
+            <highcharts class="col-3" :options="pieChart3"></highcharts>
             <q-separator vertical />
             <highcharts class="col-3" :options="pieChart2"></highcharts>
-            <div class="col-3 noData">
-              Summer data <br />
-              Not available yet
-            </div>
+            <highcharts class="col-3" :options="pieChart4"></highcharts>
           </q-card-section>
 
           <q-separator />
@@ -169,6 +163,8 @@ export default {
       barChart3: barData.SBBar3,
       pieChart1: pieData.SBPie1,
       pieChart2: pieData.SBPie2,
+      pieChart3: pieData.SBPie3,
+      pieChart4: pieData.SBPie4,
       thumbStyle: {
         right: "4px",
         borderRadius: "5px",
@@ -188,69 +184,92 @@ export default {
     let bar =
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=588301274&single=true&output=csv";
 
+    let pie21summer =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=1412208874&single=true&output=csv";
+
     const requestName = this.$axios.get(name);
 
     const requestPie = this.$axios.get(pie);
 
     const requestBar = this.$axios.get(bar);
 
-    this.$axios.all([requestName, requestPie, requestBar]).then(
-      this.$axios.spread((...responses) => {
-        // name
-        const SBbio = csv2json(responses[0].data);
-        SBbio.map(doc => {
-          let cacheMobileName = [];
-          cacheMobileName.push(doc.mobile); // store all records
-          for (let i of cacheMobileName) i && this.mobiles.push(i); // copy only non-empty values then push to the data array specified for display
-          let cacheSessileName = [];
-          cacheSessileName.push(doc.sessile);
-          for (let j of cacheSessileName) j && this.sessiles.push(j);
-        });
+    const requestPie21summer = this.$axios.get(pie21summer);
 
-        // pie
-        const pieChart = csv2json(responses[1].data);
-        let cacheMobilePie = [];
-        pieChart.map(doc => {
-          cacheMobilePie.push([doc.pieMobile, parseInt(doc.pieMobileCnt)]);
-        });
-        this.pieChart1.series[0].data = cacheMobilePie;
+    this.$axios
+      .all([requestName, requestPie, requestBar, requestPie21summer])
+      .then(
+        this.$axios.spread((...responses) => {
+          // name
+          const SBbio = csv2json(responses[0].data);
+          SBbio.map(doc => {
+            let cacheMobileName = [];
+            cacheMobileName.push(doc.mobile); // store all records
+            for (let i of cacheMobileName) i && this.mobiles.push(i); // copy only non-empty values then push to the data array specified for display
+            let cacheSessileName = [];
+            cacheSessileName.push(doc.sessile);
+            for (let j of cacheSessileName) j && this.sessiles.push(j);
+          });
 
-        let cacheSessilePie = [];
-        pieChart.map(doc => {
-          cacheSessilePie.push([doc.pieSessile, parseInt(doc.pieSessileCnt)]);
-        });
-        this.pieChart2.series[0].data = cacheSessilePie;
+          // pie
+          const pieChart = csv2json(responses[1].data);
+          let cacheMobilePie = [];
+          pieChart.map(doc => {
+            cacheMobilePie.push([doc.pieMobile, parseInt(doc.pieMobileCnt)]);
+          });
+          this.pieChart1.series[0].data = cacheMobilePie;
 
-        // bar
-        const barChart = csv2json(responses[2].data);
-        let cacheShannon = [];
-        barChart.map(doc => {
-          cacheShannon.push([
-            [doc.commonx].toString(),
-            parseFloat([doc.shannony])
-          ]);
-        });
-        this.barChart1.series[0].data = cacheShannon;
+          let cacheSessilePie = [];
+          pieChart.map(doc => {
+            cacheSessilePie.push([doc.pieSessile, parseInt(doc.pieSessileCnt)]);
+          });
+          this.pieChart2.series[0].data = cacheSessilePie;
 
-        let cachePielou = [];
-        barChart.map(doc => {
-          cachePielou.push([
-            [doc.commonx].toString(),
-            parseFloat([doc.pielouy])
-          ]);
-        });
-        this.barChart2.series[0].data = cachePielou;
+          const pieChart21summer = csv2json(responses[3].data);
+          let cacheMobilePie1 = [];
+          pieChart21summer.map(doc => {
+            cacheMobilePie1.push([doc.pieMobile, parseInt(doc.pieMobileCnt)]);
+          });
+          this.pieChart3.series[0].data = cacheMobilePie1;
 
-        let cacheRichness = [];
-        barChart.map(doc => {
-          cacheRichness.push([
-            [doc.commonx].toString(),
-            parseFloat([doc.richnessy])
-          ]);
-        });
-        this.barChart3.series[0].data = cacheRichness;
-      })
-    );
+          let cacheSessilePie1 = [];
+          pieChart21summer.map(doc => {
+            cacheSessilePie1.push([
+              doc.pieSessile,
+              parseInt(doc.pieSessileCnt)
+            ]);
+          });
+          this.pieChart4.series[0].data = cacheSessilePie1;
+
+          // bar
+          const barChart = csv2json(responses[2].data);
+          let cacheShannon = [];
+          barChart.map(doc => {
+            cacheShannon.push([
+              [doc.commonx].toString(),
+              parseFloat([doc.shannony])
+            ]);
+          });
+          this.barChart1.series[0].data = cacheShannon;
+
+          let cachePielou = [];
+          barChart.map(doc => {
+            cachePielou.push([
+              [doc.commonx].toString(),
+              parseFloat([doc.pielouy])
+            ]);
+          });
+          this.barChart2.series[0].data = cachePielou;
+
+          let cacheRichness = [];
+          barChart.map(doc => {
+            cacheRichness.push([
+              [doc.commonx].toString(),
+              parseFloat([doc.richnessy])
+            ]);
+          });
+          this.barChart3.series[0].data = cacheRichness;
+        })
+      );
   }
 };
 </script>
