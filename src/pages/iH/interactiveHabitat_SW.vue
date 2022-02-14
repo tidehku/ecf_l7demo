@@ -15,7 +15,9 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-md" style="font-size: 1.1rem" align="justify">{{ regionSW }}</div>
+      <div class="q-pa-md" style="font-size: 1.1rem" align="justify">
+        {{ regionSW }}
+      </div>
 
       <l-map
         class="map"
@@ -440,7 +442,7 @@ export default {
       return this.$store.state.storeText.regionSW;
     },
     Table_SWTLM() {
-      return this.$store.state.storeRegionTable.Table_SWTLM;
+      return this.$store.state.storeRegionTable.Table_SWTLW;
     },
     Table_SWST() {
       return this.$store.state.storeRegionTable.Table_SWST;
