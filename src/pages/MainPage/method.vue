@@ -178,6 +178,8 @@
 </template>
 
 <script>
+import gtm from "../components/gtm";
+
 export default {
   data() {
     return {
@@ -223,6 +225,9 @@ export default {
     phyGlossary() {
       return this.$store.state.storeText.phyGlossary;
     }
+  },
+  created() {
+    gtm.logEvent("myCat", "myAction", "myLabel", 0);
   }
 };
 </script>

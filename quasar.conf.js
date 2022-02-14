@@ -20,7 +20,8 @@ module.exports = function(/* ctx */) {
     boot: [
       "leafletEntry",
       "axios",
-      "imageViewer"
+      "imageViewer",
+      "gtm"
       // "firebase"
     ],
 

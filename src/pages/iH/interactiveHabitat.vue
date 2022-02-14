@@ -66,6 +66,7 @@ import "leaflet-minimap/dist/Control.MiniMap.min.css";
 import { LMap, LGeoJson, LMarker, LIcon, LControlScale } from "vue2-leaflet";
 import "leaflet.zoomhome/dist/leaflet.zoomhome.js";
 import regionMarker from "./regionMarker";
+import gtm from "../components/gtm";
 
 export default {
   name: "MapGeoJSON",
@@ -146,6 +147,9 @@ export default {
       });
       map.addControl(zoomHome);
     });
+  },
+  created() {
+    gtm.logEvent("myCat", "myAction", "myLabel", 0);
   }
 };
 </script>
