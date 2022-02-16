@@ -62,7 +62,8 @@ export const chlaData = {
     yAxis: {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
-      }
+      },
+      max: 15
     },
     legend: {
       enabled: false
@@ -128,6 +129,7 @@ export const chlaData = {
       }
     ]
   },
+  // check the max values in yAxis
   TOChla2: {
     chart: {
       type: "column",
@@ -148,7 +150,8 @@ export const chlaData = {
     yAxis: {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
-      }
+      },
+      max: 150
     },
     legend: {
       enabled: false

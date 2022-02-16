@@ -158,9 +158,9 @@ export default {
     return {
       mobiles: [],
       sessiles: [],
-      barChart1: barData.TOBar1,
-      barChart2: barData.TOBar2,
-      barChart3: barData.TOBar3,
+      barChart1: barData.TOShannon,
+      barChart2: barData.TOPielou,
+      barChart3: barData.TORichness,
       pieChart1: pieData.TOPie1,
       pieChart2: pieData.TOPie2,
       pieChart3: pieData.TOPie3,
@@ -181,22 +181,33 @@ export default {
     let pie =
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4wp5Dl-Sm-sI9DYjezihdkVgz2gVS6rakgFfn_9SdPKOYrUoHzLaEomqP19Qmy75bUcIHFLiaYjqD/pub?gid=1752414671&single=true&output=csv";
 
-    let bar =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4wp5Dl-Sm-sI9DYjezihdkVgz2gVS6rakgFfn_9SdPKOYrUoHzLaEomqP19Qmy75bUcIHFLiaYjqD/pub?gid=588301274&single=true&output=csv";
-
     let pie21summer =
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4wp5Dl-Sm-sI9DYjezihdkVgz2gVS6rakgFfn_9SdPKOYrUoHzLaEomqP19Qmy75bUcIHFLiaYjqD/pub?gid=538499618&single=true&output=csv";
 
+    let barShannon =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4wp5Dl-Sm-sI9DYjezihdkVgz2gVS6rakgFfn_9SdPKOYrUoHzLaEomqP19Qmy75bUcIHFLiaYjqD/pub?gid=1947481802&single=true&output=csv";
+
+    let barPielou =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4wp5Dl-Sm-sI9DYjezihdkVgz2gVS6rakgFfn_9SdPKOYrUoHzLaEomqP19Qmy75bUcIHFLiaYjqD/pub?gid=2133031977&single=true&output=csv";
+    let barRichness =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4wp5Dl-Sm-sI9DYjezihdkVgz2gVS6rakgFfn_9SdPKOYrUoHzLaEomqP19Qmy75bUcIHFLiaYjqD/pub?gid=1530109204&single=true&output=csv";
+
     const requestName = this.$axios.get(name);
-
     const requestPie = this.$axios.get(pie);
-
-    const requestBar = this.$axios.get(bar);
-
     const requestPie21summer = this.$axios.get(pie21summer);
+    const requestBarShnnon = this.$axios.get(barShannon);
+    const reqBarPielou = this.$axios.get(barPielou);
+    const reqBarRichness = this.$axios.get(barRichness);
 
     this.$axios
-      .all([requestName, requestPie, requestBar, requestPie21summer])
+      .all([
+        requestName,
+        requestPie,
+        requestPie21summer,
+        requestBarShnnon,
+        reqBarPielou,
+        reqBarRichness
+      ])
       .then(
         this.$axios.spread((...responses) => {
           // name
@@ -224,7 +235,7 @@ export default {
           });
           this.pieChart2.series[0].data = cacheSessilePie;
 
-          const pieChart21summer = csv2json(responses[3].data);
+          const pieChart21summer = csv2json(responses[2].data);
           let cacheMobilePie1 = [];
           pieChart21summer.map(doc => {
             cacheMobilePie1.push([doc.pieMobile, parseInt(doc.pieMobileCnt)]);
@@ -241,33 +252,41 @@ export default {
           this.pieChart4.series[0].data = cacheSessilePie1;
 
           // bar
-          const barChart = csv2json(responses[2].data);
-          let cacheShannon = [];
-          barChart.map(doc => {
-            cacheShannon.push([
-              [doc.commonx].toString(),
-              parseFloat([doc.shannony])
-            ]);
+          const shannony = csv2json(responses[3].data);
+          let cacheWin20shanno = [];
+          shannony.map(doc => {
+            cacheWin20shanno.push([parseFloat([doc.winter2020])]);
           });
-          this.barChart1.series[0].data = cacheShannon;
+          this.barChart1.series[0].data = cacheWin20shanno;
+          let cacheSum21shanno = [];
+          shannony.map(doc => {
+            cacheSum21shanno.push([parseFloat([doc.summer2021])]);
+          });
+          this.barChart1.series[1].data = cacheSum21shanno;
 
-          let cachePielou = [];
-          barChart.map(doc => {
-            cachePielou.push([
-              [doc.commonx].toString(),
-              parseFloat([doc.pielouy])
-            ]);
+          const pielouy = csv2json(responses[4].data);
+          let cacheWin20pielou = [];
+          pielouy.map(doc => {
+            cacheWin20pielou.push([parseFloat([doc.winter2020])]);
           });
-          this.barChart2.series[0].data = cachePielou;
+          this.barChart2.series[0].data = cacheWin20pielou;
+          let cacheSum21pielou = [];
+          pielouy.map(doc => {
+            cacheSum21pielou.push([parseFloat([doc.summer2021])]);
+          });
+          this.barChart2.series[1].data = cacheSum21pielou;
 
-          let cacheRichness = [];
-          barChart.map(doc => {
-            cacheRichness.push([
-              [doc.commonx].toString(),
-              parseFloat([doc.richnessy])
-            ]);
+          const richnessy = csv2json(responses[5].data);
+          let cacheWin20rich = [];
+          richnessy.map(doc => {
+            cacheWin20rich.push([parseFloat([doc.winter2020])]);
           });
-          this.barChart3.series[0].data = cacheRichness;
+          this.barChart3.series[0].data = cacheWin20rich;
+          let cacheSum21rich = [];
+          richnessy.map(doc => {
+            cacheSum21rich.push([parseFloat([doc.summer2021])]);
+          });
+          this.barChart3.series[1].data = cacheSum21rich;
         })
       );
   }
