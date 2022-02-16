@@ -49,7 +49,7 @@
             Starfish Bay
           </div>
           <q-img
-            src="~/assets/SiteImage/Starfish Bay.png"
+            src="~/assets/SiteImage/Starfish Bay_20winter.png"
             height="25vh"
             basic
           />
@@ -164,7 +164,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Starfish Bay.png"
+                src="~assets/SiteImage/Starfish Bay_20winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -198,7 +198,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Starfish Bay.png"
+                src="~assets/SiteImage/Starfish Bay_21summer.png"
               />
             </q-card-section>
           </q-card>

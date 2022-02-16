@@ -48,7 +48,7 @@
             Tai O
           </div>
 
-          <q-img src="~/assets/SiteImage/Tai O.png" height="25vh" basic />
+          <q-img src="~/assets/SiteImage/Tai O_20winter.png" height="25vh" basic />
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -162,7 +162,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Tai O.png"
+                src="~assets/SiteImage/Tai O_20winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -196,7 +196,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Tai O.png"
+                src="~assets/SiteImage/Tai O_21summer.png"
               />
             </q-card-section>
           </q-card>
