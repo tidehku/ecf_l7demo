@@ -163,14 +163,6 @@ export const barData = {
     legend: {
       enabled: true
     },
-    plotOptions: {
-      series: {
-        dataLabels: {
-          enabled: true,
-          format: "{point.y:,.2f}"
-        }
-      }
-    },
     series: [
       { name: "Winter2020", data: [] },
       { name: "Summer2021", data: [] }
@@ -204,14 +196,6 @@ export const barData = {
     },
     legend: {
       enabled: true
-    },
-    plotOptions: {
-      series: {
-        dataLabels: {
-          enabled: true,
-          format: "{point.y:,.2f}"
-        }
-      }
     },
     series: [
       { name: "Winter2020", data: [] },
@@ -254,14 +238,6 @@ export const barData = {
     },
     legend: {
       enabled: true
-    },
-    plotOptions: {
-      series: {
-        dataLabels: {
-          enabled: true,
-          format: "{point.y}"
-        }
-      }
     },
     series: [
       { name: "Winter2020", data: [] },
@@ -306,14 +282,6 @@ export const barData = {
     legend: {
       enabled: true
     },
-    plotOptions: {
-      series: {
-        dataLabels: {
-          enabled: true,
-          format: "{point.y:,.2f}"
-        }
-      }
-    },
     series: [
       { name: "Winter2020", data: [] },
       { name: "Summer2021", data: [] }
@@ -348,14 +316,6 @@ export const barData = {
     legend: {
       enabled: true
     },
-    plotOptions: {
-      series: {
-        dataLabels: {
-          enabled: true,
-          format: "{point.y:,.2f}"
-        }
-      }
-    },
     series: [
       { name: "Winter2020", data: [] },
       { name: "Summer2021", data: [] }
@@ -388,14 +348,6 @@ export const barData = {
     },
     legend: {
       enabled: true
-    },
-    plotOptions: {
-      series: {
-        dataLabels: {
-          enabled: true,
-          format: "{point.y}"
-        }
-      }
     },
     series: [
       { name: "Winter2020", data: [] },
