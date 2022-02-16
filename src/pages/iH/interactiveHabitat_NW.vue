@@ -162,7 +162,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Tai O_20winter.png"
+                src="~assets/SiteImage/Tai O_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table

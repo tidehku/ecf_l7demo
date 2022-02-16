@@ -164,7 +164,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Starfish Bay_20winter.png"
+                src="~assets/SiteImage/Starfish Bay_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
