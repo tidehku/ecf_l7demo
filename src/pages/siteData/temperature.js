@@ -29,7 +29,8 @@ export const tempData = {
         formatter: function() {
           return this.value;
         }
-      }
+      },
+      max: 60
     },
     tooltip: {
       crosshairs: true,
@@ -120,7 +121,8 @@ export const tempData = {
         formatter: function() {
           return this.value;
         }
-      }
+      },
+      min: 0
     },
     tooltip: {
       crosshairs: true,
@@ -211,7 +213,8 @@ export const tempData = {
         formatter: function() {
           return this.value;
         }
-      }
+      },
+      max: 60
     },
     tooltip: {
       crosshairs: true,
@@ -302,7 +305,8 @@ export const tempData = {
         formatter: function() {
           return this.value;
         }
-      }
+      },
+      min: 0
     },
     tooltip: {
       crosshairs: true,
