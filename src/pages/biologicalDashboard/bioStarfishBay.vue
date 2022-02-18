@@ -31,6 +31,8 @@
         <q-card class="width:33% listName">
           <div class="text-h5 text-bold row justify-center title">
             Species list
+            <q-chip color="orange">Summer</q-chip>
+            <q-chip color="blue">Winter</q-chip>
           </div>
           <div class="row no-wrap">
             <div class="col-6 text-h6 text-center text-bold text-teal">
