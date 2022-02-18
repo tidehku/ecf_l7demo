@@ -58,11 +58,28 @@
                   v-for="mobile in mobiles"
                   :key="mobile.message"
                 >
-                  <q-item-section avatar>
-                    <q-icon name="horizontal_rule" style="display: none" />
-                  </q-item-section>
+                  <q-chip
+                    color="orange"
+                    size="0.5rem"
+                    v-if="mobile.summer == 'True'"
+                  ></q-chip>
+                  <q-chip
+                    color="teal-1"
+                    size="0.5rem"
+                    v-if="mobile.summer == 'False'"
+                  ></q-chip>
+                  <q-chip
+                    color="blue"
+                    size="0.5rem"
+                    v-if="mobile.winter == 'True'"
+                  ></q-chip>
+                  <q-chip
+                    color="teal-1"
+                    size="0.5rem"
+                    v-if="mobile.winter == 'False'"
+                  ></q-chip>
                   <q-item-section>
-                    {{ mobile }}
+                    {{ mobile.name }}
                   </q-item-section>
                 </q-item>
               </q-list>
@@ -84,11 +101,28 @@
                   v-for="sessile in sessiles"
                   :key="sessile.message"
                 >
-                  <q-item-section avatar>
-                    <q-icon name="horizontal_rule" style="display: none" />
-                  </q-item-section>
+                  <q-chip
+                    color="orange"
+                    size="0.5rem"
+                    v-if="sessile.summer == 'True'"
+                  ></q-chip>
+                  <q-chip
+                    color="teal-1"
+                    size="0.5rem"
+                    v-if="sessile.summer == 'False'"
+                  ></q-chip>
+                  <q-chip
+                    color="blue"
+                    size="0.5rem"
+                    v-if="sessile.winter == 'True'"
+                  ></q-chip>
+                  <q-chip
+                    color="teal-1"
+                    size="0.5rem"
+                    v-if="sessile.winter == 'False'"
+                  ></q-chip>
                   <q-item-section>
-                    {{ sessile }}
+                    {{ sessile.name }}
                   </q-item-section>
                 </q-item>
               </q-list>
@@ -210,15 +244,45 @@ export default {
       .then(
         this.$axios.spread((...responses) => {
           // name
-          const SBbio = csv2json(responses[0].data);
-          SBbio.map(doc => {
-            let cacheMobileName = [];
-            cacheMobileName.push(doc.mobile); // store all records
-            for (let i of cacheMobileName) i && this.mobiles.push(i); // copy only non-empty values then push to the data array specified for display
-            let cacheSessileName = [];
-            cacheSessileName.push(doc.sessile);
-            for (let j of cacheSessileName) j && this.sessiles.push(j);
+          const recordName = csv2json(responses[0].data);
+
+          let mobileName = [],
+            mobileSum = [],
+            mobileWin = [];
+
+          recordName.forEach(i => {
+            mobileName.push(i.mobile);
+            mobileSum.push(i.mobile_sum);
+            mobileWin.push(i.mobile_win);
           });
+
+          let cacheMobileName = {};
+          cacheMobileName = mobileName.map((value, i) => ({
+            name: value,
+            summer: mobileSum[i],
+            winter: mobileWin[i]
+          }));
+
+          this.mobiles = cacheMobileName;
+
+          let sessileName = [],
+            sessileSum = [],
+            sessileWin = [];
+
+          recordName.forEach(i => {
+            sessileName.push(i.sessile);
+            sessileSum.push(i.sessile_sum);
+            sessileWin.push(i.sessile_win);
+          });
+
+          let cacheSessileName = {};
+          cacheSessileName = sessileName.map((value, i) => ({
+            name: value,
+            summer: sessileSum[i],
+            winter: sessileWin[i]
+          }));
+
+          this.sessiles = cacheSessileName;
 
           // pie
           const pieChart = csv2json(responses[1].data);
