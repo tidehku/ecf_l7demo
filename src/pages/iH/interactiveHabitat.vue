@@ -31,12 +31,12 @@
         <LTileLayer />
 
         <l-geo-json :geojson="regions" :options="geoJSONOptions"> </l-geo-json>
-
+        <!-- bug fix for marker name routing -->
         <l-marker
           v-for="item in regionMarker"
           :key="item.properties.name"
           :lat-lng="item.geometry.coordinates"
-          @click="iconOnclick"
+          @click="$router.push(`interactiveHabitat/${item.properties.name}`)"
         >
           <l-icon>
             <div class="text-h4 text-bold text-white">
@@ -120,22 +120,8 @@ export default {
         toggleDisplay: true,
         minimize: true
       },
-
-      regionMarker: regionMarker,
-      regionMarkerOptions: {
-        onEachFeature: (feature, layer) => {
-          layer.bindTooltip("<div>" + feature.properties.name + "</div>", {
-            permanent: true,
-            className: "my-label",
-            direction: "center",
-            interactive: true
-          });
-        }
-      }
+      regionMarker: regionMarker
     };
-  },
-  methods: {
-    iconOnclick: () => {}
   },
 
   mounted() {

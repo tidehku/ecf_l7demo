@@ -48,7 +48,11 @@
             Tai O
           </div>
 
-          <q-img src="~/assets/SiteImage/Tai O_20winter.png" height="25vh" basic />
+          <q-img
+            src="~/assets/SiteImage/Tai O_20winter.png"
+            height="25vh"
+            basic
+          />
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -421,6 +425,7 @@ export default {
           };
         },
         onEachFeature: (feature, layer) => {
+          // bug in safari, popup wont show up, may be fixed in future leaflet
           layer.bindPopup(feature.properties.Site, {
             permanent: true,
             sticky: true,
