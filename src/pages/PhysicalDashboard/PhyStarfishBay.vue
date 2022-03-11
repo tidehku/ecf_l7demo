@@ -131,16 +131,16 @@ export default {
     let bar =
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vTndCzwP6dsadAksOQXXoJCgPCYlxahjEFZzFKGLqi3xK20Jq9m79f_QyAz5w9jR9Ft8U1GYD3fYicy/pub?gid=971498666&single=true&output=csv";
 
-    //let temp21sum =
-    //  "https://docs.google.com/spreadsheets/d/e/2PACX-1vTndCzwP6dsadAksOQXXoJCgPCYlxahjEFZzFKGLqi3xK20Jq9m79f_QyAz5w9jR9Ft8U1GYD3fYicy/pub?gid=18187038&single=true&output=csv";
+    let temp21sum =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTndCzwP6dsadAksOQXXoJCgPCYlxahjEFZzFKGLqi3xK20Jq9m79f_QyAz5w9jR9Ft8U1GYD3fYicy/pub?gid=18187038&single=true&output=csv";
 
-    //let bar21sum =
-    //  "https://docs.google.com/spreadsheets/d/e/2PACX-1vTndCzwP6dsadAksOQXXoJCgPCYlxahjEFZzFKGLqi3xK20Jq9m79f_QyAz5w9jR9Ft8U1GYD3fYicy/pub?gid=515578060&single=true&output=csv";
+    let bar21sum =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTndCzwP6dsadAksOQXXoJCgPCYlxahjEFZzFKGLqi3xK20Jq9m79f_QyAz5w9jR9Ft8U1GYD3fYicy/pub?gid=515578060&single=true&output=csv";
 
     const requestTemp = this.$axios.get(temp);
     const requestBar = this.$axios.get(bar);
-    const requestTemp21sum = this.$axios.get(temp);
-    const requestBar21sum = this.$axios.get(bar);
+    const requestTemp21sum = this.$axios.get(temp21sum);
+    const requestBar21sum = this.$axios.get(bar21sum);
 
     this.$axios
       .all([requestTemp, requestBar, requestTemp21sum, requestBar21sum])
@@ -154,17 +154,17 @@ export default {
           let cacheLMRange = [];
 
           tempData.map(doc => {
-            cacheHHMean.push([parseInt(doc.time_20w), parseFloat(doc.HHMean_20w)]);
+            cacheHHMean.push([parseInt(doc.time), parseFloat(doc.HHMean)]);
             cacheHHRange.push([
-              parseInt(doc.time_20w),
-              parseFloat(doc.HHMin_20w),
-              parseFloat(doc.HHMax_20w)
+              parseInt(doc.time),
+              parseFloat(doc.HHMin),
+              parseFloat(doc.HHMax)
             ]);
-            cacheLMMean.push([parseInt(doc.time_20w), parseFloat(doc.LMMean_20w)]);
+            cacheLMMean.push([parseInt(doc.time), parseFloat(doc.LMMean)]);
             cacheLMRange.push([
-              parseInt(doc.time_20w),
-              parseFloat(doc.LMMin_20w),
-              parseFloat(doc.LMMax_20w)
+              parseInt(doc.time),
+              parseFloat(doc.LMMin),
+              parseFloat(doc.LMMax)
             ]);
           });
           this.Temperature1.series[0].data = cacheHHMean;
@@ -195,17 +195,17 @@ export default {
           let cacheLMRange1 = [];
 
           tempData21sum.map(doc => {
-            cacheHHMean1.push([parseInt(doc.time_21s), parseFloat(doc.HHMean_21s)]);
+            cacheHHMean1.push([parseInt(doc.time), parseFloat(doc.HHMean)]);
             cacheHHRange1.push([
-              parseInt(doc.time_21s),
-              parseFloat(doc.HHMin_21s),
-              parseFloat(doc.HHMax_21s)
+              parseInt(doc.time),
+              parseFloat(doc.HHMin),
+              parseFloat(doc.HHMax)
             ]);
-            cacheLMMean1.push([parseInt(doc.time_21s), parseFloat(doc.LMMean_21s)]);
+            cacheLMMean1.push([parseInt(doc.time), parseFloat(doc.LMMean)]);
             cacheLMRange1.push([
-              parseInt(doc.time_21s),
-              parseFloat(doc.LMMin_21s),
-              parseFloat(doc.LMMax_21s)
+              parseInt(doc.time),
+              parseFloat(doc.LMMin),
+              parseFloat(doc.LMMax)
             ]);
           });
           this.Temperature2.series[0].data = cacheHHMean1;
@@ -218,13 +218,13 @@ export default {
 
           let cacheChla1 = [];
           barData1.map(doc => {
-            cacheChla1.push([[doc.commonx_21s].toString(), parseFloat([doc.chla_21s])]);
+            cacheChla1.push([[doc.commonx].toString(), parseFloat([doc.chla])]);
           });
           this.Chla2.series[0].data = cacheChla1;
 
           let cacheOM1 = [];
           barData1.map(doc => {
-            cacheOM1.push([[doc.commonx_21s].toString(), parseFloat([doc.om_21s])]);
+            cacheOM1.push([[doc.commonx].toString(), parseFloat([doc.om])]);
           });
           this.OM2.series[0].data = cacheOM1;
         })
