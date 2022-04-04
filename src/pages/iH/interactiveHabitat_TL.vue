@@ -250,7 +250,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyMaShiChau"
                     icon="thermostat"
                   ></q-btn>
                 </div>
@@ -310,7 +310,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyTsengTau"
                     icon="thermostat"
                   ></q-btn>
                 </div>
