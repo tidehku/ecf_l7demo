@@ -64,6 +64,18 @@ const routes = [
         component: () => import("pages/biologicalDashboard/bioStarfishBay.vue")
       },
       {
+        path: "phyMaShiChau",
+        component: () => import("pages/physicalDashboard/phyMaShiChau.vue")
+      },
+      // {
+      //   path: "bioMaShiChau",
+      //   component: () => import("pages/physicalDashboard/bioMaShiChau.vue")
+      // },
+      {
+        path: "phyTsengTau",
+        component: () => import("pages/physicalDashboard/phyTsengTau.vue")
+      },
+      {
         path: "phyTaiO",
         component: () => import("pages/physicalDashboard/phyTaiO.vue")
       },
