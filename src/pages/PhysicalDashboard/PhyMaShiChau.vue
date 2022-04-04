@@ -110,7 +110,6 @@ Vue.use(HighchartsVue);
 import { tempData } from "../siteData/temperature";
 import { omData } from "../siteData/om";
 import { chlaData } from "../siteData/chla";
-// import { firebaseStore } from "boot/firebase";
 import csv2json from "csvjson-csv2json";
 
 export default {
@@ -118,10 +117,10 @@ export default {
     return {
       Temperature1: tempData.SBTemperature1,
       Temperature2: tempData.SBTemperature2,
-      Chla1: chlaData.SBChla1,
-      OM1: omData.TLSBOm1,
-      Chla2: chlaData.SBChla2,
-      OM2: omData.TLSBOm2
+      Chla1: chlaData.TLMSCChla1,
+      OM1: omData.TLMSCOm1,
+      Chla2: chlaData.TLMSCChla2,
+      OM2: omData.TLMSCOm2
     };
   },
   mounted() {
@@ -229,31 +228,6 @@ export default {
           this.OM2.series[0].data = cacheOM1;
         })
       );
-    // firebaseStore
-    //   .collection("starfishBay")
-    //   .doc("2020winter")
-    //   .collection("phy")
-    //   .doc("temp")
-    //   .get()
-    //   .then(doc => {
-    //     const dataArr = Object.entries(doc.data()); // leng 2: HH & LM
-
-    //     const HHMean = dataArr[0][1].average; // obj
-    //     const HHMeanArr = Object.values(HHMean); // array
-    //     let cacheHHMean = [];
-    //     for (var i = 0; i < HHMeanArr.length; i++) {
-    //       cacheHHMean.push([i, HHMeanArr[i]]);
-    //     }
-    //     this.Temperature1.series[0].data = cacheHHMean;
-
-    //     const HHMaxArr = Object.values(dataArr[0][1].max);
-    //     const HHMinArr = Object.values(dataArr[0][1].min);
-    //     let cacheHHRange = [];
-    //     for (var j = 0; j < HHMaxArr.length; j++) {
-    //       cacheHHRange.push([j, HHMaxArr[j], HHMinArr[j]]);
-    //     }
-    //     this.Temperature1.series[1].data = cacheHHRange;
-    //   });
   }
 };
 </script>
@@ -262,8 +236,6 @@ export default {
 .page
   background-color: $grey-6
   padding: 4px
-  // height: 90vh
-  // overflow: hidden
 .q-card
   padding: 2px
   margin: 4px
