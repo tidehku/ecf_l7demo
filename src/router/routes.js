@@ -75,6 +75,13 @@ const routes = [
         path: "phyTsengTau",
         component: () => import("pages/physicalDashboard/phyTsengTau.vue")
       },
+
+      // bioTsengTau
+
+      {
+        path: "phyLaiChiChong",
+        component: () => import("pages/physicalDashboard/phyLaiChiChong.vue")
+      },
       {
         path: "phyTaiO",
         component: () => import("pages/physicalDashboard/phyTaiO.vue")

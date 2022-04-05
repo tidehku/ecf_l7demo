@@ -370,7 +370,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyLaiChiChong"
                     icon="thermostat"
                   ></q-btn>
                 </div>
