@@ -2,7 +2,7 @@
   <q-page class="justify-center">
     <q-bar elevated class="bg-blue-9 text-white">
       <div class="text-bold row justify-center">
-        Physical dashboard of Tai O, Northwestern region
+        Physical dashboard of Siu Lam, Northwestern region
       </div>
       <q-space />
       <q-btn
@@ -115,20 +115,20 @@ import csv2json from "csvjson-csv2json";
 export default {
   data() {
     return {
-      Temperature1: tempData.TOTemperature1,
-      Chla1: chlaData.NWTOChla1,
-      OM1: omData.NWTOOm1,
-      Temperature2: tempData.TOTemperature2,
-      Chla2: chlaData.NWTOChla2,
-      OM2: omData.NWTOOm2
+      Temperature1: tempData.SBTemperature1,
+      Temperature2: tempData.SBTemperature2,
+      Chla1: chlaData.NWSLChla1,
+      OM1: omData.NWSLOm1,
+      Chla2: chlaData.NWSLChla2,
+      OM2: omData.NWSLOm2
     };
   },
   mounted() {
     let temp =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRkh-Lgatq0ONTIpwlszuiceb4ZRm6L9AnX2iNGmZa8kWiZol9fzl6mu5QxWUS82W_ujATa6kk9m0GR/pub?gid=0&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vQzBL5KIVMVQ_dRvjF7mBQaBXZKEyF5HgGawfsrUx8t6x1FjAfc4Ilj2wJs46Gh2Hgj2wl0IV1E7phE/pub?gid=0&single=true&output=csv";
 
     let bar =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRkh-Lgatq0ONTIpwlszuiceb4ZRm6L9AnX2iNGmZa8kWiZol9fzl6mu5QxWUS82W_ujATa6kk9m0GR/pub?gid=1768649235&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vQzBL5KIVMVQ_dRvjF7mBQaBXZKEyF5HgGawfsrUx8t6x1FjAfc4Ilj2wJs46Gh2Hgj2wl0IV1E7phE/pub?gid=1343364949&single=true&output=csv";
 
     const requestTemp = this.$axios.get(temp);
     const requestBar = this.$axios.get(bar);

@@ -2,7 +2,7 @@
   <q-page class="justify-center">
     <q-bar elevated class="bg-blue-9 text-white">
       <div class="text-bold row justify-center">
-        Physical dashboard of Tai O, Northwestern region
+        Physical dashboard of Luk Keng, Northwestern region
       </div>
       <q-space />
       <q-btn
@@ -115,20 +115,20 @@ import csv2json from "csvjson-csv2json";
 export default {
   data() {
     return {
-      Temperature1: tempData.TOTemperature1,
-      Chla1: chlaData.NWTOChla1,
-      OM1: omData.NWTOOm1,
-      Temperature2: tempData.TOTemperature2,
-      Chla2: chlaData.NWTOChla2,
-      OM2: omData.NWTOOm2
+      Temperature1: tempData.SBTemperature1,
+      Temperature2: tempData.SBTemperature2,
+      Chla1: chlaData.NWLKChla1,
+      OM1: omData.NWLKOm1,
+      Chla2: chlaData.NWLKChla2,
+      OM2: omData.NWLKOm2
     };
   },
   mounted() {
     let temp =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRkh-Lgatq0ONTIpwlszuiceb4ZRm6L9AnX2iNGmZa8kWiZol9fzl6mu5QxWUS82W_ujATa6kk9m0GR/pub?gid=0&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTuQI2cLUB453mTZX9c4adC7Z2AFDKRQ8I_amF1lJSpukjLkXWeQMfy060CuDhvCuKM1MxOVoZ1E1t0/pub?gid=0&single=true&output=csv";
 
     let bar =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRkh-Lgatq0ONTIpwlszuiceb4ZRm6L9AnX2iNGmZa8kWiZol9fzl6mu5QxWUS82W_ujATa6kk9m0GR/pub?gid=1768649235&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTuQI2cLUB453mTZX9c4adC7Z2AFDKRQ8I_amF1lJSpukjLkXWeQMfy060CuDhvCuKM1MxOVoZ1E1t0/pub?gid=501427027&single=true&output=csv";
 
     const requestTemp = this.$axios.get(temp);
     const requestBar = this.$axios.get(bar);

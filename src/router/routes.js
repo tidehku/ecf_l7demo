@@ -56,8 +56,26 @@ const routes = [
         component: () => import("pages/iH/interactiveHabitat_NE.vue")
       },
       {
-        path: "phyStarfishBay",
-        component: () => import("pages/physicalDashboard/phyStarfishBay.vue")
+        path: "phyTaiO",
+        component: () => import("pages/physicalDashboard/phyTaiO.vue")
+      },
+      {
+        path: "bioTaiO",
+        component: () => import("pages/biologicalDashboard/bioTaiO.vue")
+      },
+      {
+        path: "phySiuLam",
+        component: () => import("pages/physicalDashboard/phySiuLam.vue")
+      },
+      // bioSiuLam
+      {
+        path: "phyLukKeng",
+        component: () => import("pages/physicalDashboard/phyLukKeng.vue")
+      },
+
+      {
+        path: "phyLungKwuTan",
+        component: () => import("pages/physicalDashboard/phyLungKwuTan.vue")
       },
       {
         path: "bioStarfishBay",
@@ -99,16 +117,9 @@ const routes = [
       {
         path: "phyTaiTam",
         component: () => import("pages/physicalDashboard/phyTaiTam.vue")
-      },
-      //bioTaiTam
-      {
-        path: "phyTaiO",
-        component: () => import("pages/physicalDashboard/phyTaiO.vue")
-      },
-      {
-        path: "bioTaiO",
-        component: () => import("pages/biologicalDashboard/bioTaiO.vue")
       }
+      //bioTaiTam
+      
     ]
   },
 

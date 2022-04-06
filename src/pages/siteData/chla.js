@@ -1,5 +1,5 @@
 export const chlaData = {
-  TOChla1: {
+  NWTOChla1: {
     chart: {
       type: "column",
       height: "60%"
@@ -19,7 +19,8 @@ export const chlaData = {
     yAxis: {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
-      }
+      },
+      max: 130
     },
     legend: {
       enabled: false
@@ -43,7 +44,7 @@ export const chlaData = {
     ]
   },
   // check the max values in yAxis
-  TOChla2: {
+  NWTOChla2: {
     chart: {
       type: "column",
       height: "60%"
@@ -64,7 +65,271 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 150
+      max: 130
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "chlorophyll a",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: true,
+        data: []
+      }
+    ]
+  },
+  NWSLChla1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (m + C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "Mean chlorophyll a concentration (µg/cm2)"
+      },
+      max: 35
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "chlorophyll a",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: true,
+        data: []
+      }
+    ]
+  },
+  NWSLChla2: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (m + C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "Mean chlorophyll a concentration (µg/cm2)"
+      },
+      max: 35
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "chlorophyll a",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: true,
+        data: []
+      }
+    ]
+  },
+  NWLKChla1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (m + C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "Mean chlorophyll a concentration (µg/cm2)"
+      },
+      max: 86
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "chlorophyll a",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: true,
+        data: []
+      }
+    ]
+  },
+  NWLKChla2: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (m + C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "Mean chlorophyll a concentration (µg/cm2)"
+      },
+      max: 86
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "chlorophyll a",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: true,
+        data: []
+      }
+    ]
+  },
+  NWLKTChla1: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (m + C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "Mean chlorophyll a concentration (µg/cm2)"
+      },
+      max: 65
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
+      }
+    },
+    series: [
+      {
+        name: "chlorophyll a",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: true,
+        data: []
+      }
+    ]
+  },
+  NWLKTChla2: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (m + C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "Mean chlorophyll a concentration (µg/cm2)"
+      },
+      max: 65
     },
     legend: {
       enabled: false

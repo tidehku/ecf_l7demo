@@ -472,6 +472,7 @@ export const omData = {
       }
     ]
   },
+  
   NWSLOm1: {
     chart: {
       type: "column",
@@ -492,7 +493,52 @@ export const omData = {
     yAxis: {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
+      },
+      max: 10
+    },
+    legend: {
+      enabled: false
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          enabled: true,
+          format: "{point.y}"
+        }
       }
+    },
+    series: [
+      {
+        name: "organic matter",
+        colorByPoint: true,
+        colors: ["#4287f5", "#c20c0c", "#e3ba19", "#5ebf74", "#d190bb"],
+        showInLegend: false,
+        data: []
+      }
+    ]
+  },
+  NWSLOm2: {
+    chart: {
+      type: "column",
+      height: "60%"
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "category",
+      title: {
+        text: "Tidal height (m + C.D.)"
+      }
+    },
+    yAxis: {
+      title: {
+        text: "Mean organic matter concentration  (mg/cm2)"
+      },
+      max: 10 
     },
     legend: {
       enabled: false
@@ -535,7 +581,8 @@ export const omData = {
     yAxis: {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
-      }
+      },
+      max: 16
     },
     legend: {
       enabled: false
@@ -558,7 +605,7 @@ export const omData = {
       }
     ]
   },
-  SOSOOm1: {
+  NWLKOm2: {
     chart: {
       type: "column",
       height: "60%"
@@ -578,7 +625,8 @@ export const omData = {
     yAxis: {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
-      }
+      },
+      max: 16
     },
     legend: {
       enabled: false
@@ -601,7 +649,7 @@ export const omData = {
       }
     ]
   },
-  SOWFOm1: {
+  NWLKTOm1: {
     chart: {
       type: "column",
       height: "60%"
@@ -621,7 +669,8 @@ export const omData = {
     yAxis: {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
-      }
+      },
+      max: 9
     },
     legend: {
       enabled: false
@@ -644,7 +693,7 @@ export const omData = {
       }
     ]
   },
-  SOMBOm1: {
+  NWLKTOm2: {
     chart: {
       type: "column",
       height: "60%"
@@ -664,7 +713,8 @@ export const omData = {
     yAxis: {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
-      }
+      },
+      max: 9
     },
     legend: {
       enabled: false
@@ -1034,7 +1084,7 @@ export const omData = {
       }
     ]
   },
-    SOSOOm2: {
+  SOSOOm2: {
     chart: {
       type: "column",
       height: "60%"
