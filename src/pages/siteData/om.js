@@ -1362,7 +1362,8 @@ export const omData = {
     yAxis: {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
-      }
+      },
+      max: 8
     },
     legend: {
       enabled: false
@@ -1405,7 +1406,8 @@ export const omData = {
     yAxis: {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
-      }
+      },
+      max: 8
     },
     legend: {
       enabled: false
