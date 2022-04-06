@@ -77,11 +77,30 @@ const routes = [
       },
 
       // bioTsengTau
-
       {
         path: "phyLaiChiChong",
         component: () => import("pages/physicalDashboard/phyLaiChiChong.vue")
+      },      
+      {
+        path: "phyShekO",
+        component: () => import("pages/physicalDashboard/phyShekO.vue")
       },
+      //bioShekO
+      {
+        path: "phyWahFu",
+        component: () => import("pages/physicalDashboard/phyWahFu.vue")
+      },
+      //bioWahFu
+      {
+        path: "phyMiddleBay",
+        component: () => import("pages/physicalDashboard/phyMiddleBay.vue")
+      },
+      //bioMiddleBay
+      {
+        path: "phyTaiTam",
+        component: () => import("pages/physicalDashboard/phyTaiTam.vue")
+      },
+      //bioTaiTam
       {
         path: "phyTaiO",
         component: () => import("pages/physicalDashboard/phyTaiO.vue")
