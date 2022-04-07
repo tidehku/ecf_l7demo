@@ -72,11 +72,29 @@ const routes = [
         path: "phyLukKeng",
         component: () => import("pages/physicalDashboard/phyLukKeng.vue")
       },
-
       {
         path: "phyLungKwuTan",
         component: () => import("pages/physicalDashboard/phyLungKwuTan.vue")
       },
+
+
+      {
+        path: "phyTaiLongWan",
+        component: () => import("pages/physicalDashboard/phyTaiLongWan.vue")
+      },
+      {
+        path: "phyShuiTseng",
+        component: () => import("pages/physicalDashboard/phyShuiTseng.vue")
+      },
+      {
+        path: "phyPengChau",
+        component: () => import("pages/physicalDashboard/phyPengChau.vue")
+      },
+      {
+        path: "phyPuiO",
+        component: () => import("pages/physicalDashboard/phyPuiO.vue")
+      },
+
       {
         path: "bioStarfishBay",
         component: () => import("pages/biologicalDashboard/bioStarfishBay.vue")
@@ -117,9 +135,32 @@ const routes = [
       {
         path: "phyTaiTam",
         component: () => import("pages/physicalDashboard/phyTaiTam.vue")
-      }
+      },
       //bioTaiTam
       
+
+      {
+        path: "phySaiWan",
+        component: () => import("pages/physicalDashboard/phySaiWan.vue")
+      },
+      // bioSaiWan
+      {
+        path: "phyPakLap",
+        component: () => import("pages/physicalDashboard/phyPakLap.vue")
+      },
+      //bioPakLap
+      {
+        path: "phyPakShuiWun",
+        component: () => import("pages/physicalDashboard/phyPakShuiWun.vue")
+      },
+      //bioPakShuiMun
+      {
+        path: "phyKauSaiChau",
+        component: () => import("pages/physicalDashboard/phyKauSaiChau.vue")
+      }
+      //bioKauSaiChau
+      
+
     ]
   },
 

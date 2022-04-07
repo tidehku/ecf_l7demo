@@ -183,7 +183,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyTaiLongWan"
                     icon="thermostat"
                   ></q-btn>
                 </div>
@@ -243,7 +243,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyShuiTseng"
                     icon="thermostat"
                   ></q-btn>
                 </div>
@@ -304,7 +304,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyPengChau"
                     icon="thermostat"
                   ></q-btn>
                 </div>
@@ -364,7 +364,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyPuiO"
                     icon="thermostat"
                   ></q-btn>
                 </div>
