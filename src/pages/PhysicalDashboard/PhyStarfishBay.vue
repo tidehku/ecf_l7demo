@@ -20,7 +20,7 @@
         dense
         icon="keyboard_backspace"
         class="bg-white text-blue-8"
-        to="/interactiveHabitat/SO"
+        to="/interactiveHabitat/TL"
       >
         <q-tooltip>
           Go back
@@ -125,7 +125,7 @@ export default {
   },
   mounted() {
     let temp =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRkp2ABVz8M6rqf6LTIruh0GXHeb-fAy8ydeA6JLa-n-6WZ1E0_EU-NEi6yk4HjRot-U3iQRtaZPjsf/pub?gid=0&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSgBfIvl3SLhng2hGcNBj9dYy_FjN1MQ7maaUr3dUzDtOKZmrW78_25VD4oy3YoTg60QMKP_tGnTFNh/pub?gid=0&single=true&output=csv";
 
     let bar =
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vSgBfIvl3SLhng2hGcNBj9dYy_FjN1MQ7maaUr3dUzDtOKZmrW78_25VD4oy3YoTg60QMKP_tGnTFNh/pub?gid=95500021&single=true&output=csv";

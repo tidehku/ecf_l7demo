@@ -55,6 +55,8 @@ const routes = [
         path: "/interactiveHabitat/NE",
         component: () => import("pages/iH/interactiveHabitat_NE.vue")
       },
+
+
       {
         path: "phyTaiO",
         component: () => import("pages/physicalDashboard/phyTaiO.vue")
@@ -94,7 +96,10 @@ const routes = [
         path: "phyPuiO",
         component: () => import("pages/physicalDashboard/phyPuiO.vue")
       },
-
+      {
+        path: "phyStarfishBay",
+        component: () => import("pages/physicalDashboard/phyStarfishBay.vue")
+      },
       {
         path: "bioStarfishBay",
         component: () => import("pages/biologicalDashboard/bioStarfishBay.vue")

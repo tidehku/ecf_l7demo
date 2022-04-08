@@ -194,7 +194,7 @@ export const omData = {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
       },
-      max: 16
+      max: 18
     },
     legend: {
       enabled: false
@@ -238,7 +238,7 @@ export const omData = {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
       },
-      max: 16
+      max: 18
     },
     legend: {
       enabled: false
@@ -1522,7 +1522,7 @@ export const omData = {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
       },
-      max: 40
+      max: 42
     },
     legend: {
       enabled: false
@@ -1566,7 +1566,7 @@ export const omData = {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
       },
-      max: 40
+      max: 42
     },
     legend: {
       enabled: false
@@ -1872,7 +1872,7 @@ export const omData = {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
       },
-      max: 14
+      max: 15
     },
     legend: {
       enabled: false
@@ -1916,7 +1916,7 @@ export const omData = {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
       },
-      max: 14
+      max: 15
     },
     legend: {
       enabled: false

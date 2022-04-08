@@ -120,7 +120,7 @@ export default {
       Chla1: chlaData.TLTTChla1,
       OM1: omData.TLTTOm1,
       Chla2: chlaData.TLTTChla2,
-      OM2: omData.TLTTOm1
+      OM2: omData.TLTTOm2
     };
   },
   mounted() {
@@ -147,19 +147,13 @@ export default {
           let cacheLMRange = [];
 
           tempData.map(doc => {
-            cacheHHMean.push([
-              parseInt(doc.time_20w),
-              parseFloat(doc.HHMean_20w)
-            ]);
+            cacheHHMean.push([parseInt(doc.time_20w), parseFloat(doc.HHMean_20w)]);
             cacheHHRange.push([
               parseInt(doc.time_20w),
               parseFloat(doc.HHMin_20w),
               parseFloat(doc.HHMax_20w)
             ]);
-            cacheLMMean.push([
-              parseInt(doc.time_20w),
-              parseFloat(doc.LMMean_20w)
-            ]);
+            cacheLMMean.push([parseInt(doc.time_20w), parseFloat(doc.LMMean_20w)]);
             cacheLMRange.push([
               parseInt(doc.time_20w),
               parseFloat(doc.LMMin_20w),
@@ -175,19 +169,13 @@ export default {
 
           let cacheChla = [];
           barData.map(doc => {
-            cacheChla.push([
-              [doc.commonx_20w].toString(),
-              parseFloat([doc.chla_20w])
-            ]);
+            cacheChla.push([[doc.commonx_20w].toString(), parseFloat([doc.chla_20w])]);
           });
           this.Chla1.series[0].data = cacheChla;
 
           let cacheOM = [];
           barData.map(doc => {
-            cacheOM.push([
-              [doc.commonx_20w].toString(),
-              parseFloat([doc.om_20w])
-            ]);
+            cacheOM.push([[doc.commonx_20w].toString(), parseFloat([doc.om_20w])]);
           });
           this.OM1.series[0].data = cacheOM;
 
@@ -200,19 +188,13 @@ export default {
           let cacheLMRange1 = [];
 
           tempData21sum.map(doc => {
-            cacheHHMean1.push([
-              parseInt(doc.time_21s),
-              parseFloat(doc.HHMean_21s)
-            ]);
+            cacheHHMean1.push([parseInt(doc.time_21s), parseFloat(doc.HHMean_21s)]);
             cacheHHRange1.push([
               parseInt(doc.time_21s),
               parseFloat(doc.HHMin_21s),
               parseFloat(doc.HHMax_21s)
             ]);
-            cacheLMMean1.push([
-              parseInt(doc.time_21s),
-              parseFloat(doc.LMMean_21s)
-            ]);
+            cacheLMMean1.push([parseInt(doc.time_21s), parseFloat(doc.LMMean_21s)]);
             cacheLMRange1.push([
               parseInt(doc.time_21s),
               parseFloat(doc.LMMin_21s),
@@ -229,19 +211,13 @@ export default {
 
           let cacheChla1 = [];
           barData1.map(doc => {
-            cacheChla1.push([
-              [doc.commonx_21s].toString(),
-              parseFloat([doc.chla_21s])
-            ]);
+            cacheChla1.push([[doc.commonx_21s].toString(), parseFloat([doc.chla_21s])]);
           });
           this.Chla2.series[0].data = cacheChla1;
 
           let cacheOM1 = [];
           barData1.map(doc => {
-            cacheOM1.push([
-              [doc.commonx_21s].toString(),
-              parseFloat([doc.om_21s])
-            ]);
+            cacheOM1.push([[doc.commonx_21s].toString(), parseFloat([doc.om_21s])]);
           });
           this.OM2.series[0].data = cacheOM1;
         })

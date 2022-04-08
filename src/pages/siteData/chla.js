@@ -20,7 +20,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 130
+      max: 128
     },
     legend: {
       enabled: false
@@ -65,7 +65,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 130
+      max: 128
     },
     legend: {
       enabled: false
@@ -109,7 +109,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 35
+      max: 32
     },
     legend: {
       enabled: false
@@ -153,7 +153,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 35
+      max: 32
     },
     legend: {
       enabled: false
@@ -285,7 +285,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 65
+      max: 62
     },
     legend: {
       enabled: false
@@ -329,7 +329,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 65
+      max: 62
     },
     legend: {
       enabled: false
@@ -1084,7 +1084,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 25
+      max: 30
     },
     legend: {
       enabled: false
@@ -1128,7 +1128,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 25
+      max: 30
     },
     legend: {
       enabled: false
@@ -1172,7 +1172,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 35
+      max: 34
     },
     legend: {
       enabled: false
@@ -1216,7 +1216,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 35
+      max: 34
     },
     legend: {
       enabled: false
@@ -1348,7 +1348,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 40
+      max: 38
     },
     legend: {
       enabled: false
@@ -1392,7 +1392,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 40
+      max: 38
     },
     legend: {
       enabled: false
@@ -1526,7 +1526,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 40
+      max: 42
     },
     legend: {
       enabled: false
@@ -1570,7 +1570,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 40
+      max: 42
     },
     legend: {
       enabled: false
@@ -1880,7 +1880,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 30
+      max: 32
     },
     legend: {
       enabled: false
@@ -1924,7 +1924,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 30
+      max: 32
     },
     legend: {
       enabled: false
@@ -1968,7 +1968,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 35
+      max: 34
     },
     legend: {
       enabled: false
@@ -2012,7 +2012,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 35
+      max: 34
     },
     legend: {
       enabled: false
