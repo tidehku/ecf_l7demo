@@ -157,9 +157,30 @@ const routes = [
       {
         path: "phyKauSaiChau",
         component: () => import("pages/physicalDashboard/phyKauSaiChau.vue")
-      }
+      },
       //bioKauSaiChau
       
+
+      {
+        path: "phyDoubleIsland",
+        component: () => import("pages/physicalDashboard/phyDoubleIsland.vue")
+      },
+      // bioSaiWan
+      {
+        path: "phyKatO",
+        component: () => import("pages/physicalDashboard/phyKatO.vue")
+      },
+      //bioPakLap
+      {
+        path: "phyYungShueAu",
+        component: () => import("pages/physicalDashboard/phyYungShueAu.vue")
+      },
+      //bioPakShuiMun
+      {
+        path: "phyHungShekMun",
+        component: () => import("pages/physicalDashboard/phyHungShekMun.vue")
+      }
+      //bioHungShekMun
 
     ]
   },

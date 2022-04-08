@@ -137,7 +137,7 @@
               no-caps
               color="indigo-6"
               label="Learn more"
-              @click="card1 = true"
+              @click="card4 = true"
             />
           </div>
         </q-card>
@@ -188,7 +188,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyDoubleIsland"
                     icon="thermostat"
                   ></q-btn>
                 </div>
@@ -248,7 +248,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyKatO"
                     icon="thermostat"
                   ></q-btn>
                 </div>
@@ -308,7 +308,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyYungShueAu"
                     icon="thermostat"
                   ></q-btn>
                 </div>
@@ -368,7 +368,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyHungShekMun"
                     icon="thermostat"
                   ></q-btn>
                 </div>
