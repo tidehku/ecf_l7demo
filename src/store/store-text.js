@@ -12,7 +12,7 @@ const state = {
   The coastline of Hong Kong is long and complex. Whilst wave-exposed shores in Hong Kong are generally located along southern and eastern coasts due to long wave fetches opening towards the South China Sea, western coasts and shores within the Tolo Harbour are relatively sheltered as they are protected by adjacent islands or headlands. In fact, the complex coastline and presence of numerous islands in Hong Kong waters (> 260 islands of various sizes, Williams et al. 2019) create spatially variable wave fetches and, when coupled with the highly heterogeneous geomorphology in coastal rock types (granites, sandstone, siltstone etc) and the east-west salinity/nutrient gradients created by the Pearl River discharge, a diverse set of physical environments are found along Hong Kong rocky shores.
   `,
   HKRockyShore2: `
-  In terms of seasonal changes, Hong Kong experiences a seasonal tropical climate with primarily a hot & wet (~ May to Oct) and a cool & dry season (~ Dec to Mar) throughout the year. During the hot & wet season, daily maximum air temperature can reach up to 37 °C (HKO, 2021), and rock temperature on the shore can reach even higher, attaining 62 °C at the maximum. Mass mortality of rocky shore organisms is thus often observed during this time of the year, particularly for sessile species (e.g. mussels) which cannot move around to escape the heat stress. On the other hand, however, rainfall in Hong Kong is also more frequent and intense in this season, with over 80% of annual rainfalls occurring during May to Sep (HKO, 2021) which, when combined with the hot temperature, can impose severe physiological stress to rocky shore organisms (Firth & Williams 2009).
+  In terms of seasonal changes, Hong Kong experiences a seasonal tropical climate with primarily a hot & wet (~ May to Oct) and a cool & dry season (~ Dec to Mar) throughout the year. During the hot & wet season, daily maximum air temperature can reach up to 37 °C (HKO, 2021), and rock temperature on the shore can reach even higher, attaining 64.5 °C at the maximum. Mass mortality of rocky shore organisms is thus often observed during this time of the year, particularly for sessile species (e.g. mussels) which cannot move around to escape the heat stress. On the other hand, however, rainfall in Hong Kong is also more frequent and intense in this season, with over 80% of annual rainfalls occurring during May to Sep (HKO, 2021) which, when combined with the hot temperature, can impose severe physiological stress to rocky shore organisms (Firth & Williams 2009).
   `,
   HKRockyShore3: `
   In the cool & dry season, although thermal stress is ameliorated, the stronger north-eastern monsoon (compared to the hot & wet season) results in stronger waves and thus higher dislodgement risk experienced by rocky shore organisms. In this time of the year, macroalgae such as <i>Phycocalidia</i> spp. and <i>Ulva</i> spp. thrive on shores probably due to the low environmental temperature (with rock surface attaining a minimum of 4 °C), and the supply of spores from temperate seas brought by the Taiwan Current (originates from the East China Sea). The cool, less-saline Taiwan Current is, however, moderated by the south China branching of the Kuroshio Current, which carries warmer tropical waters and keeps Hong Kong waters relatively warm and saline even during the cool & dry season. In the hot & wet season, due to the shift in monsoon direction, the South China Sea Warm Current (also known as the Hainan Current) prevails, bringing us warm waters and larvae of tropical species. Overall, the dynamic seasonal changes and complex spatial variations in shore physical environments allow for a multitude of species to settle and live on Hong Kong rocky shores, which harbour a rich set of species assemblages that you can get to explore using this GIS!
@@ -23,10 +23,10 @@ const state = {
             target="_blank"
           >
             <strong>Tropical IntertiDal Ecology (TIDE) Group</strong>
-          </a> led by Prof. Gray A. Williams at the Swire Institute of Marine Science, the University of Hong Kong. This GIS was developed by Yvonne Li and Yifei Gu, computer specialists in the TIDE group. The team would also like to thank other members of the group for their tremendous help both on the shore and in the laboratory, and Simon Tse for his kind assistance (and lots of video recordings!) during our fieldwork.  The cool cartoons in the <a href="./#/interactiveHabitat">MAP</a> page were drawn by Miss Kam Yan Chit, a final year UG student in our group during 2020 to 2021. Numerous volunteers helped us in the field, recording species datasheets, looking for cool species and/or getting splashed by the waves … Thanks also go to Rachel, Cecily, Hong and Alan for their assistance in ordering equipment and local transportation.
+          </a> led by Prof. Gray A. Williams at the Swire Institute of Marine Science, the University of Hong Kong. This GIS was developed by Yvonne Li and Yifei Gu, computer specialists in the TIDE group. The team would also like to thank other members of the group for their tremendous help both on the shore and in the laboratory, and Simon Tse for his kind assistance (and lots of video recordings!) during our fieldwork.  The cool cartoons in the <a href="./#/interactiveHabitat">MAP</a> page were drawn by Miss Kam Yan Chit, a final year UG student in our group during 2020 to 2021. Numerous volunteers/interns/RAs helped us in the field, recording species datasheets, looking for cool species and/or getting splashed by the waves … Thanks also go to Rachel, Cecily, Hong and Alan for their assistance in ordering equipment and local transportation.
 <br />
 <br />
-          We are grateful to Ir. Dr. Ryan Wong and Mr. Kuen (Department of Civil Engineering, HKU) for their help in lending the GNSS RTK system to us for accurately locating transect positions and heights.  We are also indebted to numerous taxonomists: Dr. Benny Chan (Academia Sinica, Taiwan), Mr. Kingsley Wong (National Taiwan University, Taiwan), Dr. Suzanne Williams (Natural History Museum, UK), Dr. Yuri Kantor (Russian Academy of Science, Russia) and Dr. David Reid who kindly shared their expertises and identified specimens for us.
+          We are grateful to Ir. Dr. Ryan Wong and Mr. Kuen (Department of Civil Engineering, HKU) for their help in lending the GNSS RTK system to us for accurately locating transect positions and heights.  We would also like to thank Dr. Billy Hau and Ryan Leung for their assistance in applying for the Sha Tau Kok permits. Khan Cheung, Ashley Hemraj and Shelby McIlroy for their help in DNA barcoding. We are also indebted to numerous taxonomists: Dr. Benny Chan (Academia Sinica, Taiwan), Mr. Kingsley Wong (National Taiwan University, Taiwan), Ms. Christine Cheng, Mr. Martin Cheng, Dr. Suzanne Williams (Natural History Museum, UK), Dr. Yuri Kantor (Russian Academy of Science, Russia) and Dr. David Reid who kindly shared their expertises and identified specimens for us.
           <br />
           <br />
           Finally, we sincerely thank the Environment Conservation Fund, HKSAR, which financed the project (grant number 105/2019).          
@@ -43,7 +43,7 @@ const state = {
   target="_blank"
   >
   <strong>CPCe</strong>
-  </a> on computers.  A ten-minute rapid active search was also conducted during each survey to sample fast-moving crustaceans (scored using presence/absence) that could be missed during the quadrat survey.  Species richness (<i>S</i>), Shannon’s diversity (<i>H’</i>) and Pielou’s <i>J</i> evenness indices were subsequently computed.  The survey was repeated in both the hot & wet and cool & dry seasons over a period of two years, resulting in a total of four temporal snapshots of assemblage structures along Hong Kong rocky coastline.  These species compositions (both mobile and sessile species) and ecological indices are available for viewing in the biological dashboards of different sites.
+  </a> on computers.  A ten-minute rapid active search was also conducted during each survey to sample fast-moving crustaceans (scored using presence/absence) that could be missed during the quadrat survey.  Species richness (<i>S</i> ), Shannon’s diversity (<i>H’</i> ) and Pielou’s <i>J</i> evenness indices were subsequently computed.  The survey was repeated in both the hot & wet and cool & dry seasons over a period of two years, resulting in a total of four temporal snapshots of assemblage structures along Hong Kong rocky coastline.  These species compositions (both mobile and sessile species) and ecological indices are available for viewing in the biological dashboards of different sites.
   `,
   quantifying: `
   In terms of the physical environment and food availability on the shore, temperature loggers were deployed at the HH and LM tidal heights (n = 3 at each height) to log rock temperatures every h (± 0.5 °C, <a
@@ -64,6 +64,8 @@ const state = {
  
 
     <p style="text-indent:-2em;">CEDD (2006) Hong Kong geological survey - geological map of Hong Kong. The Government of the Hong Kong SAR</p>
+
+    <p style="text-indent:-2em;">Chao A, Gotelli NJ, Hsieh TC, Sander EL, MA KH, Colwell RK, Ellison AM (2014) Rarefaction and extrapolation with Hill numbers: a framework for sampling and estimation in species diversity studies. Ecol Monogr 84:45-67</p>
     
     <p style="text-indent:-2em;">Firth LB, Williams GA (2009) The influence of multiple environmental stressors on the limpet <i>Cellana toreuma</i> during the summer monsoon season in Hong Kong. J Exp Mar Biol Ecol 375:70-75</p>
 
@@ -91,26 +93,26 @@ const state = {
     },
     {
       name: "Sessile species",
-      description: `Species with limited or no ability to move around, such as algae, bivalves (oysters and mussels) and some sea anemones.  In some cases, an entity in sessile species might not correspond to a single species but a mix of microbial species constituting an unique functional entity, e.g. high shore biofilm, that is hard to be further separated into species level in the field/from the photographes.`
+      description: `Species with limited or no ability to move around, such as algae, bivalves (oysters and mussels) and some sea anemones.  In some cases, an entity in sessile species might not correspond to a single species but a mix of microbial species constituting an unique functional entity, e.g. western water biofilm assemblage, that is hard to be further separated into species level in the field/from the photographes.`
     },
     {
       name: "Abundance and incidence",
       description: `Abundance refers to the count of mobile species while incidence refers to the number of occupancy by sessile species out of the total number of sampling units.  In the site biological dashboards, abundance and incidence are expressed in terms of the total count and number of occupancy out of the total number of quadrats surveyed (each quadrat = 25 cm × 25 cm).`
     },
     {
-      name: "Shannon’s diversity index (<i>H’</i>) ",
-      description: `A diversity index based on Shannon & Weaver (1949), calculated using the formula <i>H’</i> = - Σ pi log pi (where i ranges from 1 to the total number of species found, and pi is the proportion of the abundance of species i in the sampling area).  A higher value of <i>H’</i> indicates a more diverse assemblage at a sampling area (either by increasing the number of species or having species with more similar numbers of individuals).  In our project, <i>H’</i> is calculated based on identified mobile species where counts are available.`
+      name: "Shannon’s diversity index (<i>H’</i> ) ",
+      description: `A diversity index based on Shannon & Weaver (1949), calculated using the formula <i>H’</i> = - Σ pi log pi (where i ranges from 1 to the total number of species found, and pi is the proportion of the abundance of species i in the sampling area).  A higher value of <i>H’</i> indicates a more diverse assemblage at a sampling area (either by increasing the number of species or having species with more similar numbers of individuals).  In our project, we employed Chao et al. (2014)’s formulation to calculate Shannon’s diversity based on incidence data, such that mobile (count) and sessile (percentage cover) species data can be integrated to represent the assemblage structure.`
     },
     {
-      name: "Species richness (<i>S</>)",
+      name: "Species richness (<i>S</i> )",
       description: `The total number of either sessile or mobile species found in a sampling area, where counts or presence/absence data are available (either based on region/site in this GIS).`
     },
     {
-      name: "Pielou’s evenness index (<i>J</i>)",
-      description: `An index used to indicate the evenness of species distribution in an assemblage, calculated by dividing <i>H’</i> with the maximum possible value of <i>H’</i>.  A higher <i>J</i> indicates a more even assemblage at a sampling area (species are having more similar numbers of individuals, instead of having a heavily dominant species).  In our project, <i>J</i> is calculated based on identified mobile species where counts are available.`
+      name: "Pielou’s evenness index (<i>J</i> )",
+      description: `An index used to indicate the evenness of species distribution in an assemblage, calculated by dividing <i>H’</i> with the maximum possible value of <i>H’</i>.  A higher <i>J</i> indicates a more even assemblage at a sampling area (species are having more similar numbers of individuals, instead of having a heavily dominant species).  In our project, <i>J</i> is calculated as log(<i>H’</i>)/log(<i>S</i> ), where <i>H’</i> is Shannon’s diversity calculated based on Chao et al. (2014).`
     },
     {
-      name: "Chlorophyll <i>a</i> (Chl <i>a</i>) concentration",
+      name: "Chlorophyll <i>a</i> (Chl <i>a</i> ) concentration",
       description: `A proxy for algal/biofilm biomass on the rock surface, measured using spectrophotometry (extraction using cold methanol) and expressed in µg/cm².  A higher value indicates higher standing stock of algae/cyanobacteria on the rock surface, which could be resulted from a higher productivity in the surrounding pelagic environment, or reduced consumer pressure (less abundance of grazers on the shore, see Williams et al. 2000).`
     },
     {
@@ -121,11 +123,11 @@ const state = {
   phyGlossary: [
     {
       name: "Total wave fetch",
-      description: `The total distance of seas along 16 equiangular directions from a coastal location to surrounding land masses (up to 200 km).  Longer the wave fetch generally implies stronger wave action impacting the shore (see Burrows et al. 2008).`
+      description: `The total distance of sea along 16 equiangular directions averaged among the site and its proximate locations (< 500 m) until the nearest surrounding land masses (or up to 200 km). to surrounding land masses (up to 200 km).  Longer the wave fetch generally implies stronger wave action impacting the shore (see Burrows et al. 2008).`
     },
     {
       name: "Max. wave force",
-      description: `The maximum force (measured in N) estimated using a custom-built wavelogger with an accelerometer.  The logger was deployed at the low-mid level on the shore for 48 h, recording acceleration every 10 s.  The readings were, therefore, subjected to the prevailing wind direction and speed during the recording period.`
+      description: `The maximum force (measured in N) estimated using a custom-built wavelogger with an accelerometer.  The logger was deployed at the low-mid level on the shore for 48 h, recording acceleration every 10 s.  The readings were, therefore, subjected to the prevailing wind speed, direction, as well as the wave height and direction during the recording period.`
     },
     {
       name: "Rock temperature",
@@ -137,7 +139,7 @@ const state = {
     },
     {
       name: "Shore slope",
-      description: `The inclination of the shore measured in °, ranging from 0° (a completely horizontal shore) to 90° (a completely vertical shore).`
+      description: `The inclination of the shore measured in °, ranging from 0° (a completely horizontal shore) to 90° (a completely vertical shore), to > 90° (an overhang).`
     },
     {
       name: "Rock type",
@@ -149,7 +151,7 @@ const state = {
     },
     {
       name: "Wave exposure icons",
-      description: `In the regional landing page where you can select information of the four study sites within that region, there is a “wave exposure icon” next to each site.  As we deliberately selected four sites with different wave exposures within a region, the icon indicates the relative wave exposure of that site: most exposed, semi-exposed and least exposed within the region.`
+      description: `In the regional landing page where you can select information of the four study sites within that region, there is a “wave exposure icon” next to each site. The icon indicates the relative wave exposure of that site among the 24 study sites: most exposed, semi-exposed and least exposed (three categories).`
     }
   ],
   regionNW: `
@@ -168,7 +170,7 @@ const state = {
   The Southwestern (SW) region is located along the Pearl River outflow, but is partially blocked against the direct outlet by the Lantau Island. Although the region is less urbanized (with the Lantau South Country Park occupying 56 km²), southern Lantau is a popular spot for recreational activities such as clam digging, camping and coaststeering (e.g. Pui O, Tai Long Wan), thus experiencing anthropogenic impacts particularly during the summer holiday. Vessel traffic is also not uncommon (particularly off the shore at Peng Chau), with ships travelling back and forth through Ma Wan Channel at the northeastern tip of Lantau.
         `,
   regionTL: `
-  The Tolo Harbour (TL) region has a weak water circulation due to being located in a sheltered channel with a narrow exit to the open sea. Historically the high concentration of discharged sewage trapped within the Tolo Harbour had resulted in frequent eutrophication events, which have been alleviated in recent years by better water treatment and sewage management (though red tides and hypoxia are still not uncommon particularly during Mar - Aug). Coastal rocks are quite soft in the region (e.g. Tseng Tau, Ma Shi Chau), as geologically sandstone/siltstone is common in this region.
+  The Tolo Harbour (TL) region has a weak water circulation due to being located in a sheltered channel with a narrow exit to the open sea. Historically the high concentration of discharged sewage trapped within the Tolo Harbour had resulted in frequent eutrophication events, which have been alleviated in recent years by better water treatment and sewage management (though red tides and hypoxia are still not uncommon particularly during Mar - Aug). Coastal rocks are quite soft in the region (e.g. Tseng Tau, Ma Shi Chau), as geologically sandstone/siltstone is common.
         `
 };
 
