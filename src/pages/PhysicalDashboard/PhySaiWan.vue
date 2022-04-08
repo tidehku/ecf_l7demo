@@ -2,7 +2,7 @@
   <q-page class="justify-center">
     <q-bar elevated class="bg-blue-9 text-white">
       <div class="text-bold row justify-center">
-        Physical dashboard of Tseng Tau, Tolo Harbour region
+        Physical dashboard of Sai Wan, Eastern region
       </div>
       <q-space />
       <q-btn
@@ -20,7 +20,7 @@
         dense
         icon="keyboard_backspace"
         class="bg-white text-blue-8"
-        to="/interactiveHabitat/TL"
+        to="/interactiveHabitat/EA"
       >
         <q-tooltip>
           Go back
@@ -117,18 +117,18 @@ export default {
     return {
       Temperature1: tempData.SBTemperature1,
       Temperature2: tempData.SBTemperature2,
-      Chla1: chlaData.TLTTChla1,
-      OM1: omData.TLTTOm1,
-      Chla2: chlaData.TLTTChla2,
-      OM2: omData.TLTTOm2
+      Chla1: chlaData.EASWChla1,
+      OM1: omData.EASWOm1,
+      Chla2: chlaData.EASWChla2,
+      OM2: omData.EASWOm2
     };
   },
   mounted() {
     let temp =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vT4o-2Kb2Tas0wzDjM6BJU-xSZZlcKtaP3o3jFQBPr-Jbc8CPiUjDB7de0TgYIC8_ZhwS_gheZn8Jvu/pub?gid=0&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTa_LVFchSkg7hbWl1I2lpn1lh-PYS3j0qYlxC_rRnfKq9vjzXnT5tU0ZlXsvV6_bSJAEK8a5l0f-ru/pub?gid=0&single=true&output=csv";
 
     let bar =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vT4o-2Kb2Tas0wzDjM6BJU-xSZZlcKtaP3o3jFQBPr-Jbc8CPiUjDB7de0TgYIC8_ZhwS_gheZn8Jvu/pub?gid=569933146&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTa_LVFchSkg7hbWl1I2lpn1lh-PYS3j0qYlxC_rRnfKq9vjzXnT5tU0ZlXsvV6_bSJAEK8a5l0f-ru/pub?gid=966399218&single=true&output=csv";
 
     const requestTemp = this.$axios.get(temp);
     const requestBar = this.$axios.get(bar);

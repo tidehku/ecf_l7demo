@@ -55,6 +55,47 @@ const routes = [
         path: "/interactiveHabitat/NE",
         component: () => import("pages/iH/interactiveHabitat_NE.vue")
       },
+
+
+      {
+        path: "phyTaiO",
+        component: () => import("pages/physicalDashboard/phyTaiO.vue")
+      },
+      {
+        path: "bioTaiO",
+        component: () => import("pages/biologicalDashboard/bioTaiO.vue")
+      },
+      {
+        path: "phySiuLam",
+        component: () => import("pages/physicalDashboard/phySiuLam.vue")
+      },
+      // bioSiuLam
+      {
+        path: "phyLukKeng",
+        component: () => import("pages/physicalDashboard/phyLukKeng.vue")
+      },
+      {
+        path: "phyLungKwuTan",
+        component: () => import("pages/physicalDashboard/phyLungKwuTan.vue")
+      },
+
+
+      {
+        path: "phyTaiLongWan",
+        component: () => import("pages/physicalDashboard/phyTaiLongWan.vue")
+      },
+      {
+        path: "phyShuiTseng",
+        component: () => import("pages/physicalDashboard/phyShuiTseng.vue")
+      },
+      {
+        path: "phyPengChau",
+        component: () => import("pages/physicalDashboard/phyPengChau.vue")
+      },
+      {
+        path: "phyPuiO",
+        component: () => import("pages/physicalDashboard/phyPuiO.vue")
+      },
       {
         path: "phyStarfishBay",
         component: () => import("pages/physicalDashboard/phyStarfishBay.vue")
@@ -77,19 +118,75 @@ const routes = [
       },
 
       // bioTsengTau
-
       {
         path: "phyLaiChiChong",
         component: () => import("pages/physicalDashboard/phyLaiChiChong.vue")
-      },
+      },      
       {
-        path: "phyTaiO",
-        component: () => import("pages/physicalDashboard/phyTaiO.vue")
+        path: "phyShekO",
+        component: () => import("pages/physicalDashboard/phyShekO.vue")
       },
+      //bioShekO
       {
-        path: "bioTaiO",
-        component: () => import("pages/biologicalDashboard/bioTaiO.vue")
+        path: "phyWahFu",
+        component: () => import("pages/physicalDashboard/phyWahFu.vue")
+      },
+      //bioWahFu
+      {
+        path: "phyMiddleBay",
+        component: () => import("pages/physicalDashboard/phyMiddleBay.vue")
+      },
+      //bioMiddleBay
+      {
+        path: "phyTaiTam",
+        component: () => import("pages/physicalDashboard/phyTaiTam.vue")
+      },
+      //bioTaiTam
+      
+
+      {
+        path: "phySaiWan",
+        component: () => import("pages/physicalDashboard/phySaiWan.vue")
+      },
+      // bioSaiWan
+      {
+        path: "phyPakLap",
+        component: () => import("pages/physicalDashboard/phyPakLap.vue")
+      },
+      //bioPakLap
+      {
+        path: "phyPakShuiWun",
+        component: () => import("pages/physicalDashboard/phyPakShuiWun.vue")
+      },
+      //bioPakShuiMun
+      {
+        path: "phyKauSaiChau",
+        component: () => import("pages/physicalDashboard/phyKauSaiChau.vue")
+      },
+      //bioKauSaiChau
+      
+
+      {
+        path: "phyDoubleIsland",
+        component: () => import("pages/physicalDashboard/phyDoubleIsland.vue")
+      },
+      // bioSaiWan
+      {
+        path: "phyKatO",
+        component: () => import("pages/physicalDashboard/phyKatO.vue")
+      },
+      //bioPakLap
+      {
+        path: "phyYungShueAu",
+        component: () => import("pages/physicalDashboard/phyYungShueAu.vue")
+      },
+      //bioPakShuiMun
+      {
+        path: "phyHungShekMun",
+        component: () => import("pages/physicalDashboard/phyHungShekMun.vue")
       }
+      //bioHungShekMun
+
     ]
   },
 

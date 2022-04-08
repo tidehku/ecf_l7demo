@@ -10,7 +10,7 @@
         icon="eco"
         color="white"
         text-color="blue-8"
-        to="/interactiveHabitat/bioStarfishBay"
+        to="/interactiveHabitat/*"
       >
         <q-tooltip>
           Switch to Biological dashboard
@@ -110,7 +110,6 @@ Vue.use(HighchartsVue);
 import { tempData } from "../siteData/temperature";
 import { omData } from "../siteData/om";
 import { chlaData } from "../siteData/chla";
-// import { firebaseStore } from "boot/firebase";
 import csv2json from "csvjson-csv2json";
 
 export default {
@@ -118,24 +117,18 @@ export default {
     return {
       Temperature1: tempData.SBTemperature1,
       Temperature2: tempData.SBTemperature2,
-      Chla1: chlaData.SBChla1,
+      Chla1: chlaData.TLSBChla1,
       OM1: omData.TLSBOm1,
-      Chla2: chlaData.SBChla2,
+      Chla2: chlaData.TLSBChla2,
       OM2: omData.TLSBOm2
     };
   },
   mounted() {
     let temp =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTndCzwP6dsadAksOQXXoJCgPCYlxahjEFZzFKGLqi3xK20Jq9m79f_QyAz5w9jR9Ft8U1GYD3fYicy/pub?gid=0&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSgBfIvl3SLhng2hGcNBj9dYy_FjN1MQ7maaUr3dUzDtOKZmrW78_25VD4oy3YoTg60QMKP_tGnTFNh/pub?gid=0&single=true&output=csv";
 
     let bar =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTndCzwP6dsadAksOQXXoJCgPCYlxahjEFZzFKGLqi3xK20Jq9m79f_QyAz5w9jR9Ft8U1GYD3fYicy/pub?gid=971498666&single=true&output=csv";
-
-    let temp21sum =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTndCzwP6dsadAksOQXXoJCgPCYlxahjEFZzFKGLqi3xK20Jq9m79f_QyAz5w9jR9Ft8U1GYD3fYicy/pub?gid=18187038&single=true&output=csv";
-
-    let bar21sum =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTndCzwP6dsadAksOQXXoJCgPCYlxahjEFZzFKGLqi3xK20Jq9m79f_QyAz5w9jR9Ft8U1GYD3fYicy/pub?gid=515578060&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSgBfIvl3SLhng2hGcNBj9dYy_FjN1MQ7maaUr3dUzDtOKZmrW78_25VD4oy3YoTg60QMKP_tGnTFNh/pub?gid=95500021&single=true&output=csv";
 
     const requestTemp = this.$axios.get(temp);
     const requestBar = this.$axios.get(bar);
@@ -176,13 +169,13 @@ export default {
 
           let cacheChla = [];
           barData.map(doc => {
-            cacheChla.push([[doc.commonx].toString(), parseFloat([doc.chla])]);
+            cacheChla.push([[doc.commonx_20w].toString(), parseFloat([doc.chla_20w])]);
           });
           this.Chla1.series[0].data = cacheChla;
 
           let cacheOM = [];
           barData.map(doc => {
-            cacheOM.push([[doc.commonx].toString(), parseFloat([doc.om])]);
+            cacheOM.push([[doc.commonx_20w].toString(), parseFloat([doc.om_20w])]);
           });
           this.OM1.series[0].data = cacheOM;
 
@@ -229,31 +222,6 @@ export default {
           this.OM2.series[0].data = cacheOM1;
         })
       );
-    // firebaseStore
-    //   .collection("starfishBay")
-    //   .doc("2020winter")
-    //   .collection("phy")
-    //   .doc("temp")
-    //   .get()
-    //   .then(doc => {
-    //     const dataArr = Object.entries(doc.data()); // leng 2: HH & LM
-
-    //     const HHMean = dataArr[0][1].average; // obj
-    //     const HHMeanArr = Object.values(HHMean); // array
-    //     let cacheHHMean = [];
-    //     for (var i = 0; i < HHMeanArr.length; i++) {
-    //       cacheHHMean.push([i, HHMeanArr[i]]);
-    //     }
-    //     this.Temperature1.series[0].data = cacheHHMean;
-
-    //     const HHMaxArr = Object.values(dataArr[0][1].max);
-    //     const HHMinArr = Object.values(dataArr[0][1].min);
-    //     let cacheHHRange = [];
-    //     for (var j = 0; j < HHMaxArr.length; j++) {
-    //       cacheHHRange.push([j, HHMaxArr[j], HHMinArr[j]]);
-    //     }
-    //     this.Temperature1.series[1].data = cacheHHRange;
-    //   });
   }
 };
 </script>
@@ -262,8 +230,6 @@ export default {
 .page
   background-color: $grey-6
   padding: 4px
-  // height: 90vh
-  // overflow: hidden
 .q-card
   padding: 2px
   margin: 4px

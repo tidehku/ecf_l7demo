@@ -1,6 +1,6 @@
 <template>
   <q-page class="q-pa-xs row justify-center no-wrap">
-    <q-card class="q-ma-sm" style="width: 33%; height:81vh" bordered>
+    <q-card class="q-ma-sm" style="width: 33%; height:85vh" bordered>
       <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
         Southwestern region
         <q-space />
@@ -44,7 +44,7 @@
     <div style="width: 66.3%">
       <landingSW />
       <div class="row no-wrap justify-around">
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Tai Long Wan
           </div>
@@ -69,7 +69,7 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Shui Tseng
           </div>
@@ -94,7 +94,7 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Peng Chau
           </div>
@@ -115,7 +115,7 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Pui O
           </div>
@@ -183,7 +183,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyTaiLongWan"
                     icon="thermostat"
                   ></q-btn>
                 </div>
@@ -243,7 +243,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyShuiTseng"
                     icon="thermostat"
                   ></q-btn>
                 </div>
@@ -304,7 +304,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyPengChau"
                     icon="thermostat"
                   ></q-btn>
                 </div>
@@ -364,7 +364,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/physicalStarfishBay"
+                    to="/interactiveHabitat/phyPuiO"
                     icon="thermostat"
                   ></q-btn>
                 </div>
