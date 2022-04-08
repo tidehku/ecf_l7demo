@@ -425,6 +425,7 @@ export default {
           };
         },
         onEachFeature: (feature, layer) => {
+          // bug in safari, popup wont show up, may be fixed in future leaflet
           layer.bindPopup(feature.properties.Site, {
             permanent: true,
             sticky: true,
