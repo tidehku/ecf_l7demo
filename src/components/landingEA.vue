@@ -1,5 +1,5 @@
 <template>
-  <q-card class="bg-indigo-1" style="height: 40vh">
+  <q-card class="bg-indigo-1" style="height: 49vh">
     <div
       class="q-px-md bg-indigo-6 text-center text-h5 text-bold text-white rounded-borders"
     >
@@ -16,18 +16,23 @@
         ]"
       />
 
-      <q-tab-panels v-model="panel" animated class="bg-indigo-1">
+      <q-tab-panels
+        v-model="panel"
+        animated
+        class="bg-indigo-1"
+        style="height: 38vh"
+      >
         <q-tab-panel name="winter2020">
-          <div class="row no-wrap justify-evenly">
-            <q-card class="q-pa-sm bg-white" style="width: 20%">
+          <div class="row no-wrap">
+            <q-card square class="bg-white" style="width: 20%">
               <q-card-section>
-                <div class="landingSubtitle" style="font-size: 1.2rem">
+                <div class="landingSubtitle" style="font-size: 1.1rem">
                   Max. rock temperature
                 </div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">High shore: </span>
+                <span style="font-size: 1rem">High shore: </span>
                 <div class="row no-wrap">
                   <div class="landingValue">
                     {{ landingEA.winter2020.highShoreTemp }}
@@ -43,7 +48,7 @@
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Mid shore: </span>
+                <span style="font-size: 1rem">Mid shore: </span>
                 <div class="row no-wrap">
                   <div class="landingValue">
                     {{ landingEA.winter2020.lowShoreTemp }}
@@ -59,15 +64,15 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 20%">
+            <q-card square class="bg-white" style="width: 25%">
               <q-card-section>
-                <div class="landingSubtitle" style="font-size: 1.2rem">
+                <div class="landingSubtitle" style="font-size: 1.1rem">
                   Nutrient levels
                 </div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Chlorophyll <i>a</i>: </span>
+                <span style="font-size: 1rem">Chlorophyll <i>a</i>: </span>
                 <div class="row no-wrap">
                   <div class="landingValue">
                     {{ landingEA.winter2020.chla }}
@@ -83,7 +88,7 @@
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Organic matter: </span>
+                <span style="font-size: 1rem">Organic matter: </span>
                 <div class="row no-wrap">
                   <div class="landingValue">{{ landingEA.winter2020.om }}</div>
                   &nbsp;
@@ -97,15 +102,15 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 20%">
+            <q-card square class="bg-white" style="width: 19%">
               <q-card-section>
-                <div class="landingSubtitle" style="font-size: 1.2rem">
+                <div class="landingSubtitle" style="font-size: 1.1rem">
                   Total wave fetch
                 </div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Max: </span>
+                <span style="font-size: 1rem">Max: </span>
                 &nbsp;
                 <div class="row no-wrap">
                   <div class="landingValue q-pl-md">
@@ -117,7 +122,7 @@
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Min: </span>
+                <span style="font-size: 1rem">Min: </span>
                 &nbsp;
                 <div class="row no-wrap">
                   <div class="landingValue q-pl-md">
@@ -132,16 +137,16 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 20%">
+            <q-card square class="bg-white" style="width: 18%">
               <q-card-section>
-                <div class="landingSubtitle" style="font-size: 1.2rem">
+                <div class="landingSubtitle" style="font-size: 1.1rem">
                   Mobile species richness
                 </div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
                 <div class="row no-wrap">
-                  <span style="font-size: 1.2rem">Max: </span>
+                  <span style="font-size: 1rem">Max: </span>
                   &nbsp;
                   <div class="landingValue q-pl-md">
                     {{ landingEA.winter2020.mobileMax }}
@@ -151,7 +156,7 @@
 
               <q-card-section class="q-pt-none">
                 <div class="row no-wrap">
-                  <span style="font-size: 1.2rem">Min: </span>
+                  <span style="font-size: 1rem">Min: </span>
                   &nbsp;
                   <div class="landingValue q-pl-md">
                     {{ landingEA.winter2020.mobileMin }}
@@ -163,16 +168,16 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 20%">
+            <q-card square class="bg-white" style="width: 18%">
               <q-card-section>
-                <div class="landingSubtitle" style="font-size: 1.2rem">
+                <div class="landingSubtitle" style="font-size: 1.1rem">
                   Sessile species richness
                 </div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
                 <div class="row no-wrap">
-                  <span style="font-size: 1.2rem">Max: </span>
+                  <span style="font-size: 1rem">Max: </span>
                   &nbsp;
                   <div class="landingValue q-pl-md">
                     {{ landingEA.winter2020.sessileMax }}
@@ -182,7 +187,7 @@
 
               <q-card-section class="q-pt-none">
                 <div class="row no-wrap">
-                  <span style="font-size: 1.2rem">Min: </span>
+                  <span style="font-size: 1rem">Min: </span>
                   &nbsp;
                   <div class="landingValue q-pl-md">
                     {{ landingEA.winter2020.sessileMin }}
@@ -197,16 +202,16 @@
         </q-tab-panel>
 
         <q-tab-panel name="summer2021">
-          <div class="row no-wrap justify-evenly">
-            <q-card class="q-pa-sm bg-white" style="width: 20%"> 
+          <div class="row no-wrap">
+            <q-card square class="bg-white" style="width: 20%">
               <q-card-section>
-                <div class="landingSubtitle" style="font-size: 1.2rem">
+                <div class="landingSubtitle" style="font-size: 1.1rem">
                   Max. rock temperature
                 </div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">High shore: </span>
+                <span style="font-size: 1rem">High shore: </span>
                 <div class="row no-wrap">
                   <div class="landingValue">
                     {{ landingEA.summer2021.highShoreTemp }}
@@ -222,7 +227,7 @@
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Mid shore: </span>
+                <span style="font-size: 1rem">Mid shore: </span>
                 <div class="row no-wrap">
                   <div class="landingValue">
                     {{ landingEA.summer2021.lowShoreTemp }}
@@ -238,15 +243,15 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 20%">
+            <q-card square class="bg-white" style="width: 25%">
               <q-card-section>
-                <div class="landingSubtitle" style="font-size: 1.2rem">
+                <div class="landingSubtitle" style="font-size: 1.1rem">
                   Nutrient levels
                 </div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Chlorophyll <i>a</i>: </span>
+                <span style="font-size: 1rem">Chlorophyll <i>a</i>: </span>
                 <div class="row no-wrap">
                   <div class="landingValue">
                     {{ landingEA.summer2021.chla }}
@@ -262,7 +267,7 @@
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Organic matter: </span>
+                <span style="font-size: 1rem">Organic matter: </span>
                 <div class="row no-wrap">
                   <div class="landingValue">{{ landingEA.summer2021.om }}</div>
                   &nbsp;
@@ -276,15 +281,15 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 20%">
+            <q-card square class="bg-white" style="width: 19%">
               <q-card-section>
-                <div class="landingSubtitle" style="font-size: 1.2rem">
+                <div class="landingSubtitle" style="font-size: 1.1rem">
                   Total wave fetch
                 </div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Max: </span>
+                <span style="font-size: 1rem">Max: </span>
                 &nbsp;
                 <div class="row no-wrap">
                   <div class="landingValue q-pl-md">
@@ -296,7 +301,7 @@
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Min: </span>
+                <span style="font-size: 1rem">Min: </span>
                 &nbsp;
                 <div class="row no-wrap">
                   <div class="landingValue q-pl-md">
@@ -311,16 +316,16 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 20%">
+            <q-card square class="bg-white" style="width: 18%">
               <q-card-section>
-                <div class="landingSubtitle" style="font-size: 1.2rem">
+                <div class="landingSubtitle" style="font-size: 1.1rem">
                   Mobile species richness
                 </div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
                 <div class="row no-wrap">
-                  <span style="font-size: 1.2rem">Max: </span>
+                  <span style="font-size: 1rem">Max: </span>
                   &nbsp;
                   <div class="landingValue q-pl-md">
                     {{ landingEA.summer2021.mobileMax }}
@@ -330,7 +335,7 @@
 
               <q-card-section class="q-pt-none">
                 <div class="row no-wrap">
-                  <span style="font-size: 1.2rem">Min: </span>
+                  <span style="font-size: 1rem">Min: </span>
                   &nbsp;
                   <div class="landingValue q-pl-md">
                     {{ landingEA.summer2021.mobileMin }}
@@ -342,16 +347,16 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 20%">
+            <q-card square class="bg-white" style="width: 18%">
               <q-card-section>
-                <div class="landingSubtitle" style="font-size: 1.2rem">
+                <div class="landingSubtitle" style="font-size: 1.1rem">
                   Sessile species richness
                 </div>
               </q-card-section>
 
               <q-card-section class="q-pt-none">
                 <div class="row no-wrap">
-                  <span style="font-size: 1.2rem">Max: </span>
+                  <span style="font-size: 1rem">Max: </span>
                   &nbsp;
                   <div class="landingValue q-pl-md">
                     {{ landingEA.summer2021.sessileMax }}
@@ -361,7 +366,7 @@
 
               <q-card-section class="q-pt-none">
                 <div class="row no-wrap">
-                  <span style="font-size: 1.2rem">Min: </span>
+                  <span style="font-size: 1rem">Min: </span>
                   &nbsp;
                   <div class="landingValue q-pl-md">
                     {{ landingEA.summer2021.sessileMin }}
@@ -378,7 +383,6 @@
     </div>
   </q-card>
 </template>
-
 <script>
 import landingEA from "./landingEA";
 export default {

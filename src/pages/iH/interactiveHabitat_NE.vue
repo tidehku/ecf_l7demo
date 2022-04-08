@@ -1,6 +1,6 @@
 <template>
   <q-page class="q-pa-xs row justify-center no-wrap">
-    <q-card class="q-ma-sm" style="width: 33%; height:81vh" bordered>
+    <q-card class="q-ma-sm" style="width: 33%; height:85vh" bordered>
       <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
         Northeastern region
         <q-space />
@@ -15,7 +15,9 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-md" style="font-size: 1.1rem" align="justify">{{ regionNE }}</div>
+      <div class="q-pa-md" style="font-size: 1.1rem" align="justify">
+        {{ regionNE }}
+      </div>
 
       <l-map
         class="map"
@@ -42,7 +44,7 @@
     <div style="width: 66.3%">
       <landingNE />
       <div class="row no-wrap justify-around">
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Double Island
           </div>
@@ -68,7 +70,7 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Kat O
           </div>
@@ -91,7 +93,7 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Yung Shue Au
           </div>
@@ -116,7 +118,7 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Hung Shek Mun
           </div>

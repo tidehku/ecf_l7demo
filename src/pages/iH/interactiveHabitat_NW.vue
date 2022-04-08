@@ -48,7 +48,11 @@
             Tai O
           </div>
 
-          <q-img src="~/assets/SiteImage/Tai O_20winter.png" height="25vh" basic />
+          <q-img
+            src="~/assets/SiteImage/Tai O_20winter.png"
+            height="25vh"
+            basic
+          />
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"

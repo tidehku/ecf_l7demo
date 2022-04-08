@@ -23,7 +23,7 @@
         style="height: 38vh"
       >
         <q-tab-panel name="winter2020">
-          <div class="row no-wrap justify-evenly">
+          <div class="row no-wrap">
             <q-card square class="bg-white" style="width: 20%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.1rem">
@@ -64,7 +64,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 25%">
+            <q-card square class="bg-white" style="width: 25%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.1rem">
                   Nutrient levels
@@ -102,7 +102,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 19%">
+            <q-card square class="bg-white" style="width: 19%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.1rem">
                   Total wave fetch
@@ -122,7 +122,7 @@
               </q-card-section>
 
               <q-card-section class="q-pt-none">
-                <span style="font-size: 1.2rem">Min: </span>
+                <span style="font-size: 1rem">Min: </span>
                 &nbsp;
                 <div class="row no-wrap">
                   <div class="landingValue q-pl-md">
@@ -168,7 +168,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 18%">
+            <q-card square class="bg-white" style="width: 18%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.1rem">
                   Sessile species richness
@@ -316,7 +316,7 @@
               </q-card-section>
             </q-card>
 
-            <q-card class="q-pa-sm bg-white" style="width: 18%">
+            <q-card square class="bg-white" style="width: 18%">
               <q-card-section>
                 <div class="landingSubtitle" style="font-size: 1.1rem">
                   Mobile species richness
@@ -383,7 +383,6 @@
     </div>
   </q-card>
 </template>
-
 <script>
 import landingNW from "./landingNW";
 export default {

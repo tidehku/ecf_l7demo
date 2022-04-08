@@ -1,6 +1,6 @@
 <template>
   <q-page class="q-pa-xs row justify-center no-wrap">
-    <q-card class="q-ma-sm" style="width: 33%; height:81vh" bordered>
+    <q-card class="q-ma-sm" style="width: 33%; height:85vh" bordered>
       <q-toolbar class="bg-indigo-6 text-h5 text-bold text-white">
         Eastern region
         <q-space />
@@ -15,7 +15,9 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-md" style="font-size: 1.1rem" align="justify">{{ regionEA }}</div>
+      <div class="q-pa-md" style="font-size: 1.1rem" align="justify">
+        {{ regionEA }}
+      </div>
 
       <l-map
         class="map"
@@ -41,12 +43,13 @@
 
     <div style="width: 66.3%">
       <landingEA />
+
       <div class="row no-wrap justify-around">
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Sai Wan
           </div>
-          <q-img src="~/assets/SiteImage/Sai Wan.png" height="25vh" basic />
+          <q-img src="~/assets/SiteImage/Sai Wan.png" height="35vh" basic />
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -64,7 +67,7 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Pak Lap
           </div>
@@ -89,7 +92,7 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Pak Shui Wun
           </div>
@@ -114,7 +117,7 @@
             />
           </div>
         </q-card>
-        <q-card class="q-ma-md" style="width: 24%; height: 40vh">
+        <q-card class="q-ma-md" style="width: 24%; height: 35vh">
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Kau Sai Chau
           </div>

@@ -15,7 +15,9 @@
           </q-route-tab>
         </q-tabs>
       </q-toolbar>
-      <div class="q-pa-md" style="font-size: 1.1rem" align="justify">{{ regionTL }}</div>
+      <div class="q-pa-md" style="font-size: 1.1rem" align="justify">
+        {{ regionTL }}
+      </div>
 
       <l-map
         class="map"
