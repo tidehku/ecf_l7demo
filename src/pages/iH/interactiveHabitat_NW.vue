@@ -100,7 +100,7 @@
             Luk Keng
           </div>
 
-          <q-img src="~/assets/SiteImage/Luk Keng.png" height="25vh" basic />
+          <q-img src="~/assets/SiteImage/Luk Keng_20winter.png" height="25vh" basic />
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -124,7 +124,7 @@
           </div>
 
           <q-img
-            src="~/assets/SiteImage/Lung Kwu Tan.png"
+            src="~/assets/SiteImage/Lung Kwu Tan_20winter.png"
             height="25vh"
             basic
           />
@@ -286,7 +286,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Luk Keng.png"
+                src="~assets/SiteImage/Luk Keng_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -320,7 +320,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Luk Keng.png"
+                src="~assets/SiteImage/Luk Keng_21summer.png"
               />
             </q-card-section>
           </q-card>
@@ -346,7 +346,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Lung Kwu Tan.png"
+                src="~assets/SiteImage/Lung Kwu Tan_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -380,7 +380,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Lung Kwu Tan.png"
+                src="~assets/SiteImage/Lung Kwu Tan_21summer.png"
               />
             </q-card-section>
           </q-card>

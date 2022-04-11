@@ -77,7 +77,7 @@
             Ma Shi Chau
           </div>
           <q-img
-            src="~/assets/SiteImage/Ma Shi Chau.png"
+            src="~/assets/SiteImage/Ma Shi Chau_20winter.png"
             height="25vh"
             basic
           ></q-img>
@@ -125,7 +125,7 @@
             Lai Chi Chong
           </div>
           <q-img
-            src="~/assets/SiteImage/Lai Chi Chong.png"
+            src="~/assets/SiteImage/Lai Chi Chong_20winter.png"
             height="25vh"
             basic
           />
@@ -226,7 +226,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Ma Shi Chau.png"
+                src="~assets/SiteImage/Ma Shi Chau_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -260,7 +260,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Ma Shi Chau.png"
+                src="~assets/SiteImage/Ma Shi Chau_21summer.png"
               />
             </q-card-section>
           </q-card>
@@ -346,7 +346,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Lai Chi Chong.png"
+                src="~assets/SiteImage/Lai Chi Chong_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -380,7 +380,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Lai Chi Chong.png"
+                src="~assets/SiteImage/Lai Chi Chong_21summer.png"
               />
             </q-card-section>
           </q-card>

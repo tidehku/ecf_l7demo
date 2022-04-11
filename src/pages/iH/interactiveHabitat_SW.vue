@@ -49,7 +49,7 @@
             Tai Long Wan
           </div>
           <q-img
-            src="~/assets/SiteImage/Tai Long Wan.png"
+            src="~/assets/SiteImage/Tai Long Wan_20winter.png"
             height="25vh"
             basic
           />
@@ -74,7 +74,7 @@
             Shui Tseng
           </div>
           <q-img
-            src="~/assets/SiteImage/Shui Tseng.png"
+            src="~/assets/SiteImage/Shui Tseng_20winter.png"
             height="25vh"
             basic
           ></q-img>
@@ -119,7 +119,7 @@
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Pui O
           </div>
-          <q-img src="~/assets/SiteImage/Pui O.png" height="25vh" basic />
+          <q-img src="~/assets/SiteImage/Pui O_20winter.png" height="25vh" basic />
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -157,7 +157,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Tai Long Wan.png"
+                src="~assets/SiteImage/Tai Long Wan_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -191,7 +191,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Tai Long Wan.png"
+                src="~assets/SiteImage/Tai Long Wan_21summer.png"
               />
             </q-card-section>
           </q-card>
@@ -217,7 +217,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Shui Tseng.png"
+                src="~assets/SiteImage/Shui Tseng_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -251,7 +251,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Shui Tseng.png"
+                src="~assets/SiteImage/Shui Tseng_21summer.png"
               />
             </q-card-section>
           </q-card>
@@ -338,7 +338,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Pui O.png"
+                src="~assets/SiteImage/Pui O_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -372,7 +372,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Pui O.png"
+                src="~assets/SiteImage/Pui O_21summer.png"
               />
             </q-card-section>
           </q-card>

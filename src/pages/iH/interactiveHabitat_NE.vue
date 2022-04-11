@@ -75,7 +75,7 @@
             Kat O
           </div>
 
-          <q-img src="~/assets/SiteImage/Kat O.png" height="25vh" basic></q-img>
+          <q-img src="~/assets/SiteImage/Kat O_20winter.png" height="25vh" basic></q-img>
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -98,7 +98,7 @@
             Yung Shue Au
           </div>
           <q-img
-            src="~/assets/SiteImage/Yung Shue Au.png"
+            src="~/assets/SiteImage/Yung Shue Au_20winter.png"
             height="25vh"
             basic
           />
@@ -123,7 +123,7 @@
             Hung Shek Mun
           </div>
           <q-img
-            src="~/assets/SiteImage/Hung Shek Mun.png"
+            src="~/assets/SiteImage/Hung Shek Mun_20winter.png"
             height="25vh"
             basic
           />
@@ -224,7 +224,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Kat O.png"
+                src="~assets/SiteImage/Kat O_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -258,7 +258,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Kat O.png"
+                src="~assets/SiteImage/Kat O_21summer.png"
               />
             </q-card-section>
           </q-card>
@@ -284,7 +284,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Yung Shue Au.png"
+                src="~assets/SiteImage/Yung Shue Au_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -318,7 +318,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Yung Shue Au.png"
+                src="~assets/SiteImage/Yung Shue Au_21summer.png"
               />
             </q-card-section>
           </q-card>
@@ -344,7 +344,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Hung Shek Mun.png"
+                src="~assets/SiteImage/Hung Shek Mun_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -378,7 +378,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Hung Shek Mun.png"
+                src="~assets/SiteImage/Hung Shek Mun_21summer.png"
               />
             </q-card-section>
           </q-card>
