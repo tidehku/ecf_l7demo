@@ -194,7 +194,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Shek O.png"
+                src="~assets/SiteImage/Shek O_21summer.png"
               />
             </q-card-section>
           </q-card>
@@ -254,7 +254,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Wah Fu.png"
+                src="~assets/SiteImage/Wah Fu_21summer.png"
               />
             </q-card-section>
           </q-card>

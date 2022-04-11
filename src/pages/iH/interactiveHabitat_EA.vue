@@ -317,7 +317,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Pak Shui Wun.png"
+                src="~assets/SiteImage/Pak Shui Wun_21summer.png"
               />
             </q-card-section>
           </q-card>

@@ -320,7 +320,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Tseng Tau.png"
+                src="~assets/SiteImage/Tseng Tau_21summer.png"
               />
             </q-card-section>
           </q-card>

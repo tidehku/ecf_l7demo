@@ -312,7 +312,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Peng Chau.png"
+                src="~assets/SiteImage/Peng Chau_21summer.png"
               />
             </q-card-section>
           </q-card>
