@@ -30,7 +30,7 @@ export const tempData = {
           return this.value;
         }
       },
-      max: 60
+      max: 70
     },
     tooltip: {
       crosshairs: true,
@@ -122,7 +122,8 @@ export const tempData = {
           return this.value;
         }
       },
-      min: 0
+      min: 0,
+      max: 70
     },
     tooltip: {
       crosshairs: true,
