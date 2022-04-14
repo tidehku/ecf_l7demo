@@ -407,8 +407,8 @@ export default {
       card2: false,
       card3: false,
       card4: false,
-      zoom: 10.4,
-      center: L.latLng(22.3, 114.38),
+      zoom: 10.6,
+      center: L.latLng(22.4, 114.38),
       mapOptions: {
         zoomSnap: 0.2,
         zoomControl: false,
