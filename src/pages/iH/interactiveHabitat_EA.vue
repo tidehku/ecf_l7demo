@@ -49,7 +49,7 @@
           <div class="q-pa-sm bg-indigo-6 text-h5 text-bold text-white">
             Sai Wan
           </div>
-          <q-img src="~/assets/SiteImage/Sai Wan.png" height="35vh" basic />
+          <q-img src="~/assets/SiteImage/Sai Wan_20winter.png" height="35vh" basic />
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -72,7 +72,7 @@
             Pak Lap
           </div>
           <q-img
-            src="~/assets/SiteImage/Pak Lap.png"
+            src="~/assets/SiteImage/Pak Lap_20winter.png"
             height="25vh"
             basic
           ></q-img>
@@ -122,7 +122,7 @@
             Kau Sai Chau
           </div>
           <q-img
-            src="~/assets/SiteImage/Kau Sai Chau.png"
+            src="~/assets/SiteImage/Kau Sai Chau_20winter.png"
             height="25vh"
             basic
           />
@@ -163,7 +163,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Sai Wan.png"
+                src="~assets/SiteImage/Sai Wan_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -197,7 +197,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Sai Wan.png"
+                src="~assets/SiteImage/Sai Wan_21summer.png"
               />
             </q-card-section>
           </q-card>
@@ -223,7 +223,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Pak Lap.png"
+                src="~assets/SiteImage/Pak Lap_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -257,7 +257,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Pak Lap.png"
+                src="~assets/SiteImage/Pak Lap_21summer.png"
               />
             </q-card-section>
           </q-card>
@@ -317,7 +317,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Pak Shui Wun.png"
+                src="~assets/SiteImage/Pak Shui Wun_21summer.png"
               />
             </q-card-section>
           </q-card>
@@ -343,7 +343,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Kau Sai Chau.png"
+                src="~assets/SiteImage/Kau Sai Chau_21winter.png"
               />
               <div class="col-6 q-px-md">
                 <q-table
@@ -377,7 +377,7 @@
               <q-img
                 class="col-3"
                 height="flex"
-                src="~assets/SiteImage/Kau Sai Chau.png"
+                src="~assets/SiteImage/Kau Sai Chau_21summer.png"
               />
             </q-card-section>
           </q-card>
@@ -407,8 +407,8 @@ export default {
       card2: false,
       card3: false,
       card4: false,
-      zoom: 10.4,
-      center: L.latLng(22.3, 114.38),
+      zoom: 10.6,
+      center: L.latLng(22.4, 114.38),
       mapOptions: {
         zoomSnap: 0.2,
         zoomControl: false,

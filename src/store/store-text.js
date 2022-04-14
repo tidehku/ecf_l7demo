@@ -26,10 +26,10 @@ const state = {
           </a> led by Prof. Gray A. Williams at the Swire Institute of Marine Science, the University of Hong Kong. This GIS was developed by Yvonne Li and Yifei Gu, computer specialists in the TIDE group. The team would also like to thank other members of the group for their tremendous help both on the shore and in the laboratory, and Simon Tse for his kind assistance (and lots of video recordings!) during our fieldwork.  The cool cartoons in the <a href="./#/interactiveHabitat">MAP</a> page were drawn by Miss Kam Yan Chit, a final year UG student in our group during 2020 to 2021. Numerous volunteers/interns/RAs helped us in the field, recording species datasheets, looking for cool species and/or getting splashed by the waves … Thanks also go to Rachel, Cecily, Hong and Alan for their assistance in ordering equipment and local transportation.
 <br />
 <br />
-          We are grateful to Ir. Dr. Ryan Wong and Mr. Kuen (Department of Civil Engineering, HKU) for their help in lending the GNSS RTK system to us for accurately locating transect positions and heights.  We would also like to thank Dr. Billy Hau and Ryan Leung for their assistance in applying for the Sha Tau Kok permits. Khan Cheung, Ashley Hemraj and Shelby McIlroy for their help in DNA barcoding. We are also indebted to numerous taxonomists: Dr. Benny Chan (Academia Sinica, Taiwan), Mr. Kingsley Wong (National Taiwan University, Taiwan), Ms. Christine Cheng, Mr. Martin Cheng, Dr. Suzanne Williams (Natural History Museum, UK), Dr. Yuri Kantor (Russian Academy of Science, Russia) and Dr. David Reid who kindly shared their expertises and identified specimens for us.
+          We are grateful to Ir. Dr. Ryan Wong and Mr. Kuen (Department of Civil Engineering, HKU) for their help in lending the GNSS RTK system to us for accurately locating transect positions and heights.  We would also like to thank Dr. Billy Hau and Ryan Leung for their assistance in applying for the Sha Tau Kok permits; Khan Cheung, Ashley Hemraj and Shelby McIlroy for their help in DNA barcoding. We are also indebted to numerous taxonomists: Dr. Benny Chan (Academia Sinica, Taiwan), Mr. Kingsley Wong (National Taiwan University, Taiwan), Ms. Christine Cheng, Mr. Martin Cheng, Dr. Suzanne Williams (Natural History Museum, UK), Dr. Yuri Kantor (Russian Academy of Science, Russia) and Dr. David Reid who kindly shared their expertises and identified specimens for us.
           <br />
           <br />
-          Finally, we sincerely thank the Environment Conservation Fund, HKSAR, which financed the project (grant number 105/2019).          
+          Finally, we sincerely thank the Environment Conservation Fund, HKSAR, which financed the project (grant number 105/2019).
           `,
   stratification: `
   To achieve a representative sample of Hong Kong rocky shore biodiversity, the coastline of Hong Kong was stratified into six regions according to local hydrology and general shore directions: the northwestern region which is heavily influenced by the Pearl River discharge (NW); the southwestern (SW) and the southern region (SO), both regarded as the transition between the estuarine waters to the west and the oceanic waters to the east; the eastern region which is more oceanic and exposed (EA); the northeastern region which is close to the border of China and relatively undisturbed (NE) and the Tolo Harbour region which is a sheltered, enclosed bay in the New Territories (TL).
@@ -50,23 +50,19 @@ const state = {
     href="https://electricblue.eu/envloggers"
     target="_blank"
     >
-    <strong>Envlogger, ElectricBlue, Portugal</strong>
-    </a>) for a period of two years.  Rock chips were also taken during the surveys (n = 4 along each tidal height) to quantify Chlorophyll <i>a</i> (Chl <i>a</i>) and organic matter concentrations via spectrophotometry and loss-on-ignition techniques.  Wave force impacting the shore at each site was quantified using a custom-built wavelogger deployed at the LM tidal height, which logs static accelerations caused on a rotor blade by the incoming wave every 10 s (<a
-    href="https://www.onsetcomp.com/products/data-loggers/ua-004-64/"
+    <strong>Envlogger, ElectricBlue, Portugal</strong></a>) for a period of two years.  Rock chips were also taken during the surveys (n = 4 along each tidal height) to quantify Chlorophyll <i>a</i> (Chl <i>a</i>) and organic matter concentrations via spectrophotometry and loss-on-ignition techniques.  Wave force impacting the shore at each site was quantified using a custom-built wavelogger deployed at the LM tidal height, which logs static accelerations caused on a rotor blade by the incoming wave every 10 s (<a href="https://www.onsetcomp.com/products/data-loggers/ua-004-64/"
     target="_blank"
-    >
-    <strong>HOBO Pendant G logger, Onset, USA</strong>
-    </a>).  Shore aspect and slope were measured using compasses and clinometers, respectively.  These physical information are available for viewing in the physical dashboards of different sites.
+    ><strong>HOBO Pendant G logger, Onset, USA</strong></a>).  Shore aspect and slope were measured using compasses and clinometers, respectively.  These physical information are available for viewing in the physical dashboards of different sites.
   `,
   reference: `
-    
+
     <p style="text-indent:-2em;">Burrows MT, Harvey R, Robb L (2008) Wave exposure indices from digital coastlines and the prediction of rocky shore community structure. Mar Ecol Prog Ser 353:1-12</p>
- 
+
 
     <p style="text-indent:-2em;">CEDD (2006) Hong Kong geological survey - geological map of Hong Kong. The Government of the Hong Kong SAR</p>
 
     <p style="text-indent:-2em;">Chao A, Gotelli NJ, Hsieh TC, Sander EL, MA KH, Colwell RK, Ellison AM (2014) Rarefaction and extrapolation with Hill numbers: a framework for sampling and estimation in species diversity studies. Ecol Monogr 84:45-67</p>
-    
+
     <p style="text-indent:-2em;">Firth LB, Williams GA (2009) The influence of multiple environmental stressors on the limpet <i>Cellana toreuma</i> during the summer monsoon season in Hong Kong. J Exp Mar Biol Ecol 375:70-75</p>
 
     <p style="text-indent:-2em;">Gilman SE, Harley CDG, Strickland DC, Vanderstraeten O, O'Donnell MJ, Brian H (2006) Evaluation of effective shore level as a method of characterizing intertidal wave exposure regime. Limno Oceanogr Meth 4:448-457</p>
@@ -84,7 +80,7 @@ const state = {
     <p style="text-indent:-2em;">Shannon CE, Weaver W (1949) The mathematical theory of communication. University of Illinois Press</p>
 
     <p style="text-indent:-2em;">Williams GA, Chan BKK, Dong Y-w (2019) Rocky shores of mainland China, Taiwan and Hong Kong. In: Hawkins SJ, Bohn K, Firth LB, Williams GA (eds) Interactions in the Marine Benthos - Global Patterns and Processes. Systematics Association, Cambridge University Press</p>
-   
+
     `,
   bioGlossary: [
     {
@@ -123,7 +119,7 @@ const state = {
   phyGlossary: [
     {
       name: "Total wave fetch",
-      description: `The total distance of sea along 16 equiangular directions averaged among the site and its proximate locations (< 500 m) until the nearest surrounding land masses (or up to 200 km). to surrounding land masses (up to 200 km).  Longer the wave fetch generally implies stronger wave action impacting the shore (see Burrows et al. 2008).`
+      description: `The total distance of sea along 16 equiangular directions averaged among the site and its proximate locations (< 500 m) until the nearest surrounding land masses (or up to 200 km).  Longer the wave fetch generally implies stronger wave action impacting the shore (see Burrows et al. 2008).`
     },
     {
       name: "Max. wave force",
