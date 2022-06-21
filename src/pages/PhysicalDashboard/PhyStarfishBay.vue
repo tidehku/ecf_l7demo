@@ -10,7 +10,7 @@
         icon="eco"
         color="white"
         text-color="blue-8"
-        to="/interactiveHabitat/*"
+        to="/interactiveHabitat/bioStarfishBay"
       >
         <q-tooltip>
           Switch to Biological dashboard
