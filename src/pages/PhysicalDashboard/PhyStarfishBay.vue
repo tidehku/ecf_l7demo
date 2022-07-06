@@ -5,6 +5,21 @@
         Physical dashboard of Starfish Bay, Tolo Harbour region
       </div>
       <q-space />
+        <div class="q-pa-md">
+    <q-btn-toggle
+      v-model="yr_btn"
+      toggle-color="primary"
+      color="white"
+      text-color="blue-8"
+      :options="[
+        {label: 'Year I', value: 'one'},
+        {label: 'Year II', value: 'two'},
+      ]"
+    />
+     <q-tooltip>
+          Switch to Biological dashboard
+        </q-tooltip>
+  </div>
       <q-btn
         dense
         icon="eco"
@@ -31,6 +46,7 @@
       <q-card bordered>
         <div class="text-h5 text-bold row justify-center title">
           Hourly rock temperature throughout a day
+         
           <q-icon
             class="absolute all-pointer-events"
             size="32px"
@@ -111,8 +127,15 @@ import { tempData } from "../siteData/temperature";
 import { omData } from "../siteData/om";
 import { chlaData } from "../siteData/chla";
 import csv2json from "csvjson-csv2json";
+import {ref} from "vue";
 
 export default {
+    setup () {
+    return {
+      yr_btn: ref('one')
+    }
+  },
+
   data() {
     return {
       Temperature1: tempData.SBTemperature1,
