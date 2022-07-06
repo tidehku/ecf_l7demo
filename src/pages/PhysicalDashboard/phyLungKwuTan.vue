@@ -130,13 +130,13 @@ export default {
     let bar =
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vQC709nOq3tFOTo-_us4kVztBWCzeoTdZOWv8CxORoqDQdxSCQog_qQZro8B9r8dXYCfhaW0gyZ4vmF/pub?gid=1339991903&single=true&output=csv";
 
-    const requestTemp = this.$axios.get(temp);
-    const requestBar = this.$axios.get(bar);
+    const requestTemp20win = this.$axios.get(temp);
+    const requestBar20win = this.$axios.get(bar);
     const requestTemp21sum = this.$axios.get(temp);
     const requestBar21sum = this.$axios.get(bar);
 
     this.$axios
-      .all([requestTemp, requestBar, requestTemp21sum, requestBar21sum])
+      .all([requestTemp20win, requestBar20win, requestTemp21sum, requestBar21sum])
       .then(
         this.$axios.spread((...responses) => {
           const tempData = csv2json(responses[0].data);
