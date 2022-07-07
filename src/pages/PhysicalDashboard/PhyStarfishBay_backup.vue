@@ -43,8 +43,33 @@
       </q-btn>
     </q-bar>
     <div class="page">
-        <site_temp_SB />
-      
+      <q-card bordered>
+        <div class="text-h5 text-bold row justify-center title">
+          Hourly rock temperature throughout a day
+         
+          <q-icon
+            class="absolute all-pointer-events"
+            size="32px"
+            name="info"
+            color="white"
+            style="top: 2px; right: 8px"
+          >
+            <q-tooltip>
+              Please visit the METHODS tab to check out how these measurements
+              were made.
+            </q-tooltip>
+          </q-icon>
+        </div>
+        <div class="row">
+          <div class="col-6 phyTab1">Winter</div>
+          <div class="col-6 phyTab2">Summer</div>
+        </div>
+        <div class="row no-wrap">
+          <highcharts class="col-6" :options="Temperature1"></highcharts>
+          <q-separator vertical />
+          <highcharts class="col-6" :options="Temperature2"></highcharts>
+        </div>
+      </q-card>
 
       <q-card bordered>
         <div class="text-h5 text-bold row justify-center title">
@@ -102,6 +127,7 @@ import { tempData } from "../siteData/temperature";
 import { omData } from "../siteData/om";
 import { chlaData } from "../siteData/chla";
 import csv2json from "csvjson-csv2json";
+import {ref} from "vue";
 
 export default {
     setup () {
