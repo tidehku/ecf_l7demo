@@ -121,6 +121,10 @@ const routes = [
       {
         path: "phyLaiChiChong",
         component: () => import("pages/physicalDashboard/phyLaiChiChong.vue")
+      },
+      {
+        path: "phyLaiChiChongyr2",
+        component:() => import("pages/physicalDashboard/phyLaiChiChongyr2.vue")
       },      
       {
         path: "phyShekO",

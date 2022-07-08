@@ -2,17 +2,35 @@
   <q-page class="justify-center">
     <q-bar elevated class="bg-blue-9 text-white">
       <div class="text-bold row justify-center">
-        Physical dashboard of Starfish Bay, Tolo Harbour region
+        Physical dashboard of Lai Chi Chong, Tolo Harbour region
       </div>
       <q-space />
-        <div class="q-pa-md">
-  </div>
+      <q-btn
+        dense
+        label="Year I"
+        color="white"
+        text-color="blue-8"
+        to="/interactiveHabitat/phyLaiChiChong"
+      >
+      <q-tooltip>
+          Switch to Year I data
+        </q-tooltip>
+      </q-btn>
+        
+      <q-btn
+        dense
+        disabled label="Year II"
+        color="white"
+        text-color="blue-8"
+        to="/interactiveHabitat/phyLaiChiChongyr2"
+      >
+      </q-btn>
       <q-btn
         dense
         icon="eco"
         color="white"
         text-color="blue-8"
-        to="/interactiveHabitat/bioStarfishBay"
+        to="/interactiveHabitat/*"
       >
         <q-tooltip>
           Switch to Biological dashboard
@@ -30,7 +48,32 @@
       </q-btn>
     </q-bar>
     <div class="page">
-      
+      <q-card bordered>
+        <div class="text-h5 text-bold row justify-center title">
+          Hourly rock temperature throughout a day
+          <q-icon
+            class="absolute all-pointer-events"
+            size="32px"
+            name="info"
+            color="white"
+            style="top: 2px; right: 8px"
+          >
+            <q-tooltip>
+              Please visit the METHODS tab to check out how these measurements
+              were made.
+            </q-tooltip>
+          </q-icon>
+        </div>
+        <div class="row">
+          <div class="col-6 phyTab1">Winter</div>
+          <div class="col-6 phyTab2">Summer</div>
+        </div>
+        <div class="row no-wrap">
+          <highcharts class="col-6" :options="Temperature1"></highcharts>
+          <q-separator vertical />
+          <highcharts class="col-6" :options="Temperature2"></highcharts>
+        </div>
+      </q-card>
 
       <q-card bordered>
         <div class="text-h5 text-bold row justify-center title">
@@ -94,26 +137,26 @@ export default {
     return {
       Temperature1: tempData.SBTemperature1,
       Temperature2: tempData.SBTemperature2,
-      Chla1: chlaData.TLSBChla1,
-      OM1: omData.TLSBOm1,
-      Chla2: chlaData.TLSBChla2,
-      OM2: omData.TLSBOm2
+      Chla1: chlaData.TLLCCChla1,
+      OM1: omData.TLLCCOm1,
+      Chla2: chlaData.TLLCCChla2,
+      OM2: omData.TLLCCOm2
     };
   },
   mounted() {
     let temp =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSgBfIvl3SLhng2hGcNBj9dYy_FjN1MQ7maaUr3dUzDtOKZmrW78_25VD4oy3YoTg60QMKP_tGnTFNh/pub?gid=0&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSIyOHcsF8btXhhzYU9e9MZAmoMpqcgWqH9MDgHDZjt63Q16_OIZzr3KzQqwiYwJj_yUJ2DelJwYkIA/pub?gid=0&single=true&output=csv";
 
     let bar =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSgBfIvl3SLhng2hGcNBj9dYy_FjN1MQ7maaUr3dUzDtOKZmrW78_25VD4oy3YoTg60QMKP_tGnTFNh/pub?gid=95500021&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSIyOHcsF8btXhhzYU9e9MZAmoMpqcgWqH9MDgHDZjt63Q16_OIZzr3KzQqwiYwJj_yUJ2DelJwYkIA/pub?gid=1015588079&single=true&output=csv";
 
-    const requestTemp20win = this.$axios.get(temp);
-    const requestBar20win = this.$axios.get(bar);
-    const requestTemp21sum = this.$axios.get(temp);
-    const requestBar21sum = this.$axios.get(bar);
+    const requestTemp21win = this.$axios.get(temp);
+    const requestBar21win = this.$axios.get(bar);
+    const requestTemp22sum = this.$axios.get(temp);
+    const requestBar22sum = this.$axios.get(bar);
 
     this.$axios
-      .all([requestTemp20win, requestBar20win, requestTemp21sum, requestBar21sum])
+      .all([requestTemp21win, requestBar21win, requestTemp22sum, requestBar22sum])
       .then(
         this.$axios.spread((...responses) => {
           const tempData = csv2json(responses[0].data);
@@ -124,23 +167,17 @@ export default {
           let cacheLMRange = [];
 
           tempData.map(doc => {
-            cacheHHMean.push([
-              parseInt(doc.time_20w),
-              parseFloat(doc.HHMean_20w)
-            ]);
+            cacheHHMean.push([parseInt(doc.time_21w), parseFloat(doc.HHMean_21w)]);
             cacheHHRange.push([
-              parseInt(doc.time_20w),
-              parseFloat(doc.HHMin_20w),
-              parseFloat(doc.HHMax_20w)
+              parseInt(doc.time_21w),
+              parseFloat(doc.HHMin_21w),
+              parseFloat(doc.HHMax_21w)
             ]);
-            cacheLMMean.push([
-              parseInt(doc.time_20w),
-              parseFloat(doc.LMMean_20w)
-            ]);
+            cacheLMMean.push([parseInt(doc.time_21w), parseFloat(doc.LMMean_21w)]);
             cacheLMRange.push([
-              parseInt(doc.time_20w),
-              parseFloat(doc.LMMin_20w),
-              parseFloat(doc.LMMax_20w)
+              parseInt(doc.time_21w),
+              parseFloat(doc.LMMin_21w),
+              parseFloat(doc.LMMax_21w)
             ]);
           });
           this.Temperature1.series[0].data = cacheHHMean;
@@ -152,48 +189,36 @@ export default {
 
           let cacheChla = [];
           barData.map(doc => {
-            cacheChla.push([
-              [doc.commonx_20w].toString(),
-              parseFloat([doc.chla_20w])
-            ]);
+            cacheChla.push([[doc.commonx_21w].toString(), parseFloat([doc.chla_21w])]);
           });
           this.Chla1.series[0].data = cacheChla;
 
           let cacheOM = [];
           barData.map(doc => {
-            cacheOM.push([
-              [doc.commonx_20w].toString(),
-              parseFloat([doc.om_20w])
-            ]);
+            cacheOM.push([[doc.commonx_21w].toString(), parseFloat([doc.om_21w])]);
           });
           this.OM1.series[0].data = cacheOM;
 
-          // tempData21sum
-          const tempData21sum = csv2json(responses[2].data);
+          // tempData22sum
+          const tempData22sum = csv2json(responses[2].data);
 
           let cacheHHMean1 = [];
           let cacheHHRange1 = [];
           let cacheLMMean1 = [];
           let cacheLMRange1 = [];
 
-          tempData21sum.map(doc => {
-            cacheHHMean1.push([
-              parseInt(doc.time_21s),
-              parseFloat(doc.HHMean_21s)
-            ]);
+          tempData22sum.map(doc => {
+            cacheHHMean1.push([parseInt(doc.time_22s), parseFloat(doc.HHMean_22s)]);
             cacheHHRange1.push([
-              parseInt(doc.time_21s),
-              parseFloat(doc.HHMin_21s),
-              parseFloat(doc.HHMax_21s)
+              parseInt(doc.time_22s),
+              parseFloat(doc.HHMin_22s),
+              parseFloat(doc.HHMax_22s)
             ]);
-            cacheLMMean1.push([
-              parseInt(doc.time_21s),
-              parseFloat(doc.LMMean_21s)
-            ]);
+            cacheLMMean1.push([parseInt(doc.time_22s), parseFloat(doc.LMMean_22s)]);
             cacheLMRange1.push([
-              parseInt(doc.time_21s),
-              parseFloat(doc.LMMin_21s),
-              parseFloat(doc.LMMax_21s)
+              parseInt(doc.time_22s),
+              parseFloat(doc.LMMin_22s),
+              parseFloat(doc.LMMax_22s)
             ]);
           });
           this.Temperature2.series[0].data = cacheHHMean1;
@@ -201,24 +226,18 @@ export default {
           this.Temperature2.series[2].data = cacheLMMean1;
           this.Temperature2.series[3].data = cacheLMRange1;
 
-          // bar21sum
+          // bar22sum
           const barData1 = csv2json(responses[3].data);
 
           let cacheChla1 = [];
           barData1.map(doc => {
-            cacheChla1.push([
-              [doc.commonx_21s].toString(),
-              parseFloat([doc.chla_21s])
-            ]);
+            cacheChla1.push([[doc.commonx_22s].toString(), parseFloat([doc.chla_22s])]);
           });
           this.Chla2.series[0].data = cacheChla1;
 
           let cacheOM1 = [];
           barData1.map(doc => {
-            cacheOM1.push([
-              [doc.commonx_21s].toString(),
-              parseFloat([doc.om_21s])
-            ]);
+            cacheOM1.push([[doc.commonx_22s].toString(), parseFloat([doc.om_22s])]);
           });
           this.OM2.series[0].data = cacheOM1;
         })

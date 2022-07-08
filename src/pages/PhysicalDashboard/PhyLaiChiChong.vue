@@ -7,6 +7,25 @@
       <q-space />
       <q-btn
         dense
+        disabled label="Year I"
+        color="white"
+        text-color="blue-8"
+      >
+      </q-btn>
+        
+      <q-btn
+        dense
+        label="Year II"
+        color="white"
+        text-color="blue-8"
+        to="/interactiveHabitat/phyLaiChiChongyr2"
+      >
+        <q-tooltip>
+          Switch to Year II data
+        </q-tooltip>
+      </q-btn>
+      <q-btn
+        dense
         icon="eco"
         color="white"
         text-color="blue-8"
