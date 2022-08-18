@@ -5,7 +5,7 @@ const state = {
             target="_blank"
           >
             <strong>Tropical IntertiDal Ecology (TIDE) Group</strong>
-          </a> ) and, therefore, you can compare our current dataset with species records from the past. Let the exploration begin!
+          </a> ) and, therefore, you can compare our current dataset with species records from the past. Let the exploration begins!
           `,
 
   HKRockyShore1: `
