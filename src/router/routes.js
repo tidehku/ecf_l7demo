@@ -97,12 +97,20 @@ const routes = [
         component: () => import("pages/physicalDashboard/phyPuiO.vue")
       },
       {
-        path: "phyStarfishBay",
-        component: () => import("pages/physicalDashboard/phyStarfishBay.vue")
+        path: "phyStarfishBay_yr1",
+        component: () => import("pages/physicalDashboard/phyStarfishBay_yr1.vue")
       },
       {
-        path: "bioStarfishBay",
-        component: () => import("pages/biologicalDashboard/bioStarfishBay.vue")
+        path: "phyStarfishBay_yr2",
+        component: () => import("pages/physicalDashboard/phyStarfishBay_yr2.vue")
+      },
+      {
+        path: "bioStarfishBay_yr1",
+        component: () => import("src/pages/biologicalDashboard/bioStarfishBay_yr1.vue")
+      },
+      {
+        path: "bioStarfishBay_yr2",
+        component: () => import("src/pages/biologicalDashboard/bioStarfishBay_yr2.vue")
       },
       {
         path: "phyMaShiChau",

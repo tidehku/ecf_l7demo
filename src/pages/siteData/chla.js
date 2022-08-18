@@ -1438,7 +1438,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 15
+      max: 17
     },
     legend: {
       enabled: false
@@ -1482,7 +1482,7 @@ export const chlaData = {
       title: {
         text: "Mean chlorophyll a concentration (µg/cm2)"
       },
-      max: 15
+      max: 17
     },
     legend: {
       enabled: false

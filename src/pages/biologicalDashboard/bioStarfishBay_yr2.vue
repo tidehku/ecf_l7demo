@@ -5,11 +5,35 @@
         Biological dashboard of Starfish Bay, Tolo Harbour region
       </div>
       <q-space />
+
+      <q-btn 
+        dense
+        color="white"
+        text-color="blue-8"
+        label="Year I"
+        to="/interactiveHabitat/bioStarfishBay_yr1"
+      >
+        <q-tooltip>
+          Switch to Year I data
+        </q-tooltip>
+      </q-btn>
+
+      <q-btn 
+        dense
+        color="white"
+        text-color="blue-8"
+        disable label="Year II"
+      >
+        <q-tooltip>
+          Switch to Year II data
+        </q-tooltip>
+      </q-btn>
+
       <q-btn
         dense
         icon="thermostat"
         class="bg-white text-teal"
-        to="/interactiveHabitat/phyStarfishBay"
+        to="/interactiveHabitat/phyStarfishBay_yr2"
       >
         <q-tooltip>
           Switch to Physical dashboard
@@ -63,22 +87,22 @@
                   <q-chip
                     color="orange"
                     size="0.5rem"
-                    v-if="mobile.summer == 'True'"
+                    v-if="mobile.summer == 'TRUE'"
                   ></q-chip>
                   <q-chip
                     color="teal-1"
                     size="0.5rem"
-                    v-if="mobile.summer == 'False'"
+                    v-if="mobile.summer == 'FALSE'"
                   ></q-chip>
                   <q-chip
                     color="blue"
                     size="0.5rem"
-                    v-if="mobile.winter == 'True'"
+                    v-if="mobile.winter == 'TRUE'"
                   ></q-chip>
                   <q-chip
                     color="teal-1"
                     size="0.5rem"
-                    v-if="mobile.winter == 'False'"
+                    v-if="mobile.winter == 'FALSE'"
                   ></q-chip>
                   <q-item-section>
                     {{ mobile.name }}
@@ -106,22 +130,22 @@
                   <q-chip
                     color="orange"
                     size="0.5rem"
-                    v-if="sessile.summer == 'True'"
+                    v-if="sessile.summer == 'TRUE'"
                   ></q-chip>
                   <q-chip
                     color="teal-1"
                     size="0.5rem"
-                    v-if="sessile.summer == 'False'"
+                    v-if="sessile.summer == 'FALSE'"
                   ></q-chip>
                   <q-chip
                     color="blue"
                     size="0.5rem"
-                    v-if="sessile.winter == 'True'"
+                    v-if="sessile.winter == 'TRUE'"
                   ></q-chip>
                   <q-chip
                     color="teal-1"
                     size="0.5rem"
-                    v-if="sessile.winter == 'False'"
+                    v-if="sessile.winter == 'FALSE'"
                   ></q-chip>
                   <q-item-section>
                     {{ sessile.name }}
@@ -212,36 +236,23 @@ export default {
   },
   mounted() {
     let name =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=0&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vStcg2BnO1aCboiS8KMrvnG4D5hZPmiTBqNRg_0UJ4upUVz4BX40LiOxqLjZn5kzVPeUx0Rramo44EP/pub?gid=0&single=true&output=csv";
 
     let pie =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=1752414671&single=true&output=csv";
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vStcg2BnO1aCboiS8KMrvnG4D5hZPmiTBqNRg_0UJ4upUVz4BX40LiOxqLjZn5kzVPeUx0Rramo44EP/pub?gid=1752414671&single=true&output=csv";
 
-    let pie21summer =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=1412208874&single=true&output=csv";
-    let barShannon =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=678347772&single=true&output=csv";
-
-    let barPielou =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=1604038742&single=true&output=csv";
-    let barRichness =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj1DEvGcqdn05_uRxl7LMTGmlG_NBk27gnAKbIGuGTmn9Za84sCCZRWty4iR800Akr3QPryHGjLXg_/pub?gid=1298166498&single=true&output=csv";
+    let bar =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vStcg2BnO1aCboiS8KMrvnG4D5hZPmiTBqNRg_0UJ4upUVz4BX40LiOxqLjZn5kzVPeUx0Rramo44EP/pub?gid=1947481802&single=true&output=csv";
 
     const requestName = this.$axios.get(name);
     const requestPie = this.$axios.get(pie);
-    const requestPie21summer = this.$axios.get(pie21summer);
-    const requestBarShnnon = this.$axios.get(barShannon);
-    const reqBarPielou = this.$axios.get(barPielou);
-    const reqBarRichness = this.$axios.get(barRichness);
+    const requestBar = this.$axios.get(bar);
 
     this.$axios
       .all([
         requestName,
         requestPie,
-        requestPie21summer,
-        requestBarShnnon,
-        reqBarPielou,
-        reqBarRichness
+        requestBar
       ])
       .then(
         this.$axios.spread((...responses) => {
@@ -253,9 +264,9 @@ export default {
             mobileWin = [];
 
           recordName.forEach(i => {
-            mobileName.push(i.mobile);
-            mobileSum.push(i.mobile_sum);
-            mobileWin.push(i.mobile_win);
+            mobileName.push(i.mobilespecies_20w21s);
+            mobileSum.push(i.mobile_21s);
+            mobileWin.push(i.mobile_20w);
           });
 
           let cacheMobileName = {};
@@ -272,9 +283,9 @@ export default {
             sessileWin = [];
 
           recordName.forEach(i => {
-            sessileName.push(i.sessile);
-            sessileSum.push(i.sessile_sum);
-            sessileWin.push(i.sessile_win);
+            sessileName.push(i.sessilespecies_20w21s);
+            sessileSum.push(i.sessile_21s);
+            sessileWin.push(i.sessile_20w);
           });
 
           let cacheSessileName = {};
@@ -290,66 +301,66 @@ export default {
           const pieChart = csv2json(responses[1].data);
           let cacheMobilePie = [];
           pieChart.map(doc => {
-            cacheMobilePie.push([doc.pieMobile, parseInt(doc.pieMobileCnt)]);
+            cacheMobilePie.push([doc.pieMobile_20w, parseInt(doc.pieMobileCnt_20w)]);
           });
           this.pieChart1.series[0].data = cacheMobilePie;
 
           let cacheSessilePie = [];
           pieChart.map(doc => {
-            cacheSessilePie.push([doc.pieSessile, parseInt(doc.pieSessileCnt)]);
+            cacheSessilePie.push([doc.pieSessile_20w, parseInt(doc.pieSessileCnt_20w)]);
           });
           this.pieChart2.series[0].data = cacheSessilePie;
 
-          const pieChart21summer = csv2json(responses[2].data);
+          const pieChart21summer = csv2json(responses[1].data);
           let cacheMobilePie1 = [];
           pieChart21summer.map(doc => {
-            cacheMobilePie1.push([doc.pieMobile, parseInt(doc.pieMobileCnt)]);
+            cacheMobilePie1.push([doc.pieMobile_21s, parseInt(doc.pieMobileCnt_21s)]);
           });
           this.pieChart3.series[0].data = cacheMobilePie1;
 
           let cacheSessilePie1 = [];
           pieChart21summer.map(doc => {
             cacheSessilePie1.push([
-              doc.pieSessile,
-              parseInt(doc.pieSessileCnt)
+              doc.pieSessile_21s,
+              parseInt(doc.pieSessileCnt_21s)
             ]);
           });
           this.pieChart4.series[0].data = cacheSessilePie1;
 
           // bar
-          const shannony = csv2json(responses[3].data);
+          const shannony = csv2json(responses[2].data);
           let cacheWin20shanno = [];
           shannony.map(doc => {
-            cacheWin20shanno.push([parseFloat([doc.winter2020])]);
+            cacheWin20shanno.push([parseFloat([doc.shannon_20w])]);
           });
           this.barChart1.series[0].data = cacheWin20shanno;
           let cacheSum21shanno = [];
           shannony.map(doc => {
-            cacheSum21shanno.push([parseFloat([doc.summer2021])]);
+            cacheSum21shanno.push([parseFloat([doc.shannon_21s])]);
           });
           this.barChart1.series[1].data = cacheSum21shanno;
 
-          const pielouy = csv2json(responses[4].data);
+          const pielouy = csv2json(responses[2].data);
           let cacheWin20pielou = [];
           pielouy.map(doc => {
-            cacheWin20pielou.push([parseFloat([doc.winter2020])]);
+            cacheWin20pielou.push([parseFloat([doc.pielou_20w])]);
           });
           this.barChart2.series[0].data = cacheWin20pielou;
           let cacheSum21pielou = [];
           pielouy.map(doc => {
-            cacheSum21pielou.push([parseFloat([doc.summer2021])]);
+            cacheSum21pielou.push([parseFloat([doc.pielou_21s])]);
           });
           this.barChart2.series[1].data = cacheSum21pielou;
 
-          const richnessy = csv2json(responses[5].data);
+          const richnessy = csv2json(responses[2].data);
           let cacheWin20rich = [];
           richnessy.map(doc => {
-            cacheWin20rich.push([parseFloat([doc.winter2020])]);
+            cacheWin20rich.push([parseFloat([doc.richness_20w])]);
           });
           this.barChart3.series[0].data = cacheWin20rich;
           let cacheSum21rich = [];
           richnessy.map(doc => {
-            cacheSum21rich.push([parseFloat([doc.summer2021])]);
+            cacheSum21rich.push([parseFloat([doc.richness_21s])]);
           });
           this.barChart3.series[1].data = cacheSum21rich;
         })

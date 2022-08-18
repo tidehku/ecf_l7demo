@@ -1434,7 +1434,7 @@ export const omData = {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
       },
-      max: 8
+      max: 10
     },
     legend: {
       enabled: false
@@ -1478,7 +1478,7 @@ export const omData = {
       title: {
         text: "Mean organic matter concentration  (mg/cm2)"
       },
-      max: 8
+      max: 10
     },
     legend: {
       enabled: false

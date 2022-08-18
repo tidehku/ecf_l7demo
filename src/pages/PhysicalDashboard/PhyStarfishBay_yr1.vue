@@ -5,12 +5,35 @@
         Physical dashboard of Starfish Bay, Tolo Harbour region
       </div>
       <q-space />
+      <q-btn 
+        dense
+        color="white"
+        text-color="blue-8"
+        disable label="Year I"
+      >
+        <q-tooltip>
+          Switch to Year I data
+        </q-tooltip>
+      </q-btn>
+
+      <q-btn 
+        dense
+        color="white"
+        text-color="blue-8"
+        label="Year II"
+        to="/interactiveHabitat/PhyStarfishBay_yr2"
+      >
+        <q-tooltip>
+          Switch to Year II data
+        </q-tooltip>
+      </q-btn>
+
       <q-btn
         dense
         icon="eco"
         color="white"
         text-color="blue-8"
-        to="/interactiveHabitat/bioStarfishBay"
+        to="/interactiveHabitat/bioStarfishBay_yr1"
       >
         <q-tooltip>
           Switch to Biological dashboard

@@ -185,14 +185,14 @@
                     color="teal-5"
                     no-caps
                     label="Go to Biological dashboard"
-                    to="/interactiveHabitat/bioStarfishBay"
+                    to="/interactiveHabitat/bioStarfishBay_yr1"
                     icon="eco"
                   ></q-btn>
                   <q-btn
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/phyStarfishBay"
+                    to="/interactiveHabitat/phyStarfishBay_yr1"
                     icon="thermostat"
                   ></q-btn>
                 </div>
