@@ -12,7 +12,9 @@
         inline
         :options="[
           { label: '2020 Winter', value: 'winter2020' },
-          { label: '2021 Summer', value: 'summer2021' }
+          { label: '2021 Summer', value: 'summer2021' },
+          { label: '2021 Winter', value: 'winter2021' },
+          { label: '2022 Summer', value: 'summer2022' }
         ]"
       />
 
@@ -42,9 +44,7 @@
                     ± {{ landingTL.winter2020.highShoreTempDelta }} °C</b
                   >
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.winter2020.highShoreTempN }})
-                </div>
+                
               </q-card-section>
 
               <q-card-section class="q-pt-none">
@@ -58,9 +58,7 @@
                     ± {{ landingTL.winter2020.lowShoreTempDelta }} °C</b
                   >
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.winter2020.lowShoreTempN }})
-                </div>
+                
               </q-card-section>
             </q-card>
 
@@ -82,9 +80,7 @@
                     ± {{ landingTL.winter2020.chlaDelta }} µg/cm<sup>2</sup></b
                   >
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.winter2020.chlaN }})
-                </div>
+                
               </q-card-section>
 
               <q-card-section class="q-pt-none">
@@ -96,9 +92,7 @@
                     ± {{ landingTL.winter2020.omDelta }} mg/cm<sup>2</sup></b
                   >
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.winter2020.omN }})
-                </div>
+                
               </q-card-section>
             </q-card>
 
@@ -131,9 +125,7 @@
                   &nbsp;
                   <b class="self-center">km</b>
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.winter2020.waveN }})
-                </div>
+                
               </q-card-section>
             </q-card>
 
@@ -162,9 +154,7 @@
                     {{ landingTL.winter2020.mobileMin }}
                   </div>
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.winter2020.mobileN }})
-                </div>
+                
               </q-card-section>
             </q-card>
 
@@ -193,9 +183,7 @@
                     {{ landingTL.winter2020.sessileMin }}
                   </div>
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.winter2020.sessileN }})
-                </div>
+                
               </q-card-section>
             </q-card>
           </div>
@@ -221,9 +209,7 @@
                     ± {{ landingTL.summer2021.highShoreTempDelta }} °C</b
                   >
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.summer2021.highShoreTempN }})
-                </div>
+                
               </q-card-section>
 
               <q-card-section class="q-pt-none">
@@ -237,9 +223,7 @@
                     ± {{ landingTL.summer2021.lowShoreTempDelta }} °C</b
                   >
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.summer2021.lowShoreTempN }})
-                </div>
+                
               </q-card-section>
             </q-card>
 
@@ -261,9 +245,7 @@
                     ± {{ landingTL.summer2021.chlaDelta }} µg/cm<sup>2</sup></b
                   >
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.summer2021.chlaN }})
-                </div>
+                
               </q-card-section>
 
               <q-card-section class="q-pt-none">
@@ -275,9 +257,7 @@
                     ± {{ landingTL.summer2021.omDelta }} mg/cm<sup>2</sup></b
                   >
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.summer2021.omN }})
-                </div>
+                
               </q-card-section>
             </q-card>
 
@@ -310,9 +290,7 @@
                   &nbsp;
                   <b class="self-center">km</b>
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.summer2021.waveN }})
-                </div>
+                
               </q-card-section>
             </q-card>
 
@@ -341,9 +319,7 @@
                     {{ landingTL.summer2021.mobileMin }}
                   </div>
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.summer2021.mobileN }})
-                </div>
+                
               </q-card-section>
             </q-card>
 
@@ -372,9 +348,7 @@
                     {{ landingTL.summer2021.sessileMin }}
                   </div>
                 </div>
-                <div class="row justify-end">
-                  (n = {{ landingTL.summer2021.sessileN }})
-                </div>
+                
               </q-card-section>
             </q-card>
           </div>
