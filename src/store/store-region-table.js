@@ -798,10 +798,6 @@ const state = {
     {
       name: "Rock type",
       data: "Igneous"
-    },
-    {
-      name:"test",
-      data: "123"
     }
   ],
   Table_TLMSC: [
