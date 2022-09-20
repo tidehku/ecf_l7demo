@@ -54,7 +54,14 @@
             src="~/assets/SiteImage/Starfish Bay_20winter.png"
             height="25vh"
             basic
-          />
+          >
+            <template v-slot:loading>
+              <div class="text-yellow">
+                <q-spinner-ios />
+                <div class="q-mt-md">Loading...</div>
+              </div>
+            </template>
+          </q-img>
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -80,7 +87,14 @@
             src="~/assets/SiteImage/Ma Shi Chau_20winter.png"
             height="25vh"
             basic
-          ></q-img>
+          >
+            <template v-slot:loading>
+              <div class="text-yellow">
+                <q-spinner-ios />
+                <div class="q-mt-md">Loading...</div>
+              </div>
+            </template>
+          </q-img>
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -102,7 +116,14 @@
             Tseng Tau
           </div>
 
-          <q-img src="~/assets/SiteImage/Tseng Tau.png" height="25vh" basic />
+          <q-img src="~/assets/SiteImage/Tseng Tau.png" height="25vh" basic>
+            <template v-slot:loading>
+              <div class="text-yellow">
+                <q-spinner-ios />
+                <div class="q-mt-md">Loading...</div>
+              </div>
+            </template>
+          </q-img>
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -128,7 +149,14 @@
             src="~/assets/SiteImage/Lai Chi Chong_20winter.png"
             height="25vh"
             basic
-          />
+          >
+            <template v-slot:loading>
+              <div class="text-yellow">
+                <q-spinner-ios />
+                <div class="q-mt-md">Loading...</div>
+              </div>
+            </template>
+          </q-img>
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -167,7 +195,14 @@
                 class="col-3"
                 height="flex"
                 src="~assets/SiteImage/Starfish Bay_21winter.png"
-              />
+              >
+                <template v-slot:loading>
+                  <div class="text-yellow">
+                    <q-spinner-ios />
+                    <div class="q-mt-md">Loading...</div>
+                  </div>
+                </template>
+              </q-img>
               <div class="col-6 q-px-md">
                 <q-table
                   class="siteTable"
@@ -201,7 +236,14 @@
                 class="col-3"
                 height="flex"
                 src="~assets/SiteImage/Starfish Bay_21summer.png"
-              />
+              >
+                <template v-slot:loading>
+                  <div class="text-yellow">
+                    <q-spinner-ios />
+                    <div class="q-mt-md">Loading...</div>
+                  </div>
+                </template>
+              </q-img>
             </q-card-section>
           </q-card>
         </q-dialog>
@@ -227,7 +269,14 @@
                 class="col-3"
                 height="flex"
                 src="~assets/SiteImage/Ma Shi Chau_21winter.png"
-              />
+              >
+                <template v-slot:loading>
+                  <div class="text-yellow">
+                    <q-spinner-ios />
+                    <div class="q-mt-md">Loading...</div>
+                  </div>
+                </template>
+              </q-img>
               <div class="col-6 q-px-md">
                 <q-table
                   class="siteTable"
@@ -261,7 +310,14 @@
                 class="col-3"
                 height="flex"
                 src="~assets/SiteImage/Ma Shi Chau_21summer.png"
-              />
+              >
+                <template v-slot:loading>
+                  <div class="text-yellow">
+                    <q-spinner-ios />
+                    <div class="q-mt-md">Loading...</div>
+                  </div>
+                </template>
+              </q-img>
             </q-card-section>
           </q-card>
         </q-dialog>
@@ -287,7 +343,14 @@
                 class="col-3"
                 height="flex"
                 src="~assets/SiteImage/Tseng Tau.png"
-              />
+              >
+                <template v-slot:loading>
+                  <div class="text-yellow">
+                    <q-spinner-ios />
+                    <div class="q-mt-md">Loading...</div>
+                  </div>
+                </template>
+              </q-img>
               <div class="col-6 q-px-md">
                 <q-table
                   class="siteTable"
@@ -321,7 +384,14 @@
                 class="col-3"
                 height="flex"
                 src="~assets/SiteImage/Tseng Tau_21summer.png"
-              />
+              >
+                <template v-slot:loading>
+                  <div class="text-yellow">
+                    <q-spinner-ios />
+                    <div class="q-mt-md">Loading...</div>
+                  </div>
+                </template></q-img
+              >
             </q-card-section>
           </q-card>
         </q-dialog>
@@ -381,7 +451,14 @@
                 class="col-3"
                 height="flex"
                 src="~assets/SiteImage/Lai Chi Chong_21summer.png"
-              />
+              >
+                <template v-slot:loading>
+                  <div class="text-yellow">
+                    <q-spinner-ios />
+                    <div class="q-mt-md">Loading...</div>
+                  </div>
+                </template>
+              </q-img>
             </q-card-section>
           </q-card>
         </q-dialog>

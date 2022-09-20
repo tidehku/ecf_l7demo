@@ -10,7 +10,14 @@
         </div>
       </div>
       <div class="q-pt-xl col-6">
-        <q-img src="~/assets/method1.png" />
+        <q-img src="~/assets/method1.png">
+          <template v-slot:loading>
+            <div class="text-yellow">
+              <q-spinner-ios />
+              <div class="q-mt-md">Loading...</div>
+            </div>
+          </template>
+        </q-img>
         <div class="text-center bg-black text-white" style="font-size: 1rem">
           Map showing demarcation of regions and location of sampling sites
           within each region.
@@ -25,11 +32,25 @@
       </div>
       <div class="row justify-around">
         <div class="justify-center" style="width:35%">
-          <q-img src="~/assets/method2.png" />
+          <q-img src="~/assets/method2.png">
+            <template v-slot:loading>
+              <div class="text-yellow">
+                <q-spinner-ios />
+                <div class="q-mt-md">Loading...</div>
+              </div>
+            </template>
+          </q-img>
           <div class="q-px-md bg-black text-white" style="font-size: 1rem">
             Morning survey in Shek O ....
           </div>
-          <q-img src="~/assets/method4.png" />
+          <q-img src="~/assets/method4.png">
+            <template v-slot:loading>
+              <div class="text-yellow">
+                <q-spinner-ios />
+                <div class="q-mt-md">Loading...</div>
+              </div>
+            </template>
+          </q-img>
           <div class="q-px-md bg-black text-white" style="font-size: 1rem">
             The ECF team surveying the rocky shore in Tai O.
           </div>
@@ -75,11 +96,25 @@
           <q-img
             style="width:37%; border-radius: 4px"
             src="~/assets/method5.png"
-          />
+          >
+            <template v-slot:loading>
+              <div class="text-yellow">
+                <q-spinner-ios />
+                <div class="q-mt-md">Loading...</div>
+              </div>
+            </template>
+          </q-img>
           <q-img
             style="width:37%; border-radius: 4px"
             src="~/assets/method6.png"
-          />
+          >
+            <template v-slot:loading>
+              <div class="text-yellow">
+                <q-spinner-ios />
+                <div class="q-mt-md">Loading...</div>
+              </div>
+            </template>
+          </q-img>
           <div>
             <div class="bg-black text-white" style="font-size: 1rem">
               Custom-built wavelogger (left image) and rugged temperature

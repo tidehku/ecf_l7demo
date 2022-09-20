@@ -1,7 +1,14 @@
 <template>
   <div class="row q-pa-sm q-gutter-xs no-wrap">
     <q-card class="col-4">
-      <q-img src="~/assets/mapcover - Copy.png" style="height: 85vh;" />
+      <q-img src="~/assets/mapcover - Copy.png" style="height: 85vh;">
+        <template v-slot:loading>
+          <div class="text-yellow">
+            <q-spinner-ios />
+            <div class="q-mt-md">Loading...</div>
+          </div>
+        </template>
+      </q-img>
 
       <q-icon
         class="absolute-top-right"

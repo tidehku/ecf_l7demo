@@ -22,15 +22,11 @@
         "Proness to sand inundation": 2,
         "Human disturbance": 2,
         "Vessel traffic": 3,
-        "Feasibility (max=12)": 8,
-        "": ""
+        "Feasibility (max=12)": 8
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          114.247089,
-          22.436252
-        ]
+        "coordinates": [114.247089, 22.436252]
       }
     },
     {
@@ -54,15 +50,11 @@
         "Proness to sand inundation": 2,
         "Human disturbance": 2,
         "Vessel traffic": 3,
-        "Feasibility (max=12)": 6,
-        "": ""
+        "Feasibility (max=12)": 6
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          114.26864,
-          22.43353
-        ]
+        "coordinates": [114.26864, 22.43353]
       }
     },
     {
@@ -86,15 +78,11 @@
         "Proness to sand inundation": 2,
         "Human disturbance": 1,
         "Vessel traffic": 1,
-        "Feasibility (max=12)": 6,
-        "": ""
+        "Feasibility (max=12)": 6
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          114.299452,
-          22.456633
-        ]
+        "coordinates": [114.299452, 22.456633]
       }
     },
     {
@@ -118,15 +106,11 @@
         "Proness to sand inundation": 1,
         "Human disturbance": 1,
         "Vessel traffic": 1,
-        "Feasibility (max=12)": 7,
-        "": ""
+        "Feasibility (max=12)": 7
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          114.234516,
-          22.457043
-        ]
+        "coordinates": [114.234516, 22.457043]
       }
     }
   ]
