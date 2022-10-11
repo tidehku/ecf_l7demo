@@ -1,6 +1,7 @@
 <template>
   <q-page class="page q-pa-md">
     <div class="row q-gutter-sm justify-center">
+      <!-- display img gallery in five columes -->
       <viewer style="width:19.2%">
         <div class="speciesName">Bivalve</div>
         <img

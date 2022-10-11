@@ -75,7 +75,7 @@ import "leaflet.zoomhome/dist/leaflet.zoomhome.js";
 import regionMarker from "./regionMarker";
 
 export default {
-  name: "MapGeoJSON",
+  name: "GIS_landingPage",
   components: {
     LMap,
     LGeoJson,

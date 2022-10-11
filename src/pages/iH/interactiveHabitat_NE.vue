@@ -75,7 +75,11 @@
             Kat O
           </div>
 
-          <q-img src="~/assets/SiteImage/Kat O_20winter.png" height="25vh" basic></q-img>
+          <q-img
+            src="~/assets/SiteImage/Kat O_20winter.png"
+            height="25vh"
+            basic
+          ></q-img>
           <div class="row bg-white absolute-bottom">
             <q-icon
               class="q-pa-sm"
@@ -149,6 +153,7 @@
           persistent
           full-width
         >
+          <!-- each card represents a site, by default lands to year one vue page -->
           <q-card>
             <q-bar style="height: 40px" class="bg-indigo text-bold">
               <div class="text-indigo-2">Site introduction |</div>
@@ -190,7 +195,7 @@
                     color="blue-6"
                     no-caps
                     label="Go to Physical dashboard"
-                    to="/interactiveHabitat/phyDoubleIsland"
+                    to="/interactiveHabitat/phyDoubleIsland_yr1"
                     icon="thermostat"
                   ></q-btn>
                 </div>

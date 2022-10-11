@@ -2,10 +2,10 @@
   <q-layout view="hHh lpr fff">
     <q-header elevated>
       <q-toolbar
-        class="bg-grey-2 text-dark justify-around"
+        class="bg-grey-2 text-dark justify-around q-pa-xs"
         style="height: 10vh"
       >
-        <!-- app fullscreen -->
+        <!-- app fullscreen; function disabled -->
         <!-- <q-btn round @click="$q.fullscreen.toggle()">
           <q-avatar size="50px">
             <img src="~assets/hkrise.png" />
